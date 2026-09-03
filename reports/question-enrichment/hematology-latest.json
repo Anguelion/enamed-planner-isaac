@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-03T11:21:56.595Z",
+  "generatedAt": "2026-09-03T21:06:40.998Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
@@ -7,14 +7,47 @@
   "changed": 6,
   "results": [
     {
-      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-751c18273bcc22b7",
-      "number": "1011g",
-      "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
+      "id": "anki-hematologia-anemias-microciticas-708f71e0e851a628",
+      "number": "1001d",
+      "file": "question_bank/hematologia-anemias-microciticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Com-a-porfiria-aguda112cd61ec4/",
-      "sourceQuestionId": "4000060974",
-      "matchedAt": "2026-09-03T11:21:57.479Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/a-anemia-por11e22e9b38/",
+      "sourceQuestionId": "4000185707",
+      "matchedAt": "2026-09-03T21:06:42.153Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias microcíticas",
+        "Anemia ferropriva",
+        "Quadro clínico da anemia ferropriva",
+        "Tratamento da anemia ferropriva",
+        "Reposição oral de ferro",
+        "Diagnóstico da anemia ferropriva",
+        "Perfil de ferro na anemia ferropriva"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Perfil de ferro na anemia ferropriva. Conduta/resposta: A causa mais importante de anemia ferropriva, em adultos, é a perda crônica de sangue, especialmente, a perda de sangue menstrual e gastrointestinal.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/a-anemia-por11e22e9b38/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-microciticas-4ae9f90849ecd434",
+      "number": "1002d",
+      "file": "question_bank/hematologia-anemias-microciticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/estagios-deficiencia45bc2c302a/",
+      "sourceQuestionId": "4000183881",
+      "matchedAt": "2026-09-03T21:06:48.383Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -26,82 +59,26 @@
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Porfirias",
-        "Neurologia",
-        "Doenças Neuromusculares",
-        "Neuropatias Periféricas",
-        "Neuropatias Hereditárias",
-        "Porfiria Intermitente Aguda"
+        "Anemias microcíticas",
+        "Anemia ferropriva",
+        "Fisiopatologia da anemia ferropriva",
+        "Diagnóstico da anemia ferropriva",
+        "Perfil de ferro na anemia ferropriva"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Porfiria Intermitente Aguda. Conduta/resposta: Durante as crises agudas, deve-se deixar o paciente em jejum até as provas de função hepáticas melhorarem.",
+      "comment": "Gabarito confirmado: C. Assunto: Perfil de ferro na anemia ferropriva. Conduta/resposta: ferritina – saturação da transferrina – hemoglobina.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Com-a-porfiria-aguda112cd61ec4/"
+        "https://med.estrategia.com/public/questoes/estagios-deficiencia45bc2c302a/"
       ]
     },
     {
-      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-f993f0706a45301a",
-      "number": "1012g",
-      "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
+      "id": "anki-hematologia-anemias-microciticas-9d9dcbbf039fbec5",
+      "number": "1003d",
+      "file": "question_bank/hematologia-anemias-microciticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/metemoglobinemia-e7a0351fe5/",
-      "sourceQuestionId": "4000030776",
-      "matchedAt": "2026-09-03T11:22:03.455Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemoglobinopatias",
-        "Metemoglobinemia"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Metemoglobinemia. Conduta/resposta: Sua principal característica é a cianose central que não melhora com oxigenioterapia. Ocorre tanto por alterações congênitas, quanto por exposição a agentes químicos diversos.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/metemoglobinemia-e7a0351fe5/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-0619201d376b3862",
-      "number": "1097e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Com-a-anemia-com5230df8709/",
-      "sourceQuestionId": "4000090885",
-      "matchedAt": "2026-09-03T11:22:09.295Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias macrocíticas"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Anemias macrocíticas. Conduta/resposta: Apenas a I.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Com-a-anemia-com5230df8709/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-e43e17093fc42a3b",
-      "number": "1098e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-desses-sinais-ou14e3a8f339/",
-      "sourceQuestionId": "4000084933",
-      "matchedAt": "2026-09-03T11:22:15.171Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Durante-exame-fisico2954c99387/",
+      "sourceQuestionId": "4000183407",
+      "matchedAt": "2026-09-03T21:06:54.597Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -113,61 +90,25 @@
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Deficiência de vitamina B12",
-        "Quadro clínico da anemia megaloblástica"
+        "Anemias microcíticas",
+        "Anemia ferropriva",
+        "Quadro clínico da anemia ferropriva",
+        "Coiloníquia"
       ],
-      "comment": "Gabarito confirmado: E. Assunto: Quadro clínico da anemia megaloblástica. Conduta/resposta: Colectomia total prévia.",
+      "comment": "Gabarito confirmado: E. Assunto: Coiloníquia. Conduta/resposta: Abatiestesia",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Qual-desses-sinais-ou14e3a8f339/"
+        "https://med.estrategia.com/public/questoes/Durante-exame-fisico2954c99387/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-macrociticas-686f50b8e469740d",
-      "number": "1099e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "id": "anki-hematologia-anemias-microciticas-2d1b16817bcf318f",
+      "number": "1004d",
+      "file": "question_bank/hematologia-anemias-microciticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Maria-Paula-50-anos981773995b/",
-      "sourceQuestionId": "4000058245",
-      "matchedAt": "2026-09-03T11:22:20.907Z",
-      "similarity": {
-        "stem": 0.9876543209876543,
-        "options": 1,
-        "combined": 0.991358024691358
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Deficiência de vitamina B12",
-        "Quadro clínico da anemia megaloblástica",
-        "Neurologia",
-        "Doenças Neuromusculares",
-        "Neuropatias Periféricas",
-        "Polineuropatias",
-        "Polineuropatias Carenciais",
-        "Deficiência de Vitamina B12 e Ácido Fólico"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Deficiência de Vitamina B12 e Ácido Fólico. Conduta/resposta: Vitamina B12.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Maria-Paula-50-anos981773995b/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-4b4b7b442247abb3",
-      "number": "10100e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-com-anemia343a5a87e0/",
-      "sourceQuestionId": "4000046717",
-      "matchedAt": "2026-09-03T11:22:26.770Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo55e35e35e7/",
+      "sourceQuestionId": "4000183370",
+      "matchedAt": "2026-09-03T21:07:01.064Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -179,14 +120,76 @@
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Anemias macrocíticas",
-        "Introdução ao Estudo das Anemias",
-        "Classificações das anemias",
-        "Classificação morfológica das anemias"
+        "Anemias microcíticas",
+        "Anemia ferropriva",
+        "Diagnóstico da anemia ferropriva"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Classificação morfológica das anemias. Conduta/resposta: Paciente com microesferocitose.",
+      "comment": "Gabarito confirmado: B. Assunto: Diagnóstico da anemia ferropriva. Conduta/resposta: Microcitose, hipocromia, ferritina baixa e RDW elevado.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-com-anemia343a5a87e0/"
+        "https://med.estrategia.com/public/questoes/Paciente-sexo55e35e35e7/",
+        "https://med.estrategia.com/public/questoes/Paciente-sexo14350ec193f/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-microciticas-71504654e501411f",
+      "number": "1005d",
+      "file": "question_bank/hematologia-anemias-microciticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-18-anos-foi40edd8394b/",
+      "sourceQuestionId": "4000182837",
+      "matchedAt": "2026-09-03T21:07:06.968Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias microcíticas",
+        "Anemia ferropriva",
+        "Quadro clínico da anemia ferropriva",
+        "Alterações mucosas: Glossite atrófica e queilite angular"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Alterações mucosas: Glossite atrófica e queilite angular. Conduta/resposta: Queilite angular",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-18-anos-foi40edd8394b/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-microciticas-1ea9b9b0a90bbd1e",
+      "number": "1006d",
+      "file": "question_bank/hematologia-anemias-microciticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Menino-2-anos-foi1048657a000/",
+      "sourceQuestionId": "4000182782",
+      "matchedAt": "2026-09-03T21:07:13.341Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias microcíticas",
+        "Anemia ferropriva",
+        "Diagnóstico da anemia ferropriva",
+        "Quadro clínico da anemia ferropriva",
+        "Pica"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Pica. Conduta/resposta: Hemoglobina de 6,5 g/l – VCM de 65 fl – CHCM de 23 pg – RDW de 18%",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Menino-2-anos-foi1048657a000/",
+        "https://med.estrategia.com/public/questoes/Paciente-2-anos-foi470cc146f3/"
       ]
     }
   ]

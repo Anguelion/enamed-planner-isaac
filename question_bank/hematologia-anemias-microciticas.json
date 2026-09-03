@@ -28,14 +28,29 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Em adultos, a causa mais comum de anemia por falta de ferro não é a dieta pobre em ferro — é a perda crônica de sangue, seja pela menstruação (nas mulheres) ou pelo trato digestivo (em homens e mulheres na pós-menopausa). Por isso, sempre que se confirma essa anemia num adulto, é obrigatório procurar de onde vem esse sangramento escondido.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Quadro clínico da anemia ferropriva",
+        "Tratamento da anemia ferropriva",
+        "Reposição oral de ferro",
+        "Diagnóstico da anemia ferropriva",
+        "Perfil de ferro na anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701713",
-      "ankiGuid": "ft|Qx&XCt^"
+      "ankiGuid": "ft|Qx&XCt^",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/a-anemia-por11e22e9b38/",
+        "sourceQuestionId": "4000185707",
+        "matchedAt": "2026-09-03T21:06:42.153Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-4ae9f90849ecd434",
@@ -61,14 +76,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A falta de ferro acontece em etapas, e cada exame vai alterando na sua vez: primeiro o estoque de ferro esvazia (a ferritina cai), depois o ferro que sobra pro transporte também fica escasso (a saturação da transferrina cai), e só por último, quando já não sobra ferro nem pra fabricar hemoglobina, é que a hemoglobina finalmente cai. É como esvaziar um cofre (ferritina), depois a carteira (transferrina), até faltar dinheiro pra comprar comida (hemoglobina).",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Fisiopatologia da anemia ferropriva",
+        "Diagnóstico da anemia ferropriva",
+        "Perfil de ferro na anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701714",
-      "ankiGuid": "fXL*f=h=o("
+      "ankiGuid": "fXL*f=h=o(",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/estagios-deficiencia45bc2c302a/",
+        "sourceQuestionId": "4000183881",
+        "matchedAt": "2026-09-03T21:06:48.383Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-9d9dcbbf039fbec5",
@@ -97,14 +125,26 @@
       ],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A alteração na unha mostrada na imagem é bem provavelmente a coiloníquia (unha em formato de colher), um sinal clássico de falta de ferro grave. Ela está ligada a vários outros sintomas famosos da deficiência de ferro: vontade de comer gelo (pagofagia), dificuldade de engolir (disfagia, na síndrome de Plummer-Vinson), síndrome das pernas inquietas e até urina avermelhada depois de comer beterraba (beeturia, mais comum em quem tem pouco ferro). 'Abatiestesia' não é um termo reconhecido ligado a esse quadro.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Quadro clínico da anemia ferropriva",
+        "Coiloníquia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701715",
-      "ankiGuid": "w_?.lh,l@5"
+      "ankiGuid": "w_?.lh,l@5",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Durante-exame-fisico2954c99387/",
+        "sourceQuestionId": "4000183407",
+        "matchedAt": "2026-09-03T21:06:54.597Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-2d1b16817bcf318f",
@@ -130,14 +170,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Bebê que trocou o leite materno por leite de vaca puro (sem reforço de ferro) desde muito cedo — um cenário clássico pra desenvolver falta de ferro, já que o leite de vaca tem pouco ferro e ainda atrapalha a absorção do pouco que existe. O hemograma esperado mostra hemácias pequenas (microcitose) e pálidas (hipocromia), com ferritina baixa (mostrando estoque vazio) e RDW alto (hemácias de tamanhos bem variados, já que a produção está comprometida de forma desigual).",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Diagnóstico da anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701716",
-      "ankiGuid": "nUX5GQ{#;f"
+      "ankiGuid": "nUX5GQ{#;f",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo55e35e35e7/",
+        "sourceQuestionId": "4000183370",
+        "matchedAt": "2026-09-03T21:07:01.064Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-71504654e501411f",
@@ -163,14 +214,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A queilite angular (rachaduras nos cantos da boca) é um dos sinais físicos clássicos associados à falta de ferro, junto com a língua lisa, coiloníquia e pele seca — encontrar isso no exame físico reforça a suspeita de anemia ferropriva.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Quadro clínico da anemia ferropriva",
+        "Alterações mucosas: Glossite atrófica e queilite angular",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701717",
-      "ankiGuid": "eEEgqXdWF4"
+      "ankiGuid": "eEEgqXdWF4",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-18-anos-foi40edd8394b/",
+        "sourceQuestionId": "4000182837",
+        "matchedAt": "2026-09-03T21:07:06.968Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-1ea9b9b0a90bbd1e",
@@ -196,14 +259,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Comer terra e reboco de parede é uma forma de pica (apetite alterado, comendo coisas que não são comida) bem característica da falta de ferro em crianças. O hemograma esperado mostra anemia grave e bem microcítica/hipocrômica (hemoglobina e VCM bem baixos, CHCM baixo) com RDW alto — o padrão clássico da deficiência de ferro avançada.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Diagnóstico da anemia ferropriva",
+        "Quadro clínico da anemia ferropriva",
+        "Pica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701718",
-      "ankiGuid": "uK9>C0@jQ2"
+      "ankiGuid": "uK9>C0@jQ2",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Menino-2-anos-foi1048657a000/",
+        "sourceQuestionId": "4000182782",
+        "matchedAt": "2026-09-03T21:07:13.341Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-819bb4948aef8074",

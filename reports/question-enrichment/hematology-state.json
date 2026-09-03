@@ -2170,7 +2170,67 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-com-anemia343a5a87e0/",
       "localAnswer": "B",
       "remoteAnswer": "B"
+    },
+    "anki-hematologia-anemias-microciticas-708f71e0e851a628": {
+      "number": "1001d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-03T21:06:42.154Z",
+      "nextAttemptAt": "2026-09-10T21:06:42.154Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/a-anemia-por11e22e9b38/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-microciticas-4ae9f90849ecd434": {
+      "number": "1002d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-03T21:06:48.384Z",
+      "nextAttemptAt": "2026-09-10T21:06:48.384Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/estagios-deficiencia45bc2c302a/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-microciticas-9d9dcbbf039fbec5": {
+      "number": "1003d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-03T21:06:54.598Z",
+      "nextAttemptAt": "2026-09-10T21:06:54.598Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Durante-exame-fisico2954c99387/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
+    },
+    "anki-hematologia-anemias-microciticas-2d1b16817bcf318f": {
+      "number": "1004d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-03T21:07:01.064Z",
+      "nextAttemptAt": "2026-09-10T21:07:01.064Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo55e35e35e7/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-anemias-microciticas-71504654e501411f": {
+      "number": "1005d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-03T21:07:06.969Z",
+      "nextAttemptAt": "2026-09-10T21:07:06.969Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-18-anos-foi40edd8394b/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-microciticas-1ea9b9b0a90bbd1e": {
+      "number": "1006d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-03T21:07:13.342Z",
+      "nextAttemptAt": "2026-09-10T21:07:13.342Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Menino-2-anos-foi1048657a000/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
     }
   },
-  "updatedAt": "2026-09-03T11:22:26.770Z"
+  "updatedAt": "2026-09-03T21:07:13.342Z"
 }
