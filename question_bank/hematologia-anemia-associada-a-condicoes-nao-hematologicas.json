@@ -921,10 +921,21 @@
       "tags": [
         "Hematologia",
         "Anemia Associada a Condições Não Hematológicas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias e condições não hematológicas",
+        "Anemia da doença renal crônica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742514977825",
-      "ankiGuid": "j{Q(LHB:f^"
+      "ankiGuid": "j{Q(LHB:f^",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Assinalar-fator-que-NA132d3afe1a/",
+        "sourceQuestionId": "4000101179",
+        "matchedAt": "2026-09-04T11:25:11.113Z",
+        "confidence": 0.97
+      }
     },
     {
       "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-ab66f4b58568129f",
@@ -954,10 +965,24 @@
       "tags": [
         "Hematologia",
         "Anemia Associada a Condições Não Hematológicas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias macrocíticas",
+        "Anemias macrocíticas não megaloblásticas",
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742514977826",
-      "ankiGuid": "GPOnQ6oO6N"
+      "ankiGuid": "GPOnQ6oO6N",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-causas-anemia71447fe45/",
+        "sourceQuestionId": "4000045431",
+        "matchedAt": "2026-09-04T11:25:16.902Z",
+        "confidence": 1
+      }
     }
   ]
 }

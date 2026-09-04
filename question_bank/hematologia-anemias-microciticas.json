@@ -305,14 +305,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Apesar do quadro parecer, à primeira vista, uma simples falta de ferro (hemácias pequenas e pálidas), um detalhe chama atenção: não há anisocitose (RDW normal), e o VCM está desproporcionalmente baixo para uma anemia tão leve. Esse padrão (hemácias uniformemente pequenas, sem variação de tamanho) é mais típico de talassemia do que de ferropenia — por isso o próximo passo é a eletroforese de hemoglobina, pra confirmar ou descartar essa possibilidade.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Hemoglobinopatias",
+        "Talassemias",
+        "Definição das síndromes talassêmicas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701719",
-      "ankiGuid": "lP;3If2zn<"
+      "ankiGuid": "lP;3If2zn<",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Pre-escolar-sexo16709efb4a2/",
+        "sourceQuestionId": "4000164318",
+        "matchedAt": "2026-09-04T11:25:34.078Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-a56faeccf05fc24a",
@@ -339,14 +352,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Quando uma anemia 'ferropriva' não melhora nada depois de 6 meses de tratamento correto com ferro, é hora de duvidar do diagnóstico. Com histórico familiar de anemia (a mãe também teve) e hemácias tão pequenas, a suspeita muda pra talassemia — uma condição genética que não responde ao ferro porque o problema não é falta dele, e sim um defeito na fabricação da hemoglobina. O exame que confirma é a eletroforese de hemoglobina.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Hemoglobinopatias",
+        "Talassemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701720",
-      "ankiGuid": "j6|7UQE*N-"
+      "ankiGuid": "j6|7UQE*N-",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Pre-escolar-sexo13435dd95cb/",
+        "sourceQuestionId": "4000163580",
+        "matchedAt": "2026-09-04T11:25:40.138Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-55a7da6d417bc80a",

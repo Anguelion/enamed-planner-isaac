@@ -28,14 +28,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Bolinhas de naftalina (as antigas 'naftalinas' de guarda-roupa) contêm uma substância oxidante que pode destruir as hemácias em quem tem deficiência de G6PD — uma enzima que protege a célula contra esse tipo de estresse. Sem ela funcionando direito, a hemoglobina se desnatura e a hemácia é destruída, causando anemia súbita com icterícia, baço aumentado e reticulócitos altos (a medula tentando compensar). O Coombs negativo descarta uma causa autoimune.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Introdução à hemólise",
+        "Anemias hemolíticas por deficiências enzimáticas",
+        "Deficiência de G6PD",
+        "Quadro clínico da deficiência de G6PD",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350342",
-      "ankiGuid": "Ebt4WIvU3+"
+      "ankiGuid": "Ebt4WIvU3+",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/menino-3-anos-idade1053aa909f1/",
+        "sourceQuestionId": "4000185271",
+        "matchedAt": "2026-09-04T11:25:22.606Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-ae22a917abc41450",
@@ -62,14 +75,28 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Os critérios pra dizer que é uma síndrome torácica aguda na anemia falciforme são: aparecer um infiltrado novo no raio-x, junto com pelo menos um sintoma como dor no peito, febre alta, tosse com estertores, ou falta de ar. Alterações do coração (como sinais de isquemia no ECG) não fazem parte desses critérios — a síndrome torácica é um problema do pulmão, não do coração.",
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Síndrome torácica aguda",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350343",
-      "ankiGuid": "Az+m^v(%k0"
+      "ankiGuid": "Az+m^v(%k0",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Entre-seguir-que-na2303e8ea93/",
+        "sourceQuestionId": "4000185215",
+        "matchedAt": "2026-09-04T11:25:28.434Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-c8dc4b5973f7fe9e",
