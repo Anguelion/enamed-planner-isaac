@@ -2250,7 +2250,67 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/Pre-escolar-sexo13435dd95cb/",
       "localAnswer": "C",
       "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-microciticas-55a7da6d417bc80a": {
+      "number": "1009d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-04T20:49:08.488Z",
+      "nextAttemptAt": "2026-09-11T20:49:08.488Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-54-anos-com84a1aa09dc/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-anemias-microciticas-fec8dc7d46bd2224": {
+      "number": "1010d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-04T20:49:15.023Z",
+      "nextAttemptAt": "2026-09-11T20:49:15.023Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-sintomas-ou125ba34303/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-microciticas-4b7df261146d927e": {
+      "number": "1011d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-04T20:49:20.927Z",
+      "nextAttemptAt": "2026-09-11T20:49:20.927Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-que-apresente14d8b8b795/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-anemias-microciticas-3f508b7e4e232377": {
+      "number": "1012d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-04T20:49:27.211Z",
+      "nextAttemptAt": "2026-09-11T20:49:27.211Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Quanto-diagnostico2485d831c5/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-anemias-microciticas-85dc5ffdb9fd83b2": {
+      "number": "1013d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-04T20:49:33.353Z",
+      "nextAttemptAt": "2026-09-11T20:49:33.353Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-21-anos-e7413fa4df5/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-microciticas-d20c731de79758ab": {
+      "number": "1014d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-04T20:49:40.554Z",
+      "nextAttemptAt": "2026-09-11T20:49:40.554Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-62-anos-com94779ec784/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     }
   },
-  "updatedAt": "2026-09-04T11:25:40.138Z"
+  "updatedAt": "2026-09-04T20:49:40.554Z"
 }

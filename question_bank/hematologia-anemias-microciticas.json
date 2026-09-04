@@ -397,14 +397,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Apesar da hemoglobina estar bem baixa (6,7), esse paciente está estável (sinais vitais normais, sem sintomas graves) e já é conhecido por ter uma anemia crônica bem tolerada pelo corpo (que se adapta aos poucos a níveis baixos de hemoglobina quando a queda é lenta). Por isso, a conduta mais segura é NÃO transfundir de cara (evitando os riscos da transfusão), e sim investigar bem a causa (ferrocinética) antes de decidir o tratamento — só repor ferro depois de confirmar que é isso mesmo.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Quadro clínico da anemia ferropriva",
+        "Causas de ferropenia",
+        "Perda crônica de ferro",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701721",
-      "ankiGuid": "P}&F3e5M?["
+      "ankiGuid": "P}&F3e5M?[",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-54-anos-com84a1aa09dc/",
+        "sourceQuestionId": "4000151651",
+        "matchedAt": "2026-09-04T20:49:08.487Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-fec8dc7d46bd2224",
@@ -431,14 +444,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A hipertrofia gengival (gengiva engrossada) NÃO é um sinal clássico de falta de ferro — isso é mais associado a outras causas (como certos remédios ou algumas leucemias). Já queilose, coiloníquia, disfagia (na síndrome de Plummer-Vinson) e fadiga são sintomas bem conhecidos e esperados na anemia ferropriva grave.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Quadro clínico da anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701722",
-      "ankiGuid": "h)Z?M|FApf"
+      "ankiGuid": "h)Z?M|FApf",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-sintomas-ou125ba34303/",
+        "sourceQuestionId": "4000145732",
+        "matchedAt": "2026-09-04T20:49:15.023Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-4b7df261146d927e",
@@ -464,14 +488,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A HbA2 aumentada na eletroforese é a marca registrada da talassemia beta menor (o traço talassêmico) — é literalmente o exame usado pra fechar esse diagnóstico.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Talassemias",
+        "Beta-talassemias",
+        "Fisiopatologia e apresentação da beta-talassemia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701723",
-      "ankiGuid": "M04(ha^R^:"
+      "ankiGuid": "M04(ha^R^:",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-que-apresente14d8b8b795/",
+        "sourceQuestionId": "4000144614",
+        "matchedAt": "2026-09-04T20:49:20.927Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-3f508b7e4e232377",
@@ -497,14 +534,29 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Hemácias pequenas (VCM baixo) e de tamanhos bem variados entre si (RDW alto) formam o padrão clássico da anemia ferropriva — a variação de tamanho (RDW alto) acontece porque, conforme o ferro vai faltando, as hemácias novas vão ficando cada vez menores que as antigas.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Anemia ferropriva",
+        "Diagnóstico da anemia ferropriva",
+        "Perfil de ferro na anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701724",
-      "ankiGuid": "szeL_^[>*E"
+      "ankiGuid": "szeL_^[>*E",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Quanto-diagnostico2485d831c5/",
+        "sourceQuestionId": "4000144345",
+        "matchedAt": "2026-09-04T20:49:27.210Z",
+        "confidence": 0.9363636363636363
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-85dc5ffdb9fd83b2",
@@ -530,14 +582,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Comer gelo (pagofagia) é um sintoma bem característico de falta de ferro. A presença de 20% de eosinófilos no hemograma é uma pista extra importante: sugere uma infecção por parasita (verme), que pode estar causando perda crônica de sangue no intestino e, assim, a própria anemia. Por isso o tratamento junta um antiparasitário (albendazol) com a reposição de ferro — e o VCM esperado é baixo (microcítico), compatível com a anemia por falta de ferro.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Tratamento da anemia ferropriva",
+        "Quadro clínico da anemia ferropriva",
+        "Pica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701725",
-      "ankiGuid": "qJ-|nLx3O}"
+      "ankiGuid": "qJ-|nLx3O}",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-21-anos-e7413fa4df5/",
+        "sourceQuestionId": "4000143837",
+        "matchedAt": "2026-09-04T20:49:33.353Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-d20c731de79758ab",
@@ -563,14 +628,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Essa senhora tem sinais bem sugestivos de falta de ferro (queilose, síndrome das pernas inquietas) confirmados pelos exames (ferro baixo, capacidade de ligação do ferro alta, ferritina bem baixa) — anemia ferropriva confirmada. Em mulher dessa idade, sem sangramento menstrual (já na pós-menopausa) e sem outra causa óbvia, o próximo passo obrigatório é procurar uma perda de sangue escondida no trato digestivo, com colonoscopia e endoscopia — não basta só repor o ferro sem investigar a causa.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Diagnóstico da anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701726",
-      "ankiGuid": "xl3PLSkw~u"
+      "ankiGuid": "xl3PLSkw~u",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-62-anos-com94779ec784/",
+        "sourceQuestionId": "4000143207",
+        "matchedAt": "2026-09-04T20:49:40.554Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-c78be2b870826cd3",

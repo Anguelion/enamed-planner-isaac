@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-04T11:25:09.921Z",
+  "generatedAt": "2026-09-04T20:49:07.107Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
@@ -7,73 +7,14 @@
   "changed": 6,
   "results": [
     {
-      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-6a09b715e154aad5",
-      "number": "1021g",
-      "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
+      "id": "anki-hematologia-anemias-microciticas-55a7da6d417bc80a",
+      "number": "1009d",
+      "file": "question_bank/hematologia-anemias-microciticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Assinalar-fator-que-NA132d3afe1a/",
-      "sourceQuestionId": "4000101179",
-      "matchedAt": "2026-09-04T11:25:11.113Z",
-      "similarity": {
-        "stem": 1,
-        "options": 0.9,
-        "combined": 0.97
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias e condições não hematológicas",
-        "Anemia da doença renal crônica"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Anemia da doença renal crônica. Conduta/resposta: Antagonismo periférico à ação da eritropoetina",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Assinalar-fator-que-NA132d3afe1a/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-ab66f4b58568129f",
-      "number": "1022g",
-      "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-causas-anemia71447fe45/",
-      "sourceQuestionId": "4000045431",
-      "matchedAt": "2026-09-04T11:25:16.902Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias macrocíticas",
-        "Anemias macrocíticas não megaloblásticas",
-        "Introdução ao Estudo das Anemias",
-        "Classificações das anemias",
-        "Classificação morfológica das anemias"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Classificação morfológica das anemias. Conduta/resposta: insuficiência renal crônica.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Sa-causas-anemia71447fe45/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-hemoliticas-48559cb40089942b",
-      "number": "1001f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/menino-3-anos-idade1053aa909f1/",
-      "sourceQuestionId": "4000185271",
-      "matchedAt": "2026-09-04T11:25:22.606Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-54-anos-com84a1aa09dc/",
+      "sourceQuestionId": "4000151651",
+      "matchedAt": "2026-09-04T20:49:08.487Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -85,57 +26,26 @@
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Anemias hemolíticas",
-        "Introdução à hemólise",
-        "Anemias hemolíticas por deficiências enzimáticas",
-        "Deficiência de G6PD",
-        "Quadro clínico da deficiência de G6PD"
+        "Anemias microcíticas",
+        "Anemia ferropriva",
+        "Quadro clínico da anemia ferropriva",
+        "Causas de ferropenia",
+        "Perda crônica de ferro"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Quadro clínico da deficiência de G6PD. Conduta/resposta: deficiência de glicose-6-fosfato desidrogenase",
+      "comment": "Gabarito confirmado: D. Assunto: Perda crônica de ferro. Conduta/resposta: Contraindicar transfusão, solicitar ferrocinética e iniciar reposição de ferro após.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/menino-3-anos-idade1053aa909f1/"
+        "https://med.estrategia.com/public/questoes/Homem-54-anos-com84a1aa09dc/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-hemoliticas-ae22a917abc41450",
-      "number": "1002f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Entre-seguir-que-na2303e8ea93/",
-      "sourceQuestionId": "4000185215",
-      "matchedAt": "2026-09-04T11:25:28.434Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "E",
-      "remoteAnswer": "E",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemoglobinopatias",
-        "Anemia falciforme",
-        "Quadro clínico da anemia falciforme",
-        "Complicações agudas da anemia falciforme",
-        "Síndrome torácica aguda"
-      ],
-      "comment": "Gabarito confirmado: E. Assunto: Síndrome torácica aguda. Conduta/resposta: sinais de isquemia no eletrocardiograma ou aumento de biomarcadores de necrose miocárdica",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Entre-seguir-que-na2303e8ea93/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-microciticas-819bb4948aef8074",
-      "number": "1007d",
+      "id": "anki-hematologia-anemias-microciticas-fec8dc7d46bd2224",
+      "number": "1010d",
       "file": "question_bank/hematologia-anemias-microciticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Pre-escolar-sexo16709efb4a2/",
-      "sourceQuestionId": "4000164318",
-      "matchedAt": "2026-09-04T11:25:34.078Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-sintomas-ou125ba34303/",
+      "sourceQuestionId": "4000145732",
+      "matchedAt": "2026-09-04T20:49:15.023Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -148,25 +58,86 @@
         "Clínica Médica",
         "Hematologia",
         "Anemias microcíticas",
-        "Diagnóstico diferencial das anemias microcíticas",
-        "Hemoglobinopatias",
-        "Talassemias",
-        "Definição das síndromes talassêmicas"
+        "Anemia ferropriva",
+        "Quadro clínico da anemia ferropriva"
       ],
-      "comment": "Gabarito confirmado: A. Assunto: Definição das síndromes talassêmicas. Conduta/resposta: Solicitar exame de eletroforese de hemoglobina.",
+      "comment": "Gabarito confirmado: A. Assunto: Quadro clínico da anemia ferropriva. Conduta/resposta: Hipertrofia gengival.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Pre-escolar-sexo16709efb4a2/"
+        "https://med.estrategia.com/public/questoes/Qual-sintomas-ou125ba34303/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-microciticas-a56faeccf05fc24a",
-      "number": "1008d",
+      "id": "anki-hematologia-anemias-microciticas-4b7df261146d927e",
+      "number": "1011d",
       "file": "question_bank/hematologia-anemias-microciticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Pre-escolar-sexo13435dd95cb/",
-      "sourceQuestionId": "4000163580",
-      "matchedAt": "2026-09-04T11:25:40.138Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-que-apresente14d8b8b795/",
+      "sourceQuestionId": "4000144614",
+      "matchedAt": "2026-09-04T20:49:20.927Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemoglobinopatias",
+        "Talassemias",
+        "Beta-talassemias",
+        "Fisiopatologia e apresentação da beta-talassemia"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Fisiopatologia e apresentação da beta-talassemia. Conduta/resposta: talassemia beta menor.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/paciente-que-apresente14d8b8b795/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-microciticas-3f508b7e4e232377",
+      "number": "1012d",
+      "file": "question_bank/hematologia-anemias-microciticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Quanto-diagnostico2485d831c5/",
+      "sourceQuestionId": "4000144345",
+      "matchedAt": "2026-09-04T20:49:27.210Z",
+      "similarity": {
+        "stem": 0.9090909090909091,
+        "options": 1,
+        "combined": 0.9363636363636363
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
+        "Anemias microcíticas",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Anemia ferropriva",
+        "Diagnóstico da anemia ferropriva",
+        "Perfil de ferro na anemia ferropriva"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Perfil de ferro na anemia ferropriva. Conduta/resposta: Ferropriva.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Quanto-diagnostico2485d831c5/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-microciticas-85dc5ffdb9fd83b2",
+      "number": "1013d",
+      "file": "question_bank/hematologia-anemias-microciticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-21-anos-e7413fa4df5/",
+      "sourceQuestionId": "4000143837",
+      "matchedAt": "2026-09-04T20:49:33.353Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -179,15 +150,47 @@
         "Clínica Médica",
         "Hematologia",
         "Anemias microcíticas",
-        "Diagnóstico diferencial das anemias microcíticas",
-        "Hemoglobinopatias",
-        "Talassemias"
+        "Anemia ferropriva",
+        "Tratamento da anemia ferropriva",
+        "Quadro clínico da anemia ferropriva",
+        "Pica"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Talassemias. Conduta/resposta: Eletroforese de hemoglobina.",
+      "comment": "Gabarito confirmado: C. Assunto: Pica. Conduta/resposta: 75, albendazol e ferro.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Pre-escolar-sexo1347b174d8b/",
-        "https://med.estrategia.com/public/questoes/Pre-escolar-sexo13435dd95cb/",
-        "https://med.estrategia.com/public/questoes/Pre-escolar-sexo16709efb4a2/"
+        "https://med.estrategia.com/public/questoes/Homem-21-anos-e7413fa4df5/",
+        "https://med.estrategia.com/public/questoes/Homem-21-anos-e7424de5f77/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-microciticas-d20c731de79758ab",
+      "number": "1014d",
+      "file": "question_bank/hematologia-anemias-microciticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-62-anos-com94779ec784/",
+      "sourceQuestionId": "4000143207",
+      "matchedAt": "2026-09-04T20:49:40.554Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias microcíticas",
+        "Anemia ferropriva",
+        "Diagnóstico da anemia ferropriva"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Diagnóstico da anemia ferropriva. Conduta/resposta: realizar colonoscopia e endoscopia digestiva alta",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Mulher-62-anos-com94779ec784/",
+        "https://med.estrategia.com/public/questoes/Mulher-62a-comparece9711d12d3c/",
+        "https://med.estrategia.com/public/questoes/39c63a99e70800ea001aec37/",
+        "https://med.estrategia.com/public/questoes/Mulher-62-anos-queixa72c9a3577f/"
       ]
     }
   ]
