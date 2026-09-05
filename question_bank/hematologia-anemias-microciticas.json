@@ -944,14 +944,29 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "O padrão clássico da anemia por falta de ferro no laboratório é: VCM diminuído (hemácias pequenas), ferro sérico baixo e ferritina reduzida (mostrando o estoque vazio) — os três achados juntos fecham o diagnóstico.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Pediatria",
+        "Hematologia Pediátrica",
+        "Anemia ferropriva na infância",
+        "Classificação das anemias - Foco na ferropriva",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Avaliação laboratorial do ferro",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701733",
-      "ankiGuid": "x4*OU5I6jv"
+      "ankiGuid": "x4*OU5I6jv",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-ferropriva-e29d10ad52e/",
+        "sourceQuestionId": "4000118605",
+        "matchedAt": "2026-09-05T20:27:05.560Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-0d5871ed2b1d7c28",
@@ -980,14 +995,26 @@
       ],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Se a criança está fazendo o tratamento certinho (dose correta, longe do leite, seguindo a dieta) mas a anemia não melhora, é hora de pensar em outra causa por trás — e a eletroforese de hemoglobina (procurando talassemia) é o exame que provavelmente vai explicar essa persistência.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Tratamento da anemia ferropriva",
+        "Refratariedade ao tratamento da anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701734",
-      "ankiGuid": "JrPAx:RBlT"
+      "ankiGuid": "JrPAx:RBlT",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Menina-1-ano-2-meses98aaf65fd6/",
+        "sourceQuestionId": "4000115312",
+        "matchedAt": "2026-09-05T20:27:11.500Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-04f8e412c6042a37",
@@ -1013,14 +1040,24 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "As anemias hipocrômicas e microcíticas (hemácias pequenas e pálidas) têm três principais suspeitas no diagnóstico diferencial: falta de ferro (a mais comum), talassemia (genética) e anemia de doença crônica (secundária a inflamação) — cada uma com um padrão diferente nos exames de ferro.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701735",
-      "ankiGuid": "d;v0H,`C,P"
+      "ankiGuid": "d;v0H,`C,P",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/as-anemias70fef1aae/",
+        "sourceQuestionId": "4000114683",
+        "matchedAt": "2026-09-05T20:27:17.401Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-a8a97e3ddae97b35",
@@ -1046,14 +1083,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Bebê com pneumonia e anemia bem microcítica (VCM 50, muito baixo) e hipocrômica (HCM 18), com RDW bem alto (20%) — dieta ainda dependente de leite materno com pouca introdução de alimentos sólidos ricos em ferro. O exame que melhor mostra o estado do ferro nesse momento é a saturação de transferrina.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Anemia ferropriva",
+        "Diagnóstico da anemia ferropriva",
+        "Perfil de ferro na anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701736",
-      "ankiGuid": "kO34&I.o5+"
+      "ankiGuid": "kO34&I.o5+",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Menina-6-meses-esta13754e20503/",
+        "sourceQuestionId": "4000112684",
+        "matchedAt": "2026-09-05T20:27:23.393Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-8e5736e39ab364b6",
@@ -1080,14 +1130,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Idosa com anemia grave e ferropenia confirmada, mas com endoscopia e colonoscopia normais (sem sangramento visível) — mesmo assim, além de tratar a doença de base (refluxo), a reposição de ferro precisa ser feita de forma adequada: via oral se possível, mas podendo ser endovenosa dependendo da urgência/tolerância — a via oral simples costuma ser a escolha inicial, que é o que a alternativa D representa.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Tratamento da anemia ferropriva",
+        "Reposição oral de ferro",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701737",
-      "ankiGuid": "e`I=EZSkB%"
+      "ankiGuid": "e`I=EZSkB%",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-75-anos-com12543b94cd7/",
+        "sourceQuestionId": "4000110528",
+        "matchedAt": "2026-09-05T20:27:29.117Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-4f1b8e0f0e830463",
@@ -1114,14 +1176,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A pagofagia (vontade compulsiva de comer gelo) é tratada repondo ferro — é um dos sintomas mais característicos (e curiosos!) da falta de ferro, e costuma melhorar rapidamente assim que o ferro é reposto, mesmo antes da anemia se corrigir totalmente.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Quadro clínico da anemia ferropriva",
+        "Pica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701738",
-      "ankiGuid": "C|(/rV=F4."
+      "ankiGuid": "C|(/rV=F4.",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Pagofagia-e-tratada5e7cabfc5/",
+        "sourceQuestionId": "4000106154",
+        "matchedAt": "2026-09-05T20:27:34.759Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-6d29a8baf1c9227a",

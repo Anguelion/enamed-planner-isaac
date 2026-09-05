@@ -2370,7 +2370,67 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/Considere-indices3837268354/",
       "localAnswer": "A",
       "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-microciticas-1071f310ac07c3cf": {
+      "number": "1021d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-05T20:27:05.561Z",
+      "nextAttemptAt": "2026-09-12T20:27:05.561Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-ferropriva-e29d10ad52e/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-microciticas-0d5871ed2b1d7c28": {
+      "number": "1022d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-05T20:27:11.500Z",
+      "nextAttemptAt": "2026-09-12T20:27:11.500Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Menina-1-ano-2-meses98aaf65fd6/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
+    },
+    "anki-hematologia-anemias-microciticas-04f8e412c6042a37": {
+      "number": "1023d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-05T20:27:17.402Z",
+      "nextAttemptAt": "2026-09-12T20:27:17.402Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/as-anemias70fef1aae/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-anemias-microciticas-a8a97e3ddae97b35": {
+      "number": "1024d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-05T20:27:23.393Z",
+      "nextAttemptAt": "2026-09-12T20:27:23.393Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Menina-6-meses-esta13754e20503/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-microciticas-8e5736e39ab364b6": {
+      "number": "1025d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-05T20:27:29.117Z",
+      "nextAttemptAt": "2026-09-12T20:27:29.117Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-75-anos-com12543b94cd7/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-anemias-microciticas-4f1b8e0f0e830463": {
+      "number": "1026d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-05T20:27:34.760Z",
+      "nextAttemptAt": "2026-09-12T20:27:34.760Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Pagofagia-e-tratada5e7cabfc5/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     }
   },
-  "updatedAt": "2026-09-05T10:41:54.644Z"
+  "updatedAt": "2026-09-05T20:27:34.760Z"
 }
