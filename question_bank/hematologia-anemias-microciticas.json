@@ -672,14 +672,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Mesmo sem sangramento visível, todo adulto (principalmente homens e mulheres na pós-menopausa) com anemia por falta de ferro confirmada precisa investigar o trato digestivo — porque a causa mais comum nessa faixa etária é justamente um sangramento escondido (oculto) no intestino, que pode ser desde uma úlcera até, mais preocupante, um câncer colorretal.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Tratamento da anemia ferropriva",
+        "Investigação da etiologia da ferropenia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701727",
-      "ankiGuid": "xUNQwq;V|$"
+      "ankiGuid": "xUNQwq;V|$",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-com-55-anos40e41a5a94/",
+        "sourceQuestionId": "4000142849",
+        "matchedAt": "2026-09-05T10:41:25.075Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-50b6d1d8efd9b127",
@@ -706,14 +718,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Na anemia ferropriva, as hemácias ficam pequenas (VCM baixo) e com tamanhos bem variados entre si (RDW alto), já que a produção vai piorando aos poucos conforme o ferro se esgota.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Avaliação laboratorial do ferro",
+        "Diagnóstico da anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701728",
-      "ankiGuid": "orOU&3,HI}"
+      "ankiGuid": "orOU&3,HI}",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Quais-alteracoes-sa12e26c44d2/",
+        "sourceQuestionId": "4000142757",
+        "matchedAt": "2026-09-05T10:41:30.964Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-71b208ac73bbcaef",
@@ -740,14 +764,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Criança institucionalizada, com sinais de desnutrição e uma infecção recente, e um hemograma clássico de falta de ferro (VCM bem baixo, RDW alto) — bebês/crianças institucionalizadas costumam ter alimentação pobre em ferro, sendo um grupo de risco importante pra essa anemia.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Quadro clínico da anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701729",
-      "ankiGuid": "J~0D9Vm}h5"
+      "ankiGuid": "J~0D9Vm}h5",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Menina-18-meses26450e6cf04/",
+        "sourceQuestionId": "4000141058",
+        "matchedAt": "2026-09-05T10:41:37.053Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-9edc76d578c6c3f6",
@@ -773,14 +808,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Esse homem tem uma história de anemia desde a infância, tratada de forma incompleta com ferro, sem melhora total — e agora os exames mostram VCM bem baixo (57) mas com RDW NORMAL (12,8%, não elevado) e reticulócitos normais, além de ferro e ferritina normais. Esse padrão (hemácias uniformemente pequenas, sem sinais de falta real de ferro) é bem característico de traço talassêmico — diferente da ferropriva, que teria RDW alto e ferritina baixa.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Talassemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701730",
-      "ankiGuid": "m3TWRr2Uz`"
+      "ankiGuid": "m3TWRr2Uz`",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-29a-retorna76c554a076/",
+        "sourceQuestionId": "4000130283",
+        "matchedAt": "2026-09-05T10:41:43.068Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-f98f27217f2ee530",
@@ -806,14 +852,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Homem vegetariano com anemia leve e crônica (sempre teve alterações no hemograma, nunca tratada), hemácias pequenas e pálidas, com a presença de 'hemácias em alvo' (um achado clássico de talassemia) — apesar de ser vegetariano (o que poderia sugerir falta de ferro), o padrão crônico e assintomático, junto com as hemácias em alvo, aponta mais pra talassemia. O exame mais específico pra confirmar é a eletroforese de hemoglobina.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Hemoglobinopatias",
+        "Talassemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701731",
-      "ankiGuid": "t4(W;w/)/Q"
+      "ankiGuid": "t4(W;w/)/Q",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-masculino-2511934b1206d/",
+        "sourceQuestionId": "4000127342",
+        "matchedAt": "2026-09-05T10:41:48.765Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-5c2b9b118efa8395",
@@ -840,14 +898,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Na anemia ferropênica (falta de ferro), dois valores sobem: o RDW (porque as hemácias ficam com tamanhos bem variados) e a capacidade total de ligação do ferro — CTLF (porque o corpo produz mais transferrina, tentando 'caçar' mais ferro pelo sangue).",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Diagnóstico da anemia ferropriva",
+        "Perfil de ferro na anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701732",
-      "ankiGuid": "P7pZgMUzyL"
+      "ankiGuid": "P7pZgMUzyL",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Considere-indices3837268354/",
+        "sourceQuestionId": "4000119059",
+        "matchedAt": "2026-09-05T10:41:54.643Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-1071f310ac07c3cf",
