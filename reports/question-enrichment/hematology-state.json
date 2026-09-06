@@ -493,10 +493,10 @@
     },
     "anki-hematologia-anemias-hemoliticas-ba79f9d133177b44": {
       "number": "1032f",
-      "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-08-23T07:05:05.752Z",
-      "nextAttemptAt": "2026-09-06T07:05:05.752Z",
+      "status": "low_confidence",
+      "attempts": 3,
+      "lastAttemptAt": "2026-09-06T11:03:29.759Z",
+      "nextAttemptAt": "2026-11-05T11:03:29.759Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -2430,7 +2430,57 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/Pagofagia-e-tratada5e7cabfc5/",
       "localAnswer": "D",
       "remoteAnswer": "D"
+    },
+    "anki-hematologia-anemias-microciticas-6d29a8baf1c9227a": {
+      "number": "1027d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-06T11:03:35.877Z",
+      "nextAttemptAt": "2026-09-13T11:03:35.877Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Lactente-11-meses42bcf1f559/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-anemias-microciticas-f183e2dcabe891b3": {
+      "number": "1028d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-06T11:03:41.687Z",
+      "nextAttemptAt": "2026-09-13T11:03:41.687Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-ferropriva78788afca/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-anemias-microciticas-4124da30786b0787": {
+      "number": "1029d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-06T11:03:47.771Z",
+      "nextAttemptAt": "2026-09-13T11:03:47.771Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Menino-com-6-anos971cb921b4/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-microciticas-0bf2dbd4db1f3b38": {
+      "number": "1030d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-06T11:03:53.636Z",
+      "nextAttemptAt": "2026-09-13T11:03:53.636Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Ana-Maria-50-anos322091c3a0/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-microciticas-7060e1beb412f3cb": {
+      "number": "1031d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-06T11:03:59.599Z",
+      "nextAttemptAt": "2026-09-13T11:03:59.599Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-negra-26-anos99e9aced5d/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     }
   },
-  "updatedAt": "2026-09-05T20:27:34.760Z"
+  "updatedAt": "2026-09-06T11:03:59.599Z"
 }

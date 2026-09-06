@@ -1221,14 +1221,29 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Bebê com dieta quase só de leite (pouco alimento sólido), comendo terra (geofagia, outra forma de pica ligada à falta de ferro), com hemograma clássico de ferropenia (VCM baixo, ferritina baixa, RDW alto) — a conduta é simplesmente prescrever sulfato ferroso, já que o quadro e a história alimentar já explicam bem a causa.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Pediatria",
+        "Hematologia Pediátrica",
+        "Anemia ferropriva na infância",
+        "Tratamento",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Tratamento da anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701739",
-      "ankiGuid": "irxd*qx_yF"
+      "ankiGuid": "irxd*qx_yF",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Lactente-11-meses42bcf1f559/",
+        "sourceQuestionId": "4000099546",
+        "matchedAt": "2026-09-06T11:03:35.876Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-f183e2dcabe891b3",
@@ -1254,14 +1269,31 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "No tratamento da anemia ferropriva, o corpo responde relativamente rápido: a hemoglobina já começa a subir dentro de 7 a 10 dias do início do ferro — mesmo que a normalização completa demore bem mais tempo (semanas a meses).",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Pediatria",
+        "Hematologia Pediátrica",
+        "Anemia ferropriva na infância",
+        "Tratamento",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Tratamento da anemia ferropriva",
+        "Reposição oral de ferro",
+        "Avaliação de resposta ao tratamento da anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701740",
-      "ankiGuid": "lWhsyBGkjK"
+      "ankiGuid": "lWhsyBGkjK",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-ferropriva78788afca/",
+        "sourceQuestionId": "4000083516",
+        "matchedAt": "2026-09-06T11:03:41.686Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-4124da30786b0787",
@@ -1287,14 +1319,30 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Criança com anemia grave (Hb 6,5), hemácias bem pequenas (VCM 64), dieta pobre em ferro (pouca proteína e verdura, muito carboidrato), com índice de saturação de transferrina e ferritina bem baixos — anemia ferropriva por dieta pobre em ferro confirmada. O tratamento certo é a reposição de ferro por via oral (sulfato ferroso), não transfusão, já que ela está clinicamente estável.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Pediatria",
+        "Hematologia Pediátrica",
+        "Anemia ferropriva na infância",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Avaliação laboratorial do ferro",
+        "Diagnóstico da anemia ferropriva",
+        "Perfil de ferro na anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701741",
-      "ankiGuid": "IBgF>C6to0"
+      "ankiGuid": "IBgF>C6to0",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Menino-com-6-anos971cb921b4/",
+        "sourceQuestionId": "4000080427",
+        "matchedAt": "2026-09-06T11:03:47.770Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-0bf2dbd4db1f3b38",
@@ -1321,14 +1369,24 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Microcitose e hipocromia leve a moderada, mas com RDW NORMAL (hemácias de tamanhos parecidos entre si) — esse padrão mais 'uniforme' é típico da anemia associada a estados inflamatórios/infecciosos crônicos, diferente da ferropriva, que costuma ter RDW alto (hemácias mais variadas em tamanho).",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701742",
-      "ankiGuid": "b<GS8=otHo"
+      "ankiGuid": "b<GS8=otHo",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Ana-Maria-50-anos322091c3a0/",
+        "sourceQuestionId": "4000079437",
+        "matchedAt": "2026-09-06T11:03:53.635Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-7060e1beb412f3cb",
@@ -1354,14 +1412,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Mulher com febre, emagrecimento (sugerindo doença de base inflamatória/infecciosa) e anemia hipocrômica microcítica, mas com um detalhe importante: a capacidade de ligação do ferro está BAIXA (200, abaixo do normal), diferente da ferropriva, que teria essa capacidade ALTA. Esse padrão (CTLF baixa) é característico da anemia de doença crônica, que acontece 'de tabela' junto com a doença inflamatória de base.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Anemia da doença crônica",
+        "Quadro clínico da anemia de doença crônica",
+        "Diagnóstico da anemia de doença crônica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701743",
-      "ankiGuid": "e.;F_(+`1?"
+      "ankiGuid": "e.;F_(+`1?",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-negra-26-anos99e9aced5d/",
+        "sourceQuestionId": "4000076622",
+        "matchedAt": "2026-09-06T11:03:59.598Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-ef2e53cb63588bfb",

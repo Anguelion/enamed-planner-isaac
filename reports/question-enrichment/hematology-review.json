@@ -433,7 +433,23 @@
       "tags": [],
       "suggestedComment": "",
       "reviewedAt": "2026-09-01T21:06:50.292Z"
+    },
+    "anki-hematologia-anemias-hemoliticas-ba79f9d133177b44": {
+      "id": "anki-hematologia-anemias-hemoliticas-ba79f9d133177b44",
+      "number": "1032f",
+      "status": "low_confidence",
+      "localAnswer": null,
+      "remoteAnswer": null,
+      "sourceUrl": null,
+      "similarity": {
+        "stem": 0.9142857142857143,
+        "options": 0.09166666666666667,
+        "combined": 0.6674999999999999
+      },
+      "tags": [],
+      "suggestedComment": "",
+      "reviewedAt": "2026-09-06T11:03:29.759Z"
     }
   },
-  "updatedAt": "2026-09-01T21:06:50.292Z"
+  "updatedAt": "2026-09-06T11:03:29.759Z"
 }
