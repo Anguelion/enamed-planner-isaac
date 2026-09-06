@@ -1,70 +1,20 @@
 {
-  "generatedAt": "2026-09-06T11:03:28.987Z",
+  "generatedAt": "2026-09-06T20:28:43.259Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 5,
+  "changed": 6,
   "results": [
     {
-      "id": "anki-hematologia-anemias-hemoliticas-ba79f9d133177b44",
-      "number": "1032f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": false,
-      "status": "low_confidence",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Adolescente-sexo10047e7c9d9/"
-      ],
-      "bestSimilarity": {
-        "stem": 0.9142857142857143,
-        "options": 0.09166666666666667,
-        "combined": 0.6674999999999999
-      }
-    },
-    {
-      "id": "anki-hematologia-anemias-microciticas-6d29a8baf1c9227a",
-      "number": "1027d",
+      "id": "anki-hematologia-anemias-microciticas-ef2e53cb63588bfb",
+      "number": "1032d",
       "file": "question_bank/hematologia-anemias-microciticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Lactente-11-meses42bcf1f559/",
-      "sourceQuestionId": "4000099546",
-      "matchedAt": "2026-09-06T11:03:35.876Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Pediatria",
-        "Hematologia Pediátrica",
-        "Anemia ferropriva na infância",
-        "Tratamento",
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias microcíticas",
-        "Anemia ferropriva",
-        "Tratamento da anemia ferropriva"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Tratamento da anemia ferropriva. Conduta/resposta: Prescrever sulfato ferroso.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Lactente-11-meses42bcf1f559/",
-        "https://med.estrategia.com/public/questoes/Lactente-11-meses73be01c8ea/",
-        "https://med.estrategia.com/public/questoes/Lactente-11-meses108bcc2bd2a/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-microciticas-f183e2dcabe891b3",
-      "number": "1028d",
-      "file": "question_bank/hematologia-anemias-microciticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-ferropriva78788afca/",
-      "sourceQuestionId": "4000083516",
-      "matchedAt": "2026-09-06T11:03:41.686Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Anemia-hipocromica3366f154ad/",
+      "sourceQuestionId": "4000050818",
+      "matchedAt": "2026-09-06T20:28:44.549Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -74,33 +24,88 @@
       "remoteAnswer": "B",
       "answerMismatch": false,
       "tags": [
-        "Pediatria",
-        "Hematologia Pediátrica",
-        "Anemia ferropriva na infância",
-        "Tratamento",
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias microcíticas",
+        "Diagnóstico diferencial das anemias microcíticas"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Diagnóstico diferencial das anemias microcíticas. Conduta/resposta: A causa mais comum é a deficiência de ferro, condição adquirida e prevalente globalmente. A deficiência de ferro deve ser documentada laboratorialmente para evitar-se a reposição inadequada de ferro em pacientes com talassemias ou anemia de doença crônica.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Anemia-hipocromica3366f154ad/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-microciticas-e8632f08a085aef0",
+      "number": "1033d",
+      "file": "question_bank/hematologia-anemias-microciticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Valentina-25-anos-sem804b9113b7/",
+      "sourceQuestionId": "4000048378",
+      "matchedAt": "2026-09-06T20:28:51.099Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "E",
+      "remoteAnswer": "E",
+      "answerMismatch": false,
+      "tags": [
         "Clínica Médica",
         "Hematologia",
         "Anemias microcíticas",
         "Anemia ferropriva",
-        "Tratamento da anemia ferropriva",
-        "Reposição oral de ferro",
-        "Avaliação de resposta ao tratamento da anemia ferropriva"
+        "Quadro clínico da anemia ferropriva",
+        "Diagnóstico da anemia ferropriva",
+        "Perfil de ferro na anemia ferropriva"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Avaliação de resposta ao tratamento da anemia ferropriva. Conduta/resposta: A resposta ao tratamento geralmente é rápida, e o aumento da hemoglobina começa aser observado 7 a 10 dias após o início do tratamento.",
+      "comment": "Gabarito confirmado: E. Assunto: Perfil de ferro na anemia ferropriva. Conduta/resposta: investigar doença celíaca.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/anemia-ferropriva78788afca/",
-        "https://med.estrategia.com/public/questoes/anemia-ferropriva79d37d2be/"
+        "https://med.estrategia.com/public/questoes/Valentina-25-anos-sem804b9113b7/",
+        "https://med.estrategia.com/public/questoes/Maria-Eduarda-25-anos833dbc6c6f/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-microciticas-4124da30786b0787",
-      "number": "1029d",
+      "id": "anki-hematologia-anemias-microciticas-8d35dbfe545e017f",
+      "number": "1034d",
       "file": "question_bank/hematologia-anemias-microciticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Menino-com-6-anos971cb921b4/",
-      "sourceQuestionId": "4000080427",
-      "matchedAt": "2026-09-06T11:03:47.770Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Maria-Eduarda-25-anos833dbc6c6f/",
+      "sourceQuestionId": "4000048340",
+      "matchedAt": "2026-09-06T20:28:57.206Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias microcíticas",
+        "Anemia ferropriva",
+        "Quadro clínico da anemia ferropriva",
+        "Diagnóstico da anemia ferropriva",
+        "Perfil de ferro na anemia ferropriva"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Perfil de ferro na anemia ferropriva. Conduta/resposta: anemia hipocrômica microcítica por deficiência de ferro, reposição de ferro oral.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Maria-Eduarda-25-anos833dbc6c6f/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-microciticas-2e25576d514b3f9f",
+      "number": "1035d",
+      "file": "question_bank/hematologia-anemias-microciticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-que-indica10548cc8f0/",
+      "sourceQuestionId": "4000040911",
+      "matchedAt": "2026-09-06T20:29:03.527Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -110,33 +115,26 @@
       "remoteAnswer": "C",
       "answerMismatch": false,
       "tags": [
-        "Pediatria",
-        "Hematologia Pediátrica",
-        "Anemia ferropriva na infância",
         "Clínica Médica",
         "Hematologia",
         "Anemias microcíticas",
-        "Anemia ferropriva",
-        "Avaliação laboratorial do ferro",
-        "Diagnóstico da anemia ferropriva",
-        "Perfil de ferro na anemia ferropriva"
+        "Diagnóstico diferencial das anemias microcíticas"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Perfil de ferro na anemia ferropriva. Conduta/resposta: anemia ferropriva e sulfato ferroso 4 mg/kg/dia.",
+      "comment": "Gabarito confirmado: C. Assunto: Diagnóstico diferencial das anemias microcíticas. Conduta/resposta: Talassemia",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Menino-com-6-anos971cb921b4/",
-        "https://med.estrategia.com/public/questoes/crianc-6-anos-e-levada81cae295b7/",
-        "https://med.estrategia.com/public/questoes/Escolar-seis-anos-com49d609078b/"
+        "https://med.estrategia.com/public/questoes/alternativa-que-indica10548cc8f0/",
+        "https://med.estrategia.com/public/questoes/Sa-causas-anemia5ee1ad1ae/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-microciticas-0bf2dbd4db1f3b38",
-      "number": "1030d",
+      "id": "anki-hematologia-anemias-microciticas-6e16bb3d418e76f3",
+      "number": "1036d",
       "file": "question_bank/hematologia-anemias-microciticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Ana-Maria-50-anos322091c3a0/",
-      "sourceQuestionId": "4000079437",
-      "matchedAt": "2026-09-06T11:03:53.635Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-com-astenia75b32c3c9b/",
+      "sourceQuestionId": "4000039352",
+      "matchedAt": "2026-09-06T20:29:09.363Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -149,22 +147,24 @@
         "Clínica Médica",
         "Hematologia",
         "Anemias microcíticas",
-        "Diagnóstico diferencial das anemias microcíticas"
+        "Anemia ferropriva",
+        "Diagnóstico da anemia ferropriva",
+        "Perfil de ferro na anemia ferropriva"
       ],
-      "comment": "Gabarito confirmado: A. Assunto: Diagnóstico diferencial das anemias microcíticas. Conduta/resposta: Anemia encontrada em estados inflamatórios e infecciosos crônicos.",
+      "comment": "Gabarito confirmado: A. Assunto: Perfil de ferro na anemia ferropriva. Conduta/resposta: ferropriva.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Ana-Maria-50-anos322091c3a0/"
+        "https://med.estrategia.com/public/questoes/Paciente-com-astenia75b32c3c9b/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-microciticas-7060e1beb412f3cb",
-      "number": "1031d",
+      "id": "anki-hematologia-anemias-microciticas-86ddaf90d5bde860",
+      "number": "1037d",
       "file": "question_bank/hematologia-anemias-microciticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-negra-26-anos99e9aced5d/",
-      "sourceQuestionId": "4000076622",
-      "matchedAt": "2026-09-06T11:03:59.598Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/estado-carencial-ferro12c4008d28/",
+      "sourceQuestionId": "4000033268",
+      "matchedAt": "2026-09-06T20:29:15.460Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -177,15 +177,12 @@
         "Clínica Médica",
         "Hematologia",
         "Anemias microcíticas",
-        "Diagnóstico diferencial das anemias microcíticas",
-        "Anemia da doença crônica",
-        "Quadro clínico da anemia de doença crônica",
-        "Diagnóstico da anemia de doença crônica"
+        "Anemia ferropriva",
+        "Diagnóstico da anemia ferropriva"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Diagnóstico da anemia de doença crônica. Conduta/resposta: hipocrômica / anemia de doença crônica",
+      "comment": "Gabarito confirmado: B. Assunto: Diagnóstico da anemia ferropriva. Conduta/resposta: Trombocitose.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-negra-26-anos99e9aced5d/",
-        "https://med.estrategia.com/public/questoes/Mulher-38-anos-negra69b79d585b/"
+        "https://med.estrategia.com/public/questoes/estado-carencial-ferro12c4008d28/"
       ]
     }
   ]

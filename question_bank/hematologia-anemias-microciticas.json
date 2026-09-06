@@ -1458,14 +1458,24 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A causa mais comum das anemias hipocrômicas/microcíticas é mesmo a falta de ferro, mas isso não significa que se deve repor ferro 'no escuro' — é essencial confirmar a deficiência com exames antes de tratar, porque dar ferro pra quem tem talassemia ou anemia de doença crônica (que já não precisam de ferro extra) pode causar sobrecarga de ferro no corpo, um problema sério a longo prazo.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701744",
-      "ankiGuid": "Ccufs:w3#;"
+      "ankiGuid": "Ccufs:w3#;",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Anemia-hipocromica3366f154ad/",
+        "sourceQuestionId": "4000050818",
+        "matchedAt": "2026-09-06T20:28:44.549Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-e8632f08a085aef0",
@@ -1492,14 +1502,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Jovem com dieta pobre em ferro, anemia com ferritina bem baixa (8) confirmando falta de ferro de verdade, sem sangramento menstrual excessivo — nesse cenário (mulher jovem, sem sinal óbvio de sangramento, mas com má alimentação), vale a pena pensar em causas de má absorção, como a doença celíaca, que pode atrapalhar a absorção de ferro mesmo com dieta adequada.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Quadro clínico da anemia ferropriva",
+        "Diagnóstico da anemia ferropriva",
+        "Perfil de ferro na anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701745",
-      "ankiGuid": "q?h)0d!K}9"
+      "ankiGuid": "q?h)0d!K}9",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Valentina-25-anos-sem804b9113b7/",
+        "sourceQuestionId": "4000048378",
+        "matchedAt": "2026-09-06T20:28:51.099Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-8d35dbfe545e017f",
@@ -1526,14 +1549,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Com ferritina bem baixa (8) confirmando a falta de ferro de verdade, o diagnóstico é anemia hipocrômica microcítica por deficiência de ferro, e o tratamento inicial padrão é a reposição de ferro por via oral (mais simples, barata e eficaz na maioria dos casos, reservando a via endovenosa pra situações especiais).",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Quadro clínico da anemia ferropriva",
+        "Diagnóstico da anemia ferropriva",
+        "Perfil de ferro na anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701746",
-      "ankiGuid": "O;sSe,0Tt%"
+      "ankiGuid": "O;sSe,0Tt%",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Maria-Eduarda-25-anos833dbc6c6f/",
+        "sourceQuestionId": "4000048340",
+        "matchedAt": "2026-09-06T20:28:57.206Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-2e25576d514b3f9f",
@@ -1559,14 +1595,24 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A talassemia é uma causa clássica de anemia microcítica (hemácias pequenas) — diferente da deficiência de B12 (que causa anemia macrocítica) ou da hemorragia aguda e insuficiência renal crônica (que costumam causar anemia normocítica).",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701747",
-      "ankiGuid": "nPKoFzumCj"
+      "ankiGuid": "nPKoFzumCj",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-que-indica10548cc8f0/",
+        "sourceQuestionId": "4000040911",
+        "matchedAt": "2026-09-06T20:29:03.527Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-6e16bb3d418e76f3",
@@ -1592,14 +1638,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Olhando os exames: ferro baixo, saturação de transferrina baixa (15%, abaixo do normal), ferritina baixa (18, abaixo do normal), TIBC alto (600, acima do normal) e reticulócitos bem baixos — esse é o padrão clássico e completo da anemia ferropriva. A vitamina B12 um pouco baixa é só um achado adicional, não a causa principal da anemia microcítica descrita aqui.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Diagnóstico da anemia ferropriva",
+        "Perfil de ferro na anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701748",
-      "ankiGuid": "hNBq7IHH)6"
+      "ankiGuid": "hNBq7IHH)6",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-com-astenia75b32c3c9b/",
+        "sourceQuestionId": "4000039352",
+        "matchedAt": "2026-09-06T20:29:09.363Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-86ddaf90d5bde860",
@@ -1625,14 +1683,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Na falta de ferro, é comum encontrar trombocitose (plaquetas mais altas que o normal) — o corpo, tentando compensar a anemia de alguma forma, acaba estimulando também a produção de plaquetas. O VCM, ao contrário do que diz uma das opções, CAI (não aumenta) na ferropenia, e o RDW costuma SUBIR (não diminuir).",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Diagnóstico da anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701749",
-      "ankiGuid": "b|Dp^Ba8n%"
+      "ankiGuid": "b|Dp^Ba8n%",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/estado-carencial-ferro12c4008d28/",
+        "sourceQuestionId": "4000033268",
+        "matchedAt": "2026-09-06T20:29:15.460Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-d3ba28aa2da6c4d3",
