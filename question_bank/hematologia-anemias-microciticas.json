@@ -2000,14 +2000,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A isoniazida (um dos remédios usados no tratamento da tuberculose) é um clássico causador de anemia sideroblástica — ela atrapalha o uso da vitamina B6 (piridoxina), que é essencial pra fabricar o heme (parte da hemoglobina), fazendo o ferro se acumular de forma anormal dentro das células jovens da medula (os chamados sideroblastos em anel).",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia sideroblástica",
+        "Anemia sideroblástica adquirida",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701756",
-      "ankiGuid": "Bz^RRkK$kN"
+      "ankiGuid": "Bz^RRkK$kN",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Anemia-sideroblastica1397373625/",
+        "sourceQuestionId": "4000117576",
+        "matchedAt": "2026-09-07T21:34:21.136Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-534b0371c6df0edd",
@@ -2034,14 +2045,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Antes de uma cirurgia, quando a anemia por falta de ferro precisa ser corrigida rápido, a escolha entre repor ferro por via oral ou direto na veia (endovenosa) depende de quanto tempo ainda falta até a cirurgia e de quanto sangue a paciente está perdendo — se o tempo for curto, a via endovenosa corrige mais rápido; se houver mais tempo, a via oral já pode ser suficiente.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Tratamento da anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701757",
-      "ankiGuid": "BC!?=TP.+d"
+      "ankiGuid": "BC!?=TP.+d",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-45-anos674265093d/",
+        "sourceQuestionId": "4000115066",
+        "matchedAt": "2026-09-07T21:34:27.604Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-7c3f7782262f3dd5",
@@ -2068,14 +2090,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Na anemia ligada à inflamação crônica (como a artrite reumatoide ativa), o tratamento mais eficaz não é repor ferro — é tratar e controlar a doença de base que está causando a inflamação. Quando a inflamação melhora, a anemia costuma melhorar junto.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Anemia da doença crônica",
+        "Quadro clínico da anemia de doença crônica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701758",
-      "ankiGuid": "OskquxIT4@"
+      "ankiGuid": "OskquxIT4@",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-62-anos70c9eb0e65/",
+        "sourceQuestionId": "4000115043",
+        "matchedAt": "2026-09-07T21:34:33.501Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-8bae373fbb440ce5",
@@ -2102,14 +2136,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "No traço talassêmico, o padrão clássico é anemia microcítica (hemácias pequenas) mas com RDW NORMAL — porque, diferente da ferropenia (onde as hemácias vão ficando pequenas aos poucos e de forma desigual), na talassemia todas as hemácias já nascem uniformemente pequenas.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Talassemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701759",
-      "ankiGuid": "JV%@|f)_77"
+      "ankiGuid": "JV%@|f)_77",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-que181beb1c6a/",
+        "sourceQuestionId": "4000114940",
+        "matchedAt": "2026-09-07T21:34:39.622Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-f30296dba1f981ab",
@@ -2135,14 +2180,30 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Quando o ferro começa a faltar na dieta, o primeiro exame a se alterar é a ferritina — ela reflete o estoque de ferro guardado, que é a primeira coisa a esvaziar antes de qualquer outro sinal aparecer no sangue.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Pediatria",
+        "Hematologia Pediátrica",
+        "Anemia ferropriva na infância",
+        "Classificação das anemias - Foco na ferropriva",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Diagnóstico da anemia ferropriva",
+        "Perfil de ferro na anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701760",
-      "ankiGuid": "x!x)]adD~~"
+      "ankiGuid": "x!x)]adD~~",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Dentre-exames2159478953/",
+        "sourceQuestionId": "4000113805",
+        "matchedAt": "2026-09-07T21:34:45.684Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-38a6a5346e9816a9",
@@ -2168,14 +2229,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A ferritina abaixo de 30 ng% é um dos critérios laboratoriais clássicos usados pra confirmar a falta de ferro como causa da anemia — ela reflete diretamente o estoque de ferro guardado no corpo.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Diagnóstico da anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701761",
-      "ankiGuid": "Awj%fW9`@V"
+      "ankiGuid": "Awj%fW9`@V",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/deficiencia-ferro158302a288/",
+        "sourceQuestionId": "4000108204",
+        "matchedAt": "2026-09-07T21:34:51.872Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-0230f1a0b128d83d",

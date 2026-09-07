@@ -2600,7 +2600,67 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/Ernestina-84-anos239cb7d24fa/",
       "localAnswer": "A",
       "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-microciticas-68ff14e569cdb3da": {
+      "number": "1044d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-07T21:34:21.201Z",
+      "nextAttemptAt": "2026-09-14T21:34:21.201Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Anemia-sideroblastica1397373625/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-anemias-microciticas-534b0371c6df0edd": {
+      "number": "1045d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-07T21:34:27.604Z",
+      "nextAttemptAt": "2026-09-14T21:34:27.604Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-45-anos674265093d/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
+    },
+    "anki-hematologia-anemias-microciticas-7c3f7782262f3dd5": {
+      "number": "1046d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-07T21:34:33.502Z",
+      "nextAttemptAt": "2026-09-14T21:34:33.502Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-62-anos70c9eb0e65/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-microciticas-8bae373fbb440ce5": {
+      "number": "1047d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-07T21:34:39.622Z",
+      "nextAttemptAt": "2026-09-14T21:34:39.622Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-que181beb1c6a/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-microciticas-f30296dba1f981ab": {
+      "number": "1048d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-07T21:34:45.684Z",
+      "nextAttemptAt": "2026-09-14T21:34:45.684Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Dentre-exames2159478953/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-microciticas-38a6a5346e9816a9": {
+      "number": "1049d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-07T21:34:51.872Z",
+      "nextAttemptAt": "2026-09-14T21:34:51.872Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/deficiencia-ferro158302a288/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     }
   },
-  "updatedAt": "2026-09-07T12:42:54.977Z"
+  "updatedAt": "2026-09-07T21:34:51.872Z"
 }
