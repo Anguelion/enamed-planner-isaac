@@ -2540,7 +2540,67 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/estado-carencial-ferro12c4008d28/",
       "localAnswer": "B",
       "remoteAnswer": "B"
+    },
+    "anki-hematologia-anemias-microciticas-d3ba28aa2da6c4d3": {
+      "number": "1038d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-07T12:42:25.485Z",
+      "nextAttemptAt": "2026-09-14T12:42:25.485Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Quanto-tratamento27b0539239/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-anemias-microciticas-c941d5860262691d": {
+      "number": "1039d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-07T12:42:31.410Z",
+      "nextAttemptAt": "2026-09-14T12:42:31.410Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-alteracoes13bd16def0/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-microciticas-d2ef51d2f8b2b73b": {
+      "number": "1040d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-07T12:42:37.113Z",
+      "nextAttemptAt": "2026-09-14T12:42:37.113Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-25-anos-sexo97d843431f/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-anemias-microciticas-e528173ca0025ec8": {
+      "number": "1041d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-07T12:42:43.129Z",
+      "nextAttemptAt": "2026-09-14T12:42:43.129Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Na-corresponde-a8a7821a66/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-microciticas-0629dfb9ee6e4311": {
+      "number": "1042d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-07T12:42:48.998Z",
+      "nextAttemptAt": "2026-09-14T12:42:48.998Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-ferropriva454fee5633/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-microciticas-489d167ed00eedf5": {
+      "number": "1043d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-07T12:42:54.977Z",
+      "nextAttemptAt": "2026-09-14T12:42:54.977Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Ernestina-84-anos239cb7d24fa/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
     }
   },
-  "updatedAt": "2026-09-06T20:29:15.460Z"
+  "updatedAt": "2026-09-07T12:42:54.977Z"
 }

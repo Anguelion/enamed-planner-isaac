@@ -1727,14 +1727,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Depois de começar o tratamento certo da anemia ferropriva, os reticulócitos (as hemácias 'bebês', recém-saídas da medula) começam a subir rapidinho, dentro de 4 a 7 dias — é o primeiro sinal de que o tratamento está funcionando, bem antes da hemoglobina normalizar de verdade.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Tratamento da anemia ferropriva",
+        "Avaliação de resposta ao tratamento da anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701750",
-      "ankiGuid": "mvq?Y!iOIR"
+      "ankiGuid": "mvq?Y!iOIR",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Quanto-tratamento27b0539239/",
+        "sourceQuestionId": "4000028046",
+        "matchedAt": "2026-09-07T12:42:25.485Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-c941d5860262691d",
@@ -1760,14 +1772,28 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A síndrome das pernas inquietas (aquela vontade incômoda de mexer as pernas, principalmente à noite) tem uma associação bem conhecida com a falta de ferro — o ferro é importante pro funcionamento de certas vias no cérebro relacionadas ao controle do movimento.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Neurologia",
+        "Distúrbios do Sono",
+        "Síndrome das Pernas Inquietas",
+        "Anemia ferropriva",
+        "Quadro clínico da anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701751",
-      "ankiGuid": "D4u{?(7EsJ"
+      "ankiGuid": "D4u{?(7EsJ",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-alteracoes13bd16def0/",
+        "sourceQuestionId": "4000027754",
+        "matchedAt": "2026-09-07T12:42:31.410Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-d2ef51d2f8b2b73b",
@@ -1795,14 +1821,28 @@
       ],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Os números da eletroforese contam a história: HbA2 bem alta (6,8%, bem acima do normal de até 3,2%) é a marca registrada da talassemia beta menor (traço talassêmico) — mesmo com hemoglobina baixa e VCM baixo, esse achado específico fecha o diagnóstico, sem necessidade de tratamento com ferro (já que não é falta de ferro).",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Talassemias",
+        "Beta-talassemias",
+        "Fisiopatologia e apresentação da beta-talassemia",
+        "Beta-talassemia menor ou traço beta-talassêmico",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701752",
-      "ankiGuid": "g-U>!]p-h1"
+      "ankiGuid": "g-U>!]p-h1",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-25-anos-sexo97d843431f/",
+        "sourceQuestionId": "4000023807",
+        "matchedAt": "2026-09-07T12:42:37.112Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-e528173ca0025ec8",
@@ -1829,14 +1869,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Na anemia ferropriva, a capacidade total de ligação do ferro (CTLF/TIBC) fica ALTA (não baixa) — o corpo produz mais transferrina tentando 'caçar' o pouco ferro disponível. Por isso, 'CTLF baixo' é o achado que NÃO combina com essa anemia, diferente do VCM baixo, ferritina baixa, ferro sérico baixo e HCM baixa, que são todos esperados.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Diagnóstico da anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701753",
-      "ankiGuid": "H%q$XX2hY9"
+      "ankiGuid": "H%q$XX2hY9",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Na-corresponde-a8a7821a66/",
+        "sourceQuestionId": "4000018421",
+        "matchedAt": "2026-09-07T12:42:43.129Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-0629dfb9ee6e4311",
@@ -1862,14 +1913,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A frase incorreta é a A: a dose de ferro elementar de 10-20mg/kg/dia seria absurdamente alta pra um adulto (chegaria a mais de 1 grama por dia numa pessoa de 70kg!) — a dose real recomendada é bem menor, algo como 60-200mg/dia no total, não por kg de peso. As outras frases (absorção no duodeno/jejuno proximal, sais de ferro atrapalhados por fitatos/taninos da dieta, melhor absorção em ambiente ácido como com suco de laranja) estão corretas.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Tratamento da anemia ferropriva",
+        "Reposição oral de ferro",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701754",
-      "ankiGuid": "r?6~(;VM)}"
+      "ankiGuid": "r?6~(;VM)}",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-ferropriva454fee5633/",
+        "sourceQuestionId": "4000006364",
+        "matchedAt": "2026-09-07T12:42:48.998Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-489d167ed00eedf5",
@@ -1893,14 +1956,24 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava A, mas a dose de 10-20mg/kg/dia de ferro elementar seria uma dose absurdamente alta pra um adulto (seria quase 1 a 1,5 gramas por dia numa pessoa de 70kg!) — essa é a frase INCORRETA, com um erro claro de dosagem. A resposta certa é B: o ferro é mesmo melhor absorvido no duodeno e no início do jejuno, onde os transportadores de ferro trabalham com mais força.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Cardiologia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701755",
-      "ankiGuid": "xxZ|_sKW;X"
+      "ankiGuid": "xxZ|_sKW;X",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Ernestina-84-anos239cb7d24fa/",
+        "sourceQuestionId": "4000118699",
+        "matchedAt": "2026-09-07T12:42:54.977Z",
+        "confidence": 0.9406060606060607
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-68ff14e569cdb3da",
