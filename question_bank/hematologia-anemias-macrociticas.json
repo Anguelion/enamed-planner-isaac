@@ -3899,10 +3899,19 @@
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967853",
-      "ankiGuid": "nw1]/@-PE$"
+      "ankiGuid": "nw1]/@-PE$",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-na-esta-associada98807a79e/",
+        "sourceQuestionId": "4000055969",
+        "matchedAt": "2026-09-08T21:13:58.357Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-bb22b4200ca3ef7b",
@@ -3976,10 +3985,23 @@
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Anemia perniciosa",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967855",
-      "ankiGuid": "nKj45D$W>~"
+      "ankiGuid": "nKj45D$W>~",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino77c0a87389/",
+        "sourceQuestionId": "4000042854",
+        "matchedAt": "2026-09-08T21:14:04.967Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-99626c87b9974618",
@@ -4043,10 +4065,31 @@
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Anemias microcíticas",
+        "Anemia ferropriva",
+        "Quadro clínico da anemia ferropriva",
+        "Alterações mucosas: Glossite atrófica e queilite angular",
+        "Neurologia",
+        "Doenças Neuromusculares",
+        "Neuropatias Periféricas",
+        "Polineuropatias",
+        "Polineuropatias Carenciais",
+        "Deficiência de Vitamina B12 e Ácido Fólico",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967857",
-      "ankiGuid": "r3(J(hs.r}"
+      "ankiGuid": "r3(J(hs.r}",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-35-anos9209780d63/",
+        "sourceQuestionId": "4000125485",
+        "matchedAt": "2026-09-08T21:14:10.907Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-e7381822d42ca8a7",
@@ -4141,14 +4184,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Pessoa saudável que fez dieta restritiva por conta própria durante só 4 meses e já desenvolveu anemia macrocítica — esse tempo curto combina mais com falta de ácido fólico (que se esgota rápido, em poucos meses) do que com falta de B12 (que demora anos pra faltar de verdade).",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de ácido fólico",
+        "Quadro clínico da anemia megaloblástica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967860",
-      "ankiGuid": "N_zEnR,iu"
+      "ankiGuid": "N_zEnR,iu",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/homem-previamente482e4221f0/",
+        "sourceQuestionId": "4000093646",
+        "matchedAt": "2026-09-08T21:14:17.004Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-b1219e8b72c04b92",
@@ -4174,14 +4229,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A frase errada é a D: ao contrário do que ela diz, o transplante de medula óssea, quando bem-sucedido, na verdade REDUZ o risco de a doença evoluir pra uma neoplasia no futuro (como leucemia), comparado com só usar imunossupressão (que não remove o clone defeituoso de células, deixando esse risco maior a longo prazo). As outras frases (sobre o esquema de imunoglobulina antitimócito + ciclosporina, tipagem HLA precoce, e transplante como primeira escolha com doador compatível) estão corretas.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias macrocíticas não megaloblásticas",
+        "Anemia aplásica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967861",
-      "ankiGuid": "xAqKYbP1R-"
+      "ankiGuid": "xAqKYbP1R-",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-19-anos68db9677de/",
+        "sourceQuestionId": "4000084752",
+        "matchedAt": "2026-09-08T21:14:23.018Z",
+        "confidence": 0.9949999999999999
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-ec69e44435a2b56c",
@@ -4242,14 +4308,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A frase errada é a B: ao contrário do que ela diz, a pancitopenia (queda de todas as três linhagens do sangue) PODE sim ocorrer nas anemias megaloblásticas graves, já que o problema afeta a produção de todas as células na medula, não só das hemácias. As outras frases (comprometimento de neutrófilos, distúrbio generalizado afetando várias mucosas, dano à síntese de DNA como base comum, e B12/folato como causas mais comuns) estão corretas.",
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Fisiopatologia da anemia megaloblástica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967863",
-      "ankiGuid": "vIA!QyH`(*"
+      "ankiGuid": "vIA!QyH`(*",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Anemia-megaloblastica803dfde21c/",
+        "sourceQuestionId": "4000052966",
+        "matchedAt": "2026-09-08T21:14:29.267Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-099a7729b3605f3f",
