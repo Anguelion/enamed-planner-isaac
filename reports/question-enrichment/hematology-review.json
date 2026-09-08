@@ -449,7 +449,28 @@
       "tags": [],
       "suggestedComment": "",
       "reviewedAt": "2026-09-06T11:03:29.759Z"
+    },
+    "anki-hematologia-anemias-microciticas-0230f1a0b128d83d": {
+      "id": "anki-hematologia-anemias-microciticas-0230f1a0b128d83d",
+      "number": "1050d",
+      "status": "answer_mismatch",
+      "localAnswer": "A",
+      "remoteAnswer": "B",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/deficiencia-ferro-e32c8061851/",
+      "similarity": {
+        "stem": 1,
+        "options": 0.953125,
+        "combined": 0.9859374999999999
+      },
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias microcíticas",
+        "Anemia ferropriva"
+      ],
+      "suggestedComment": "Gabarito confirmado: B. Assunto: Anemia ferropriva. Conduta/resposta: Quando a saturação da transferrina cai para 15 a 20%, a síntese de hemoglobina é afetada.",
+      "reviewedAt": "2026-09-08T11:25:41.242Z"
     }
   },
-  "updatedAt": "2026-09-06T11:03:29.759Z"
+  "updatedAt": "2026-09-08T11:25:41.242Z"
 }

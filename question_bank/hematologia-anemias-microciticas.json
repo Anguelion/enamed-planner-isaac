@@ -2273,7 +2273,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: essa questão é idêntica à outra do mesmo bloco (mesmo enunciado e alternativas), mas o gabarito antigo aqui marcava A, enquanto a versão duplicada marcava B — uma inconsistência do banco. Corrigi para B, que é a afirmação realmente correta: quando a saturação da transferrina cai para a faixa de 15-20%, o corpo já não consegue fabricar hemoglobina direito, e é aí que a anemia de fato aparece. As outras frases estão erradas: o ferro deve ser tomado longe das refeições (não junto, que atrapalha a absorção), e o RDW fica AUMENTADO na ferropenia, não diminuído.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
@@ -2307,14 +2307,33 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Vamos por item: I está certo (na ferropriva, o TIBC sobe e a ferritina cai). II está errado (na anemia de doença crônica/insuficiência renal, o TIBC costuma estar BAIXO, não alto). III está certo, se entendido como 'índice de saturação da TRANSFERRINA' (que realmente cai na ferropenia). IV está errado (talassemia é causa de anemia MICROcítica, não megaloblástica). V está certo (nas anemias megaloblásticas, o TIBC costuma ficar normal, sem grande alteração). Juntando os certos: I, III e V.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Avaliação laboratorial do ferro",
+        "Hemoglobinopatias",
+        "Talassemias",
+        "Definição das síndromes talassêmicas",
+        "Diagnóstico da anemia ferropriva",
+        "Perfil de ferro na anemia ferropriva",
+        "Anemia da doença crônica",
+        "Diagnóstico da anemia de doença crônica",
+        "Perfil de ferro na anemia de doença crônica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701763",
-      "ankiGuid": "TpQ7PNdBB"
+      "ankiGuid": "TpQ7PNdBB",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/anemias-I-anemia573dbc2a92/",
+        "sourceQuestionId": "4000098547",
+        "matchedAt": "2026-09-08T11:25:47.426Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-a1ccc5073bbf40a2",
@@ -2340,14 +2359,29 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Grávida com anemia leve desde a infância, hemácias bem pequenas (VCM 61), HbA2 alta (6%, acima do normal) e ferro/ferritina normais — quadro clássico de traço talassêmico, não falta de ferro. Como é uma condição genética que pode ser passada pro bebê (dependendo do tipo de talassemia do parceiro), a conduta certa é o aconselhamento genético, não repor ferro (que não vai resolver, já que o problema não é falta dele).",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Hemoglobinopatias",
+        "Talassemias",
+        "Beta-talassemias",
+        "Fisiopatologia e apresentação da beta-talassemia",
+        "Beta-talassemia menor ou traço beta-talassêmico",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701764",
-      "ankiGuid": "H|&sQEEQKA"
+      "ankiGuid": "H|&sQEEQKA",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-21a-G1P0C0A056e739c590/",
+        "sourceQuestionId": "4000098095",
+        "matchedAt": "2026-09-08T11:25:53.466Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-7c84e99b1f46296a",
@@ -2374,14 +2408,37 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Anemia com ferro bem baixo (ferritina 12, saturação de transferrina 8%) numa jovem — confirmada a falta de ferro real. Como ela não tem sangramento menstrual excessivo relatado, a investigação segue a ordem lógica das causas mais comuns de sangramento gastrointestinal escondido: primeiro endoscopia (parte alta), depois colonoscopia (parte baixa), e por último a cápsula endoscópica (que examina o intestino delgado, mais difícil de acessar), caso as duas primeiras não encontrem nada.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Causas de ferropenia",
+        "Perda crônica de ferro",
+        "Gastroenterologia",
+        "Hemorragia Digestiva (HD)",
+        "Hemorragia Digestiva Alta Não Varicosa - HDA Nâo Varicosa",
+        "Condução Clínica",
+        "Diagnóstico e Tratamento",
+        "Endoscopia Digestiva Alta (EDA)",
+        "Hemorragia Digestiva Baixa - HDB",
+        "Métodos Diagnósticos e Terapêuticos",
+        "Métodos Endoscópicos",
+        "Colonoscopia",
+        "Cápsula Endoscópica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701765",
-      "ankiGuid": "Bne^BJ[i<{"
+      "ankiGuid": "Bne^BJ[i<{",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Jovem-23-anos71f5591fa5/",
+        "sourceQuestionId": "4000091297",
+        "matchedAt": "2026-09-08T11:25:59.567Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-e4517a2cf40ee6aa",
@@ -2407,14 +2464,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A transferrina é a proteína 'caminhão de entrega' do ferro no sangue — ela carrega o ferro dos estoques até a medula óssea, onde ele é usado pra fabricar hemoglobina nova.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Avaliação laboratorial do ferro",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701766",
-      "ankiGuid": "tS>FB}9o-G"
+      "ankiGuid": "tS>FB}9o-G",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/protei-mais-importante131acad3dc/",
+        "sourceQuestionId": "4000077840",
+        "matchedAt": "2026-09-08T11:26:05.415Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-8baa9cb89fc63a90",
@@ -2440,14 +2508,28 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Dez dias já é cedo demais pra esperar a hemoglobina ter subido bastante, mas os reticulócitos (as hemácias 'recém-nascidas') já devem estar aumentando nesse momento, sendo o jeito mais rápido de confirmar que o tratamento com ferro está funcionando.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Tratamento da anemia ferropriva",
+        "Avaliação de resposta ao tratamento da anemia ferropriva",
+        "Diagnóstico da anemia ferropriva",
+        "Perfil de ferro na anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701767",
-      "ankiGuid": "da@G)8(FPV"
+      "ankiGuid": "da@G)8(FPV",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-25-anos-procura4386a6cac0/",
+        "sourceQuestionId": "4000073105",
+        "matchedAt": "2026-09-08T11:26:11.613Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-a3fa6b85cc975ca3",

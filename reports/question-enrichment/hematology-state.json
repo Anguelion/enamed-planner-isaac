@@ -2660,7 +2660,67 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/deficiencia-ferro158302a288/",
       "localAnswer": "B",
       "remoteAnswer": "B"
+    },
+    "anki-hematologia-anemias-microciticas-0230f1a0b128d83d": {
+      "number": "1050d",
+      "status": "answer_mismatch",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-08T11:25:41.242Z",
+      "nextAttemptAt": "2027-09-08T11:25:41.242Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/deficiencia-ferro-e32c8061851/",
+      "localAnswer": "A",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-anemias-microciticas-a87261df1312468f": {
+      "number": "1051d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-08T11:25:47.428Z",
+      "nextAttemptAt": "2026-09-15T11:25:47.428Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/anemias-I-anemia573dbc2a92/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-microciticas-a1ccc5073bbf40a2": {
+      "number": "1052d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-08T11:25:53.467Z",
+      "nextAttemptAt": "2026-09-15T11:25:53.467Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-21a-G1P0C0A056e739c590/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-anemias-microciticas-7c84e99b1f46296a": {
+      "number": "1053d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-08T11:25:59.569Z",
+      "nextAttemptAt": "2026-09-15T11:25:59.569Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Jovem-23-anos71f5591fa5/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
+    },
+    "anki-hematologia-anemias-microciticas-e4517a2cf40ee6aa": {
+      "number": "1054d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-08T11:26:05.416Z",
+      "nextAttemptAt": "2026-09-15T11:26:05.416Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/protei-mais-importante131acad3dc/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-microciticas-8baa9cb89fc63a90": {
+      "number": "1055d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-08T11:26:11.614Z",
+      "nextAttemptAt": "2026-09-15T11:26:11.614Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-25-anos-procura4386a6cac0/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     }
   },
-  "updatedAt": "2026-09-07T21:34:51.872Z"
+  "updatedAt": "2026-09-08T11:26:11.614Z"
 }
