@@ -2833,14 +2833,24 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "O diagnóstico diferencial clássico das anemias hipocrômicas/microcíticas reúne três causas principais: falta de ferro, talassemias e anemia sideroblástica — todas atrapalham, de formas diferentes, a fabricação normal da hemoglobina dentro da hemácia.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701777",
-      "ankiGuid": "O)Sl1zP=xa"
+      "ankiGuid": "O)Sl1zP=xa",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/diagnosticos8eb748233/",
+        "sourceQuestionId": "4000015457",
+        "matchedAt": "2026-09-09T20:59:26.326Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-a62ee8c6d39cec27",
@@ -2867,14 +2877,28 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Criança de 1 ano com suplementação de ferro feita corretamente desde os 6 meses, boa alimentação incluindo carnes, mas ainda assim com anemia microcítica — como a causa nutricional já foi bem prevenida e corrigida, a suspeita muda pra talassemia minor, uma condição genética que não depende da dieta.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Talassemias",
+        "Beta-talassemias",
+        "Fisiopatologia e apresentação da beta-talassemia",
+        "Beta-talassemia menor ou traço beta-talassêmico",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701778",
-      "ankiGuid": "b[>XzED!^R"
+      "ankiGuid": "b[>XzED!^R",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Voce-atende-consulta909b6712b0/",
+        "sourceQuestionId": "4000005549",
+        "matchedAt": "2026-09-09T20:59:32.927Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-8db1203c796e58e1",
@@ -2901,14 +2925,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Na anemia de doença crônica, o corpo produz mais hepcidina (um hormônio que 'tranca' o ferro dentro dos estoques, impedindo ele de circular) e, ao mesmo tempo, reduz a produção de transferrina — o resultado é que o ferro fica 'preso' nos estoques, mesmo estando disponível, sem conseguir chegar até a medula pra fabricar sangue novo.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia da doença crônica",
+        "Diagnóstico da anemia de doença crônica",
+        "Perfil de ferro na anemia de doença crônica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701779",
-      "ankiGuid": "sqe*~!5.Ww"
+      "ankiGuid": "sqe*~!5.Ww",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/caracteristicas9566cee73/",
+        "sourceQuestionId": "4000127498",
+        "matchedAt": "2026-09-09T20:59:39.020Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-4c31a6c3618491f7",
@@ -2935,14 +2971,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Cansaço progressivo, palpitações, palidez, hemácias pequenas (VCM 75) com tamanhos bem variados (RDW 18, alto), saturação de transferrina baixa (10%) e ferritina bem baixa (5) — todos os achados apontam claramente pra anemia por falta de ferro.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Anemia ferropriva",
+        "Diagnóstico da anemia ferropriva",
+        "Perfil de ferro na anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701780",
-      "ankiGuid": "h{~Ff/<.#d"
+      "ankiGuid": "h{~Ff/<.#d",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-32-anos71b58f632d/",
+        "sourceQuestionId": "4000123027",
+        "matchedAt": "2026-09-09T20:59:45.345Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-fd47a567e79a9c85",
@@ -2969,14 +3018,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "É uma fórmula matemática pra decorar: a capacidade LATENTE de ligação do ferro (a parte da transferrina que ainda está 'livre', sem ferro grudado) é igual à capacidade TOTAL de ligação do ferro menos o ferro sérico (a parte que já está ocupada).",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Avaliação laboratorial do ferro",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701781",
-      "ankiGuid": "FN-`UG.sH/"
+      "ankiGuid": "FN-`UG.sH/",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/as-inter-relacoes154affa65d/",
+        "sourceQuestionId": "4000120398",
+        "matchedAt": "2026-09-09T20:59:52.175Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-00ba584fc9984818",
@@ -3002,14 +3062,24 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A deficiência de G6PD causa anemia HEMOLÍTICA (destruição das hemácias), que costuma ser normocítica, e não uma anemia microcítica como a talassemia, a anemia sideroblástica ou a anemia de doença crônica — por isso é a exceção certa nessa lista.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701782",
-      "ankiGuid": "v1LdHh|UU^"
+      "ankiGuid": "v1LdHh|UU^",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-doenc114037039b/",
+        "sourceQuestionId": "4000120007",
+        "matchedAt": "2026-09-09T20:59:58.219Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-e78682bd2e7760b9",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T11:30:58.480Z",
+  "generatedAt": "2026-09-09T20:59:25.144Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
@@ -7,14 +7,14 @@
   "changed": 6,
   "results": [
     {
-      "id": "anki-hematologia-anemias-microciticas-a3fa6b85cc975ca3",
-      "number": "1059d",
+      "id": "anki-hematologia-anemias-microciticas-36fd8ceb29e907cd",
+      "number": "1065d",
       "file": "question_bank/hematologia-anemias-microciticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/avaliar-hemograma-voce36349307db/",
-      "sourceQuestionId": "4000067389",
-      "matchedAt": "2026-09-09T11:31:00.012Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/diagnosticos8eb748233/",
+      "sourceQuestionId": "4000015457",
+      "matchedAt": "2026-09-09T20:59:26.326Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -27,24 +27,54 @@
         "Clínica Médica",
         "Hematologia",
         "Anemias microcíticas",
-        "Anemia da doença crônica",
-        "Diagnóstico da anemia de doença crônica",
-        "Perfil de ferro na anemia de doença crônica"
+        "Diagnóstico diferencial das anemias microcíticas"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Perfil de ferro na anemia de doença crônica. Conduta/resposta: Anemia pelo processo inflamatório.",
+      "comment": "Gabarito confirmado: C. Assunto: Diagnóstico diferencial das anemias microcíticas. Conduta/resposta: Deficiência de ferro, talassemias e anemia sideroblástica.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/avaliar-hemograma-voce36349307db/"
+        "https://med.estrategia.com/public/questoes/diagnosticos8eb748233/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-microciticas-e17b056c2edc9384",
-      "number": "1060d",
+      "id": "anki-hematologia-anemias-microciticas-a62ee8c6d39cec27",
+      "number": "1066d",
       "file": "question_bank/hematologia-anemias-microciticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/ambulatorio-atenca19b414fa58/",
-      "sourceQuestionId": "4000055997",
-      "matchedAt": "2026-09-09T11:31:06.486Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Voce-atende-consulta909b6712b0/",
+      "sourceQuestionId": "4000005549",
+      "matchedAt": "2026-09-09T20:59:32.927Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemoglobinopatias",
+        "Talassemias",
+        "Beta-talassemias",
+        "Fisiopatologia e apresentação da beta-talassemia",
+        "Beta-talassemia menor ou traço beta-talassêmico"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Beta-talassemia menor ou traço beta-talassêmico. Conduta/resposta: Talassemia minor.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Voce-atende-consulta909b6712b0/",
+        "https://med.estrategia.com/public/questoes/consulta-medica-rotina88fe33a55c/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-microciticas-8db1203c796e58e1",
+      "number": "1067d",
+      "file": "question_bank/hematologia-anemias-microciticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/caracteristicas9566cee73/",
+      "sourceQuestionId": "4000127498",
+      "matchedAt": "2026-09-09T20:59:39.020Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -57,119 +87,24 @@
         "Clínica Médica",
         "Hematologia",
         "Anemias microcíticas",
-        "Diagnóstico diferencial das anemias microcíticas",
-        "Introdução ao Estudo das Anemias",
-        "Classificações das anemias",
-        "Classificação morfológica das anemias"
+        "Anemia da doença crônica",
+        "Diagnóstico da anemia de doença crônica",
+        "Perfil de ferro na anemia de doença crônica"
       ],
-      "comment": "Gabarito confirmado: E. Assunto: Classificação morfológica das anemias. Conduta/resposta: Comprovando-se anemia ferropriva, a baixa ingesta de ferro, por exemplo, em dietas vegetarianas, é a principal etiologia",
+      "comment": "Gabarito confirmado: E. Assunto: Perfil de ferro na anemia de doença crônica. Conduta/resposta: aumento da hepcidina e redução da transferrina.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/ambulatorio-atenca19b414fa58/"
+        "https://med.estrategia.com/public/questoes/caracteristicas9566cee73/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-microciticas-1b410c8869f73060",
-      "number": "1061d",
+      "id": "anki-hematologia-anemias-microciticas-4c31a6c3618491f7",
+      "number": "1068d",
       "file": "question_bank/hematologia-anemias-microciticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Analise-eritrograma324c975a13/",
-      "sourceQuestionId": "4000048244",
-      "matchedAt": "2026-09-09T11:31:12.574Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias microcíticas",
-        "Diagnóstico diferencial das anemias microcíticas",
-        "Hemoglobinopatias",
-        "Talassemias",
-        "Definição das síndromes talassêmicas"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Definição das síndromes talassêmicas. Conduta/resposta: Paciente de 16 anos, com anemia desde a infância e esplenomegalia.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Analise-eritrograma324c975a13/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-microciticas-3601918c5a720e8c",
-      "number": "1062d",
-      "file": "question_bank/hematologia-anemias-microciticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-ferropriva-e30a5b5bd8a/",
-      "sourceQuestionId": "4000039049",
-      "matchedAt": "2026-09-09T11:31:19.089Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias microcíticas",
-        "Anemia ferropriva",
-        "Fisiopatologia da anemia ferropriva"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Fisiopatologia da anemia ferropriva. Conduta/resposta: A anemia ferropriva é do tipo hipocrônica (Hemoglobina Corpuscular Média - HCM diminuída) e microcítica (Volume Corpuscular Médio diminuído), e o RDW (amplitude de variação de célula eritrocitária) encontra-se aumentado. O número de reticulócitos pode estar normal ou diminuído. As dosagens séricas do ferro e da ferritina estão diminuídas",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/anemia-ferropriva-e30a5b5bd8a/",
-        "https://med.estrategia.com/public/questoes/anemia-e-principais3383260570/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-microciticas-2f4730732a55526e",
-      "number": "1063d",
-      "file": "question_bank/hematologia-anemias-microciticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-apresenta15cacb2b11/",
-      "sourceQuestionId": "4000035523",
-      "matchedAt": "2026-09-09T11:31:25.262Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemoglobinopatias",
-        "Talassemias",
-        "Definição das síndromes talassêmicas",
-        "Anemias microcíticas",
-        "Anemia ferropriva",
-        "Diagnóstico da anemia ferropriva",
-        "Perfil de ferro na anemia ferropriva"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Perfil de ferro na anemia ferropriva. Conduta/resposta: Microcitose",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Qual-apresenta15cacb2b11/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-microciticas-8193529c0de559b9",
-      "number": "1064d",
-      "file": "question_bank/hematologia-anemias-microciticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-45-anos108bbeb257a/",
-      "sourceQuestionId": "4000015937",
-      "matchedAt": "2026-09-09T11:31:31.972Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-32-anos71b58f632d/",
+      "sourceQuestionId": "4000123027",
+      "matchedAt": "2026-09-09T20:59:45.345Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -182,14 +117,72 @@
         "Clínica Médica",
         "Hematologia",
         "Anemias microcíticas",
+        "Diagnóstico diferencial das anemias microcíticas",
         "Anemia ferropriva",
         "Diagnóstico da anemia ferropriva",
         "Perfil de ferro na anemia ferropriva"
       ],
-      "comment": "Gabarito confirmado: A. Assunto: Perfil de ferro na anemia ferropriva. Conduta/resposta: A anemia pode estar associada à doença celíaca, à síndrome de supercrescimento bacteriano e à angiodisplasia colônica.",
+      "comment": "Gabarito confirmado: A. Assunto: Perfil de ferro na anemia ferropriva. Conduta/resposta: anemia por deficiência de ferro.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-45-anos108bbeb257a/",
-        "https://med.estrategia.com/public/questoes/Mulher-45-anos523fbc0fb7/"
+        "https://med.estrategia.com/public/questoes/Mulher-32-anos71b58f632d/",
+        "https://med.estrategia.com/public/questoes/Mulher-32-anos-relata1014812f2fd/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-microciticas-fd47a567e79a9c85",
+      "number": "1069d",
+      "file": "question_bank/hematologia-anemias-microciticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/as-inter-relacoes154affa65d/",
+      "sourceQuestionId": "4000120398",
+      "matchedAt": "2026-09-09T20:59:52.175Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "E",
+      "remoteAnswer": "E",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias microcíticas",
+        "Anemia ferropriva",
+        "Avaliação laboratorial do ferro"
+      ],
+      "comment": "Gabarito confirmado: E. Assunto: Avaliação laboratorial do ferro. Conduta/resposta: Capacidade latente de ligação do ferro = capacidade total de ligação do ferro – ferro sérico.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/as-inter-relacoes154affa65d/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-microciticas-00ba584fc9984818",
+      "number": "1070d",
+      "file": "question_bank/hematologia-anemias-microciticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-doenc114037039b/",
+      "sourceQuestionId": "4000120007",
+      "matchedAt": "2026-09-09T20:59:58.219Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias microcíticas",
+        "Diagnóstico diferencial das anemias microcíticas"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Diagnóstico diferencial das anemias microcíticas. Conduta/resposta: Deficiencia de G6PD.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Qual-doenc114037039b/"
       ]
     }
   ]

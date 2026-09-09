@@ -2780,7 +2780,67 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-45-anos108bbeb257a/",
       "localAnswer": "A",
       "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-microciticas-36fd8ceb29e907cd": {
+      "number": "1065d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-09T20:59:26.327Z",
+      "nextAttemptAt": "2026-09-16T20:59:26.327Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/diagnosticos8eb748233/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-microciticas-a62ee8c6d39cec27": {
+      "number": "1066d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-09T20:59:32.928Z",
+      "nextAttemptAt": "2026-09-16T20:59:32.928Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Voce-atende-consulta909b6712b0/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-anemias-microciticas-8db1203c796e58e1": {
+      "number": "1067d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-09T20:59:39.021Z",
+      "nextAttemptAt": "2026-09-16T20:59:39.021Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/caracteristicas9566cee73/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
+    },
+    "anki-hematologia-anemias-microciticas-4c31a6c3618491f7": {
+      "number": "1068d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-09T20:59:45.345Z",
+      "nextAttemptAt": "2026-09-16T20:59:45.345Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-32-anos71b58f632d/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-microciticas-fd47a567e79a9c85": {
+      "number": "1069d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-09T20:59:52.175Z",
+      "nextAttemptAt": "2026-09-16T20:59:52.175Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/as-inter-relacoes154affa65d/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
+    },
+    "anki-hematologia-anemias-microciticas-00ba584fc9984818": {
+      "number": "1070d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-09T20:59:58.219Z",
+      "nextAttemptAt": "2026-09-16T20:59:58.219Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-doenc114037039b/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
     }
   },
-  "updatedAt": "2026-09-09T11:31:31.972Z"
+  "updatedAt": "2026-09-09T20:59:58.219Z"
 }
