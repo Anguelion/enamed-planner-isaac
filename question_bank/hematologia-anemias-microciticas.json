@@ -2556,14 +2556,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Anemia leve e normocítica, mas com a capacidade de ligação do ferro (TIBC) BAIXA (200, abaixo do normal) e a ferritina normal/alta — esse padrão (TIBC baixo em vez de alto) é diferente da ferropenia, e combina melhor com uma anemia causada por processo inflamatório (o corpo 'sequestra' o ferro nos estoques como defesa, mesmo tendo ferritina normal).",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia da doença crônica",
+        "Diagnóstico da anemia de doença crônica",
+        "Perfil de ferro na anemia de doença crônica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701771",
-      "ankiGuid": "J~W0}dffQb"
+      "ankiGuid": "J~W0}dffQb",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/avaliar-hemograma-voce36349307db/",
+        "sourceQuestionId": "4000067389",
+        "matchedAt": "2026-09-09T11:31:00.012Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-e17b056c2edc9384",
@@ -2590,14 +2602,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A frase errada é a E: a baixa ingesta de ferro na dieta (como em vegetarianos) é uma causa possível, mas NÃO é a principal causa quando se confirma ferropenia num adulto — a causa mais comum, especialmente em homens e mulheres na pós-menopausa, é a perda crônica de sangue (geralmente pelo trato digestivo), que sempre precisa ser investigada primeiro.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701772",
-      "ankiGuid": "z_DR-Ug{QL"
+      "ankiGuid": "z_DR-Ug{QL",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/ambulatorio-atenca19b414fa58/",
+        "sourceQuestionId": "4000055997",
+        "matchedAt": "2026-09-09T11:31:06.486Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-1b410c8869f73060",
@@ -2624,14 +2649,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Hemácias em alvo e dacriócitos (hemácias em formato de gota) no esfregaço, com RDW normal — esse padrão combina com talassemia, uma doença genética que costuma aparecer desde a infância e pode causar aumento do baço (esplenomegalia), como no caso do paciente de 16 anos descrito.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Hemoglobinopatias",
+        "Talassemias",
+        "Definição das síndromes talassêmicas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701773",
-      "ankiGuid": "BERmmCf]^d"
+      "ankiGuid": "BERmmCf]^d",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Analise-eritrograma324c975a13/",
+        "sourceQuestionId": "4000048244",
+        "matchedAt": "2026-09-09T11:31:12.574Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-3601918c5a720e8c",
@@ -2657,14 +2695,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A descrição mais completa e correta da anemia ferropriva é: hipocrômica (HCM baixa) e microcítica (VCM baixo), com RDW aumentado (hemácias de tamanhos variados), reticulócitos normais ou baixos (a medula não está compensando bem), e ferro/ferritina séricos diminuídos — o padrão-livro-texto completo dessa anemia.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Fisiopatologia da anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701774",
-      "ankiGuid": "vzefTTrW){"
+      "ankiGuid": "vzefTTrW){",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-ferropriva-e30a5b5bd8a/",
+        "sourceQuestionId": "4000039049",
+        "matchedAt": "2026-09-09T11:31:19.089Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-2f4730732a55526e",
@@ -2690,14 +2739,29 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A microcitose (hemácias pequenas) é o único achado dessa lista que aparece TANTO na falta de ferro QUANTO na talassemia — as duas causam hemácias pequenas, mesmo tendo mecanismos completamente diferentes (uma é falta de matéria-prima, a outra é defeito genético na fábrica).",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Talassemias",
+        "Definição das síndromes talassêmicas",
+        "Anemia ferropriva",
+        "Diagnóstico da anemia ferropriva",
+        "Perfil de ferro na anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701775",
-      "ankiGuid": "l@=JaO.kU-"
+      "ankiGuid": "l@=JaO.kU-",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-apresenta15cacb2b11/",
+        "sourceQuestionId": "4000035523",
+        "matchedAt": "2026-09-09T11:31:25.262Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-8193529c0de559b9",
@@ -2723,14 +2787,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Mulher etilista crônica com anemia microcítica e ferro/ferritina bem baixos (confirmando ferropenia real, não só efeito do álcool na medula) — o alcoolismo crônico está associado a várias causas de má absorção e sangramento intestinal (doença celíaca, supercrescimento bacteriano, angiodisplasia), que precisam ser investigadas como possíveis causas da perda de sangue por trás dessa anemia.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Diagnóstico da anemia ferropriva",
+        "Perfil de ferro na anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701776",
-      "ankiGuid": "w8e~|gs7<="
+      "ankiGuid": "w8e~|gs7<=",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-45-anos108bbeb257a/",
+        "sourceQuestionId": "4000015937",
+        "matchedAt": "2026-09-09T11:31:31.972Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-36fd8ceb29e907cd",

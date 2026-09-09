@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T21:13:56.974Z",
+  "generatedAt": "2026-09-09T11:30:58.480Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
@@ -7,73 +7,14 @@
   "changed": 6,
   "results": [
     {
-      "id": "anki-hematologia-anemias-macrociticas-eccb94b6f7729319",
-      "number": "1084e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "id": "anki-hematologia-anemias-microciticas-a3fa6b85cc975ca3",
+      "number": "1059d",
+      "file": "question_bank/hematologia-anemias-microciticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-na-esta-associada98807a79e/",
-      "sourceQuestionId": "4000055969",
-      "matchedAt": "2026-09-08T21:13:58.357Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias macrocíticas"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Anemias macrocíticas. Conduta/resposta: Anemia de doença crônica.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Qual-na-esta-associada98807a79e/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-5ecb469f8f936b30",
-      "number": "1086e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino77c0a87389/",
-      "sourceQuestionId": "4000042854",
-      "matchedAt": "2026-09-08T21:14:04.967Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "E",
-      "remoteAnswer": "E",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Deficiência de vitamina B12",
-        "Distúrbios de absorção de vitamina B12",
-        "Anemia perniciosa"
-      ],
-      "comment": "Gabarito confirmado: E. Assunto: Anemia perniciosa. Conduta/resposta: Anemia perniciosa.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino77c0a87389/",
-        "https://med.estrategia.com/public/questoes/Mulher-70-anos-idade74d29e64c2/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-1f12a707069e6e4b",
-      "number": "1088e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-35-anos9209780d63/",
-      "sourceQuestionId": "4000125485",
-      "matchedAt": "2026-09-08T21:14:10.907Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/avaliar-hemograma-voce36349307db/",
+      "sourceQuestionId": "4000067389",
+      "matchedAt": "2026-09-09T11:31:00.012Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -85,34 +26,117 @@
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Quadro clínico da anemia megaloblástica",
+        "Anemias microcíticas",
+        "Anemia da doença crônica",
+        "Diagnóstico da anemia de doença crônica",
+        "Perfil de ferro na anemia de doença crônica"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Perfil de ferro na anemia de doença crônica. Conduta/resposta: Anemia pelo processo inflamatório.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/avaliar-hemograma-voce36349307db/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-microciticas-e17b056c2edc9384",
+      "number": "1060d",
+      "file": "question_bank/hematologia-anemias-microciticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/ambulatorio-atenca19b414fa58/",
+      "sourceQuestionId": "4000055997",
+      "matchedAt": "2026-09-09T11:31:06.486Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "E",
+      "remoteAnswer": "E",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias microcíticas",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias"
+      ],
+      "comment": "Gabarito confirmado: E. Assunto: Classificação morfológica das anemias. Conduta/resposta: Comprovando-se anemia ferropriva, a baixa ingesta de ferro, por exemplo, em dietas vegetarianas, é a principal etiologia",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/ambulatorio-atenca19b414fa58/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-microciticas-1b410c8869f73060",
+      "number": "1061d",
+      "file": "question_bank/hematologia-anemias-microciticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Analise-eritrograma324c975a13/",
+      "sourceQuestionId": "4000048244",
+      "matchedAt": "2026-09-09T11:31:12.574Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias microcíticas",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Hemoglobinopatias",
+        "Talassemias",
+        "Definição das síndromes talassêmicas"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Definição das síndromes talassêmicas. Conduta/resposta: Paciente de 16 anos, com anemia desde a infância e esplenomegalia.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Analise-eritrograma324c975a13/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-microciticas-3601918c5a720e8c",
+      "number": "1062d",
+      "file": "question_bank/hematologia-anemias-microciticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-ferropriva-e30a5b5bd8a/",
+      "sourceQuestionId": "4000039049",
+      "matchedAt": "2026-09-09T11:31:19.089Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
         "Anemias microcíticas",
         "Anemia ferropriva",
-        "Quadro clínico da anemia ferropriva",
-        "Alterações mucosas: Glossite atrófica e queilite angular",
-        "Neurologia",
-        "Doenças Neuromusculares",
-        "Neuropatias Periféricas",
-        "Polineuropatias",
-        "Polineuropatias Carenciais",
-        "Deficiência de Vitamina B12 e Ácido Fólico"
+        "Fisiopatologia da anemia ferropriva"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Deficiência de Vitamina B12 e Ácido Fólico. Conduta/resposta: Deficiência de vitamina B12.",
+      "comment": "Gabarito confirmado: D. Assunto: Fisiopatologia da anemia ferropriva. Conduta/resposta: A anemia ferropriva é do tipo hipocrônica (Hemoglobina Corpuscular Média - HCM diminuída) e microcítica (Volume Corpuscular Médio diminuído), e o RDW (amplitude de variação de célula eritrocitária) encontra-se aumentado. O número de reticulócitos pode estar normal ou diminuído. As dosagens séricas do ferro e da ferritina estão diminuídas",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-35-anos9209780d63/"
+        "https://med.estrategia.com/public/questoes/anemia-ferropriva-e30a5b5bd8a/",
+        "https://med.estrategia.com/public/questoes/anemia-e-principais3383260570/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-macrociticas-082384acc742bdf4",
-      "number": "1091e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "id": "anki-hematologia-anemias-microciticas-2f4730732a55526e",
+      "number": "1063d",
+      "file": "question_bank/hematologia-anemias-microciticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/homem-previamente482e4221f0/",
-      "sourceQuestionId": "4000093646",
-      "matchedAt": "2026-09-08T21:14:17.004Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-apresenta15cacb2b11/",
+      "sourceQuestionId": "4000035523",
+      "matchedAt": "2026-09-09T11:31:25.262Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -124,72 +148,48 @@
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Deficiência de ácido fólico",
-        "Quadro clínico da anemia megaloblástica"
+        "Hemoglobinopatias",
+        "Talassemias",
+        "Definição das síndromes talassêmicas",
+        "Anemias microcíticas",
+        "Anemia ferropriva",
+        "Diagnóstico da anemia ferropriva",
+        "Perfil de ferro na anemia ferropriva"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Quadro clínico da anemia megaloblástica. Conduta/resposta: Deficiência de folato",
+      "comment": "Gabarito confirmado: D. Assunto: Perfil de ferro na anemia ferropriva. Conduta/resposta: Microcitose",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/homem-previamente482e4221f0/"
+        "https://med.estrategia.com/public/questoes/Qual-apresenta15cacb2b11/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-macrociticas-b1219e8b72c04b92",
-      "number": "1092e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "id": "anki-hematologia-anemias-microciticas-8193529c0de559b9",
+      "number": "1064d",
+      "file": "question_bank/hematologia-anemias-microciticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-19-anos68db9677de/",
-      "sourceQuestionId": "4000084752",
-      "matchedAt": "2026-09-08T21:14:23.018Z",
-      "similarity": {
-        "stem": 1,
-        "options": 0.9833333333333334,
-        "combined": 0.9949999999999999
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias macrocíticas",
-        "Anemias macrocíticas não megaloblásticas",
-        "Anemia aplásica"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Anemia aplásica. Conduta/resposta: Quando comparada à terapia imunossupressora, a mortalidade associada ao transplante é menor, contudo o risco de evolução para a neoplasia é maior.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Homem-19-anos68db9677de/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-c6bc1d5fe578065d",
-      "number": "1094e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Anemia-megaloblastica803dfde21c/",
-      "sourceQuestionId": "4000052966",
-      "matchedAt": "2026-09-08T21:14:29.267Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-45-anos108bbeb257a/",
+      "sourceQuestionId": "4000015937",
+      "matchedAt": "2026-09-09T11:31:31.972Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
+      "localAnswer": "A",
+      "remoteAnswer": "A",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Fisiopatologia da anemia megaloblástica"
+        "Anemias microcíticas",
+        "Anemia ferropriva",
+        "Diagnóstico da anemia ferropriva",
+        "Perfil de ferro na anemia ferropriva"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Fisiopatologia da anemia megaloblástica. Conduta/resposta: Pancitopenia não ocorre em anemias megaloblásticas.",
+      "comment": "Gabarito confirmado: A. Assunto: Perfil de ferro na anemia ferropriva. Conduta/resposta: A anemia pode estar associada à doença celíaca, à síndrome de supercrescimento bacteriano e à angiodisplasia colônica.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Anemia-megaloblastica803dfde21c/"
+        "https://med.estrategia.com/public/questoes/Mulher-45-anos108bbeb257a/",
+        "https://med.estrategia.com/public/questoes/Mulher-45-anos523fbc0fb7/"
       ]
     }
   ]
