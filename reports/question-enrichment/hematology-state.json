@@ -2900,7 +2900,67 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-microciticas-d328423fc24f1e33": {
+      "number": "1077d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-10T20:56:04.448Z",
+      "nextAttemptAt": "2026-09-17T20:56:04.448Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/deficiencia-ferro-e32c8061851/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-anemias-microciticas-85a5d5d9f952faf5": {
+      "number": "1078d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-10T20:56:10.473Z",
+      "nextAttemptAt": "2026-09-17T20:56:10.473Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-72-anos57f0cadd1a/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
+    },
+    "anki-hematologia-anemias-microciticas-abe1dcecf7414e3e": {
+      "number": "1079d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-10T20:56:16.295Z",
+      "nextAttemptAt": "2026-09-17T20:56:16.295Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-28-anos-idade122d4f476d0/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-anemias-microciticas-fa1a4a1aec8704c8": {
+      "number": "1080d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-10T20:56:22.455Z",
+      "nextAttemptAt": "2026-09-17T20:56:22.455Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo798fd4a18c/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-microciticas-174292f6efb28301": {
+      "number": "1081d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-10T20:56:28.204Z",
+      "nextAttemptAt": "2026-09-17T20:56:28.204Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/metabolismo-ferro153135198d/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-anemias-microciticas-0d59dc07f5e3615c": {
+      "number": "1082d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-10T20:56:34.143Z",
+      "nextAttemptAt": "2026-09-17T20:56:34.143Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-microcitica18d1016186/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     }
   },
-  "updatedAt": "2026-09-10T11:27:54.369Z"
+  "updatedAt": "2026-09-10T20:56:34.143Z"
 }

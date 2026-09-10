@@ -1,49 +1,20 @@
 {
-  "generatedAt": "2026-09-10T11:27:23.488Z",
+  "generatedAt": "2026-09-10T20:56:03.365Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 5,
+  "changed": 6,
   "results": [
     {
-      "id": "anki-hematologia-anemias-microciticas-e78682bd2e7760b9",
-      "number": "1071d",
+      "id": "anki-hematologia-anemias-microciticas-d328423fc24f1e33",
+      "number": "1077d",
       "file": "question_bank/hematologia-anemias-microciticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-68-anos526da1ff4f/",
-      "sourceQuestionId": "4000116092",
-      "matchedAt": "2026-09-10T11:27:24.364Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias microcíticas",
-        "Anemia da doença crônica",
-        "Quadro clínico da anemia de doença crônica"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Quadro clínico da anemia de doença crônica. Conduta/resposta: Anemia inflamatória, doença renal crônica e toxidade a medicações devem seravaliadas nesse caso.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-68-anos526da1ff4f/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-microciticas-588494bee2fec1fd",
-      "number": "1072d",
-      "file": "question_bank/hematologia-anemias-microciticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-59-anos-procura76469cd7e8/",
-      "sourceQuestionId": "4000108290",
-      "matchedAt": "2026-09-10T11:27:30.513Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/deficiencia-ferro-e32c8061851/",
+      "sourceQuestionId": "4000070846",
+      "matchedAt": "2026-09-10T20:56:04.448Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -56,84 +27,83 @@
         "Clínica Médica",
         "Hematologia",
         "Anemias microcíticas",
+        "Anemia ferropriva"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Anemia ferropriva. Conduta/resposta: Quando a saturação da transferrina cai para 15 a 20%, a síntese de hemoglobina é afetada.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/deficiencia-ferro-e32c8061851/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-microciticas-85a5d5d9f952faf5",
+      "number": "1078d",
+      "file": "question_bank/hematologia-anemias-microciticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-72-anos57f0cadd1a/",
+      "sourceQuestionId": "4000056418",
+      "matchedAt": "2026-09-10T20:56:10.473Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "E",
+      "remoteAnswer": "E",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias microcíticas",
+        "Diagnóstico diferencial das anemias microcíticas",
         "Anemia ferropriva",
-        "Quadro clínico da anemia ferropriva",
-        "Alterações mucosas: Glossite atrófica e queilite angular",
-        "Coiloníquia",
         "Diagnóstico da anemia ferropriva",
         "Perfil de ferro na anemia ferropriva"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Perfil de ferro na anemia ferropriva. Conduta/resposta: VCM = 72, eritropoetina elevada, ferro baixo, transferrina elevada e ferritina baixa.",
+      "comment": "Gabarito confirmado: E. Assunto: Perfil de ferro na anemia ferropriva. Conduta/resposta: Está indicada a investigação de perda de sangue pelo trato gastrintestinal, sítio mais frequente de perda crônica de sangue em mulheres na pós menopausa.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-59-anos-procura76469cd7e8/",
-        "https://med.estrategia.com/public/questoes/97069954c72c4becb76c9349/"
+        "https://med.estrategia.com/public/questoes/Mulher-72-anos57f0cadd1a/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-microciticas-d59b48a64f376660",
-      "number": "1073d",
+      "id": "anki-hematologia-anemias-microciticas-abe1dcecf7414e3e",
+      "number": "1079d",
       "file": "question_bank/hematologia-anemias-microciticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Jovem-25-anos-idade86593eadf8/",
-      "sourceQuestionId": "4000100610",
-      "matchedAt": "2026-09-10T11:27:36.437Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-28-anos-idade122d4f476d0/",
+      "sourceQuestionId": "4000049709",
+      "matchedAt": "2026-09-10T20:56:16.295Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
+      "localAnswer": "B",
+      "remoteAnswer": "B",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
         "Anemias microcíticas",
-        "Diagnóstico diferencial das anemias microcíticas"
+        "Anemia da doença crônica",
+        "Diagnóstico da anemia de doença crônica",
+        "Perfil de ferro na anemia de doença crônica"
       ],
-      "comment": "Gabarito confirmado: A. Assunto: Diagnóstico diferencial das anemias microcíticas. Conduta/resposta: Por se tratar de mulher jovem a possibilidade de anemia por deficiência de ferro é uma possibilidade importante e a perda menstrual deve ser investigada.",
+      "comment": "Gabarito confirmado: B. Assunto: Perfil de ferro na anemia de doença crônica. Conduta/resposta: II apenas.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Jovem-25-anos-idade86593eadf8/"
+        "https://med.estrategia.com/public/questoes/Paciente-28-anos-idade122d4f476d0/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-microciticas-b7e898ffed9e51c9",
-      "number": "1074d",
+      "id": "anki-hematologia-anemias-microciticas-fa1a4a1aec8704c8",
+      "number": "1080d",
       "file": "question_bank/hematologia-anemias-microciticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/avaliaca-anemias-VCM44c895fd88/",
-      "sourceQuestionId": "4000088532",
-      "matchedAt": "2026-09-10T11:27:42.403Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias microcíticas",
-        "Diagnóstico diferencial das anemias microcíticas"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Diagnóstico diferencial das anemias microcíticas. Conduta/resposta: Alfa talassemia.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/avaliaca-anemias-VCM44c895fd88/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-microciticas-dcc1856b7a444bc6",
-      "number": "1075d",
-      "file": "question_bank/hematologia-anemias-microciticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-18-anos-veio20087632da0/",
-      "sourceQuestionId": "4000074290",
-      "matchedAt": "2026-09-10T11:27:49.073Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo798fd4a18c/",
+      "sourceQuestionId": "4000039671",
+      "matchedAt": "2026-09-10T20:56:22.454Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -146,23 +116,74 @@
         "Clínica Médica",
         "Hematologia",
         "Anemias microcíticas",
-        "Diagnóstico diferencial das anemias microcíticas",
-        "Hemoglobinopatias",
-        "Talassemias"
+        "Anemia ferropriva",
+        "Tratamento da anemia ferropriva"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Talassemias. Conduta/resposta: Eletroforese de hemoglobina.",
+      "comment": "Gabarito confirmado: C. Assunto: Tratamento da anemia ferropriva. Conduta/resposta: Solicitar exames endoscópicos do trato gastrointestinal para excluir fonte de perda sanguínea crônica e iniciar reposição de ferro oral.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/paciente-18-anos-veio20087632da0/",
-        "https://med.estrategia.com/public/questoes/paciente-18-anos-idade668fe7df02/"
+        "https://med.estrategia.com/public/questoes/Paciente-sexo798fd4a18c/",
+        "https://med.estrategia.com/public/questoes/4e2ffddf2e37bd3030a1397d/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-microciticas-8bff8657629c1885",
-      "number": "1076d",
+      "id": "anki-hematologia-anemias-microciticas-174292f6efb28301",
+      "number": "1081d",
       "file": "question_bank/hematologia-anemias-microciticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/metabolismo-ferro153135198d/",
+      "sourceQuestionId": "4000030357",
+      "matchedAt": "2026-09-10T20:56:28.204Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias microcíticas",
+        "Anemia da doença crônica",
+        "Diagnóstico da anemia de doença crônica",
+        "Perfil de ferro na anemia de doença crônica"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Perfil de ferro na anemia de doença crônica. Conduta/resposta: Ferro sérico baixo, ferritina sérica alta, transferrina sérica baixa.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/metabolismo-ferro153135198d/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-anemias-microciticas-0d59dc07f5e3615c",
+      "number": "1082d",
+      "file": "question_bank/hematologia-anemias-microciticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-microcitica18d1016186/",
+      "sourceQuestionId": "4000026636",
+      "matchedAt": "2026-09-10T20:56:34.142Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias microcíticas",
+        "Anemia da doença crônica",
+        "Diagnóstico da anemia de doença crônica",
+        "Perfil de ferro na anemia de doença crônica"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Perfil de ferro na anemia de doença crônica. Conduta/resposta: Anemia de doença crônica.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/anemia-microcitica18d1016186/"
+      ]
     }
   ]
 }

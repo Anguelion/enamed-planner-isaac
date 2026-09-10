@@ -3365,14 +3365,24 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: essa questão é idêntica a outra do mesmo bloco. O gabarito correto é B: quando a saturação da transferrina cai pra 15-20%, o corpo já não consegue fabricar hemoglobina direito, e a anemia se instala de fato. As outras frases estão erradas: o ferro deve ser tomado longe das refeições (e não junto), e o RDW fica AUMENTADO (não diminuído) na falta de ferro.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701789",
-      "ankiGuid": "e2pn$ZDyDJ"
+      "ankiGuid": "e2pn$ZDyDJ",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/deficiencia-ferro-e32c8061851/",
+        "sourceQuestionId": "4000070846",
+        "matchedAt": "2026-09-10T20:56:04.448Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-85a5d5d9f952faf5",
@@ -3399,14 +3409,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Idosa com anemia microcítica, ferritina extremamente baixa (2,5) e eletroforese de hemoglobina normal (descartando talassemia) — a anemia ferropriva está bem confirmada. Como não há sangramento óbvio relatado, e mulheres na pós-menopausa não sangram mais pela menstruação, o trato gastrointestinal é o local mais comum de perda crônica de sangue nessa faixa etária, e precisa ser investigado.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Anemia ferropriva",
+        "Diagnóstico da anemia ferropriva",
+        "Perfil de ferro na anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701790",
-      "ankiGuid": "CpiW*Qb-?T"
+      "ankiGuid": "CpiW*Qb-?T",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-72-anos57f0cadd1a/",
+        "sourceQuestionId": "4000056418",
+        "matchedAt": "2026-09-10T20:56:10.473Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-abe1dcecf7414e3e",
@@ -3432,14 +3455,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A frase II está certa: mesmo com o estoque de ferro parecendo adequado (ferritina normal), isso não garante que esse ferro está realmente sendo entregue pra medula óssea fabricar sangue — em estados inflamatórios, o ferro fica 'trancado' nos estoques. A frase III tem um erro importante: a hepcidina, na verdade, DIMINUI (não aumenta) a absorção e liberação do ferro — ela é como um 'porteiro' que tranca as portas do ferro, não que as abre. Por isso, só a frase II está correta.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia da doença crônica",
+        "Diagnóstico da anemia de doença crônica",
+        "Perfil de ferro na anemia de doença crônica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701791",
-      "ankiGuid": "I#2(:J<&D8"
+      "ankiGuid": "I#2(:J<&D8",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-28-anos-idade122d4f476d0/",
+        "sourceQuestionId": "4000049709",
+        "matchedAt": "2026-09-10T20:56:16.295Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-fa1a4a1aec8704c8",
@@ -3465,14 +3500,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Idoso com anemia ferropriva grave (Hb 7,2, VCM 68, RDW alto) sem sintomas digestivos óbvios — mesmo assim, a abordagem inicial correta combina duas coisas ao mesmo tempo: investigar o trato gastrointestinal (pra achar a fonte do sangramento escondido) E já começar a repor o ferro por via oral, sem precisar esperar o resultado dos exames pra começar o tratamento.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Tratamento da anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701792",
-      "ankiGuid": "zEUU:@tl>~"
+      "ankiGuid": "zEUU:@tl>~",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo798fd4a18c/",
+        "sourceQuestionId": "4000039671",
+        "matchedAt": "2026-09-10T20:56:22.454Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-174292f6efb28301",
@@ -3499,14 +3545,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Na anemia de doença crônica, o padrão é: ferro sérico baixo (o ferro fica 'preso' nos estoques, sem circular), ferritina alta (justamente porque está guardada, e a ferritina também sobe como reação inflamatória) e transferrina baixa (o corpo produz menos 'caminhões' de transporte durante a inflamação).",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia da doença crônica",
+        "Diagnóstico da anemia de doença crônica",
+        "Perfil de ferro na anemia de doença crônica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701793",
-      "ankiGuid": "KpV-?}aNeb"
+      "ankiGuid": "KpV-?}aNeb",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/metabolismo-ferro153135198d/",
+        "sourceQuestionId": "4000030357",
+        "matchedAt": "2026-09-10T20:56:28.204Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-0d59dc07f5e3615c",
@@ -3533,14 +3591,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Ferro sérico baixo, mas com a capacidade de ligação do ferro (TIBC) também baixa (ao contrário da ferropenia, que teria TIBC alto), ferritina normal ou alta, e RDW normal — esse é o padrão clássico da anemia de doença crônica, causada por inflamação segurando o ferro nos estoques.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia da doença crônica",
+        "Diagnóstico da anemia de doença crônica",
+        "Perfil de ferro na anemia de doença crônica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701794",
-      "ankiGuid": "CPV$L]@YNh"
+      "ankiGuid": "CPV$L]@YNh",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-microcitica18d1016186/",
+        "sourceQuestionId": "4000026636",
+        "matchedAt": "2026-09-10T20:56:34.142Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-e02d540baf08fe40",
