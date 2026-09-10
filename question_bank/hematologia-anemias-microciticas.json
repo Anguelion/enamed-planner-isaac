@@ -3106,14 +3106,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Anemia normocítica e normocrômica isolada numa paciente com artrite reumatoide — antes de simplesmente atribuir tudo à doença de base, é importante avaliar outras causas possíveis, como anemia inflamatória de fato, doença renal crônica (comum em quem usa anti-inflamatórios por muito tempo) e até toxicidade de medicações usadas no tratamento da artrite.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia da doença crônica",
+        "Quadro clínico da anemia de doença crônica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701783",
-      "ankiGuid": "D7h_(0oI9P"
+      "ankiGuid": "D7h_(0oI9P",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-68-anos526da1ff4f/",
+        "sourceQuestionId": "4000116092",
+        "matchedAt": "2026-09-10T11:27:24.364Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-588494bee2fec1fd",
@@ -3142,14 +3153,29 @@
       ],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Cansaço, cabelo e unhas fracos e quebradiços (sinais clássicos de falta de ferro), anemia grave (Hb 7,9) com plaquetas altas (comum na ferropenia) — o padrão esperado nos exames complementares é o clássico da anemia ferropriva: VCM baixo (72), eritropoietina elevada (o corpo tentando compensar a anemia), ferro baixo, transferrina alta (o corpo produzindo mais 'caminhões' pra buscar ferro) e ferritina baixa (estoque vazio).",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Quadro clínico da anemia ferropriva",
+        "Alterações mucosas: Glossite atrófica e queilite angular",
+        "Coiloníquia",
+        "Diagnóstico da anemia ferropriva",
+        "Perfil de ferro na anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701784",
-      "ankiGuid": "A?47vUm&>M"
+      "ankiGuid": "A?47vUm&>M",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-59-anos-procura76469cd7e8/",
+        "sourceQuestionId": "4000108290",
+        "matchedAt": "2026-09-10T11:27:30.513Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-d59b48a64f376660",
@@ -3175,14 +3201,24 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Mulher jovem, fraqueza, tontura, queilite angular, anemia bem microcítica (VCM 67) com plaquetas altas — mesmo com a pesquisa de sangue oculto nas fezes negativa (que não detecta perda de sangue MENSTRUAL, só a intestinal), a possibilidade mais relevante em mulher jovem continua sendo a falta de ferro, e a perda menstrual precisa ser bem investigada como possível causa.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701785",
-      "ankiGuid": "q0*2MG[8/l"
+      "ankiGuid": "q0*2MG[8/l",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Jovem-25-anos-idade86593eadf8/",
+        "sourceQuestionId": "4000100610",
+        "matchedAt": "2026-09-10T11:27:36.437Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-b7e898ffed9e51c9",
@@ -3208,14 +3244,24 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Criança nunca amamentada (então sem o efeito protetor do leite materno, mas também sem o excesso de leite de vaca que costuma causar ferropenia), com anemia microcítica MAS com RDW NORMAL (14, dentro da faixa) — esse padrão (hemácias uniformemente pequenas, sem grande variação) é mais sugestivo de alfa talassemia do que de simples falta de ferro (que costuma ter RDW alto).",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701786",
-      "ankiGuid": "j3{xI#]fW["
+      "ankiGuid": "j3{xI#]fW[",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/avaliaca-anemias-VCM44c895fd88/",
+        "sourceQuestionId": "4000088532",
+        "matchedAt": "2026-09-10T11:27:42.403Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-dcc1856b7a444bc6",
@@ -3241,14 +3287,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Uma reviravolta clássica: a paciente vinha sendo tratada como se tivesse falta de ferro, mas na verdade os exames mostram ferro MUITO alto no sangue (o contrário do esperado!) — ou seja, ela nunca teve falta de ferro de verdade, e a reposição desnecessária de ferro por anos pode até estar causando um acúmulo perigoso dele no corpo. Com irmãs também tendo 'anemia' e baço palpável, a suspeita real é talassemia (que causa anemia sem falta de ferro), e o exame certo pra confirmar é a eletroforese de hemoglobina.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Hemoglobinopatias",
+        "Talassemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701787",
-      "ankiGuid": "yz;-=:VN+q"
+      "ankiGuid": "yz;-=:VN+q",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-18-anos-veio20087632da0/",
+        "sourceQuestionId": "4000074290",
+        "matchedAt": "2026-09-10T11:27:49.073Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-8bff8657629c1885",
@@ -3274,7 +3332,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Homem de 50 anos com anemia ferropriva confirmada (ferritina bem baixa, 9) — nessa idade e sexo, a causa mais provável e mais perigosa de se deixar passar é um sangramento escondido no trato digestivo, por isso a investigação completa (endoscopia e colonoscopia) é obrigatória.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
