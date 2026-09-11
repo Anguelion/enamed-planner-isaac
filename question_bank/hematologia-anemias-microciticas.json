@@ -3896,14 +3896,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "No perfil de ferro de quem tem uma doença inflamatória crônica, o padrão esperado é: ferro baixo (preso nos estoques), ferritina alta (porque também é uma proteína de inflamação, além de refletir o estoque cheio) e saturação de transferrina normal (ou levemente baixa) — bem diferente do padrão da ferropenia de verdade.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia da doença crônica",
+        "Diagnóstico da anemia de doença crônica",
+        "Perfil de ferro na anemia de doença crônica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701801",
-      "ankiGuid": "u_r,;kY5dL"
+      "ankiGuid": "u_r,;kY5dL",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-perfil-esperado125bf9c070/",
+        "sourceQuestionId": "4000093124",
+        "matchedAt": "2026-09-11T21:02:02.182Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-49fe5c72dd82c7d9",
@@ -3930,14 +3942,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A frase errada é a C: na anemia de doença crônica, a transferrina sérica e a saturação de transferrina costumam estar DIMINUÍDAS (ou normais-baixas), não elevadas — elevação de transferrina é mais típica da ferropenia de verdade. As outras frases (estoque de ferro normal/aumentado na medula, medula incapaz de responder bem à anemia, eritropoetina insuficiente pro grau de anemia, e ferro sérico baixo) descrevem corretamente a anemia de doença crônica.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia da doença crônica",
+        "Diagnóstico da anemia de doença crônica",
+        "Perfil de ferro na anemia de doença crônica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701802",
-      "ankiGuid": "fANt.,zYNy"
+      "ankiGuid": "fANt.,zYNy",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-doenc-cronica112bf8ae7c/",
+        "sourceQuestionId": "4000088022",
+        "matchedAt": "2026-09-11T21:02:08.504Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-954d06f2ffeec208",
@@ -3964,14 +3988,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Todas as quatro frases sobre o tratamento da falta de ferro estão corretas: a gravidade e a causa realmente guiam a abordagem, 200mg/dia de ferro elementar é a dose usual pra adultos, os reticulócitos começam a subir logo (4-7 dias), e o tratamento deve continuar por vários meses depois da anemia corrigida, justamente pra reabastecer os estoques de ferro (não só normalizar a hemoglobina).",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Tratamento da anemia ferropriva",
+        "Reposição oral de ferro",
+        "Avaliação de resposta ao tratamento da anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701803",
-      "ankiGuid": "u8Bwe/W1Hq"
+      "ankiGuid": "u8Bwe/W1Hq",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/manejo-farmacologico8461798be6/",
+        "sourceQuestionId": "4000086500",
+        "matchedAt": "2026-09-11T21:02:14.366Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-bb5c40280d08ee2c",
@@ -3997,14 +4034,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Esse caso tem uma pegadinha: apesar de parecer uma anemia microcítica comum, a saturação de transferrina e a ferritina estão NORMAIS (não baixas, como seria na ferropenia), e há sinais de hemólise (LDH bem alto, bilirrubina elevada) junto com a microcitose. Esse padrão incomum (microcitose + hemólise + ferro normal) combina com a anemia sideroblástica, em que a medula tem ferro disponível mas não consegue usá-lo direito pra fabricar hemoglobina, gerando também destruição das células defeituosas dentro da própria medula.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Anemia sideroblástica",
+        "Quadro Clínico da anemia sideroblástica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701804",
-      "ankiGuid": "EC5q|>c#xY"
+      "ankiGuid": "EC5q|>c#xY",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-76-anos-com90bb869553/",
+        "sourceQuestionId": "4000085653",
+        "matchedAt": "2026-09-11T21:02:20.902Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-ce89e5b506dbe7c6",
@@ -4031,14 +4080,30 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Só a frase I está certa: na anemia de doença crônica, o ferro que circula no sangue (ferro sérico) fica baixo, mas o ferro guardado nos estoques (medula, fígado) continua normal ou até aumentado — ele só não consegue circular. A frase II está errada (VCM muito baixo com RDW normal combina mais com talassemia do que com ferropenia). A frase III está errada (só a falta de vitamina B12, não a de folato, causa problemas neurológicos como desmielinização).",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Anemia da doença crônica",
+        "Diagnóstico da anemia de doença crônica",
+        "Perfil de ferro na anemia de doença crônica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701805",
-      "ankiGuid": "e$2,!hxD+q"
+      "ankiGuid": "e$2,!hxD+q",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/anemias-considere631e163116/",
+        "sourceQuestionId": "4000081369",
+        "matchedAt": "2026-09-11T21:02:27.110Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-f8a3b64ca040a298",
@@ -4065,14 +4130,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A frase errada é a C: na anemia de doença crônica, o ferro guardado na medula óssea (visto na biópsia) costuma estar PRESENTE, normal ou até aumentado — não ausente. Ferro ausente na medula é mais característico da ferropenia verdadeira. As outras frases (papel da hepcidina/IL-6, padrão microcítico em minoria dos casos, anemia geralmente leve, ferritina normal/alta) descrevem corretamente essa anemia.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia da doença crônica",
+        "Fisiopatologia da anemia de doença crônica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701806",
-      "ankiGuid": "Qe~(e/1>u8"
+      "ankiGuid": "Qe~(e/1>u8",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-doenc-cronica26f7beda27/",
+        "sourceQuestionId": "4000045345",
+        "matchedAt": "2026-09-11T21:02:33.451Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-c820a29e6cdc261a",

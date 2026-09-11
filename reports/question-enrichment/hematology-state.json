@@ -3020,7 +3020,67 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-microciticas-94a6625146f5f44c": {
+      "number": "1089d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-11T21:02:02.183Z",
+      "nextAttemptAt": "2026-09-18T21:02:02.183Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-perfil-esperado125bf9c070/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-microciticas-49fe5c72dd82c7d9": {
+      "number": "1090d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-11T21:02:08.504Z",
+      "nextAttemptAt": "2026-09-18T21:02:08.504Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-doenc-cronica112bf8ae7c/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-microciticas-954d06f2ffeec208": {
+      "number": "1091d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-11T21:02:14.367Z",
+      "nextAttemptAt": "2026-09-18T21:02:14.367Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/manejo-farmacologico8461798be6/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
+    },
+    "anki-hematologia-anemias-microciticas-bb5c40280d08ee2c": {
+      "number": "1092d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-11T21:02:20.902Z",
+      "nextAttemptAt": "2026-09-18T21:02:20.902Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-76-anos-com90bb869553/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-microciticas-ce89e5b506dbe7c6": {
+      "number": "1093d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-11T21:02:27.112Z",
+      "nextAttemptAt": "2026-09-18T21:02:27.112Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/anemias-considere631e163116/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-microciticas-f8a3b64ca040a298": {
+      "number": "1094d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-11T21:02:33.452Z",
+      "nextAttemptAt": "2026-09-18T21:02:33.452Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-doenc-cronica26f7beda27/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     }
   },
-  "updatedAt": "2026-09-11T11:29:49.026Z"
+  "updatedAt": "2026-09-11T21:02:33.452Z"
 }
