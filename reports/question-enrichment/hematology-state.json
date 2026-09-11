@@ -2960,7 +2960,67 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-microcitica18d1016186/",
       "localAnswer": "C",
       "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-microciticas-e02d540baf08fe40": {
+      "number": "1083d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-11T11:29:19.313Z",
+      "nextAttemptAt": "2026-09-18T11:29:19.313Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/todas-temos-achados14e7209cb8/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-anemias-microciticas-7fbb3cf4875372d6": {
+      "number": "1084d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-11T11:29:25.603Z",
+      "nextAttemptAt": "2026-09-18T11:29:25.603Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/J-M-S-65-anos-idade11211ba86ad/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-anemias-microciticas-52d9ba41183df8df": {
+      "number": "1085d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-11T11:29:31.330Z",
+      "nextAttemptAt": "2026-09-18T11:29:31.330Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/sintomas-usuais-Anemia400d563049/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-microciticas-96e586bd97758dc3": {
+      "number": "1086d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-11T11:29:37.406Z",
+      "nextAttemptAt": "2026-09-18T11:29:37.406Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino4151e9ea12/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-anemias-microciticas-81f8c69b3c94f9a0": {
+      "number": "1087d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-11T11:29:43.170Z",
+      "nextAttemptAt": "2026-09-18T11:29:43.170Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/portadores-anemia14dc674194/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-anemias-microciticas-a1a9531ff5a0bd09": {
+      "number": "1088d",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-11T11:29:49.026Z",
+      "nextAttemptAt": "2026-09-18T11:29:49.026Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-09-10T20:56:34.143Z"
+  "updatedAt": "2026-09-11T11:29:49.026Z"
 }

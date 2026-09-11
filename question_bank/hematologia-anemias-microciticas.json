@@ -3637,14 +3637,24 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Na anemia ferropriva, a capacidade total de ligação do ferro (CTLF/TIBC) fica AUMENTADA, não diminuída — o corpo produz mais transferrina tentando compensar a falta de ferro circulante. As outras alternativas (pica, coiloníquia, reticulócitos baixos, ferritina baixa) são achados esperados e corretos dessa anemia.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701795",
-      "ankiGuid": "sW~6;lkgZO"
+      "ankiGuid": "sW~6;lkgZO",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/todas-temos-achados14e7209cb8/",
+        "sourceQuestionId": "4000020857",
+        "matchedAt": "2026-09-11T11:29:19.309Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-7fbb3cf4875372d6",
@@ -3671,14 +3681,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Idoso com perda de peso importante, massa palpável no abdome (sugerindo possível câncer intestinal) e anemia microcítica — o perfil de ferro esperado, compatível com sangramento crônico causado pelo tumor, é o clássico da ferropenia: ferro sérico baixo, transferrina livre elevada (o corpo produzindo mais 'caminhões' vazios) e ferritina sérica diminuída (estoque esvaziando).",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Diagnóstico da anemia ferropriva",
+        "Perfil de ferro na anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701796",
-      "ankiGuid": "q47S?|>P??"
+      "ankiGuid": "q47S?|>P??",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/J-M-S-65-anos-idade11211ba86ad/",
+        "sourceQuestionId": "4000012786",
+        "matchedAt": "2026-09-11T11:29:25.603Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-52d9ba41183df8df",
@@ -3704,14 +3726,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A frase errada é a C: a pica por gelo (pagofagia) é considerada, na verdade, bem ESPECÍFICA da falta de ferro — é um dos sintomas mais característicos dessa deficiência, diferente do que a alternativa afirma. As outras frases (sobre pacientes assintomáticos, ferritina baixa sem anemia ainda dando sintomas, e idosos com sintomas disfarçados de outras doenças) estão corretas.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Quadro clínico da anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701797",
-      "ankiGuid": "AwN15fd1Mz"
+      "ankiGuid": "AwN15fd1Mz",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/sintomas-usuais-Anemia400d563049/",
+        "sourceQuestionId": "4000001031",
+        "matchedAt": "2026-09-11T11:29:31.330Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-96e586bd97758dc3",
@@ -3738,14 +3771,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Sangramento menstrual excessivo por causa de um mioma, com anemia hipocrômica microcítica e plaquetas altas (trombocitose reativa, comum na ferropenia) — é o retrato clássico de anemia por falta de ferro, causada pela perda crônica de sangue pela menstruação abundante.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Causas de ferropenia",
+        "Perda crônica de ferro",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701798",
-      "ankiGuid": "pM_8V3~vxf"
+      "ankiGuid": "pM_8V3~vxf",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino4151e9ea12/",
+        "sourceQuestionId": "4000124974",
+        "matchedAt": "2026-09-11T11:29:37.404Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-81f8c69b3c94f9a0",
@@ -3772,14 +3817,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Na anemia de doença crônica, a ferritina sérica costuma estar AUMENTADA — porque, além de refletir o estoque de ferro (que está 'preso' e não sendo usado), ela também é uma proteína que sobe durante qualquer processo inflamatório no corpo.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia da doença crônica",
+        "Diagnóstico da anemia de doença crônica",
+        "Perfil de ferro na anemia de doença crônica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701799",
-      "ankiGuid": "t,};ExJvY("
+      "ankiGuid": "t,};ExJvY(",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/portadores-anemia14dc674194/",
+        "sourceQuestionId": "4000114603",
+        "matchedAt": "2026-09-11T11:29:43.170Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-a1a9531ff5a0bd09",
@@ -3805,7 +3862,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "O trio clássico da falta de ferro no laboratório: ferro sérico baixo, saturação de transferrina diminuída (pouco ferro disponível pra circular) e ferritina diminuída (estoque vazio).",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",

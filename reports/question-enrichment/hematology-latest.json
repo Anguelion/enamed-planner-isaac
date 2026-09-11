@@ -1,27 +1,27 @@
 {
-  "generatedAt": "2026-09-10T20:56:03.365Z",
+  "generatedAt": "2026-09-11T11:29:17.934Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 6,
+  "changed": 5,
   "results": [
     {
-      "id": "anki-hematologia-anemias-microciticas-d328423fc24f1e33",
-      "number": "1077d",
+      "id": "anki-hematologia-anemias-microciticas-e02d540baf08fe40",
+      "number": "1083d",
       "file": "question_bank/hematologia-anemias-microciticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/deficiencia-ferro-e32c8061851/",
-      "sourceQuestionId": "4000070846",
-      "matchedAt": "2026-09-10T20:56:04.448Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/todas-temos-achados14e7209cb8/",
+      "sourceQuestionId": "4000020857",
+      "matchedAt": "2026-09-11T11:29:19.309Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
+      "localAnswer": "D",
+      "remoteAnswer": "D",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
@@ -29,81 +29,51 @@
         "Anemias microcíticas",
         "Anemia ferropriva"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Anemia ferropriva. Conduta/resposta: Quando a saturação da transferrina cai para 15 a 20%, a síntese de hemoglobina é afetada.",
+      "comment": "Gabarito confirmado: D. Assunto: Anemia ferropriva. Conduta/resposta: Diminuição da capacidade total de ligação do ferro.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/deficiencia-ferro-e32c8061851/"
+        "https://med.estrategia.com/public/questoes/todas-temos-achados14e7209cb8/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-microciticas-85a5d5d9f952faf5",
-      "number": "1078d",
+      "id": "anki-hematologia-anemias-microciticas-7fbb3cf4875372d6",
+      "number": "1084d",
       "file": "question_bank/hematologia-anemias-microciticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-72-anos57f0cadd1a/",
-      "sourceQuestionId": "4000056418",
-      "matchedAt": "2026-09-10T20:56:10.473Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/J-M-S-65-anos-idade11211ba86ad/",
+      "sourceQuestionId": "4000012786",
+      "matchedAt": "2026-09-11T11:29:25.603Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "E",
-      "remoteAnswer": "E",
+      "localAnswer": "A",
+      "remoteAnswer": "A",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
         "Anemias microcíticas",
-        "Diagnóstico diferencial das anemias microcíticas",
         "Anemia ferropriva",
         "Diagnóstico da anemia ferropriva",
         "Perfil de ferro na anemia ferropriva"
       ],
-      "comment": "Gabarito confirmado: E. Assunto: Perfil de ferro na anemia ferropriva. Conduta/resposta: Está indicada a investigação de perda de sangue pelo trato gastrintestinal, sítio mais frequente de perda crônica de sangue em mulheres na pós menopausa.",
+      "comment": "Gabarito confirmado: A. Assunto: Perfil de ferro na anemia ferropriva. Conduta/resposta: Ferro sérico baixo, transferrina livre elevada e ferritina sérica diminuída.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-72-anos57f0cadd1a/"
+        "https://med.estrategia.com/public/questoes/J-M-S-65-anos-idade11211ba86ad/",
+        "https://med.estrategia.com/public/questoes/paciente-65-anos-idade1530e4e20c9/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-microciticas-abe1dcecf7414e3e",
-      "number": "1079d",
+      "id": "anki-hematologia-anemias-microciticas-52d9ba41183df8df",
+      "number": "1085d",
       "file": "question_bank/hematologia-anemias-microciticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-28-anos-idade122d4f476d0/",
-      "sourceQuestionId": "4000049709",
-      "matchedAt": "2026-09-10T20:56:16.295Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias microcíticas",
-        "Anemia da doença crônica",
-        "Diagnóstico da anemia de doença crônica",
-        "Perfil de ferro na anemia de doença crônica"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Perfil de ferro na anemia de doença crônica. Conduta/resposta: II apenas.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-28-anos-idade122d4f476d0/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-microciticas-fa1a4a1aec8704c8",
-      "number": "1080d",
-      "file": "question_bank/hematologia-anemias-microciticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo798fd4a18c/",
-      "sourceQuestionId": "4000039671",
-      "matchedAt": "2026-09-10T20:56:22.454Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/sintomas-usuais-Anemia400d563049/",
+      "sourceQuestionId": "4000001031",
+      "matchedAt": "2026-09-11T11:29:31.330Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -117,23 +87,22 @@
         "Hematologia",
         "Anemias microcíticas",
         "Anemia ferropriva",
-        "Tratamento da anemia ferropriva"
+        "Quadro clínico da anemia ferropriva"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Tratamento da anemia ferropriva. Conduta/resposta: Solicitar exames endoscópicos do trato gastrointestinal para excluir fonte de perda sanguínea crônica e iniciar reposição de ferro oral.",
+      "comment": "Gabarito confirmado: C. Assunto: Quadro clínico da anemia ferropriva. Conduta/resposta: Pode ainda ocorrer pica por gelo, que é considerada pouco específica para Deficiência de Ferro.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-sexo798fd4a18c/",
-        "https://med.estrategia.com/public/questoes/4e2ffddf2e37bd3030a1397d/"
+        "https://med.estrategia.com/public/questoes/sintomas-usuais-Anemia400d563049/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-microciticas-174292f6efb28301",
-      "number": "1081d",
+      "id": "anki-hematologia-anemias-microciticas-96e586bd97758dc3",
+      "number": "1086d",
       "file": "question_bank/hematologia-anemias-microciticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/metabolismo-ferro153135198d/",
-      "sourceQuestionId": "4000030357",
-      "matchedAt": "2026-09-10T20:56:28.204Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino4151e9ea12/",
+      "sourceQuestionId": "4000124974",
+      "matchedAt": "2026-09-11T11:29:37.404Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -146,31 +115,32 @@
         "Clínica Médica",
         "Hematologia",
         "Anemias microcíticas",
-        "Anemia da doença crônica",
-        "Diagnóstico da anemia de doença crônica",
-        "Perfil de ferro na anemia de doença crônica"
+        "Anemia ferropriva",
+        "Causas de ferropenia",
+        "Perda crônica de ferro"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Perfil de ferro na anemia de doença crônica. Conduta/resposta: Ferro sérico baixo, ferritina sérica alta, transferrina sérica baixa.",
+      "comment": "Gabarito confirmado: B. Assunto: Perda crônica de ferro. Conduta/resposta: Anemia por deficiência de ferro.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/metabolismo-ferro153135198d/"
+        "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino4151e9ea12/",
+        "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino8884b3e752/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-microciticas-0d59dc07f5e3615c",
-      "number": "1082d",
+      "id": "anki-hematologia-anemias-microciticas-81f8c69b3c94f9a0",
+      "number": "1087d",
       "file": "question_bank/hematologia-anemias-microciticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-microcitica18d1016186/",
-      "sourceQuestionId": "4000026636",
-      "matchedAt": "2026-09-10T20:56:34.142Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/portadores-anemia14dc674194/",
+      "sourceQuestionId": "4000114603",
+      "matchedAt": "2026-09-11T11:29:43.170Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
+      "localAnswer": "D",
+      "remoteAnswer": "D",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
@@ -180,10 +150,18 @@
         "Diagnóstico da anemia de doença crônica",
         "Perfil de ferro na anemia de doença crônica"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Perfil de ferro na anemia de doença crônica. Conduta/resposta: Anemia de doença crônica.",
+      "comment": "Gabarito confirmado: D. Assunto: Perfil de ferro na anemia de doença crônica. Conduta/resposta: ferritina sérica.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/anemia-microcitica18d1016186/"
+        "https://med.estrategia.com/public/questoes/portadores-anemia14dc674194/"
       ]
+    },
+    {
+      "id": "anki-hematologia-anemias-microciticas-a1a9531ff5a0bd09",
+      "number": "1088d",
+      "file": "question_bank/hematologia-anemias-microciticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     }
   ]
 }
