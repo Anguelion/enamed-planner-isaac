@@ -27,14 +27,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Fraqueza, dor óssea (lombar e no braço), confusão mental, constipação, anemia, função renal piorando (ureia e creatinina altas) — esse conjunto de sintomas é bem sugestivo de hipercalcemia causada por mieloma múltiplo: o cálcio alto no sangue é o que explica a confusão mental e a prisão de ventre (o intestino 'preguiça' quando tem cálcio demais circulando), e a doença destrói o osso liberando ainda mais cálcio, formando um ciclo vicioso.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Quadro Clínico do mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587494",
-      "ankiGuid": "e&h9Cx^?-z"
+      "ankiGuid": "e&h9Cx^?-z",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-60-anos891186350c/",
+        "sourceQuestionId": "4000169300",
+        "matchedAt": "2026-09-12T20:38:04.423Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-dbe3579731c1fd33",
@@ -62,14 +73,26 @@
       ],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Idosa com anemia, dor óssea, perda de peso, VHS muito alto (95mm), rim funcionando mal e albumina baixa — tudo isso, junto com o achado da lâmina de sangue (provavelmente mostrando as hemácias 'empilhadas' como moedas, chamado rouleaux), aponta pra mieloma múltiplo. O exame certo pra confirmar é a eletroforese de proteínas (no sangue e na urina), que detecta a proteína anormal (monoclonal) produzida pelas células doentes.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Fisiopatologia do mieloma múltiplo (MM)",
+        "Quadro Clínico do mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587495",
-      "ankiGuid": "zk~k=lGwOn"
+      "ankiGuid": "zk~k=lGwOn",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-76-anos826e67e6da/",
+        "sourceQuestionId": "4000168772",
+        "matchedAt": "2026-09-12T20:38:10.604Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-f4a66502d43ab946",
@@ -95,14 +118,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "No mieloma múltiplo, o cálcio alto no sangue (por causa da destruição óssea) faz o rim perder a capacidade de concentrar a urina — no início, isso causa MUITA urina (poliúria), desidratando o paciente. Com o tempo, a desidratação e o próprio cálcio alto danificam ainda mais o rim, que então passa a produzir POUCA urina (oligúria) e o quadro piora: confusão, distensão abdominal (o intestino também 'trava' com cálcio alto) e insuficiência renal aguda. É um ciclo clássico da hipercalcemia grave do mieloma.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Quadro Clínico do mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587496",
-      "ankiGuid": "jfUj8O5}y0"
+      "ankiGuid": "jfUj8O5}y0",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-com-mieloma74c23eb9b7/",
+        "sourceQuestionId": "4000166574",
+        "matchedAt": "2026-09-12T20:38:16.317Z",
+        "confidence": 0.9831999999999999
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-04d3a42bf2564eba",
@@ -128,14 +162,23 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "As gamopatias monoclonais são doenças em que um único clone de células produz um EXCESSO de um tipo de anticorpo (proteína monoclonal) — como a síndrome POEMS, a amiloidose de cadeias leves e a macroglobulinemia de Waldenström. Já a agamaglobulinemia ligada ao X é o CONTRÁRIO: é uma imunodeficiência em que a pessoa não consegue produzir anticorpos NENHUM — por isso não faz parte desse grupo.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587497",
-      "ankiGuid": "l]_nN6.kGO"
+      "ankiGuid": "l]_nN6.kGO",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-dessas-doenc-na1144287756/",
+        "sourceQuestionId": "4000166369",
+        "matchedAt": "2026-09-12T20:38:22.375Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-10584d4627cbdfea",
@@ -161,14 +204,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Dor óssea progressiva, anemia, rim funcionando mal, cálcio baixo e biópsia renal mostrando 'cilindros eosinofílicos' (as famosas 'pedras' de proteína que entopem os túbulos renais no mieloma) — tudo aponta pra mieloma múltiplo. O achado mais provável no sangue periférico é a formação de rouleaux: as hemácias se empilham feito moedas por causa do excesso de proteína (imunoglobulina) circulando no sangue, que muda a forma como elas interagem entre si.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Quadro Clínico do mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587498",
-      "ankiGuid": "lTomG8K6Ff"
+      "ankiGuid": "lTomG8K6Ff",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-68-anos-sexo92b4ce9bcf/",
+        "sourceQuestionId": "4000164377",
+        "matchedAt": "2026-09-12T20:38:28.076Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-d87b9c9e59a89ffe",
@@ -197,14 +251,25 @@
       ],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Fadiga progressiva, anemia e rim funcionando mal num idoso, com uma eletroforese de proteínas mostrando um pico anormal (imagem não descrita aqui, mas presumida) — esse conjunto de achados é o retrato clássico do mieloma múltiplo, uma doença em que um clone de plasmócitos produz uma proteína anormal em excesso, prejudicando o sangue e os rins.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Classificação do mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587499",
-      "ankiGuid": "qj[k7P%-.}"
+      "ankiGuid": "qj[k7P%-.}",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-65-anos-procura31914343b7/",
+        "sourceQuestionId": "4000145733",
+        "matchedAt": "2026-09-12T20:38:34.124Z",
+        "confidence": 0.9492753623188406
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-478f42963610c80b",

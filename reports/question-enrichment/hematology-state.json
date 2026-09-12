@@ -3140,7 +3140,67 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-gamopatias-monoclonais-16638997bb9f8378": {
+      "number": "1001j",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-12T20:38:04.424Z",
+      "nextAttemptAt": "2026-09-19T20:38:04.424Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-60-anos891186350c/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-gamopatias-monoclonais-dbe3579731c1fd33": {
+      "number": "1002j",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-12T20:38:10.605Z",
+      "nextAttemptAt": "2026-09-19T20:38:10.605Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-76-anos826e67e6da/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-gamopatias-monoclonais-f4a66502d43ab946": {
+      "number": "1003j",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-12T20:38:16.317Z",
+      "nextAttemptAt": "2026-09-19T20:38:16.317Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-com-mieloma74c23eb9b7/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-gamopatias-monoclonais-04d3a42bf2564eba": {
+      "number": "1004j",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-12T20:38:22.376Z",
+      "nextAttemptAt": "2026-09-19T20:38:22.376Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-dessas-doenc-na1144287756/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-gamopatias-monoclonais-10584d4627cbdfea": {
+      "number": "1005j",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-12T20:38:28.076Z",
+      "nextAttemptAt": "2026-09-19T20:38:28.076Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-68-anos-sexo92b4ce9bcf/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-gamopatias-monoclonais-d87b9c9e59a89ffe": {
+      "number": "1006j",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-12T20:38:34.124Z",
+      "nextAttemptAt": "2026-09-19T20:38:34.124Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-65-anos-procura31914343b7/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     }
   },
-  "updatedAt": "2026-09-12T10:54:02.472Z"
+  "updatedAt": "2026-09-12T20:38:34.124Z"
 }
