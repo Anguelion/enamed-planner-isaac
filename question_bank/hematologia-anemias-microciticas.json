@@ -4175,14 +4175,24 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Jovem sem outras doenças, com anemia microcítica clássica (VCM 70) e RDW alto (22%) — bem sugestivo de falta de ferro simples. Sem sinais de gravidade que peçam algo mais agressivo, o tratamento adequado é começar com sulfato ferroso por via oral.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701807",
-      "ankiGuid": "l4mJPI${!%"
+      "ankiGuid": "l4mJPI${!%",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-22-anos47fe90373f/",
+        "sourceQuestionId": "4000043777",
+        "matchedAt": "2026-09-12T10:53:34.726Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-8800e65d6450852a",
@@ -4208,7 +4218,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "O exame padrão-ouro pra confirmar (ou excluir) a falta de ferro é olhar diretamente o estoque de ferro dentro da medula óssea (com uma coloração especial chamada Perls). Se esse exame mostrar reserva de ferro normal, isso descarta com bastante segurança a deficiência de ferro — mais confiável que os outros exames indiretos (como ferritina, que pode enganar em quadros inflamatórios).",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
@@ -4242,14 +4252,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Homem lavrador (trabalho no campo, com risco de contato com parasitas como ancilóstomo, que causam perda crônica de sangue intestinal), anemia microcítica sintomática — mesmo com esse fator de risco ocupacional, a investigação da causa da perda de sangue precisa ser completa: endoscopia digestiva alta e colonoscopia, pra não deixar passar outras causas mais graves, como um câncer.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Diagnóstico da anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701809",
-      "ankiGuid": "sA^>X3f.ul"
+      "ankiGuid": "sA^>X3f.ul",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-54-anos-sexo9137ee8ef4/",
+        "sourceQuestionId": "4000032431",
+        "matchedAt": "2026-09-12T10:53:46.835Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-e540255928976b6a",
@@ -4276,7 +4297,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Numa paciente com risco tanto de falta de ferro quanto de anemia inflamatória ao mesmo tempo (uma situação mista e mais difícil de diferenciar), a combinação mais útil de exames é a ferritina junto com a capacidade total de ligação do ferro (CTLF) — juntos, eles ajudam a distinguir melhor entre as duas causas, mesmo quando os resultados não são tão claros isoladamente.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
@@ -4309,7 +4330,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Fraqueza, dor nas pernas, língua lisa ('careca' — sinal de atrofia das papilas, clássico da falta de ferro), anemia grave microcítica (VCM 62) com plaquetas altas — quadro bem sugestivo de ferropenia. Além de olhar o esfregaço e os reticulócitos, a conduta certa é completar a investigação do ferro (ferro sérico, ferritina, capacidade de ligação), já iniciar a reposição oral, e procurar de onde vem essa perda de sangue.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
@@ -4343,7 +4364,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Hemácias pequenas (VCM baixo) e de tamanhos bem variados entre si (RDW alto) — esse é o padrão clássico e mais cobrado da anemia ferropriva.",
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",

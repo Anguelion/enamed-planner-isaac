@@ -3080,7 +3080,67 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-doenc-cronica26f7beda27/",
       "localAnswer": "C",
       "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-microciticas-c820a29e6cdc261a": {
+      "number": "1095d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-12T10:53:34.726Z",
+      "nextAttemptAt": "2026-09-19T10:53:34.726Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-22-anos47fe90373f/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-anemias-microciticas-8800e65d6450852a": {
+      "number": "1096d",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-12T10:53:40.456Z",
+      "nextAttemptAt": "2026-09-19T10:53:40.456Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-microciticas-345eee289a206673": {
+      "number": "1097d",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-12T10:53:46.836Z",
+      "nextAttemptAt": "2026-09-19T10:53:46.836Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-54-anos-sexo9137ee8ef4/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
+    },
+    "anki-hematologia-anemias-microciticas-e540255928976b6a": {
+      "number": "1098d",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-12T10:53:52.027Z",
+      "nextAttemptAt": "2026-09-19T10:53:52.027Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-microciticas-50adc44a9dddb9ab": {
+      "number": "1099d",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-12T10:53:57.261Z",
+      "nextAttemptAt": "2026-09-19T10:53:57.261Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-anemias-microciticas-2f16b48e39aa44d7": {
+      "number": "10100d",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-12T10:54:02.472Z",
+      "nextAttemptAt": "2026-09-19T10:54:02.472Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-09-11T21:02:33.452Z"
+  "updatedAt": "2026-09-12T10:54:02.472Z"
 }

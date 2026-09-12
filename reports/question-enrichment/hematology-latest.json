@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-09-11T21:02:01.008Z",
+  "generatedAt": "2026-09-12T10:53:32.974Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 6,
+  "changed": 2,
   "results": [
     {
-      "id": "anki-hematologia-anemias-microciticas-94a6625146f5f44c",
-      "number": "1089d",
+      "id": "anki-hematologia-anemias-microciticas-c820a29e6cdc261a",
+      "number": "1095d",
       "file": "question_bank/hematologia-anemias-microciticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-perfil-esperado125bf9c070/",
-      "sourceQuestionId": "4000093124",
-      "matchedAt": "2026-09-11T21:02:02.182Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-22-anos47fe90373f/",
+      "sourceQuestionId": "4000043777",
+      "matchedAt": "2026-09-12T10:53:34.726Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -27,54 +27,31 @@
         "Clínica Médica",
         "Hematologia",
         "Anemias microcíticas",
-        "Anemia da doença crônica",
-        "Diagnóstico da anemia de doença crônica",
-        "Perfil de ferro na anemia de doença crônica"
+        "Diagnóstico diferencial das anemias microcíticas"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Perfil de ferro na anemia de doença crônica. Conduta/resposta: Ferro baixo, ferritina alta, saturação de transferrina normal.",
+      "comment": "Gabarito confirmado: C. Assunto: Diagnóstico diferencial das anemias microcíticas. Conduta/resposta: Sulfato ferroso.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Qual-perfil-esperado125bf9c070/"
+        "https://med.estrategia.com/public/questoes/paciente-22-anos47fe90373f/",
+        "https://med.estrategia.com/public/questoes/Paciente-feminina-23920cc94dc2/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-microciticas-49fe5c72dd82c7d9",
-      "number": "1090d",
+      "id": "anki-hematologia-anemias-microciticas-8800e65d6450852a",
+      "number": "1096d",
       "file": "question_bank/hematologia-anemias-microciticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-doenc-cronica112bf8ae7c/",
-      "sourceQuestionId": "4000088022",
-      "matchedAt": "2026-09-11T21:02:08.504Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias microcíticas",
-        "Anemia da doença crônica",
-        "Diagnóstico da anemia de doença crônica",
-        "Perfil de ferro na anemia de doença crônica"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Perfil de ferro na anemia de doença crônica. Conduta/resposta: Transferrina sérica e saturação de transferrina elevadas.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/anemia-doenc-cronica112bf8ae7c/"
-      ]
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-anemias-microciticas-954d06f2ffeec208",
-      "number": "1091d",
+      "id": "anki-hematologia-anemias-microciticas-345eee289a206673",
+      "number": "1097d",
       "file": "question_bank/hematologia-anemias-microciticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/manejo-farmacologico8461798be6/",
-      "sourceQuestionId": "4000086500",
-      "matchedAt": "2026-09-11T21:02:14.366Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-54-anos-sexo9137ee8ef4/",
+      "sourceQuestionId": "4000032431",
+      "matchedAt": "2026-09-12T10:53:46.835Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -88,108 +65,39 @@
         "Hematologia",
         "Anemias microcíticas",
         "Anemia ferropriva",
-        "Tratamento da anemia ferropriva",
-        "Reposição oral de ferro",
-        "Avaliação de resposta ao tratamento da anemia ferropriva"
+        "Diagnóstico da anemia ferropriva"
       ],
-      "comment": "Gabarito confirmado: E. Assunto: Avaliação de resposta ao tratamento da anemia ferropriva. Conduta/resposta: I, II, III e IV.",
+      "comment": "Gabarito confirmado: E. Assunto: Diagnóstico da anemia ferropriva. Conduta/resposta: Anemia ferropriva por perda crônica. Realização de Endoscopia digestiva alta e colonoscopia.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/manejo-farmacologico8461798be6/"
+        "https://med.estrategia.com/public/questoes/Paciente-54-anos-sexo9137ee8ef4/",
+        "https://med.estrategia.com/public/questoes/Paciente-sexo122df431bc5/",
+        "https://med.estrategia.com/public/questoes/Paciente-60-anos-sexo95d9784c47/",
+        "https://med.estrategia.com/public/questoes/Paciente-sexo106b88ae805/"
       ]
     },
     {
-      "id": "anki-hematologia-anemias-microciticas-bb5c40280d08ee2c",
-      "number": "1092d",
+      "id": "anki-hematologia-anemias-microciticas-e540255928976b6a",
+      "number": "1098d",
       "file": "question_bank/hematologia-anemias-microciticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-76-anos-com90bb869553/",
-      "sourceQuestionId": "4000085653",
-      "matchedAt": "2026-09-11T21:02:20.902Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias microcíticas",
-        "Diagnóstico diferencial das anemias microcíticas",
-        "Anemia sideroblástica",
-        "Quadro Clínico da anemia sideroblástica"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Quadro Clínico da anemia sideroblástica. Conduta/resposta: Anemia sideroblástica.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-76-anos-com90bb869553/",
-        "https://med.estrategia.com/public/questoes/Mulher-76-anos826e67e6da/"
-      ]
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-anemias-microciticas-ce89e5b506dbe7c6",
-      "number": "1093d",
+      "id": "anki-hematologia-anemias-microciticas-50adc44a9dddb9ab",
+      "number": "1099d",
       "file": "question_bank/hematologia-anemias-microciticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/anemias-considere631e163116/",
-      "sourceQuestionId": "4000081369",
-      "matchedAt": "2026-09-11T21:02:27.110Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias microcíticas",
-        "Diagnóstico diferencial das anemias microcíticas",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Quadro clínico da anemia megaloblástica",
-        "Anemia da doença crônica",
-        "Diagnóstico da anemia de doença crônica",
-        "Perfil de ferro na anemia de doença crônica"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Perfil de ferro na anemia de doença crônica. Conduta/resposta: Apenas I",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/anemias-considere631e163116/"
-      ]
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-anemias-microciticas-f8a3b64ca040a298",
-      "number": "1094d",
+      "id": "anki-hematologia-anemias-microciticas-2f16b48e39aa44d7",
+      "number": "10100d",
       "file": "question_bank/hematologia-anemias-microciticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-doenc-cronica26f7beda27/",
-      "sourceQuestionId": "4000045345",
-      "matchedAt": "2026-09-11T21:02:33.451Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias microcíticas",
-        "Anemia da doença crônica",
-        "Fisiopatologia da anemia de doença crônica"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Fisiopatologia da anemia de doença crônica. Conduta/resposta: caracteriza-se por apresentar ferro medular ausente na biópsia de medula óssea.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/anemia-doenc-cronica26f7beda27/"
-      ]
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     }
   ]
 }
