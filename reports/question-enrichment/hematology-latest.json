@@ -1,20 +1,105 @@
 {
-  "generatedAt": "2026-09-13T11:59:14.233Z",
+  "generatedAt": "2026-09-13T20:54:48.859Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 1,
+  "changed": 6,
   "results": [
     {
-      "id": "anki-hematologia-gamopatias-monoclonais-478f42963610c80b",
-      "number": "1007j",
+      "id": "anki-hematologia-gamopatias-monoclonais-d8c35e1037ea0954",
+      "number": "1014j",
       "file": "question_bank/hematologia-gamopatias-monoclonais.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-71-anos-idade60f7926ebd/",
-      "sourceQuestionId": "4000144702",
-      "matchedAt": "2026-09-13T11:59:15.408Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-72-anos-sexo818c535246/",
+      "sourceQuestionId": "4000127336",
+      "matchedAt": "2026-09-13T20:54:50.243Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Gamopatias monoclonais",
+        "Mieloma múltiplo (MM)",
+        "Quadro Clínico do mieloma múltiplo (MM)"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Quadro Clínico do mieloma múltiplo (MM). Conduta/resposta: Eletroforese de proteínas séricas",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-72-anos-sexo818c535246/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-gamopatias-monoclonais-e55e967335899ebc",
+      "number": "1015j",
+      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-72-anos9147b4d301/",
+      "sourceQuestionId": "4000125747",
+      "matchedAt": "2026-09-13T20:54:56.645Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "E",
+      "remoteAnswer": "E",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Gamopatias monoclonais"
+      ],
+      "comment": "Gabarito confirmado: E. Assunto: Gamopatias monoclonais. Conduta/resposta: Eletroforese de proteínas do soro.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Mulher-72-anos9147b4d301/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-gamopatias-monoclonais-b96ae6762089a0d8",
+      "number": "1016j",
+      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/acometimento-osseo3801a941cf/",
+      "sourceQuestionId": "4000113097",
+      "matchedAt": "2026-09-13T20:55:02.887Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Gamopatias monoclonais",
+        "Mieloma múltiplo (MM)",
+        "Fisiopatologia do mieloma múltiplo (MM)"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Fisiopatologia do mieloma múltiplo (MM). Conduta/resposta: As lesões ósseas resultam do aumento da atividade osteoblástica (reabsorção óssea, acompanhada pela exaustão da função osteoblástica e aumento da formação óssea.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/acometimento-osseo3801a941cf/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-gamopatias-monoclonais-b9249b4c83275a50",
+      "number": "1017j",
+      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-67-anos-iniciou423a365df5/",
+      "sourceQuestionId": "4000110612",
+      "matchedAt": "2026-09-13T20:55:09.257Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -27,59 +112,78 @@
         "Clínica Médica",
         "Hematologia",
         "Gamopatias monoclonais",
-        "Mieloma múltiplo (MM)"
+        "Mieloma múltiplo (MM)",
+        "Fisiopatologia do mieloma múltiplo (MM)",
+        "Quadro Clínico do mieloma múltiplo (MM)"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Mieloma múltiplo (MM). Conduta/resposta: Hemograma, creatinina, cálcio sérico, função hepática e mielograma.",
+      "comment": "Gabarito confirmado: B. Assunto: Quadro Clínico do mieloma múltiplo (MM). Conduta/resposta: Hipercalcemia.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Homem-71-anos-idade60f7926ebd/"
+        "https://med.estrategia.com/public/questoes/Homem-67-anos-iniciou423a365df5/",
+        "https://med.estrategia.com/public/questoes/Homem-67-anos-esta99387f97fa/"
       ]
     },
     {
-      "id": "anki-hematologia-gamopatias-monoclonais-a65e59a6c8f3f058",
-      "number": "1008j",
+      "id": "anki-hematologia-gamopatias-monoclonais-1a110fd3cc7f25e8",
+      "number": "1018j",
       "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-gamopatias-monoclonais-3336f8e8c87c439d",
-      "number": "1010j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-gamopatias-monoclonais-8caf6a0f5e0d0c79",
-      "number": "1011j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": false,
-      "status": "low_confidence",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Com-as-amiloidoses475536d94a/"
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-71-anos479cd260e7/",
+      "sourceQuestionId": "4000107922",
+      "matchedAt": "2026-09-13T20:55:15.123Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "E",
+      "remoteAnswer": "E",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
+        "Hipercalcemia maligna",
+        "Gamopatias monoclonais",
+        "Mieloma múltiplo (MM)",
+        "Quadro Clínico do mieloma múltiplo (MM)",
+        "Tratamento do mieloma múltiplo (MM)"
       ],
-      "bestSimilarity": {
-        "stem": 0.2616822429906542,
-        "options": 0.7291666666666666,
-        "combined": 0.4019275700934579
-      }
+      "comment": "Gabarito confirmado: E. Assunto: Tratamento do mieloma múltiplo (MM). Conduta/resposta: Hipercalcemia",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-71-anos479cd260e7/"
+      ]
     },
     {
-      "id": "anki-hematologia-gamopatias-monoclonais-9cfc04572db0f9ce",
-      "number": "1012j",
+      "id": "anki-hematologia-gamopatias-monoclonais-dc1185bb4665f67d",
+      "number": "1019j",
       "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-gamopatias-monoclonais-2c1081ef3fd98e37",
-      "number": "1013j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-com-50-anos842c194b5d/",
+      "sourceQuestionId": "4000103427",
+      "matchedAt": "2026-09-13T20:55:21.552Z",
+      "similarity": {
+        "stem": 0.9801324503311258,
+        "options": 1,
+        "combined": 0.986092715231788
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Gamopatias monoclonais",
+        "Mieloma múltiplo (MM)",
+        "Classificação do mieloma múltiplo (MM)"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Classificação do mieloma múltiplo (MM). Conduta/resposta: Mieloma múltiplo; eletroforese de proteínas séricas e urinárias e avaliação da medula óssea",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Homem-com-50-anos85f8908daa/",
+        "https://med.estrategia.com/public/questoes/Homem-com-50-anos842c194b5d/"
+      ]
     }
   ]
 }

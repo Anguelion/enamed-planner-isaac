@@ -504,14 +504,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Dor óssea difusa, anemia leve, cálcio alto, rim levemente alterado e lesões líticas (buraquinhos) na radiografia da coluna, mas com a fosfatase alcalina NORMAL — esse último detalhe é importante: diferente de outros tumores que dão metástase óssea, no mieloma múltiplo a fosfatase alcalina costuma continuar normal, porque a destruição óssea não vem de uma reação inflamatória do osso, e sim das próprias células do mieloma. Diante desse quadro, o próximo exame é a eletroforese de proteínas séricas, pra procurar a proteína anormal.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Quadro Clínico do mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587507",
-      "ankiGuid": "xt7._kOo06"
+      "ankiGuid": "xt7._kOo06",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-72-anos-sexo818c535246/",
+        "sourceQuestionId": "4000127336",
+        "matchedAt": "2026-09-13T20:54:50.243Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-e55e967335899ebc",
@@ -538,14 +549,23 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Dor óssea generalizada, anemia importante, VHS muito alto (145mm!) e rim funcionando mal numa idosa — quadro bem sugestivo de mieloma múltiplo. O exame mais resolutivo pra fechar esse diagnóstico é a eletroforese de proteínas do soro, que mostra o pico da proteína anormal produzida pelas células doentes.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587508",
-      "ankiGuid": "=V^X1VCy&"
+      "ankiGuid": "=V^X1VCy&",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-72-anos9147b4d301/",
+        "sourceQuestionId": "4000125747",
+        "matchedAt": "2026-09-13T20:54:56.645Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-b96ae6762089a0d8",
@@ -571,14 +591,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A pergunta pede o item ERRADO. Na verdade, as lesões ósseas do mieloma múltiplo acontecem por AUMENTO da atividade dos OSTEOCLASTOS (as células que 'comem' o osso), não dos osteoblastos (que são as células que CONSTROEM osso novo) — as células do mieloma na verdade SUPRIMEM os osteoblastos. É um desequilíbrio: destruição óssea acelerada e reconstrução praticamente parada, resultando nos famosos 'buraquinhos' (lesões líticas).",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Fisiopatologia do mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587509",
-      "ankiGuid": "O<$%,}2D]#"
+      "ankiGuid": "O<$%,}2D]#",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/acometimento-osseo3801a941cf/",
+        "sourceQuestionId": "4000113097",
+        "matchedAt": "2026-09-13T20:55:02.887Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-b9249b4c83275a50",
@@ -607,14 +638,26 @@
       ],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Anemia + rim funcionando mal + eletroforese mostrando um pico anormal é o retrato do mieloma múltiplo — e o distúrbio eletrolítico mais associado a essa doença é o cálcio alto no sangue (hipercalcemia), causado pela destruição óssea acelerada que a doença provoca.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Fisiopatologia do mieloma múltiplo (MM)",
+        "Quadro Clínico do mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587510",
-      "ankiGuid": "ia<O3eA&8]"
+      "ankiGuid": "ia<O3eA&8]",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-67-anos-iniciou423a365df5/",
+        "sourceQuestionId": "4000110612",
+        "matchedAt": "2026-09-13T20:55:09.257Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-1a110fd3cc7f25e8",
@@ -641,14 +684,29 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Desidratação + piora da função renal + anemia + lesões líticas nas costelas — quadro clássico de mieloma múltiplo. O principal distúrbio eletrolítico dessa doença é a hipercalcemia, causada pela destruição óssea que libera cálcio na circulação.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
+        "Hipercalcemia maligna",
+        "Mieloma múltiplo (MM)",
+        "Quadro Clínico do mieloma múltiplo (MM)",
+        "Tratamento do mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587511",
-      "ankiGuid": "jUj_na.Q`("
+      "ankiGuid": "jUj_na.Q`(",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-71-anos479cd260e7/",
+        "sourceQuestionId": "4000107922",
+        "matchedAt": "2026-09-13T20:55:15.123Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-dc1185bb4665f67d",
@@ -674,14 +732,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Dor lombar forte que não melhora bem com anti-inflamatório, anemia, rim funcionando mal e fraturas nas vértebras (L2 e L3) sem trauma forte — tudo aponta pra mieloma múltiplo. Os exames certos pra investigar são a eletroforese de proteínas (sangue e urina) e uma avaliação da medula óssea (mielograma/biópsia), pra confirmar a presença das células anormais.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Classificação do mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587512",
-      "ankiGuid": "MWiN_[7%X}"
+      "ankiGuid": "MWiN_[7%X}",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-com-50-anos842c194b5d/",
+        "sourceQuestionId": "4000103427",
+        "matchedAt": "2026-09-13T20:55:21.552Z",
+        "confidence": 0.986092715231788
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-ba8d0b1c84fa01fc",
