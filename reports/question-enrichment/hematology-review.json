@@ -470,7 +470,23 @@
       ],
       "suggestedComment": "Gabarito confirmado: B. Assunto: Anemia ferropriva. Conduta/resposta: Quando a saturação da transferrina cai para 15 a 20%, a síntese de hemoglobina é afetada.",
       "reviewedAt": "2026-09-08T11:25:41.242Z"
+    },
+    "anki-hematologia-gamopatias-monoclonais-8caf6a0f5e0d0c79": {
+      "id": "anki-hematologia-gamopatias-monoclonais-8caf6a0f5e0d0c79",
+      "number": "1011j",
+      "status": "low_confidence",
+      "localAnswer": null,
+      "remoteAnswer": null,
+      "sourceUrl": null,
+      "similarity": {
+        "stem": 0.2616822429906542,
+        "options": 0.7291666666666666,
+        "combined": 0.4019275700934579
+      },
+      "tags": [],
+      "suggestedComment": "",
+      "reviewedAt": "2026-09-13T11:59:33.686Z"
     }
   },
-  "updatedAt": "2026-09-08T11:25:41.242Z"
+  "updatedAt": "2026-09-13T11:59:33.686Z"
 }

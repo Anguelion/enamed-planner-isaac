@@ -295,14 +295,24 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Quando se encontra uma proteína monoclonal (aqui, IgG kappa) no sangue de alguém, mesmo sem sintomas graves, o primeiro passo é fazer uma bateria básica de exames pra saber se há algum órgão sendo afetado: hemograma (ver se tem anemia), creatinina (rim), cálcio (ossos) e um mielograma (ver quantos plasmócitos tem na medula) — é o pacote inicial padrão pra investigar qualquer gamopatia monoclonal.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587500",
-      "ankiGuid": "r(~L)G)p=#"
+      "ankiGuid": "r(~L)G)p=#",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-71-anos-idade60f7926ebd/",
+        "sourceQuestionId": "4000144702",
+        "matchedAt": "2026-09-13T11:59:15.408Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-a65e59a6c8f3f058",
@@ -328,7 +338,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "No mieloma múltiplo, mesmo com muita proteína circulando no sangue (a proteína monoclonal), o corpo fica com MENOS anticorpos 'de verdade' que funcionam direito pra combater infecções — é uma imunodeficiência humoral, que deixa o paciente mais vulnerável a infecções por bactérias que têm uma capa protetora (encapsuladas), como o pneumococo.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
@@ -362,7 +372,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Esse combo de achados — hemácias empilhadas (rouleaux), anemia, um pico de gamaglobulina na eletroforese e proteína na urina — é a assinatura clássica do mieloma múltiplo: as células doentes produzem tanta proteína anormal que ela 'gruda' nas hemácias (fazendo o rouleaux), aparece como um pico na eletroforese, e vaza pela urina (a famosa proteína de Bence Jones).",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
@@ -395,7 +405,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "As frases I e II descrevem bem a amiloidose: ela pode afetar quase qualquer órgão (nervos, coração, rins, intestino, fígado), com sintomas bem variados e difíceis de reconhecer no início, o que atrasa o diagnóstico. A frase III também está certa: o transplante de medula pode ser indicado em alguns casos de amiloidose, MAS é contraindicado quando o coração já está muito comprometido, porque o procedimento é arriscado demais pra um coração fraco aguentar.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
@@ -428,7 +438,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Quando a proteína anormal do mieloma (do tipo 'cadeia leve') se deposita nos rins formando fibrilas de amiloide (que coram de vermelho com o corante Congo Red), ela costuma se acumular principalmente nos glomérulos — a parte do rim que filtra o sangue. Esse tipo de dano classicamente causa síndrome nefrótica: muita proteína perdida na urina, inchaço no corpo e colesterol alto.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
@@ -461,7 +471,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Apesar de a paciente parecer bem (sem anemia, sem cálcio alto, sem lesão óssea, sem rim comprometido), um detalhe chama atenção: a relação entre as cadeias leves kappa e lambda está extremamente alterada (120, quando o normal fica bem mais próximo de 1). Esse número tão exagerado é, por si só, considerado um critério que define mieloma múltiplo ATIVO (não só um pico monoclonal 'inofensivo'), mesmo sem os sintomas clássicos (anemia, rim, cálcio, ossos) — é uma das novas regras (SLiM-CRAB) que a Sociedade Internacional de Mieloma usa pra saber quando já é hora de tratar.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",

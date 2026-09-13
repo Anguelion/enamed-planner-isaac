@@ -1,110 +1,20 @@
 {
-  "generatedAt": "2026-09-12T20:38:03.462Z",
+  "generatedAt": "2026-09-13T11:59:14.233Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 6,
+  "changed": 1,
   "results": [
     {
-      "id": "anki-hematologia-gamopatias-monoclonais-16638997bb9f8378",
-      "number": "1001j",
+      "id": "anki-hematologia-gamopatias-monoclonais-478f42963610c80b",
+      "number": "1007j",
       "file": "question_bank/hematologia-gamopatias-monoclonais.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-60-anos891186350c/",
-      "sourceQuestionId": "4000169300",
-      "matchedAt": "2026-09-12T20:38:04.423Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Gamopatias monoclonais",
-        "Mieloma múltiplo (MM)",
-        "Quadro Clínico do mieloma múltiplo (MM)"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Quadro Clínico do mieloma múltiplo (MM). Conduta/resposta: Mieloma múltiplo.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Homem-60-anos891186350c/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-gamopatias-monoclonais-dbe3579731c1fd33",
-      "number": "1002j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-76-anos826e67e6da/",
-      "sourceQuestionId": "4000168772",
-      "matchedAt": "2026-09-12T20:38:10.604Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Gamopatias monoclonais",
-        "Mieloma múltiplo (MM)",
-        "Fisiopatologia do mieloma múltiplo (MM)",
-        "Quadro Clínico do mieloma múltiplo (MM)"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Quadro Clínico do mieloma múltiplo (MM). Conduta/resposta: Eletroforese de proteínas séricas e urinárias.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-76-anos826e67e6da/",
-        "https://med.estrategia.com/public/questoes/Mulher-76-anos82b7bb63ec/",
-        "https://med.estrategia.com/public/questoes/d6981468c81bcd975585a223/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-gamopatias-monoclonais-f4a66502d43ab946",
-      "number": "1003j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-com-mieloma74c23eb9b7/",
-      "sourceQuestionId": "4000166574",
-      "matchedAt": "2026-09-12T20:38:16.317Z",
-      "similarity": {
-        "stem": 0.976,
-        "options": 1,
-        "combined": 0.9831999999999999
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Gamopatias monoclonais",
-        "Mieloma múltiplo (MM)",
-        "Quadro Clínico do mieloma múltiplo (MM)"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Quadro Clínico do mieloma múltiplo (MM). Conduta/resposta: Hipercalcemia.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/paciente-com-mieloma74c23eb9b7/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-gamopatias-monoclonais-04d3a42bf2564eba",
-      "number": "1004j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-dessas-doenc-na1144287756/",
-      "sourceQuestionId": "4000166369",
-      "matchedAt": "2026-09-12T20:38:22.375Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-71-anos-idade60f7926ebd/",
+      "sourceQuestionId": "4000144702",
+      "matchedAt": "2026-09-13T11:59:15.408Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -116,71 +26,60 @@
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Gamopatias monoclonais"
+        "Gamopatias monoclonais",
+        "Mieloma múltiplo (MM)"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Gamopatias monoclonais. Conduta/resposta: Agamaglobulinemia ligada ao X.",
+      "comment": "Gabarito confirmado: B. Assunto: Mieloma múltiplo (MM). Conduta/resposta: Hemograma, creatinina, cálcio sérico, função hepática e mielograma.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Qual-dessas-doenc-na1144287756/"
+        "https://med.estrategia.com/public/questoes/Homem-71-anos-idade60f7926ebd/"
       ]
     },
     {
-      "id": "anki-hematologia-gamopatias-monoclonais-10584d4627cbdfea",
-      "number": "1005j",
+      "id": "anki-hematologia-gamopatias-monoclonais-a65e59a6c8f3f058",
+      "number": "1008j",
       "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-68-anos-sexo92b4ce9bcf/",
-      "sourceQuestionId": "4000164377",
-      "matchedAt": "2026-09-12T20:38:28.076Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Gamopatias monoclonais",
-        "Mieloma múltiplo (MM)",
-        "Quadro Clínico do mieloma múltiplo (MM)"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Quadro Clínico do mieloma múltiplo (MM). Conduta/resposta: Agregados lineares de células vermelhas.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-68-anos-sexo92b4ce9bcf/"
-      ]
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-gamopatias-monoclonais-d87b9c9e59a89ffe",
-      "number": "1006j",
+      "id": "anki-hematologia-gamopatias-monoclonais-3336f8e8c87c439d",
+      "number": "1010j",
       "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-65-anos-procura31914343b7/",
-      "sourceQuestionId": "4000145733",
-      "matchedAt": "2026-09-12T20:38:34.124Z",
-      "similarity": {
-        "stem": 0.927536231884058,
-        "options": 1,
-        "combined": 0.9492753623188406
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Gamopatias monoclonais",
-        "Mieloma múltiplo (MM)",
-        "Classificação do mieloma múltiplo (MM)"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Classificação do mieloma múltiplo (MM). Conduta/resposta: Mieloma múltiplo.",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-gamopatias-monoclonais-8caf6a0f5e0d0c79",
+      "number": "1011j",
+      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
+      "changed": false,
+      "status": "low_confidence",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Homem-65-anos-procura31914343b7/",
-        "https://med.estrategia.com/public/questoes/Um-homem-de-65-anos515b4336c7/"
-      ]
+        "https://med.estrategia.com/public/questoes/Com-as-amiloidoses475536d94a/"
+      ],
+      "bestSimilarity": {
+        "stem": 0.2616822429906542,
+        "options": 0.7291666666666666,
+        "combined": 0.4019275700934579
+      }
+    },
+    {
+      "id": "anki-hematologia-gamopatias-monoclonais-9cfc04572db0f9ce",
+      "number": "1012j",
+      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-gamopatias-monoclonais-2c1081ef3fd98e37",
+      "number": "1013j",
+      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     }
   ]
 }
