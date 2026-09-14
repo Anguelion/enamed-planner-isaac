@@ -3380,7 +3380,67 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-gamopatias-monoclonais-12ece0981fe29069": {
+      "number": "1026j",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-14T21:53:28.489Z",
+      "nextAttemptAt": "2026-09-21T21:53:28.489Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-65-anos92f35f087b/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-gamopatias-monoclonais-6161c9001d5cf33f": {
+      "number": "1027j",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-14T21:53:34.814Z",
+      "nextAttemptAt": "2026-09-21T21:53:34.814Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-75-anos-idade160d61c28ac/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-gamopatias-monoclonais-a4d6b7644608a044": {
+      "number": "1028j",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-14T21:53:40.550Z",
+      "nextAttemptAt": "2026-09-21T21:53:40.550Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-61-anos-idade3555f7bd10/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-gamopatias-monoclonais-b4aa6eea98e2c034": {
+      "number": "1029j",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-14T21:53:46.544Z",
+      "nextAttemptAt": "2026-09-21T21:53:46.544Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo778fb5411f/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-gamopatias-monoclonais-cfd2be58c688b9ad": {
+      "number": "1030j",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-14T21:53:52.216Z",
+      "nextAttemptAt": "2026-09-21T21:53:52.216Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-63-anos16974be9cb/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-gamopatias-monoclonais-b3f01831c72e692d": {
+      "number": "1031j",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-14T21:53:58.251Z",
+      "nextAttemptAt": "2026-09-21T21:53:58.251Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Foi-admitida754c999e65/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     }
   },
-  "updatedAt": "2026-09-14T12:57:46.908Z"
+  "updatedAt": "2026-09-14T21:53:58.251Z"
 }

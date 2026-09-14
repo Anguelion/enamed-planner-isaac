@@ -1010,14 +1010,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Esse senhor tem perda de peso, anemia, dor lombar com fraturas nas vértebras e, de repente, um cálcio extremamente alto (17!) com dor de barriga e parada da urina (anúria) — quadro grave de mieloma múltiplo com hipercalcemia importante. Os exames certos pra confirmar são a eletroforese de proteínas e a avaliação da medula óssea (mielograma/biópsia).",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Introdução ao mieloma múltiplo (MM)",
+        "Quadro Clínico do mieloma múltiplo (MM)",
+        "Classificação do mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587519",
-      "ankiGuid": "d+$(0laf&A"
+      "ankiGuid": "d+$(0laf&A",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-65-anos92f35f087b/",
+        "sourceQuestionId": "4000030487",
+        "matchedAt": "2026-09-14T21:53:28.488Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-6161c9001d5cf33f",
@@ -1041,14 +1054,31 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Redução da urina, cansaço, dor no peito e dor lombar forte, anemia, rim muito comprometido, potássio alto e cálcio muito alto (13!) — quadro grave, compatível com mieloma múltiplo. Como a hipótese principal é essa, faz sentido que a dor lombar venha de lesões líticas (buraquinhos causados pela destruição óssea), que são uma manifestação clássica da doença.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Outros",
+        "Ortopedia",
+        "Ortopedia Geral",
+        "Tumores ósseos",
+        "Doenças da coluna vertebral",
+        "Lombalgia",
+        "Diagnósticos diferenciais",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587520",
-      "ankiGuid": "p]nnp55a:S"
+      "ankiGuid": "p]nnp55a:S",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-75-anos-idade160d61c28ac/",
+        "sourceQuestionId": "4000023726",
+        "matchedAt": "2026-09-14T21:53:34.814Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-a4d6b7644608a044",
@@ -1075,14 +1105,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Achar uma proteína monoclonal no sangue de alguém, mesmo só com cansaço como sintoma, pede uma investigação básica: hemograma, creatinina, cálcio sérico e uma avaliação dos ossos por raio-x — são os exames iniciais padrão pra saber se há dano de órgão associado à gamopatia.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Introdução ao mieloma múltiplo (MM)",
+        "Quadro Clínico do mieloma múltiplo (MM)",
+        "Classificação do mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587521",
-      "ankiGuid": "EIFf!KVHFu"
+      "ankiGuid": "EIFf!KVHFu",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-61-anos-idade3555f7bd10/",
+        "sourceQuestionId": "4000011542",
+        "matchedAt": "2026-09-14T21:53:40.549Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-b4aa6eea98e2c034",
@@ -1108,14 +1151,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "O nível de anemia desse senhor (hemoglobina de 5, muito baixa!) é grande demais pra ser explicado só pela insuficiência renal que ele tem. Quando a anemia é 'desproporcional' ao problema do rim, o médico precisa pensar em outra doença por trás — e uma bem clássica em idosos é o mieloma múltiplo, que também pode deixar o cálcio do sangue alto (hipercalcemia), e cálcio alto deixa a pessoa confusa.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias e condições não hematológicas",
+        "Anemia da doença renal crônica",
+        "Mieloma múltiplo (MM)",
+        "Quadro Clínico do mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587522",
-      "ankiGuid": "nV7*.Y-jy."
+      "ankiGuid": "nV7*.Y-jy.",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo778fb5411f/",
+        "sourceQuestionId": "4000101307",
+        "matchedAt": "2026-09-14T21:53:46.543Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-cfd2be58c688b9ad",
@@ -1141,14 +1197,24 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "No mieloma múltiplo, mesmo com muita proteína circulando no sangue, o paciente fica com MENOS anticorpos que realmente funcionam pra combater infecções — é uma imunodeficiência humoral que deixa mais vulnerável a bactérias encapsuladas, como o pneumococo.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587523",
-      "ankiGuid": "M(m6Ki,q+U"
+      "ankiGuid": "M(m6Ki,q+U",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-63-anos16974be9cb/",
+        "sourceQuestionId": "4000100566",
+        "matchedAt": "2026-09-14T21:53:52.215Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-b3f01831c72e692d",
@@ -1174,14 +1240,24 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "O mieloma múltiplo faz parte de uma 'família' de doenças chamadas discrasias de plasmócitos, que inclui desde a forma mais 'inofensiva' (gamopatia de significado incerto), passando pela forma indolente (smoldering), até o mieloma ativo, a leucemia de células plasmáticas (a forma mais agressiva) e alguns casos de amiloidose — todas nascem do mesmo tipo de célula (plasmócito) se comportando de formas diferentes.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Classificação das gamopatias monoclonais",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587524",
-      "ankiGuid": "Hn,_./8y^^"
+      "ankiGuid": "Hn,_./8y^^",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Foi-admitida754c999e65/",
+        "sourceQuestionId": "4000098361",
+        "matchedAt": "2026-09-14T21:53:58.251Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-deccf618a6de281b",
