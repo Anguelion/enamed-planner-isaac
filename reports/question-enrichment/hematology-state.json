@@ -3320,7 +3320,67 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-com-50-anos842c194b5d/",
       "localAnswer": "C",
       "remoteAnswer": "C"
+    },
+    "anki-hematologia-gamopatias-monoclonais-ba8d0b1c84fa01fc": {
+      "number": "1020j",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-14T12:57:17.005Z",
+      "nextAttemptAt": "2026-09-21T12:57:17.005Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Idosa-78-anos-durante45013ead84/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-gamopatias-monoclonais-f3e65133d8a72df3": {
+      "number": "1021j",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-14T12:57:23.449Z",
+      "nextAttemptAt": "2026-09-21T12:57:23.449Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-70-anos-com10654e5c121/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-gamopatias-monoclonais-9c2ec1b0902ab7e7": {
+      "number": "1022j",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-14T12:57:30.165Z",
+      "nextAttemptAt": "2026-09-21T12:57:30.165Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/macroglobulinemia169970c5df/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-gamopatias-monoclonais-7215d139785563c0": {
+      "number": "1023j",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-14T12:57:35.391Z",
+      "nextAttemptAt": "2026-09-21T12:57:35.391Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-gamopatias-monoclonais-cef2521b0b44d728": {
+      "number": "1024j",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-14T12:57:40.586Z",
+      "nextAttemptAt": "2026-09-21T12:57:40.586Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-gamopatias-monoclonais-ca5813d9c6d432a6": {
+      "number": "1025j",
+      "status": "low_confidence",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-14T12:57:46.908Z",
+      "nextAttemptAt": "2026-11-13T12:57:46.908Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-09-13T20:55:21.552Z"
+  "updatedAt": "2026-09-14T12:57:46.908Z"
 }

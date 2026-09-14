@@ -778,14 +778,24 @@
       ],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Cálcio alto + anemia + lesões líticas nos ossos + proteína monoclonal IgG-kappa no sangue — já formam um quadro bem completo de mieloma múltiplo. Se o mielograma mostrar plasmócitos em excesso, isso fecha (confirma) o diagnóstico, já que os outros achados (hipercalcemia e lesões líticas) já preenchem os critérios da doença ativa.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Classificação das gamopatias monoclonais",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587513",
-      "ankiGuid": "B5![8?y3~W"
+      "ankiGuid": "B5![8?y3~W",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Idosa-78-anos-durante45013ead84/",
+        "sourceQuestionId": "4000100474",
+        "matchedAt": "2026-09-14T12:57:17.004Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-f3e65133d8a72df3",
@@ -811,14 +821,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Mesmo com um exame de imagem sem lesões líticas claras (só osteopenia) e um PSA levemente elevado (o que pode confundir com câncer de próstata), o restante do quadro (dor lombar progressiva, emagrecimento, anemia, VHS muito alto) ainda pesa mais pra mieloma múltiplo — lembrando que metástase de próstata costuma dar lesões ESCLERÓTICAS (mais densas), não osteopenia difusa, o que ajuda a descartar essa hipótese.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Quadro Clínico do mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587514",
-      "ankiGuid": "B(2h+J=BM4"
+      "ankiGuid": "B(2h+J=BM4",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-70-anos-com10654e5c121/",
+        "sourceQuestionId": "4000076671",
+        "matchedAt": "2026-09-14T12:57:23.448Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-9c2ec1b0902ab7e7",
@@ -845,14 +866,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Na macroglobulinemia de Waldenström, o excesso de uma proteína grande (IgM) deixa o sangue 'grosso' (viscoso), dificultando a circulação, principalmente nos vasinhos pequenos do olho e do cérebro — por isso os sintomas mais clássicos da síndrome de hiperviscosidade são visão embaçada, dor de cabeça e formigamentos.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Macroglobulinemia de Waldenström (MW)",
+        "Patologia da Macroglobulinemia de Waldenström (MW)",
+        "Quadro Clínico da Macroglobulinemia de Waldenström (MW)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587515",
-      "ankiGuid": "w%6kg4},z~"
+      "ankiGuid": "w%6kg4},z~",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/macroglobulinemia169970c5df/",
+        "sourceQuestionId": "4000063682",
+        "matchedAt": "2026-09-14T12:57:30.165Z",
+        "confidence": 0.9461538461538461
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-7215d139785563c0",
@@ -878,7 +911,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A pergunta pede a frase que NÃO podemos aceitar (a errada). Na real, é justamente o CONTRÁRIO do que a alternativa C diz: quando a proteína-M está muito alta ou há sintomas de hiperviscosidade, é sim RECOMENDADO medir a viscosidade do sangue, pra confirmar e guiar o tratamento (às vezes com plasmaférese de urgência) — por isso essa é a frase errada.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
@@ -911,7 +944,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A pergunta pede o item com erro. A frase D erra em dois pontos: primeiro, a proteína de Bence Jones é feita de CADEIAS LEVES, não cadeias pesadas; segundo, o dano renal do mieloma é ligado à HIPERcalcemia (cálcio alto), não à hipocalcemia (que seria o oposto do que realmente acontece nessa doença).",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
@@ -944,7 +977,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Idoso com dor lombar, anemia recente, rim funcionando mal e, principalmente, cálcio MUITO alto (13,2, bem acima do normal) — esse conjunto de achados (dor óssea + anemia + rim + cálcio alto) é a marca registrada do mieloma múltiplo.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
