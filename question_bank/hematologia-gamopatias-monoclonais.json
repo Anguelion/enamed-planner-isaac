@@ -1284,14 +1284,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Dor óssea, fadiga, soluços (sinal clássico de cálcio alto!), náuseas e vômitos, rim funcionando mal, potássio alto e cálcio muito alto (14!) — apesar de ser um atleta jovem (o que confunde um pouco), esse conjunto de achados aponta pra mieloma múltiplo, com uma crise de hipercalcemia grave.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Quadro Clínico do mieloma múltiplo (MM)",
+        "Tratamento do mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587525",
-      "ankiGuid": "oWflgue0~<"
+      "ankiGuid": "oWflgue0~<",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-59-anos-atleta713eed6084/",
+        "sourceQuestionId": "4000091617",
+        "matchedAt": "2026-09-15T11:51:33.361Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-ab78934779d55b0e",
@@ -1317,14 +1329,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Dor lombar com colapso de vértebra, anemia com rouleaux nas hemácias, VHS bem alto, cálcio alto, proteína total alta com albumina relativamente baixa (sugerindo excesso de outra proteína — a monoclonal) e depois piora do rim — tudo junto forma o quadro clássico de mieloma múltiplo.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Quadro Clínico do mieloma múltiplo (MM)",
+        "Tratamento do mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587526",
-      "ankiGuid": "[~+ch2zGz"
+      "ankiGuid": "[~+ch2zGz",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-68-anos-vem13840ccee22/",
+        "sourceQuestionId": "4000073125",
+        "matchedAt": "2026-09-15T11:51:39.840Z",
+        "confidence": 0.9933962264150944
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-8463e41e61278868",
@@ -1350,7 +1374,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "No mieloma múltiplo, mesmo com muita proteína no sangue, os anticorpos que realmente protegem contra infecção ficam em falta — por isso esses pacientes pegam infecções por bactérias encapsuladas com mais facilidade.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
@@ -1385,14 +1409,25 @@
       ],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Redução da urina, mal-estar, rim funcionando muito mal, cálcio alto, anemia com reticulócitos baixos (mostrando que a medula não está compensando) e proteína bem alta na urina — quadro sugestivo de mieloma múltiplo com comprometimento renal importante. A 'Figura I' provavelmente mostra o achado de imagem (eletroforese com pico monoclonal) compatível com esse diagnóstico.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Quadro Clínico do mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587528",
-      "ankiGuid": "bahTgouGNU"
+      "ankiGuid": "bahTgouGNU",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-49-anos116848a71d2/",
+        "sourceQuestionId": "4000105769",
+        "matchedAt": "2026-09-15T11:51:52.625Z",
+        "confidence": 0.9933962264150944
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-92d9ac3a2692932f",
@@ -1420,7 +1455,7 @@
       ],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Apesar de ser diabético (o que poderia sugerir nefropatia diabética como causa do problema renal), o conjunto de dor lombar, fraqueza, anemia e os exames complementares (não mostrados aqui, mas presumidos) apontam mais pra mieloma múltiplo — cuja principal alteração de eletrólito associada é o cálcio alto (hipercalcemia), diferente da nefropatia diabética, que não costuma causar hipercalcemia.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
@@ -1456,7 +1491,7 @@
       ],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Se o proteinograma (provavelmente mostrado na imagem da questão) revela um pico estreito e bem definido (monoclonal, não espalhado/policlonal), isso justifica pedir também um proteinograma da URINA, pra ver se há proteína de Bence Jones sendo eliminada — por isso só a frase I está correta. A presença de um pico afiado descarta a ideia de gamopatia policlonal (frase II errada) e não permite descartar mieloma (frase III errada, já que o pico monoclonal é justamente o que levanta a suspeita).",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
