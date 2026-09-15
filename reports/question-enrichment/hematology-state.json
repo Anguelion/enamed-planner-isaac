@@ -3500,7 +3500,67 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-gamopatias-monoclonais-9d65786e23cf1d8c": {
+      "number": "1038j",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-15T21:26:18.873Z",
+      "nextAttemptAt": "2026-09-22T21:26:18.873Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Idoso-64-anos568624a1e9/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-gamopatias-monoclonais-f387f0c652b37618": {
+      "number": "1039j",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-15T21:26:24.107Z",
+      "nextAttemptAt": "2026-09-22T21:26:24.107Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-gamopatias-monoclonais-8fc1b8cca6127d67": {
+      "number": "1040j",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-15T21:26:29.300Z",
+      "nextAttemptAt": "2026-09-22T21:26:29.300Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-gamopatias-monoclonais-4763e8a6ea729708": {
+      "number": "1041j",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-15T21:26:34.507Z",
+      "nextAttemptAt": "2026-09-22T21:26:34.507Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-gamopatias-monoclonais-b903b178190cf630": {
+      "number": "1042j",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-15T21:26:39.716Z",
+      "nextAttemptAt": "2026-09-22T21:26:39.716Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-gamopatias-monoclonais-44db18d41644130f": {
+      "number": "1043j",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-15T21:26:44.990Z",
+      "nextAttemptAt": "2026-09-22T21:26:44.990Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-09-15T11:52:03.340Z"
+  "updatedAt": "2026-09-15T21:26:44.990Z"
 }

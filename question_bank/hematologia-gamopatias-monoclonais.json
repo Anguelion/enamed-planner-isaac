@@ -1524,14 +1524,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Dor óssea, anemia, cálcio alto e rim levemente comprometido, com lesões líticas no crânio e na bacia — quadro clássico de mieloma múltiplo. O exame que confirma essa suspeita é encontrar uma hiperglobulinemia MONOCLONAL na eletroforese de proteínas (ou seja, um pico estreito de um único tipo de anticorpo, produzido por um clone de células doentes).",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Quadro Clínico do mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587531",
-      "ankiGuid": "OV9gln}{0,"
+      "ankiGuid": "OV9gln}{0,",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Idoso-64-anos568624a1e9/",
+        "sourceQuestionId": "4000069854",
+        "matchedAt": "2026-09-15T21:26:18.871Z",
+        "confidence": 0.986
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-f387f0c652b37618",
@@ -1558,7 +1569,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Esse conjunto de achados (coração com parede grossa mas função ainda preservada, rim comprometido, nervos afetados, e pequenas bolhas/pápulas na pele das dobras) é bem clássico de amiloidose sistêmica — uma doença em que uma proteína anormal (geralmente ligada a um clone de plasmócitos) se deposita em vários órgãos. A biópsia de medula óssea ajuda a encontrar tanto o depósito de amiloide (com coloração especial) quanto o clone de células que está produzindo a proteína culpada.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
@@ -1592,7 +1603,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "No paciente com rim afetado pelo mieloma, os anti-inflamatórios que bloqueiam a COX-2 são especialmente prejudiciais, porque pioram ainda mais a função renal já fragilizada — por isso essa é a medida INADEQUADA (contraindicada) entre as opções, diferente da quimioterapia, do controle do cálcio, de evitar contraste e do uso de remédios específicos como o bortezomibe, que são condutas corretas.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
@@ -1625,7 +1636,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Mesmo esse paciente estando completamente sem sintomas (sem anemia, sem cálcio alto, sem lesão óssea, sem rim comprometido), dois números chamam muita atenção: 66% de plasmócitos na medula (bem acima do limite de 60% considerado 'perigoso') e uma relação de cadeias leves de 120 (bem acima de 100). Segundo as regras atuais (SLiM-CRAB), esses dois achados sozinhos já definem mieloma múltiplo ATIVO, mesmo sem os sintomas clássicos — e por isso a conduta é começar o tratamento (quimioterapia), não só observar.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
@@ -1658,7 +1669,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Ter uma proteína monoclonal alta (≥3g/dL) ou muitos plasmócitos na medula (≥10%), mas SEM nenhum sinal de dano a órgãos (sem anemia, sem problema renal, sem cálcio alto, sem lesão óssea) — é exatamente a definição de mieloma múltiplo indolente (smoldering): a doença já está lá, mas ainda 'dormindo', sem causar estrago.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
@@ -1692,7 +1703,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Fratura por compressão de vértebra + lesões líticas nos ossos + anemia + rim comprometido + cálcio alto — tudo aponta pra mieloma múltiplo. O exame fundamental pra confirmar é a biópsia de medula óssea, que mostra a quantidade e o tipo das células (plasmócitos) responsáveis pela doença.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
