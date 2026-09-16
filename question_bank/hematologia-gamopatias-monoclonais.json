@@ -1966,14 +1966,26 @@
       ],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Questão baseada em imagens específicas do caso — sem poder ver as figuras originais aqui, não é possível reconstituir com segurança o raciocínio visual usado para combinar as imagens do mesmo paciente. Vale revisar a fonte original da questão (com as imagens) se quiser entender o porquê exato da resposta.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Fisiopatologia do mieloma múltiplo (MM)",
+        "Classificação do mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587543",
-      "ankiGuid": "Eh(M20r0TQ"
+      "ankiGuid": "Eh(M20r0TQ",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Considere-imagens1438d4d95b/",
+        "sourceQuestionId": "4000121928",
+        "matchedAt": "2026-09-16T21:22:59.408Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-60c44b1879dea6cc",
@@ -1999,7 +2011,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Paciente sem sintomas, com plasmócitos na medula abaixo de 10% (aqui, 8%) e sem nenhuma lesão óssea nos exames de imagem — não preenche os critérios pra mieloma múltiplo (que exige ≥10% de plasmócitos OU critérios de dano a órgão). O diagnóstico correto é gamopatia de significado indeterminado (MGUS), e a conduta é só acompanhar com exames periódicos, sem necessidade de tratamento.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
@@ -2032,7 +2044,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Anemia + lesões ósseas líticas + cálcio alto + rim comprometido é o quadro clássico ('CRAB') do mieloma múltiplo.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
@@ -2065,7 +2077,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Mais uma vez: anemia + cálcio alto + rim comprometido + fraturas patológicas formam o quadro clássico do mieloma múltiplo.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
@@ -2098,7 +2110,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Anemia que não melhora com tratamento comum, dor lombar persistente sem alívio com anti-inflamatório, rim comprometido e fraturas nas vértebras por compressão — esse conjunto todo levanta forte suspeita de mieloma múltiplo, e os exames certos pra investigar são a eletroforese de proteínas (sangue e urina) e a avaliação da medula óssea.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
@@ -2131,7 +2143,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Um pico monoclonal na eletroforese pode aparecer em várias doenças que produzem excesso de um único tipo de anticorpo — mieloma, amiloidose e linfoma são exemplos clássicos. Já a hepatite crônica ativa, quando altera a eletroforese, costuma causar um aumento POLICLONAL das gamaglobulinas (um 'morro largo', não um pico estreito) — por isso ela não é uma hipótese válida pra explicar um pico monoclonal.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
