@@ -1,24 +1,77 @@
 {
-  "generatedAt": "2026-09-15T21:26:16.998Z",
+  "generatedAt": "2026-09-16T11:44:23.888Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 1,
+  "changed": 2,
   "results": [
     {
-      "id": "anki-hematologia-gamopatias-monoclonais-9d65786e23cf1d8c",
-      "number": "1038j",
+      "id": "anki-hematologia-gamopatias-monoclonais-f1dae6077ef9390b",
+      "number": "1044j",
       "file": "question_bank/hematologia-gamopatias-monoclonais.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Idoso-64-anos568624a1e9/",
-      "sourceQuestionId": "4000069854",
-      "matchedAt": "2026-09-15T21:26:18.871Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/amiloidose-sistemica8124a542b/",
+      "sourceQuestionId": "4000066228",
+      "matchedAt": "2026-09-16T11:44:26.519Z",
       "similarity": {
-        "stem": 0.98,
+        "stem": 1,
         "options": 1,
-        "combined": 0.986
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Reumatologia",
+        "Amiloidose",
+        "Hematologia",
+        "Gamopatias monoclonais"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Gamopatias monoclonais. Conduta/resposta: Os rins raramente são afetados.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/amiloidose-sistemica8124a542b/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-gamopatias-monoclonais-711ac8caa8946fd4",
+      "number": "1045j",
+      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-gamopatias-monoclonais-0edc62ba31d0227d",
+      "number": "1046j",
+      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-gamopatias-monoclonais-6f5f8cb98efae0f8",
+      "number": "1047j",
+      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-gamopatias-monoclonais-618da6fa5e687645",
+      "number": "1048j",
+      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-72-anos25ab81fec2/",
+      "sourceQuestionId": "4000032175",
+      "matchedAt": "2026-09-16T11:44:49.871Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
       },
       "localAnswer": "B",
       "remoteAnswer": "B",
@@ -28,49 +81,17 @@
         "Hematologia",
         "Gamopatias monoclonais",
         "Mieloma múltiplo (MM)",
-        "Quadro Clínico do mieloma múltiplo (MM)"
+        "Quadro Clínico do mieloma múltiplo (MM)",
+        "Classificação do mieloma múltiplo (MM)"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Quadro Clínico do mieloma múltiplo (MM). Conduta/resposta: Hiperglobulinemia monoclonal na eletroforese de proteínas.",
+      "comment": "Gabarito confirmado: B. Assunto: Classificação do mieloma múltiplo (MM). Conduta/resposta: Mieloma múltiplo.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Idoso-64-anos568624a1e9/",
-        "https://med.estrategia.com/public/questoes/paciente766f7f1ce3/"
+        "https://med.estrategia.com/public/questoes/Paciente-72-anos25ab81fec2/"
       ]
     },
     {
-      "id": "anki-hematologia-gamopatias-monoclonais-f387f0c652b37618",
-      "number": "1039j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-gamopatias-monoclonais-8fc1b8cca6127d67",
-      "number": "1040j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-gamopatias-monoclonais-4763e8a6ea729708",
-      "number": "1041j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-gamopatias-monoclonais-b903b178190cf630",
-      "number": "1042j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-gamopatias-monoclonais-44db18d41644130f",
-      "number": "1043j",
+      "id": "anki-hematologia-gamopatias-monoclonais-e505e99410b6ec8f",
+      "number": "1049j",
       "file": "question_bank/hematologia-gamopatias-monoclonais.json",
       "changed": false,
       "status": "not_found",

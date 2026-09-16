@@ -1737,14 +1737,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava A ('os rins raramente são afetados'), mas isso é justamente o CONTRÁRIO da realidade — o rim é um dos órgãos MAIS afetados na amiloidose AL, geralmente causando síndrome nefrótica. A resposta certa é B: sinais como macroglossia (língua grande), equimose ao redor dos olhos (por fragilidade dos vasinhos) e unhas quebradiças/distróficas são achados clássicos e bem reconhecidos da amiloidose de cadeia leve (AL).",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Reumatologia",
+        "Amiloidose",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587537",
-      "ankiGuid": "y3#e5!LH5^"
+      "ankiGuid": "y3#e5!LH5^",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/amiloidose-sistemica8124a542b/",
+        "sourceQuestionId": "4000066228",
+        "matchedAt": "2026-09-16T11:44:26.519Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-711ac8caa8946fd4",
@@ -1771,7 +1782,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A macroglobulinemia de Waldenström é chamada assim justamente porque produz em excesso uma imunoglobulina 'macro' (grande), a IgM — é essa proteína gigante que deixa o sangue mais viscoso e causa os sintomas de hiperviscosidade.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
@@ -1804,7 +1815,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "No mieloma múltiplo, a proteína que aparece na urina é principalmente formada por cadeias leves (a proteína de Bence Jones) — não é a mesma coisa que a albumina que vaza em outras doenças renais. Isso é importante porque o exame de urina comum (dipstick) muitas vezes NÃO detecta bem essa proteína, já que ele é mais sensível pra albumina, podendo dar um resultado 'falso normal' mesmo com proteinúria significativa.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
@@ -1837,7 +1848,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Anemia + cálcio alto + rim comprometido + fraturas sem trauma forte formam o quadro clássico (chamado de 'CRAB') do mieloma múltiplo.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
@@ -1871,14 +1882,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "O mesmo quadro clássico de novo: anemia, rim comprometido, cálcio alto e lesões líticas nos ossos, com uma proteína monoclonal confirmada por imunofixação — é o retrato fechado do mieloma múltiplo.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Quadro Clínico do mieloma múltiplo (MM)",
+        "Classificação do mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587541",
-      "ankiGuid": "J#=`$d,[wP"
+      "ankiGuid": "J#=`$d,[wP",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-72-anos25ab81fec2/",
+        "sourceQuestionId": "4000032175",
+        "matchedAt": "2026-09-16T11:44:49.871Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-e505e99410b6ec8f",
@@ -1905,7 +1928,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "O mieloma múltiplo é uma doença tipicamente de pessoas mais velhas: mais de 90% dos casos acontecem depois dos 50 anos, com o pico batendo entre os 60 e 70 anos — diferente do que dizem as outras alternativas, ele é MALIGNO (não benigno), mais comum em HOMENS e em NEGROS (não em mulheres e brancos), e é uma parcela bem maior das neoplasias hematológicas do que 5%.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",

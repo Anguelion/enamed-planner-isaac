@@ -3560,7 +3560,67 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-gamopatias-monoclonais-f1dae6077ef9390b": {
+      "number": "1044j",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-16T11:44:26.520Z",
+      "nextAttemptAt": "2026-09-23T11:44:26.520Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/amiloidose-sistemica8124a542b/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-gamopatias-monoclonais-711ac8caa8946fd4": {
+      "number": "1045j",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-16T11:44:31.913Z",
+      "nextAttemptAt": "2026-09-23T11:44:31.913Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-gamopatias-monoclonais-0edc62ba31d0227d": {
+      "number": "1046j",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-16T11:44:37.863Z",
+      "nextAttemptAt": "2026-09-23T11:44:37.863Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-gamopatias-monoclonais-6f5f8cb98efae0f8": {
+      "number": "1047j",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-16T11:44:43.788Z",
+      "nextAttemptAt": "2026-09-23T11:44:43.788Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-gamopatias-monoclonais-618da6fa5e687645": {
+      "number": "1048j",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-16T11:44:49.871Z",
+      "nextAttemptAt": "2026-09-23T11:44:49.871Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-72-anos25ab81fec2/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-gamopatias-monoclonais-e505e99410b6ec8f": {
+      "number": "1049j",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-16T11:44:55.229Z",
+      "nextAttemptAt": "2026-09-23T11:44:55.229Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-09-15T21:26:44.990Z"
+  "updatedAt": "2026-09-16T11:44:55.229Z"
 }
