@@ -1,20 +1,139 @@
 {
-  "generatedAt": "2026-09-16T21:22:57.488Z",
+  "generatedAt": "2026-09-17T11:48:54.712Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 1,
+  "changed": 6,
   "results": [
     {
-      "id": "anki-hematologia-gamopatias-monoclonais-bf41dab744aa4171",
-      "number": "1050j",
+      "id": "anki-hematologia-anemias-microciticas-8bff8657629c1885",
+      "number": "1076d",
+      "file": "question_bank/hematologia-anemias-microciticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-50-anos-procura4006f548fd/",
+      "sourceQuestionId": "4000072696",
+      "matchedAt": "2026-09-17T11:48:55.951Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias microcíticas",
+        "Anemia ferropriva",
+        "Diagnóstico da anemia ferropriva",
+        "Perfil de ferro na anemia ferropriva"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Perfil de ferro na anemia ferropriva. Conduta/resposta: Deve ser feito um estudo completo do trato gastrointestinal.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Homem-50-anos-procura4006f548fd/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-gamopatias-monoclonais-4ac78c13034b3df7",
+      "number": "1056j",
       "file": "question_bank/hematologia-gamopatias-monoclonais.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Considere-imagens1438d4d95b/",
-      "sourceQuestionId": "4000121928",
-      "matchedAt": "2026-09-16T21:22:59.408Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-masculino-60533a6c23f5/",
+      "sourceQuestionId": "4000106788",
+      "matchedAt": "2026-09-17T11:49:02.097Z",
+      "similarity": {
+        "stem": 0.9791666666666666,
+        "options": 1,
+        "combined": 0.9854166666666666
+      },
+      "localAnswer": "E",
+      "remoteAnswer": "E",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Gamopatias monoclonais",
+        "Mieloma múltiplo (MM)",
+        "Introdução ao mieloma múltiplo (MM)"
+      ],
+      "comment": "Gabarito confirmado: E. Assunto: Introdução ao mieloma múltiplo (MM). Conduta/resposta: Mieloma múltiplo.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-masculino-60533a6c23f5/",
+        "https://med.estrategia.com/public/questoes/MSS-masculino-60-anos118cbbb6ad9/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-gamopatias-monoclonais-f405fafa32b32e5e",
+      "number": "1057j",
+      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-70-anos44ff7e0a22/",
+      "sourceQuestionId": "4000092535",
+      "matchedAt": "2026-09-17T11:49:07.836Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Gamopatias monoclonais",
+        "Gamopatia monoclonal de significado indeterminado (MGUS)"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Gamopatia monoclonal de significado indeterminado (MGUS). Conduta/resposta: Gamopatia monoclonal de significado indeterminado.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/paciente-70-anos44ff7e0a22/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-gamopatias-monoclonais-0a11c21a47f98da6",
+      "number": "1058j",
+      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/homem-70-anos-foi391daeeb7d/",
+      "sourceQuestionId": "4000074645",
+      "matchedAt": "2026-09-17T11:49:14.040Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Gamopatias monoclonais",
+        "Mieloma smoldering (SM)",
+        "Mieloma múltiplo (MM)",
+        "Quadro Clínico do mieloma múltiplo (MM)"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Quadro Clínico do mieloma múltiplo (MM). Conduta/resposta: Mieloma assintomático (\"smoldering\" mieloma).",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/homem-70-anos-foi391daeeb7d/",
+        "https://med.estrategia.com/public/questoes/paciente-70-anos76e3e4d397/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-gamopatias-monoclonais-f82241943ab76c7a",
+      "number": "1059j",
+      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-tabagista5410b5fd06/",
+      "sourceQuestionId": "4000062550",
+      "matchedAt": "2026-09-17T11:49:19.735Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -28,62 +147,41 @@
         "Hematologia",
         "Gamopatias monoclonais",
         "Mieloma múltiplo (MM)",
-        "Fisiopatologia do mieloma múltiplo (MM)",
-        "Classificação do mieloma múltiplo (MM)"
+        "Quadro Clínico do mieloma múltiplo (MM)"
       ],
-      "comment": "Gabarito confirmado: A. Assunto: Classificação do mieloma múltiplo (MM). Conduta/resposta: II, III e V.",
+      "comment": "Gabarito confirmado: A. Assunto: Quadro Clínico do mieloma múltiplo (MM). Conduta/resposta: Eletroforese de proteínas, Rx de crânio, e aspirado de Medula óssea.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Considere-imagens1438d4d95b/",
-        "https://med.estrategia.com/public/questoes/Considere-imagens17be356e8b/"
+        "https://med.estrategia.com/public/questoes/Paciente-tabagista5410b5fd06/"
       ]
     },
     {
-      "id": "anki-hematologia-gamopatias-monoclonais-60c44b1879dea6cc",
-      "number": "1051j",
+      "id": "anki-hematologia-gamopatias-monoclonais-036250d800a4dbe4",
+      "number": "1060j",
       "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-gamopatias-monoclonais-f2b63512fd1dbb5f",
-      "number": "1052j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-gamopatias-monoclonais-d9d873ef1805505a",
-      "number": "1053j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-gamopatias-monoclonais-a275d6902f3e2e88",
-      "number": "1054j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-gamopatias-monoclonais-0937303d34db1553",
-      "number": "1055j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": false,
-      "status": "low_confidence",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Uma-paciente-de-273408ad06d1/",
-        "https://med.estrategia.com/public/questoes/paciente-65-anos-idade8857bf2458/"
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/casos-Mieloma-Multiplo9c537d343/",
+      "sourceQuestionId": "4000045638",
+      "matchedAt": "2026-09-17T11:49:25.916Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Gamopatias monoclonais",
+        "Mieloma múltiplo (MM)"
       ],
-      "bestSimilarity": {
-        "stem": 0.2711864406779661,
-        "options": 0,
-        "combined": 0.18983050847457625
-      }
+      "comment": "Gabarito confirmado: A. Assunto: Mieloma múltiplo (MM). Conduta/resposta: Na gênese da lesão renal associada à doença, é essencial o depósito de substância amiloide.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/casos-Mieloma-Multiplo9c537d343/",
+        "https://med.estrategia.com/public/questoes/mieloma-multiplo-e991b9fb6a/"
+      ]
     }
   ]
 }

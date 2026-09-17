@@ -3336,10 +3336,22 @@
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Diagnóstico da anemia ferropriva",
+        "Perfil de ferro na anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701788",
-      "ankiGuid": "AWkxwVylo^"
+      "ankiGuid": "AWkxwVylo^",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-50-anos-procura4006f548fd/",
+        "sourceQuestionId": "4000072696",
+        "matchedAt": "2026-09-17T11:48:55.951Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-d328423fc24f1e33",

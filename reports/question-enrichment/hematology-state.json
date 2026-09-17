@@ -2893,13 +2893,13 @@
     },
     "anki-hematologia-anemias-microciticas-8bff8657629c1885": {
       "number": "1076d",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-10T11:27:54.369Z",
-      "nextAttemptAt": "2026-09-17T11:27:54.369Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-09-17T11:48:55.952Z",
+      "nextAttemptAt": "2026-10-01T11:48:55.952Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-50-anos-procura4006f548fd/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-anemias-microciticas-d328423fc24f1e33": {
       "number": "1077d",
@@ -3680,7 +3680,57 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-gamopatias-monoclonais-4ac78c13034b3df7": {
+      "number": "1056j",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-17T11:49:02.097Z",
+      "nextAttemptAt": "2026-09-24T11:49:02.097Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-masculino-60533a6c23f5/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
+    },
+    "anki-hematologia-gamopatias-monoclonais-f405fafa32b32e5e": {
+      "number": "1057j",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-17T11:49:07.837Z",
+      "nextAttemptAt": "2026-09-24T11:49:07.837Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-70-anos44ff7e0a22/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-gamopatias-monoclonais-0a11c21a47f98da6": {
+      "number": "1058j",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-17T11:49:14.040Z",
+      "nextAttemptAt": "2026-09-24T11:49:14.040Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/homem-70-anos-foi391daeeb7d/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-gamopatias-monoclonais-f82241943ab76c7a": {
+      "number": "1059j",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-17T11:49:19.736Z",
+      "nextAttemptAt": "2026-09-24T11:49:19.736Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-tabagista5410b5fd06/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-gamopatias-monoclonais-036250d800a4dbe4": {
+      "number": "1060j",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-17T11:49:25.916Z",
+      "nextAttemptAt": "2026-09-24T11:49:25.916Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/casos-Mieloma-Multiplo9c537d343/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
     }
   },
-  "updatedAt": "2026-09-16T21:23:27.033Z"
+  "updatedAt": "2026-09-17T11:49:25.916Z"
 }

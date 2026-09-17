@@ -2179,14 +2179,25 @@
       ],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Fraqueza, anemia grave (hemoglobina de 6,2) e rim comprometido, junto com o exame de imagem não descrito aqui (provavelmente mostrando um pico monoclonal na eletroforese) — o quadro completo é bem compatível com mieloma múltiplo.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Introdução ao mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587549",
-      "ankiGuid": "hDlOCWc(Ba"
+      "ankiGuid": "hDlOCWc(Ba",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-masculino-60533a6c23f5/",
+        "sourceQuestionId": "4000106788",
+        "matchedAt": "2026-09-17T11:49:02.097Z",
+        "confidence": 0.9854166666666666
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-f405fafa32b32e5e",
@@ -2213,14 +2224,24 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Achar um pico monoclonal num exame de rotina, sem nenhum sintoma e sem nenhuma outra alteração nos exames, é o retrato clássico da gamopatia monoclonal de significado indeterminado (MGUS) — uma condição 'benigna' (não é câncer ainda), mas que precisa de acompanhamento, já que uma pequena parte pode evoluir pra mieloma no futuro.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Gamopatia monoclonal de significado indeterminado (MGUS)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587550",
-      "ankiGuid": "e}M#jP5X$U"
+      "ankiGuid": "e}M#jP5X$U",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-70-anos44ff7e0a22/",
+        "sourceQuestionId": "4000092535",
+        "matchedAt": "2026-09-17T11:49:07.836Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-0a11c21a47f98da6",
@@ -2246,14 +2267,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Proteína monoclonal alta (≥30g/L) e plasmócitos na medula ≥10%, mas SEM nenhum dano a órgão (cálcio e rim normais, sem mencionar lesão óssea ou anemia) — é exatamente a definição de mieloma assintomático (smoldering): a doença já preenche alguns critérios, mas ainda não causou estrago nos órgãos.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma smoldering (SM)",
+        "Mieloma múltiplo (MM)",
+        "Quadro Clínico do mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587551",
-      "ankiGuid": "xC*HQwGH<n"
+      "ankiGuid": "xC*HQwGH<n",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/homem-70-anos-foi391daeeb7d/",
+        "sourceQuestionId": "4000074645",
+        "matchedAt": "2026-09-17T11:49:14.040Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-f82241943ab76c7a",
@@ -2279,14 +2312,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Dor lombar, infecções de repetição (pneumonias, sugerindo imunodeficiência), anemia, rim comprometido e cálcio alto — quadro sugestivo de mieloma múltiplo. Os exames que ajudam a confirmar são a eletroforese de proteínas, o raio-x de crânio (procurando lesões líticas) e o aspirado de medula óssea (contando os plasmócitos).",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Quadro Clínico do mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587552",
-      "ankiGuid": "nW.L>CtU2("
+      "ankiGuid": "nW.L>CtU2(",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-tabagista5410b5fd06/",
+        "sourceQuestionId": "4000062550",
+        "matchedAt": "2026-09-17T11:49:19.735Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-036250d800a4dbe4",
@@ -2313,14 +2357,24 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A pergunta pede a frase ERRADA. Na verdade, o tipo de lesão renal MAIS COMUM no mieloma múltiplo não precisa de depósito de substância amiloide — a causa mais frequente é a chamada 'nefropatia do mieloma' (ou 'rim do mieloma'), causada pelas cadeias leves entupindo os túbulos renais diretamente, formando cilindros. O depósito de amiloide (amiloidose AL) acontece só numa fração menor dos casos, não sendo 'essencial' para a lesão renal do mieloma em geral.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587553",
-      "ankiGuid": "Fk{`K5V~x9"
+      "ankiGuid": "Fk{`K5V~x9",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/casos-Mieloma-Multiplo9c537d343/",
+        "sourceQuestionId": "4000045638",
+        "matchedAt": "2026-09-17T11:49:25.916Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-e0b4bc16fced0af7",
