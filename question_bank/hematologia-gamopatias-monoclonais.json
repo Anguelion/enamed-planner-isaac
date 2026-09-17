@@ -2401,14 +2401,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Dor lombar com piora súbita, dificuldade de ficar em pé, redução da diurese, cansaço, náuseas, prisão de ventre, fraqueza nas pernas, fratura vertebral e lesões líticas na bacia, com rim comprometido e cálcio bem alto — é um quadro completo e grave de mieloma múltiplo, com risco de compressão da medula espinhal pela fratura.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Fisiopatologia do mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587554",
-      "ankiGuid": "GAx_D*JKdW"
+      "ankiGuid": "GAx_D*JKdW",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-64-anos8828bd641e/",
+        "sourceQuestionId": "4000125486",
+        "matchedAt": "2026-09-17T21:27:17.675Z",
+        "confidence": 0.97
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-329b2761cc7eeb04",
@@ -2434,14 +2445,24 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Dor lombar forte e nova, sem melhora com anti-inflamatório, fraqueza generalizada, perda de peso, anemia e rouleaux nas hemácias — tudo aponta pra mieloma múltiplo, uma causa clássica desse tipo de quadro em idosos.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587555",
-      "ankiGuid": "tB:kKo@46Z"
+      "ankiGuid": "tB:kKo@46Z",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-70-anos-sexo742771a59d/",
+        "sourceQuestionId": "4000124124",
+        "matchedAt": "2026-09-17T21:27:23.881Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-014bf2260232c76d",
@@ -2468,14 +2489,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Síndrome nefrótica + equimoses ao redor dos olhos + unhas quebradiças + língua grande (macroglossia) — esse conjunto de achados é a assinatura clássica da amiloidose, uma doença em que uma proteína anormal se deposita em vários órgãos, incluindo pele, rins e língua.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Reumatologia",
+        "Amiloidose",
+        "Manifestações clínicas",
+        "Diagnóstico",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587556",
-      "ankiGuid": "H]fWMPXh}+"
+      "ankiGuid": "H]fWMPXh}+",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo26b9b5e4db/",
+        "sourceQuestionId": "4000089883",
+        "matchedAt": "2026-09-17T21:27:29.571Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-4b9d34c0be628d63",
@@ -2502,7 +2536,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Entre todos os sintomas possíveis do mieloma múltiplo (anemia, insuficiência renal, infecções, sangramentos), a dor óssea é o sintoma mais comum de todos na hora do diagnóstico — a maioria dos pacientes procura o médico justamente por causa dela.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
@@ -2536,14 +2570,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Confusão mental, emagrecimento, dor óssea, náuseas/vômitos, anemia com rouleaux, rim comprometido, e uma eletroforese mostrando um pico na fração gama (suspeita de paraproteína), além de osteoporose difusa na radiografia — tudo forma o quadro clássico de mieloma múltiplo. O exame certo pra confirmar é a imunoeletroforese de proteínas, que identifica exatamente qual tipo de proteína monoclonal está sendo produzida.",
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Introdução ao mieloma múltiplo (MM)",
+        "Quadro Clínico do mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587558",
-      "ankiGuid": "HN{`#nx=4b"
+      "ankiGuid": "HN{`#nx=4b",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-58-anos-negro1346f7fa848/",
+        "sourceQuestionId": "4000062137",
+        "matchedAt": "2026-09-17T21:27:41.334Z",
+        "confidence": 1
+      }
     }
   ]
 }

@@ -518,7 +518,46 @@
       "tags": [],
       "suggestedComment": "",
       "reviewedAt": "2026-09-16T21:23:27.033Z"
+    },
+    "anki-hematologia-gamopatias-monoclonais-4b9d34c0be628d63": {
+      "id": "anki-hematologia-gamopatias-monoclonais-4b9d34c0be628d63",
+      "number": "1064j",
+      "status": "low_confidence",
+      "localAnswer": null,
+      "remoteAnswer": null,
+      "sourceUrl": null,
+      "similarity": {
+        "stem": 0.8656716417910447,
+        "options": 0.08064814814814815,
+        "combined": 0.6301645936981757
+      },
+      "tags": [],
+      "suggestedComment": "",
+      "reviewedAt": "2026-09-17T21:27:35.693Z"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-736faf2bef28848f": {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-736faf2bef28848f",
+      "number": "1009b",
+      "status": "answer_mismatch",
+      "localAnswer": "D",
+      "remoteAnswer": "A",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-que20cd009075/",
+      "similarity": {
+        "stem": 0.95,
+        "options": 0.9680921052631579,
+        "combined": 0.9554276315789473
+      },
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Anticoagulantes antagonistas da vitamina K"
+      ],
+      "suggestedComment": "Gabarito confirmado: A. Assunto: Anticoagulantes antagonistas da vitamina K. Conduta/resposta: A varfarina bloqueia a ativação de fatores da cascata de coagulação e a produção dos inibidores de coagulação (proteína C e S) dependentes da vitamina K.",
+      "reviewedAt": "2026-09-17T21:27:47.144Z"
     }
   },
-  "updatedAt": "2026-09-16T21:23:27.033Z"
+  "updatedAt": "2026-09-17T21:27:47.144Z"
 }

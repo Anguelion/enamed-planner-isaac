@@ -3730,7 +3730,67 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/casos-Mieloma-Multiplo9c537d343/",
       "localAnswer": "A",
       "remoteAnswer": "A"
+    },
+    "anki-hematologia-gamopatias-monoclonais-e0b4bc16fced0af7": {
+      "number": "1061j",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-17T21:27:17.676Z",
+      "nextAttemptAt": "2026-09-24T21:27:17.676Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-64-anos8828bd641e/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-gamopatias-monoclonais-329b2761cc7eeb04": {
+      "number": "1062j",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-17T21:27:23.881Z",
+      "nextAttemptAt": "2026-09-24T21:27:23.881Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-70-anos-sexo742771a59d/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-gamopatias-monoclonais-014bf2260232c76d": {
+      "number": "1063j",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-17T21:27:29.572Z",
+      "nextAttemptAt": "2026-09-24T21:27:29.572Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo26b9b5e4db/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-gamopatias-monoclonais-4b9d34c0be628d63": {
+      "number": "1064j",
+      "status": "low_confidence",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-17T21:27:35.693Z",
+      "nextAttemptAt": "2026-11-16T21:27:35.693Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-gamopatias-monoclonais-cadb5de483266b3a": {
+      "number": "1065j",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-17T21:27:41.335Z",
+      "nextAttemptAt": "2026-09-24T21:27:41.335Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-58-anos-negro1346f7fa848/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-736faf2bef28848f": {
+      "number": "1009b",
+      "status": "answer_mismatch",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-17T21:27:47.144Z",
+      "nextAttemptAt": "2027-09-17T21:27:47.144Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-que20cd009075/",
+      "localAnswer": "D",
+      "remoteAnswer": "A"
     }
   },
-  "updatedAt": "2026-09-17T11:49:25.916Z"
+  "updatedAt": "2026-09-17T21:27:47.144Z"
 }
