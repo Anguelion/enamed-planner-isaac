@@ -1,162 +1,56 @@
 {
-  "generatedAt": "2026-09-17T21:27:16.775Z",
+  "generatedAt": "2026-09-18T11:23:37.455Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 4,
+  "changed": 2,
   "results": [
     {
-      "id": "anki-hematologia-gamopatias-monoclonais-e0b4bc16fced0af7",
-      "number": "1061j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-c18ac0bc67b2eb82",
+      "number": "1011b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-64-anos8828bd641e/",
-      "sourceQuestionId": "4000125486",
-      "matchedAt": "2026-09-17T21:27:17.675Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/corrida-pelo58ce413c0c/",
+      "sourceQuestionId": "4000168566",
+      "matchedAt": "2026-09-18T11:23:38.423Z",
       "similarity": {
         "stem": 1,
-        "options": 0.9,
-        "combined": 0.97
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Gamopatias monoclonais",
-        "Mieloma múltiplo (MM)",
-        "Fisiopatologia do mieloma múltiplo (MM)"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Fisiopatologia do mieloma múltiplo (MM). Conduta/resposta: mieloma múltiplo.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-64-anos8828bd641e/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-gamopatias-monoclonais-329b2761cc7eeb04",
-      "number": "1062j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-70-anos-sexo742771a59d/",
-      "sourceQuestionId": "4000124124",
-      "matchedAt": "2026-09-17T21:27:23.881Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Gamopatias monoclonais",
-        "Mieloma múltiplo (MM)"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Mieloma múltiplo (MM). Conduta/resposta: Mieloma múltiplo.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-70-anos-sexo742771a59d/",
-        "https://med.estrategia.com/public/questoes/Paciente-sexo72f0df2b49/",
-        "https://med.estrategia.com/public/questoes/Paciente-sexo1170ec3530f/",
-        "https://med.estrategia.com/public/questoes/Paciente-masculino-7081ab362ffb/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-gamopatias-monoclonais-014bf2260232c76d",
-      "number": "1063j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo26b9b5e4db/",
-      "sourceQuestionId": "4000089883",
-      "matchedAt": "2026-09-17T21:27:29.571Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
+        "options": 0.95,
+        "combined": 0.9849999999999999
       },
       "localAnswer": "B",
       "remoteAnswer": "B",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
-        "Reumatologia",
-        "Amiloidose",
-        "Manifestações clínicas",
-        "Diagnóstico"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Diagnóstico. Conduta/resposta: Amiloidose.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-sexo26b9b5e4db/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-gamopatias-monoclonais-4b9d34c0be628d63",
-      "number": "1064j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": false,
-      "status": "low_confidence",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/mieloma-multiplo407529d168/",
-        "https://med.estrategia.com/public/questoes/mieloma-multiplo27cbc419ca/"
-      ],
-      "bestSimilarity": {
-        "stem": 0.8656716417910447,
-        "options": 0.08064814814814815,
-        "combined": 0.6301645936981757
-      }
-    },
-    {
-      "id": "anki-hematologia-gamopatias-monoclonais-cadb5de483266b3a",
-      "number": "1065j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-58-anos-negro1346f7fa848/",
-      "sourceQuestionId": "4000062137",
-      "matchedAt": "2026-09-17T21:27:41.334Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
         "Hematologia",
-        "Gamopatias monoclonais",
-        "Mieloma múltiplo (MM)",
-        "Introdução ao mieloma múltiplo (MM)",
-        "Quadro Clínico do mieloma múltiplo (MM)"
+        "Hemostasia",
+        "Hemostasia primária",
+        "Trombocitopenia induzida pela heparina (HIT)"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Quadro Clínico do mieloma múltiplo (MM). Conduta/resposta: mieloma múltiplo, imunoeletroforese de proteínas.",
+      "comment": "Gabarito confirmado: B. Assunto: Trombocitopenia induzida pela heparina (HIT). Conduta/resposta: Anti-PF4;",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Homem-58-anos-negro1346f7fa848/"
+        "https://med.estrategia.com/public/questoes/corrida-pelo58ce413c0c/"
       ]
     },
     {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-736faf2bef28848f",
-      "number": "1009b",
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-f0c1c646e7d55c66",
+      "number": "1012b",
       "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
       "changed": false,
       "status": "answer_mismatch",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-que20cd009075/",
-      "sourceQuestionId": "4000170067",
-      "matchedAt": "2026-09-17T21:27:47.144Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-59-anos-idade55a7b1fcf2/",
+      "sourceQuestionId": "4000166199",
+      "matchedAt": "2026-09-18T11:23:44.596Z",
       "similarity": {
-        "stem": 0.95,
-        "options": 0.9680921052631579,
-        "combined": 0.9554276315789473
+        "stem": 0.9782608695652174,
+        "options": 1,
+        "combined": 0.9847826086956522
       },
       "localAnswer": "D",
-      "remoteAnswer": "A",
+      "remoteAnswer": "E",
       "answerMismatch": true,
       "tags": [
         "Clínica Médica",
@@ -166,9 +60,89 @@
         "Fármacos e agentes relacionados a hemostasia secundária",
         "Anticoagulantes antagonistas da vitamina K"
       ],
-      "comment": "Gabarito confirmado: A. Assunto: Anticoagulantes antagonistas da vitamina K. Conduta/resposta: A varfarina bloqueia a ativação de fatores da cascata de coagulação e a produção dos inibidores de coagulação (proteína C e S) dependentes da vitamina K.",
+      "comment": "Gabarito confirmado: E. Assunto: Anticoagulantes antagonistas da vitamina K. Conduta/resposta: alface, brócolis e chá verde",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/alternativa-que20cd009075/"
+        "https://med.estrategia.com/public/questoes/paciente-59-anos-idade55a7b1fcf2/",
+        "https://med.estrategia.com/public/questoes/Paciente-59-anos407870bf71/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-4e46bd3897357c31",
+      "number": "1013b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": false,
+      "status": "answer_mismatch",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-adulto-uso44ff492dd0/",
+      "sourceQuestionId": "4000163445",
+      "matchedAt": "2026-09-18T11:23:51.882Z",
+      "similarity": {
+        "stem": 0.972972972972973,
+        "options": 0.9419011544011544,
+        "combined": 0.9636514274014274
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "E",
+      "answerMismatch": true,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Anticoagulantes antagonistas da vitamina K"
+      ],
+      "comment": "Gabarito confirmado: E. Assunto: Anticoagulantes antagonistas da vitamina K. Conduta/resposta: suspender a varfarina e monitorar o TAP/RNI, reintroduzindo a varfarina em dose reduzida, assim que o RNI voltar a faixa terapêutica indicada.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/paciente-adulto-uso44ff492dd0/",
+        "https://med.estrategia.com/public/questoes/974864bab43efa4ac11b5fed/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-1ff96ee341d908b7",
+      "number": "1014b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-ef4acb782a0fb130",
+      "number": "1015b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-6c28463a626c0f1a",
+      "number": "1016b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/heparina-baixo-peso16c39c3467/",
+      "sourceQuestionId": "4000065640",
+      "matchedAt": "2026-09-18T11:24:08.558Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Heparinas",
+        "Heparina baixo peso molecular"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Heparina baixo peso molecular. Conduta/resposta: Xa.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/heparina-baixo-peso16c39c3467/",
+        "https://med.estrategia.com/public/questoes/mecanismos-ca-heparina2242047f85/"
       ]
     }
   ]

@@ -108,14 +108,26 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A VITT (trombose e trombocitopenia após vacina) se parece muito com a HIT (a reação ruim que a heparina pode causar) porque as duas têm o mesmo tipo de anticorpo culpado: o anti-PF4 (contra o 'fator plaquetário 4'). Esse anticorpo confunde o sistema imune e faz ele atacar as próprias plaquetas, causando ao mesmo tempo plaquetas baixas E coágulos — uma combinação perigosa.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Trombocitopenia induzida pela heparina (HIT)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742439651971",
-      "ankiGuid": "f*mv5jX]Jl"
+      "ankiGuid": "f*mv5jX]Jl",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/corrida-pelo58ce413c0c/",
+        "sourceQuestionId": "4000168566",
+        "matchedAt": "2026-09-18T11:23:38.423Z",
+        "confidence": 0.9849999999999999
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-f0c1c646e7d55c66",
@@ -142,7 +154,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Quem toma varfarina precisa manter uma quantidade ESTÁVEL de vitamina K na alimentação, e os maiores 'vilões' de vitamina K são os vegetais verde-escuros e crucíferos, como repolho e nabo. O suco de uva também pode interferir na forma como o corpo processa a varfarina. Comer esses alimentos de vez em quando, em quantidades variáveis, é o que mais atrapalha o controle do INR — o ideal não é nunca comer, e sim comer sempre a mesma quantidade.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -176,7 +188,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Quando o RNI fica muito alto (aqui, 8) mas o paciente não está sangrando, a conduta é reduzir/segurar a varfarina e dar uma dose de vitamina K por via oral (que funciona bem e com menos risco que a via venosa) — isso ajuda o corpo a voltar a produzir os fatores de coagulação aos poucos, evitando um sangramento futuro, sem precisar de nada mais agressivo como plasma.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -209,7 +221,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava B, que é uma afirmação falsa (edoxabana NÃO pode ser usada livremente em quem tem problema no fígado — ela é contraindicada em disfunção hepática significativa). A resposta certa é A: a rivaroxabana realmente foi aprovada e é bastante usada para prevenir AVC e embolia em pacientes com fibrilação atrial que NÃO é causada por problema na válvula do coração (não-valvar).",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -243,7 +255,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava B ('Endotelina'), que não tem nada a ver com isso — endotelina é um hormônio que contrai vasos sanguíneos. A resposta certa é E: o Fator de Von Willebrand funciona como uma 'cola' que gruda a plaqueta na parede do vaso machucado, sendo o principal responsável por essa primeira etapa (adesão) da coagulação.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -277,14 +289,28 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A heparina de baixo peso molecular age principalmente bloqueando o fator Xa (com uma ajudinha da antitrombina do próprio corpo) — por isso ela não costuma precisar de exame de sangue pra ajustar a dose, diferente da heparina comum, que age em vários pontos e precisa de mais controle.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Heparinas",
+        "Heparina baixo peso molecular",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742439651976",
-      "ankiGuid": "sz?[?A.PP>"
+      "ankiGuid": "sz?[?A.PP>",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/heparina-baixo-peso16c39c3467/",
+        "sourceQuestionId": "4000065640",
+        "matchedAt": "2026-09-18T11:24:08.558Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-31595574f85fae9e",

@@ -557,7 +557,53 @@
       ],
       "suggestedComment": "Gabarito confirmado: A. Assunto: Anticoagulantes antagonistas da vitamina K. Conduta/resposta: A varfarina bloqueia a ativação de fatores da cascata de coagulação e a produção dos inibidores de coagulação (proteína C e S) dependentes da vitamina K.",
       "reviewedAt": "2026-09-17T21:27:47.144Z"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-f0c1c646e7d55c66": {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-f0c1c646e7d55c66",
+      "number": "1012b",
+      "status": "answer_mismatch",
+      "localAnswer": "D",
+      "remoteAnswer": "E",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-59-anos-idade55a7b1fcf2/",
+      "similarity": {
+        "stem": 0.9782608695652174,
+        "options": 1,
+        "combined": 0.9847826086956522
+      },
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Anticoagulantes antagonistas da vitamina K"
+      ],
+      "suggestedComment": "Gabarito confirmado: E. Assunto: Anticoagulantes antagonistas da vitamina K. Conduta/resposta: alface, brócolis e chá verde",
+      "reviewedAt": "2026-09-18T11:23:44.596Z"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-4e46bd3897357c31": {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-4e46bd3897357c31",
+      "number": "1013b",
+      "status": "answer_mismatch",
+      "localAnswer": "D",
+      "remoteAnswer": "E",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-adulto-uso44ff492dd0/",
+      "similarity": {
+        "stem": 0.972972972972973,
+        "options": 0.9419011544011544,
+        "combined": 0.9636514274014274
+      },
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Anticoagulantes antagonistas da vitamina K"
+      ],
+      "suggestedComment": "Gabarito confirmado: E. Assunto: Anticoagulantes antagonistas da vitamina K. Conduta/resposta: suspender a varfarina e monitorar o TAP/RNI, reintroduzindo a varfarina em dose reduzida, assim que o RNI voltar a faixa terapêutica indicada.",
+      "reviewedAt": "2026-09-18T11:23:51.882Z"
     }
   },
-  "updatedAt": "2026-09-17T21:27:47.144Z"
+  "updatedAt": "2026-09-18T11:23:51.882Z"
 }

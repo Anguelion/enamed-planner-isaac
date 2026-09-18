@@ -3790,7 +3790,67 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-que20cd009075/",
       "localAnswer": "D",
       "remoteAnswer": "A"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-c18ac0bc67b2eb82": {
+      "number": "1011b",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-18T11:23:38.424Z",
+      "nextAttemptAt": "2026-09-25T11:23:38.424Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/corrida-pelo58ce413c0c/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-f0c1c646e7d55c66": {
+      "number": "1012b",
+      "status": "answer_mismatch",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-18T11:23:44.596Z",
+      "nextAttemptAt": "2027-09-18T11:23:44.596Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-59-anos-idade55a7b1fcf2/",
+      "localAnswer": "D",
+      "remoteAnswer": "E"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-4e46bd3897357c31": {
+      "number": "1013b",
+      "status": "answer_mismatch",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-18T11:23:51.882Z",
+      "nextAttemptAt": "2027-09-18T11:23:51.882Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-adulto-uso44ff492dd0/",
+      "localAnswer": "D",
+      "remoteAnswer": "E"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-1ff96ee341d908b7": {
+      "number": "1014b",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-18T11:23:57.297Z",
+      "nextAttemptAt": "2026-09-25T11:23:57.297Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-ef4acb782a0fb130": {
+      "number": "1015b",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-18T11:24:02.546Z",
+      "nextAttemptAt": "2026-09-25T11:24:02.546Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-6c28463a626c0f1a": {
+      "number": "1016b",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-18T11:24:08.559Z",
+      "nextAttemptAt": "2026-09-25T11:24:08.559Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/heparina-baixo-peso16c39c3467/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
     }
   },
-  "updatedAt": "2026-09-17T21:27:47.144Z"
+  "updatedAt": "2026-09-18T11:24:08.559Z"
 }
