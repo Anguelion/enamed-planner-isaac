@@ -1,149 +1,58 @@
 {
-  "generatedAt": "2026-09-18T11:23:37.455Z",
+  "generatedAt": "2026-09-18T20:57:53.826Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 2,
+  "changed": 0,
   "results": [
     {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-c18ac0bc67b2eb82",
-      "number": "1011b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/corrida-pelo58ce413c0c/",
-      "sourceQuestionId": "4000168566",
-      "matchedAt": "2026-09-18T11:23:38.423Z",
-      "similarity": {
-        "stem": 1,
-        "options": 0.95,
-        "combined": 0.9849999999999999
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Hemostasia primária",
-        "Trombocitopenia induzida pela heparina (HIT)"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Trombocitopenia induzida pela heparina (HIT). Conduta/resposta: Anti-PF4;",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/corrida-pelo58ce413c0c/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-f0c1c646e7d55c66",
-      "number": "1012b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "id": "anki-hematologia-anemias-microciticas-a1a9531ff5a0bd09",
+      "number": "1088d",
+      "file": "question_bank/hematologia-anemias-microciticas.json",
       "changed": false,
-      "status": "answer_mismatch",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-59-anos-idade55a7b1fcf2/",
-      "sourceQuestionId": "4000166199",
-      "matchedAt": "2026-09-18T11:23:44.596Z",
-      "similarity": {
-        "stem": 0.9782608695652174,
-        "options": 1,
-        "combined": 0.9847826086956522
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "E",
-      "answerMismatch": true,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Hemostasia Secundária",
-        "Fármacos e agentes relacionados a hemostasia secundária",
-        "Anticoagulantes antagonistas da vitamina K"
-      ],
-      "comment": "Gabarito confirmado: E. Assunto: Anticoagulantes antagonistas da vitamina K. Conduta/resposta: alface, brócolis e chá verde",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/paciente-59-anos-idade55a7b1fcf2/",
-        "https://med.estrategia.com/public/questoes/Paciente-59-anos407870bf71/"
-      ]
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-4e46bd3897357c31",
-      "number": "1013b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
-      "changed": false,
-      "status": "answer_mismatch",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-adulto-uso44ff492dd0/",
-      "sourceQuestionId": "4000163445",
-      "matchedAt": "2026-09-18T11:23:51.882Z",
-      "similarity": {
-        "stem": 0.972972972972973,
-        "options": 0.9419011544011544,
-        "combined": 0.9636514274014274
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "E",
-      "answerMismatch": true,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Hemostasia Secundária",
-        "Fármacos e agentes relacionados a hemostasia secundária",
-        "Anticoagulantes antagonistas da vitamina K"
-      ],
-      "comment": "Gabarito confirmado: E. Assunto: Anticoagulantes antagonistas da vitamina K. Conduta/resposta: suspender a varfarina e monitorar o TAP/RNI, reintroduzindo a varfarina em dose reduzida, assim que o RNI voltar a faixa terapêutica indicada.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/paciente-adulto-uso44ff492dd0/",
-        "https://med.estrategia.com/public/questoes/974864bab43efa4ac11b5fed/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-1ff96ee341d908b7",
-      "number": "1014b",
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-31595574f85fae9e",
+      "number": "1017b",
       "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-ef4acb782a0fb130",
-      "number": "1015b",
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-49455b90a084f606",
+      "number": "1018b",
       "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-6c28463a626c0f1a",
-      "number": "1016b",
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-e3c8fcd80d41ecb5",
+      "number": "1020b",
       "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/heparina-baixo-peso16c39c3467/",
-      "sourceQuestionId": "4000065640",
-      "matchedAt": "2026-09-18T11:24:08.558Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Hemostasia Secundária",
-        "Fármacos e agentes relacionados a hemostasia secundária",
-        "Heparinas",
-        "Heparina baixo peso molecular"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Heparina baixo peso molecular. Conduta/resposta: Xa.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/heparina-baixo-peso16c39c3467/",
-        "https://med.estrategia.com/public/questoes/mecanismos-ca-heparina2242047f85/"
-      ]
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-53f53353efc97ab9",
+      "number": "1021b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-7aa71b68e2f5984f",
+      "number": "1023b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     }
   ]
 }
