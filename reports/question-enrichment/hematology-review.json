@@ -641,7 +641,31 @@
       ],
       "suggestedComment": "Gabarito confirmado: D. Assunto: Fármacos e agentes relacionados a hemostasia secundária. Conduta/resposta: Apenas I e III.",
       "reviewedAt": "2026-09-19T11:07:43.039Z"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-826c9a21d8d20c66": {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-826c9a21d8d20c66",
+      "number": "1026b",
+      "status": "answer_mismatch",
+      "localAnswer": "A",
+      "remoteAnswer": "D",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-67-anos-uso713fc4235c/",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "tags": [
+        "Cirurgia",
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Anticoagulantes antagonistas da vitamina K"
+      ],
+      "suggestedComment": "Gabarito confirmado: D. Assunto: Anticoagulantes antagonistas da vitamina K. Conduta/resposta: Deverá manter medicação em jejum e poderá usar folhas verdes à vontade, desde que o faça regularmente e com controle de atividade de protrombina",
+      "reviewedAt": "2026-09-19T20:46:52.622Z"
     }
   },
-  "updatedAt": "2026-09-19T11:07:43.039Z"
+  "updatedAt": "2026-09-19T20:46:52.623Z"
 }

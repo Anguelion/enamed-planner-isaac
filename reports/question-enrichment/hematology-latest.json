@@ -1,183 +1,82 @@
 {
-  "generatedAt": "2026-09-19T11:07:18.039Z",
+  "generatedAt": "2026-09-19T20:46:50.687Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 4,
+  "changed": 0,
   "results": [
     {
-      "id": "anki-hematologia-anemias-microciticas-8800e65d6450852a",
-      "number": "1096d",
-      "file": "question_bank/hematologia-anemias-microciticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Durante-investigaca26e50e6c83/",
-      "sourceQuestionId": "4000041653",
-      "matchedAt": "2026-09-19T11:07:19.176Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias microcíticas",
-        "Anemia ferropriva",
-        "Diagnóstico da anemia ferropriva"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Diagnóstico da anemia ferropriva. Conduta/resposta: Aspirado de medula óssea com reserva de ferro normal.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Durante-investigaca26e50e6c83/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-microciticas-e540255928976b6a",
-      "number": "1098d",
-      "file": "question_bank/hematologia-anemias-microciticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/mulher-76-anos827a00dadf/",
-      "sourceQuestionId": "4000028548",
-      "matchedAt": "2026-09-19T11:07:25.531Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias microcíticas",
-        "Anemia ferropriva",
-        "Diagnóstico da anemia ferropriva",
-        "Perfil de ferro na anemia ferropriva",
-        "Anemia da doença crônica",
-        "Diagnóstico da anemia de doença crônica",
-        "Perfil de ferro na anemia de doença crônica"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Perfil de ferro na anemia de doença crônica. Conduta/resposta: Nível de Ferritina e Capacidade Total de Ligação ao ferro.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/mulher-76-anos827a00dadf/",
-        "https://med.estrategia.com/public/questoes/mulher-com-76-anos352386ded93/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-microciticas-50adc44a9dddb9ab",
-      "number": "1099d",
-      "file": "question_bank/hematologia-anemias-microciticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-feminino-2077500eb3bc/",
-      "sourceQuestionId": "4000008415",
-      "matchedAt": "2026-09-19T11:07:31.335Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias microcíticas",
-        "Anemia ferropriva",
-        "Diagnóstico da anemia ferropriva"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Diagnóstico da anemia ferropriva. Conduta/resposta: Solicitar ferro, ferritina e capacidade total de fixação do ferro, iniciar ferro oral e avaliar fonte de sangramento.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-feminino-2077500eb3bc/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-microciticas-2f16b48e39aa44d7",
-      "number": "10100d",
-      "file": "question_bank/hematologia-anemias-microciticas.json",
-      "changed": false,
-      "status": "low_confidence",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Quanto-diagnostico2485d831c5/"
-      ],
-      "bestSimilarity": {
-        "stem": 0.9090909090909091,
-        "options": 0,
-        "combined": 0.6363636363636364
-      }
-    },
-    {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-75706324b73182a8",
-      "number": "1024b",
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-826c9a21d8d20c66",
+      "number": "1026b",
       "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
       "changed": false,
       "status": "answer_mismatch",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Considere-assertivas63710464e4/",
-      "sourceQuestionId": "4000124487",
-      "matchedAt": "2026-09-19T11:07:43.039Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-67-anos-uso713fc4235c/",
+      "sourceQuestionId": "4000110675",
+      "matchedAt": "2026-09-19T20:46:52.622Z",
       "similarity": {
-        "stem": 0.9811320754716981,
+        "stem": 1,
         "options": 1,
-        "combined": 0.9867924528301886
+        "combined": 1
       },
       "localAnswer": "A",
       "remoteAnswer": "D",
       "answerMismatch": true,
       "tags": [
+        "Cirurgia",
         "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Hemostasia Secundária",
-        "Fármacos e agentes relacionados a hemostasia secundária"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Fármacos e agentes relacionados a hemostasia secundária. Conduta/resposta: Apenas I e III.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Considere-assertivas63710464e4/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-5799246234c5d7b2",
-      "number": "1025b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-que14ad98b94a/",
-      "sourceQuestionId": "4000121712",
-      "matchedAt": "2026-09-19T11:07:49.118Z",
-      "similarity": {
-        "stem": 1,
-        "options": 0.8705128205128206,
-        "combined": 0.9611538461538461
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Cardiologia",
-        "Arritmias Cardíacas",
-        "Fibrilação Atrial",
-        "Prevenção de tromboembolismo",
-        "Anticoagulação oral",
         "Hematologia",
         "Hemostasia",
         "Hemostasia Secundária",
         "Fármacos e agentes relacionados a hemostasia secundária",
-        "Anticoagulantes antagonistas da vitamina K",
-        "Anticoagulantes orais diretos"
+        "Anticoagulantes antagonistas da vitamina K"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Anticoagulantes orais diretos. Conduta/resposta: Heparina - agonista da antitrombina III.",
+      "comment": "Gabarito confirmado: D. Assunto: Anticoagulantes antagonistas da vitamina K. Conduta/resposta: Deverá manter medicação em jejum e poderá usar folhas verdes à vontade, desde que o faça regularmente e com controle de atividade de protrombina",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/alternativa-que14ad98b94a/",
-        "https://med.estrategia.com/public/questoes/aos-anticoagulantes19ee26b3f1/"
+        "https://med.estrategia.com/public/questoes/Homem-67-anos-uso713fc4235c/",
+        "https://med.estrategia.com/public/questoes/Homem-67-anos-portador43610d46cf/"
       ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-a39a8db2d3f21247",
+      "number": "1027b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-3112a8b717d57734",
+      "number": "1028b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-72332b1e2c353ed3",
+      "number": "1029b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-99751df1d87239a1",
+      "number": "1030b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-291d1cec4ea74a45",
+      "number": "1031b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     }
   ]
 }

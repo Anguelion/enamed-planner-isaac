@@ -3920,7 +3920,67 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-que14ad98b94a/",
       "localAnswer": "B",
       "remoteAnswer": "B"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-826c9a21d8d20c66": {
+      "number": "1026b",
+      "status": "answer_mismatch",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-19T20:46:52.623Z",
+      "nextAttemptAt": "2027-09-19T20:46:52.623Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-67-anos-uso713fc4235c/",
+      "localAnswer": "A",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-a39a8db2d3f21247": {
+      "number": "1027b",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-19T20:46:57.888Z",
+      "nextAttemptAt": "2026-09-26T20:46:57.888Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-3112a8b717d57734": {
+      "number": "1028b",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-19T20:47:03.229Z",
+      "nextAttemptAt": "2026-09-26T20:47:03.229Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-72332b1e2c353ed3": {
+      "number": "1029b",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-19T20:47:08.428Z",
+      "nextAttemptAt": "2026-09-26T20:47:08.428Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-99751df1d87239a1": {
+      "number": "1030b",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-19T20:47:13.639Z",
+      "nextAttemptAt": "2026-09-26T20:47:13.639Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-291d1cec4ea74a45": {
+      "number": "1031b",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-19T20:47:18.857Z",
+      "nextAttemptAt": "2026-09-26T20:47:18.857Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-09-19T11:07:49.119Z"
+  "updatedAt": "2026-09-19T20:47:18.857Z"
 }
