@@ -505,7 +505,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava A ('apenas I'), mas a frase III também está certa. A rivaroxabana tem duas vantagens reais sobre a varfarina: (I) dose fixa sem precisar fazer exame de sangue toda hora, e (III) o efeito dela começa bem mais rápido que o da varfarina (que demora dias). Já a frase II está errada — vitamina K não reverte a rivaroxabana, isso só funciona pra varfarina. Por isso a resposta certa junta I e III, alternativa D.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -539,14 +539,33 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Por eliminação, a heparina realmente funciona 'turbinando' a antitrombina III do próprio corpo (não é bem um agonista no sentido clássico, mas é assim que costuma ser descrito nas provas) — ela dá um empurrão na antitrombina pra ela neutralizar melhor a trombina e o fator Xa. As outras alternativas trocam os conceitos: varfarina é ANTAGONISTA (não agonista) da vitamina K, dabigatrana INIBE (não é agonista d)a trombina, e assim por diante.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Cardiologia",
+        "Arritmias Cardíacas",
+        "Fibrilação Atrial",
+        "Prevenção de tromboembolismo",
+        "Anticoagulação oral",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Anticoagulantes antagonistas da vitamina K",
+        "Anticoagulantes orais diretos",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742439651985",
-      "ankiGuid": "uCGS&eQOoD"
+      "ankiGuid": "uCGS&eQOoD",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-que14ad98b94a/",
+        "sourceQuestionId": "4000121712",
+        "matchedAt": "2026-09-19T11:07:49.118Z",
+        "confidence": 0.9611538461538461
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-826c9a21d8d20c66",

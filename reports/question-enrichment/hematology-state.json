@@ -3093,13 +3093,13 @@
     },
     "anki-hematologia-anemias-microciticas-8800e65d6450852a": {
       "number": "1096d",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-12T10:53:40.456Z",
-      "nextAttemptAt": "2026-09-19T10:53:40.456Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-09-19T11:07:19.177Z",
+      "nextAttemptAt": "2026-10-03T11:07:19.177Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Durante-investigaca26e50e6c83/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
     },
     "anki-hematologia-anemias-microciticas-345eee289a206673": {
       "number": "1097d",
@@ -3113,30 +3113,30 @@
     },
     "anki-hematologia-anemias-microciticas-e540255928976b6a": {
       "number": "1098d",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-12T10:53:52.027Z",
-      "nextAttemptAt": "2026-09-19T10:53:52.027Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-09-19T11:07:25.531Z",
+      "nextAttemptAt": "2026-10-03T11:07:25.531Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/mulher-76-anos827a00dadf/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-anemias-microciticas-50adc44a9dddb9ab": {
       "number": "1099d",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-12T10:53:57.261Z",
-      "nextAttemptAt": "2026-09-19T10:53:57.261Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-09-19T11:07:31.336Z",
+      "nextAttemptAt": "2026-10-03T11:07:31.336Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-feminino-2077500eb3bc/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     },
     "anki-hematologia-anemias-microciticas-2f16b48e39aa44d7": {
       "number": "10100d",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-12T10:54:02.472Z",
-      "nextAttemptAt": "2026-09-19T10:54:02.472Z",
+      "status": "low_confidence",
+      "attempts": 2,
+      "lastAttemptAt": "2026-09-19T11:07:37.255Z",
+      "nextAttemptAt": "2026-11-18T11:07:37.255Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -3900,7 +3900,27 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-75706324b73182a8": {
+      "number": "1024b",
+      "status": "answer_mismatch",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-19T11:07:43.039Z",
+      "nextAttemptAt": "2027-09-19T11:07:43.039Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Considere-assertivas63710464e4/",
+      "localAnswer": "A",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-5799246234c5d7b2": {
+      "number": "1025b",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-19T11:07:49.119Z",
+      "nextAttemptAt": "2026-09-26T11:07:49.119Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-que14ad98b94a/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     }
   },
-  "updatedAt": "2026-09-18T20:58:23.263Z"
+  "updatedAt": "2026-09-19T11:07:49.119Z"
 }

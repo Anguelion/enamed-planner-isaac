@@ -4234,10 +4234,21 @@
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Diagnóstico da anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701808",
-      "ankiGuid": "BG4$vOa~<T"
+      "ankiGuid": "BG4$vOa~<T",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Durante-investigaca26e50e6c83/",
+        "sourceQuestionId": "4000041653",
+        "matchedAt": "2026-09-19T11:07:19.176Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-345eee289a206673",
@@ -4313,10 +4324,25 @@
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Diagnóstico da anemia ferropriva",
+        "Perfil de ferro na anemia ferropriva",
+        "Anemia da doença crônica",
+        "Diagnóstico da anemia de doença crônica",
+        "Perfil de ferro na anemia de doença crônica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701810",
-      "ankiGuid": "b?*ccT|rFF"
+      "ankiGuid": "b?*ccT|rFF",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/mulher-76-anos827a00dadf/",
+        "sourceQuestionId": "4000028548",
+        "matchedAt": "2026-09-19T11:07:25.531Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-50adc44a9dddb9ab",
@@ -4346,10 +4372,21 @@
       "tags": [
         "Hematologia",
         "Anemias Microcíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia ferropriva",
+        "Diagnóstico da anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510701811",
-      "ankiGuid": "dAEuzDlwB@"
+      "ankiGuid": "dAEuzDlwB@",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-feminino-2077500eb3bc/",
+        "sourceQuestionId": "4000008415",
+        "matchedAt": "2026-09-19T11:07:31.335Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-microciticas-2f16b48e39aa44d7",

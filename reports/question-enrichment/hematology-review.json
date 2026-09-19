@@ -603,7 +603,45 @@
       ],
       "suggestedComment": "Gabarito confirmado: E. Assunto: Anticoagulantes antagonistas da vitamina K. Conduta/resposta: suspender a varfarina e monitorar o TAP/RNI, reintroduzindo a varfarina em dose reduzida, assim que o RNI voltar a faixa terapêutica indicada.",
       "reviewedAt": "2026-09-18T11:23:51.882Z"
+    },
+    "anki-hematologia-anemias-microciticas-2f16b48e39aa44d7": {
+      "id": "anki-hematologia-anemias-microciticas-2f16b48e39aa44d7",
+      "number": "10100d",
+      "status": "low_confidence",
+      "localAnswer": null,
+      "remoteAnswer": null,
+      "sourceUrl": null,
+      "similarity": {
+        "stem": 0.9090909090909091,
+        "options": 0,
+        "combined": 0.6363636363636364
+      },
+      "tags": [],
+      "suggestedComment": "",
+      "reviewedAt": "2026-09-19T11:07:37.255Z"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-75706324b73182a8": {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-75706324b73182a8",
+      "number": "1024b",
+      "status": "answer_mismatch",
+      "localAnswer": "A",
+      "remoteAnswer": "D",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Considere-assertivas63710464e4/",
+      "similarity": {
+        "stem": 0.9811320754716981,
+        "options": 1,
+        "combined": 0.9867924528301886
+      },
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária"
+      ],
+      "suggestedComment": "Gabarito confirmado: D. Assunto: Fármacos e agentes relacionados a hemostasia secundária. Conduta/resposta: Apenas I e III.",
+      "reviewedAt": "2026-09-19T11:07:43.039Z"
     }
   },
-  "updatedAt": "2026-09-18T11:23:51.882Z"
+  "updatedAt": "2026-09-19T11:07:43.039Z"
 }
