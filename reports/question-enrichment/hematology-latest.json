@@ -1,187 +1,58 @@
 {
-  "generatedAt": "2026-09-20T11:32:07.412Z",
+  "generatedAt": "2026-09-20T20:53:54.155Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 2,
+  "changed": 0,
   "results": [
     {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-c620771a80b68f39",
-      "number": "1032b",
+      "id": "anki-hematologia-gamopatias-monoclonais-a65e59a6c8f3f058",
+      "number": "1008j",
+      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-gamopatias-monoclonais-3336f8e8c87c439d",
+      "number": "1010j",
+      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-gamopatias-monoclonais-9cfc04572db0f9ce",
+      "number": "1012j",
+      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-gamopatias-monoclonais-2c1081ef3fd98e37",
+      "number": "1013j",
+      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-7a9e468c13b5694d",
+      "number": "1039b",
       "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
       "changed": false,
-      "status": "answer_mismatch",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-fatores-coagulaca122cab37ab/",
-      "sourceQuestionId": "4000126258",
-      "matchedAt": "2026-09-20T11:32:08.992Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "C",
-      "answerMismatch": true,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Hemostasia Secundária",
-        "Fármacos e agentes relacionados a hemostasia secundária",
-        "Anticoagulantes antagonistas da vitamina K"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Anticoagulantes antagonistas da vitamina K. Conduta/resposta: II, VII, IX e X.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Sa-fatores-coagulaca122cab37ab/"
-      ]
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-932af188d1effa24",
-      "number": "1033b",
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-01ae6cee0ed07750",
+      "number": "1040b",
       "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
       "changed": false,
-      "status": "answer_mismatch",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-40a-faz-uso515226676e/",
-      "sourceQuestionId": "4000098117",
-      "matchedAt": "2026-09-20T11:32:15.336Z",
-      "similarity": {
-        "stem": 0.945054945054945,
-        "options": 0.95,
-        "combined": 0.9465384615384616
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "C",
-      "answerMismatch": true,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Hemostasia Secundária",
-        "Fármacos e agentes relacionados a hemostasia secundária",
-        "Anticoagulantes antagonistas da vitamina K"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Anticoagulantes antagonistas da vitamina K. Conduta/resposta: Administrar vitamina K.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Homem-40a-faz-uso515226676e/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-18985f2e2e685812",
-      "number": "1034b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Com-aos-agentes149fa264a4/",
-      "sourceQuestionId": "4000088328",
-      "matchedAt": "2026-09-20T11:32:21.397Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Hemostasia Secundária",
-        "Fármacos e agentes relacionados a hemostasia secundária",
-        "Anticoagulantes orais diretos"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Anticoagulantes orais diretos. Conduta/resposta: Rivaroxaban.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Com-aos-agentes149fa264a4/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-9d65325383437270",
-      "number": "1035b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
-      "changed": false,
-      "status": "answer_mismatch",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Imediatamente-apos161ea04f77/",
-      "sourceQuestionId": "4000088286",
-      "matchedAt": "2026-09-20T11:32:27.564Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "E",
-      "answerMismatch": true,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Hemostasia Secundária",
-        "Fármacos e agentes relacionados a hemostasia secundária",
-        "Heparinas",
-        "Heparina não fracionada"
-      ],
-      "comment": "Gabarito confirmado: E. Assunto: Heparina não fracionada. Conduta/resposta: 50 mg de sulfato de protamina.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Imediatamente-apos161ea04f77/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-280407091895f020",
-      "number": "1037b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
-      "changed": false,
-      "status": "answer_mismatch",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Para-investigar2376b14e30/",
-      "sourceQuestionId": "4000061497",
-      "matchedAt": "2026-09-20T11:32:33.412Z",
-      "similarity": {
-        "stem": 0.95,
-        "options": 1,
-        "combined": 0.9649999999999999
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "C",
-      "answerMismatch": true,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Laboratório da hemostasia"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Laboratório da hemostasia. Conduta/resposta: Intrínseca e comum e deficiência de fatores VIII, IX e XI.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Para-investigar2376b14e30/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-92bb389a49ae24c3",
-      "number": "1038b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/disturbios-coagulaca599c7b9092/",
-      "sourceQuestionId": "4000047969",
-      "matchedAt": "2026-09-20T11:32:39.886Z",
-      "similarity": {
-        "stem": 0.961038961038961,
-        "options": 1,
-        "combined": 0.9727272727272727
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Laboratório da hemostasia"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Laboratório da hemostasia. Conduta/resposta: E-D-C-B-A.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/disturbios-coagulaca599c7b9092/"
-      ]
+      "status": "not_found",
+      "candidates": []
     }
   ]
 }
