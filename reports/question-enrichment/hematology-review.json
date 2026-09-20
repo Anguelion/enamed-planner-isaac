@@ -665,7 +665,98 @@
       ],
       "suggestedComment": "Gabarito confirmado: D. Assunto: Anticoagulantes antagonistas da vitamina K. Conduta/resposta: Deverá manter medicação em jejum e poderá usar folhas verdes à vontade, desde que o faça regularmente e com controle de atividade de protrombina",
       "reviewedAt": "2026-09-19T20:46:52.622Z"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-c620771a80b68f39": {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-c620771a80b68f39",
+      "number": "1032b",
+      "status": "answer_mismatch",
+      "localAnswer": "B",
+      "remoteAnswer": "C",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-fatores-coagulaca122cab37ab/",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Anticoagulantes antagonistas da vitamina K"
+      ],
+      "suggestedComment": "Gabarito confirmado: C. Assunto: Anticoagulantes antagonistas da vitamina K. Conduta/resposta: II, VII, IX e X.",
+      "reviewedAt": "2026-09-20T11:32:08.992Z"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-932af188d1effa24": {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-932af188d1effa24",
+      "number": "1033b",
+      "status": "answer_mismatch",
+      "localAnswer": "D",
+      "remoteAnswer": "C",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-40a-faz-uso515226676e/",
+      "similarity": {
+        "stem": 0.945054945054945,
+        "options": 0.95,
+        "combined": 0.9465384615384616
+      },
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Anticoagulantes antagonistas da vitamina K"
+      ],
+      "suggestedComment": "Gabarito confirmado: C. Assunto: Anticoagulantes antagonistas da vitamina K. Conduta/resposta: Administrar vitamina K.",
+      "reviewedAt": "2026-09-20T11:32:15.336Z"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-9d65325383437270": {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-9d65325383437270",
+      "number": "1035b",
+      "status": "answer_mismatch",
+      "localAnswer": "D",
+      "remoteAnswer": "E",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Imediatamente-apos161ea04f77/",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Heparinas",
+        "Heparina não fracionada"
+      ],
+      "suggestedComment": "Gabarito confirmado: E. Assunto: Heparina não fracionada. Conduta/resposta: 50 mg de sulfato de protamina.",
+      "reviewedAt": "2026-09-20T11:32:27.564Z"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-280407091895f020": {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-280407091895f020",
+      "number": "1037b",
+      "status": "answer_mismatch",
+      "localAnswer": "D",
+      "remoteAnswer": "C",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Para-investigar2376b14e30/",
+      "similarity": {
+        "stem": 0.95,
+        "options": 1,
+        "combined": 0.9649999999999999
+      },
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Laboratório da hemostasia"
+      ],
+      "suggestedComment": "Gabarito confirmado: C. Assunto: Laboratório da hemostasia. Conduta/resposta: Intrínseca e comum e deficiência de fatores VIII, IX e XI.",
+      "reviewedAt": "2026-09-20T11:32:33.412Z"
     }
   },
-  "updatedAt": "2026-09-19T20:46:52.623Z"
+  "updatedAt": "2026-09-20T11:32:33.412Z"
 }

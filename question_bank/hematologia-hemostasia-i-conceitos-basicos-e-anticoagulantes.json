@@ -793,7 +793,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava B (que inclui V e VIII, errado), mas nem o fator V nem o VIII dependem de vitamina K. Os fatores certos, feitos no fígado e que precisam de vitamina K pra funcionar, são: II, VII, IX e X (alternativa C) — um jeito de decorar é pensar no número de telefone '1972' (10, 9, 7, 2).",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -826,7 +826,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Revisando com mais cuidado: com RNI igual a 10 (bem no limite/acima do ponto de corte), as diretrizes recomendam administrar vitamina K mesmo sem sangramento grave associado — e aqui já existe sangramento ativo (gengival e urinário), o que reforça ainda mais a indicação. Simplesmente 'observar' sem repor vitamina K, como dizia a resposta anterior, é insuficiente nesse nível de RNI. A conduta certa é suspender a varfarina e administrar vitamina K, ajudando o fígado a voltar a produzir os fatores de coagulação mais rápido.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -860,14 +860,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Entre as opções, o único que realmente age bloqueando o fator Xa é o rivaroxaban — dabigatrana bloqueia a trombina, prasugrel e tirofiban agem nas plaquetas (não nos fatores de coagulação), e femprocumona é outro antagonista de vitamina K, como a varfarina.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Anticoagulantes orais diretos",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742439651994",
-      "ankiGuid": "isEOiF+#k*"
+      "ankiGuid": "isEOiF+#k*",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Com-aos-agentes149fa264a4/",
+        "sourceQuestionId": "4000088328",
+        "matchedAt": "2026-09-20T11:32:21.397Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-9d65325383437270",
@@ -894,7 +907,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava D (40mg), mas a conta certa usa a regrinha '1mg de protamina neutraliza 100 unidades de heparina', quando aplicada logo após a dose (imediatamente). Como foram dadas 5.000 UI de heparina, a dose de protamina fica 5.000 ÷ 100 = 50mg — alternativa E.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -927,7 +940,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava D, que troca os fatores certos por errados (V, VI e VII não fazem parte da via avaliada pelo TTPa, e 'fator VI' nem existe). O TTPa avalia a via intrínseca e a via comum da coagulação, sendo sensível principalmente à falta dos fatores VIII, IX e XI — alternativa C. É o exame que fica alterado, por exemplo, na hemofilia (falta de fator VIII ou IX) e no uso de heparina.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -961,14 +974,25 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "É um joguinho de combinar cada situação com o exame que ela mais afeta: falta do fator VII afeta só a via extrínseca, alterando só o TP sozinho (E). Falta do fator XI (ou hemofilias, que afetam VIII/IX) mexe só na via intrínseca, alterando só o TTPa (D). Falta de fatores da via comum (V, X, II, fibrinogênio) bagunça as duas vias, alterando TP E TTPa juntos (C). E, na prática clínica, quem alarga o TP de propósito é o uso terapêutico de cumarínico/varfarina (B), enquanto quem alarga o TTPa de propósito é o uso terapêutico de heparina (A). Juntando na ordem pedida: E-D-C-B-A.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Laboratório da hemostasia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742439651998",
-      "ankiGuid": "HyamK[#)Vd"
+      "ankiGuid": "HyamK[#)Vd",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/disturbios-coagulaca599c7b9092/",
+        "sourceQuestionId": "4000047969",
+        "matchedAt": "2026-09-20T11:32:39.886Z",
+        "confidence": 0.9727272727272727
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-7a9e468c13b5694d",
