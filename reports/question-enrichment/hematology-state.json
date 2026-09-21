@@ -4060,7 +4060,67 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-f1060e82fceb1346": {
+      "number": "1041b",
+      "status": "answer_mismatch",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-21T12:56:46.607Z",
+      "nextAttemptAt": "2027-09-21T12:56:46.607Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Com-as-drogas930a8de5e/",
+      "localAnswer": "C",
+      "remoteAnswer": "E"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-24f0a9275d7d06b1": {
+      "number": "1043b",
+      "status": "answer_mismatch",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-21T12:56:52.988Z",
+      "nextAttemptAt": "2027-09-21T12:56:52.988Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-55-anos9531484c7f/",
+      "localAnswer": "A",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-bf7cdf7a91e66814": {
+      "number": "1044b",
+      "status": "answer_mismatch",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-21T12:56:58.847Z",
+      "nextAttemptAt": "2027-09-21T12:56:58.847Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/a-terapia8b83c32b0/",
+      "localAnswer": "C",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-cc9196433301d54a": {
+      "number": "1045b",
+      "status": "answer_mismatch",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-21T12:57:05.360Z",
+      "nextAttemptAt": "2027-09-21T12:57:05.360Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/mulher-48-anos-foi51e4de1b93/",
+      "localAnswer": "A",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-93c1e72f03928c94": {
+      "number": "1046b",
+      "status": "answer_mismatch",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-21T12:57:11.222Z",
+      "nextAttemptAt": "2027-09-21T12:57:11.222Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/senhora-75-anos-e44f671f8de/",
+      "localAnswer": "D",
+      "remoteAnswer": "E"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-a30b9137a1eb2ec9": {
+      "number": "1047b",
+      "status": "answer_mismatch",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-21T12:57:17.382Z",
+      "nextAttemptAt": "2027-09-21T12:57:17.382Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/heparinas-podem-ser7616728ac/",
+      "localAnswer": "C",
+      "remoteAnswer": "A"
     }
   },
-  "updatedAt": "2026-09-20T20:54:23.180Z"
+  "updatedAt": "2026-09-21T12:57:17.382Z"
 }

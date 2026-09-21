@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-20T20:53:54.155Z",
+  "generatedAt": "2026-09-21T12:56:45.665Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
@@ -7,52 +7,191 @@
   "changed": 0,
   "results": [
     {
-      "id": "anki-hematologia-gamopatias-monoclonais-a65e59a6c8f3f058",
-      "number": "1008j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-gamopatias-monoclonais-3336f8e8c87c439d",
-      "number": "1010j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-gamopatias-monoclonais-9cfc04572db0f9ce",
-      "number": "1012j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-gamopatias-monoclonais-2c1081ef3fd98e37",
-      "number": "1013j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-7a9e468c13b5694d",
-      "number": "1039b",
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-f1060e82fceb1346",
+      "number": "1041b",
       "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
       "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "status": "answer_mismatch",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Com-as-drogas930a8de5e/",
+      "sourceQuestionId": "4000087582",
+      "matchedAt": "2026-09-21T12:56:46.607Z",
+      "similarity": {
+        "stem": 1,
+        "options": 0.9714285714285713,
+        "combined": 0.9914285714285713
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "E",
+      "answerMismatch": true,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Anticoagulantes antagonistas da vitamina K",
+        "Anticoagulantes orais diretos",
+        "Heparinas"
+      ],
+      "comment": "Gabarito confirmado: E. Assunto: Heparinas. Conduta/resposta: os dicumarínicos podem apresentar efeito prócoagulante no início do tratamento.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Com-as-drogas930a8de5e/"
+      ]
     },
     {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-01ae6cee0ed07750",
-      "number": "1040b",
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-24f0a9275d7d06b1",
+      "number": "1043b",
       "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
       "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "status": "answer_mismatch",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-55-anos9531484c7f/",
+      "sourceQuestionId": "4000011932",
+      "matchedAt": "2026-09-21T12:56:52.988Z",
+      "similarity": {
+        "stem": 0.9876543209876543,
+        "options": 0.8875,
+        "combined": 0.957608024691358
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "B",
+      "answerMismatch": true,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Trombocitopenia induzida pela heparina (HIT)",
+        "Diagnóstico da trombocitopenia induzida pela heparina (HIT)",
+        "Tratamento da trombocitopenia induzida pela heparina (HIT)"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Tratamento da trombocitopenia induzida pela heparina (HIT). Conduta/resposta: Trocar enoxaparina por fondoparinux.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Homem-55-anos9531484c7f/",
+        "https://med.estrategia.com/public/questoes/Homem-de-49-anos490fb19509/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-bf7cdf7a91e66814",
+      "number": "1044b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": false,
+      "status": "answer_mismatch",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/a-terapia8b83c32b0/",
+      "sourceQuestionId": "4000115476",
+      "matchedAt": "2026-09-21T12:56:58.847Z",
+      "similarity": {
+        "stem": 1,
+        "options": 0.9792663476874003,
+        "combined": 0.9937799043062201
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "B",
+      "answerMismatch": true,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Fármacos e agentes relacionados a hemostasia secundária. Conduta/resposta: A enoxaparina tem menor risco de levar a plaquetopenia e trombose relacionadas à heparina do que a heparina não fracionada, entretanto não pode ser usada no tratamento dessas condições.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/a-terapia8b83c32b0/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-cc9196433301d54a",
+      "number": "1045b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": false,
+      "status": "answer_mismatch",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/mulher-48-anos-foi51e4de1b93/",
+      "sourceQuestionId": "4000069958",
+      "matchedAt": "2026-09-21T12:57:05.360Z",
+      "similarity": {
+        "stem": 0.9885057471264368,
+        "options": 1,
+        "combined": 0.9919540229885058
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "B",
+      "answerMismatch": true,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Heparinas",
+        "Heparina baixo peso molecular"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Heparina baixo peso molecular. Conduta/resposta: Clearance dose-dependente",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/mulher-48-anos-foi51e4de1b93/",
+        "https://med.estrategia.com/public/questoes/Mulher-48-anos-com41d2a88fa5/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-93c1e72f03928c94",
+      "number": "1046b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": false,
+      "status": "answer_mismatch",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/senhora-75-anos-e44f671f8de/",
+      "sourceQuestionId": "4000066689",
+      "matchedAt": "2026-09-21T12:57:11.222Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "E",
+      "answerMismatch": true,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Anticoagulantes antagonistas da vitamina K"
+      ],
+      "comment": "Gabarito confirmado: E. Assunto: Anticoagulantes antagonistas da vitamina K. Conduta/resposta: Vitamina K 10mg IV + plasma fresco",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/senhora-75-anos-e44f671f8de/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-a30b9137a1eb2ec9",
+      "number": "1047b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": false,
+      "status": "answer_mismatch",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/heparinas-podem-ser7616728ac/",
+      "sourceQuestionId": "4000060695",
+      "matchedAt": "2026-09-21T12:57:17.382Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "A",
+      "answerMismatch": true,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Heparinas",
+        "Heparina não fracionada",
+        "Heparina baixo peso molecular"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Heparina baixo peso molecular. Conduta/resposta: Sim, tanto a heparina não fracionada quanto as de baixo peso molecular.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/heparinas-podem-ser7616728ac/"
+      ]
     }
   ]
 }
