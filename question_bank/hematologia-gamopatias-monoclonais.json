@@ -915,10 +915,21 @@
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Classificação do mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587516",
-      "ankiGuid": "lJ]biE$Xlr"
+      "ankiGuid": "lJ]biE$Xlr",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/mieloma-multiplo-MM352abdd39b/",
+        "sourceQuestionId": "4000041829",
+        "matchedAt": "2026-09-21T22:01:28.589Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-cef2521b0b44d728",
@@ -948,10 +959,21 @@
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Fisiopatologia do mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587517",
-      "ankiGuid": "I^[F57i;^N"
+      "ankiGuid": "I^[F57i;^N",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/identificaca-doenc79d29349bc/",
+        "sourceQuestionId": "4000041814",
+        "matchedAt": "2026-09-21T22:01:34.548Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-ca5813d9c6d432a6",

@@ -3353,23 +3353,23 @@
     },
     "anki-hematologia-gamopatias-monoclonais-7215d139785563c0": {
       "number": "1023j",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-14T12:57:35.391Z",
-      "nextAttemptAt": "2026-09-21T12:57:35.391Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-09-21T22:01:28.589Z",
+      "nextAttemptAt": "2026-10-05T22:01:28.589Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/mieloma-multiplo-MM352abdd39b/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-gamopatias-monoclonais-cef2521b0b44d728": {
       "number": "1024j",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-14T12:57:40.586Z",
-      "nextAttemptAt": "2026-09-21T12:57:40.586Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-09-21T22:01:34.548Z",
+      "nextAttemptAt": "2026-10-05T22:01:34.548Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/identificaca-doenc79d29349bc/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     },
     "anki-hematologia-gamopatias-monoclonais-ca5813d9c6d432a6": {
       "number": "1025j",
@@ -4120,7 +4120,47 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/heparinas-podem-ser7616728ac/",
       "localAnswer": "C",
       "remoteAnswer": "A"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-df5fdc778450f2cf": {
+      "number": "1048b",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-21T22:01:40.495Z",
+      "nextAttemptAt": "2026-09-28T22:01:40.495Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-62-anos-foi53f02536a4/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-c48a05b25a631df6": {
+      "number": "1049b",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-21T22:01:46.547Z",
+      "nextAttemptAt": "2026-09-28T22:01:46.547Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-54-anos113d2cb9fb7/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-2319bddc078ef712": {
+      "number": "1050b",
+      "status": "answer_mismatch",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-21T22:01:52.340Z",
+      "nextAttemptAt": "2027-09-21T22:01:52.340Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-feminina-com3812dcbc96/",
+      "localAnswer": "B",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-24da852bf6410a75": {
+      "number": "1051b",
+      "status": "answer_mismatch",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-21T22:01:58.325Z",
+      "nextAttemptAt": "2027-09-21T22:01:58.325Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/varfarina-e21d8a2552c/",
+      "localAnswer": "B",
+      "remoteAnswer": "A"
     }
   },
-  "updatedAt": "2026-09-21T12:57:17.382Z"
+  "updatedAt": "2026-09-21T22:01:58.325Z"
 }

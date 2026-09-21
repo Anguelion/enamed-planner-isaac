@@ -899,7 +899,61 @@
       ],
       "suggestedComment": "Gabarito confirmado: A. Assunto: Heparina baixo peso molecular. Conduta/resposta: Sim, tanto a heparina não fracionada quanto as de baixo peso molecular.",
       "reviewedAt": "2026-09-21T12:57:17.382Z"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-2319bddc078ef712": {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-2319bddc078ef712",
+      "number": "1050b",
+      "status": "answer_mismatch",
+      "localAnswer": "B",
+      "remoteAnswer": "C",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-feminina-com3812dcbc96/",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Anticoagulantes antagonistas da vitamina K",
+        "Heparinas",
+        "Cardiologia",
+        "Arritmias Cardíacas",
+        "Flutter atrial",
+        "Prevenção de tromboembolismo",
+        "Anticoagulação oral",
+        "Antagonistas da vitamina K"
+      ],
+      "suggestedComment": "Gabarito confirmado: C. Assunto: Antagonistas da vitamina K. Conduta/resposta: Trocar o anticoagulante oral temporariamente por heparina e suspender esta antes do procedimento.",
+      "reviewedAt": "2026-09-21T22:01:52.340Z"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-24da852bf6410a75": {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-24da852bf6410a75",
+      "number": "1051b",
+      "status": "answer_mismatch",
+      "localAnswer": "B",
+      "remoteAnswer": "A",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/varfarina-e21d8a2552c/",
+      "similarity": {
+        "stem": 0.95,
+        "options": 1,
+        "combined": 0.9649999999999999
+      },
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Laboratório da hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Anticoagulantes antagonistas da vitamina K"
+      ],
+      "suggestedComment": "Gabarito confirmado: A. Assunto: Anticoagulantes antagonistas da vitamina K. Conduta/resposta: Tempo de Protrombina (TP).",
+      "reviewedAt": "2026-09-21T22:01:58.325Z"
     }
   },
-  "updatedAt": "2026-09-21T12:57:17.382Z"
+  "updatedAt": "2026-09-21T22:01:58.325Z"
 }

@@ -1288,14 +1288,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Esse é o quadro típico de HIT: queda importante das plaquetas (240 mil para 70 mil) alguns dias depois de começar a usar heparina, associada a uma trombose nova. A causa é o corpo formar anticorpos contra o complexo que a heparina forma com uma proteína das plaquetas (o fator plaquetário 4). O tratamento certo é suspender toda heparina e trocar por um anticoagulante de outra família, como o fondaparinux — nunca continuar usando heparina nem partir direto pra varfarina enquanto as plaquetas estão baixas.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Trombocitopenia induzida pela heparina (HIT)",
+        "Diagnóstico da trombocitopenia induzida pela heparina (HIT)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742439652008",
-      "ankiGuid": "Lng~GvKEh*"
+      "ankiGuid": "Lng~GvKEh*",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-62-anos-foi53f02536a4/",
+        "sourceQuestionId": "4000049630",
+        "matchedAt": "2026-09-21T22:01:40.495Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-c48a05b25a631df6",
@@ -1321,14 +1334,27 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Essa paciente está sangrando muito, com RNI acima de 10, e mesmo depois de hidratação ainda sangra, além de já mostrar sinais de estar recebendo líquido demais (crepitações no pulmão). Nesse cenário, o complexo protrombínico é a melhor escolha: ele repõe rapidamente os fatores de coagulação que a varfarina bloqueou, em um volume bem menor de líquido do que o plasma fresco precisaria — importante justamente porque essa paciente já não está tolerando bem mais volume.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Anticoagulantes antagonistas da vitamina K",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742439652009",
-      "ankiGuid": "nxNWOO&!hx"
+      "ankiGuid": "nxNWOO&!hx",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-54-anos113d2cb9fb7/",
+        "sourceQuestionId": "4000029853",
+        "matchedAt": "2026-09-21T22:01:46.547Z",
+        "confidence": 0.9356321839080459
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-2319bddc078ef712",
@@ -1355,7 +1381,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava B (simplesmente parar uma semana antes, sem mais nada), mas isso deixaria essa paciente de alto risco (prótese de válvula mecânica) desprotegida por muitos dias sem nenhum anticoagulante. A conduta certa é a C: trocar temporariamente a varfarina por heparina (fazendo a 'ponte'), e só parar a heparina pouco antes da cirurgia — assim ela fica protegida contra trombose na válvula quase até a hora do procedimento, e o efeito anticoagulante para bem perto da cirurgia, reduzindo o risco de sangramento.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -1389,7 +1415,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava B ('Plaquetas'), mas repare que a própria alternativa A já diz 'Tempo de Protrombina (TP)' — esse é literalmente o teste certo pra acompanhar a varfarina, e é dele que vem o cálculo do RNI que a gente usa o tempo todo pra ajustar a dose.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
