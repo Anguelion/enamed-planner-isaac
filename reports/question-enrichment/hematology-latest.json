@@ -1,196 +1,89 @@
 {
-  "generatedAt": "2026-09-21T22:01:27.370Z",
+  "generatedAt": "2026-09-22T11:46:28.329Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 4,
+  "changed": 1,
   "results": [
     {
-      "id": "anki-hematologia-gamopatias-monoclonais-7215d139785563c0",
-      "number": "1023j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/mieloma-multiplo-MM352abdd39b/",
-      "sourceQuestionId": "4000041829",
-      "matchedAt": "2026-09-21T22:01:28.589Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Gamopatias monoclonais",
-        "Mieloma múltiplo (MM)",
-        "Classificação do mieloma múltiplo (MM)"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Classificação do mieloma múltiplo (MM). Conduta/resposta: Se houver proteína-M elevada (maior que 5g/dL) ou sintomas sugestivos de hiperviscosidade, não é recomendável a medida da viscosidade sérica.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/mieloma-multiplo-MM352abdd39b/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-gamopatias-monoclonais-cef2521b0b44d728",
-      "number": "1024j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/identificaca-doenc79d29349bc/",
-      "sourceQuestionId": "4000041814",
-      "matchedAt": "2026-09-21T22:01:34.548Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Gamopatias monoclonais",
-        "Mieloma múltiplo (MM)",
-        "Fisiopatologia do mieloma múltiplo (MM)"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Fisiopatologia do mieloma múltiplo (MM). Conduta/resposta: A insuficiência renal é secundária principalmente à nefropatia obstrutiva devido a cilindros de cadeia pesada monoclonal (proteína de Bence Jones) que se depositam nos túbulos contornados distais e coletores, conhecida como “rim do mieloma”, e à hipocalcemia.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/identificaca-doenc79d29349bc/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-df5fdc778450f2cf",
-      "number": "1048b",
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-8a5b1f395f618999",
+      "number": "1052b",
       "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-62-anos-foi53f02536a4/",
-      "sourceQuestionId": "4000049630",
-      "matchedAt": "2026-09-21T22:01:40.495Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "E",
-      "remoteAnswer": "E",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Hemostasia primária",
-        "Trombocitopenia induzida pela heparina (HIT)",
-        "Diagnóstico da trombocitopenia induzida pela heparina (HIT)"
-      ],
-      "comment": "Gabarito confirmado: E. Assunto: Diagnóstico da trombocitopenia induzida pela heparina (HIT). Conduta/resposta: Esta síndrome é causada por anticorpos contra complexo antigênico formado de fator plaquetário 4(FP 4) e heparina, devendo suspender a heparina e iniciar fondaparinux.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-62-anos-foi53f02536a4/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-c48a05b25a631df6",
-      "number": "1049b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-54-anos113d2cb9fb7/",
-      "sourceQuestionId": "4000029853",
-      "matchedAt": "2026-09-21T22:01:46.547Z",
-      "similarity": {
-        "stem": 0.9080459770114943,
-        "options": 1,
-        "combined": 0.9356321839080459
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Hemostasia Secundária",
-        "Fármacos e agentes relacionados a hemostasia secundária",
-        "Anticoagulantes antagonistas da vitamina K"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Anticoagulantes antagonistas da vitamina K. Conduta/resposta: Administrar complexo protrombínico na dose de 25UI/kg.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-54-anos113d2cb9fb7/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-2319bddc078ef712",
-      "number": "1050b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
-      "changed": false,
-      "status": "answer_mismatch",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-feminina-com3812dcbc96/",
-      "sourceQuestionId": "4000084042",
-      "matchedAt": "2026-09-21T22:01:52.340Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-seguintes135dc0f964/",
+      "sourceQuestionId": "4000074819",
+      "matchedAt": "2026-09-22T11:46:29.506Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
       "localAnswer": "B",
-      "remoteAnswer": "C",
-      "answerMismatch": true,
+      "remoteAnswer": "B",
+      "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
         "Hemostasia",
         "Hemostasia Secundária",
         "Fármacos e agentes relacionados a hemostasia secundária",
-        "Anticoagulantes antagonistas da vitamina K",
         "Heparinas",
-        "Cardiologia",
-        "Arritmias Cardíacas",
-        "Flutter atrial",
-        "Prevenção de tromboembolismo",
-        "Anticoagulação oral",
-        "Antagonistas da vitamina K"
+        "Heparina não fracionada"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Antagonistas da vitamina K. Conduta/resposta: Trocar o anticoagulante oral temporariamente por heparina e suspender esta antes do procedimento.",
+      "comment": "Gabarito confirmado: B. Assunto: Heparina não fracionada. Conduta/resposta: Tempo parcial de tromboplastina.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-feminina-com3812dcbc96/"
+        "https://med.estrategia.com/public/questoes/Qual-seguintes135dc0f964/"
       ]
     },
     {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-24da852bf6410a75",
-      "number": "1051b",
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-3da3e8e87ee50fb8",
+      "number": "1054b",
       "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
       "changed": false,
-      "status": "answer_mismatch",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/varfarina-e21d8a2552c/",
-      "sourceQuestionId": "4000083116",
-      "matchedAt": "2026-09-21T22:01:58.325Z",
-      "similarity": {
-        "stem": 0.95,
-        "options": 1,
-        "combined": 0.9649999999999999
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "A",
-      "answerMismatch": true,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Laboratório da hemostasia",
-        "Hemostasia Secundária",
-        "Fármacos e agentes relacionados a hemostasia secundária",
-        "Anticoagulantes antagonistas da vitamina K"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Anticoagulantes antagonistas da vitamina K. Conduta/resposta: Tempo de Protrombina (TP).",
+      "status": "low_confidence",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/varfarina-e21d8a2552c/"
-      ]
+        "https://med.estrategia.com/public/questoes/que-refere-a-dengue53e4024282/",
+        "https://med.estrategia.com/public/questoes/que-refere-a-dengue60779d9700/"
+      ],
+      "bestSimilarity": {
+        "stem": 0.4634146341463415,
+        "options": 1,
+        "combined": 0.624390243902439
+      }
+    },
+    {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-f027e7283c8a2a78",
+      "number": "1056b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-a618108a8eae2c49",
+      "number": "1057b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-8ac742eff3bc306a",
+      "number": "1058b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-03aaa0aa7c6faf77",
+      "number": "1059b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     }
   ]
 }

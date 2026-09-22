@@ -953,7 +953,23 @@
       ],
       "suggestedComment": "Gabarito confirmado: A. Assunto: Anticoagulantes antagonistas da vitamina K. Conduta/resposta: Tempo de Protrombina (TP).",
       "reviewedAt": "2026-09-21T22:01:58.325Z"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-3da3e8e87ee50fb8": {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-3da3e8e87ee50fb8",
+      "number": "1054b",
+      "status": "low_confidence",
+      "localAnswer": null,
+      "remoteAnswer": null,
+      "sourceUrl": null,
+      "similarity": {
+        "stem": 0.4634146341463415,
+        "options": 1,
+        "combined": 0.624390243902439
+      },
+      "tags": [],
+      "suggestedComment": "",
+      "reviewedAt": "2026-09-22T11:46:36.162Z"
     }
   },
-  "updatedAt": "2026-09-21T22:01:58.325Z"
+  "updatedAt": "2026-09-22T11:46:36.162Z"
 }

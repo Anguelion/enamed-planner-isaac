@@ -1448,14 +1448,28 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "O melhor teste pra acompanhar quem está usando heparina (a não fracionada, injetada na veia) é o TTPa (tempo parcial de tromboplastina ativada) — ele mostra se a dose está adequada, alta demais (risco de sangrar) ou baixa demais (sem proteção).",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Heparinas",
+        "Heparina não fracionada",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742439652012",
-      "ankiGuid": "e)QvJ!qmeg"
+      "ankiGuid": "e)QvJ!qmeg",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-seguintes135dc0f964/",
+        "sourceQuestionId": "4000074819",
+        "matchedAt": "2026-09-22T11:46:29.506Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-3da3e8e87ee50fb8",
@@ -1479,7 +1493,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava 'Certo', mas a frase tem um erro escondido: o TP (Tempo de Protrombina) avalia mesmo a via extrínseca da coagulação, só que ele é sensível aos fatores II, V, VII e X — o fator IX NÃO entra nessa lista, porque ele pertence à via intrínseca (a que é avaliada pelo TTPa, não pelo TP). Por incluir o fator IX errado, a frase está errada — resposta B.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -1513,7 +1527,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava C ('Warfarina'), mas a varfarina não inibe o fator Xa — ela bloqueia a produção de vários fatores dependentes de vitamina K, por um mecanismo totalmente diferente. O verdadeiro inibidor direto do fator Xa entre as opções é a rivaroxabana — alternativa B.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -1547,7 +1561,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "O antídoto da heparina é o sulfato de protamina — ele se liga diretamente à heparina no sangue e neutraliza o efeito dela, agindo bem rápido.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -1581,7 +1595,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava A, mas transfundir plaquetas na HIT é perigoso (pode alimentar ainda mais a formação de coágulos!) e por isso é evitado, não 'bem aplicado'. A frase correta é a D: a HIT é causada por anticorpos que o corpo forma contra um complexo estranho feito pela junção da heparina com uma proteína das plaquetas (o fator plaquetário 4, ou PF4) — esses 'neoantígenos' enganam o sistema imune, que passa a atacar as próprias plaquetas.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -1615,7 +1629,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "O dabigatran é o exemplo clássico de anticoagulante que age bloqueando diretamente a trombina (por isso é chamado de 'inibidor direto da trombina') — diferente da enoxaparina e da varfarina, que agem de outras formas.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
