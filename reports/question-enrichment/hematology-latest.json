@@ -1,85 +1,54 @@
 {
-  "generatedAt": "2026-09-22T11:46:28.329Z",
+  "generatedAt": "2026-09-22T21:24:10.126Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 1,
+  "changed": 0,
   "results": [
     {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-8a5b1f395f618999",
-      "number": "1052b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-seguintes135dc0f964/",
-      "sourceQuestionId": "4000074819",
-      "matchedAt": "2026-09-22T11:46:29.506Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Hemostasia Secundária",
-        "Fármacos e agentes relacionados a hemostasia secundária",
-        "Heparinas",
-        "Heparina não fracionada"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Heparina não fracionada. Conduta/resposta: Tempo parcial de tromboplastina.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Qual-seguintes135dc0f964/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-3da3e8e87ee50fb8",
-      "number": "1054b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "id": "anki-hematologia-gamopatias-monoclonais-8463e41e61278868",
+      "number": "1034j",
+      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
       "changed": false,
-      "status": "low_confidence",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/que-refere-a-dengue53e4024282/",
-        "https://med.estrategia.com/public/questoes/que-refere-a-dengue60779d9700/"
-      ],
-      "bestSimilarity": {
-        "stem": 0.4634146341463415,
-        "options": 1,
-        "combined": 0.624390243902439
-      }
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-f027e7283c8a2a78",
-      "number": "1056b",
+      "id": "anki-hematologia-gamopatias-monoclonais-92d9ac3a2692932f",
+      "number": "1036j",
+      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-gamopatias-monoclonais-a35cb5a31f1bb515",
+      "number": "1037j",
+      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-cfe1c7799ccffc07",
+      "number": "1060b",
       "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-a618108a8eae2c49",
-      "number": "1057b",
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-908ea652ff76d6f8",
+      "number": "1061b",
       "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-8ac742eff3bc306a",
-      "number": "1058b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-03aaa0aa7c6faf77",
-      "number": "1059b",
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-735e5aaa02a81e88",
+      "number": "1062b",
       "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
       "changed": false,
       "status": "not_found",
