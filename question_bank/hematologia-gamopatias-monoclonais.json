@@ -1595,10 +1595,21 @@
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Quadro Clínico do mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587532",
-      "ankiGuid": "O0y1c[^]P_"
+      "ankiGuid": "O0y1c[^]P_",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-afro-americano11357639f25/",
+        "sourceQuestionId": "4000061203",
+        "matchedAt": "2026-09-23T11:45:41.261Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-8fc1b8cca6127d67",
@@ -1629,10 +1640,22 @@
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Nefrologia",
+        "Lesão renal aguda (LRA)",
+        "Mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587533",
-      "ankiGuid": "v:Gw{;#i;"
+      "ankiGuid": "v:Gw{;#i;",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Medida-terapeutica13bd8aab1f/",
+        "sourceQuestionId": "4000056408",
+        "matchedAt": "2026-09-23T11:45:47.437Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-4763e8a6ea729708",
@@ -1662,10 +1685,21 @@
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Tratamento do mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587534",
-      "ankiGuid": "b{}):kCdOK"
+      "ankiGuid": "b{}):kCdOK",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo64567360df/",
+        "sourceQuestionId": "4000021557",
+        "matchedAt": "2026-09-23T11:45:53.234Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-b903b178190cf630",
@@ -1695,10 +1729,20 @@
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Gamopatia monoclonal de significado indeterminado (MGUS)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587535",
-      "ankiGuid": "cU^tq;UX;-"
+      "ankiGuid": "cU^tq;UX;-",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-com-protei40ea897f93/",
+        "sourceQuestionId": "4000004550",
+        "matchedAt": "2026-09-23T11:45:59.040Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-44db18d41644130f",
@@ -1729,10 +1773,21 @@
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Quadro Clínico do mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587536",
-      "ankiGuid": "nv{Q>KWh<#"
+      "ankiGuid": "nv{Q>KWh<#",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-64-anos-vem65725f82d8/",
+        "sourceQuestionId": "4000127735",
+        "matchedAt": "2026-09-23T11:46:04.851Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-f1dae6077ef9390b",

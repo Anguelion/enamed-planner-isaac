@@ -1,55 +1,161 @@
 {
-  "generatedAt": "2026-09-22T21:24:10.126Z",
+  "generatedAt": "2026-09-23T11:45:40.028Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 0,
+  "changed": 5,
   "results": [
     {
-      "id": "anki-hematologia-gamopatias-monoclonais-8463e41e61278868",
-      "number": "1034j",
+      "id": "anki-hematologia-gamopatias-monoclonais-f387f0c652b37618",
+      "number": "1039j",
       "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-afro-americano11357639f25/",
+      "sourceQuestionId": "4000061203",
+      "matchedAt": "2026-09-23T11:45:41.261Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Gamopatias monoclonais",
+        "Mieloma múltiplo (MM)",
+        "Quadro Clínico do mieloma múltiplo (MM)"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Quadro Clínico do mieloma múltiplo (MM). Conduta/resposta: Biópsia da medula óssea;",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Homem-afro-americano11357639f25/",
+        "https://med.estrategia.com/public/questoes/Homem-afro-americano1124b666e27/"
+      ]
     },
     {
-      "id": "anki-hematologia-gamopatias-monoclonais-92d9ac3a2692932f",
-      "number": "1036j",
+      "id": "anki-hematologia-gamopatias-monoclonais-8fc1b8cca6127d67",
+      "number": "1040j",
       "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Medida-terapeutica13bd8aab1f/",
+      "sourceQuestionId": "4000056408",
+      "matchedAt": "2026-09-23T11:45:47.437Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Nefrologia",
+        "Lesão renal aguda (LRA)",
+        "Hematologia",
+        "Gamopatias monoclonais",
+        "Mieloma múltiplo (MM)"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Mieloma múltiplo (MM). Conduta/resposta: Inibição da ciclooxigenase-2.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Medida-terapeutica13bd8aab1f/"
+      ]
     },
     {
-      "id": "anki-hematologia-gamopatias-monoclonais-a35cb5a31f1bb515",
-      "number": "1037j",
+      "id": "anki-hematologia-gamopatias-monoclonais-4763e8a6ea729708",
+      "number": "1041j",
       "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo64567360df/",
+      "sourceQuestionId": "4000021557",
+      "matchedAt": "2026-09-23T11:45:53.234Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Gamopatias monoclonais",
+        "Mieloma múltiplo (MM)",
+        "Tratamento do mieloma múltiplo (MM)"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Tratamento do mieloma múltiplo (MM). Conduta/resposta: Quimioterapia tripla.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-sexo64567360df/"
+      ]
     },
     {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-cfe1c7799ccffc07",
-      "number": "1060b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "id": "anki-hematologia-gamopatias-monoclonais-b903b178190cf630",
+      "number": "1042j",
+      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-com-protei40ea897f93/",
+      "sourceQuestionId": "4000004550",
+      "matchedAt": "2026-09-23T11:45:59.040Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Gamopatias monoclonais",
+        "Gamopatia monoclonal de significado indeterminado (MGUS)"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Gamopatia monoclonal de significado indeterminado (MGUS). Conduta/resposta: Mieloma múltiplo indolente.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-com-protei40ea897f93/"
+      ]
     },
     {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-908ea652ff76d6f8",
-      "number": "1061b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "id": "anki-hematologia-gamopatias-monoclonais-44db18d41644130f",
+      "number": "1043j",
+      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-64-anos-vem65725f82d8/",
+      "sourceQuestionId": "4000127735",
+      "matchedAt": "2026-09-23T11:46:04.851Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Gamopatias monoclonais",
+        "Mieloma múltiplo (MM)",
+        "Quadro Clínico do mieloma múltiplo (MM)"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Quadro Clínico do mieloma múltiplo (MM). Conduta/resposta: Mieloma múltiplo, biópsia de medula óssea.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Homem-64-anos-vem65725f82d8/"
+      ]
     },
     {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-735e5aaa02a81e88",
-      "number": "1062b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "id": "anki-hematologia-gamopatias-monoclonais-711ac8caa8946fd4",
+      "number": "1045j",
+      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
