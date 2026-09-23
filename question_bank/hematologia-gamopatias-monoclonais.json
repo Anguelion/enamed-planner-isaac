@@ -1896,10 +1896,21 @@
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Quadro Clínico do mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587539",
-      "ankiGuid": "tSic7m1L,7"
+      "ankiGuid": "tSic7m1L,7",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-75-anos-com38c47adc95/",
+        "sourceQuestionId": "4000037513",
+        "matchedAt": "2026-09-23T21:34:02.627Z",
+        "confidence": 0.9946428571428572
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-6f5f8cb98efae0f8",
@@ -1929,10 +1940,20 @@
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587540",
-      "ankiGuid": "eg-8Gg2uCK"
+      "ankiGuid": "eg-8Gg2uCK",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/associaca-anemia135d4db611/",
+        "sourceQuestionId": "4000035644",
+        "matchedAt": "2026-09-23T21:34:09.320Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-618da6fa5e687645",
@@ -2009,10 +2030,21 @@
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Introdução ao mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587542",
-      "ankiGuid": "vOUw?r;3F("
+      "ankiGuid": "vOUw?r;3F(",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mieloma-Multiplo-MM107f358e39/",
+        "sourceQuestionId": "4000016154",
+        "matchedAt": "2026-09-23T21:34:15.190Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-bf41dab744aa4171",
@@ -2092,10 +2124,20 @@
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Gamopatia monoclonal de significado indeterminado (MGUS)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587544",
-      "ankiGuid": "NK-QP?Mcij"
+      "ankiGuid": "NK-QP?Mcij",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-72-anos12782ef0220/",
+        "sourceQuestionId": "4000103051",
+        "matchedAt": "2026-09-23T21:34:21.546Z",
+        "confidence": 0.9930693069306931
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-f2b63512fd1dbb5f",
@@ -2125,10 +2167,21 @@
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Quadro Clínico do mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587545",
-      "ankiGuid": "tZ6e,DlZ<!"
+      "ankiGuid": "tZ6e,DlZ<!",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo21d604a0cb/",
+        "sourceQuestionId": "4000068880",
+        "matchedAt": "2026-09-23T21:34:27.529Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-d9d873ef1805505a",
@@ -2158,10 +2211,20 @@
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587546",
-      "ankiGuid": "t*;>C>UaJ1"
+      "ankiGuid": "t*;>C>UaJ1",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/associaca-anemia135d4db611/",
+        "sourceQuestionId": "4000035644",
+        "matchedAt": "2026-09-23T21:34:33.931Z",
+        "confidence": 0.9249999999999999
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-a275d6902f3e2e88",

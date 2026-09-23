@@ -3583,23 +3583,23 @@
     },
     "anki-hematologia-gamopatias-monoclonais-0edc62ba31d0227d": {
       "number": "1046j",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-16T11:44:37.863Z",
-      "nextAttemptAt": "2026-09-23T11:44:37.863Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-09-23T21:34:02.628Z",
+      "nextAttemptAt": "2026-10-07T21:34:02.628Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-75-anos-com38c47adc95/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     },
     "anki-hematologia-gamopatias-monoclonais-6f5f8cb98efae0f8": {
       "number": "1047j",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-16T11:44:43.788Z",
-      "nextAttemptAt": "2026-09-23T11:44:43.788Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-09-23T21:34:09.320Z",
+      "nextAttemptAt": "2026-10-07T21:34:09.320Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/associaca-anemia135d4db611/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     },
     "anki-hematologia-gamopatias-monoclonais-618da6fa5e687645": {
       "number": "1048j",
@@ -3613,13 +3613,13 @@
     },
     "anki-hematologia-gamopatias-monoclonais-e505e99410b6ec8f": {
       "number": "1049j",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-16T11:44:55.229Z",
-      "nextAttemptAt": "2026-09-23T11:44:55.229Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-09-23T21:34:15.191Z",
+      "nextAttemptAt": "2026-10-07T21:34:15.191Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mieloma-Multiplo-MM107f358e39/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     },
     "anki-hematologia-gamopatias-monoclonais-bf41dab744aa4171": {
       "number": "1050j",
@@ -3633,33 +3633,33 @@
     },
     "anki-hematologia-gamopatias-monoclonais-60c44b1879dea6cc": {
       "number": "1051j",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-16T21:23:04.806Z",
-      "nextAttemptAt": "2026-09-23T21:23:04.806Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-09-23T21:34:21.547Z",
+      "nextAttemptAt": "2026-10-07T21:34:21.547Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-72-anos12782ef0220/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
     },
     "anki-hematologia-gamopatias-monoclonais-f2b63512fd1dbb5f": {
       "number": "1052j",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-16T21:23:10.237Z",
-      "nextAttemptAt": "2026-09-23T21:23:10.237Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-09-23T21:34:27.529Z",
+      "nextAttemptAt": "2026-10-07T21:34:27.529Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo21d604a0cb/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     },
     "anki-hematologia-gamopatias-monoclonais-d9d873ef1805505a": {
       "number": "1053j",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-16T21:23:15.534Z",
-      "nextAttemptAt": "2026-09-23T21:23:15.534Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-09-23T21:34:33.931Z",
+      "nextAttemptAt": "2026-10-07T21:34:33.931Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/associaca-anemia135d4db611/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     },
     "anki-hematologia-gamopatias-monoclonais-a275d6902f3e2e88": {
       "number": "1054j",
@@ -4252,5 +4252,5 @@
       "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-09-23T11:46:10.655Z"
+  "updatedAt": "2026-09-23T21:34:33.931Z"
 }
