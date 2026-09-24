@@ -1,112 +1,24 @@
 {
-  "generatedAt": "2026-09-23T21:34:01.379Z",
+  "generatedAt": "2026-09-24T11:54:21.724Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 6,
+  "changed": 2,
   "results": [
     {
-      "id": "anki-hematologia-gamopatias-monoclonais-0edc62ba31d0227d",
-      "number": "1046j",
+      "id": "anki-hematologia-gamopatias-monoclonais-a275d6902f3e2e88",
+      "number": "1054j",
       "file": "question_bank/hematologia-gamopatias-monoclonais.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-75-anos-com38c47adc95/",
-      "sourceQuestionId": "4000037513",
-      "matchedAt": "2026-09-23T21:34:02.627Z",
-      "similarity": {
-        "stem": 1,
-        "options": 0.9821428571428572,
-        "combined": 0.9946428571428572
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Gamopatias monoclonais",
-        "Mieloma múltiplo (MM)",
-        "Quadro Clínico do mieloma múltiplo (MM)"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Quadro Clínico do mieloma múltiplo (MM). Conduta/resposta: A proteinúria apresentada pelo paciente é à custa de cadeias leves e não de albuminúria.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-75-anos-com38c47adc95/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-gamopatias-monoclonais-6f5f8cb98efae0f8",
-      "number": "1047j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/associaca-anemia135d4db611/",
-      "sourceQuestionId": "4000035644",
-      "matchedAt": "2026-09-23T21:34:09.320Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-67-anos-esta99387f97fa/",
+      "sourceQuestionId": "4000122538",
+      "matchedAt": "2026-09-24T11:54:22.828Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Gamopatias monoclonais",
-        "Mieloma múltiplo (MM)"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Mieloma múltiplo (MM). Conduta/resposta: Mieloma múltiplo.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/associaca-anemia135d4db611/",
-        "https://med.estrategia.com/public/questoes/associaca-anemia13c2d4d12e/",
-        "https://med.estrategia.com/public/questoes/associaca-anemia32ae542fb0/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-gamopatias-monoclonais-e505e99410b6ec8f",
-      "number": "1049j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mieloma-Multiplo-MM107f358e39/",
-      "sourceQuestionId": "4000016154",
-      "matchedAt": "2026-09-23T21:34:15.190Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Gamopatias monoclonais",
-        "Mieloma múltiplo (MM)",
-        "Introdução ao mieloma múltiplo (MM)"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Introdução ao mieloma múltiplo (MM). Conduta/resposta: Mais de 90% dos casos ocorrem após os 50 anos, com pico de incidência no ocidente entre 60 e 70 anos de idade.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Mieloma-Multiplo-MM107f358e39/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-gamopatias-monoclonais-60c44b1879dea6cc",
-      "number": "1051j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-72-anos12782ef0220/",
-      "sourceQuestionId": "4000103051",
-      "matchedAt": "2026-09-23T21:34:21.546Z",
-      "similarity": {
-        "stem": 0.9900990099009901,
-        "options": 1,
-        "combined": 0.9930693069306931
       },
       "localAnswer": "A",
       "remoteAnswer": "A",
@@ -115,72 +27,103 @@
         "Clínica Médica",
         "Hematologia",
         "Gamopatias monoclonais",
-        "Gamopatia monoclonal de significado indeterminado (MGUS)"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Gamopatia monoclonal de significado indeterminado (MGUS). Conduta/resposta: Gamopatia de Significado Indeterminado; apenas observar.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/paciente-72-anos12782ef0220/",
-        "https://med.estrategia.com/public/questoes/homem-com-72-anos1417ebdfc66/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-gamopatias-monoclonais-f2b63512fd1dbb5f",
-      "number": "1052j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo21d604a0cb/",
-      "sourceQuestionId": "4000068880",
-      "matchedAt": "2026-09-23T21:34:27.529Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Gamopatias monoclonais",
         "Mieloma múltiplo (MM)",
-        "Quadro Clínico do mieloma múltiplo (MM)"
+        "Introdução ao mieloma múltiplo (MM)"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Quadro Clínico do mieloma múltiplo (MM). Conduta/resposta: Mieloma Múltiplo.",
+      "comment": "Gabarito confirmado: A. Assunto: Introdução ao mieloma múltiplo (MM). Conduta/resposta: Mieloma múltiplo; eletroforese de proteínas séricas e urinárias e avaliação de medula óssea (mielograma e biópsia).",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-sexo21d604a0cb/"
+        "https://med.estrategia.com/public/questoes/Homem-67-anos-esta99387f97fa/"
       ]
     },
     {
-      "id": "anki-hematologia-gamopatias-monoclonais-d9d873ef1805505a",
-      "number": "1053j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/associaca-anemia135d4db611/",
-      "sourceQuestionId": "4000035644",
-      "matchedAt": "2026-09-23T21:34:33.931Z",
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-8b4a94c84f8f5c35",
+      "number": "1063b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": false,
+      "status": "answer_mismatch",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-60-anos71baff9a8f/",
+      "sourceQuestionId": "4000009228",
+      "matchedAt": "2026-09-24T11:54:28.932Z",
       "similarity": {
         "stem": 1,
-        "options": 0.75,
-        "combined": 0.9249999999999999
+        "options": 0.9333333333333333,
+        "combined": 0.98
       },
       "localAnswer": "B",
-      "remoteAnswer": "B",
+      "remoteAnswer": "E",
+      "answerMismatch": true,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Trombocitopenia induzida pela heparina (HIT)",
+        "Diagnóstico da trombocitopenia induzida pela heparina (HIT)",
+        "Tratamento da trombocitopenia induzida pela heparina (HIT)",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Heparinas",
+        "Heparina não fracionada"
+      ],
+      "comment": "Gabarito confirmado: E. Assunto: Heparina não fracionada. Conduta/resposta: Suspender a heparina e iniciar argatroban",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-60-anos71baff9a8f/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-f616c032b93ff761",
+      "number": "1002b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-32a-internado-ha505737e5a5/",
+      "sourceQuestionId": "4000184373",
+      "matchedAt": "2026-09-24T11:54:35.737Z",
+      "similarity": {
+        "stem": 0.967741935483871,
+        "options": 1,
+        "combined": 0.9774193548387096
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Gamopatias monoclonais",
-        "Mieloma múltiplo (MM)"
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Heparinas",
+        "Heparina não fracionada"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Mieloma múltiplo (MM). Conduta/resposta: Mieloma múltiplo.",
+      "comment": "Gabarito confirmado: D. Assunto: Heparina não fracionada. Conduta/resposta: Prescrever protamina.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/associaca-anemia135d4db611/",
-        "https://med.estrategia.com/public/questoes/associaca-anemia13c2d4d12e/",
-        "https://med.estrategia.com/public/questoes/associaca-anemia32ae542fb0/"
+        "https://med.estrategia.com/public/questoes/Homem-32a-internado-ha505737e5a5/"
       ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-42c84acaf1996f11",
+      "number": "1003b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-f40052d8d21dee25",
+      "number": "1004b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-7ad8918382c770be",
+      "number": "1005b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     }
   ]
 }

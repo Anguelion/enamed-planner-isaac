@@ -2254,10 +2254,21 @@
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mieloma múltiplo (MM)",
+        "Introdução ao mieloma múltiplo (MM)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587547",
-      "ankiGuid": "qNet46?vvA"
+      "ankiGuid": "qNet46?vvA",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-67-anos-esta99387f97fa/",
+        "sourceQuestionId": "4000122538",
+        "matchedAt": "2026-09-24T11:54:22.828Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-0937303d34db1553",

@@ -1764,7 +1764,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava B (trocar por varfarina), mas isso é arriscado logo depois de suspender a heparina numa HIT com plaquetas tão baixas (risco de necrose de pele/gangrena). A conduta certa é suspender a heparina e iniciar um anticoagulante direto da trombina, como o argatroban — alternativa E — que protege o paciente da trombose sem depender da via da heparina.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -1799,14 +1799,28 @@
       ],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A fraqueza súbita de um lado do corpo, num paciente recém-anticoagulado com heparina em dose plena, faz pensar logo em sangramento dentro do crânio (e por isso pediram a tomografia). Assim que se suspeita disso, a heparina precisa ser revertida rapidamente com o antídoto certo: sulfato de protamina — alternativa D.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Heparinas",
+        "Heparina não fracionada",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742439693074",
-      "ankiGuid": "hF}huIo1ts"
+      "ankiGuid": "hF}huIo1ts",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-32a-internado-ha505737e5a5/",
+        "sourceQuestionId": "4000184373",
+        "matchedAt": "2026-09-24T11:54:35.737Z",
+        "confidence": 0.9774193548387096
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-42c84acaf1996f11",
@@ -1832,7 +1846,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava B (andexanet alfa), mas esse antídoto serve pra reverter os inibidores do fator Xa (como rivaroxabana e apixabana) — não serve pra dabigatrana, que é um inibidor DIRETO da trombina, um mecanismo diferente. O antídoto certo da dabigatrana é o idarucizumabe — alternativa D — que se liga diretamente à dabigatrana e neutraliza seu efeito rapidamente, essencial antes de uma cirurgia de urgência.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -1865,7 +1879,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Revisando com mais cuidado: um RNI de 1,8 está abaixo da faixa terapêutica necessária pra proteger uma válvula cardíaca mecânica (que geralmente exige RNI entre 2,5 e 3,5) — mantendo a dose atual (como dizia a resposta anterior), a paciente ficaria desprotegida, com risco real de a válvula entupir (trombose valvar). Como ela já está numa dose baixa de varfarina (5mg, considerada de baixo risco de má-formação pra essa fase da gravidez segundo as diretrizes atuais), a conduta certa é aumentar a dose para alcançar a faixa terapêutica adequada, e não trocar de estratégia nem manter uma dose insuficiente.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -1898,7 +1912,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava A ('Rivaroxabana'), mas ela realmente bloqueia o fator Xa, então não pode ser a exceção. Quem NÃO bloqueia o fator Xa, entre as opções, é a dabigatrana — ela tem um mecanismo diferente, bloqueando diretamente a trombina (fator IIa) — alternativa D.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",

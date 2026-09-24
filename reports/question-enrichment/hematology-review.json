@@ -969,7 +969,35 @@
       "tags": [],
       "suggestedComment": "",
       "reviewedAt": "2026-09-22T11:46:36.162Z"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-8b4a94c84f8f5c35": {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-8b4a94c84f8f5c35",
+      "number": "1063b",
+      "status": "answer_mismatch",
+      "localAnswer": "B",
+      "remoteAnswer": "E",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-60-anos71baff9a8f/",
+      "similarity": {
+        "stem": 1,
+        "options": 0.9333333333333333,
+        "combined": 0.98
+      },
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Trombocitopenia induzida pela heparina (HIT)",
+        "Diagnóstico da trombocitopenia induzida pela heparina (HIT)",
+        "Tratamento da trombocitopenia induzida pela heparina (HIT)",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Heparinas",
+        "Heparina não fracionada"
+      ],
+      "suggestedComment": "Gabarito confirmado: E. Assunto: Heparina não fracionada. Conduta/resposta: Suspender a heparina e iniciar argatroban",
+      "reviewedAt": "2026-09-24T11:54:28.932Z"
     }
   },
-  "updatedAt": "2026-09-22T11:46:36.162Z"
+  "updatedAt": "2026-09-24T11:54:28.932Z"
 }
