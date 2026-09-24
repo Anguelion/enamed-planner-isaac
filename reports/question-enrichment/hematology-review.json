@@ -997,7 +997,30 @@
       ],
       "suggestedComment": "Gabarito confirmado: E. Assunto: Heparina não fracionada. Conduta/resposta: Suspender a heparina e iniciar argatroban",
       "reviewedAt": "2026-09-24T11:54:28.932Z"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-5f2eb302ed51ec77": {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-5f2eb302ed51ec77",
+      "number": "1006b",
+      "status": "answer_mismatch",
+      "localAnswer": "B",
+      "remoteAnswer": "D",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-55-anos-faz-uso70265f3125/",
+      "similarity": {
+        "stem": 0.9814814814814815,
+        "options": 0.8587301587301587,
+        "combined": 0.9446560846560845
+      },
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Anticoagulantes antagonistas da vitamina K"
+      ],
+      "suggestedComment": "Gabarito confirmado: D. Assunto: Anticoagulantes antagonistas da vitamina K. Conduta/resposta: Suspender o varfarina, aplicar vitamina K e reservar plasma.",
+      "reviewedAt": "2026-09-24T21:35:02.047Z"
     }
   },
-  "updatedAt": "2026-09-24T11:54:28.932Z"
+  "updatedAt": "2026-09-24T21:35:02.047Z"
 }

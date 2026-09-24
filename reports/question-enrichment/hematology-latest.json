@@ -1,126 +1,77 @@
 {
-  "generatedAt": "2026-09-24T11:54:21.724Z",
+  "generatedAt": "2026-09-24T21:35:00.324Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 2,
+  "changed": 0,
   "results": [
     {
-      "id": "anki-hematologia-gamopatias-monoclonais-a275d6902f3e2e88",
-      "number": "1054j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-67-anos-esta99387f97fa/",
-      "sourceQuestionId": "4000122538",
-      "matchedAt": "2026-09-24T11:54:22.828Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Gamopatias monoclonais",
-        "Mieloma múltiplo (MM)",
-        "Introdução ao mieloma múltiplo (MM)"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Introdução ao mieloma múltiplo (MM). Conduta/resposta: Mieloma múltiplo; eletroforese de proteínas séricas e urinárias e avaliação de medula óssea (mielograma e biópsia).",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Homem-67-anos-esta99387f97fa/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-8b4a94c84f8f5c35",
-      "number": "1063b",
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-5f2eb302ed51ec77",
+      "number": "1006b",
       "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
       "changed": false,
       "status": "answer_mismatch",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-60-anos71baff9a8f/",
-      "sourceQuestionId": "4000009228",
-      "matchedAt": "2026-09-24T11:54:28.932Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-55-anos-faz-uso70265f3125/",
+      "sourceQuestionId": "4000181343",
+      "matchedAt": "2026-09-24T21:35:02.047Z",
       "similarity": {
-        "stem": 1,
-        "options": 0.9333333333333333,
-        "combined": 0.98
+        "stem": 0.9814814814814815,
+        "options": 0.8587301587301587,
+        "combined": 0.9446560846560845
       },
       "localAnswer": "B",
-      "remoteAnswer": "E",
+      "remoteAnswer": "D",
       "answerMismatch": true,
       "tags": [
         "Clínica Médica",
         "Hematologia",
         "Hemostasia",
-        "Hemostasia primária",
-        "Trombocitopenia induzida pela heparina (HIT)",
-        "Diagnóstico da trombocitopenia induzida pela heparina (HIT)",
-        "Tratamento da trombocitopenia induzida pela heparina (HIT)",
         "Hemostasia Secundária",
         "Fármacos e agentes relacionados a hemostasia secundária",
-        "Heparinas",
-        "Heparina não fracionada"
+        "Anticoagulantes antagonistas da vitamina K"
       ],
-      "comment": "Gabarito confirmado: E. Assunto: Heparina não fracionada. Conduta/resposta: Suspender a heparina e iniciar argatroban",
+      "comment": "Gabarito confirmado: D. Assunto: Anticoagulantes antagonistas da vitamina K. Conduta/resposta: Suspender o varfarina, aplicar vitamina K e reservar plasma.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-60-anos71baff9a8f/"
+        "https://med.estrategia.com/public/questoes/Mulher-55-anos-faz-uso70265f3125/"
       ]
     },
     {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-f616c032b93ff761",
-      "number": "1002b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-32a-internado-ha505737e5a5/",
-      "sourceQuestionId": "4000184373",
-      "matchedAt": "2026-09-24T11:54:35.737Z",
-      "similarity": {
-        "stem": 0.967741935483871,
-        "options": 1,
-        "combined": 0.9774193548387096
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Hemostasia Secundária",
-        "Fármacos e agentes relacionados a hemostasia secundária",
-        "Heparinas",
-        "Heparina não fracionada"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Heparina não fracionada. Conduta/resposta: Prescrever protamina.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Homem-32a-internado-ha505737e5a5/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-42c84acaf1996f11",
-      "number": "1003b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-512a183cd73c237b",
+      "number": "1001c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-f40052d8d21dee25",
-      "number": "1004b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-29718ab5e999c649",
+      "number": "1002c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-7ad8918382c770be",
-      "number": "1005b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-199695956d76a816",
+      "number": "1003c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-52c3873bcc13d616",
+      "number": "1004c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-650115f87af4559f",
+      "number": "1005c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []

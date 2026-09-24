@@ -4300,7 +4300,67 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-5f2eb302ed51ec77": {
+      "number": "1006b",
+      "status": "answer_mismatch",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-24T21:35:02.047Z",
+      "nextAttemptAt": "2027-09-24T21:35:02.047Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-55-anos-faz-uso70265f3125/",
+      "localAnswer": "B",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-512a183cd73c237b": {
+      "number": "1001c",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-24T21:35:07.352Z",
+      "nextAttemptAt": "2026-10-01T21:35:07.352Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-29718ab5e999c649": {
+      "number": "1002c",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-24T21:35:12.627Z",
+      "nextAttemptAt": "2026-10-01T21:35:12.627Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-199695956d76a816": {
+      "number": "1003c",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-24T21:35:17.901Z",
+      "nextAttemptAt": "2026-10-01T21:35:17.901Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-52c3873bcc13d616": {
+      "number": "1004c",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-24T21:35:23.147Z",
+      "nextAttemptAt": "2026-10-01T21:35:23.147Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-650115f87af4559f": {
+      "number": "1005c",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-24T21:35:28.471Z",
+      "nextAttemptAt": "2026-10-01T21:35:28.471Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-09-24T11:54:51.827Z"
+  "updatedAt": "2026-09-24T21:35:28.471Z"
 }
