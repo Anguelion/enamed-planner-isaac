@@ -3853,53 +3853,53 @@
     },
     "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-31595574f85fae9e": {
       "number": "1017b",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-18T20:58:01.346Z",
-      "nextAttemptAt": "2026-09-25T20:58:01.346Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "answer_mismatch",
+      "attempts": 2,
+      "lastAttemptAt": "2026-09-25T21:39:02.507Z",
+      "nextAttemptAt": "2027-09-25T21:39:02.507Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-masculino-76104bb993ff1/",
+      "localAnswer": "B",
+      "remoteAnswer": "A"
     },
     "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-49455b90a084f606": {
       "number": "1018b",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-18T20:58:06.794Z",
-      "nextAttemptAt": "2026-09-25T20:58:06.794Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-09-25T21:39:08.830Z",
+      "nextAttemptAt": "2026-10-09T21:39:08.830Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/varfarina-e-altamente26e00247e9/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     },
     "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-e3c8fcd80d41ecb5": {
       "number": "1020b",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-18T20:58:12.313Z",
-      "nextAttemptAt": "2026-09-25T20:58:12.313Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "answer_mismatch",
+      "attempts": 2,
+      "lastAttemptAt": "2026-09-25T21:39:15.134Z",
+      "nextAttemptAt": "2027-09-25T21:39:15.134Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Atualmente-temos38de3ce251/",
+      "localAnswer": "E",
+      "remoteAnswer": "A"
     },
     "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-53f53353efc97ab9": {
       "number": "1021b",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-18T20:58:17.783Z",
-      "nextAttemptAt": "2026-09-25T20:58:17.783Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "answer_mismatch",
+      "attempts": 2,
+      "lastAttemptAt": "2026-09-25T21:39:21.743Z",
+      "nextAttemptAt": "2027-09-25T21:39:21.743Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/conduta-para-paciente14edc426a4/",
+      "localAnswer": "A",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-7aa71b68e2f5984f": {
       "number": "1023b",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-18T20:58:23.263Z",
-      "nextAttemptAt": "2026-09-25T20:58:23.263Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "answer_mismatch",
+      "attempts": 2,
+      "lastAttemptAt": "2026-09-25T21:39:28.555Z",
+      "nextAttemptAt": "2027-09-25T21:39:28.555Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/disturbios190eeb7207/",
+      "localAnswer": "A",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-75706324b73182a8": {
       "number": "1024b",
@@ -4400,7 +4400,17 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-6ccf329bc7eab851": {
+      "number": "1010c",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-25T21:39:34.055Z",
+      "nextAttemptAt": "2026-10-02T21:39:34.055Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-09-25T11:57:23.846Z"
+  "updatedAt": "2026-09-25T21:39:34.055Z"
 }

@@ -1054,7 +1054,108 @@
       ],
       "suggestedComment": "Gabarito confirmado: A. Assunto: Anticoagulantes orais diretos (DOAC). Conduta/resposta: A rivaroxabana foi aprovada para reduzir o risco de AVC e embolia sistêmica em pacientes com FA de etiologia não valvar.",
       "reviewedAt": "2026-09-25T11:56:55.999Z"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-31595574f85fae9e": {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-31595574f85fae9e",
+      "number": "1017b",
+      "status": "answer_mismatch",
+      "localAnswer": "B",
+      "remoteAnswer": "A",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-masculino-76104bb993ff1/",
+      "similarity": {
+        "stem": 1,
+        "options": 0.9475,
+        "combined": 0.98425
+      },
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Anticoagulantes antagonistas da vitamina K",
+        "Cardiologia",
+        "Arritmias Cardíacas",
+        "Fibrilação Atrial",
+        "Prevenção de tromboembolismo",
+        "Anticoagulação oral",
+        "Antagonistas da vitamina K"
+      ],
+      "suggestedComment": "Gabarito confirmado: A. Assunto: Antagonistas da vitamina K. Conduta/resposta: Omitir varfarina até nível terapêutico e, então, reiniciar varfarina com redução de 10- 15% na dose semanal.",
+      "reviewedAt": "2026-09-25T21:39:02.492Z"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-e3c8fcd80d41ecb5": {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-e3c8fcd80d41ecb5",
+      "number": "1020b",
+      "status": "answer_mismatch",
+      "localAnswer": "E",
+      "remoteAnswer": "A",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Atualmente-temos38de3ce251/",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária"
+      ],
+      "suggestedComment": "Gabarito confirmado: A. Assunto: Fármacos e agentes relacionados a hemostasia secundária. Conduta/resposta: warfarina: iniciar com 5mg/dia, sempre associado a outro anticoagulante, preferencialmente enoxaparina. Manter a associação até INR adequado e não se deve aumentar a dose de warfarina antes de 05 dias de tratamento.",
+      "reviewedAt": "2026-09-25T21:39:15.134Z"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-53f53353efc97ab9": {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-53f53353efc97ab9",
+      "number": "1021b",
+      "status": "answer_mismatch",
+      "localAnswer": "A",
+      "remoteAnswer": "C",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/conduta-para-paciente14edc426a4/",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "tags": [
+        "Cirurgia",
+        "Avaliação Pré-Operatória",
+        "Avaliação Cardiovascular",
+        "Manejo da Anticoagulação no Perioperatório",
+        "Antagonistas da Vitamina K",
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Anticoagulantes antagonistas da vitamina K"
+      ],
+      "suggestedComment": "Gabarito confirmado: C. Assunto: Anticoagulantes antagonistas da vitamina K. Conduta/resposta: Suspender a dose de warfarina cinco dias antes do procedimento, iniciando heparina de baixo peso molecular em dose terapêutica.",
+      "reviewedAt": "2026-09-25T21:39:21.743Z"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-7aa71b68e2f5984f": {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-7aa71b68e2f5984f",
+      "number": "1023b",
+      "status": "answer_mismatch",
+      "localAnswer": "A",
+      "remoteAnswer": "C",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/disturbios190eeb7207/",
+      "similarity": {
+        "stem": 1,
+        "options": 0.85,
+        "combined": 0.955
+      },
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Fármacos e agentes relacionados a hemostasia primária (antiplaquetários)"
+      ],
+      "suggestedComment": "Gabarito confirmado: C. Assunto: Fármacos e agentes relacionados a hemostasia primária (antiplaquetários). Conduta/resposta: Bernard-Soullier",
+      "reviewedAt": "2026-09-25T21:39:28.554Z"
     }
   },
-  "updatedAt": "2026-09-25T11:56:56.000Z"
+  "updatedAt": "2026-09-25T21:39:28.555Z"
 }

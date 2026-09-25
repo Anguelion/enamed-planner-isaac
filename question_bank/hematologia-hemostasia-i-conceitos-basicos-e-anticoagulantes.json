@@ -337,7 +337,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Com RNI muito alto (8,5) mas sem nenhum sinal de sangramento, a orientação atual é: segurar a varfarina até o RNI baixar, dar uma dose de vitamina K por via ORAL (mais simples e segura que a injetável nesse cenário) e, quando o RNI normalizar, voltar com a varfarina numa dose um pouco menor.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -370,14 +370,32 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A pergunta pede a frase que NÃO podemos aceitar como verdadeira, ou seja, a frase ERRADA. A faixa terapêutica correta da varfarina na fibrilação atrial é RNI entre 2 e 3 — não entre 5 e 6, como diz a alternativa B. Um RNI de 5-6 seria perigosamente alto, quase um sangramento esperando pra acontecer, e não é a meta do tratamento. As outras frases (dificuldade de manter controle, interação com remédios e alimentos) estão certas.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Cardiologia",
+        "Arritmias Cardíacas",
+        "Fibrilação Atrial",
+        "Prevenção de tromboembolismo",
+        "Anticoagulação oral",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Anticoagulantes antagonistas da vitamina K",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742439651978",
-      "ankiGuid": "vdKyRN+<GR"
+      "ankiGuid": "vdKyRN+<GR",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/varfarina-e-altamente26e00247e9/",
+        "sourceQuestionId": "4000009563",
+        "matchedAt": "2026-09-25T21:39:08.829Z",
+        "confidence": 0.9652902202314295
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-e3c8fcd80d41ecb5",
@@ -404,7 +422,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava E, uma afirmação exagerada e falsa (nem todo anticoagulante oral precisa de heparina junto). A resposta certa é A: no início da varfarina, ela deve vir sempre acompanhada de outro anticoagulante (de preferência enoxaparina), mantendo os dois juntos até o RNI ficar na faixa certa, e sem aumentar a dose da varfarina antes de uns 5 dias — isso porque, como vimos, a varfarina no começo pode deixar o sangue mais propenso a coagular antes de proteger de verdade.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -437,7 +455,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava A, que é insuficiente (suspender a varfarina só um dia antes não dá tempo do efeito passar, já que ela demora dias pra sair do corpo). A resposta certa é C: suspender a varfarina cinco dias antes da cirurgia, cobrindo o paciente com heparina de baixo peso molecular em dose terapêutica nesse meio tempo (isso se chama 'terapia de ponte'), garantindo que ele não fique desprotegido nem com risco alto de sangrar na cirurgia.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -471,7 +489,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava A, mas quem tem esse nome (deficiência do complexo GpIb/V/IX) é a síndrome de Bernard-Soulier, não a doença de Von Willebrand. A síndrome de Bernard-Soulier é como se a plaqueta perdesse o 'gancho' que usa pra grudar na parede do vaso — sem esse receptor (GpIb/V/IX), ela não consegue aderir direito, mesmo que o Fator de Von Willebrand esteja funcionando normalmente.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
