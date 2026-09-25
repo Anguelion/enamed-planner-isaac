@@ -126,7 +126,8 @@ ensureDailyTasks();
 ensureSimTopics();
 ensureFeynman();
 ensureQuestionProgress();
-let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', priority: 'Todas', scheduleBlock: 'Atual', scheduleBlockPinned: false, scheduleBlockScrollLeft: 0, scheduleSelectedId:'', scheduleDay: '', scheduleWeekAnchor: studyDateKey(), refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', weeklyWeekOffset:0, areaChartMetric:'hours', areaChartWeekOffset:0, qBrowseMode:'specialty', qSpecialty:'Todas', qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, qFocusQuestionIds: [], justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialFocusMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', materialsSection:'apostila', materialSpecialty:'Todos', materialGlobalSearch:'', cadernoSearch: '', cadernoArea: 'Todas', cadernoEditId: '', flashcardView: 'overview', flashcardFilter: 'Aprendendo', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', flashcardFocusMode: false, flashcardFocusPaused: false, flashcardSpeedMode: false, flashcardCardStartedAt: 0, flashcardSpeedCardId: '', revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionTab:'prescricao', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
+const DEFAULT_SCHEDULE_WEEK_ANCHOR = state.reschedule?.restartDate > studyDateKey() ? state.reschedule.restartDate : studyDateKey();
+let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', priority: 'Todas', scheduleBlock: 'Atual', scheduleBlockPinned: false, scheduleBlockScrollLeft: 0, scheduleSelectedId:'', scheduleDay: '', scheduleWeekAnchor: DEFAULT_SCHEDULE_WEEK_ANCHOR, refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', weeklyWeekOffset:0, areaChartMetric:'hours', areaChartWeekOffset:0, qBrowseMode:'specialty', qSpecialty:'Todas', qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, qFocusQuestionIds: [], justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialFocusMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', materialsSection:'apostila', materialSpecialty:'Todos', materialGlobalSearch:'', cadernoSearch: '', cadernoArea: 'Todas', cadernoEditId: '', flashcardView: 'overview', flashcardFilter: 'Aprendendo', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', flashcardFocusMode: false, flashcardFocusPaused: false, flashcardSpeedMode: false, flashcardCardStartedAt: 0, flashcardSpeedCardId: '', revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionTab:'prescricao', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
 ui.legacyImportPreview = null;
 ui.scheduleBlockFocusPending ||= ui.scheduleBlock||'Atual';
 ui.scheduleWeekScrollLeft = n(ui.scheduleWeekScrollLeft);
@@ -509,10 +510,12 @@ function nextWeekday(date) {
   return d;
 }
 function ensureRestartFromBlockTwelve() {
-  const version = 'block12-restart-2026-08-26-v4';
+  const version = 'block12-restart-2026-09-28-v5';
   const startBlock = 12;
-  const restartDate = '2026-08-26';
-  const studyBreakDates = new Set(['2026-09-07','2026-10-12','2026-11-02','2026-11-20']);
+  const restartDate = '2026-09-28';
+  const yearEndDate = '2026-12-31';
+  const dailyCapacity = [0,1,1,2,1,1,0];
+  const studyBreakDates = new Set(['2026-10-12','2026-11-02','2026-11-20','2026-12-25','2027-01-01']);
   const schedule = state.schedule || [];
   const plannedLessons = schedule.filter(item => n(item.block) >= startBlock)
     .sort((a,b)=>n(a.block)-n(b.block) || n(a.lessonOrder)-n(b.lessonOrder) || n(a.row)-n(b.row) || byDate(a,b));
@@ -524,7 +527,7 @@ function ensureRestartFromBlockTwelve() {
     const assignedDate = expectedDate;
     const weekday = new Date(`${expectedDate}T12:00:00`).getDay();
     expectedSlot += 1;
-    if(expectedSlot >= [0,2,1,2,1,2,0][weekday]) {
+    if(expectedSlot >= dailyCapacity[weekday]) {
       expectedSlot = 0;
       expectedDate = addDays(expectedDate, 1);
     }
@@ -542,8 +545,8 @@ function ensureRestartFromBlockTwelve() {
   lessons.forEach((item, index) => {
     const date = expectedDates[index];
     const weekday = new Date(`${date}T12:00:00`).getDay();
-    // Oito aulas por semana: duas em segundas, quartas e sextas;
-    // uma em terças e quintas. Fins de semana ficam livres para revisão.
+    // Seis aulas por semana: uma em segundas, terças, quintas e sextas;
+    // duas em quartas. Fins de semana ficam livres para revisão.
     if(!item.originalDate) item.originalDate = item.date;
     item.date = date;
     item.day = weekdayName(date);
@@ -560,10 +563,14 @@ function ensureRestartFromBlockTwelve() {
     restartDate,
     plannedFinishDate: lessons.at(-1)?.date || restartDate,
     weekdaysOnly: true,
-    weeklyTarget: 8,
+    weeklyTarget: 6,
+    lessonsByYearEnd: lessons.filter(item => item.date <= yearEndDate).length,
+    lessonsAfterYearEnd: lessons.filter(item => item.date > yearEndDate).length,
+    yearEndDate,
+    dailyCapacity: {Segunda:1,Terça:1,Quarta:2,Quinta:1,Sexta:1},
     studyBreakDates: [...studyBreakDates],
     weekendCatchUp: [],
-    method: 'Blocos 12 a 30 em ordem oficial, de 26/08/2026 a 23/12/2026. Duas aulas às segundas, quartas e sextas; uma às terças e quintas. Fins de semana e feriados nacionais reservados para revisão e recuperação.'
+    method: 'Blocos 12 a 30 em ordem oficial, a partir de 28/09/2026. Uma aula às segundas, terças, quintas e sextas; duas às quartas. Fins de semana e feriados nacionais reservados para revisão e recuperação. Previsão de conclusão: 02/03/2027.'
   };
   state.schedulePlanVersion = version;
   state.schedulePlanVersion2 = version;
@@ -5207,7 +5214,9 @@ function renderCronograma() {
     <button class="icon-btn schedule-toolbar-clear ${filterCount?'has-filters':''}" id="clearFilters" type="button" ${filterCount?'': 'disabled'}>${iconSvg('close',{weight:'regular'})}<span>Limpar${filterCount?` (${filterCount})`:''}</span></button>
   </div>`;
   const missionLabel = selectedBlock==='Todos' ? 'Visão geral' : `Bloco ${selectedBlock}`;
-  document.getElementById('cronograma').innerHTML = `<section class="card mission-card"><div class="mission-header"><div class="mission-heading"><span class="mission-heading-icon">${iconSvg('mission')}</span><div><span class="eyebrow">Missão</span><h2>Organize seu caminho até o ENAMED</h2><p>${changed ? `Última atividade: <strong>${escapeHtml(changed.topic)}</strong> · ${fmtDate(changed.date)}` : 'Escolha um bloco e avance aula por aula.'}</p></div></div><div class="mission-progress" aria-label="${selectedProgress}% concluído em ${escapeAttr(missionLabel)}"><div><span>${escapeHtml(missionLabel)}</span><strong>${selectedDone}<small>/${selectedItems.length}</small></strong><small>aulas concluídas</small></div><div class="mission-progress-ring" style="--mission-progress:${selectedProgress * 3.6}deg"><span>${selectedProgress}%</span></div></div></div><div class="mission-blocks"><div class="mission-blocks-head"><div><h3>Blocos do cronograma</h3><span>Selecione para ver apenas as aulas daquele bloco</span></div><div class="mission-legend" aria-label="Legenda dos blocos"><span class="done">Concluído</span><span class="pending">Pendente</span><span class="current">Atual</span></div></div>${renderBlockStrip()}</div>${renderScheduleDayPicker()}${toolbar}</section><div class="card schedule-list-card"><div class="section-title"><div><h2>${ui.scheduleDay?`Aulas de ${fmtDate(ui.scheduleDay)}`:'Cronograma editável'}</h2><span class="muted">${ui.scheduleDay?'Mostrando somente as aulas da data selecionada.':'Clique no nome de uma aula para selecioná-la.'}</span></div><span class="schedule-result-count">${rows.length} ${rows.length===1?'item':'itens'}</span></div>${selectedLessonBanner}${priorityLegend()}${renderScheduleTable(rows, true)}</div>`;
+  const plan = state.reschedule || {};
+  const planSummary = plan.restartDate ? `<div class="mission-plan-summary" aria-label="Resumo do cronograma reorganizado"><div><span>Recomeço</span><strong>${fmtDate(plan.restartDate)}</strong></div><div><span>Ritmo semanal</span><strong>${n(plan.weeklyTarget)} aulas</strong><small>1 seg · 1 ter · 2 qua · 1 qui · 1 sex</small></div><div><span>Até 31 de dezembro</span><strong>${n(plan.lessonsByYearEnd)} aulas</strong><small>${n(plan.lessonsAfterYearEnd)} seguem em 2027</small></div><div class="mission-plan-finish"><span>Conclusão prevista</span><strong>${fmtDate(plan.plannedFinishDate)}</strong></div></div>` : '';
+  document.getElementById('cronograma').innerHTML = `<section class="card mission-card"><div class="mission-header"><div class="mission-heading"><span class="mission-heading-icon">${iconSvg('mission')}</span><div><span class="eyebrow">Missão</span><h2>Organize seu caminho até o ENAMED</h2><p>${changed ? `Última atividade: <strong>${escapeHtml(changed.topic)}</strong> · ${fmtDate(changed.date)}` : 'Escolha um bloco e avance aula por aula.'}</p></div></div><div class="mission-progress" aria-label="${selectedProgress}% concluído em ${escapeAttr(missionLabel)}"><div><span>${escapeHtml(missionLabel)}</span><strong>${selectedDone}<small>/${selectedItems.length}</small></strong><small>aulas concluídas</small></div><div class="mission-progress-ring" style="--mission-progress:${selectedProgress * 3.6}deg"><span>${selectedProgress}%</span></div></div></div>${planSummary}<div class="mission-blocks"><div class="mission-blocks-head"><div><h3>Blocos do cronograma</h3><span>Selecione para ver apenas as aulas daquele bloco</span></div><div class="mission-legend" aria-label="Legenda dos blocos"><span class="done">Concluído</span><span class="pending">Pendente</span><span class="current">Atual</span></div></div>${renderBlockStrip()}</div>${renderScheduleDayPicker()}${toolbar}</section><div class="card schedule-list-card"><div class="section-title"><div><h2>${ui.scheduleDay?`Aulas de ${fmtDate(ui.scheduleDay)}`:'Cronograma editável'}</h2><span class="muted">${ui.scheduleDay?'Mostrando somente as aulas da data selecionada.':'Clique no nome de uma aula para selecioná-la.'}</span></div><span class="schedule-result-count">${rows.length} ${rows.length===1?'item':'itens'}</span></div>${selectedLessonBanner}${priorityLegend()}${renderScheduleTable(rows, true)}</div>`;
   enhanceScheduleStudyIcons();
   const blockStrip=document.querySelector('#cronograma .block-strip');
   if(blockStrip) {
