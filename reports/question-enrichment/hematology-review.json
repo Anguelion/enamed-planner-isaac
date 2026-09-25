@@ -1020,7 +1020,41 @@
       ],
       "suggestedComment": "Gabarito confirmado: D. Assunto: Anticoagulantes antagonistas da vitamina K. Conduta/resposta: Suspender o varfarina, aplicar vitamina K e reservar plasma.",
       "reviewedAt": "2026-09-24T21:35:02.047Z"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-1ff96ee341d908b7": {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-1ff96ee341d908b7",
+      "number": "1014b",
+      "status": "answer_mismatch",
+      "localAnswer": "B",
+      "remoteAnswer": "A",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Com-as-indicacoes10a0e57f4f/",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Anticoagulantes orais diretos",
+        "Pneumologia",
+        "Tromboembolismo Pulmonar (TEP)",
+        "Tratamento",
+        "Anticoagulação",
+        "Novos anticoagulantes orais - NOACs",
+        "Cardiologia",
+        "Arritmias Cardíacas",
+        "Fibrilação Atrial",
+        "Prevenção de tromboembolismo",
+        "Anticoagulação oral",
+        "Anticoagulantes orais diretos (DOAC)"
+      ],
+      "suggestedComment": "Gabarito confirmado: A. Assunto: Anticoagulantes orais diretos (DOAC). Conduta/resposta: A rivaroxabana foi aprovada para reduzir o risco de AVC e embolia sistêmica em pacientes com FA de etiologia não valvar.",
+      "reviewedAt": "2026-09-25T11:56:55.999Z"
     }
   },
-  "updatedAt": "2026-09-24T21:35:02.047Z"
+  "updatedAt": "2026-09-25T11:56:56.000Z"
 }

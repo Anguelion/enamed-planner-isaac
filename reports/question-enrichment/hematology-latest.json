@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T21:35:00.324Z",
+  "generatedAt": "2026-09-25T11:56:53.709Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
@@ -7,21 +7,21 @@
   "changed": 0,
   "results": [
     {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-5f2eb302ed51ec77",
-      "number": "1006b",
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-1ff96ee341d908b7",
+      "number": "1014b",
       "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
       "changed": false,
       "status": "answer_mismatch",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-55-anos-faz-uso70265f3125/",
-      "sourceQuestionId": "4000181343",
-      "matchedAt": "2026-09-24T21:35:02.047Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Com-as-indicacoes10a0e57f4f/",
+      "sourceQuestionId": "4000145130",
+      "matchedAt": "2026-09-25T11:56:55.999Z",
       "similarity": {
-        "stem": 0.9814814814814815,
-        "options": 0.8587301587301587,
-        "combined": 0.9446560846560845
+        "stem": 1,
+        "options": 1,
+        "combined": 1
       },
       "localAnswer": "B",
-      "remoteAnswer": "D",
+      "remoteAnswer": "A",
       "answerMismatch": true,
       "tags": [
         "Clínica Médica",
@@ -29,48 +29,60 @@
         "Hemostasia",
         "Hemostasia Secundária",
         "Fármacos e agentes relacionados a hemostasia secundária",
-        "Anticoagulantes antagonistas da vitamina K"
+        "Anticoagulantes orais diretos",
+        "Pneumologia",
+        "Tromboembolismo Pulmonar (TEP)",
+        "Tratamento",
+        "Anticoagulação",
+        "Novos anticoagulantes orais - NOACs",
+        "Cardiologia",
+        "Arritmias Cardíacas",
+        "Fibrilação Atrial",
+        "Prevenção de tromboembolismo",
+        "Anticoagulação oral",
+        "Anticoagulantes orais diretos (DOAC)"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Anticoagulantes antagonistas da vitamina K. Conduta/resposta: Suspender o varfarina, aplicar vitamina K e reservar plasma.",
+      "comment": "Gabarito confirmado: A. Assunto: Anticoagulantes orais diretos (DOAC). Conduta/resposta: A rivaroxabana foi aprovada para reduzir o risco de AVC e embolia sistêmica em pacientes com FA de etiologia não valvar.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-55-anos-faz-uso70265f3125/"
+        "https://med.estrategia.com/public/questoes/Com-as-indicacoes10a0e57f4f/",
+        "https://med.estrategia.com/public/questoes/362ed8b6da8d6d9506498804/"
       ]
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-512a183cd73c237b",
-      "number": "1001c",
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-ef4acb782a0fb130",
+      "number": "1015b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-6dda1e2a1253756e",
+      "number": "1006c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-29718ab5e999c649",
-      "number": "1002c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-4e8102530e4b0ffb",
+      "number": "1007c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-199695956d76a816",
-      "number": "1003c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-6656b50daf85388e",
+      "number": "1008c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-52c3873bcc13d616",
-      "number": "1004c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-650115f87af4559f",
-      "number": "1005c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-c1be4e8ee435f095",
+      "number": "1009c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": false,
       "status": "not_found",
