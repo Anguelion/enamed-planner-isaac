@@ -286,12 +286,22 @@ test('Missão sinaliza e abre questões extras após a meta da aula',()=>{
 test('Questões abre só a coleção necessária e deixa o banco completo sob demanda',()=>{
   const root=path.resolve(__dirname,'..');
   const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');
+  const indexScript=fs.readFileSync(path.join(root,'question_bank/index.js'),'utf8');
+  const index=JSON.parse(indexScript.match(/^window\.ENAMED_LOCAL_QUESTION_INDEX=(.*);\s*$/s)[1]);
+  const officialBlocks=index.blocks.filter(entry=>!entry.special && /^\d+$/.test(String(entry.block)));
   assert.match(planner,/loadLocalQuestionBank\(\{initialOnly:true,preferredBlock\}\)/);
   assert.doesNotMatch(planner,/scheduleQuestionBankExpansion/);
   assert.match(planner,/Carregar banco completo/);
   assert.match(planner,/sob demanda/);
   assert.match(planner,/Carregando as primeiras questões/);
   assert.match(planner,/await loadLocalQuestionBank\(\{initialOnly:true,preferredBlock:String\(item\.block\)\}\)/);
+  assert.equal(officialBlocks.length,30);
+  assert.deepEqual(officialBlocks.map(entry=>Number(entry.block)),Array.from({length:30},(_,index)=>index+1));
+  assert.match(planner,/function officialQuestionBlockEntries\(\)/);
+  assert.match(planner,/function ensureQuestionCollectionLoaded\(block\)/);
+  assert.match(planner,/if\(key !== 'Todos'\) ensureQuestionCollectionLoaded\(key\)/);
+  assert.match(planner,/questionCollectionLoadPromises\.has\(group\.block\)/);
+  assert.match(planner,/Todos os blocos carregados/);
   assert.doesNotMatch(planner,/requestIdleCallback\(\(\) => loadQuestionBank\(\)/);
 });
 

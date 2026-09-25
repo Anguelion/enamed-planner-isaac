@@ -127,7 +127,7 @@ ensureSimTopics();
 ensureFeynman();
 ensureQuestionProgress();
 const DEFAULT_SCHEDULE_WEEK_ANCHOR = state.reschedule?.restartDate > studyDateKey() ? state.reschedule.restartDate : studyDateKey();
-let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', priority: 'Todas', scheduleBlock: 'Atual', scheduleBlockPinned: false, scheduleBlockScrollLeft: 0, scheduleSelectedId:'', scheduleDay: '', scheduleWeekAnchor: DEFAULT_SCHEDULE_WEEK_ANCHOR, refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', weeklyWeekOffset:0, areaChartMetric:'hours', areaChartWeekOffset:0, qBrowseMode:'specialty', qSpecialty:'Todas', qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, qFocusQuestionIds: [], justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialFocusMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', materialsSection:'apostila', materialSpecialty:'Todos', materialGlobalSearch:'', cadernoSearch: '', cadernoArea: 'Todas', cadernoEditId: '', flashcardView: 'overview', flashcardFilter: 'Aprendendo', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', flashcardFocusMode: false, flashcardFocusPaused: false, flashcardSpeedMode: false, flashcardCardStartedAt: 0, flashcardSpeedCardId: '', revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionTab:'prescricao', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
+let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', priority: 'Todas', scheduleBlock: 'Atual', scheduleBlockPinned: false, scheduleBlockScrollLeft: 0, scheduleSelectedId:'', scheduleDay: '', scheduleWeekAnchor: DEFAULT_SCHEDULE_WEEK_ANCHOR, refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', weeklyWeekOffset:0, areaChartMetric:'hours', areaChartWeekOffset:0, qBrowseMode:'block', qSpecialty:'Todas', qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, qFocusQuestionIds: [], justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialFocusMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', materialsSection:'apostila', materialSpecialty:'Todos', materialGlobalSearch:'', cadernoSearch: '', cadernoArea: 'Todas', cadernoEditId: '', flashcardView: 'overview', flashcardFilter: 'Aprendendo', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', flashcardFocusMode: false, flashcardFocusPaused: false, flashcardSpeedMode: false, flashcardCardStartedAt: 0, flashcardSpeedCardId: '', revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionTab:'prescricao', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
 ui.legacyImportPreview = null;
 ui.scheduleBlockFocusPending ||= ui.scheduleBlock||'Atual';
 ui.scheduleWeekScrollLeft = n(ui.scheduleWeekScrollLeft);
@@ -2369,6 +2369,35 @@ async function loadFullQuestionBank() {
   })().finally(()=>{ questionBankFullLoadPromise=null; if(ui.tab==='questoes') renderQuestionBank(); });
   if(ui.tab==='questoes') renderQuestionBank();
   return questionBankFullLoadPromise;
+}
+function questionCatalogEntries() {
+  return (window.ENAMED_LOCAL_QUESTION_INDEX?.blocks || []).slice().sort((a,b) => questionCollectionSort(a.block) - questionCollectionSort(b.block) || String(a.label || a.block).localeCompare(String(b.label || b.block), 'pt-BR'));
+}
+function officialQuestionBlockEntries() {
+  return questionCatalogEntries().filter(entry => !entry.special && /^\d+$/.test(String(entry.block)));
+}
+function questionCollectionIsLoaded(block) {
+  return Boolean(window.ENAMED_LOCAL_QUESTION_BANK?.[block]);
+}
+const questionCollectionLoadPromises = new Map();
+async function ensureQuestionCollectionLoaded(block) {
+  const key=String(block || '');
+  if(!key || key === 'Todos' || questionCollectionIsLoaded(key)) return true;
+  const entry=questionCatalogEntries().find(item => String(item.block) === key);
+  if(!entry) return false;
+  if(questionCollectionLoadPromises.has(key)) return questionCollectionLoadPromises.get(key);
+  const promise=(async()=>{
+    await loadLocalQuestionBank({initialOnly:true,preferredBlock:key});
+    backfillQuestionScheduleLinks();
+    reconcileQuestionProgressWithAnswers();
+    return questionCollectionIsLoaded(key);
+  })().finally(()=>{
+    questionCollectionLoadPromises.delete(key);
+    if(ui.tab === 'questoes') renderQuestionBank();
+  });
+  questionCollectionLoadPromises.set(key,promise);
+  if(ui.tab === 'questoes') renderQuestionBank();
+  return promise;
 }
 const questionBlockLoadPromises = new Map();
 function loadQuestionBlockScript(src) {
@@ -11921,6 +11950,7 @@ function exploreQuestionBank() {
   ui.qFocusScheduleId='';
   ui.qFocusQuestionIds=[];
   ui.qFocusTarget=0;
+  ui.qBrowseMode='block';
   ui.qBlock='Todos';
   ui.qSpecialty='Todas';
   ui.qSource='Todas';
@@ -11932,6 +11962,23 @@ function exploreQuestionBank() {
   ui.justAnsweredId='';
   resetKeyboardConfirmation();
   render();
+}
+function selectQuestionBlock(block) {
+  const key=String(block || 'Todos');
+  ui.qFocusScheduleId='';
+  ui.qFocusQuestionIds=[];
+  ui.qFocusTarget=0;
+  ui.qBrowseMode='block';
+  ui.qBlock=key;
+  ui.qSpecialty='Todas';
+  ui.qSource='Todas';
+  ui.qTopic='Todos';
+  ui.qIndex=0;
+  ui.qQuestionId='';
+  ui.justAnsweredId='';
+  resetKeyboardConfirmation();
+  render();
+  if(key !== 'Todos') ensureQuestionCollectionLoaded(key);
 }
 function continueQuestionTraining() {
   const plan = questionLessonResumePlan();
@@ -12144,6 +12191,9 @@ function backToQuestionSelection() {
 function renderQuestionEmptyState(message) {
   return `<div class="empty question-session-end"><div>${escapeHtml(message)}</div><button class="icon-btn primary" id="backToQuestionBlocksBtn" type="button">‹ Escolher novo bloco de questões</button></div>`;
 }
+function renderQuestionLoadingState(block) {
+  return `<div class="empty question-session-end question-collection-loading" role="status" aria-live="polite"><span class="question-loading-spinner" aria-hidden="true"></span><div><strong>Carregando ${escapeHtml(questionCollectionLabel(block))}</strong><small>Preparando as questões deste bloco sem travar o restante do site.</small></div></div>`;
+}
 function bindQuestionEmptyState() {
   document.getElementById('backToQuestionBlocksBtn')?.addEventListener('click', backToQuestionSelection);
 }
@@ -12279,8 +12329,15 @@ function renderQuestionBank() {
   const specialties = ['Todas', ...new Set(questionBank.map(questionSpecialtyGroup).filter(Boolean))]
     .sort((a,b)=>a === 'Todas' ? -1 : b === 'Todas' ? 1 : a.localeCompare(b, 'pt-BR'));
   if(!specialties.includes(ui.qSpecialty)) ui.qSpecialty = 'Todas';
-  const blocks = ['Todos', ...new Set(questionBank.map(q => q.collectionBlock).filter(Boolean).map(String))]
-    .sort((a,b)=>a === 'Todos' ? -1 : b === 'Todos' ? 1 : questionCollectionSort(a)-questionCollectionSort(b));
+  const catalogEntries=questionCatalogEntries();
+  const catalogKeys=new Set(catalogEntries.map(entry => String(entry.block)));
+  const customBlocks=[...new Set(questionBank.map(question => question.collectionBlock).filter(value => value !== undefined && value !== null && value !== '').map(String))]
+    .filter(block => !catalogKeys.has(block))
+    .sort((a,b)=>questionCollectionSort(a)-questionCollectionSort(b) || a.localeCompare(b,'pt-BR'));
+  const officialEntries=catalogEntries.filter(entry => !entry.special && /^\d+$/.test(String(entry.block)));
+  const extraEntries=catalogEntries.filter(entry => entry.special || !/^\d+$/.test(String(entry.block)));
+  const blockOption = block => `<option value="${escapeAttr(String(block))}" ${String(block)===String(ui.qBlock)?'selected':''}>${escapeHtml(questionCollectionLabel(block))}</option>`;
+  const blockSelectOptions = `<option value="Todos" ${ui.qBlock==='Todos'?'selected':''}>Todos os blocos carregados</option>${officialEntries.length?`<optgroup label="Blocos 1 a 30">${officialEntries.map(entry => blockOption(entry.block)).join('')}</optgroup>`:''}${extraEntries.length?`<optgroup label="Coleções extras">${extraEntries.map(entry => blockOption(entry.block)).join('')}</optgroup>`:''}${customBlocks.length?`<optgroup label="Coleções pessoais">${customBlocks.map(blockOption).join('')}</optgroup>`:''}`;
   const scopedByPrimary = questionBank.filter(q => ui.qBrowseMode === 'block'
     ? ui.qBlock === 'Todos' || String(q.collectionBlock) === String(ui.qBlock)
     : ui.qSpecialty === 'Todas' || questionSpecialtyGroup(q) === ui.qSpecialty);
@@ -12306,6 +12363,7 @@ function renderQuestionBank() {
     ? `${resumePlan.item.topic} · ${resumePlan.pending ? `${resumePlan.remaining} questões` : `${resumePlan.completed}/${resumePlan.target} feitas`}`
     : `${pendingCount.toLocaleString('pt-BR')} pendentes`;
   const catalogStatus=questionBankCatalogStatus();
+  const selectedBlockLoading=ui.qBrowseMode === 'block' && ui.qBlock !== 'Todos' && questionCollectionLoadPromises.has(String(ui.qBlock));
   const catalogAction=catalogStatus.complete
     ? '<button type="button" class="qbank-quick-filter" disabled><span class="quick-filter-dot all"></span><strong>Banco completo</strong><small>Todas as coleções disponíveis</small></button>'
     : `<button type="button" class="qbank-quick-filter" id="loadFullQuestionBank" ${catalogStatus.loading?'disabled':''}><span class="quick-filter-dot all"></span><strong>${catalogStatus.loading?'Carregando extras…':'Carregar banco completo'}</strong><small>${catalogStatus.loading?'A interface continua disponível':`${questionBank.length.toLocaleString('pt-BR')} de ${catalogStatus.total.toLocaleString('pt-BR')} · sob demanda`}</small></button>`;
@@ -12313,14 +12371,14 @@ function renderQuestionBank() {
     <header class="qbank-overview">
       <div class="qbank-overview-copy"><span class="qbank-eyebrow">Treino inteligente</span><h1>Central de questões</h1><p>Pratique com foco, acompanhe sua evolução e transforme erros em revisão.</p></div>
       <div class="qbank-overview-metrics" aria-label="Resumo do banco de questões">
-        <div><span>Banco</span><strong>${questionBank.length.toLocaleString('pt-BR')}</strong><small>questões</small></div>
+        <div><span>Banco</span><strong>${(catalogStatus.total || questionBank.length).toLocaleString('pt-BR')}</strong><small>questões catalogadas</small></div>
         <div><span>Progresso</span><strong>${summary.answered.toLocaleString('pt-BR')}</strong><small>resolvidas</small></div>
         <div class="${answerRate >= 70 ? 'positive' : ''}"><span>Precisão</span><strong>${answerRate}%</strong><small>${summary.correct} acertos</small></div>
       </div>
       <div class="qbank-quick-actions" role="group" aria-label="Filtros rápidos">
         <button type="button" class="qbank-quick-filter ${ui.qFocusScheduleId?'active':''}" id="continueQuestionTraining"><span class="quick-filter-dot pending"></span><strong>${escapeHtml(resumeTitle)}</strong><small title="${escapeAttr(resumeDetail)}">${escapeHtml(resumeDetail)}</small></button>
         <button type="button" class="qbank-quick-filter ${ui.qStatus==='Erradas'?'active':''}" data-question-quick-filter="Erradas"><span class="quick-filter-dot errors"></span><strong>Revisar erros</strong><small>${(summary.answered-summary.correct).toLocaleString('pt-BR')} para rever</small></button>
-        <button type="button" class="qbank-quick-filter ${ui.qStatus==='Todas' && ui.qBlock==='Todos' && !ui.qFocusScheduleId && !ui.qSearch?'active':''}" id="exploreQuestionBank"><span class="quick-filter-dot all"></span><strong>Explorar banco</strong><small>${catalogStatus.complete?'Todos os blocos':'Coleções já carregadas'}</small></button>
+        <button type="button" class="qbank-quick-filter ${ui.qStatus==='Todas' && ui.qBlock==='Todos' && !ui.qFocusScheduleId && !ui.qSearch?'active':''}" id="exploreQuestionBank"><span class="quick-filter-dot all"></span><strong>Explorar banco</strong><small>${officialEntries.length} blocos organizados</small></button>
         ${catalogAction}
       </div>
     </header>
@@ -12331,7 +12389,7 @@ function renderQuestionBank() {
       ${progress('Aproveitamento', summary.correct/Math.max(summary.answered,1), `${summary.correct} de ${summary.answered}`)}
       <div class="confidence-box"><strong>Confiança média: ${confidence.avgConfidence || '-'}%</strong><div class="muted">Sabendo: ${confidence.knownCorrect} · Chute: ${confidence.luckyCorrect}</div><div class="muted">Erros: ${confidence.attention} atenção · ${confidence.memory} dúvida/já vi · ${confidence.knowledge} base</div></div>
       ${focusItem ? (() => { const target=lessonQuestionTarget(focusItem); const completed=questionStatsForSchedule(focusItem.id).done; const lessonCompleted=completedQuestions(focusItem); const remaining=Math.max(0,n(ui.qFocusTarget)-completed); const extras=lessonCompleted>=target&&remaining>0; return `<div class="focus-box"><strong>${extras?'Questões extras':'Foco da pendência'}</strong><div>${escapeHtml(focusItem.topic)}</div><div class="muted">Bloco ${focusItem.block} · ${escapeHtml(focusItem.area)}</div><div class="question-focus-progress"><strong>${remaining ? `${extras?'Restam':'Faltam'} ${remaining} questões` : extras?'Banco concluído':'Meta concluída'}</strong><span>${extras?`Meta de ${target} concluída`:`${Math.min(lessonCompleted,target)} de ${target}`}</span></div><button class="tiny-btn" id="clearQuestionFocus">Ver todas</button></div>`; })() : ''}
-      <details class="question-filter-panel"><summary>Blocos <span>${escapeHtml(ui.qBlock === 'Todos' ? 'Todas' : questionCollectionLabel(ui.qBlock))}</span></summary>
+      <details class="question-filter-panel" open><summary>Blocos <span>${escapeHtml(ui.qBlock === 'Todos' ? `${officialEntries.length} disponíveis` : questionCollectionLabel(ui.qBlock))}</span></summary>
       ${renderQuestionBlockOverview()}</details>
       <details class="question-filter-panel" open><summary>Filtros <span>${escapeHtml(ui.qStatus)}</span></summary>
       <div class="question-filter">
@@ -12342,19 +12400,19 @@ function renderQuestionBank() {
         <label class="search-field question-search-field"><span aria-hidden="true">⌕</span><input class="input" id="questionSearch" value="${escapeAttr(ui.qSearch)}" placeholder="Buscar enunciado, tema ou tag" autocomplete="off"></label>
         ${ui.qBrowseMode === 'specialty'
           ? `<label class="question-filter-field"><span>Especialidade</span><select class="select" id="questionSpecialty">${specialties.map(specialty => `<option value="${escapeAttr(specialty)}" ${specialty===ui.qSpecialty?'selected':''}>${specialty === 'Todas' ? 'Todas as especialidades' : escapeHtml(specialty)}</option>`).join('')}</select></label>`
-          : `<label class="question-filter-field"><span>Bloco</span><select class="select" id="questionBlock">${blocks.map(block => `<option value="${escapeAttr(block)}" ${block===String(ui.qBlock)?'selected':''}>${block === 'Todos' ? 'Todos os blocos' : escapeHtml(questionCollectionLabel(block))}</option>`).join('')}</select></label>`}
+          : `<label class="question-filter-field"><span>Bloco</span><select class="select" id="questionBlock">${blockSelectOptions}</select></label>`}
         <label class="question-filter-field"><span>Fonte</span><select class="select" id="questionSource">${sources.map(source => `<option value="${escapeAttr(source)}" ${source===ui.qSource?'selected':''}>${escapeHtml(source)}</option>`).join('')}</select></label>
         <label class="question-filter-field"><span>Tema</span><select class="select" id="questionTopic">${topics.map(topic => `<option value="${escapeAttr(topic)}" ${topic===ui.qTopic?'selected':''}>${escapeHtml(topic)}</option>`).join('')}</select></label>
         <label class="question-filter-field"><span>Status</span><select class="select" id="questionStatus">${['Todas','Não respondidas','Erradas','Certas','Gabarito pendente','Gabarito suspeito'].map(status => `<option ${status===ui.qStatus?'selected':''}>${status}</option>`).join('')}</select></label>
         <button type="button" class="tiny-btn question-clear-filters" id="questionClearFilters">Limpar filtros</button>
       </div></details>
     </aside>
-    <div class="card question-card">${activeQuestion ? renderQuestion(activeQuestion, questions.length) : renderQuestionEmptyState(ui.qFocusScheduleId ? 'Você concluiu as questões desta aula.' : 'Nenhuma questão corresponde a este filtro.')}</div>
+    <div class="card question-card">${activeQuestion ? renderQuestion(activeQuestion, questions.length) : selectedBlockLoading ? renderQuestionLoadingState(ui.qBlock) : renderQuestionEmptyState(ui.qFocusScheduleId ? 'Você concluiu as questões desta aula.' : 'Nenhuma questão corresponde a este filtro.')}</div>
   </div>`;
   document.querySelectorAll('[data-question-browse]').forEach(button => button.onclick = e => { ui.qBrowseMode=e.currentTarget.dataset.questionBrowse; ui.qSpecialty='Todas'; ui.qBlock='Todos'; ui.qSource='Todas'; ui.qTopic='Todos'; ui.qIndex=0; ui.qQuestionId=''; ui.justAnsweredId=''; render(); });
   document.getElementById('loadFullQuestionBank')?.addEventListener('click',()=>loadFullQuestionBank());
   const questionBlock = document.getElementById('questionBlock');
-  if(questionBlock) questionBlock.onchange = e => { ui.qFocusScheduleId=''; ui.qFocusQuestionIds=[]; ui.qBlock=e.target.value; ui.qSource='Todas'; ui.qTopic='Todos'; ui.qIndex=0; ui.justAnsweredId=''; render(); };
+  if(questionBlock) questionBlock.onchange = e => selectQuestionBlock(e.target.value);
   const questionSpecialty = document.getElementById('questionSpecialty');
   if(questionSpecialty) questionSpecialty.onchange = e => { ui.qFocusScheduleId=''; ui.qFocusQuestionIds=[]; ui.qSpecialty=e.target.value; ui.qSource='Todas'; ui.qTopic='Todos'; ui.qIndex=0; ui.justAnsweredId=''; render(); };
   document.getElementById('collapseQuestionSidebar').onclick = () => setQuestionFocusMode(true);
@@ -12385,7 +12443,7 @@ function renderQuestionBank() {
   });
   const clearFocus = document.getElementById('clearQuestionFocus');
   if(clearFocus) clearFocus.onclick = () => { ui.qFocusScheduleId=''; ui.qFocusQuestionIds=[]; ui.qFocusTarget=0; ui.qQuestionId=''; ui.qIndex=0; render(); };
-  document.querySelectorAll('[data-qblock-pick]').forEach(button => button.onclick = e => { ui.qFocusScheduleId=''; ui.qFocusQuestionIds=[]; ui.qFocusTarget=0; ui.qBrowseMode='block'; ui.qBlock=e.currentTarget.dataset.qblockPick; ui.qSpecialty='Todas'; ui.qSource='Todas'; ui.qTopic='Todos'; ui.qIndex=0; ui.qQuestionId=''; ui.justAnsweredId=''; render(); });
+  document.querySelectorAll('[data-qblock-pick]').forEach(button => button.onclick = e => selectQuestionBlock(e.currentTarget.dataset.qblockPick));
   bindQuestionTagFilters();
   bindQuestionActions(questions, activeQuestion);
   bindQuestionEmptyState();
@@ -12394,25 +12452,33 @@ function renderQuestionBank() {
 }
 function renderQuestionBlockOverview() {
   const groups = questionBlockStats();
-  if(!groups.length) return '<div class="empty">Carregue questões para ver os blocos.</div>';
+  if(!groups.length) return '<div class="empty">O catálogo de blocos ainda não foi carregado.</div>';
   return `<div class="qbank-block-grid">${groups.map(group => {
     const active = String(ui.qBlock) === group.block;
-    const label = group.block === 'ineditas' ? 'Inéditas' : group.block;
-    return `<button class="qbank-block-box ${active?'active':''}" data-qblock-pick="${escapeAttr(group.block)}"><strong>${escapeHtml(label)}</strong><small>${group.done}/${group.total}</small></button>`;
+    const loading = questionCollectionLoadPromises.has(group.block);
+    const label = String(group.block).padStart(2,'0');
+    const status = loading ? 'Carregando…' : group.loaded ? `${group.done}/${group.total}` : `${group.total} questões`;
+    return `<button class="qbank-block-box ${active?'active':''} ${group.loaded?'loaded':'unloaded'} ${loading?'loading':''}" data-qblock-pick="${escapeAttr(group.block)}" aria-pressed="${active}" ${loading?'disabled':''}><strong>${escapeHtml(label)}</strong><small>${escapeHtml(status)}</small></button>`;
   }).join('')}</div>`;
 }
 function questionBlockStats() {
   if(Array.isArray(renderCache.questionBlockStats)) return renderCache.questionBlockStats;
-  const groups = new Map();
+  const groups = new Map(officialQuestionBlockEntries().map(entry => [String(entry.block), {
+    block:String(entry.block),
+    total:n(entry.count),
+    done:0,
+    available:0,
+    loaded:questionCollectionIsLoaded(entry.block)
+  }]));
   questionBank.forEach(question => {
     if(question.collectionBlock === undefined || question.collectionBlock === null || question.collectionBlock === '') return;
     const block = String(question.collectionBlock);
-    const group = groups.get(block) || { block, total:0, done:0 };
-    group.total += 1;
+    const group = groups.get(block);
+    if(!group) return;
+    group.available += 1;
     if(questionResult(question)) group.done += 1;
-    groups.set(block, group);
   });
-  renderCache.questionBlockStats = [...groups.values()].sort((a,b)=>questionCollectionSort(a.block)-questionCollectionSort(b.block));
+  renderCache.questionBlockStats = [...groups.values()].map(group => ({...group,total:group.loaded ? group.available : group.total})).sort((a,b)=>questionCollectionSort(a.block)-questionCollectionSort(b.block));
   return renderCache.questionBlockStats;
 }
 function importDefaultFields() {

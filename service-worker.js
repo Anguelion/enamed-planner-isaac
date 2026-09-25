@@ -1,8 +1,8 @@
-const CACHE_NAME = 'soqueromed-shell-v338';
+const CACHE_NAME = 'soqueromed-shell-v339';
 const APP_SHELL = [
   './',
   './manifest.webmanifest',
-  './assets/planner.css?v=20260925-3',
+  './assets/planner.css?v=20260925-4',
   './assets/planner-refresh.css?v=20260818-22',
   './assets/mascote-ia.css?v=20260802-7',
   './assets/app-icons.js?v=20260802-1',
@@ -11,7 +11,7 @@ const APP_SHELL = [
   './assets/planner-ux.js?v=20260825-1',
   './assets/skill-highlighter.js?v=20260802-3',
   './assets/caso-do-dia.js?v=20260826-1',
-  './assets/planner.js?v=20260925-3',
+  './assets/planner.js?v=20260925-4',
   './assets/mascote-ia.js?v=20260802-10',
   './health-news/data/latest.json',
   './assets/dr-sotero.png',
