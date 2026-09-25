@@ -1,4 +1,4 @@
-# ENAMED Planner — Relatório de Handoff (gerado 2026-07-23)
+# ENAMED Planner — Relatório de Handoff (atualizado 2026-09-17)
 
 Documento de contexto completo para qualquer programa/agente retomar o trabalho do zero.
 
@@ -42,7 +42,7 @@ ENAMED-GitHub/
 │   ├── radiografia.js / radiografia-aulas.js
 │   ├── semiologia.js / semiologia-aulas.js
 │   └── audio/ ecg-real/ fonts/ icons/ radio-real/ rpg/ semiologia-real/
-├── question_bank/              # 32 arquivos .js (30 blocos + "ineditas" + índice) + .json mirrors (mortos, nunca lidos pelo app)
+├── question_bank/              # 50.465 questões válidas; .js consumidos pelo app e .json usados pela importação/auditoria
 ├── imported_simulados/         # simulados completos de provas passadas (ENARE 2022-24, ENAMED autoral, etc.) + index.json (só o que está listado aqui aparece no app)
 ├── materials_library/          # 1021 pastas, uma por tópico/material (ex: alimentacao-infantil/), cada uma com content.md + document.json + figuras .webp
 ├── video_library/catalog.json  # catálogo de vídeo-aulas (referencia arquivos .mp4 que ficam fora do repo, hospedados/consumidos via Cloudflare R2)
@@ -51,7 +51,7 @@ ENAMED-GitHub/
 ├── scripts/                    # audit-question-bank.js, build-icons.js, sync-offline-entry.js, import-medevo-especialidades.js
 ├── tools/                      # audit_question_answers.js, scripts Python de extração/importação de questões
 ├── tests/                      # *.test.js (Node --test), planner-sandbox.js, verify-static-build.js
-├── supabase/migrations/        # 20260715_gamification_mvp.sql (experimental, NÃO aplicado), 20260718_planner_states_server_updated_at.sql
+├── supabase/migrations/        # gamificação experimental, timestamp de sync, perfil do tutor IA e RLS de planner_states
 ├── supabase_backups_setup.sql / supabase_materials_storage_setup.sql  # SQL rodado manualmente por Isaac no console Supabase
 ├── imported_simulados/, archive/, trash/, tmp/  # pastas de apoio/histórico
 └── .claude/launch.json         # configs de dev server local (portas 8765-8768, 8793-8795)
@@ -64,11 +64,11 @@ Fora deste repo, no PC do Isaac:
 
 ## 4. Stack técnica
 
-- **Frontend**: vanilla JS (sem módulos ES — tudo via globals), vanilla CSS, HTML gerado dinamicamente por `planner.js` em 13 `<section class="view">` vazias no `index.html` (roteamento client-side por `ui.tab`).
+- **Frontend**: vanilla JS (sem módulos ES — tudo via globals), vanilla CSS, HTML gerado dinamicamente por `planner.js` em 21 `<section class="view">` vazias no `index.html` (roteamento client-side por `ui.tab`).
 - **Persistência**: `state` único em `localStorage['enamed-planner-v3']`, sincronizado como JSONB para a tabela Supabase `planner_states` (merge last-write-wins por campo top-level via `mergePlannerActivityState`).
 - **Backend**: Supabase (Auth + Postgres). Sem servidor próprio.
 - **Build/test**: Node.js puro (`node --test`, `node --check` para lint), sem bundler/transpiler. `npm run build` roda `build-icons` + `audit-question-bank` + `verify-static-build`.
-- **Deploy**: Cloudflare Pages (auto-deploy on push, config provavelmente só no dashboard do Cloudflare, não há `wrangler.toml`/CI no repo).
+- **Deploy**: Cloudflare Pages (auto-deploy on push; configuração principal provavelmente no dashboard). Há GitHub Actions para enriquecer questões de Hematologia e validar lint, testes e build antes de publicar o lote.
 - **Package manager**: npm (não pnpm — resolvido ambiguidade em 2026-07-23).
 
 ## 5. Como rodar localmente
@@ -87,19 +87,18 @@ Servidores de dev configurados em `.claude/launch.json` (todos via `py -3 -m htt
 
 ## 6. Estado conhecido / pendências (ver memória `project_architecture.md` para detalhes técnicos linha-a-linha)
 
-Resolvidos recentemente: allowlist de origem para cloud sync, testes reais via vm sandbox
-(73/73 passando), consolidação de 4 gerações de `:root` CSS, mensagem de erro de login
+Resolvidos recentemente: allowlist de origem para cloud sync, suíte automatizada de testes,
+consolidação de 4 gerações de `:root` CSS, mensagem de erro de login
 genérica, bug de digitação sendo interrompida por polling de sync, bug do botão "Refazer"
 não resetando estado da questão, sync de `simuladoRuns`/`simulados` corrigido, sync de
-texto da aba "materiais" corrigido (imagens da aba materiais ainda são só locais —
-gap conhecido), `pnpm-lock.yaml` órfão removido.
+texto e imagens da aba "materiais" corrigido, recálculo de acerto depois de editar um
+gabarito, banco sem IDs duplicados e `pnpm-lock.yaml` órfão removido.
 
 Pendências abertas:
-- **Imagens da aba "materiais" ainda não sincronizam** entre dispositivos (texto já sincroniza; bucket Supabase Storage `materials-images` já existe e é usado por flashcards, mas não está ligado à aba materiais ainda).
-- `scripts/sync-offline-entry.js` só copia/sobrescreve, nunca deleta arquivos removidos da origem — checar manualmente `../ENAMED/` após deletar algo no repo.
-- `question_bank/*.json` (mirrors dos `.js`) são peso morto, nunca lidos pelo app.
-- Bloco "Inéditas" tem 115/919 questões inválidas segundo o script de auditoria — não investigado.
-- Editar o gabarito de uma questão não recalcula a correção de respostas já dadas (`saveQuestionEdit` não chama `reconcileQuestionProgressWithAnswers`).
+- A primeira execução da nova sincronização offline cria `.enamed-offline-sync-manifest.json`. Depois disso, ela remove com segurança somente arquivos obsoletos que constavam no manifesto anterior; arquivos pessoais fora do manifesto são preservados. Resíduos anteriores à primeira execução ainda podem exigir conferência manual única.
+- O banco tem 673 conteúdos repetidos, tratados como aviso de curadoria; IDs duplicados agora interrompem a auditoria e a publicação automática.
+- A migração `20260917_planner_states_rls.sql` versiona a proteção por usuário da tabela `planner_states`, mas ainda precisa ser aplicada ao Supabase de produção pelo responsável do projeto.
+- `__restore_backup.json` está versionado no Git e contém um backup pessoal. Remover apenas o arquivo atual não apaga o histórico; uma limpeza de histórico exige autorização explícita e coordenação antes de reescrever o repositório remoto.
 - Schema relacional experimental de gamificação (`supabase/migrations/20260715_gamification_mvp.sql`) existe mas está **desativado** (`FEATURE_FLAGS.relationalSync = false`) — não aplicar sem instrução explícita.
 
 ## 7. Convenções de trabalho já validadas com o Isaac

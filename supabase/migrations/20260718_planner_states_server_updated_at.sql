@@ -2,6 +2,12 @@
 -- em vez de confiar no relogio de cada aparelho (PC/celular podem estar
 -- dessincronizados, o que pode fazer um aparelho decidir "nao ha nada novo"
 -- e nunca puxar uma edicao mais recente feita em outro aparelho).
+create table if not exists public.planner_states (
+  user_id uuid primary key references auth.users(id) on delete cascade,
+  data jsonb not null default '{}'::jsonb,
+  updated_at timestamptz not null default now()
+);
+
 create or replace function public.set_planner_states_updated_at()
 returns trigger
 language plpgsql

@@ -91,8 +91,6 @@ let materialLibraryStatus = 'Carregando resumos...';
 let importedSimulados = [];
 let importedSimuladosStatus = 'Carregando simulados importados...';
 let questionBankLoadPromise = null;
-let questionBankExpansionPromise = null;
-let questionBankExpansionTimer = null;
 let questionBankFullLoadPromise = null;
 let questionImportDraft = loadQuestionImportDraft();
 let materialLibraryLoadPromise = null;
@@ -128,7 +126,8 @@ ensureDailyTasks();
 ensureSimTopics();
 ensureFeynman();
 ensureQuestionProgress();
-let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', priority: 'Todas', scheduleBlock: 'Atual', scheduleBlockPinned: false, scheduleBlockScrollLeft: 0, scheduleSelectedId:'', scheduleDay: '', scheduleWeekAnchor: studyDateKey(), refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', weeklyWeekOffset:0, areaChartMetric:'hours', areaChartWeekOffset:0, qBrowseMode:'specialty', qSpecialty:'Todas', qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, qFocusQuestionIds: [], justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialFocusMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', materialsSection:'apostila', materialSpecialty:'Todos', materialGlobalSearch:'', cadernoSearch: '', cadernoArea: 'Todas', cadernoEditId: '', flashcardView: 'overview', flashcardFilter: 'Aprendendo', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', flashcardFocusMode: false, flashcardFocusPaused: false, flashcardSpeedMode: false, flashcardCardStartedAt: 0, flashcardSpeedCardId: '', revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionTab:'prescricao', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
+const DEFAULT_SCHEDULE_WEEK_ANCHOR = state.reschedule?.restartDate > studyDateKey() ? state.reschedule.restartDate : studyDateKey();
+let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', priority: 'Todas', scheduleBlock: 'Atual', scheduleBlockPinned: false, scheduleBlockScrollLeft: 0, scheduleSelectedId:'', scheduleDay: '', scheduleWeekAnchor: DEFAULT_SCHEDULE_WEEK_ANCHOR, refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', weeklyWeekOffset:0, areaChartMetric:'hours', areaChartWeekOffset:0, qBrowseMode:'specialty', qSpecialty:'Todas', qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, qFocusQuestionIds: [], justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialFocusMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', materialsSection:'apostila', materialSpecialty:'Todos', materialGlobalSearch:'', cadernoSearch: '', cadernoArea: 'Todas', cadernoEditId: '', flashcardView: 'overview', flashcardFilter: 'Aprendendo', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', flashcardFocusMode: false, flashcardFocusPaused: false, flashcardSpeedMode: false, flashcardCardStartedAt: 0, flashcardSpeedCardId: '', revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionTab:'prescricao', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
 ui.legacyImportPreview = null;
 ui.scheduleBlockFocusPending ||= ui.scheduleBlock||'Atual';
 ui.scheduleWeekScrollLeft = n(ui.scheduleWeekScrollLeft);
@@ -225,8 +224,10 @@ if(!activityResetMarker(state)) {
   }
 }
 let renderCache = { questionStats: new Map(), questionAvailability: new Map(), questionStatsReady:false, questionAvailabilityReady:false, questionAvailabilityScheduleKey:'', questionFilterKey:'', questionFilterResults:null, questionBlockStats:null, questionSummary:null, flashcardStats: new Map(), videoLessons: new Map(), videoDisplay: null, manualCards: null };
-let questionSidebarCollapsed = localStorage.getItem(QUESTION_SIDEBAR_KEY) === '1';
-let questionTagsHidden = localStorage.getItem(QUESTION_TAGS_HIDDEN_KEY) === '1';
+// A sessão começa limpa: filtros, métricas e ferramentas continuam disponíveis
+// pelo botão de painel, mas deixam de disputar atenção com o enunciado.
+let questionSidebarCollapsed = localStorage.getItem(QUESTION_SIDEBAR_KEY) !== '0';
+let questionTagsHidden = localStorage.getItem(QUESTION_TAGS_HIDDEN_KEY) !== '0';
 const views = [
   ['painel','Dashboard','dashboard'],
   ['radar-saude','Radar Saúde','reading'],
@@ -509,10 +510,12 @@ function nextWeekday(date) {
   return d;
 }
 function ensureRestartFromBlockTwelve() {
-  const version = 'block12-restart-2026-08-26-v4';
+  const version = 'block12-restart-2026-09-28-v5';
   const startBlock = 12;
-  const restartDate = '2026-08-26';
-  const studyBreakDates = new Set(['2026-09-07','2026-10-12','2026-11-02','2026-11-20']);
+  const restartDate = '2026-09-28';
+  const yearEndDate = '2026-12-31';
+  const dailyCapacity = [0,1,1,2,1,1,0];
+  const studyBreakDates = new Set(['2026-10-12','2026-11-02','2026-11-20','2026-12-25','2027-01-01']);
   const schedule = state.schedule || [];
   const plannedLessons = schedule.filter(item => n(item.block) >= startBlock)
     .sort((a,b)=>n(a.block)-n(b.block) || n(a.lessonOrder)-n(b.lessonOrder) || n(a.row)-n(b.row) || byDate(a,b));
@@ -524,7 +527,7 @@ function ensureRestartFromBlockTwelve() {
     const assignedDate = expectedDate;
     const weekday = new Date(`${expectedDate}T12:00:00`).getDay();
     expectedSlot += 1;
-    if(expectedSlot >= [0,2,1,2,1,2,0][weekday]) {
+    if(expectedSlot >= dailyCapacity[weekday]) {
       expectedSlot = 0;
       expectedDate = addDays(expectedDate, 1);
     }
@@ -542,8 +545,8 @@ function ensureRestartFromBlockTwelve() {
   lessons.forEach((item, index) => {
     const date = expectedDates[index];
     const weekday = new Date(`${date}T12:00:00`).getDay();
-    // Oito aulas por semana: duas em segundas, quartas e sextas;
-    // uma em terças e quintas. Fins de semana ficam livres para revisão.
+    // Seis aulas por semana: uma em segundas, terças, quintas e sextas;
+    // duas em quartas. Fins de semana ficam livres para revisão.
     if(!item.originalDate) item.originalDate = item.date;
     item.date = date;
     item.day = weekdayName(date);
@@ -560,10 +563,14 @@ function ensureRestartFromBlockTwelve() {
     restartDate,
     plannedFinishDate: lessons.at(-1)?.date || restartDate,
     weekdaysOnly: true,
-    weeklyTarget: 8,
+    weeklyTarget: 6,
+    lessonsByYearEnd: lessons.filter(item => item.date <= yearEndDate).length,
+    lessonsAfterYearEnd: lessons.filter(item => item.date > yearEndDate).length,
+    yearEndDate,
+    dailyCapacity: {Segunda:1,Terça:1,Quarta:2,Quinta:1,Sexta:1},
     studyBreakDates: [...studyBreakDates],
     weekendCatchUp: [],
-    method: 'Blocos 12 a 30 em ordem oficial, de 26/08/2026 a 23/12/2026. Duas aulas às segundas, quartas e sextas; uma às terças e quintas. Fins de semana e feriados nacionais reservados para revisão e recuperação.'
+    method: 'Blocos 12 a 30 em ordem oficial, a partir de 28/09/2026. Uma aula às segundas, terças, quintas e sextas; duas às quartas. Fins de semana e feriados nacionais reservados para revisão e recuperação. Previsão de conclusão: 02/03/2027.'
   };
   state.schedulePlanVersion = version;
   state.schedulePlanVersion2 = version;
@@ -2291,7 +2298,6 @@ async function loadQuestionBankNow(preferredBlock='') {
   // normalizar novamente milhares de registros iguais vindos do Supabase.
   if(localQuestions.length) {
     if(['painel','cronograma','pendencias','questoes','simulados','analise'].includes(ui.tab)) render();
-    scheduleQuestionBankExpansion();
     return;
   }
   if(!currentUser || !sbClient) {
@@ -2344,22 +2350,6 @@ async function loadQuestionBankNow(preferredBlock='') {
   reconcileQuestionProgressWithAnswers();
   if(['painel','cronograma','pendencias','questoes','simulados','analise'].includes(ui.tab)) render();
 }
-function scheduleQuestionBankExpansion() {
-  if(questionBankExpansionPromise || questionBankExpansionTimer || questionBankFullLoadPromise) return;
-  // Dá tempo para a primeira coleção ser pintada e ficar clicável antes de
-  // começar a incorporar os arquivos grandes restantes.
-  questionBankExpansionTimer = setTimeout(() => {
-    questionBankExpansionTimer = null;
-    questionBankExpansionPromise = loadRemainingQuestionBank().finally(() => { questionBankExpansionPromise = null; });
-  },2000);
-}
-async function loadRemainingQuestionBank() {
-  // Só os 30 blocos do cronograma entram automaticamente (~20 MB). Acervos
-  // especiais muito maiores ficam disponíveis sob demanda.
-  await loadLocalQuestionBank({coreOnly:true});
-  reconcileQuestionProgressWithAnswers();
-  if(['questoes','simulados','analise'].includes(ui.tab)) render();
-}
 function questionBankCatalogStatus() {
   const entries=window.ENAMED_LOCAL_QUESTION_INDEX?.blocks || [];
   const loaded=entries.filter(entry => window.ENAMED_LOCAL_QUESTION_BANK?.[entry.block]);
@@ -2373,9 +2363,7 @@ function questionBankCatalogStatus() {
 }
 async function loadFullQuestionBank() {
   if(questionBankFullLoadPromise) return questionBankFullLoadPromise;
-  if(questionBankExpansionTimer) { clearTimeout(questionBankExpansionTimer); questionBankExpansionTimer=null; }
   questionBankFullLoadPromise=(async()=>{
-    if(questionBankExpansionPromise) await questionBankExpansionPromise;
     await loadLocalQuestionBank();
     reconcileQuestionProgressWithAnswers();
   })().finally(()=>{ questionBankFullLoadPromise=null; if(ui.tab==='questoes') renderQuestionBank(); });
@@ -2432,14 +2420,13 @@ function ensureQuestionCommentLoaded(question) {
   });
   questionCommentLoadPromises.set(block, promise);
 }
-async function loadLocalQuestionBank({initialOnly=false,preferredBlock='',coreOnly=false}={}) {
+async function loadLocalQuestionBank({initialOnly=false,preferredBlock=''}={}) {
   const index = window.ENAMED_LOCAL_QUESTION_INDEX;
   if(!index?.blocks?.length) return false;
   window.ENAMED_LOCAL_QUESTION_BANK = window.ENAMED_LOCAL_QUESTION_BANK || {};
   // Executar os 30 scripts no mesmo instante trava aparelhos mais modestos.
   // Pequenos lotes preservam a rolagem e os toques durante a carga inicial.
   let pending = index.blocks.filter(block => !window.ENAMED_LOCAL_QUESTION_BANK[block.block]);
-  if(coreOnly) pending=pending.filter(block => Number.isFinite(Number(block.block)));
   if(initialOnly) {
     const preferred = String(preferredBlock || (ui.qBlock !== 'Todos' ? ui.qBlock : currentScheduleBlock()));
     const first = pending.find(block => String(block.block) === preferred)
@@ -3607,8 +3594,7 @@ async function performHealthCheck() {
       report.checks.supabase = { status: 'unavailable', reason: 'Sync desativado nesta origem' };
       return report;
     }
-    const { data, error } = await sbClient.from('planner_states').select('count', { count: 'exact' }).limit(1);
-    report.checks.supabase = error ? { status: 'error', reason: error.message } : { status: 'ok' };
+    report.checks.supabase = await supabaseHealthStatus(sbClient,currentUser);
   } catch(e) {
     report.checks.supabase = { status: 'error', reason: e.message };
   }
@@ -3628,6 +3614,12 @@ async function performHealthCheck() {
   report.telemetry = getSyncTelemetryReport();
   report.healthy = Object.values(report.checks).every(c => c.status === 'ok' || c.status === 'offline');
   return report;
+}
+async function supabaseHealthStatus(client,user) {
+  const { error } = user?.id
+    ? await client.from('planner_states').select('user_id', { count:'exact', head:true }).eq('user_id',user.id)
+    : await client.auth.getSession();
+  return error ? { status:'error', reason:error.message } : { status:'ok' };
 }
 function getSyncTelemetryReport() {
   return {
@@ -5222,7 +5214,9 @@ function renderCronograma() {
     <button class="icon-btn schedule-toolbar-clear ${filterCount?'has-filters':''}" id="clearFilters" type="button" ${filterCount?'': 'disabled'}>${iconSvg('close',{weight:'regular'})}<span>Limpar${filterCount?` (${filterCount})`:''}</span></button>
   </div>`;
   const missionLabel = selectedBlock==='Todos' ? 'Visão geral' : `Bloco ${selectedBlock}`;
-  document.getElementById('cronograma').innerHTML = `<section class="card mission-card"><div class="mission-header"><div class="mission-heading"><span class="mission-heading-icon">${iconSvg('mission')}</span><div><span class="eyebrow">Missão</span><h2>Organize seu caminho até o ENAMED</h2><p>${changed ? `Última atividade: <strong>${escapeHtml(changed.topic)}</strong> · ${fmtDate(changed.date)}` : 'Escolha um bloco e avance aula por aula.'}</p></div></div><div class="mission-progress" aria-label="${selectedProgress}% concluído em ${escapeAttr(missionLabel)}"><div><span>${escapeHtml(missionLabel)}</span><strong>${selectedDone}<small>/${selectedItems.length}</small></strong><small>aulas concluídas</small></div><div class="mission-progress-ring" style="--mission-progress:${selectedProgress * 3.6}deg"><span>${selectedProgress}%</span></div></div></div><div class="mission-blocks"><div class="mission-blocks-head"><div><h3>Blocos do cronograma</h3><span>Selecione para ver apenas as aulas daquele bloco</span></div><div class="mission-legend" aria-label="Legenda dos blocos"><span class="done">Concluído</span><span class="pending">Pendente</span><span class="current">Atual</span></div></div>${renderBlockStrip()}</div>${renderScheduleDayPicker()}${toolbar}</section><div class="card schedule-list-card"><div class="section-title"><div><h2>${ui.scheduleDay?`Aulas de ${fmtDate(ui.scheduleDay)}`:'Cronograma editável'}</h2><span class="muted">${ui.scheduleDay?'Mostrando somente as aulas da data selecionada.':'Clique no nome de uma aula para selecioná-la.'}</span></div><span class="schedule-result-count">${rows.length} ${rows.length===1?'item':'itens'}</span></div>${selectedLessonBanner}${priorityLegend()}${renderScheduleTable(rows, true)}</div>`;
+  const plan = state.reschedule || {};
+  const planSummary = plan.restartDate ? `<div class="mission-plan-summary" aria-label="Resumo do cronograma reorganizado"><div><span>Recomeço</span><strong>${fmtDate(plan.restartDate)}</strong></div><div><span>Ritmo semanal</span><strong>${n(plan.weeklyTarget)} aulas</strong><small>1 seg · 1 ter · 2 qua · 1 qui · 1 sex</small></div><div><span>Até 31 de dezembro</span><strong>${n(plan.lessonsByYearEnd)} aulas</strong><small>${n(plan.lessonsAfterYearEnd)} seguem em 2027</small></div><div class="mission-plan-finish"><span>Conclusão prevista</span><strong>${fmtDate(plan.plannedFinishDate)}</strong></div></div>` : '';
+  document.getElementById('cronograma').innerHTML = `<section class="card mission-card"><div class="mission-header"><div class="mission-heading"><span class="mission-heading-icon">${iconSvg('mission')}</span><div><span class="eyebrow">Missão</span><h2>Organize seu caminho até o ENAMED</h2><p>${changed ? `Última atividade: <strong>${escapeHtml(changed.topic)}</strong> · ${fmtDate(changed.date)}` : 'Escolha um bloco e avance aula por aula.'}</p></div></div><div class="mission-progress" aria-label="${selectedProgress}% concluído em ${escapeAttr(missionLabel)}"><div><span>${escapeHtml(missionLabel)}</span><strong>${selectedDone}<small>/${selectedItems.length}</small></strong><small>aulas concluídas</small></div><div class="mission-progress-ring" style="--mission-progress:${selectedProgress * 3.6}deg"><span>${selectedProgress}%</span></div></div></div>${planSummary}<div class="mission-blocks"><div class="mission-blocks-head"><div><h3>Blocos do cronograma</h3><span>Selecione para ver apenas as aulas daquele bloco</span></div><div class="mission-legend" aria-label="Legenda dos blocos"><span class="done">Concluído</span><span class="pending">Pendente</span><span class="current">Atual</span></div></div>${renderBlockStrip()}</div>${renderScheduleDayPicker()}${toolbar}</section><div class="card schedule-list-card"><div class="section-title"><div><h2>${ui.scheduleDay?`Aulas de ${fmtDate(ui.scheduleDay)}`:'Cronograma editável'}</h2><span class="muted">${ui.scheduleDay?'Mostrando somente as aulas da data selecionada.':'Clique no nome de uma aula para selecioná-la.'}</span></div><span class="schedule-result-count">${rows.length} ${rows.length===1?'item':'itens'}</span></div>${selectedLessonBanner}${priorityLegend()}${renderScheduleTable(rows, true)}</div>`;
   enhanceScheduleStudyIcons();
   const blockStrip=document.querySelector('#cronograma .block-strip');
   if(blockStrip) {
@@ -12177,8 +12171,7 @@ function refreshQuestionSearchResults() {
 function setQuestionFocusMode(enabled) {
   const wasEnabled=questionSidebarCollapsed;
   questionSidebarCollapsed=Boolean(enabled);
-  if(questionSidebarCollapsed) localStorage.setItem(QUESTION_SIDEBAR_KEY,'1');
-  else localStorage.removeItem(QUESTION_SIDEBAR_KEY);
+  localStorage.setItem(QUESTION_SIDEBAR_KEY,questionSidebarCollapsed?'1':'0');
   document.querySelector('#questoes .question-layout')?.classList.toggle('sidebar-collapsed',questionSidebarCollapsed);
   const toggle=document.getElementById('questionFocusToggle');
   if(toggle) {
@@ -12315,7 +12308,7 @@ function renderQuestionBank() {
   const catalogStatus=questionBankCatalogStatus();
   const catalogAction=catalogStatus.complete
     ? '<button type="button" class="qbank-quick-filter" disabled><span class="quick-filter-dot all"></span><strong>Banco completo</strong><small>Todas as coleções disponíveis</small></button>'
-    : `<button type="button" class="qbank-quick-filter" id="loadFullQuestionBank" ${catalogStatus.loading?'disabled':''}><span class="quick-filter-dot all"></span><strong>${catalogStatus.loading?'Carregando extras…':'Ampliar banco'}</strong><small>${catalogStatus.loading?'A interface continua disponível':`${questionBank.length.toLocaleString('pt-BR')} de ${catalogStatus.total.toLocaleString('pt-BR')} questões carregadas`}</small></button>`;
+    : `<button type="button" class="qbank-quick-filter" id="loadFullQuestionBank" ${catalogStatus.loading?'disabled':''}><span class="quick-filter-dot all"></span><strong>${catalogStatus.loading?'Carregando extras…':'Carregar banco completo'}</strong><small>${catalogStatus.loading?'A interface continua disponível':`${questionBank.length.toLocaleString('pt-BR')} de ${catalogStatus.total.toLocaleString('pt-BR')} · sob demanda`}</small></button>`;
   document.getElementById('questoes').innerHTML = `<div class="grid question-layout qbank-mode ${questionSidebarCollapsed?'sidebar-collapsed':''}">
     <header class="qbank-overview">
       <div class="qbank-overview-copy"><span class="qbank-eyebrow">Treino inteligente</span><h1>Central de questões</h1><p>Pratique com foco, acompanhe sua evolução e transforme erros em revisão.</p></div>
@@ -12327,7 +12320,7 @@ function renderQuestionBank() {
       <div class="qbank-quick-actions" role="group" aria-label="Filtros rápidos">
         <button type="button" class="qbank-quick-filter ${ui.qFocusScheduleId?'active':''}" id="continueQuestionTraining"><span class="quick-filter-dot pending"></span><strong>${escapeHtml(resumeTitle)}</strong><small title="${escapeAttr(resumeDetail)}">${escapeHtml(resumeDetail)}</small></button>
         <button type="button" class="qbank-quick-filter ${ui.qStatus==='Erradas'?'active':''}" data-question-quick-filter="Erradas"><span class="quick-filter-dot errors"></span><strong>Revisar erros</strong><small>${(summary.answered-summary.correct).toLocaleString('pt-BR')} para rever</small></button>
-        <button type="button" class="qbank-quick-filter ${ui.qStatus==='Todas' && ui.qBlock==='Todos' && !ui.qFocusScheduleId && !ui.qSearch?'active':''}" id="exploreQuestionBank"><span class="quick-filter-dot all"></span><strong>Explorar banco</strong><small>Todos os blocos</small></button>
+        <button type="button" class="qbank-quick-filter ${ui.qStatus==='Todas' && ui.qBlock==='Todos' && !ui.qFocusScheduleId && !ui.qSearch?'active':''}" id="exploreQuestionBank"><span class="quick-filter-dot all"></span><strong>Explorar banco</strong><small>${catalogStatus.complete?'Todos os blocos':'Coleções já carregadas'}</small></button>
         ${catalogAction}
       </div>
     </header>
@@ -12794,10 +12787,20 @@ function renderQuestion(question, total) {
   const focusInfo = questionSidebarCollapsed ? questionInfo : '';
   const bodyInfo = questionSidebarCollapsed ? '' : questionInfo;
   const sessionProgress = total ? Math.round(((ui.qIndex + 1) / total) * 100) : 0;
-  return `<div class="question-topbar"><button class="icon-btn question-top-nav" id="questionTopPrev" aria-label="Questão anterior" ${ui.qIndex===0?'disabled':''}>‹</button><div class="question-heading"><div class="question-heading-line"><span class="qbank-eyebrow">Sessão atual</span><strong>${ui.qIndex+1} <span>de ${total}</span></strong></div><div class="muted">${escapeHtml(question.sourceLabel || question.source || 'Banco privado')}</div><div class="question-session-progress" aria-label="${sessionProgress}% desta sessão"><span style="width:${sessionProgress}%"></span></div>${focusInfo}</div><div class="question-tool-strip"><button class="icon-btn question-focus-toggle" id="questionFocusToggle" title="${questionSidebarCollapsed?'Abrir painel lateral':'Modo foco'}" aria-label="${questionSidebarCollapsed?'Abrir painel do banco':'Ocultar painel e focar na questão'}" aria-pressed="${questionSidebarCollapsed}">${iconSvg(questionSidebarCollapsed?'sidebar':'focus',{weight:'regular'})}</button><div class="question-font-control" aria-label="Tamanho do texto"><button class="tiny-btn" id="questionFontDown" title="Diminuir fonte">A−</button><span class="question-font-value">${state.questionSettings.fontSize}px</span><button class="tiny-btn" id="questionFontUp" title="Aumentar fonte">A+</button></div><button class="icon-btn question-timer-toggle ${questionTimer.running?'active':''}" id="questionTimerToggle" title="Cronômetro">${iconSvg('simulation',{weight:'regular'})}</button><button class="icon-btn question-key-issue ${answerKeyIssue?'active':''}" id="questionKeyIssue" title="${answerKeyIssue?'Remover marcação de gabarito suspeito':'Marcar gabarito suspeito'}" aria-pressed="${answerKeyIssue}">${iconSvg('flag',{weight:'regular'})}</button><button class="icon-btn question-edit-action" id="questionEditToggle" title="Corrigir texto">Editar</button><button class="icon-btn danger question-delete-action" id="questionDelete" title="Excluir questão">${iconSvg('delete',{weight:'regular'})}</button></div><button class="icon-btn question-top-nav" id="questionTopNext" aria-label="Próxima questão ou concluir">›</button></div>${renderQuestionTimer(question, result)}<div class="question-body">
+  const advancedTools = `<details class="question-tools-menu"><summary class="icon-btn" aria-label="Abrir ajustes da questão" title="Ajustes">•••</summary><div class="question-tools-popover"><div class="question-font-control" aria-label="Tamanho do texto"><button class="tiny-btn" id="questionFontDown" title="Diminuir fonte">A−</button><span class="question-font-value">${state.questionSettings.fontSize}px</span><button class="tiny-btn" id="questionFontUp" title="Aumentar fonte">A+</button></div><button class="icon-btn question-timer-toggle ${questionTimer.running?'active':''}" id="questionTimerToggle" title="Cronômetro">${iconSvg('simulation',{weight:'regular'})}<span>Cronômetro</span></button><button class="icon-btn question-key-issue ${answerKeyIssue?'active':''}" id="questionKeyIssue" title="${answerKeyIssue?'Remover marcação de gabarito suspeito':'Marcar gabarito suspeito'}" aria-pressed="${answerKeyIssue}">${iconSvg('flag',{weight:'regular'})}<span>Revisar gabarito</span></button><button class="icon-btn question-edit-action" id="questionEditToggle" title="Corrigir texto">Editar texto</button><button class="icon-btn danger question-delete-action" id="questionDelete" title="Excluir questão">${iconSvg('delete',{weight:'regular'})}<span>Excluir</span></button></div></details>`;
+  const linkedLessonContent = isSpecialCollection
+    ? `<div class="linked-lesson"><strong>Coleção:</strong> questões inéditas por macroárea para treino livre.</div>`
+    : linkedLesson
+      ? `<div class="linked-lesson"><strong>Aula vinculada:</strong> Bloco ${linkedLesson.block} · ${escapeHtml(linkedLesson.topic)}<div class="question-lesson-links"><button type="button" class="tiny-btn" data-question-materials="${escapeAttr(linkedLesson.id)}">Ver material da aula</button><button type="button" class="tiny-btn" data-question-video="${escapeAttr(linkedLesson.id)}">Ver vídeo da aula</button></div></div>`
+      : `<div class="linked-lesson"><strong>Aula vinculada:</strong> não encontrei uma correspondência no cronograma.</div>`;
+  const linkedLessonPanel = questionSidebarCollapsed
+    ? `<details class="question-context-panel"><summary>Contexto da aula</summary>${linkedLessonContent}</details>`
+    : linkedLessonContent;
+  const studyExtras = `<details class="question-study-extras"><summary>Anotações e dificuldade</summary><div>${renderQuestionNotes(question, savedProgress)}${difficultyPicker}</div></details>`;
+  return `<div class="question-topbar"><button class="icon-btn question-top-nav" id="questionTopPrev" aria-label="Questão anterior" ${ui.qIndex===0?'disabled':''}>‹</button><div class="question-heading"><div class="question-heading-line"><span class="qbank-eyebrow">Sessão atual</span><strong>${ui.qIndex+1} <span>de ${total}</span></strong></div><div class="muted">${escapeHtml(question.sourceLabel || question.source || 'Banco privado')}</div><div class="question-session-progress" aria-label="${sessionProgress}% desta sessão"><span style="width:${sessionProgress}%"></span></div>${focusInfo}</div><div class="question-tool-strip"><button class="icon-btn question-focus-toggle" id="questionFocusToggle" title="${questionSidebarCollapsed?'Abrir painel lateral':'Modo foco'}" aria-label="${questionSidebarCollapsed?'Abrir painel do banco':'Ocultar painel e focar na questão'}" aria-pressed="${questionSidebarCollapsed}">${iconSvg(questionSidebarCollapsed?'sidebar':'focus',{weight:'regular'})}</button>${advancedTools}</div><button class="icon-btn question-top-nav" id="questionTopNext" aria-label="Próxima questão ou concluir">›</button></div>${renderQuestionTimer(question, result)}<div class="question-body">
     ${bodyInfo}
     ${ui.editQuestionId === question.id ? renderQuestionEditPanel(question) : ''}
-    ${isSpecialCollection ? `<div class="linked-lesson"><strong>Coleção:</strong> questões inéditas por macroárea para treino livre.</div>` : linkedLesson ? `<div class="linked-lesson"><strong>Aula vinculada:</strong> Bloco ${linkedLesson.block} · ${escapeHtml(linkedLesson.topic)}<div class="question-lesson-links"><button type="button" class="tiny-btn" data-question-materials="${escapeAttr(linkedLesson.id)}">Ver material da aula</button><button type="button" class="tiny-btn" data-question-video="${escapeAttr(linkedLesson.id)}">Ver vídeo da aula</button></div></div>` : `<div class="linked-lesson"><strong>Aula vinculada:</strong> não encontrei uma correspondência no cronograma.</div>`}
+    ${linkedLessonPanel}
      <div class="section-title"><h2>Questão ${question.number}</h2></div>
     <div class="question-workspace"><div class="question-main">
       <div class="question-stem highlightable" data-highlight-scope="stem" style="font-size:${state.questionSettings.fontSize}px">${renderHighlightedText(question.stem, highlights, true, 'stem')}</div>
@@ -12811,9 +12814,8 @@ function renderQuestion(question, total) {
       ${comment}
       ${result ? renderQuestionReflection(question, result) : ''}
       ${result ? renderQuestionFlashcardEditor(question, result) : ''}
-      ${renderQuestionNotes(question, savedProgress)}
       <div class="question-nav"><div><button class="icon-btn" id="questionPrev" ${ui.qIndex===0?'disabled':''}>‹ Anterior</button> <button class="icon-btn" id="questionNext">Próxima ›</button></div><div>${reviewButton} ${result?'<button class="icon-btn" id="questionRedo">Refazer</button>':''}</div></div>
-      ${difficultyPicker}
+      ${studyExtras}
     </div></div></div>`;
 }
 function renderQuestionImages(question) {
@@ -14306,6 +14308,10 @@ function radarSaudeDate(value) {
   if(Number.isNaN(date.getTime())) return String(value||'');
   return new Intl.DateTimeFormat('pt-BR',{day:'2-digit',month:'long',year:'numeric'}).format(date);
 }
+function radarSaudeStoryDetail(story) {
+  const deep=story.deepDive||{};
+  return `<div class="planner-radar-study-body"><section><h4>Cenário e relevância epidemiológica</h4><p>${escapeHtml(deep.whatHappened||story.summary||'')}</p></section><section><h4>Mecanismo e fisiopatologia</h4><p>${escapeHtml(deep.howItWorks||'')}</p></section><section><h4>Aplicação clínica e conduta</h4><p>${escapeHtml(deep.clinicalMeaning||story.clinicalNote||'')}</p></section><section><h4>Força da evidência e limitações</h4><p><strong>Base:</strong> ${escapeHtml(story.evidence||'Não informada')}.</p><p>${escapeHtml(deep.limitations||'')}</p></section></div><div class="planner-radar-exam"><div><span>Pontos de prova e revisão ativa</span><ul>${(Array.isArray(deep.examFocus)?deep.examFocus:[]).map(point=>`<li>${escapeHtml(point)}</li>`).join('')}</ul></div><a href="${escapeAttr(story.sourceUrl)}" target="_blank" rel="noopener noreferrer">Fonte consultada ↗</a></div>`;
+}
 function radarSaudeMarkup(issue) {
   const stories=Array.isArray(issue.stories)?issue.stories:[];
   const innovations=Array.isArray(issue.innovations)?issue.innovations:[];
@@ -14324,7 +14330,7 @@ function radarSaudeMarkup(issue) {
     </section>
     <section class="planner-radar-section">
       <div class="planner-radar-heading"><div><span class="eyebrow">Leitura completa</span><h2>Entenda a edição</h2></div><span class="planner-radar-self-contained">Tudo o que você precisa saber está aqui</span></div>
-      <div class="planner-radar-study-list">${stories.map((story,index)=>{const deep=story.deepDive||{};return `<article class="planner-radar-study"><header><span>${String(index+1).padStart(2,'0')}</span><div><small>${escapeHtml(story.category)} · ${escapeHtml(story.evidence)}</small><h3>${escapeHtml(story.title)}</h3><p>${escapeHtml(story.summary)}</p></div></header><div class="planner-radar-study-body"><section><h4>O que aconteceu</h4><p>${escapeHtml(deep.whatHappened||'')}</p></section><section><h4>Como funciona</h4><p>${escapeHtml(deep.howItWorks||'')}</p></section><section><h4>Significado clínico</h4><p>${escapeHtml(deep.clinicalMeaning||story.clinicalNote)}</p></section><section><h4>Limites e cuidados</h4><p>${escapeHtml(deep.limitations||'')}</p></section></div><div class="planner-radar-exam"><div><span>Como pode cair na prova</span><ul>${(Array.isArray(deep.examFocus)?deep.examFocus:[]).map(point=>`<li>${escapeHtml(point)}</li>`).join('')}</ul></div><a href="${escapeAttr(story.sourceUrl)}" target="_blank" rel="noopener noreferrer">Fonte consultada ↗</a></div></article>`;}).join('')}</div>
+      <div class="planner-radar-study-list">${stories.map((story,index)=>`<article class="planner-radar-study"><header><span>${String(index+1).padStart(2,'0')}</span><div><small>${escapeHtml(story.category)} · ${escapeHtml(story.evidence)}</small><h3>${escapeHtml(story.title)}</h3><p>${escapeHtml(story.summary)}</p></div></header><div class="planner-radar-clinical-snapshot"><strong>Aplicação clínica</strong><p>${escapeHtml(story.clinicalNote||'')}</p></div><button class="planner-radar-expand" type="button" data-radar-story-expand="${index}" aria-expanded="false">Aprofundar raciocínio clínico</button><div class="planner-radar-story-detail" data-radar-story-detail="${index}" hidden></div></article>`).join('')}</div>
     </section>
     <section class="planner-radar-section" id="planner-radar-innovation">
       <div class="planner-radar-heading"><div><span class="eyebrow">Tecnologia e acesso</span><h2>Inovações em saúde</h2></div><small>Da pesquisa à oferta no SUS</small></div>
@@ -14343,6 +14349,23 @@ function radarSaudeMarkup(issue) {
     </section>
     <p class="planner-radar-disclaimer">Conteúdo para atualização e estudo. Não substitui avaliação clínica, protocolo vigente ou orientação médica individual.</p>
   </div>`;
+}
+function bindRadarSaudeStories(issue) {
+  const stories=Array.isArray(issue.stories)?issue.stories:[];
+  document.querySelectorAll('[data-radar-story-expand]').forEach(button=>button.addEventListener('click',()=>{
+    const index=n(button.dataset.radarStoryExpand);
+    const story=stories[index];
+    const detail=document.querySelector(`[data-radar-story-detail="${index}"]`);
+    if(!story||!detail) return;
+    if(!detail.dataset.rendered) {
+      detail.innerHTML=radarSaudeStoryDetail(story);
+      detail.dataset.rendered='true';
+    }
+    const expanded=button.getAttribute('aria-expanded')==='true';
+    button.setAttribute('aria-expanded',String(!expanded));
+    button.textContent=expanded?'Aprofundar raciocínio clínico':'Recolher análise';
+    detail.hidden=expanded;
+  }));
 }
 function bindRadarSaudeQuiz(issue) {
   const questions=Array.isArray(issue.dailyQuiz)?issue.dailyQuiz:[];
@@ -14366,7 +14389,7 @@ function bindRadarSaudeQuiz(issue) {
       updateScore();
     }));
   });
-  document.getElementById('radarQuizReset')?.addEventListener('click',()=>{ if(radarSaudeIssueCache) { const root=document.getElementById('radar-saude'); root.innerHTML=radarSaudeMarkup(radarSaudeIssueCache); document.getElementById('radarSaudeRefresh')?.addEventListener('click',()=>renderRadarSaude(true)); bindRadarSaudeQuiz(radarSaudeIssueCache); document.getElementById('planner-radar-quiz')?.scrollIntoView({behavior:'smooth',block:'start'}); } });
+  document.getElementById('radarQuizReset')?.addEventListener('click',()=>{ if(radarSaudeIssueCache) { const root=document.getElementById('radar-saude'); root.innerHTML=radarSaudeMarkup(radarSaudeIssueCache); document.getElementById('radarSaudeRefresh')?.addEventListener('click',()=>renderRadarSaude(true)); bindRadarSaudeStories(radarSaudeIssueCache); bindRadarSaudeQuiz(radarSaudeIssueCache); document.getElementById('planner-radar-quiz')?.scrollIntoView({behavior:'smooth',block:'start'}); } });
   updateScore();
 }
 function renderRadarSaude(force=false) {
@@ -14376,16 +14399,71 @@ function renderRadarSaude(force=false) {
     if(ui.tab!=='radar-saude') return;
     root.innerHTML=radarSaudeMarkup(issue);
     document.getElementById('radarSaudeRefresh')?.addEventListener('click',()=>renderRadarSaude(true));
+    bindRadarSaudeStories(issue);
     bindRadarSaudeQuiz(issue);
   };
   if(radarSaudeIssueCache&&!force) { show(radarSaudeIssueCache); return; }
   root.innerHTML='<section class="card empty"><strong>Atualizando o Radar Saúde…</strong><span>Buscando a edição mais recente e os documentos oficiais.</span></section>';
-  fetch('health-news/data/latest.json',{cache:'no-store'})
+  fetch('health-news/data/latest.json',{cache:force?'no-store':'default'})
     .then(response=>{ if(!response.ok) throw new Error(`HTTP ${response.status}`); return response.json(); })
     .then(issue=>{ radarSaudeIssueCache=issue; show(issue); })
     .catch(()=>{ if(ui.tab==='radar-saude') root.innerHTML='<section class="card empty"><strong>Não foi possível abrir o Radar Saúde.</strong><span>Confira sua conexão e tente novamente.</span><button class="tiny-btn" type="button" id="radarSaudeRetry">Tentar novamente</button></section>'; document.getElementById('radarSaudeRetry')?.addEventListener('click',()=>renderRadarSaude(true)); });
 }
+const VIEW_ASSET_BUNDLES = {
+  anatomia: {
+    styles:['assets/anatomia.css?v=20260802-8'],
+    scripts:['assets/anatomia.js?v=20260802-6']
+  },
+  ecg: { scripts:['assets/ecg-simulator.js?v=20260802-10'] },
+  radiografia: { scripts:['assets/radiografia-aulas.js?v=20260802-3','assets/radiografia.js?v=20260802-11'] },
+  semiologia: { scripts:['assets/semiologia-aulas.js?v=20260802-3','assets/semiologia.js?v=20260802-9'] },
+  prescricao: { scripts:['assets/consulta-doencas.js?v=20260902-2','assets/consulta-clinica.js?v=20260902-2'] }
+};
+const viewAssetLoadPromises = new Map();
+function loadViewStylesheet(href) {
+  const key=`style:${href}`;
+  if(viewAssetLoadPromises.has(key)) return viewAssetLoadPromises.get(key);
+  const absolute=new URL(href,document.baseURI).href;
+  const existing=[...document.styleSheets].some(sheet=>sheet.href===absolute);
+  if(existing) return Promise.resolve();
+  const promise=new Promise((resolve,reject)=>{
+    const link=document.createElement('link');
+    link.rel='stylesheet';
+    link.href=href;
+    link.dataset.viewAsset='true';
+    link.onload=()=>resolve();
+    link.onerror=()=>reject(new Error(`Falha ao carregar ${href}`));
+    document.head.appendChild(link);
+  });
+  viewAssetLoadPromises.set(key,promise);
+  return promise;
+}
+function loadViewScript(src) {
+  const key=`script:${src}`;
+  if(viewAssetLoadPromises.has(key)) return viewAssetLoadPromises.get(key);
+  const absolute=new URL(src,document.baseURI).href;
+  if([...document.scripts].some(script=>script.src===absolute)) return Promise.resolve();
+  const promise=new Promise((resolve,reject)=>{
+    const script=document.createElement('script');
+    script.src=src;
+    script.dataset.viewAsset='true';
+    script.onload=()=>resolve();
+    script.onerror=()=>reject(new Error(`Falha ao carregar ${src}`));
+    document.head.appendChild(script);
+  });
+  viewAssetLoadPromises.set(key,promise);
+  return promise;
+}
+async function ensureViewAssets(tab) {
+  const bundle=VIEW_ASSET_BUNDLES[tab];
+  if(!bundle) return;
+  await Promise.all((bundle.styles||[]).map(loadViewStylesheet));
+  // Alguns módulos publicam catálogos globais consumidos pelo script seguinte.
+  // A ordem explícita evita corridas sem voltar a bloquear o boot do planner.
+  for(const src of bundle.scripts||[]) await loadViewScript(src);
+}
 async function ensureViewData(tab) {
+  await ensureViewAssets(tab);
   if(['questoes','simulados','analise'].includes(tab)) await loadQuestionBank();
   if(['simulados','analise'].includes(tab)) await loadImportedSimulados();
   if(tab === 'materiais') await loadMaterialLibrary();

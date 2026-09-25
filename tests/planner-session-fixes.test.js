@@ -16,6 +16,29 @@ const { loadPlannerSandbox } = require('./planner-sandbox.js');
 // tests/planner-merge.test.js.
 const plain = value => JSON.parse(JSON.stringify(value));
 
+test('Missão recomeça em 28/09 com a carga semanal pedida e calcula a conclusão real', () => {
+  const ctx = loadPlannerSandbox();
+  const state = ctx.__getState();
+  const lessons = state.schedule
+    .filter(item => Number(item.block) >= 12)
+    .sort((a,b) => Number(a.block)-Number(b.block) || Number(a.lessonOrder)-Number(b.lessonOrder) || Number(a.row)-Number(b.row));
+  const byDate = lessons.reduce((map,item) => map.set(item.date,(map.get(item.date)||0)+1),new Map());
+  const capacity = {1:1,2:1,3:2,4:1,5:1};
+
+  assert.equal(lessons.length,129);
+  assert.equal(lessons[0].date,'2026-09-28');
+  assert.equal(lessons.at(-1).date,'2027-03-02');
+  assert.equal(lessons.filter(item => item.date <= '2026-12-31').length,79);
+  assert.equal(state.reschedule.lessonsAfterYearEnd,50);
+  assert.equal(state.reschedule.weeklyTarget,6);
+  assert.deepEqual(plain(state.reschedule.dailyCapacity),{Segunda:1,Terça:1,Quarta:2,Quinta:1,Sexta:1});
+  state.reschedule.studyBreakDates.forEach(date => assert.equal(byDate.has(date),false,`${date} deve ficar livre`));
+  byDate.forEach((count,date) => {
+    const weekday = new Date(`${date}T12:00:00`).getDay();
+    assert.equal(count <= (capacity[weekday]||0),true,`${date} excedeu a carga diária`);
+  });
+});
+
 test('limpeza de materiais preserva todas as linhas de tabelas Markdown', () => {
   const ctx = loadPlannerSandbox();
   const source = '| Parâmetro | Ferropriva | Doença Crônica |\n| --- | --- | --- |\n| Ferritina | Baixa | Normal/Alta |\n| TIBC | Alto | Baixo |\n\nTexto após a tabela | sem virar coluna';

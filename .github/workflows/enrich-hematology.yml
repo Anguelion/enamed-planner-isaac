@@ -30,6 +30,9 @@ jobs:
         with:
           node-version: '22'
 
+      - name: Instalar dependências
+        run: npm ci
+
       - name: Processar próximo lote
         env:
           BATCH_LIMIT: ${{ inputs.limit || '6' }}
@@ -43,6 +46,12 @@ jobs:
             --review reports/question-enrichment/hematology-review.json \
             --report reports/question-enrichment/hematology-latest.json
           npm run questions:index
+
+      - name: Validar aplicação antes de publicar
+        run: |
+          npm run lint
+          npm test
+          node tests/verify-static-build.js
 
       - name: Publicar resultados seguros
         run: |
