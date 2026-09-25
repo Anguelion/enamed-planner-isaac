@@ -58,6 +58,30 @@ function blockNumber(name) {
   return match ? parseInt(match[1], 10) : null;
 }
 
+function buildVideos(files, lessonPath, blockId, areaName, lessonTitle) {
+  return files.map(file => {
+    const extension = path.extname(file.name);
+    const videoTitle = stripVideoOrderPrefix(file.name.slice(0, -extension.length));
+    const absolutePath = path.join(lessonPath, file.name);
+    const relativePath = path.relative(ROOT, absolutePath).split(path.sep).join('/');
+    const size = fs.statSync(absolutePath).size;
+    const type = /cofexpress/i.test(videoTitle) ? 'express' : 'complete';
+    const priorByPath = previousByPath.get(relativePath);
+    const priorBySize = previousBySize.get(size) || [];
+    const prior = priorByPath || (priorBySize.length === 1 ? priorBySize[0] : null);
+    const video = {
+      id: `${blockId}|${areaName}|${lessonTitle}|${videoTitle}`,
+      title: videoTitle,
+      type,
+      relativePath,
+      extension,
+      size
+    };
+    if (prior?.onlinePath) video.onlinePath = prior.onlinePath;
+    return video;
+  });
+}
+
 const issues = { missingExpected: [], orphanFiles: [], badBlockFolders: [], emptyLessons: [] };
 const lessons = [];
 
@@ -78,6 +102,25 @@ for (const blockDir of blockDirs) {
     const { name: areaName } = stripOrderPrefix(areaDir.name);
     const areaPath = path.join(blockPath, areaDir.name);
 
+    // Alguns extras CofBasics vieram como uma pasta de aula diretamente dentro
+    // do bloco, sem a camada intermediária <área>/<aula>. Inclua esses vídeos
+    // sem mover a biblioteca original do usuário.
+    const directFiles = fs.readdirSync(areaPath, { withFileTypes: true })
+      .filter(entry => entry.isFile() && VIDEO_EXT.has(path.extname(entry.name).toLowerCase()));
+    if (directFiles.length) {
+      const cofbasicMatch = areaName.match(/^(CofBasics)\s*-\s*(.+)$/i);
+      const directAreaName = cofbasicMatch ? 'CofBasics' : areaName;
+      const directLessonTitle = cofbasicMatch ? cofbasicMatch[2].trim() : areaName;
+      lessons.push({
+        id: `${blockId}|${slug(directAreaName)}|${slug(directLessonTitle)}`,
+        block,
+        area: directAreaName,
+        title: directLessonTitle,
+        folderOrder: 0,
+        videos: buildVideos(directFiles, areaPath, blockId, directAreaName, directLessonTitle)
+      });
+    }
+
     const lessonDirs = fs.readdirSync(areaPath, { withFileTypes: true })
       .filter(entry => entry.isDirectory());
 
@@ -93,27 +136,7 @@ for (const blockDir of blockDirs) {
         continue;
       }
 
-      const videos = files.map(file => {
-        const extension = path.extname(file.name);
-        const videoTitle = stripVideoOrderPrefix(file.name.slice(0, -extension.length));
-        const absolutePath = path.join(lessonPath, file.name);
-        const relativePath = path.relative(ROOT, absolutePath).split(path.sep).join('/');
-        const size = fs.statSync(absolutePath).size;
-        const type = /cofexpress/i.test(videoTitle) ? 'express' : 'complete';
-        const priorByPath = previousByPath.get(relativePath);
-        const priorBySize = previousBySize.get(size) || [];
-        const prior = priorByPath || (priorBySize.length === 1 ? priorBySize[0] : null);
-        const video = {
-          id: `${blockId}|${areaName}|${lessonTitle}|${videoTitle}`,
-          title: videoTitle,
-          type,
-          relativePath,
-          extension,
-          size
-        };
-        if (prior?.onlinePath) video.onlinePath = prior.onlinePath;
-        return video;
-      });
+      const videos = buildVideos(files, lessonPath, blockId, areaName, lessonTitle);
 
       lessons.push({
         id: `${blockId}|${slug(areaName)}|${slug(lessonTitle)}`,
