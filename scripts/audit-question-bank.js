@@ -63,3 +63,7 @@ if(metadataMismatch&&!process.argv.includes('--fix-index')){
   console.error('Os totais do índice não correspondem às questões válidas. Execute com --fix-index.');
   process.exitCode=1;
 }
+if(duplicateIdTotal){
+  console.error(`O banco contém ${duplicateIdTotal} ID(s) duplicado(s). Corrija antes de publicar.`);
+  process.exitCode=1;
+}

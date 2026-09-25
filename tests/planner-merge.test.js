@@ -194,6 +194,32 @@ test('reconcileQuestionProgressForQuestion: gabarito editado recalcula o acerto 
   assert.equal(state.questionProgress[question.id].correct, false);
 });
 
+test('supabaseHealthStatus: consulta uma coluna real e respeita a linha do usuario autenticado', async () => {
+  const ctx = loadPlannerSandbox();
+  const calls = [];
+  const query = {
+    select(column,options) { calls.push(['select',column,options]); return this; },
+    eq(column,value) { calls.push(['eq',column,value]); return Promise.resolve({error:null}); }
+  };
+  const client = {
+    from(table) { calls.push(['from',table]); return query; },
+    auth: { getSession: async () => ({error:null}) }
+  };
+
+  const authenticated = await ctx.supabaseHealthStatus(client,{id:'usuario-1'});
+  assert.equal(authenticated.status,'ok');
+  assert.equal(JSON.stringify(calls),JSON.stringify([
+    ['from','planner_states'],
+    ['select','user_id',{count:'exact',head:true}],
+    ['eq','user_id','usuario-1']
+  ]));
+
+  calls.length = 0;
+  const anonymous = await ctx.supabaseHealthStatus(client,null);
+  assert.equal(anonymous.status,'ok');
+  assert.equal(calls.length,0,'sem sessao, a checagem nao deve tentar ler uma tabela protegida por RLS');
+});
+
 test('CLOUD_SYNC_ALLOWED: bloqueia origens desconhecidas e libera as origens reais conhecidas', () => {
   const untrusted = loadPlannerSandbox({ origin: 'http://127.0.0.1:8766' });
   assert.equal(untrusted.__getCloudSyncAllowed(), false, 'uma porta de teste desconhecida nao deve poder sincronizar');

@@ -698,9 +698,26 @@ body.dark .highlight-popup-copy{background:var(--panel)}
 .question-sidebar-actions{display:flex;align-items:center;gap:8px}
 .question-sidebar-actions .icon-btn{min-width:34px;min-height:34px;padding:4px 9px}
 .qbank-mode.sidebar-collapsed{display:block}
+.qbank-mode.sidebar-collapsed .qbank-overview{display:none}
 .qbank-mode.sidebar-collapsed .question-sidebar{display:none}
-.qbank-mode.sidebar-collapsed .question-card{width:100%;margin-top:0}
+.qbank-mode.sidebar-collapsed .question-card{width:min(940px,100%);margin:0 auto}
+.question-tools-menu{position:relative}
+.question-tools-menu>summary{align-items:center;display:flex;justify-content:center;list-style:none;min-width:42px}
+.question-tools-menu>summary::-webkit-details-marker{display:none}
+.question-tools-popover{background:var(--panel);border:1px solid var(--line);border-radius:14px;box-shadow:0 18px 45px rgba(16,34,49,.18);display:grid;gap:8px;padding:12px;position:absolute;right:0;top:calc(100% + 8px);width:min(250px,calc(100vw - 40px));z-index:70}
+.question-tools-popover>.icon-btn{justify-content:flex-start;width:100%}
+.question-tools-popover .question-font-control{justify-content:space-between;width:100%}
+.question-context-panel,.question-study-extras{border:1px solid var(--line);border-radius:12px;margin:0 0 14px;overflow:hidden}
+.question-context-panel>summary,.question-study-extras>summary{color:var(--muted);cursor:pointer;font-size:12px;font-weight:750;list-style:none;padding:11px 14px}
+.question-context-panel>summary::-webkit-details-marker,.question-study-extras>summary::-webkit-details-marker{display:none}
+.question-context-panel>summary::after,.question-study-extras>summary::after{content:'+';float:right}
+.question-context-panel[open]>summary::after,.question-study-extras[open]>summary::after{content:'−'}
+.question-context-panel .linked-lesson{border:0;border-top:1px solid var(--line);border-radius:0;margin:0}
+.question-study-extras>div{border-top:1px solid var(--line);display:grid;gap:12px;padding:14px}
+.question-study-extras .question-difficulty{margin:0}
+.qbank-mode.sidebar-collapsed .question-body>.section-title{display:none}
 .question-focus-toggle[aria-pressed="true"]{border-color:var(--teal);background:var(--soft-blue);color:var(--blue)}
+@media(max-width:620px){.question-tools-popover{left:0;right:auto}}
 .qbank-mode .question-stem{border-radius:15px;padding:18px 20px;margin-bottom:8px;background:var(--soft-blue);border:3px solid transparent}
 .qbank-blocks{display:grid;gap:8px;margin:12px 0}
 .qbank-block-row{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:center;border:1px solid var(--line);border-radius:8px;background:#fbfdfc;padding:10px}

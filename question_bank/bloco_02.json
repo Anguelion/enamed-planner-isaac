@@ -1,6 +1,6 @@
 {
   "block": 2,
-  "count": 162,
+  "count": 161,
   "questions": [
     {
       "id": "b02-semanal-q001",
@@ -4627,37 +4627,6 @@
     {
       "id": "b02-semanal-q148",
       "number": 147,
-      "collectionBlock": 2,
-      "documentBlock": 2,
-      "area": "Ginecologia e Obstetrícia",
-      "topic": "Ciclo Menstrual",
-      "stem": "A crise de enxaqueca associada ao período pré-menstrual está associada a qual evento?",
-      "options": {
-        "A": "Down regulation sobre o sistema gabaminérgico.",
-        "B": "Up regulation sobre o sistema serotoninérgico.",
-        "C": "Down regulation sobre o sistema GnRH.",
-        "D": "Up regulation sobre o sistema pineal."
-      },
-      "answer": "A",
-      "source": "01. QUESTÕES BLOCO 2 (SEMANAIS).txt",
-      "sourceLabel": "Questões semanais - Bloco 2",
-      "images": [],
-      "comment": "Análise:\nCorreta: A.\nPor que está certa: A enxaqueca menstrual está associada à queda abrupta dos níveis de estrogênio no período pré-menstrual, o que causa uma down regulation (diminuição da regulação) sobre o sistema gabaminérgico, favorecendo a excitabilidade neuronal e a crises de enxaqueca.\nPor que as outras estão erradas:\nB: Up regulation serotoninérgica não é o mecanismo clássico da enxaqueca menstrual.\nC: Down regulation do GnRH não explica a cefaleia.\nD: A pineal regula a melatonina, não relacionada à enxaqueca menstrual.\nPonto de prova: Fisiopatologia da enxaqueca menstrual.\nFlashcard sugerido 1: A enxaqueca menstrual está ligada a qual alteração? Resposta: Queda do estrogênio e down regulation gabaminérgica.\nFlashcard sugerido 2: O que acontece com o GABA na enxaqueca menstrual? Resposta: Diminui (down regulation).\nPérola: Estrogênio cai, GABA cai, cabeça dói.\nArmadilha: Achar que é um aumento de serotonina.",
-      "tags": [
-        "Ginecologia e Obstetrícia",
-        "Ginecologia",
-        "Ciclo Menstrual",
-        "Conhecimento Conceitual",
-        "Paciente Adulto",
-        "Avaliação Clínica"
-      ],
-      "tagSource": "Tags.txt",
-      "scheduleId": "cron-13",
-      "kids": "A dor de cabeça que algumas mulheres sentem perto da menstruação acontece porque a queda do hormônio estrogênio nesse período deixa o sistema que acalma o cérebro menos ativo, favorecendo a crise de enxaqueca."
-    },
-    {
-      "id": "b02-semanal-q148",
-      "number": 148,
       "collectionBlock": 2,
       "documentBlock": 2,
       "area": "Ginecologia e Obstetrícia",

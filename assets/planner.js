@@ -91,8 +91,6 @@ let materialLibraryStatus = 'Carregando resumos...';
 let importedSimulados = [];
 let importedSimuladosStatus = 'Carregando simulados importados...';
 let questionBankLoadPromise = null;
-let questionBankExpansionPromise = null;
-let questionBankExpansionTimer = null;
 let questionBankFullLoadPromise = null;
 let questionImportDraft = loadQuestionImportDraft();
 let materialLibraryLoadPromise = null;
@@ -225,8 +223,10 @@ if(!activityResetMarker(state)) {
   }
 }
 let renderCache = { questionStats: new Map(), questionAvailability: new Map(), questionStatsReady:false, questionAvailabilityReady:false, questionAvailabilityScheduleKey:'', questionFilterKey:'', questionFilterResults:null, questionBlockStats:null, questionSummary:null, flashcardStats: new Map(), videoLessons: new Map(), videoDisplay: null, manualCards: null };
-let questionSidebarCollapsed = localStorage.getItem(QUESTION_SIDEBAR_KEY) === '1';
-let questionTagsHidden = localStorage.getItem(QUESTION_TAGS_HIDDEN_KEY) === '1';
+// A sessão começa limpa: filtros, métricas e ferramentas continuam disponíveis
+// pelo botão de painel, mas deixam de disputar atenção com o enunciado.
+let questionSidebarCollapsed = localStorage.getItem(QUESTION_SIDEBAR_KEY) !== '0';
+let questionTagsHidden = localStorage.getItem(QUESTION_TAGS_HIDDEN_KEY) !== '0';
 const views = [
   ['painel','Dashboard','dashboard'],
   ['radar-saude','Radar Saúde','reading'],
@@ -2291,7 +2291,6 @@ async function loadQuestionBankNow(preferredBlock='') {
   // normalizar novamente milhares de registros iguais vindos do Supabase.
   if(localQuestions.length) {
     if(['painel','cronograma','pendencias','questoes','simulados','analise'].includes(ui.tab)) render();
-    scheduleQuestionBankExpansion();
     return;
   }
   if(!currentUser || !sbClient) {
@@ -2344,22 +2343,6 @@ async function loadQuestionBankNow(preferredBlock='') {
   reconcileQuestionProgressWithAnswers();
   if(['painel','cronograma','pendencias','questoes','simulados','analise'].includes(ui.tab)) render();
 }
-function scheduleQuestionBankExpansion() {
-  if(questionBankExpansionPromise || questionBankExpansionTimer || questionBankFullLoadPromise) return;
-  // Dá tempo para a primeira coleção ser pintada e ficar clicável antes de
-  // começar a incorporar os arquivos grandes restantes.
-  questionBankExpansionTimer = setTimeout(() => {
-    questionBankExpansionTimer = null;
-    questionBankExpansionPromise = loadRemainingQuestionBank().finally(() => { questionBankExpansionPromise = null; });
-  },2000);
-}
-async function loadRemainingQuestionBank() {
-  // Só os 30 blocos do cronograma entram automaticamente (~20 MB). Acervos
-  // especiais muito maiores ficam disponíveis sob demanda.
-  await loadLocalQuestionBank({coreOnly:true});
-  reconcileQuestionProgressWithAnswers();
-  if(['questoes','simulados','analise'].includes(ui.tab)) render();
-}
 function questionBankCatalogStatus() {
   const entries=window.ENAMED_LOCAL_QUESTION_INDEX?.blocks || [];
   const loaded=entries.filter(entry => window.ENAMED_LOCAL_QUESTION_BANK?.[entry.block]);
@@ -2373,9 +2356,7 @@ function questionBankCatalogStatus() {
 }
 async function loadFullQuestionBank() {
   if(questionBankFullLoadPromise) return questionBankFullLoadPromise;
-  if(questionBankExpansionTimer) { clearTimeout(questionBankExpansionTimer); questionBankExpansionTimer=null; }
   questionBankFullLoadPromise=(async()=>{
-    if(questionBankExpansionPromise) await questionBankExpansionPromise;
     await loadLocalQuestionBank();
     reconcileQuestionProgressWithAnswers();
   })().finally(()=>{ questionBankFullLoadPromise=null; if(ui.tab==='questoes') renderQuestionBank(); });
@@ -2432,14 +2413,13 @@ function ensureQuestionCommentLoaded(question) {
   });
   questionCommentLoadPromises.set(block, promise);
 }
-async function loadLocalQuestionBank({initialOnly=false,preferredBlock='',coreOnly=false}={}) {
+async function loadLocalQuestionBank({initialOnly=false,preferredBlock=''}={}) {
   const index = window.ENAMED_LOCAL_QUESTION_INDEX;
   if(!index?.blocks?.length) return false;
   window.ENAMED_LOCAL_QUESTION_BANK = window.ENAMED_LOCAL_QUESTION_BANK || {};
   // Executar os 30 scripts no mesmo instante trava aparelhos mais modestos.
   // Pequenos lotes preservam a rolagem e os toques durante a carga inicial.
   let pending = index.blocks.filter(block => !window.ENAMED_LOCAL_QUESTION_BANK[block.block]);
-  if(coreOnly) pending=pending.filter(block => Number.isFinite(Number(block.block)));
   if(initialOnly) {
     const preferred = String(preferredBlock || (ui.qBlock !== 'Todos' ? ui.qBlock : currentScheduleBlock()));
     const first = pending.find(block => String(block.block) === preferred)
@@ -3607,8 +3587,7 @@ async function performHealthCheck() {
       report.checks.supabase = { status: 'unavailable', reason: 'Sync desativado nesta origem' };
       return report;
     }
-    const { data, error } = await sbClient.from('planner_states').select('count', { count: 'exact' }).limit(1);
-    report.checks.supabase = error ? { status: 'error', reason: error.message } : { status: 'ok' };
+    report.checks.supabase = await supabaseHealthStatus(sbClient,currentUser);
   } catch(e) {
     report.checks.supabase = { status: 'error', reason: e.message };
   }
@@ -3628,6 +3607,12 @@ async function performHealthCheck() {
   report.telemetry = getSyncTelemetryReport();
   report.healthy = Object.values(report.checks).every(c => c.status === 'ok' || c.status === 'offline');
   return report;
+}
+async function supabaseHealthStatus(client,user) {
+  const { error } = user?.id
+    ? await client.from('planner_states').select('user_id', { count:'exact', head:true }).eq('user_id',user.id)
+    : await client.auth.getSession();
+  return error ? { status:'error', reason:error.message } : { status:'ok' };
 }
 function getSyncTelemetryReport() {
   return {
@@ -12177,8 +12162,7 @@ function refreshQuestionSearchResults() {
 function setQuestionFocusMode(enabled) {
   const wasEnabled=questionSidebarCollapsed;
   questionSidebarCollapsed=Boolean(enabled);
-  if(questionSidebarCollapsed) localStorage.setItem(QUESTION_SIDEBAR_KEY,'1');
-  else localStorage.removeItem(QUESTION_SIDEBAR_KEY);
+  localStorage.setItem(QUESTION_SIDEBAR_KEY,questionSidebarCollapsed?'1':'0');
   document.querySelector('#questoes .question-layout')?.classList.toggle('sidebar-collapsed',questionSidebarCollapsed);
   const toggle=document.getElementById('questionFocusToggle');
   if(toggle) {
@@ -12315,7 +12299,7 @@ function renderQuestionBank() {
   const catalogStatus=questionBankCatalogStatus();
   const catalogAction=catalogStatus.complete
     ? '<button type="button" class="qbank-quick-filter" disabled><span class="quick-filter-dot all"></span><strong>Banco completo</strong><small>Todas as coleções disponíveis</small></button>'
-    : `<button type="button" class="qbank-quick-filter" id="loadFullQuestionBank" ${catalogStatus.loading?'disabled':''}><span class="quick-filter-dot all"></span><strong>${catalogStatus.loading?'Carregando extras…':'Ampliar banco'}</strong><small>${catalogStatus.loading?'A interface continua disponível':`${questionBank.length.toLocaleString('pt-BR')} de ${catalogStatus.total.toLocaleString('pt-BR')} questões carregadas`}</small></button>`;
+    : `<button type="button" class="qbank-quick-filter" id="loadFullQuestionBank" ${catalogStatus.loading?'disabled':''}><span class="quick-filter-dot all"></span><strong>${catalogStatus.loading?'Carregando extras…':'Carregar banco completo'}</strong><small>${catalogStatus.loading?'A interface continua disponível':`${questionBank.length.toLocaleString('pt-BR')} de ${catalogStatus.total.toLocaleString('pt-BR')} · sob demanda`}</small></button>`;
   document.getElementById('questoes').innerHTML = `<div class="grid question-layout qbank-mode ${questionSidebarCollapsed?'sidebar-collapsed':''}">
     <header class="qbank-overview">
       <div class="qbank-overview-copy"><span class="qbank-eyebrow">Treino inteligente</span><h1>Central de questões</h1><p>Pratique com foco, acompanhe sua evolução e transforme erros em revisão.</p></div>
@@ -12327,7 +12311,7 @@ function renderQuestionBank() {
       <div class="qbank-quick-actions" role="group" aria-label="Filtros rápidos">
         <button type="button" class="qbank-quick-filter ${ui.qFocusScheduleId?'active':''}" id="continueQuestionTraining"><span class="quick-filter-dot pending"></span><strong>${escapeHtml(resumeTitle)}</strong><small title="${escapeAttr(resumeDetail)}">${escapeHtml(resumeDetail)}</small></button>
         <button type="button" class="qbank-quick-filter ${ui.qStatus==='Erradas'?'active':''}" data-question-quick-filter="Erradas"><span class="quick-filter-dot errors"></span><strong>Revisar erros</strong><small>${(summary.answered-summary.correct).toLocaleString('pt-BR')} para rever</small></button>
-        <button type="button" class="qbank-quick-filter ${ui.qStatus==='Todas' && ui.qBlock==='Todos' && !ui.qFocusScheduleId && !ui.qSearch?'active':''}" id="exploreQuestionBank"><span class="quick-filter-dot all"></span><strong>Explorar banco</strong><small>Todos os blocos</small></button>
+        <button type="button" class="qbank-quick-filter ${ui.qStatus==='Todas' && ui.qBlock==='Todos' && !ui.qFocusScheduleId && !ui.qSearch?'active':''}" id="exploreQuestionBank"><span class="quick-filter-dot all"></span><strong>Explorar banco</strong><small>${catalogStatus.complete?'Todos os blocos':'Coleções já carregadas'}</small></button>
         ${catalogAction}
       </div>
     </header>
@@ -12794,10 +12778,20 @@ function renderQuestion(question, total) {
   const focusInfo = questionSidebarCollapsed ? questionInfo : '';
   const bodyInfo = questionSidebarCollapsed ? '' : questionInfo;
   const sessionProgress = total ? Math.round(((ui.qIndex + 1) / total) * 100) : 0;
-  return `<div class="question-topbar"><button class="icon-btn question-top-nav" id="questionTopPrev" aria-label="Questão anterior" ${ui.qIndex===0?'disabled':''}>‹</button><div class="question-heading"><div class="question-heading-line"><span class="qbank-eyebrow">Sessão atual</span><strong>${ui.qIndex+1} <span>de ${total}</span></strong></div><div class="muted">${escapeHtml(question.sourceLabel || question.source || 'Banco privado')}</div><div class="question-session-progress" aria-label="${sessionProgress}% desta sessão"><span style="width:${sessionProgress}%"></span></div>${focusInfo}</div><div class="question-tool-strip"><button class="icon-btn question-focus-toggle" id="questionFocusToggle" title="${questionSidebarCollapsed?'Abrir painel lateral':'Modo foco'}" aria-label="${questionSidebarCollapsed?'Abrir painel do banco':'Ocultar painel e focar na questão'}" aria-pressed="${questionSidebarCollapsed}">${iconSvg(questionSidebarCollapsed?'sidebar':'focus',{weight:'regular'})}</button><div class="question-font-control" aria-label="Tamanho do texto"><button class="tiny-btn" id="questionFontDown" title="Diminuir fonte">A−</button><span class="question-font-value">${state.questionSettings.fontSize}px</span><button class="tiny-btn" id="questionFontUp" title="Aumentar fonte">A+</button></div><button class="icon-btn question-timer-toggle ${questionTimer.running?'active':''}" id="questionTimerToggle" title="Cronômetro">${iconSvg('simulation',{weight:'regular'})}</button><button class="icon-btn question-key-issue ${answerKeyIssue?'active':''}" id="questionKeyIssue" title="${answerKeyIssue?'Remover marcação de gabarito suspeito':'Marcar gabarito suspeito'}" aria-pressed="${answerKeyIssue}">${iconSvg('flag',{weight:'regular'})}</button><button class="icon-btn question-edit-action" id="questionEditToggle" title="Corrigir texto">Editar</button><button class="icon-btn danger question-delete-action" id="questionDelete" title="Excluir questão">${iconSvg('delete',{weight:'regular'})}</button></div><button class="icon-btn question-top-nav" id="questionTopNext" aria-label="Próxima questão ou concluir">›</button></div>${renderQuestionTimer(question, result)}<div class="question-body">
+  const advancedTools = `<details class="question-tools-menu"><summary class="icon-btn" aria-label="Abrir ajustes da questão" title="Ajustes">•••</summary><div class="question-tools-popover"><div class="question-font-control" aria-label="Tamanho do texto"><button class="tiny-btn" id="questionFontDown" title="Diminuir fonte">A−</button><span class="question-font-value">${state.questionSettings.fontSize}px</span><button class="tiny-btn" id="questionFontUp" title="Aumentar fonte">A+</button></div><button class="icon-btn question-timer-toggle ${questionTimer.running?'active':''}" id="questionTimerToggle" title="Cronômetro">${iconSvg('simulation',{weight:'regular'})}<span>Cronômetro</span></button><button class="icon-btn question-key-issue ${answerKeyIssue?'active':''}" id="questionKeyIssue" title="${answerKeyIssue?'Remover marcação de gabarito suspeito':'Marcar gabarito suspeito'}" aria-pressed="${answerKeyIssue}">${iconSvg('flag',{weight:'regular'})}<span>Revisar gabarito</span></button><button class="icon-btn question-edit-action" id="questionEditToggle" title="Corrigir texto">Editar texto</button><button class="icon-btn danger question-delete-action" id="questionDelete" title="Excluir questão">${iconSvg('delete',{weight:'regular'})}<span>Excluir</span></button></div></details>`;
+  const linkedLessonContent = isSpecialCollection
+    ? `<div class="linked-lesson"><strong>Coleção:</strong> questões inéditas por macroárea para treino livre.</div>`
+    : linkedLesson
+      ? `<div class="linked-lesson"><strong>Aula vinculada:</strong> Bloco ${linkedLesson.block} · ${escapeHtml(linkedLesson.topic)}<div class="question-lesson-links"><button type="button" class="tiny-btn" data-question-materials="${escapeAttr(linkedLesson.id)}">Ver material da aula</button><button type="button" class="tiny-btn" data-question-video="${escapeAttr(linkedLesson.id)}">Ver vídeo da aula</button></div></div>`
+      : `<div class="linked-lesson"><strong>Aula vinculada:</strong> não encontrei uma correspondência no cronograma.</div>`;
+  const linkedLessonPanel = questionSidebarCollapsed
+    ? `<details class="question-context-panel"><summary>Contexto da aula</summary>${linkedLessonContent}</details>`
+    : linkedLessonContent;
+  const studyExtras = `<details class="question-study-extras"><summary>Anotações e dificuldade</summary><div>${renderQuestionNotes(question, savedProgress)}${difficultyPicker}</div></details>`;
+  return `<div class="question-topbar"><button class="icon-btn question-top-nav" id="questionTopPrev" aria-label="Questão anterior" ${ui.qIndex===0?'disabled':''}>‹</button><div class="question-heading"><div class="question-heading-line"><span class="qbank-eyebrow">Sessão atual</span><strong>${ui.qIndex+1} <span>de ${total}</span></strong></div><div class="muted">${escapeHtml(question.sourceLabel || question.source || 'Banco privado')}</div><div class="question-session-progress" aria-label="${sessionProgress}% desta sessão"><span style="width:${sessionProgress}%"></span></div>${focusInfo}</div><div class="question-tool-strip"><button class="icon-btn question-focus-toggle" id="questionFocusToggle" title="${questionSidebarCollapsed?'Abrir painel lateral':'Modo foco'}" aria-label="${questionSidebarCollapsed?'Abrir painel do banco':'Ocultar painel e focar na questão'}" aria-pressed="${questionSidebarCollapsed}">${iconSvg(questionSidebarCollapsed?'sidebar':'focus',{weight:'regular'})}</button>${advancedTools}</div><button class="icon-btn question-top-nav" id="questionTopNext" aria-label="Próxima questão ou concluir">›</button></div>${renderQuestionTimer(question, result)}<div class="question-body">
     ${bodyInfo}
     ${ui.editQuestionId === question.id ? renderQuestionEditPanel(question) : ''}
-    ${isSpecialCollection ? `<div class="linked-lesson"><strong>Coleção:</strong> questões inéditas por macroárea para treino livre.</div>` : linkedLesson ? `<div class="linked-lesson"><strong>Aula vinculada:</strong> Bloco ${linkedLesson.block} · ${escapeHtml(linkedLesson.topic)}<div class="question-lesson-links"><button type="button" class="tiny-btn" data-question-materials="${escapeAttr(linkedLesson.id)}">Ver material da aula</button><button type="button" class="tiny-btn" data-question-video="${escapeAttr(linkedLesson.id)}">Ver vídeo da aula</button></div></div>` : `<div class="linked-lesson"><strong>Aula vinculada:</strong> não encontrei uma correspondência no cronograma.</div>`}
+    ${linkedLessonPanel}
      <div class="section-title"><h2>Questão ${question.number}</h2></div>
     <div class="question-workspace"><div class="question-main">
       <div class="question-stem highlightable" data-highlight-scope="stem" style="font-size:${state.questionSettings.fontSize}px">${renderHighlightedText(question.stem, highlights, true, 'stem')}</div>
@@ -12811,9 +12805,8 @@ function renderQuestion(question, total) {
       ${comment}
       ${result ? renderQuestionReflection(question, result) : ''}
       ${result ? renderQuestionFlashcardEditor(question, result) : ''}
-      ${renderQuestionNotes(question, savedProgress)}
       <div class="question-nav"><div><button class="icon-btn" id="questionPrev" ${ui.qIndex===0?'disabled':''}>‹ Anterior</button> <button class="icon-btn" id="questionNext">Próxima ›</button></div><div>${reviewButton} ${result?'<button class="icon-btn" id="questionRedo">Refazer</button>':''}</div></div>
-      ${difficultyPicker}
+      ${studyExtras}
     </div></div></div>`;
 }
 function renderQuestionImages(question) {
@@ -14306,6 +14299,10 @@ function radarSaudeDate(value) {
   if(Number.isNaN(date.getTime())) return String(value||'');
   return new Intl.DateTimeFormat('pt-BR',{day:'2-digit',month:'long',year:'numeric'}).format(date);
 }
+function radarSaudeStoryDetail(story) {
+  const deep=story.deepDive||{};
+  return `<div class="planner-radar-study-body"><section><h4>Cenário e relevância epidemiológica</h4><p>${escapeHtml(deep.whatHappened||story.summary||'')}</p></section><section><h4>Mecanismo e fisiopatologia</h4><p>${escapeHtml(deep.howItWorks||'')}</p></section><section><h4>Aplicação clínica e conduta</h4><p>${escapeHtml(deep.clinicalMeaning||story.clinicalNote||'')}</p></section><section><h4>Força da evidência e limitações</h4><p><strong>Base:</strong> ${escapeHtml(story.evidence||'Não informada')}.</p><p>${escapeHtml(deep.limitations||'')}</p></section></div><div class="planner-radar-exam"><div><span>Pontos de prova e revisão ativa</span><ul>${(Array.isArray(deep.examFocus)?deep.examFocus:[]).map(point=>`<li>${escapeHtml(point)}</li>`).join('')}</ul></div><a href="${escapeAttr(story.sourceUrl)}" target="_blank" rel="noopener noreferrer">Fonte consultada ↗</a></div>`;
+}
 function radarSaudeMarkup(issue) {
   const stories=Array.isArray(issue.stories)?issue.stories:[];
   const innovations=Array.isArray(issue.innovations)?issue.innovations:[];
@@ -14324,7 +14321,7 @@ function radarSaudeMarkup(issue) {
     </section>
     <section class="planner-radar-section">
       <div class="planner-radar-heading"><div><span class="eyebrow">Leitura completa</span><h2>Entenda a edição</h2></div><span class="planner-radar-self-contained">Tudo o que você precisa saber está aqui</span></div>
-      <div class="planner-radar-study-list">${stories.map((story,index)=>{const deep=story.deepDive||{};return `<article class="planner-radar-study"><header><span>${String(index+1).padStart(2,'0')}</span><div><small>${escapeHtml(story.category)} · ${escapeHtml(story.evidence)}</small><h3>${escapeHtml(story.title)}</h3><p>${escapeHtml(story.summary)}</p></div></header><div class="planner-radar-study-body"><section><h4>O que aconteceu</h4><p>${escapeHtml(deep.whatHappened||'')}</p></section><section><h4>Como funciona</h4><p>${escapeHtml(deep.howItWorks||'')}</p></section><section><h4>Significado clínico</h4><p>${escapeHtml(deep.clinicalMeaning||story.clinicalNote)}</p></section><section><h4>Limites e cuidados</h4><p>${escapeHtml(deep.limitations||'')}</p></section></div><div class="planner-radar-exam"><div><span>Como pode cair na prova</span><ul>${(Array.isArray(deep.examFocus)?deep.examFocus:[]).map(point=>`<li>${escapeHtml(point)}</li>`).join('')}</ul></div><a href="${escapeAttr(story.sourceUrl)}" target="_blank" rel="noopener noreferrer">Fonte consultada ↗</a></div></article>`;}).join('')}</div>
+      <div class="planner-radar-study-list">${stories.map((story,index)=>`<article class="planner-radar-study"><header><span>${String(index+1).padStart(2,'0')}</span><div><small>${escapeHtml(story.category)} · ${escapeHtml(story.evidence)}</small><h3>${escapeHtml(story.title)}</h3><p>${escapeHtml(story.summary)}</p></div></header><div class="planner-radar-clinical-snapshot"><strong>Aplicação clínica</strong><p>${escapeHtml(story.clinicalNote||'')}</p></div><button class="planner-radar-expand" type="button" data-radar-story-expand="${index}" aria-expanded="false">Aprofundar raciocínio clínico</button><div class="planner-radar-story-detail" data-radar-story-detail="${index}" hidden></div></article>`).join('')}</div>
     </section>
     <section class="planner-radar-section" id="planner-radar-innovation">
       <div class="planner-radar-heading"><div><span class="eyebrow">Tecnologia e acesso</span><h2>Inovações em saúde</h2></div><small>Da pesquisa à oferta no SUS</small></div>
@@ -14343,6 +14340,23 @@ function radarSaudeMarkup(issue) {
     </section>
     <p class="planner-radar-disclaimer">Conteúdo para atualização e estudo. Não substitui avaliação clínica, protocolo vigente ou orientação médica individual.</p>
   </div>`;
+}
+function bindRadarSaudeStories(issue) {
+  const stories=Array.isArray(issue.stories)?issue.stories:[];
+  document.querySelectorAll('[data-radar-story-expand]').forEach(button=>button.addEventListener('click',()=>{
+    const index=n(button.dataset.radarStoryExpand);
+    const story=stories[index];
+    const detail=document.querySelector(`[data-radar-story-detail="${index}"]`);
+    if(!story||!detail) return;
+    if(!detail.dataset.rendered) {
+      detail.innerHTML=radarSaudeStoryDetail(story);
+      detail.dataset.rendered='true';
+    }
+    const expanded=button.getAttribute('aria-expanded')==='true';
+    button.setAttribute('aria-expanded',String(!expanded));
+    button.textContent=expanded?'Aprofundar raciocínio clínico':'Recolher análise';
+    detail.hidden=expanded;
+  }));
 }
 function bindRadarSaudeQuiz(issue) {
   const questions=Array.isArray(issue.dailyQuiz)?issue.dailyQuiz:[];
@@ -14366,7 +14380,7 @@ function bindRadarSaudeQuiz(issue) {
       updateScore();
     }));
   });
-  document.getElementById('radarQuizReset')?.addEventListener('click',()=>{ if(radarSaudeIssueCache) { const root=document.getElementById('radar-saude'); root.innerHTML=radarSaudeMarkup(radarSaudeIssueCache); document.getElementById('radarSaudeRefresh')?.addEventListener('click',()=>renderRadarSaude(true)); bindRadarSaudeQuiz(radarSaudeIssueCache); document.getElementById('planner-radar-quiz')?.scrollIntoView({behavior:'smooth',block:'start'}); } });
+  document.getElementById('radarQuizReset')?.addEventListener('click',()=>{ if(radarSaudeIssueCache) { const root=document.getElementById('radar-saude'); root.innerHTML=radarSaudeMarkup(radarSaudeIssueCache); document.getElementById('radarSaudeRefresh')?.addEventListener('click',()=>renderRadarSaude(true)); bindRadarSaudeStories(radarSaudeIssueCache); bindRadarSaudeQuiz(radarSaudeIssueCache); document.getElementById('planner-radar-quiz')?.scrollIntoView({behavior:'smooth',block:'start'}); } });
   updateScore();
 }
 function renderRadarSaude(force=false) {
@@ -14376,16 +14390,71 @@ function renderRadarSaude(force=false) {
     if(ui.tab!=='radar-saude') return;
     root.innerHTML=radarSaudeMarkup(issue);
     document.getElementById('radarSaudeRefresh')?.addEventListener('click',()=>renderRadarSaude(true));
+    bindRadarSaudeStories(issue);
     bindRadarSaudeQuiz(issue);
   };
   if(radarSaudeIssueCache&&!force) { show(radarSaudeIssueCache); return; }
   root.innerHTML='<section class="card empty"><strong>Atualizando o Radar Saúde…</strong><span>Buscando a edição mais recente e os documentos oficiais.</span></section>';
-  fetch('health-news/data/latest.json',{cache:'no-store'})
+  fetch('health-news/data/latest.json',{cache:force?'no-store':'default'})
     .then(response=>{ if(!response.ok) throw new Error(`HTTP ${response.status}`); return response.json(); })
     .then(issue=>{ radarSaudeIssueCache=issue; show(issue); })
     .catch(()=>{ if(ui.tab==='radar-saude') root.innerHTML='<section class="card empty"><strong>Não foi possível abrir o Radar Saúde.</strong><span>Confira sua conexão e tente novamente.</span><button class="tiny-btn" type="button" id="radarSaudeRetry">Tentar novamente</button></section>'; document.getElementById('radarSaudeRetry')?.addEventListener('click',()=>renderRadarSaude(true)); });
 }
+const VIEW_ASSET_BUNDLES = {
+  anatomia: {
+    styles:['assets/anatomia.css?v=20260802-8'],
+    scripts:['assets/anatomia.js?v=20260802-6']
+  },
+  ecg: { scripts:['assets/ecg-simulator.js?v=20260802-10'] },
+  radiografia: { scripts:['assets/radiografia-aulas.js?v=20260802-3','assets/radiografia.js?v=20260802-11'] },
+  semiologia: { scripts:['assets/semiologia-aulas.js?v=20260802-3','assets/semiologia.js?v=20260802-9'] },
+  prescricao: { scripts:['assets/consulta-doencas.js?v=20260902-2','assets/consulta-clinica.js?v=20260902-2'] }
+};
+const viewAssetLoadPromises = new Map();
+function loadViewStylesheet(href) {
+  const key=`style:${href}`;
+  if(viewAssetLoadPromises.has(key)) return viewAssetLoadPromises.get(key);
+  const absolute=new URL(href,document.baseURI).href;
+  const existing=[...document.styleSheets].some(sheet=>sheet.href===absolute);
+  if(existing) return Promise.resolve();
+  const promise=new Promise((resolve,reject)=>{
+    const link=document.createElement('link');
+    link.rel='stylesheet';
+    link.href=href;
+    link.dataset.viewAsset='true';
+    link.onload=()=>resolve();
+    link.onerror=()=>reject(new Error(`Falha ao carregar ${href}`));
+    document.head.appendChild(link);
+  });
+  viewAssetLoadPromises.set(key,promise);
+  return promise;
+}
+function loadViewScript(src) {
+  const key=`script:${src}`;
+  if(viewAssetLoadPromises.has(key)) return viewAssetLoadPromises.get(key);
+  const absolute=new URL(src,document.baseURI).href;
+  if([...document.scripts].some(script=>script.src===absolute)) return Promise.resolve();
+  const promise=new Promise((resolve,reject)=>{
+    const script=document.createElement('script');
+    script.src=src;
+    script.dataset.viewAsset='true';
+    script.onload=()=>resolve();
+    script.onerror=()=>reject(new Error(`Falha ao carregar ${src}`));
+    document.head.appendChild(script);
+  });
+  viewAssetLoadPromises.set(key,promise);
+  return promise;
+}
+async function ensureViewAssets(tab) {
+  const bundle=VIEW_ASSET_BUNDLES[tab];
+  if(!bundle) return;
+  await Promise.all((bundle.styles||[]).map(loadViewStylesheet));
+  // Alguns módulos publicam catálogos globais consumidos pelo script seguinte.
+  // A ordem explícita evita corridas sem voltar a bloquear o boot do planner.
+  for(const src of bundle.scripts||[]) await loadViewScript(src);
+}
 async function ensureViewData(tab) {
+  await ensureViewAssets(tab);
   if(['questoes','simulados','analise'].includes(tab)) await loadQuestionBank();
   if(['simulados','analise'].includes(tab)) await loadImportedSimulados();
   if(tab === 'materiais') await loadMaterialLibrary();

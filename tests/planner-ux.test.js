@@ -283,11 +283,13 @@ test('Missão sinaliza e abre questões extras após a meta da aula',()=>{
   assert.match(css,/\.schedule-study-icon\.done\.has-extra\{border-color:#20a477;background:#e8f8f1;color:#14825d\}/);
 });
 
-test('Questões abre com uma coleção inicial e completa o banco progressivamente',()=>{
+test('Questões abre só a coleção necessária e deixa o banco completo sob demanda',()=>{
   const root=path.resolve(__dirname,'..');
   const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');
   assert.match(planner,/loadLocalQuestionBank\(\{initialOnly:true,preferredBlock\}\)/);
-  assert.match(planner,/function scheduleQuestionBankExpansion\(\)/);
+  assert.doesNotMatch(planner,/scheduleQuestionBankExpansion/);
+  assert.match(planner,/Carregar banco completo/);
+  assert.match(planner,/sob demanda/);
   assert.match(planner,/Carregando as primeiras questões/);
   assert.match(planner,/await loadLocalQuestionBank\(\{initialOnly:true,preferredBlock:String\(item\.block\)\}\)/);
   assert.doesNotMatch(planner,/requestIdleCallback\(\(\) => loadQuestionBank\(\)/);
