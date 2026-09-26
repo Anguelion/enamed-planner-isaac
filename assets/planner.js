@@ -128,7 +128,7 @@ ensureSimTopics();
 ensureFeynman();
 ensureQuestionProgress();
 const DEFAULT_SCHEDULE_WEEK_ANCHOR = state.reschedule?.restartDate > studyDateKey() ? state.reschedule.restartDate : studyDateKey();
-let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', priority: 'Todas', scheduleBlock: 'Atual', scheduleBlockPinned: false, scheduleBlockScrollLeft: 0, scheduleSelectedId:'', scheduleDay: '', scheduleWeekAnchor: DEFAULT_SCHEDULE_WEEK_ANCHOR, refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', weeklyWeekOffset:0, areaChartMetric:'hours', areaChartWeekOffset:0, qBrowseMode:'block', qSpecialty:'Todas', qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, qFocusQuestionIds: [], justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialFocusMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', materialsSection:'apostila', materialSpecialty:'Todos', materialGlobalSearch:'', cadernoSearch: '', cadernoArea: 'Todas', cadernoEditId: '', cadernoSessionIds: [], cadernoSessionIndex: 0, cadernoSessionAnswer: '', cadernoSessionConfidence: 0, cadernoSessionRevealed: false, flashcardView: 'overview', flashcardFilter: 'Aprendendo', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', flashcardFocusMode: false, flashcardFocusPaused: false, flashcardSpeedMode: false, flashcardCardStartedAt: 0, flashcardSpeedCardId: '', revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionTab:'prescricao', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
+let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', priority: 'Todas', scheduleBlock: 'Atual', scheduleBlockPinned: false, scheduleBlockScrollLeft: 0, scheduleSelectedId:'', scheduleDay: '', scheduleWeekAnchor: DEFAULT_SCHEDULE_WEEK_ANCHOR, refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', weeklyWeekOffset:0, areaChartMetric:'hours', areaChartWeekOffset:0, qBrowseMode:'block', qSpecialty:'Todas', qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, qFocusQuestionIds: [], justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialFocusMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', materialsSection:'apostila', materialSpecialty:'Todos', materialGlobalSearch:'', cadernoSearch: '', cadernoArea: 'Todas', cadernoEditId: '', cadernoSessionIds: [], cadernoSessionIndex: 0, cadernoSessionAnswer: '', cadernoSessionConfidence: 0, cadernoSessionRevealed: false, flashcardView: 'overview', flashcardFilter: 'Aprendendo', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', flashcardFocusMode: false, flashcardFocusPaused: false, flashcardSpeedMode: false, flashcardCardStartedAt: 0, flashcardSpeedCardId: '', revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoSpecialty:'Todas', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionTab:'prescricao', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
 ui.legacyImportPreview = null;
 ui.scheduleBlockFocusPending ||= ui.scheduleBlock||'Atual';
 ui.scheduleWeekScrollLeft = n(ui.scheduleWeekScrollLeft);
@@ -828,7 +828,9 @@ const TOPIC_ALIASES = {
   'sangramentos 1 metade gestacao': 'sangramentos da primeira metade da gestacao',
   'r1 outros sangramentos de segunda metade da gestacao': 'sangramentos da segunda metade da gestacao',
   'sindrome dispeptica drge': 'sindrome dispeptica dispepsia fisiologia gastrica drge',
-  'endometriose': 'sangramento uterino anormal',
+  'endometriose': 'dor pelvica',
+  'taquiarritmias e aclbls': 'taquiarritmias e acl bls',
+  'lesoes elementares dermatologia pediatrica': 'cofbasics lesoes elementares pediatria',
   'convulsoes na emergencia e tce leve': 'convulsoes na emergencia e traumatismo cranioencefalico leve',
   'transtorno do desenvolvimento e aprendizagem': 'transtornos do desenvolvimento e aprendizagem',
   'abdome agudo diverticulite': 'abdome agudo inflamatorio diverticulite e abcesso hepatico',
@@ -838,6 +840,8 @@ const TOPIC_ALIASES = {
   'sindromes geriatricas e vacinacao idoso': 'sindromes geriatricas vacinacao do idoso e iatrogenia no idoso',
   'dermatite atopica e lesoes benignas rn': 'dermatite atopica e lesoes benignas do recem nascido',
   'cofbasics bioestatistica': 'cofbasics fundamentos de bioestatistica saude coletiva',
+  'acidentes por animais peconhentos': 'acidentes por animais peconhentos e profilaxia da raiva',
+  'alergologia e hipersensibilidade': 'alergologia reacoes de hipersensibilidade rinite e angioedema',
   'cofbasics propedeutica uroginecologia': 'cofbasics propedeutica em uroginecologia g o',
   'transtornos alimentares e de personalidade': 'transtornos alimentares somatoformes e de personalidade',
   'alergologia hipersensibilidade': 'alergologia reacoes de hipersensibilidade rinite e angioedema',
@@ -872,6 +876,12 @@ const VIDEO_SCHEDULE_OVERRIDES = {
   '8:cofbasics lesoes elementares pediatria': { block:9, topic:'CofBasics - Lesões Elementares (Pediatria)' },
   '9:dor pelvica': { block:12, topic:'Dor Pélvica' },
   '18:cofbasics propedeutica em uroginecologia': { block:18, order:8 }
+};
+const VIDEO_SHARED_SCHEDULE_LINKS = {
+  // A pasta de Dor pélvica do bloco 9 traz a ficha-resumo específica de DIP.
+  // O mesmo arquivo também atende Endometriose no bloco 12, sem duplicar mídia
+  // ou progresso de reprodução.
+  '9:dor pelvica': [{ block:9, topic:'Doença Inflamatória Pélvica Aguda' }]
 };
 function priorityClass(priority='') { return `priority-${normalizedTopic(priority) || 'baixa'}`; }
 function priorityLegend() {
@@ -935,7 +945,11 @@ function applyOfficialSchedule() {
   return true;
 }
 function questionMatchesSchedule(question, item) {
-  if(!question || !item || String(question.collectionBlock) !== String(item.block)) return false;
+  if(!question || !item) return false;
+  // scheduleId é um vínculo editorial explícito. Ele também pode apontar para
+  // outra semana quando a questão do PDF tem como correlato uma aula anterior.
+  if(question.scheduleId && String(question.scheduleId) === String(item.id)) return true;
+  if(String(question.collectionBlock) !== String(item.block)) return false;
   const candidates = [question.sourceLabel, question.topic, question.source].map(canonicalTopic).filter(Boolean);
   const target = canonicalTopic(item.topic);
   if(candidates.includes(target)) return true;
@@ -2362,10 +2376,10 @@ async function loadQuestionBankNow(preferredBlock='') {
   if(['painel','cronograma','pendencias','questoes','simulados','analise'].includes(ui.tab)) render();
 }
 function questionBankCatalogStatus() {
-  const entries=window.ENAMED_LOCAL_QUESTION_INDEX?.blocks || [];
+  const entries=questionCatalogEntries();
   const loaded=entries.filter(entry => window.ENAMED_LOCAL_QUESTION_BANK?.[entry.block]);
   return {
-    total:n(window.ENAMED_LOCAL_QUESTION_INDEX?.total),
+    total:entries.reduce((sum,entry) => sum + n(entry.count),0),
     loadedCollections:loaded.length,
     totalCollections:entries.length,
     complete:Boolean(entries.length && loaded.length===entries.length),
@@ -2382,10 +2396,13 @@ async function loadFullQuestionBank() {
   return questionBankFullLoadPromise;
 }
 function questionCatalogEntries() {
-  return (window.ENAMED_LOCAL_QUESTION_INDEX?.blocks || []).slice().sort((a,b) => questionCollectionSort(a.block) - questionCollectionSort(b.block) || String(a.label || a.block).localeCompare(String(b.label || b.block), 'pt-BR'));
+  return (window.ENAMED_LOCAL_QUESTION_INDEX?.blocks || [])
+    .filter(entry => !entry.special && /^\d+$/.test(String(entry.block)) && n(entry.block) >= 1 && n(entry.block) <= 30)
+    .slice()
+    .sort((a,b) => questionCollectionSort(a.block) - questionCollectionSort(b.block) || String(a.label || a.block).localeCompare(String(b.label || b.block), 'pt-BR'));
 }
 function officialQuestionBlockEntries() {
-  return questionCatalogEntries().filter(entry => !entry.special && /^\d+$/.test(String(entry.block)));
+  return questionCatalogEntries();
 }
 function questionCollectionIsLoaded(block) {
   return Boolean(window.ENAMED_LOCAL_QUESTION_BANK?.[block]);
@@ -2463,10 +2480,12 @@ function ensureQuestionCommentLoaded(question) {
 async function loadLocalQuestionBank({initialOnly=false,preferredBlock=''}={}) {
   const index = window.ENAMED_LOCAL_QUESTION_INDEX;
   if(!index?.blocks?.length) return false;
+  const catalogEntries = questionCatalogEntries();
+  if(!catalogEntries.length) return false;
   window.ENAMED_LOCAL_QUESTION_BANK = window.ENAMED_LOCAL_QUESTION_BANK || {};
   // Executar os 30 scripts no mesmo instante trava aparelhos mais modestos.
   // Pequenos lotes preservam a rolagem e os toques durante a carga inicial.
-  let pending = index.blocks.filter(block => !window.ENAMED_LOCAL_QUESTION_BANK[block.block]);
+  let pending = catalogEntries.filter(block => !window.ENAMED_LOCAL_QUESTION_BANK[block.block]);
   if(initialOnly) {
     const preferred = String(preferredBlock || (ui.qBlock !== 'Todos' ? ui.qBlock : currentScheduleBlock()));
     const first = pending.find(block => String(block.block) === preferred)
@@ -2482,7 +2501,7 @@ async function loadLocalQuestionBank({initialOnly=false,preferredBlock=''}={}) {
     // requestAnimationFrame nunca dispara com a aba oculta/em segundo plano, o que travava o carregamento pela metade.
     await new Promise(resolve => (document.hidden ? setTimeout(resolve, 0) : requestAnimationFrame(() => resolve())));
   }
-  const blocks = index.blocks
+  const blocks = catalogEntries
     .map(block => window.ENAMED_LOCAL_QUESTION_BANK?.[block.block]?.questions || [])
     .flat();
   ensureImportedQuestions();
@@ -4157,7 +4176,7 @@ function navigationSnapshot() {
     route:currentRouteState(),
     ui:{
       tab:ui.tab,qBrowseMode:ui.qBrowseMode,qSpecialty:ui.qSpecialty,qBlock:ui.qBlock,qSource:ui.qSource,qTopic:ui.qTopic,qStatus:ui.qStatus,qSearch:ui.qSearch,qIndex:ui.qIndex,qQuestionId:ui.qQuestionId,
-      videoBlock:ui.videoBlock,videoSearch:ui.videoSearch,videoLessonId:ui.videoLessonId,videoSourceId:ui.videoSourceId,
+      videoBlock:ui.videoBlock,videoSpecialty:ui.videoSpecialty,videoSearch:ui.videoSearch,videoLessonId:ui.videoLessonId,videoSourceId:ui.videoSourceId,
       scheduleBlock:ui.scheduleBlock,scheduleBlockPinned:ui.scheduleBlockPinned,scheduleBlockScrollLeft:ui.scheduleBlockScrollLeft,scheduleSelectedId:ui.scheduleSelectedId,scheduleDay:ui.scheduleDay,scheduleWeekAnchor:ui.scheduleWeekAnchor,scheduleWeekScrollLeft:ui.scheduleWeekScrollLeft,scheduleStarFilter:ui.scheduleStarFilter,
       materialsSection:ui.materialsSection,materialBlock:ui.materialBlock,materialSpecialty:ui.materialSpecialty,materialScheduleId:ui.materialScheduleId,materialDocId:ui.materialDocId,materialSearch:ui.materialSearch,materialFocusMode:ui.materialFocusMode,
       activeSimRunId:ui.activeSimRunId,simulationLibraryOpen:ui.simulationLibraryOpen
@@ -7853,6 +7872,10 @@ function videoScheduleForVideo(lesson, video) {
     || candidates.find(item => target.length >= 6 && (canonicalTopic(item.topic).includes(target) || target.includes(canonicalTopic(item.topic))))
     || null;
 }
+function sharedVideoSchedulesForLesson(lesson) {
+  const links = VIDEO_SHARED_SCHEDULE_LINKS[`${n(lesson?.block)}:${canonicalTopic(lesson?.title)}`] || [];
+  return links.map(link => state.schedule.find(item => n(item.block)===n(link.block) && (link.order ? n(item.lessonOrder)===n(link.order) : canonicalTopic(item.topic)===canonicalTopic(link.topic)))).filter(Boolean);
+}
 function displayVideoLessons() {
   if(renderCache.videoDisplay) return renderCache.videoDisplay;
   const groups = new Map();
@@ -7878,6 +7901,23 @@ function displayVideoLessons() {
       const group = groups.get(key);
       if(!group.fileTitles.includes(raw.title)) group.fileTitles.push(raw.title);
       if(!group.videos.some(current => current.id === video.id)) group.videos.push({ ...video, lessonTopic: raw.title, folderOrder:raw.folderOrder });
+    });
+    sharedVideoSchedulesForLesson(raw).forEach(schedule => {
+      const key = `schedule:${schedule.id}`;
+      if(!groups.has(key)) groups.set(key, {
+        id:key,
+        scheduleId:schedule.id,
+        lessonOrder:n(schedule.lessonOrder),
+        block:schedule.block,
+        area:schedule.area,
+        title:schedule.topic,
+        fileTitles:[raw.title],
+        videos:[]
+      });
+      const group = groups.get(key);
+      availableVideos.forEach(video => {
+        if(!group.videos.some(current => current.id === video.id)) group.videos.push({ ...video, lessonTopic:raw.title, folderOrder:raw.folderOrder });
+      });
     });
   });
   // Os blocos finais já aparecem na rota de estudo mesmo antes do envio dos MP4s,
@@ -8180,13 +8220,61 @@ function videoLessonSort(a, b) {
   if(scheduleA && scheduleB) return n(scheduleA.block)-n(scheduleB.block) || n(scheduleA.lessonOrder)-n(scheduleB.lessonOrder) || a.title.localeCompare(b.title, 'pt-BR');
   return n(a.block)-n(b.block) || a.area.localeCompare(b.area, 'pt-BR') || a.title.localeCompare(b.title, 'pt-BR');
 }
-function visibleVideoLessons() {
+const VIDEO_SPECIALTY_RULES = [
+  ['Cardiologia',['cardiaca','cardiaco','hipertens','has ambulatorial','taquiarrit','bradiarrit','sincope','coronarian','dislipid','dor toracica','cirurgia vascular']],
+  ['Nefrologia',['nefrolog','glomerul','injuria renal','doenca renal','disturbios de sodio','disturbios acido base','gasometria arterial']],
+  ['Gastroenterologia',['gastro','dispeps','drge','esofago','diarreia','diarreias','pancreat','cirrose','hepatite','hepatico','ictericia','colestase','vias biliares','apendicite','diverticulite','abdome agudo','bariatrica','hemorroida','hemorragia digestiva','cancer colorretal']],
+  ['Pneumologia',['tabagismo','espirometria','asma','pulmonar','pulmao','pneumonia','pneumonias','bronquiolite','dpoc','derrame pleural','srag','suporte ventilatorio']],
+  ['Endocrinologia',['diabetes','hipoglicemia','hiperglicem','cetoacidose','sindrome metabolica','obesidade','osteoporose','disturbios do calcio','baixa estatura']],
+  ['Neurologia',['neurovascular','neurolog','convulsoes','traumatismo cranioencefalico','cefaleia','meningite','insuficiencia cognitiva']],
+  ['Hematologia',['hemograma','anemia','hematopediatria','coagulopatia','onco hematologia']],
+  ['Reumatologia',['artrite','fibromialgia']],
+  ['Dermatologia',['dermat','lesoes elementares','hanseniase']],
+  ['Infectologia',['tuberculose','sifilis','uretrite','febre maculosa','infeccoes congenitas','doencas negligenciadas','arbovirose','parasitoses','hiv','dengue','sepse','choque septico']],
+  ['Urologia',['urolog','infeccao urinaria','itu e','hiperplasia prostatica','fournier']],
+  ['Psiquiatria',['psiquiatr','saude mental','transtorno do desenvolvimento','psicofarmacologia','sindrome depressiva','sindrome ansiosa','sindrome maniaca']],
+  ['Ginecologia e Obstetrícia',['sistema reprodutor feminino','ciclo menstrual','gestacao','fetal','pre natal','parto','puerperio','amenorreia','ovarios policisticos','sangramento uterino','corrimentos vaginais','ulceras genitais','dor pelvica','endometriose','violencia sexual','mastologia','uroginecologia','colo de utero','canceres ginecologicos','infertilidade','climaterio','planejamento familiar']],
+  ['Geriatria',['geriatr','idoso']],
+  ['Otorrinolaringologia',['vias aereas superiores','otorrino']],
+  ['Oftalmologia',['oftalmologia']],
+  ['Pediatria',['aleitamento materno','alimentacao infantil','crescimento','puberdade','pediatria geral','desenvolvimento infantil','pediatrica','pediatrico','recem nascido','triagens neonatais','exantematicas','genetica']],
+  ['Cirurgia e Trauma',['atls','trauma','queimadura','perioperatorio','tecnica operatoria','hernia']],
+  ['Saúde Coletiva e MFC',['sus','prevencao','processo saude doenca','promocao de saude','rastreamento','bioestatistica','indicadores de saude','epidemiolog','medidas de associacao','redes de atencao','atencao primaria','ferramentas da aps','abordagem familiar','estrategia da saude da familia','mccp','testes diagnosticos','vigilancia em saude','saude do trabalhador','doencas relacionadas ao trabalho','etica medica','declaracao de obito','atestados e laudos','habilidades de comunicacao']]
+];
+const VIDEO_SPECIALTY_FALLBACKS = [
+  ['Ginecologia e Obstetrícia',['go','g o','ginecologia e obstetricia']],
+  ['Pediatria',['pediatria']],
+  ['Cirurgia e Trauma',['cirurgia']],
+  ['Psiquiatria',['saude mental']],
+  ['Saúde Coletiva e MFC',['saude coletiva','medicina de familia e comunidade']],
+  ['Bases clínicas',['cofbasics']],
+  ['Clínica Médica',['clinica medica']]
+];
+function videoLessonSpecialties(lesson) {
+  const schedule = videoScheduleForLesson(lesson);
+  const topic = normalizedTopic(`${lesson?.title || ''} ${schedule?.topic || ''}`);
+  const area = normalizedTopic(`${lesson?.area || ''} ${schedule?.area || ''}`);
+  const thematic = VIDEO_SPECIALTY_RULES.filter(([, keywords]) => keywords.some(keyword => topic.includes(keyword))).map(([label]) => label);
+  const curricular = VIDEO_SPECIALTY_FALLBACKS.filter(([, names]) => names.some(name => area.includes(name))).map(([label]) => label);
+  return [...new Set([...thematic, ...curricular, ...(thematic.length || curricular.length ? [] : ['Outras'])])];
+}
+function videoLessonSpecialty(lesson) {
+  return videoLessonSpecialties(lesson)[0];
+}
+function videoSpecialtyOptions(lessons=displayVideoLessons()) {
+  const present = new Set(lessons.flatMap(videoLessonSpecialties));
+  const preferredOrder = [...VIDEO_SPECIALTY_RULES.map(([label]) => label), ...VIDEO_SPECIALTY_FALLBACKS.map(([label]) => label), 'Outras'];
+  return [...new Set(preferredOrder)].filter(label => present.has(label));
+}
+function videoLessonMatchesFilters(lesson) {
+  const matchesBlock = !ui.videoBlock || ui.videoBlock === 'Todos' || String(lesson.block) === String(ui.videoBlock);
+  const matchesSpecialty = !ui.videoSpecialty || ui.videoSpecialty === 'Todas' || videoLessonSpecialties(lesson).includes(ui.videoSpecialty);
   const query = normalizedTopic(ui.videoSearch || '');
-  return displayVideoLessons().filter(lesson => {
-    const matchesBlock = !ui.videoBlock || ui.videoBlock === 'Todos' || String(lesson.block) === String(ui.videoBlock);
-    const haystack = normalizedTopic(`${lesson.title} ${lesson.area} ${lesson.videos.map(video => video.title).join(' ')}`);
-    return matchesBlock && (!query || haystack.includes(query));
-  }).sort(videoLessonSort);
+  const haystack = normalizedTopic(`${lesson.title} ${lesson.area} ${videoLessonSpecialty(lesson)} ${lesson.videos.map(video => video.title).join(' ')}`);
+  return matchesBlock && matchesSpecialty && (!query || haystack.includes(query));
+}
+function visibleVideoLessons() {
+  return displayVideoLessons().filter(videoLessonMatchesFilters).sort(videoLessonSort);
 }
 function openVideosForSchedule(scheduleId) {
   const item = state.schedule.find(row => row.id === scheduleId);
@@ -8195,6 +8283,7 @@ function openVideosForSchedule(scheduleId) {
   const playableLessons = lessons.filter(lesson => lesson.videos?.length);
   if(!playableLessons.length) {
     ui.videoBlock = String(lessons[0].block);
+    ui.videoSpecialty = 'Todas';
     ui.videoSearch = '';
     ui.videoLessonId = lessons[0].id;
     ui.videoSourceId = '';
@@ -8208,6 +8297,7 @@ function openVideosForSchedule(scheduleId) {
     || nextPart.videos.find(video => videoPlayableNow(video))
     || nextPart.videos[0];
   ui.videoBlock = String(lesson.block);
+  ui.videoSpecialty = 'Todas';
   ui.videoSearch = '';
   ui.videoLessonId = lesson.id;
   ui.videoSourceId = nextSource.id;
@@ -8254,8 +8344,7 @@ function currentVideoLesson() {
   const pinned = state.videoPlayer?.pinned;
   if(pinned?.enabled && !ui.videoSearch) {
     const pinnedLesson = displayVideoLessons().find(lesson => lesson.id === pinned.lessonId);
-    const blockAllowsPinned = !ui.videoBlock || ui.videoBlock === 'Todos' || String(pinnedLesson?.block) === String(ui.videoBlock);
-    if(pinnedLesson && blockAllowsPinned) {
+    if(pinnedLesson && videoLessonMatchesFilters(pinnedLesson)) {
       ui.videoLessonId = pinnedLesson.id;
       ui.videoSourceId = pinnedLesson.videos.some(video => video.id === pinned.sourceId) ? pinned.sourceId : pinnedLesson.videos[0]?.id || '';
       return pinnedLesson;
@@ -8264,14 +8353,13 @@ function currentVideoLesson() {
   const lastOpen = state.videoPlayer?.lastOpen;
   if(!ui.videoLessonId && !ui.videoSearch && lastOpen?.lessonId) {
     const rememberedLesson = displayVideoLessons().find(lesson => lesson.id === lastOpen.lessonId);
-    const blockAllowsLastOpen = !ui.videoBlock || ui.videoBlock === 'Todos' || String(rememberedLesson?.block) === String(ui.videoBlock);
-    if(rememberedLesson && blockAllowsLastOpen) {
+    if(rememberedLesson && videoLessonMatchesFilters(rememberedLesson)) {
       ui.videoLessonId = rememberedLesson.id;
       ui.videoSourceId = rememberedLesson.videos.some(video => video.id === lastOpen.sourceId) ? lastOpen.sourceId : rememberedLesson.videos[0]?.id || '';
       return rememberedLesson;
     }
   }
-  const selectedLesson = displayVideoLessons().find(lesson => lesson.id === ui.videoLessonId);
+  const selectedLesson = displayVideoLessons().find(lesson => lesson.id === ui.videoLessonId && videoLessonMatchesFilters(lesson));
   if(selectedLesson) return selectedLesson;
   const visible = visibleVideoLessons();
   if(!visible.length) return null;
@@ -8356,6 +8444,7 @@ function renderAulas() {
   }
   const catalogLessons = displayVideoLessons();
   const blocks = [...new Set(catalogLessons.map(lesson => lesson.block))].sort((a,b)=>a-b);
+  const specialties = videoSpecialtyOptions(catalogLessons);
   const lesson = currentVideoLesson();
   const visible = visibleVideoLessons();
   const source = currentVideoSource(lesson);
@@ -8379,19 +8468,20 @@ function renderAulas() {
   const completedLessons = catalogLessons.filter(lessonItem => lessonVideoCompleted(lessonItem)).length;
   const completionPercent = catalogLessons.length ? Math.round((completedLessons / catalogLessons.length) * 100) : 0;
   const activeBlock = ui.videoBlock && ui.videoBlock !== 'Todos' ? `Bloco ${String(ui.videoBlock).padStart(2,'0')}` : 'Todos os blocos';
+  const activeVideoScope = ui.videoSpecialty && ui.videoSpecialty !== 'Todas' ? ui.videoSpecialty : activeBlock;
   const activeLessonProgress = lesson ? videoLessonProgress(lesson) : {done:0,total:0};
   mount.innerHTML = `<section class="video-command-center">
     <header class="video-hero">
       <div class="video-hero-copy"><span class="video-eyebrow">Sua central de aprendizado</span><h1>Aulas</h1><p>Assista, marque os pontos essenciais e transforme cada aula em revisão ativa.</p></div>
       <div class="video-hero-progress" aria-label="${completionPercent}% do catálogo concluído"><div class="video-hero-progress-copy"><span>Progresso geral</span><strong>${completedLessons}<small> / ${catalogLessons.length}</small></strong></div><div class="video-hero-ring" style="--video-course-progress:${completionPercent * 3.6}deg"><span>${completionPercent}%</span></div></div>
     </header>
-    <div class="video-quick-stats" aria-label="Resumo das aulas"><div><span>${iconSvg('play',{weight:'duotone'})}</span><p><strong>${activeBlock}</strong><small>recorte atual</small></p></div><div><span>${iconSvg('success',{weight:'duotone'})}</span><p><strong>${completedLessons} concluídas</strong><small>${catalogLessons.length-completedLessons} para avançar</small></p></div><div><span>${iconSvg('timer',{weight:'duotone'})}</span><p><strong>${activeLessonProgress.done}/${activeLessonProgress.total || 0} partes</strong><small>na aula selecionada</small></p></div></div>
+    <div class="video-quick-stats" aria-label="Resumo das aulas"><div><span>${iconSvg('play',{weight:'duotone'})}</span><p><strong>${escapeHtml(activeVideoScope)}</strong><small>recorte atual</small></p></div><div><span>${iconSvg('success',{weight:'duotone'})}</span><p><strong>${completedLessons} concluídas</strong><small>${catalogLessons.length-completedLessons} para avançar</small></p></div><div><span>${iconSvg('timer',{weight:'duotone'})}</span><p><strong>${activeLessonProgress.done}/${activeLessonProgress.total || 0} partes</strong><small>na aula selecionada</small></p></div></div>
     <div class="video-layout ${ui.videoFocusMode?'video-focus-mode':''}">
       <aside class="card video-sidebar">
         <div class="video-sidebar-head"><div><span class="video-eyebrow">Biblioteca</span><h2>Trilha de aulas</h2><div class="muted">${visible.length} de ${catalogLessons.length} aulas</div></div><span class="badge today">${usingR2?'R2':'offline'}</span></div>
-        <div class="video-filter"><label><span>Bloco</span><select class="select" id="videoBlock" aria-label="Filtrar bloco"><option value="Todos">Todos</option>${blocks.map(block => `<option value="${block}" ${String(ui.videoBlock)===String(block)?'selected':''}>Bloco ${String(block).padStart(2,'0')}</option>`).join('')}</select></label><label class="video-search-field"><span>Buscar</span><input class="input" id="videoSearch" value="${escapeAttr(ui.videoSearch || '')}" placeholder="Aula, tema ou área"></label></div>
+        <div class="video-filter"><label class="video-specialty-field"><span>Especialidade · faculdade</span><select class="select" id="videoSpecialty" aria-label="Filtrar especialidade"><option value="Todas">Todas as especialidades</option>${specialties.map(specialty => `<option value="${escapeAttr(specialty)}" ${ui.videoSpecialty===specialty?'selected':''}>${escapeHtml(specialty)}</option>`).join('')}</select></label><label><span>Bloco</span><select class="select" id="videoBlock" aria-label="Filtrar bloco"><option value="Todos">Todos</option>${blocks.map(block => `<option value="${block}" ${String(ui.videoBlock)===String(block)?'selected':''}>Bloco ${String(block).padStart(2,'0')}</option>`).join('')}</select></label><label class="video-search-field"><span>Buscar</span><input class="input" id="videoSearch" value="${escapeAttr(ui.videoSearch || '')}" placeholder="Aula, tema ou área"></label></div>
         <div class="video-list-caption"><span>Em ordem do cronograma</span><span>${visible.length} resultados</span></div>
-        <div class="video-lesson-list">${visible.map((item,index) => { const hasExpress=item.videos.some(video=>video.type==='express'); const linked=videoScheduleForLesson(item); const done=lessonVideoCompleted(item); return `<button class="video-lesson-choice ${item.id===lesson?.id?'active':''} ${done?'is-complete':''}" data-video-lesson="${escapeAttr(item.id)}" aria-pressed="${item.id===lesson?.id}"><span class="video-priority-bar ${priorityClass(linked?.priority)}"></span><span class="video-lesson-index">${String(index+1).padStart(2,'0')}</span><span class="video-lesson-copy"><strong>${escapeHtml(lessonDisplayTitle(linked, item.title))}</strong><small><b>B${String(item.block).padStart(2,'0')}</b><i></i>${escapeHtml(item.area)}${linked ? `<i></i>${fmtDate(linked.date)}` : ''}</small></span><span class="video-lesson-state">${lessonWatchedOnlyByCofexpress(item)?'<span class="video-cof-marker" title="Assistida apenas pelo COFEXPRESS">COF</span>':''}<span class="badge ${done?'done':hasExpress?'today':'wait'}">${done?'✓':item.videos.length}</span></span></button>`; }).join('') || '<div class="video-empty-list"><strong>Nenhuma aula encontrada</strong><span>Tente outro termo ou selecione todos os blocos.</span></div>'}</div>
+        <div class="video-lesson-list">${visible.map((item,index) => { const hasExpress=item.videos.some(video=>video.type==='express'); const linked=videoScheduleForLesson(item); const done=lessonVideoCompleted(item); return `<button class="video-lesson-choice ${item.id===lesson?.id?'active':''} ${done?'is-complete':''}" data-video-lesson="${escapeAttr(item.id)}" aria-pressed="${item.id===lesson?.id}"><span class="video-priority-bar ${priorityClass(linked?.priority)}"></span><span class="video-lesson-index">${String(index+1).padStart(2,'0')}</span><span class="video-lesson-copy"><strong>${escapeHtml(lessonDisplayTitle(linked, item.title))}</strong><small><b>B${String(item.block).padStart(2,'0')}</b><i></i>${escapeHtml(videoLessonSpecialty(item))}${linked ? `<i></i>${fmtDate(linked.date)}` : ''}</small></span><span class="video-lesson-state">${lessonWatchedOnlyByCofexpress(item)?'<span class="video-cof-marker" title="Assistida apenas pelo COFEXPRESS">COF</span>':''}<span class="badge ${done?'done':hasExpress?'today':'wait'}">${done?'✓':item.videos.length}</span></span></button>`; }).join('') || '<div class="video-empty-list"><strong>Nenhuma aula encontrada</strong><span>Combine especialidade, bloco e busca para ajustar o recorte.</span></div>'}</div>
       </aside>
       <section class="card video-player-card">${!lesson || !source ? '<div class="video-empty"><div><span class="video-empty-icon">▶</span><h2>Escolha uma aula</h2><p>Selecione um item da trilha para começar.</p></div></div>' : `<div class="video-reader-head"><div><div class="video-lesson-kicker"><span>Bloco ${String(lesson.block).padStart(2,'0')}</span><i></i><span>${escapeHtml(lesson.area)}</span></div><h2>${escapeHtml(lessonDisplayTitle(schedule, lesson.title))}</h2><div class="video-lesson-meta"><span>${lesson.videos.length} ${lesson.videos.length===1?'vídeo':'vídeos'}</span><span>${activeLessonProgress.done} de ${activeLessonProgress.total} partes concluídas</span></div></div><div class="video-reader-actions"><button class="icon-btn video-pin-toggle ${pinnedActive?'active':''}" id="toggleVideoPin" type="button" aria-pressed="${pinnedActive}" title="${pinnedActive?'Desfixar vídeo':'Fixar vídeo'}" aria-label="${pinnedActive?'Desfixar vídeo':'Fixar vídeo'}">📌</button><button class="tiny-btn video-focus-toggle" id="toggleVideoFocus" type="button" aria-pressed="${ui.videoFocusMode}" title="${ui.videoFocusMode?'Voltar ao layout completo':'Expandir o vídeo e manter os pontos importantes'}">${ui.videoFocusMode?'Sair do foco':`${iconSvg('focus',{weight:'regular'})} Modo foco`}</button><span class="badge today" data-auto-study-clock title="Clique para pausar ou retomar o cronômetro">Tempo pausado</span><span class="badge ${lessonVideoCompleted(lesson)?'done':'today'}">${lessonVideoCompleted(lesson)?'Concluída':'Em estudo'}</span></div></div><div class="video-tabs">${parts.map(part => `<div class="video-part">${parts.length>1 || part.number ? `<span class="video-part-label">${escapeHtml(part.label)}</span>` : ''}${part.videos.map(video => `<button class="video-tab ${video.id===source.id?'active':''}" data-video-source="${escapeAttr(video.id)}">${video.type==='express'?'COFEXPRESS':'Aula completa'}</button>`).join('')}</div>`).join('')}</div><video class="video-player ${sourcePlayable?'':'is-unavailable'}" id="lessonVideo" controls playsinline webkit-playsinline preload="metadata"${sourcePlayable?` src="${escapeAttr(sourceUrl)}"`:''}>Seu navegador não conseguiu abrir este vídeo.</video>${unavailableNote}<div class="video-controls"><div class="video-transport"><button class="icon-btn" id="videoBack10" title="Voltar 10 segundos" aria-label="Voltar 10 segundos"><span>−10</span></button><button class="icon-btn" id="videoForward10" title="Avançar 10 segundos" aria-label="Avançar 10 segundos"><span>+10</span></button><select class="select playback-rate" id="videoPlaybackRate" aria-label="Velocidade">${[0.75,1,1.25,1.5,1.75,2].map(rate => `<option value="${rate}" ${rate===ui.videoPlaybackRate?'selected':''}>${String(rate).replace('.',',')}x</option>`).join('')}</select></div><div class="video-study-actions"><button class="icon-btn video-watched-toggle ${watched?'active':''}" id="videoMarkWatched" aria-pressed="${watched}" title="${watched?'Desmarcar assistida':'Marcar assistida'}" aria-label="${watched?'Desmarcar assistida':'Marcar assistida'}">${iconSvg('success',{weight:watched?'duotone':'regular'})}<span>${watched?'Assistida':'Marcar assistida'}</span></button>${schedule ? `<button class="icon-btn video-material-button" data-video-materials="${escapeAttr(schedule.id)}" title="Material da aula" aria-label="Material da aula">${iconSvg('materials')}<span>Material</span></button>` : ''}${lessonVideoCompleted(lesson) && schedule ? `<button class="tiny-btn primary" data-video-questions="${escapeAttr(schedule.id)}">Praticar questões →</button>` : ''}</div>${resume ? `<span class="video-resume-label">Retomar em ${formatVideoTime(resume)}</span>` : ''}</div><div class="video-bookmarks"><div class="section-title"><div><span class="video-eyebrow">Caderno da aula</span><h3>Pontos importantes</h3><div class="muted">Salve o instante exato de uma conduta, diagnóstico ou tratamento.</div></div><span class="video-note-count">${bookmarks.length}</span></div><div class="video-bookmark-form"><span class="badge today" id="videoBookmarkTime">${formatVideoTime(resume)}</span><input class="input" id="videoBookmarkLabel" placeholder="Descreva o ponto-chave"><button class="icon-btn primary" id="addVideoBookmark">Salvar ponto</button></div><div class="video-bookmark-list">${bookmarks.map(bookmark => `<div class="video-bookmark ${bookmark.starred?'starred':''}" data-video-bookmark-id="${escapeAttr(bookmark.id)}"><button type="button" data-video-seek="${bookmark.time}" title="Ir para este trecho">${formatVideoTime(bookmark.time)}</button><span class="video-bookmark-label">${escapeHtml(bookmark.label || 'Ponto importante')}</span><button type="button" class="video-bookmark-star ${bookmark.starred?'active':''}" data-video-bookmark-star="${escapeAttr(bookmark.id)}" title="${bookmark.starred?'Desmarcar ponto-chave':'Marcar como ponto-chave'}" aria-label="${bookmark.starred?'Desmarcar ponto-chave':'Marcar ponto-chave'}">${iconSvg('xp',{weight:bookmark.starred?'duotone':'regular'})}</button><button class="delete-bookmark" data-video-bookmark-delete="${escapeAttr(bookmark.id)}" title="Excluir ponto">×</button></div>`).join('') || '<div class="video-bookmark-empty"><span>✦</span><strong>Seu caderno começa aqui</strong><p>Ao encontrar algo importante, salve o momento para revisar depois.</p></div>'}</div></div>${renderVideoFlashcardEditor(source, lesson, schedule)}`}</section>
     </div>
@@ -8489,6 +8579,8 @@ function renderAulas() {
   });
   const blockInput = document.getElementById('videoBlock');
   if(blockInput) blockInput.onchange = event => { ui.videoBlock=event.target.value; ui.videoLessonId=''; ui.videoSourceId=''; renderAulas(); };
+  const specialtyInput = document.getElementById('videoSpecialty');
+  if(specialtyInput) specialtyInput.onchange = event => { ui.videoSpecialty=event.target.value; ui.videoLessonId=''; ui.videoSourceId=''; renderAulas(); };
   const searchInput = document.getElementById('videoSearch');
   if(searchInput) searchInput.oninput = debounce(event => {
     const value=event.target.value;
@@ -11959,6 +12051,12 @@ function sanitizeImportedText(value='') {
 function normalizeImportKey(key) {
   return String(key || '').trim().toLowerCase().replace(/[ -]+/g, '_');
 }
+const QUESTION_COMMENT_SCHEMA_LABELS = ['Análise','Correta','Por que está certa','Por que as outras estão erradas','Ponto de prova','Flashcard sugerido','Pérola','Armadilha'];
+function questionCommentSchemaStatus(comment='') {
+  const normalized = normalizedTopic(comment);
+  const missing = QUESTION_COMMENT_SCHEMA_LABELS.filter(label => !normalized.includes(normalizedTopic(label)));
+  return { complete:missing.length === 0, missing };
+}
 function parseQuestionBatch(text, defaults={}) {
   const source = String(text || '').replace(/\r\n?/g, '\n');
   const chunks = [];
@@ -12027,8 +12125,14 @@ function parseQuestionBatch(text, defaults={}) {
     if(markers.length !== new Set(markers.map(alias => alias.toLowerCase())).size) errors.push('Há marcadores de imagem duplicados.');
     if(question.stem.length > 50000) errors.push('Questão excede 50.000 caracteres.');
     if(!chunk.closed) errors.push('Falta @@END para esta questão.');
+    const commentSchema = questionCommentSchemaStatus(question.comment);
+    if(!commentSchema.complete) {
+      const warning = `Comentário fora do padrão. Faltam: ${commentSchema.missing.join(', ')}.`;
+      question._warnings = [...(question._warnings || []), warning];
+      report.warnings.push({line:chunk.start, question:index + 1, message:warning});
+    }
     question.contentHash = simpleContentHash([question.stem, ...Object.values(question.options), question.answer].join('|'));
-    question.importStatus = errors.length ? 'draft' : markers.length ? 'needs_review' : (defaults.status || 'ready');
+    question.importStatus = errors.length ? 'draft' : markers.length || question._warnings?.length ? 'needs_review' : (defaults.status || 'ready');
     question._errors = errors;
     if(errors.length) errors.forEach(message => report.errors.push({line:chunk.start, question:index + 1, message}));
     return question;
@@ -12038,10 +12142,11 @@ function parseQuestionBatch(text, defaults={}) {
   const existingKeys = new Set(questionBank.map(questionDuplicateKey));
   parsed.forEach((question, index) => {
     const duplicateKey = questionDuplicateKey(question);
-    if(seen.has(duplicateKey)) { question._warnings = [...(question._warnings || []), 'Possível duplicata dentro deste lote.']; report.warnings.push({question:index + 1, line:1, message:'Possível duplicata dentro deste lote.'}); }
+    if(seen.has(duplicateKey)) { question._warnings = [...(question._warnings || []), 'Possível duplicata dentro deste lote.']; question.importStatus='needs_review'; report.warnings.push({question:index + 1, line:1, message:'Possível duplicata dentro deste lote.'}); }
     seen.add(duplicateKey);
     if(existingKeys.has(duplicateKey)) {
       question._warnings = [...(question._warnings || []), 'Possível duplicata já existente neste bloco do banco.'];
+      question.importStatus='needs_review';
       report.warnings.push({question:index + 1, line:1, message:'Possível duplicata já existente no banco.'});
     }
   });
@@ -12529,9 +12634,8 @@ function renderQuestionBank() {
     .filter(block => !catalogKeys.has(block))
     .sort((a,b)=>questionCollectionSort(a)-questionCollectionSort(b) || a.localeCompare(b,'pt-BR'));
   const officialEntries=catalogEntries.filter(entry => !entry.special && /^\d+$/.test(String(entry.block)));
-  const extraEntries=catalogEntries.filter(entry => entry.special || !/^\d+$/.test(String(entry.block)));
   const blockOption = block => `<option value="${escapeAttr(String(block))}" ${String(block)===String(ui.qBlock)?'selected':''}>${escapeHtml(questionCollectionLabel(block))}</option>`;
-  const blockSelectOptions = `<option value="Todos" ${ui.qBlock==='Todos'?'selected':''}>Todos os blocos carregados</option>${officialEntries.length?`<optgroup label="Blocos 1 a 30">${officialEntries.map(entry => blockOption(entry.block)).join('')}</optgroup>`:''}${extraEntries.length?`<optgroup label="Coleções extras">${extraEntries.map(entry => blockOption(entry.block)).join('')}</optgroup>`:''}${customBlocks.length?`<optgroup label="Coleções pessoais">${customBlocks.map(blockOption).join('')}</optgroup>`:''}`;
+  const blockSelectOptions = `<option value="Todos" ${ui.qBlock==='Todos'?'selected':''}>Todos os blocos carregados</option>${officialEntries.length?`<optgroup label="Blocos 1 a 30">${officialEntries.map(entry => blockOption(entry.block)).join('')}</optgroup>`:''}${customBlocks.length?`<optgroup label="Coleções pessoais">${customBlocks.map(blockOption).join('')}</optgroup>`:''}`;
   const scopedByPrimary = questionBank.filter(q => ui.qBrowseMode === 'block'
     ? ui.qBlock === 'Todos' || String(q.collectionBlock) === String(ui.qBlock)
     : ui.qSpecialty === 'Todas' || questionSpecialtyGroup(q) === ui.qSpecialty);
@@ -12559,8 +12663,8 @@ function renderQuestionBank() {
   const catalogStatus=questionBankCatalogStatus();
   const selectedBlockLoading=ui.qBrowseMode === 'block' && ui.qBlock !== 'Todos' && questionCollectionLoadPromises.has(String(ui.qBlock));
   const catalogAction=catalogStatus.complete
-    ? '<button type="button" class="qbank-quick-filter" disabled><span class="quick-filter-dot all"></span><strong>Banco completo</strong><small>Todas as coleções disponíveis</small></button>'
-    : `<button type="button" class="qbank-quick-filter" id="loadFullQuestionBank" ${catalogStatus.loading?'disabled':''}><span class="quick-filter-dot all"></span><strong>${catalogStatus.loading?'Carregando extras…':'Carregar banco completo'}</strong><small>${catalogStatus.loading?'A interface continua disponível':`${questionBank.length.toLocaleString('pt-BR')} de ${catalogStatus.total.toLocaleString('pt-BR')} · sob demanda`}</small></button>`;
+    ? '<button type="button" class="qbank-quick-filter" disabled><span class="quick-filter-dot all"></span><strong>Trilha oficial pronta</strong><small>30 blocos carregados</small></button>'
+    : `<button type="button" class="qbank-quick-filter" id="loadFullQuestionBank" ${catalogStatus.loading?'disabled':''}><span class="quick-filter-dot all"></span><strong>${catalogStatus.loading?'Carregando blocos…':'Carregar os 30 blocos'}</strong><small>${catalogStatus.loading?'A interface continua disponível':`${questionBank.length.toLocaleString('pt-BR')} de ${catalogStatus.total.toLocaleString('pt-BR')} · sob demanda`}</small></button>`;
   document.getElementById('questoes').innerHTML = `<div class="grid question-layout qbank-mode ${questionSidebarCollapsed?'sidebar-collapsed':''}">
     <header class="qbank-overview">
       <div class="qbank-overview-copy"><span class="qbank-eyebrow">Treino inteligente</span><h1>Central de questões</h1><p>Pratique com foco, acompanhe sua evolução e transforme erros em revisão.</p></div>
@@ -12812,7 +12916,7 @@ function renderQuestionImporter() {
   enhanceQuestionImporterUi();
   bindQuestionImporter();
 }
-function importExampleText() { return `@@QUESTION\nnumber: 1\narea: Clínica Médica\ntopic: Síndrome Coronariana Aguda\ntags: cardiologia | emergência\n\n[STEM]\nPaciente com dor torácica há 40 minutos.\n\n[OPTIONS]\nA. Conduta inicial inadequada.\nB. Observar sem tratamento.\nC. Iniciar protocolo de síndrome coronariana aguda.\nD. Dar alta.\n\n[ANSWER]\nC\n\n[COMMENT]\nExplique aqui o raciocínio do gabarito e das alternativas.\n\n[PEARL]\nUma frase curta de alto rendimento.\n\n[TRAP]\nA pegadinha que não pode ser confundida.\n\n[SOURCE]\nFonte da questão.\n@@END` }
+function importExampleText() { return `@@QUESTION\nnumber: 1\narea: Clínica Médica\ntopic: Síndrome Coronariana Aguda\ntags: cardiologia | emergência\n\n[STEM]\nPaciente com dor torácica há 40 minutos.\n\n[OPTIONS]\nA. Conduta inicial inadequada.\nB. Observar sem tratamento.\nC. Iniciar protocolo de síndrome coronariana aguda.\nD. Dar alta.\n\n[ANSWER]\nC\n\n[COMMENT]\nAnálise:\nCorreta: C.\nPor que está certa: Explique o raciocínio que confirma o gabarito.\nPor que as outras estão erradas: Explique objetivamente o erro de cada distrator.\nPonto de prova: Registre a regra clínica de maior rendimento.\nFlashcard sugerido: Pergunta curta? / Resposta direta.\n\n[PEARL]\nUma frase curta de alto rendimento.\n\n[TRAP]\nA pegadinha que não pode ser confundida.\n\n[SOURCE]\nFonte da questão.\n@@END` }
 function updateImportDraftFromForm() {
   questionImportDraft = questionImportDraft || {};
   questionImportDraft.text = document.getElementById('importSource')?.value || questionImportDraft.text || '';
@@ -12874,7 +12978,7 @@ function enhanceQuestionImporterUi() {
     });
   }
   if(defaults && !defaults.querySelector('[data-import-block-picker]')) {
-    const blocks = (window.ENAMED_LOCAL_QUESTION_INDEX?.blocks || []).slice().sort((a,b) => questionCollectionSort(a.block) - questionCollectionSort(b.block));
+    const blocks = questionCatalogEntries();
     const blockOptions = blocks.map(block => `<option value="${escapeAttr(String(block.block))}">${escapeHtml(questionCollectionLabel(block.block))} · ${block.count} questões</option>`).join('');
     defaults.insertAdjacentHTML('afterbegin', `<label class="import-block-link">Incluir direto num bloco existente<select class="select" data-import-block-picker><option value="">Selecionar…</option>${blockOptions}</select></label>`);
     const blockPicker = defaults.querySelector('[data-import-block-picker]');

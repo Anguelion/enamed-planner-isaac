@@ -1242,7 +1242,9 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "kids": "Quando a cabecinha do bebê fica muito espremida e inchada, com os ossos do crânio se sobrepondo bastante, é sinal de que ela está tendo bastante dificuldade para passar pela bacia da mãe."
+      "kids": "Quando a cabecinha do bebê fica muito espremida e inchada, com os ossos do crânio se sobrepondo bastante, é sinal de que ela está tendo bastante dificuldade para passar pela bacia da mãe.",
+      "scheduleId": "cron-34",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b04-semanal-q040",
@@ -3189,7 +3191,9 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags.txt",
-      "kids": "Durante o parto, às vezes a cabeça do bebê desce meio torta. Existe um tipo em que a parte de trás da cabeça desce primeiro que a da frente, e é assim que os médicos identificam essa posição."
+      "kids": "Durante o parto, às vezes a cabeça do bebê desce meio torta. Existe um tipo em que a parte de trás da cabeça desce primeiro que a da frente, e é assim que os médicos identificam essa posição.",
+      "scheduleId": "cron-33",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b04-semanal-q102",

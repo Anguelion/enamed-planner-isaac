@@ -507,7 +507,7 @@
       ],
       "tagSource": "Tags.txt",
       "globalNumber": 4,
-      "scheduleId": "cron-76",
+      "scheduleId": "cron-77",
       "kids": "O sangramento aconteceu de repente, sem dor, logo depois de um acesso de tosse, e o coração do bebê ficou muito lento — isso acontece quando um vasinho de sangue do próprio bebê, que passa desprotegido na frente da saída do útero, se rompe, fazendo o bebê perder sangue, não a mãe."
     },
     {
@@ -539,7 +539,7 @@
       ],
       "tagSource": "Tags.txt",
       "globalNumber": 5,
-      "scheduleId": "cron-76",
+      "scheduleId": "cron-77",
       "kids": "Quando a placenta nasce colada perto ou em cima da saída do útero, ela pode sangrar sem doer; para confirmar isso, o melhor exame é uma ultrassonografia feita por dentro da vagina, que enxerga bem onde a placenta está."
     },
     {
@@ -574,7 +574,7 @@
       ],
       "tagSource": "Tags.txt",
       "globalNumber": 14,
-      "scheduleId": "cron-78",
+      "scheduleId": "cron-77",
       "kids": "As contrações ficaram fortes e seguidas demais, depois pararam de repente, o coração do bebê ficou lento e apareceu muito sangramento — isso quer dizer que o útero rasgou, uma emergência que precisa de cirurgia na hora."
     },
     {
@@ -607,7 +607,7 @@
       ],
       "tagSource": "Tags.txt",
       "globalNumber": 17,
-      "scheduleId": "cron-76",
+      "scheduleId": "cron-77",
       "kids": "A placenta grudou tão forte na parede do útero que atravessou tudo e chegou a invadir a bexiga — quando isso acontece, se chama percretismo, o grau mais grave de placenta grudada demais."
     },
     {
@@ -639,7 +639,7 @@
       ],
       "tagSource": "Tags.txt",
       "globalNumber": 18,
-      "scheduleId": "cron-76",
+      "scheduleId": "cron-77",
       "kids": "Sangrar sangue vermelho vivo, sem dor e sem contrações, numa grávida que já fez cesárea antes, é o jeito clássico da placenta estar nascendo perto demais da saída do útero (placenta prévia)."
     },
     {
@@ -671,7 +671,7 @@
       ],
       "tagSource": "Tags.txt",
       "globalNumber": 24,
-      "scheduleId": "cron-76",
+      "scheduleId": "cron-77",
       "kids": "Como a grávida parou de sangrar e o bebê ainda é prematuro, dá tempo de aplicar um remédio para amadurecer os pulmõezinhos dele, ficar internada em observação, e programar a cesárea só depois das 36 semanas."
     },
     {
@@ -704,7 +704,7 @@
       ],
       "tagSource": "Tags.txt",
       "globalNumber": 25,
-      "scheduleId": "cron-76",
+      "scheduleId": "cron-77",
       "kids": "Placenta prévia é quando a placenta cresce bem embaixo do útero e cobre, parcial ou totalmente, a saída por onde o bebê nasceria, e isso só é considerado esse diagnóstico depois da 28ª semana de gravidez."
     },
     {
@@ -737,7 +737,7 @@
       ],
       "tagSource": "Tags.txt",
       "globalNumber": 30,
-      "scheduleId": "cron-76",
+      "scheduleId": "cron-77",
       "kids": "Como a grávida está sangrando muito e com a pressão baixa por causa de uma placenta prévia, o time médico precisa repor soro e sangue rapidamente e fazer uma cesárea de emergência."
     },
     {
@@ -801,7 +801,7 @@
       ],
       "tagSource": "Tags.txt",
       "globalNumber": 35,
-      "scheduleId": "cron-76",
+      "scheduleId": "cron-77",
       "kids": "As contrações provocadas pelo remédio para induzir o parto ficaram fortes demais e de repente pararam, o bebê teve o coração desacelerado, apareceu sangramento e dor forte, e o bebê pareceu \"subir\" de novo — tudo isso mostra que o útero rasgou, e precisa de cirurgia imediata."
     },
     {
@@ -833,7 +833,7 @@
       ],
       "tagSource": "Tags.txt",
       "globalNumber": 65,
-      "scheduleId": "cron-76",
+      "scheduleId": "cron-77",
       "kids": "A grávida com pressão alta, dor forte, útero duro como pedra e sangue escuro saindo mostra que a placenta se descolou da parede do útero antes da hora — isso se chama descolamento prematuro de placenta."
     },
     {
@@ -855,7 +855,7 @@
       "sourceLabel": "Sangramentos 2ª Metade Gestação",
       "images": [],
       "comment": "Correta: C. As síndromes hipertensivas da gestação (pré-eclâmpsia, hipertensão crônica) são o principal fator de risco para descolamento prematuro de placenta, por lesão vascular decidual. Tabagismo (B) é fator de risco reconhecido, mas não o principal; idade avançada isolada (A) e cicatriz uterina prévia (D) têm associação bem menos relevante.",
-      "scheduleId": "cron-76",
+      "scheduleId": "cron-77",
       "kids": "O maior vilão que aumenta o risco de a placenta se descolar cedo demais é a pressão alta na gravidez, porque ela machuca os vasinhos de sangue que ligam a placenta ao útero."
     },
     {
@@ -911,7 +911,7 @@
       ],
       "tagSource": "Tags.txt",
       "globalNumber": 149,
-      "scheduleId": "cron-76",
+      "scheduleId": "cron-77",
       "kids": "A grávida estava tomando um remédio para acelerar o parto, as contrações ficaram fortes demais e, de repente, ela sentiu uma dor muito forte — isso é sinal de que o útero pode estar se rompendo, então o remédio deve ser parado na hora e a cesárea feita de emergência."
     },
     {
@@ -933,7 +933,7 @@
       "sourceLabel": "Sangramentos 2ª Metade Gestação",
       "images": [],
       "comment": "Correta: C. Sangramento indolor, recorrente, autolimitado, com feto vivo e estável, é típico de placenta prévia sintomática. Como a paciente está estável e prematura (32 semanas), a conduta é expectante: internação, corticoterapia para maturação pulmonar e programação de cesárea próximo ao termo (36-37 semanas) caso não haja intercorrência. Toque vaginal (A) é contraindicado na suspeita de placenta prévia; interrupção imediata (B) não se justifica sem instabilidade; repouso domiciliar (D) não é apropriado dado o sangramento ativo recorrente.",
-      "scheduleId": "cron-76",
+      "scheduleId": "cron-77",
       "kids": "Como a grávida está estável e o bebê ainda é prematuro, o certo é internar para observar, aplicar o remédio que amadurece os pulmõezinhos do bebê, e programar a cesárea perto do fim da gravidez, caso o sangramento não piore."
     },
     {
@@ -955,7 +955,7 @@
       "sourceLabel": "Sangramentos 2ª Metade Gestação",
       "images": [],
       "comment": "Correta: D. O principal fator de risco para placenta acreta é a associação de cicatriz uterina prévia (cesáreas) com placenta prévia recobrindo essa cicatriz — quanto mais cesáreas associadas à placenta prévia, maior o risco de acretismo. Idade materna, multiparidade isolada e obesidade são fatores de risco menores em comparação.",
-      "scheduleId": "cron-76",
+      "scheduleId": "cron-77",
       "kids": "O maior risco de a placenta grudar demais na parede do útero é ter feito cesáreas antes e a placenta atual nascer bem em cima dessa cicatriz."
     },
     {
@@ -978,7 +978,7 @@
       "sourceLabel": "Sangramentos 2ª Metade Gestação",
       "images": [],
       "comment": "Correta: B. Sangramento vermelho vivo, indolor, sem hipertonia uterina e sem sofrimento fetal, com colo sem lesões, é o quadro clássico de placenta prévia. DPP (A) cursaria com dor e hipertonia; vasa prévia (C) cursaria com sofrimento fetal agudo associado ao sangramento; rotura uterina (E) ocorre tipicamente em trabalho de parto com dor intensa.",
-      "scheduleId": "cron-76",
+      "scheduleId": "cron-77",
       "kids": "Sangrar sangue vermelho vivo, sem dor, sem o útero ficar duro e sem o bebê sofrer, numa grávida perto do fim da gestação, é o jeito clássico da placenta ter nascido perto demais da saída do útero (placenta prévia)."
     },
     {
@@ -1269,7 +1269,7 @@
       ],
       "tagSource": "Tags.txt",
       "globalNumber": 54,
-      "scheduleId": "cron-78",
+      "scheduleId": "cron-76",
       "kids": "A grávida está com a pressão muito baixa e sangrando muito por dentro da barriga porque o bebê se implantou na trompa e ela rompeu; nesse caso de emergência, é preciso abrir a barriga rapidamente e retirar a trompa rompida para estancar o sangramento."
     },
     {
@@ -1398,7 +1398,7 @@
       ],
       "tagSource": "Tags.txt",
       "globalNumber": 67,
-      "scheduleId": "cron-78",
+      "scheduleId": "cron-76",
       "kids": "Dor súbita muito forte de um lado da barriga, junto com pressão baixa e coração acelerado numa mulher que pode estar grávida, é sinal de que uma gravidez que cresceu na trompa rompeu, causando sangramento por dentro."
     },
     {
@@ -1621,7 +1621,7 @@
       "sourceLabel": "Sangramentos 1ª Metade Gestação",
       "images": [],
       "comment": "Correta: C. Sangramento escuro, útero maior que o esperado para a idade gestacional, hCG muito elevado, hiperêmese, sinais de pré-eclâmpsia precoce (PA 150x100) e ausência de BCF compõem o quadro clássico de mola hidatiforme completa. Aborto (A, B) não explicaria o útero aumentado nem a hipertensão precoce; rotura uterina (D) não se aplica fora de trabalho de parto.",
-      "scheduleId": "cron-78",
+      "scheduleId": "cron-76",
       "kids": "Sangramento escuro, útero muito maior do que deveria estar, enjoo forte demais e pressão alta bem cedo na gravidez, sem nenhum coração de bebê batendo, são sinais de que ali cresceu uma mola em vez de um bebê de verdade."
     },
     {
@@ -4592,7 +4592,7 @@
       "sourceLabel": "Lesões Elementares - Dermatologia Pediátrica",
       "images": [],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-80",
+      "scheduleId": "cron-92",
       "id": "b08-lesoes-elementares-pediatricas-q1",
       "number": 1,
       "stem": "Lactente de 2 meses é levado à consulta de puericultura. A mãe mostra fotos de lesões observadas ao nascimento e pergunta sobre sua classificação. Considerando a semiologia dermatológica, uma lesão de alteração de coloração da pele, plana, sem relevo à palpação, é classificada como:",
@@ -4611,7 +4611,8 @@
         "Semiologia Dermatológica",
         "Lesões Elementares"
       ],
-      "kids": "Quando a pele só muda de cor, sem formar nenhum caroço ou casquinha que dá pra sentir com o dedo, essa marca se chama mácula."
+      "kids": "Quando a pele só muda de cor, sem formar nenhum caroço ou casquinha que dá pra sentir com o dedo, essa marca se chama mácula.",
+      "scheduleLinkVerified": true
     },
     {
       "collectionBlock": 8,
@@ -4622,7 +4623,7 @@
       "sourceLabel": "Lesões Elementares - Dermatologia Pediátrica",
       "images": [],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-80",
+      "scheduleId": "cron-92",
       "id": "b08-lesoes-elementares-pediatricas-q2",
       "number": 2,
       "stem": "Recém-nascido a termo, no 3º dia de vida, apresenta múltiplas vesículas de conteúdo claro sobre base eritematosa, distribuídas em tronco e face, associadas a pápulas amareladas centrais. A mãe está preocupada com possível infecção. A criança permanece em bom estado geral, afebril, sem outros sinais. Qual a hipótese diagnóstica mais provável e a conduta?",
@@ -4640,7 +4641,8 @@
         "Dermatologia",
         "Eritema Tóxico Neonatal"
       ],
-      "kids": "Muitos bebês recém-nascidos ficam com umas bolinhas vermelhas com um pontinho amarelo no meio, espalhadas pelo corpo — isso é bem comum, não é infecção e some sozinho em poucos dias."
+      "kids": "Muitos bebês recém-nascidos ficam com umas bolinhas vermelhas com um pontinho amarelo no meio, espalhadas pelo corpo — isso é bem comum, não é infecção e some sozinho em poucos dias.",
+      "scheduleLinkVerified": true
     },
     {
       "collectionBlock": 8,
@@ -4651,7 +4653,7 @@
       "sourceLabel": "Lesões Elementares - Dermatologia Pediátrica",
       "images": [],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-80",
+      "scheduleId": "cron-92",
       "id": "b08-lesoes-elementares-pediatricas-q3",
       "number": 3,
       "stem": "Lactente de 4 meses apresenta, no couro cabeludo, escamas amareladas, oleosas e aderentes sobre base eritematosa leve, sem prurido aparente, sem outras lesões pelo corpo. Qual o diagnóstico mais provável?",
@@ -4670,7 +4672,8 @@
         "Dermatite Seborreica",
         "Crosta Láctea"
       ],
-      "kids": "Aquela casquinha amarelada e meio gordurosa que aparece na cabecinha de muitos bebês se chama crosta láctea — não incomoda o bebê e costuma sumir sozinha."
+      "kids": "Aquela casquinha amarelada e meio gordurosa que aparece na cabecinha de muitos bebês se chama crosta láctea — não incomoda o bebê e costuma sumir sozinha.",
+      "scheduleLinkVerified": true
     },
     {
       "collectionBlock": 8,
@@ -4681,7 +4684,7 @@
       "sourceLabel": "Lesões Elementares - Dermatologia Pediátrica",
       "images": [],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-80",
+      "scheduleId": "cron-92",
       "id": "b08-lesoes-elementares-pediatricas-q4",
       "number": 4,
       "stem": "Uma criança de 6 anos apresenta lesões purpúricas nos membros inferiores. Ao exame, observam-se pontos avermelhados de até 2 mm que não desaparecem à digitopressão, além de lesões maiores, de bordas irregulares, também não desaparecendo à digitopressão. Essas lesões são classificadas, respectivamente, como:",
@@ -4700,7 +4703,8 @@
         "Púrpura",
         "Semiologia Dermatológica"
       ],
-      "kids": "Pintinhas ou manchas roxas na pele que não somem quando a gente aperta são sinais de sangue que vazou por baixo da pele — as pequenas se chamam petéquias e as maiores, equimoses."
+      "kids": "Pintinhas ou manchas roxas na pele que não somem quando a gente aperta são sinais de sangue que vazou por baixo da pele — as pequenas se chamam petéquias e as maiores, equimoses.",
+      "scheduleLinkVerified": true
     },
     {
       "collectionBlock": 8,
@@ -4711,7 +4715,7 @@
       "sourceLabel": "Lesões Elementares - Dermatologia Pediátrica",
       "images": [],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-80",
+      "scheduleId": "cron-92",
       "id": "b08-lesoes-elementares-pediatricas-q5",
       "number": 5,
       "stem": "Em avaliação dermatológica pediátrica, compara-se uma lesão que atinge apenas a epiderme, cicatrizando sem deixar cicatriz residual, com outra lesão mais profunda, que atinge a derme, com potencial de cicatriz. Essas lesões secundárias são denominadas, respectivamente:",
@@ -4729,7 +4733,8 @@
         "Dermatologia",
         "Lesões Elementares Secundárias"
       ],
-      "kids": "Um machucadinho raso na pele que sara sem deixar marca se chama erosão; um machucado mais fundo, que pode deixar uma cicatriz, se chama úlcera."
+      "kids": "Um machucadinho raso na pele que sara sem deixar marca se chama erosão; um machucado mais fundo, que pode deixar uma cicatriz, se chama úlcera.",
+      "scheduleLinkVerified": true
     },
     {
       "collectionBlock": 8,
@@ -4740,7 +4745,7 @@
       "sourceLabel": "Lesões Elementares - Dermatologia Pediátrica",
       "images": [],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-80",
+      "scheduleId": "cron-92",
       "id": "b08-lesoes-elementares-pediatricas-q6",
       "number": 6,
       "stem": "Criança de 5 anos, com diagnóstico prévio de dermatite atópica, apresenta em fossas antecubitais espessamento da pele com acentuação dos sulcos cutâneos, secundário a prurido e coçadura crônicos. Essa alteração morfológica é denominada:",
@@ -4759,7 +4764,8 @@
         "Dermatite Atópica",
         "Liquenificação"
       ],
-      "kids": "Quando a criança coça muito tempo o mesmo lugar da pele, ele fica mais grosso e com as linhas da pele mais marcadas — isso se chama liquenificação."
+      "kids": "Quando a criança coça muito tempo o mesmo lugar da pele, ele fica mais grosso e com as linhas da pele mais marcadas — isso se chama liquenificação.",
+      "scheduleLinkVerified": true
     },
     {
       "collectionBlock": 8,
@@ -4770,7 +4776,7 @@
       "sourceLabel": "Lesões Elementares - Dermatologia Pediátrica",
       "images": [],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-80",
+      "scheduleId": "cron-92",
       "id": "b08-lesoes-elementares-pediatricas-q7",
       "number": 7,
       "stem": "Menino de 8 anos apresenta lesão em membro inferior, elevada, de consistência firme, medindo cerca de 2 cm de diâmetro, com componente palpável mais profundo (derme/subcutâneo) do que uma lesão papular típica. A classificação morfológica correta dessa lesão elementar primária é:",
@@ -4789,7 +4795,8 @@
         "Semiologia Dermatológica",
         "Nódulo"
       ],
-      "kids": "Um caroço firme, elevado e um pouco maior que uma pápula, que dá para sentir mais fundo na pele, se chama nódulo."
+      "kids": "Um caroço firme, elevado e um pouco maior que uma pápula, que dá para sentir mais fundo na pele, se chama nódulo.",
+      "scheduleLinkVerified": true
     },
     {
       "collectionBlock": 8,
@@ -4800,7 +4807,7 @@
       "sourceLabel": "Lesões Elementares - Dermatologia Pediátrica",
       "images": [],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-80",
+      "scheduleId": "cron-92",
       "id": "b08-lesoes-elementares-pediatricas-q8",
       "number": 8,
       "stem": "Criança de 10 anos apresenta, no cotovelo, lesão eritematosa bem demarcada, recoberta por escama espessa e esbranquiçada-prateada, com sinal de Auspitz positivo à curetagem. A classificação morfológica e a hipótese diagnóstica mais prováveis são:",
@@ -4819,7 +4826,8 @@
         "Psoríase",
         "Sinal de Auspitz"
       ],
-      "kids": "Quando aparece uma mancha vermelha grossa com casquinha branca-prateada no cotovelo, e ela sangra em pontinhos quando a casquinha é raspada, isso costuma ser psoríase."
+      "kids": "Quando aparece uma mancha vermelha grossa com casquinha branca-prateada no cotovelo, e ela sangra em pontinhos quando a casquinha é raspada, isso costuma ser psoríase.",
+      "scheduleLinkVerified": true
     },
     {
       "collectionBlock": 8,
@@ -4830,7 +4838,7 @@
       "sourceLabel": "Lesões Elementares - Dermatologia Pediátrica",
       "images": [],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-80",
+      "scheduleId": "cron-92",
       "id": "b08-lesoes-elementares-pediatricas-q9",
       "number": 9,
       "stem": "Recém-nascido de 5 dias apresenta mancha azul-acinzentada na região lombossacra, de bordas mal definidas, presente desde o nascimento, sem relevo à palpação. A mãe pergunta sobre a evolução esperada. A conduta correta é:",
@@ -4848,7 +4856,8 @@
         "Dermatologia",
         "Mancha Mongólica"
       ],
-      "kids": "Uma mancha meio azulada nas costas, perto do bumbum, que já nasce com o bebê, é chamada de mancha mongólica — ela é normal e costuma sumir sozinha com o tempo."
+      "kids": "Uma mancha meio azulada nas costas, perto do bumbum, que já nasce com o bebê, é chamada de mancha mongólica — ela é normal e costuma sumir sozinha com o tempo.",
+      "scheduleLinkVerified": true
     },
     {
       "collectionBlock": 8,
@@ -4859,7 +4868,7 @@
       "sourceLabel": "Lesões Elementares - Dermatologia Pediátrica",
       "images": [],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-80",
+      "scheduleId": "cron-92",
       "id": "b08-lesoes-elementares-pediatricas-q10",
       "number": 10,
       "stem": "Recém-nascido de 2 dias de vida apresenta múltiplas pápulas puntiformes branco-amareladas, de 1-2 mm, na face (nariz e queixo), sem eritema ao redor, assintomáticas. Qual o diagnóstico mais provável e a conduta adequada?",
@@ -4877,7 +4886,8 @@
         "Dermatologia",
         "Milium Sebáceo"
       ],
-      "kids": "Umas bolinhas bem pequenas e brancas no nariz ou queixo do bebê recém-nascido, sem vermelhidão ao redor, se chamam milium — são normais e desaparecem sozinhas."
+      "kids": "Umas bolinhas bem pequenas e brancas no nariz ou queixo do bebê recém-nascido, sem vermelhidão ao redor, se chamam milium — são normais e desaparecem sozinhas.",
+      "scheduleLinkVerified": true
     }
   ]
 }

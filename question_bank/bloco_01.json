@@ -2510,7 +2510,9 @@
       "answer": "D",
       "source": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 1",
-      "images": [],
+      "images": [
+        "question_bank/media/official-blocks/b01-semanais-q80.png"
+      ],
       "comment": "Correta: D. A radiografia após punção de subclávia mostrando pneumotórax exige drenagem torácica (5º espaço intercostal) associada à retirada do cateter mal posicionado, e não apenas uma das duas condutas isoladamente.",
       "tags": [
         "Cirurgia",
@@ -2523,7 +2525,9 @@
       "tagSource": "Tags.txt",
       "answerAudit": "official-source",
       "answerSource": "01. QUESTÕES BLOCO 1 (SEMANAIS).txt",
-      "kids": "Depois de colocar um cateter numa veia grande do pescoço, o pulmão furou sem querer e o ar escapou para o lugar errado, aparecendo no raio-x. Por isso é preciso colocar um dreno para tirar esse ar e, ao mesmo tempo, retirar o cateter que estava mal posicionado."
+      "kids": "Depois de colocar um cateter numa veia grande do pescoço, o pulmão furou sem querer e o ar escapou para o lugar errado, aparecendo no raio-x. Por isso é preciso colocar um dreno para tirar esse ar e, ao mesmo tempo, retirar o cateter que estava mal posicionado.",
+      "scheduleId": "cron-8",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b01-semanais-q81",
@@ -2656,7 +2660,9 @@
         "Radiografia de Controle"
       ],
       "tagSource": "Tags.txt",
-      "kids": "O tubinho fino colocado no peito para tirar o ar que vazou do pulmão pode ser retirado quando, depois de um dia inteiro, não sai mais nenhuma bolha de ar por ele - isso mostra que o pulmão já se colou de volta no lugar certo."
+      "kids": "O tubinho fino colocado no peito para tirar o ar que vazou do pulmão pode ser retirado quando, depois de um dia inteiro, não sai mais nenhuma bolha de ar por ele - isso mostra que o pulmão já se colou de volta no lugar certo.",
+      "scheduleId": "cron-8",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b01-semanal-q078",
@@ -2918,7 +2924,9 @@
         "Manejo Materno-Infantil"
       ],
       "tagSource": "Tags.txt",
-      "kids": "A vermelhidão e coceira no peito da mãe, junto com a dor tipo ferroada, eram sinais de uma infecção por fungo no mamilo. O tratamento é passar um creme antifungo no peito da mãe, dar uma gotinha de remédio antifungo na boca do bebê, e parar de usar aquele bico de silicone que estava ajudando o fungo a se manter ali."
+      "kids": "A vermelhidão e coceira no peito da mãe, junto com a dor tipo ferroada, eram sinais de uma infecção por fungo no mamilo. O tratamento é passar um creme antifungo no peito da mãe, dar uma gotinha de remédio antifungo na boca do bebê, e parar de usar aquele bico de silicone que estava ajudando o fungo a se manter ali.",
+      "scheduleId": "cron-5",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b01-semanais-q94",

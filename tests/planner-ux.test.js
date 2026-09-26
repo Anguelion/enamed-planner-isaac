@@ -283,7 +283,7 @@ test('Missão sinaliza e abre questões extras após a meta da aula',()=>{
   assert.match(css,/\.schedule-study-icon\.done\.has-extra\{border-color:#20a477;background:#e8f8f1;color:#14825d\}/);
 });
 
-test('Questões abre só a coleção necessária e deixa o banco completo sob demanda',()=>{
+test('Questões abre só a coleção necessária e limita a trilha aos 30 blocos oficiais',()=>{
   const root=path.resolve(__dirname,'..');
   const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');
   const indexScript=fs.readFileSync(path.join(root,'question_bank/index.js'),'utf8');
@@ -291,7 +291,8 @@ test('Questões abre só a coleção necessária e deixa o banco completo sob de
   const officialBlocks=index.blocks.filter(entry=>!entry.special && /^\d+$/.test(String(entry.block)));
   assert.match(planner,/loadLocalQuestionBank\(\{initialOnly:true,preferredBlock\}\)/);
   assert.doesNotMatch(planner,/scheduleQuestionBankExpansion/);
-  assert.match(planner,/Carregar banco completo/);
+  assert.match(planner,/Carregar os 30 blocos/);
+  assert.doesNotMatch(planner,/Carregar banco completo/);
   assert.match(planner,/sob demanda/);
   assert.match(planner,/Carregando as primeiras questões/);
   assert.match(planner,/await loadLocalQuestionBank\(\{initialOnly:true,preferredBlock:String\(item\.block\)\}\)/);

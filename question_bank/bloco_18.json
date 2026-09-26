@@ -379,7 +379,7 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "scheduleId": "cron-169",
+      "scheduleId": "cron-170",
       "kids": "Encontraram uma bolinha na glândula perto do rim sem querer, num exame de rotina. Mesmo sem sintomas, é preciso testar com exames de sangue e urina se essa bolinha está produzindo hormônios escondidos, antes de decidir qualquer outra coisa."
     },
     {
@@ -2999,7 +2999,9 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags Bloco 18.txt",
-      "kids": "A dor que piora quando a bexiga enche e melhora depois de urinar é sinal de uma doença da bexiga; o exame que confirma isso é olhar por dentro dela e encontrar as feridas típicas chamadas úlceras de Hunner."
+      "kids": "A dor que piora quando a bexiga enche e melhora depois de urinar é sinal de uma doença da bexiga; o exame que confirma isso é olhar por dentro dela e encontrar as feridas típicas chamadas úlceras de Hunner.",
+      "scheduleId": "cron-166",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b18-q096",

@@ -3399,7 +3399,9 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "kids": "O comprometimento cognitivo leve é quando a pessoa se queixa de esquecimento e o teste de memória mostra alguma alteração, mas ela ainda consegue fazer suas tarefas do dia a dia normalmente — diferente da demência."
+      "kids": "O comprometimento cognitivo leve é quando a pessoa se queixa de esquecimento e o teste de memória mostra alguma alteração, mas ela ainda consegue fazer suas tarefas do dia a dia normalmente — diferente da demência.",
+      "scheduleId": "cron-84",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b09-semanais-q109",
@@ -3491,7 +3493,9 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "kids": "Uma dor que continua queimando e dando choques no local onde teve cobreiro, mesmo meses depois, é chamada de dor pós-herpética, e o tratamento combina um remédio que ajuda tanto com a dor quanto com a tristeza e outro que acalma os nervos."
+      "kids": "Uma dor que continua queimando e dando choques no local onde teve cobreiro, mesmo meses depois, é chamada de dor pós-herpética, e o tratamento combina um remédio que ajuda tanto com a dor quanto com a tristeza e outro que acalma os nervos.",
+      "scheduleId": "cron-85",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b09-geriatria-aga-q13",
@@ -3667,7 +3671,9 @@
       "answer": "C",
       "source": "QUESTÕES BLOCO 9 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 9",
-      "images": [],
+      "images": [
+        "question_bank/media/official-blocks/b09-semanais-q117.png"
+      ],
       "comment": "Análise:\nCorreta: C.\nPor que está cena: O linfonodo encontrado no triângulo cístico/calot durante a colecistectomia é conhecido como gânglio (ou linfonodo) de Mascagni. Ele é um marco anatômico importante, pois situa-se em estreita relação com a artéria cística, servindo como guia para a sua identificação e dissecção segura.\nPor que as outras estão erradas:\nA: O linfonodo de Mascagni está no triângulo de Calot, não no hilo hepático.\nB: Linfonodo de Virchow é o supraclavicular esquerdo (sinal de Troisier), associado a metástases de câncer gástrico.\nD: O gânglio de Virchow não tem relação com a artéria hepática direita neste contexto cirúrgico.\nPonto de prova: Anatomia cirúrgica da via biliar.\nFlashcard sugerido: Qual o nome do linfonodo localizado no triângulo de Calot, junto à artéria cística? R: Gânglio de Mascagni.\nPérola: No triângulo de Calot, Mascagni vigia a artéria cística.\nArmadilha: Confundir com Linfonodo de Virchow, que é supraclavicular.",
       "tags": [
         "Cirurgia",
@@ -3678,7 +3684,9 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "kids": "Durante a cirurgia de retirada da vesícula, existe um pequeno gânglio que costuma ficar bem perto da artéria que alimenta a vesícula, servindo como uma pista para o cirurgião encontrá-la com segurança."
+      "kids": "Durante a cirurgia de retirada da vesícula, existe um pequeno gânglio que costuma ficar bem perto da artéria que alimenta a vesícula, servindo como uma pista para o cirurgião encontrá-la com segurança.",
+      "scheduleId": "cron-67",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b09-semanais-q118",
@@ -3740,7 +3748,9 @@
         "Urgência e Emergência"
       ],
       "tagSource": "Tags 9.txt",
-      "kids": "Quando um câncer de vesícula biliar é descoberto por acaso numa cirurgia e está bem no começo, só na camada mais superficial, sem invadir mais fundo, muitas vezes não é preciso operar de novo — só acompanhar."
+      "kids": "Quando um câncer de vesícula biliar é descoberto por acaso numa cirurgia e está bem no começo, só na camada mais superficial, sem invadir mais fundo, muitas vezes não é preciso operar de novo — só acompanhar.",
+      "scheduleId": "cron-67",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b09-semanais-q121",
@@ -3959,7 +3969,9 @@
         "Adolescência"
       ],
       "tagSource": "Tags 9.txt",
-      "kids": "Proptose, olho saltado, febre e dificuldade de mexer o olho numa criança que teve uma sinusite mal tratada mostram que a infecção passou do nariz para trás do olho — a sinusite é a principal causa dessa complicação grave."
+      "kids": "Proptose, olho saltado, febre e dificuldade de mexer o olho numa criança que teve uma sinusite mal tratada mostram que a infecção passou do nariz para trás do olho — a sinusite é a principal causa dessa complicação grave.",
+      "scheduleId": "cron-86",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b09-semanais-q128",
@@ -4052,7 +4064,9 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 9.txt",
-      "kids": "Para tratar sarna com um remédio para tomar, em vez de creme, em crianças com mais de 15 kg, o remédio usado é a ivermectina."
+      "kids": "Para tratar sarna com um remédio para tomar, em vez de creme, em crianças com mais de 15 kg, o remédio usado é a ivermectina.",
+      "scheduleId": "cron-86",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b09-semanais-q131",
@@ -4304,7 +4318,9 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "kids": "A Candida gosta de ambiente ácido, não alcalino, não é sempre tratada com o mesmo remédio, o diagnóstico definitivo não é só olhando, e encontrar o fungo no exame nem sempre significa que a pessoa está doente por causa dele."
+      "kids": "A Candida gosta de ambiente ácido, não alcalino, não é sempre tratada com o mesmo remédio, o diagnóstico definitivo não é só olhando, e encontrar o fungo no exame nem sempre significa que a pessoa está doente por causa dele.",
+      "scheduleId": "cron-87",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b09-semanais-q139",
@@ -4648,7 +4664,9 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 9.txt",
-      "kids": "Gânglio dolorido na virilha, febre, e um exame de sangue positivo para a bactéria da clamídia mostram uma infecção chamada linfogranuloma venéreo."
+      "kids": "Gânglio dolorido na virilha, febre, e um exame de sangue positivo para a bactéria da clamídia mostram uma infecção chamada linfogranuloma venéreo.",
+      "scheduleId": "cron-88",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b09-ulceras-genitais-q15",
@@ -4911,7 +4929,7 @@
       "sourceLabel": "CofBasics - Bioestatística",
       "images": [],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-92",
+      "scheduleId": "cron-medplanner-9-10",
       "id": "b09-cofbasics-bioestatistica-q1",
       "number": 1,
       "stem": "Um novo teste rápido para triagem de determinada infecção foi aplicado em 1.000 pacientes. Dos 100 pacientes realmente doentes (confirmados por padrão-ouro), 90 tiveram teste positivo. Dos 900 pacientes sem a doença, 810 tiveram teste negativo. A sensibilidade e a especificidade do teste são, respectivamente, aproximadamente:",
@@ -4941,7 +4959,7 @@
       "sourceLabel": "CofBasics - Bioestatística",
       "images": [],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-92",
+      "scheduleId": "cron-medplanner-9-10",
       "id": "b09-cofbasics-bioestatistica-q2",
       "number": 2,
       "stem": "Em um estudo de rastreamento populacional para uma doença de baixa prevalência, um teste diagnóstico com alta sensibilidade e especificidade moderada é aplicado. Em relação ao valor preditivo positivo (VPP) desse teste nessa população, é correto afirmar que:",
@@ -4971,7 +4989,7 @@
       "sourceLabel": "CofBasics - Bioestatística",
       "images": [],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-92",
+      "scheduleId": "cron-medplanner-9-10",
       "id": "b09-cofbasics-bioestatistica-q3",
       "number": 3,
       "stem": "Pesquisadores desejam investigar a associação entre exposição a um agrotóxico específico e o desenvolvimento de uma doença rara, com longo período de latência. Qual desenho de estudo é mais adequado e eficiente para essa investigação?",
@@ -5001,7 +5019,7 @@
       "sourceLabel": "CofBasics - Bioestatística",
       "images": [],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-92",
+      "scheduleId": "cron-medplanner-9-10",
       "id": "b09-cofbasics-bioestatistica-q4",
       "number": 4,
       "stem": "Em um ensaio clínico randomizado, o risco de infarto agudo do miocárdio no grupo tratado com a nova droga foi de 4%, e no grupo placebo foi de 8%. O número necessário para tratar (NNT) para prevenir um evento é:",
@@ -5030,7 +5048,7 @@
       "sourceLabel": "CofBasics - Bioestatística",
       "images": [],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-92",
+      "scheduleId": "cron-medplanner-9-10",
       "id": "b09-cofbasics-bioestatistica-q5",
       "number": 5,
       "stem": "Um estudo de coorte acompanhou 500 fumantes e 500 não fumantes por 10 anos, avaliando a incidência de câncer de pulmão. A incidência foi de 20% entre fumantes e 2% entre não fumantes. O risco relativo (RR) de câncer de pulmão associado ao tabagismo nesse estudo é:",
@@ -5060,7 +5078,7 @@
       "sourceLabel": "CofBasics - Bioestatística",
       "images": [],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-92",
+      "scheduleId": "cron-medplanner-9-10",
       "id": "b09-cofbasics-bioestatistica-q6",
       "number": 6,
       "stem": "Em um estudo caso-controle sobre fatores de risco para tromboembolismo venoso, não é possível calcular diretamente a incidência da doença nos grupos expostos e não expostos. A medida de associação apropriada nesse tipo de desenho é:",
@@ -5090,7 +5108,7 @@
       "sourceLabel": "CofBasics - Bioestatística",
       "images": [],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-92",
+      "scheduleId": "cron-medplanner-9-10",
       "id": "b09-cofbasics-bioestatistica-q7",
       "number": 7,
       "stem": "Em um estudo comparando dois tratamentos, o intervalo de confiança de 95% para a diferença de eficácia entre os grupos foi de -2% a 8%. A interpretação correta desse resultado é:",
@@ -5120,7 +5138,7 @@
       "sourceLabel": "CofBasics - Bioestatística",
       "images": [],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-92",
+      "scheduleId": "cron-medplanner-9-10",
       "id": "b09-cofbasics-bioestatistica-q8",
       "number": 8,
       "stem": "Pesquisadores observaram que cidades com maior número de sorveterias apresentam maior incidência de afogamentos, gerando uma correlação estatística positiva entre as duas variáveis. Essa associação é mais bem explicada por:",
@@ -5150,7 +5168,7 @@
       "sourceLabel": "CofBasics - Bioestatística",
       "images": [],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-92",
+      "scheduleId": "cron-medplanner-9-10",
       "id": "b09-cofbasics-bioestatistica-q9",
       "number": 9,
       "stem": "Em um ensaio clínico, pacientes que abandonaram o estudo antes do desfecho final não foram incluídos na análise final dos resultados, apenas aqueles que completaram o seguimento conforme o protocolo. Esse tipo de análise, que pode superestimar o efeito do tratamento, é conhecido como:",
@@ -5180,7 +5198,7 @@
       "sourceLabel": "CofBasics - Bioestatística",
       "images": [],
       "tagSource": "Tags.txt",
-      "scheduleId": "cron-92",
+      "scheduleId": "cron-medplanner-9-10",
       "id": "b09-cofbasics-bioestatistica-q10",
       "number": 10,
       "stem": "Em um estudo transversal (de prevalência) realizado em uma cidade, buscou-se relacionar o número de anos de estudo com a prevalência de hipertensão arterial. Uma limitação inerente a esse desenho de estudo, em relação à inferência causal, é:",

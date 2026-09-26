@@ -627,7 +627,9 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 14.txt",
-      "kids": "Sentir uma azia de vez em quando depois de comer muito ou beber álcool é normal e não quer dizer que a pessoa tenha a doença do refluxo. Já quem tem azia toda semana, ou sintomas estranhos como rouquidão e pneumonias repetidas, provavelmente tem mesmo a doença."
+      "kids": "Sentir uma azia de vez em quando depois de comer muito ou beber álcool é normal e não quer dizer que a pessoa tenha a doença do refluxo. Já quem tem azia toda semana, ou sintomas estranhos como rouquidão e pneumonias repetidas, provavelmente tem mesmo a doença.",
+      "scheduleId": "cron-134",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b14-diabetes-gestacao-q07",
@@ -2217,7 +2219,9 @@
       "answer": "A",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 14",
-      "images": [],
+      "images": [
+        "question_bank/media/official-blocks/b14-pals-q14.png"
+      ],
       "comment": "Análise:\nCorreta: A.\nPor que está certa: Taquicardia com pulso e instabilidade hemodinâmica. Conduta: cardioversão sincronizada 0.5 a 1 J/kg.\nPor que as outras estão erradas: 2J/kg é dose de aumento. Adenosina e amiodarona são para estável. Desfibrilação é sem pulso.\nPonto de prova: Cardioversão em taquicardia instável.\nFlashcard sugerado: Dose inicial de cardioversão pediátrica? 0.5-1 J/kg.\nPérola: Instável com pulso: 0.5 a 1J/kg.\nArmadilha: Usar drogas em paciente instável.",
       "tags": [
         "Pediatria",
@@ -2249,7 +2253,9 @@
       "answer": "C",
       "source": "QUESTÕES BLOCO 14 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 14",
-      "images": [],
+      "images": [
+        "question_bank/media/official-blocks/b14-pals-q15.png"
+      ],
       "comment": "Análise:\nCorreta: C.\nPor que está certa: Mesma situação: taquicardia com pulso e instabilidade. Cardioversão elétrica sincronizada imediata.\nPor que as outras estão erradas: Adrenalina e amiodarona atrasam o tratamento definitivo. Expansão não resolve arritmia.\nPonto de prova: Manejo de taquicardia instável.\nFlashcard sugerado: Taquicardia com pulso e choque? Cardioversão.\nPérola: Tem pulso e está mal? Cardioverte.\nArmadilha: Tentar droga antes do choque.",
       "tags": [
         "Pediatria",
@@ -2982,7 +2988,9 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "kids": "Esse jovem tem o colesterol ruim muito alto, o que sugere que ele nasceu com uma tendência genética para isso, herdada da família. Por causa desse risco alto, a meta do tratamento dele precisa ser bem rigorosa, com o colesterol ruim bem baixo."
+      "kids": "Esse jovem tem o colesterol ruim muito alto, o que sugere que ele nasceu com uma tendência genética para isso, herdada da família. Por causa desse risco alto, a meta do tratamento dele precisa ser bem rigorosa, com o colesterol ruim bem baixo.",
+      "scheduleId": "cron-135",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b14-semanais-q96",
@@ -3012,7 +3020,9 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 14.txt",
-      "kids": "Esse senhor já tem uma placa de gordura formada dentro da artéria do pescoço, o que mostra que o problema já começou de verdade. Por isso, ele precisa do remédio mais forte para baixar o colesterol, e não pode esperar mais tempo."
+      "kids": "Esse senhor já tem uma placa de gordura formada dentro da artéria do pescoço, o que mostra que o problema já começou de verdade. Por isso, ele precisa do remédio mais forte para baixar o colesterol, e não pode esperar mais tempo.",
+      "scheduleId": "cron-135",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b14-semanais-q97",
@@ -3042,7 +3052,9 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 14.txt",
-      "kids": "Quando uma pessoa nasce com uma tendência genética para ter o colesterol muito alto, o tratamento com o remédio mais forte já deve começar logo, sem precisar esperar meses tentando só dieta e exercício."
+      "kids": "Quando uma pessoa nasce com uma tendência genética para ter o colesterol muito alto, o tratamento com o remédio mais forte já deve começar logo, sem precisar esperar meses tentando só dieta e exercício.",
+      "scheduleId": "cron-135",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b14-semanais-q98",
@@ -3073,7 +3085,9 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "kids": "Esse senhor tem pressão alta e o pai dele teve um infarto ainda jovem, o que coloca ele num grupo de risco alto para o coração. Por isso, a meta do colesterol ruim dele precisa ser bem baixa."
+      "kids": "Esse senhor tem pressão alta e o pai dele teve um infarto ainda jovem, o que coloca ele num grupo de risco alto para o coração. Por isso, a meta do colesterol ruim dele precisa ser bem baixa.",
+      "scheduleId": "cron-135",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b14-semanais-q99",
@@ -3258,7 +3272,9 @@
         "Paciente Adulto"
       ],
       "tagSource": "Tags 14.txt",
-      "kids": "O triglicerídeo desse paciente está extremamente alto, o que pode causar uma inflamação grave no pâncreas. Por isso, o remédio certo para começar é um fibrato, que é mais eficiente para baixar esse tipo específico de gordura rapidamente."
+      "kids": "O triglicerídeo desse paciente está extremamente alto, o que pode causar uma inflamação grave no pâncreas. Por isso, o remédio certo para começar é um fibrato, que é mais eficiente para baixar esse tipo específico de gordura rapidamente.",
+      "scheduleId": "cron-135",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b14-semanais-q105",
@@ -3475,7 +3491,9 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 14.txt",
-      "kids": "O coração desse menino está batendo muito rápido de um jeito que não é normal, sem aquela ondinha que indica o comando certo do coração. Como ele está mal, com pressão baixa e mãos frias, o tratamento certo é o choque elétrico programado, e não antibiótico ou soro apenas."
+      "kids": "O coração desse menino está batendo muito rápido de um jeito que não é normal, sem aquela ondinha que indica o comando certo do coração. Como ele está mal, com pressão baixa e mãos frias, o tratamento certo é o choque elétrico programado, e não antibiótico ou soro apenas.",
+      "scheduleId": "cron-132",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b14-semanais-q112",
@@ -3536,7 +3554,9 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 14.txt",
-      "kids": "Quando o monitor mostra que o coração parece ter parado de vez, antes de dar qualquer remédio, os médicos primeiro checam se os fios e os aparelhos estão conectados direito, para ter certeza de que a leitura está correta."
+      "kids": "Quando o monitor mostra que o coração parece ter parado de vez, antes de dar qualquer remédio, os médicos primeiro checam se os fios e os aparelhos estão conectados direito, para ter certeza de que a leitura está correta.",
+      "scheduleId": "cron-132",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b14-semanais-q115",
@@ -3568,7 +3588,9 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 14.txt",
-      "kids": "Esse menino está com o coração muito acelerado, mas ainda está bem, com pressão boa e pulsos fortes. Como a manobra que tenta acalmar o coração sem remédio não funcionou, o próximo passo é dar um remédio na veia que ajuda a organizar o ritmo."
+      "kids": "Esse menino está com o coração muito acelerado, mas ainda está bem, com pressão boa e pulsos fortes. Como a manobra que tenta acalmar o coração sem remédio não funcionou, o próximo passo é dar um remédio na veia que ajuda a organizar o ritmo.",
+      "scheduleId": "cron-132",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b14-semanais-q117",
@@ -3629,7 +3651,9 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 14.txt",
-      "kids": "Com essa história de sede, muito xixi, perda de peso e agora sonolência, a suspeita é de uma emergência de diabetes, e o primeiro exame a pedir é o que mede a acidez do sangue junto com o açúcar."
+      "kids": "Com essa história de sede, muito xixi, perda de peso e agora sonolência, a suspeita é de uma emergência de diabetes, e o primeiro exame a pedir é o que mede a acidez do sangue junto com o açúcar.",
+      "scheduleId": "cron-133",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b14-semanais-q120",
@@ -3659,7 +3683,9 @@
         "Adolescência"
       ],
       "tagSource": "Tags 14.txt",
-      "kids": "Diante desses sinais de emergência do diabetes, os exames certos são a medida do açúcar e a acidez do sangue, e o tratamento começa com soro na veia. Só depois de uma hora é que se começa a insulina, e o potássio só é reposto se estiver baixo o suficiente."
+      "kids": "Diante desses sinais de emergência do diabetes, os exames certos são a medida do açúcar e a acidez do sangue, e o tratamento começa com soro na veia. Só depois de uma hora é que se começa a insulina, e o potássio só é reposto se estiver baixo o suficiente.",
+      "scheduleId": "cron-133",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b14-semanais-q121",
@@ -3690,7 +3716,9 @@
         "Adolescência"
       ],
       "tagSource": "Tags 14.txt",
-      "kids": "A complicação mais temida durante o tratamento dessa emergência do diabetes é o cérebro inchar, e um sinal de alerta para isso é quando os olhos da pessoa começam a reagir de forma diferente um do outro à luz."
+      "kids": "A complicação mais temida durante o tratamento dessa emergência do diabetes é o cérebro inchar, e um sinal de alerta para isso é quando os olhos da pessoa começam a reagir de forma diferente um do outro à luz.",
+      "scheduleId": "cron-133",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b14-semanais-q122",
@@ -4221,7 +4249,9 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 14.txt",
-      "kids": "Olhando a árvore da família de Mônica, dá para perceber que o marido dela está repetindo comportamentos parecidos com os do pai dele, como beber demais, o que preocupa porque o pai morreu jovem por causa disso."
+      "kids": "Olhando a árvore da família de Mônica, dá para perceber que o marido dela está repetindo comportamentos parecidos com os do pai dele, como beber demais, o que preocupa porque o pai morreu jovem por causa disso.",
+      "scheduleId": "cron-130",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b14-semanais-q141",

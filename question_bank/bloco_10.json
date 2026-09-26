@@ -1862,7 +1862,9 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 10.txt",
-      "kids": "Existe uma doença parecida com a gota, mas causada por outro tipo de cristal, em formato de losango, que aparece azul quando olhado de um certo jeito no microscópio."
+      "kids": "Existe uma doença parecida com a gota, mas causada por outro tipo de cristal, em formato de losango, que aparece azul quando olhado de um certo jeito no microscópio.",
+      "scheduleId": "cron-99",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b10-semanais-q61",
@@ -2018,7 +2020,9 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 10.txt",
-      "kids": "Dor que pula de uma junta para outra, febre e bolinhas de pus na pele, depois de dor nos punhos e tornozelos, apontam para uma bactéria transmitida sexualmente chamada gonococo."
+      "kids": "Dor que pula de uma junta para outra, febre e bolinhas de pus na pele, depois de dor nos punhos e tornozelos, apontam para uma bactéria transmitida sexualmente chamada gonococo.",
+      "scheduleId": "cron-99",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b10-semanais-q66",
@@ -2266,7 +2270,9 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 10.txt",
-      "kids": "Na fibromialgia, além da dor, o sintoma que quase sempre aparece junto é o cansaço extremo."
+      "kids": "Na fibromialgia, além da dor, o sintoma que quase sempre aparece junto é o cansaço extremo.",
+      "scheduleId": "cron-100",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b10-fibromialgia-q14",
@@ -2454,7 +2460,9 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 10.txt",
-      "kids": "Quando a garganta parece infectada pela bactéria estreptococo, o médico faz um teste rápido; se ele der negativo, ainda dá tempo de esperar o resultado de outro exame antes de começar o antibiótico, sem prejudicar o tratamento."
+      "kids": "Quando a garganta parece infectada pela bactéria estreptococo, o médico faz um teste rápido; se ele der negativo, ainda dá tempo de esperar o resultado de outro exame antes de começar o antibiótico, sem prejudicar o tratamento.",
+      "scheduleId": "cron-96",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b10-semanais-q80",
@@ -2486,7 +2494,9 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 10.txt",
-      "kids": "Quando a membrana que fecha o ouvido por dentro aparece inchada para fora e opaca na foto do exame, isso é sinal de infecção de ouvido comum."
+      "kids": "Quando a membrana que fecha o ouvido por dentro aparece inchada para fora e opaca na foto do exame, isso é sinal de infecção de ouvido comum.",
+      "scheduleId": "cron-96",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b10-semanais-q81",
@@ -2518,7 +2528,9 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 10.txt",
-      "kids": "Quando a inflamação é no canal do ouvido, com dor ao mexer na orelha, o problema é diferente da infecção do ouvido por dentro: é uma infecção do canal externo."
+      "kids": "Quando a inflamação é no canal do ouvido, com dor ao mexer na orelha, o problema é diferente da infecção do ouvido por dentro: é uma infecção do canal externo.",
+      "scheduleId": "cron-96",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b10-semanais-q82",

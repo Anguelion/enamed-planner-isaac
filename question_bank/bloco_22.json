@@ -405,7 +405,9 @@
       "answer": "E",
       "source": "AQFM---Extensivo-ENAMED-2026---Bloco-23-download.pdf",
       "sourceLabel": "Exantemáticas",
-      "images": [],
+      "images": [
+        "question_bank/media/official-blocks/b22-q013.png"
+      ],
       "comment": "Análise:\nCorreta: E.\nPor que está certa: A alternativa E corresponde ao gabarito oficial. O conceito correto, de acordo com a situação apresentada, é: Parvovírus.\nRessalva técnica: A questão depende de imagem, traçado, tabela ou dados que não foram integralmente preservados no texto; a análise segue o gabarito oficial.\nPor que as outras estão erradas:\nA: Varicela-zóster. A afirmação é parcialmente plausível, mas não corresponde ao detalhe decisivo cobrado no enunciado.\nB: Paramyxovirus. A afirmação é parcialmente plausível, mas não corresponde ao detalhe decisivo cobrado no enunciado.\nC: Coxsackie. A afirmação é parcialmente plausível, mas não corresponde ao detalhe decisivo cobrado no enunciado.\nD: S. Pyogenes. A afirmação é parcialmente plausível, mas não corresponde ao detalhe decisivo cobrado no enunciado.\nPonto de prova: Dominar o conceito central de Paciente de 3 anos, sexo masculino, previamente hígido, há dois dias começou a a.\nFlashcard sugerido:\nPergunta: Qual é a resposta-chave da questão 13 sobre Paciente de 3 anos, sexo masculino, previamente hígido, há dois dias começou a a?\nResposta: Parvovírus.\n\nPérola:\nParvovírus.\n\nArmadilha:\nMarcar a alternativa sem conferir a imagem/tabela original; o arquivo textual não preservou todos os elementos visuais.\n\n--------------------------------------------------------------------------------",
       "tags": [
         "Pediatria",

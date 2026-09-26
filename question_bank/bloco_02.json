@@ -4923,7 +4923,9 @@
       "answer": "A",
       "source": "01. QUESTÕES BLOCO 2 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 2",
-      "images": [],
+      "images": [
+        "question_bank/media/official-blocks/b02-semanais-q157.png"
+      ],
       "comment": "Análise:\nCorreta: A.\nPor que está certa: Após o estímulo sonoro, a CTG não apresentou acelerações significativas e a variabilidade permaneceu reduzida. Um traçado que não responde ao estímulo é classificado como não reativo.\nPor que as outras estão erradas:\nB, C, D: Não há padrão monofásico, hipoativo reativo ou sinusoidal na descrição do traçado (conforme gabarito).\nPonto de prova: Interpretação da CTG com estímulo sonoro.\nFlashcard sugerido 1: Se a CTG não acelera após estímulo sonoro, como é classificada? Resposta: Não reativa.\nFlashcard sugerido 2: O que fazer após uma CTG não reativa? Resposta: PBF.\nPérola: Bateu o som e o coração não subiu: não reativo.\nArmadilha: Achar que o estímulo sonoro garante a reatividade.",
       "tags": [
         "Ginecologia e Obstetrícia",
@@ -4934,7 +4936,9 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags.txt",
-      "kids": "Mesmo depois de fazer um barulho perto da barriga para tentar acordar o bebê, o coração dele não acelerou como deveria, esse traçado é chamado de não reativo e merece mais atenção."
+      "kids": "Mesmo depois de fazer um barulho perto da barriga para tentar acordar o bebê, o coração dele não acelerou como deveria, esse traçado é chamado de não reativo e merece mais atenção.",
+      "scheduleId": "cron-20",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b02-semanal-q158",
@@ -5079,7 +5083,9 @@
       "answer": "C",
       "source": "01. QUESTÕES BLOCO 2 (SEMANAIS).txt",
       "sourceLabel": "Questões semanais - Bloco 2",
-      "images": [],
+      "images": [
+        "question_bank/media/official-blocks/b02-semanais-q162.png"
+      ],
       "comment": "Análise:\nCorreta: C.\nPor que está certa: A cardiotocografia descrita apresenta desacelerações tardias em relação ao pico da contração uterina. Desacelerações tardias repetidas sugerem insuficiência útero-placentária, hipóxia fetal e sofrimento fetal agudo.\nPor que as outras estão erradas:\nA: Compressão do cordão umbilical causa desacelerações variáveis, não tardias.\nB: A frequência das contrações (4 em 10 min) é normal, não configurando hiperestimulação.\nD: Compressão do polo cefálico causa desacelerações precoces.\nPonto de prova: Interpretação da CTG intraparto.\nFlashcard sugerido 1: Desacelerações tardias na CTG indicam o quê? Resposta: Insuficiência útero-placentária (hipóxia fetal).\nFlashcard sugerido 2: O que causa desaceleração variável? Resposta: Compressão do cordão umbilical.\nPérola: Tardia é placenta, variável é cordão, precoce é cabeça.\nArmadilha: Confundir desaceleração tardia com variável (cordão).",
       "tags": [
         "Ginecologia e Obstetrícia",

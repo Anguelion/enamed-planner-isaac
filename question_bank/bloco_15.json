@@ -2890,7 +2890,9 @@
         "Caso Clínico"
       ],
       "tagSource": "Tags 15.txt",
-      "kids": "A dor forte de um lado do rosto, com olho lacrimejando e nariz entupido, que se repete várias vezes ao dia sempre no mesmo horário, melhora respirando oxigênio puro na crise, e se previne com um remédio que relaxa os vasos sanguíneos."
+      "kids": "A dor forte de um lado do rosto, com olho lacrimejando e nariz entupido, que se repete várias vezes ao dia sempre no mesmo horário, melhora respirando oxigênio puro na crise, e se previne com um remédio que relaxa os vasos sanguíneos.",
+      "scheduleId": "cron-140",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b15-q090",
@@ -3704,7 +3706,9 @@
         "Avaliação Clínica"
       ],
       "tagSource": "Tags 15.txt",
-      "kids": "Quando pessoas com doenças de longo prazo têm dificuldade de seguir o tratamento, criar grupos na unidade de saúde para trocarem experiências ajuda muito mais do que só entregar folhetos."
+      "kids": "Quando pessoas com doenças de longo prazo têm dificuldade de seguir o tratamento, criar grupos na unidade de saúde para trocarem experiências ajuda muito mais do que só entregar folhetos.",
+      "scheduleId": "cron-139",
+      "scheduleLinkVerified": true
     },
     {
       "id": "b15-semanais-q124",

@@ -16,6 +16,58 @@ const { loadPlannerSandbox } = require('./planner-sandbox.js');
 // tests/planner-merge.test.js.
 const plain = value => JSON.parse(JSON.stringify(value));
 
+test('ACLS, Endometriose e Lesões Elementares usam o correlato correto no cronograma', () => {
+  const ctx = loadPlannerSandbox();
+  const state = ctx.__getState();
+  state.schedule = [
+    {id:'b12-acls',block:12,lessonOrder:6,topic:'Taquiarritmias e ACL/BLS'},
+    {id:'b12-dor',block:12,lessonOrder:4,topic:'Dor Pélvica'},
+    {id:'b12-sua',block:12,lessonOrder:3,topic:'Sangramento Uterino Anormal'},
+    {id:'b09-lesoes',block:9,lessonOrder:9,topic:'CofBasics - Lesões Elementares (Pediatria)'}
+  ];
+
+  assert.equal(ctx.videoScheduleForLesson({block:12,title:'Taquiarritmias e ACLBLS'})?.id,'b12-acls');
+  assert.equal(ctx.videoScheduleForVideo({block:12},{title:'06 - Taquiarritmias e ACLBLS'})?.id,'b12-acls');
+  assert.equal(ctx.videoScheduleForLesson({block:12,title:'Endometriose'})?.id,'b12-dor');
+  assert.notEqual(ctx.videoScheduleForLesson({block:12,title:'Endometriose'})?.id,'b12-sua');
+  assert.equal(ctx.scheduleForQuestion({collectionBlock:9,topic:'Lesões Elementares - Dermatologia Pediátrica'})?.id,'b09-lesoes');
+  assert.equal(ctx.scheduleForQuestion({collectionBlock:8,topic:'Questões semanais',scheduleId:'b09-lesoes'})?.id,'b09-lesoes','um correlato editorial pode apontar para a aula correta de outra semana');
+  assert.equal(ctx.questionMatchesSchedule({collectionBlock:12,topic:'Questões semanais',scheduleId:'b12-acls'},state.schedule[0]),true,'o scheduleId editorial é autoritativo mesmo com rótulo genérico');
+});
+
+test('Dor pélvica compartilha a videoaula com DIP sem duplicar o arquivo de mídia', () => {
+  const ctx = loadPlannerSandbox();
+  const links = plain(ctx.sharedVideoSchedulesForLesson({block:9,title:'Dor pélvica'}));
+  assert.equal(links.length, 1);
+  assert.equal(links[0].topic, 'Doença Inflamatória Pélvica Aguda');
+  assert.equal(links[0].block, 9);
+});
+
+test('catálogo ativo ignora Anki, MedCurso, MED e coleções especiais', () => {
+  const ctx = loadPlannerSandbox();
+  ctx.window.ENAMED_LOCAL_QUESTION_INDEX = {
+    total:50000,
+    blocks:[
+      {block:'1',count:100,script:'bloco_01.js'},
+      {block:'30',count:80,script:'bloco_30.js'},
+      {block:'anki',count:6000,script:'anki.js',special:true},
+      {block:'medcurso',count:22000,script:'medcurso.js',special:true},
+      {block:'med',count:16000,script:'med.js',special:true},
+      {block:'ineditas',count:900,script:'ineditas.js',special:true}
+    ]
+  };
+  ctx.window.ENAMED_LOCAL_QUESTION_BANK = {'1':{questions:[]}};
+
+  assert.deepEqual(plain(ctx.questionCatalogEntries().map(entry => entry.block)),['1','30']);
+  assert.deepEqual(plain(ctx.questionBankCatalogStatus()),{
+    total:180,
+    loadedCollections:1,
+    totalCollections:2,
+    complete:false,
+    loading:false
+  });
+});
+
 test('Missão recomeça em 28/09 com a carga semanal pedida e calcula a conclusão real', () => {
   const ctx = loadPlannerSandbox();
   const state = ctx.__getState();
@@ -66,6 +118,34 @@ test('índice de materiais encontra aula, subtítulo e palavras do conteúdo', (
   assert.equal(ctx.materialSearchEntryMatches(entry,['diagnostico','ferritina']),true);
   assert.equal(ctx.materialSearchEntryMatches(entry,['hepcidina','tratamento']),true);
   assert.equal(ctx.materialSearchEntryMatches(entry,['cardiologia']),false);
+});
+
+test('videoLessonSpecialty cria uma visão por especialidade sem duplicar a trilha por blocos', () => {
+  const ctx = loadPlannerSandbox();
+  assert.equal(ctx.videoLessonSpecialty({title:'Taquiarritmias e ACLBLS',area:'Clínica Médica',videos:[]}), 'Cardiologia');
+  assert.equal(ctx.videoLessonSpecialty({title:'Nefrologia Pediátrica',area:'Pediatria',videos:[]}), 'Nefrologia');
+  assert.equal(ctx.videoLessonSpecialty({title:'Cirrose Hepática 1',area:'Clínica Médica',videos:[]}), 'Gastroenterologia');
+  assert.equal(ctx.videoLessonSpecialty({title:'Ciclo Menstrual',area:'GO',videos:[]}), 'Ginecologia e Obstetrícia');
+  assert.equal(ctx.videoLessonSpecialty({title:'Avaliação do Hemograma e Anemias',area:'Clínica Médica',videos:[]}), 'Hematologia');
+  assert.deepEqual(
+    plain(ctx.videoLessonSpecialties({title:'Síndromes Hipertensivas na Gestação',area:'GO',videos:[]})),
+    ['Cardiologia','Ginecologia e Obstetrícia'],
+    'uma aula interdisciplinar deve ser encontrável nos dois filtros, sem duplicar seu registro'
+  );
+});
+
+test('questionCommentSchemaStatus mantém o padrão das novas respostas na importação', () => {
+  const ctx = loadPlannerSandbox();
+  const [complete] = ctx.parseQuestionBatch(ctx.importExampleText(), {status:'ready'});
+  assert.equal(ctx.questionCommentSchemaStatus(complete.comment).complete, true);
+  assert.equal(complete.importStatus, 'ready');
+  const incomplete = ctx.questionCommentSchemaStatus('Correta: B. Explicação breve.');
+  assert.equal(incomplete.complete, false);
+  assert.ok(plain(incomplete.missing).includes('Por que as outras estão erradas'));
+  const legacyTemplate = ctx.importExampleText().replace(/\[COMMENT\][\s\S]*?\[PEARL\]/, '[COMMENT]\nExplicação breve.\n\n[PEARL]');
+  const [needsReview] = ctx.parseQuestionBatch(legacyTemplate, {status:'ready'});
+  assert.equal(needsReview.importStatus, 'needs_review');
+  assert.match(needsReview._warnings.join(' '), /Comentário fora do padrão/);
 });
 
 test('anotações do material reúnem destaques sem repetir trechos', () => {
