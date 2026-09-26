@@ -1,43 +1,14 @@
-const CACHE_NAME = 'soqueromed-shell-v339';
+const CACHE_NAME = 'soqueromed-shell-v345';
 const APP_SHELL = [
   './',
   './manifest.webmanifest',
-  './assets/planner.css?v=20260925-4',
-  './assets/planner-refresh.css?v=20260818-22',
-  './assets/mascote-ia.css?v=20260802-7',
-  './assets/app-icons.js?v=20260802-1',
-  './assets/icons/phosphor-sprite.svg',
-  './assets/gamification.js?v=20260715-4',
-  './assets/planner-ux.js?v=20260825-1',
-  './assets/skill-highlighter.js?v=20260802-3',
-  './assets/caso-do-dia.js?v=20260826-1',
-  './assets/planner.js?v=20260925-4',
-  './assets/mascote-ia.js?v=20260802-10',
-  './health-news/data/latest.json',
-  './assets/dr-sotero.png',
+  './assets/auth-shell.css?v=20260926-6',
+  './assets/app-loader.js?v=20260926-6',
   './assets/icons/icon-192.png',
   './assets/icons/icon-512.png',
   './assets/icons/icon-512-maskable.png',
   './assets/icons/apple-touch-icon.png',
-  './assets/icons/icon-32.png',
-  './question_bank/index.js?v=20260812172501',
-  './assets/rpg/element-fire.svg',
-  './assets/rpg/element-water.svg',
-  './assets/rpg/element-earth.svg',
-  './assets/rpg/element-air.svg',
-  './assets/rpg/medal-block.svg',
-  './assets/rpg/class-crown.svg',
-  './assets/rpg/rarity-gem.svg'
-  ,'./assets/rpg/classes/aldeao.png'
-  ,'./assets/rpg/classes/aprendiz.png'
-  ,'./assets/rpg/classes/escudeiro.png'
-  ,'./assets/rpg/classes/soldado.png'
-  ,'./assets/rpg/classes/cavaleiro.png'
-  ,'./assets/rpg/classes/capitao.png'
-  ,'./assets/rpg/classes/barao.png'
-  ,'./assets/rpg/classes/duque.png'
-  ,'./assets/rpg/classes/rei.png'
-  ,'./assets/rpg/classes/imperador.png'
+  './assets/icons/icon-32.png'
 ];
 
 self.addEventListener('install', event => {
@@ -74,6 +45,8 @@ self.addEventListener('fetch', event => {
   }
 
   const networkFirst = url.pathname.includes('/question_bank/')
+    || url.pathname.endsWith('/assets/app-loader.js')
+    || url.pathname.endsWith('/assets/auth-shell.css')
     || url.pathname.endsWith('/assets/planner.js')
     || url.pathname.endsWith('/assets/anatomia.js')
     || url.pathname.endsWith('/assets/anatomia.css')

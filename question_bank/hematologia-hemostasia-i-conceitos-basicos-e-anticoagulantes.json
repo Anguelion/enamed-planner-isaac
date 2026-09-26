@@ -21,13 +21,13 @@
         "C": "O uso de anticoagulantes parenterais traz benefício na terapêutica intra-hospitalar pela sua fácil via de administração.",
         "D": "A warfarina é uma pró-droga que chega inativada ao fígado, pelo contato com as proteínas C e S, sendo somente ativada após o efeito de primeira passagem pela enzima P450."
       },
-      "answer": "D",
+      "answer": "A",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo aqui estava errado (marcava D); a resposta certa é A. A explicação é essa: quando a pessoa começa a tomar varfarina, o remédio bloqueia a fábrica de vários fatores de coagulação, mas também bloqueia duas 'proteínas de freio' do próprio corpo (proteína C e S), que têm vida curta e caem rapidinho. Por alguns dias, o corpo fica sem esse freio, mas os fatores que fazem o sangue coagular ainda demoram a cair — ou seja, no começo, a varfarina pode até deixar o sangue MAIS propenso a coagular! É por isso que se usa um anticoagulante injetável junto (tipo heparina) logo no início, pra proteger o paciente nesses primeiros dias perigosos.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -215,7 +215,7 @@
         "C": "Pacientes com embolia pulmonar não podem ser tratados com rivaroxabana.",
         "D": "O apixabana somente deve ser utilizado em pacientes com embolia sistêmica e FA de etiologia valvar."
       },
-      "answer": "B",
+      "answer": "A",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
@@ -249,7 +249,7 @@
         "D": "Trombina.",
         "E": "Fator de Von Willebrand."
       },
-      "answer": "B",
+      "answer": "E",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
@@ -416,7 +416,7 @@
         "D": "Apixabana: iniciar com 05mg 2x/dia por 07 dias, seguido de 5mg 1x/dia e não há necessidade de associação com outro anticoagulante.",
         "E": "Os anticoagulantes orais devem sempre ser acompanhados de uso de heparina devido ao risco de deficiência de proteína C e S."
       },
-      "answer": "E",
+      "answer": "A",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
@@ -449,7 +449,7 @@
         "C": "Suspender a dose de warfarina cinco dias antes do procedimento, iniciando heparina de baixo peso molecular em dose terapêutica.",
         "D": "Substituir a dose de warfarina por anticoagulante oral inibidor de fator Xa trinta dias antes do procedimento."
       },
-      "answer": "A",
+      "answer": "C",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
@@ -483,7 +483,7 @@
         "D": "Síndrome de Diamond-Blackfan",
         "E": "Síndrome de Evans"
       },
-      "answer": "A",
+      "answer": "C",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
@@ -517,7 +517,7 @@
         "D": "Apenas I e III.",
         "E": "I, II e III."
       },
-      "answer": "A",
+      "answer": "D",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
@@ -604,13 +604,13 @@
         "D": "Deverá manter medicação em jejum e poderá usar folhas verdes à vontade, desde que o faça regularmente e com controle de atividade de protrombina",
         "E": "Como o diagnóstico foi há mais de 28 dias, não tem mais indicação de anticoagulantes ou antiagregantes"
       },
-      "answer": "A",
+      "answer": "D",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava A (trocar por AAS), mas isso não resolve o problema real desse paciente, que é o uso irregular do remédio, e a aspirina protege muito menos contra AVC na fibrilação atrial do que a varfarina. O ensinamento certo aqui é sobre CONSISTÊNCIA: o paciente não precisa parar de comer folhas verdes, só precisa comer sempre a mesma quantidade, regularmente, tomando o remédio sempre do mesmo jeito, e acompanhando com o exame certo (atividade de protrombina/TP) — alternativa D.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -637,13 +637,13 @@
         "C": "Plasma Fresco e Sulfato de Protamina",
         "D": "Ácido Tranexâmico e Plasma Fresco"
       },
-      "answer": "A",
+      "answer": "C",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava A, mas plasma fresco e crioprecipitado não são o antídoto da heparina. O verdadeiro antídoto é o sulfato de protamina, que 'neutraliza' a heparina diretamente — por isso a alternativa C (que cita a protamina) é a correta entre as opções, mesmo o plasma fresco não sendo estritamente necessário na maioria dos casos.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -671,13 +671,13 @@
         "D": "3 – 2 – 1 – 2.",
         "E": "2 – 1 – 1 – 3."
       },
-      "answer": "C",
+      "answer": "D",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava C, mas a sequência certa fica: Warfarin = antagonista da vitamina K (3), Rivaroxabana = inibidor direto do fator Xa (2), Dabigatrana = inibidor direto da trombina (1), Apixabana = inibidor direto do fator Xa (2). Juntando na ordem pedida: 3 – 2 – 1 – 2, que é a alternativa D.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -705,13 +705,13 @@
         "D": "Proteína S;",
         "E": "Fator VIII;"
       },
-      "answer": "A",
+      "answer": "E",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava A ('Fator X'), mas o fator X É dependente de vitamina K. O fator que NÃO depende de vitamina K, entre os listados, é o Fator VIII (alternativa E) — os fatores dependentes de vitamina K pra guardar são: II, VII, IX, X, além das proteínas C e S.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -738,13 +738,13 @@
         "C": "Houve uma dosagem excessiva de cumarínico",
         "D": "Houve complicação do uso do cumarínico"
       },
-      "answer": "C",
+      "answer": "D",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava C ('dosagem excessiva'), mas isso é um mito comum — a necrose cutânea pela varfarina não é simplesmente 'dose alta demais'. É uma complicação rara e conhecida do uso do cumarínico, que acontece porque a proteína C (o 'freio' natural da coagulação) cai muito rápido no início do tratamento, formando pequenos coágulos que entopem vasinhos da pele, causando a necrose. Por isso a resposta certa é D: reconhecer isso como uma complicação conhecida do próprio remédio.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -771,13 +771,13 @@
         "C": "Inibidores diretos da trombina constituem-se em opção terapêutica.",
         "D": "Trombose (arterial ou venosa) é uma complicação frequente."
       },
-      "answer": "D",
+      "answer": "A",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava D, mas trombose SER uma complicação frequente da HIT é verdade (não é a frase errada). A frase realmente ERRADA é a A: o fondaparinux, ao contrário do que ela diz, é justamente uma das opções mais seguras e usadas no tratamento da HIT (por ter pouquíssima reação cruzada com o anticorpo causador), então não deveria ser evitado.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -805,7 +805,7 @@
         "D": "Fibrinogênio, VIII, IX e X.",
         "E": "VII, VIII, Fibrinogênio e IX."
       },
-      "answer": "B",
+      "answer": "C",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
@@ -838,7 +838,7 @@
         "C": "Administrar vitamina K.",
         "D": "Suspender a warfarina e observar."
       },
-      "answer": "D",
+      "answer": "C",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
@@ -919,7 +919,7 @@
         "D": "40 mg de sulfato de protamina.",
         "E": "50 mg de sulfato de protamina."
       },
-      "answer": "D",
+      "answer": "E",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
@@ -952,7 +952,7 @@
         "C": "Intrínseca e comum e deficiência de fatores VIII, IX e XI.",
         "D": "Intrínseca e comum e deficiência de fatores V, VI, VII e X."
       },
-      "answer": "D",
+      "answer": "C",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
@@ -1030,13 +1030,13 @@
         "C": "Seu mecanismo de ação se faz por inativação de vários fatores da cascata de coagulação, sendo os mais sensíveis a trombina e o fator Xa",
         "D": "Sua maior afinidade por proteínas plasmáticas lhe confere maior biodisponibilidade e maior meia-vida plasmática"
       },
-      "answer": "C",
+      "answer": "D",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava C (que na verdade está certa: a heparina não fracionada mesmo age inibindo principalmente a trombina e o fator Xa). A frase realmente ERRADA é a D: na real, é o CONTRÁRIO do que ela diz — a heparina não fracionada se liga MUITO às proteínas do plasma, e isso é justamente o que deixa o efeito dela IMPREVISÍVEL, com biodisponibilidade mais BAIXA e variável (não maior), sendo por isso que ela precisa de exames de sangue frequentes pra ajustar a dose, diferente da heparina de baixo peso molecular.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -1070,7 +1070,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A meta de RNI (INR) pra maioria dos pacientes em uso de varfarina, incluindo essa faixa de dose inicial de 5mg, fica entre 2,0 e 3,0 — nem baixo demais (sem proteção) nem alto demais (risco de sangramento).",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -1098,13 +1098,13 @@
         "D": "O uso de heparina é contra-indicado no primeiro e no terceiro trimestres da gravidez.",
         "E": "Os dicumarínicos podem apresentar efeito pró-coagulante no início do tratamento."
       },
-      "answer": "C",
+      "answer": "E",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava C, que hoje é considerado ultrapassado (não se recomenda mais 'dose de ataque' de varfarina, isso aumenta risco de complicação). A frase realmente correta é a E: os dicumarínicos (como a varfarina) podem sim ter um efeito PRÓ-coagulante logo no início do tratamento — a mesma ideia da primeira questão desse bloco, quando a proteína C cai antes dos fatores de coagulação, deixando o sangue temporariamente mais propenso a formar coágulos.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -1131,13 +1131,13 @@
         "C": "Manter enoxaparina em 1mg/kg de peso 2x/dia.",
         "D": "Trocar enoxaparina por heparina não fracionada."
       },
-      "answer": "A",
+      "answer": "B",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava A (trocar por varfarina), o que é perigoso aqui — esse paciente desenvolveu uma trombose NOVA mesmo estando com enoxaparina em dose terapêutica, e as plaquetas caíram bastante (300 mil pra 60 mil): é a cara da HIT (trombocitopenia induzida por heparina) com trombose associada. Iniciar varfarina agora, com plaquetas ainda baixas, pode causar necrose de pele/gangrena. A conduta certa é trocar por um anticoagulante que não seja da família heparina, como o fondaparinux — alternativa B.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -1164,13 +1164,13 @@
         "C": "O início do tratamento com warfarina requer associação com heparina ou heparinoides nos dois primeiros dias. Caso o RNI não atinja a faixa ideal, deve-se aumentar a dose da heparina até que ele alcance a faixa terapêutica desejada.",
         "D": "Os novos anticoagulantes orais, como rivaroxabana e dabigatrana, têm a grande vantagem de não necessitarem de controle do RNI ou TTPa, mas só são indicados para pacientes com prótese valvar metálica."
       },
-      "answer": "C",
+      "answer": "A",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava C, que contém um erro (não se 'aumenta a dose de heparina' esperando o RNI subir — isso não faz sentido, já que a heparina é ajustada por outro exame, o TTPa, e não pelo RNI). A frase correta é a A: a enoxaparina realmente não precisa de controle rotineiro de TTPa, e pode ser usada com ajuste de dose em quem tem função renal só um pouco reduzida (leve a moderada) — em disfunção renal grave, aí sim prefere-se trocar por heparina não fracionada.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -1198,13 +1198,13 @@
         "D": "Menor risco de trombocitopenia induzida pela heparina.",
         "E": "Efeito anticoagulante previsível."
       },
-      "answer": "A",
+      "answer": "B",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava A, mas 'melhor biodisponibilidade' é justamente uma vantagem real da heparina de baixo peso molecular (não é a resposta certa pra 'o que NÃO é vantagem'). A opção que descreve algo que NÃO é vantagem da heparina de baixo peso molecular é a B: 'clearance dose-dependente' — isso é uma característica chata da heparina NÃO fracionada (que se elimina de um jeito imprevisível dependendo da dose). A vantagem real da heparina de baixo peso molecular é justamente ter uma eliminação mais previsível, sem essa dependência complicada da dose.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -1232,13 +1232,13 @@
         "D": "Plasma fresco",
         "E": "Vitamina K 10mg IV + plasma fresco"
       },
-      "answer": "D",
+      "answer": "C",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava D (plasma fresco), mas repare que a questão não menciona NENHUM sinal de sangramento — só falta de ar (provavelmente do coração, já que ela tem hipertensão e fibrilação atrial). Sem sangramento, não faz sentido usar plasma fresco (que é reservado pra sangramentos importantes). O certo, com RNI tão alto (9,5) mesmo sem sangrar, é dar vitamina K por via oral — alternativa C — que é mais simples, segura e suficiente pra baixar o RNI aos poucos.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -1266,13 +1266,13 @@
         "D": "Apenas as heparinas de baixo peso molecular.",
         "E": "Nenhuma das anteriores."
       },
-      "answer": "C",
+      "answer": "A",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava C ('apenas a não fracionada'), mas hoje em dia a heparina de baixo peso molecular é, na verdade, a PREFERIDA na gravidez (mais previsível, mais segura, menos efeitos colaterais). A resposta certa é A: tanto a heparina não fracionada quanto a de baixo peso molecular podem ser usadas na gravidez, porque nenhuma das duas atravessa a placenta (diferente da varfarina, que é proibida, principalmente no primeiro trimestre).",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -1393,7 +1393,7 @@
         "D": "Trocar o anticoagulante oral por AAS 200 mg/dia uma semana antes do procedimento;",
         "E": "Trocar o anticoagulante oral por AAS 200 mg/dia e clopidogrel 75 mg/dia uma semana antes do procedimento."
       },
-      "answer": "B",
+      "answer": "C",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
@@ -1427,7 +1427,7 @@
         "D": "Hemograma.",
         "E": "Tempo de Tromboplastina Parcial (TTP)."
       },
-      "answer": "B",
+      "answer": "A",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
@@ -1505,7 +1505,7 @@
         "A": "Certo.",
         "B": "Errado."
       },
-      "answer": "A",
+      "answer": "B",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
@@ -1539,7 +1539,7 @@
         "D": "Rituximab.",
         "E": "Clopidogrel."
       },
-      "answer": "C",
+      "answer": "B",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
@@ -1607,7 +1607,7 @@
         "D": "É um processo mediado por anticorpos dirigidos contra neoantígenos de complexos heparina-PF4.",
         "E": "Acontece mais comumente em homens em comparação com mulheres, e nos pacientes clínicos em relação aos cirúrgicos."
       },
-      "answer": "A",
+      "answer": "D",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
@@ -1674,7 +1674,7 @@
         "C": "Suspensão da enoxaparina.",
         "D": "Suspensão da ranitidina."
       },
-      "answer": "B",
+      "answer": "C",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [
@@ -1682,7 +1682,7 @@
       ],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava B (trocar por varfarina), mas isso é perigoso nesse momento — esse paciente tem lesões necróticas na pele e as plaquetas caindo muito (80 mil para 40 mil) enquanto usa enoxaparina, um quadro bem sugestivo de HIT. Trocar direto por varfarina, com as plaquetas ainda baixas, pode piorar a necrose de pele. A conduta mais segura entre as opções é suspender a enoxaparina (removendo o agente causador), evitando também continuar ou trocar por outro tipo de heparina.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -1709,13 +1709,13 @@
         "C": "Associar prednisona.",
         "D": "Iniciar warfarina."
       },
-      "answer": "B",
+      "answer": "A",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava B (transfundir plaquetas), mas isso é perigoso na HIT — pode alimentar ainda mais a formação de coágulos! Esse paciente, com plaquetas caindo bastante (190 mil para 65 mil) enquanto usa heparina, tem HIT bem provável, mesmo sem sangramento ou trombose evidente ainda. Como o risco de trombose continua alto mesmo assim, a conduta certa é iniciar um anticoagulante alternativo à heparina, como o argatroban — alternativa A.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -1742,13 +1742,13 @@
         "C": "É transitória, pouco comum no início do tratamento e reversível com a substituição do agente anticoagulante.",
         "D": "É restrita ao uso de heparinas de baixo peso molecular."
       },
-      "answer": "C",
+      "answer": "B",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava C, mas dizer que é 'pouco comum no início do tratamento' é estranho, já que o início (dia 5 a 10) é justamente quando ela mais aparece. A frase correta é a B: a trombocitopenia induzida por heparina costuma aparecer entre o 5º e o 10º dia de tratamento, e acontece porque o sistema imune do paciente cria anticorpos do tipo IgG contra a heparina — um processo autoimune.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
@@ -1776,7 +1776,7 @@
         "D": "Suspender a heparina e não utilizar outro anticoagulante.",
         "E": "Suspender a heparina e iniciar argatroban"
       },
-      "answer": "B",
+      "answer": "E",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
@@ -1858,7 +1858,7 @@
         "C": "Complexo protrombínico.",
         "D": "Idarucizumabe."
       },
-      "answer": "B",
+      "answer": "D",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
@@ -1891,7 +1891,7 @@
         "C": "Manter a dose de warfarina 5 mg uma vez ao dia.",
         "D": "Suspender warfarina e iniciar AAS 100 mg uma vez ao dia."
       },
-      "answer": "C",
+      "answer": "A",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
@@ -1924,7 +1924,7 @@
         "C": "Enoxaparina.",
         "D": "Dabigatrana."
       },
-      "answer": "A",
+      "answer": "D",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
@@ -1957,13 +1957,13 @@
         "C": "Suspender o warfarina, realizar a amputação em 5 dias.",
         "D": "Suspender o warfarina, aplicar vitamina K e reservar plasma."
       },
-      "answer": "B",
+      "answer": "D",
       "source": "Z - Residência médica (Questões + Osler)__Residência Médica__Grupo 3 (Quarta-feira)__10 - Hematologia.apkg",
       "sourceLabel": "Anki · Hemostasia I - Conceitos Básicos e Anticoagulantes",
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Atenção: o gabarito antigo marcava B (sulfato de protamina), mas a protamina é o antídoto da HEPARINA, não da varfarina — não teria efeito nenhum aqui! Pra reverter rapidamente o efeito da varfarina antes de uma cirurgia urgente, o certo é aplicar vitamina K (que ajuda o fígado a voltar a produzir os fatores de coagulação) e deixar plasma reservado, caso seja preciso repor os fatores mais rápido durante a cirurgia — alternativa D.",
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",

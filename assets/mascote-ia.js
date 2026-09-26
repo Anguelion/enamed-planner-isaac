@@ -122,12 +122,12 @@
     root.className = 'ai-mascot-root';
     root.innerHTML = `
       <button class="ai-mascot-launcher" type="button" aria-label="Conversar com o mascote" aria-expanded="false">
-        <span class="ai-mascot-face" aria-hidden="true"><img src="assets/dr-sotero.png" alt=""></span>
+        <span class="ai-mascot-face" aria-hidden="true"><img src="assets/dr-sotero.png" alt="" loading="lazy" decoding="async"></span>
         <span class="ai-mascot-launcher-label">Tire uma dúvida</span>
       </button>
       <section class="ai-mascot-panel" role="dialog" aria-label="Mascote tutor" aria-hidden="true">
         <header class="ai-mascot-header">
-          <div class="ai-mascot-avatar" aria-hidden="true"><img src="assets/dr-sotero.png" alt=""></div>
+          <div class="ai-mascot-avatar" aria-hidden="true"><img src="assets/dr-sotero.png" alt="" loading="lazy" decoding="async"></div>
           <div><strong>Dr. Sotero</strong><small>Seu mascote tutor</small><span class="ai-mascot-usage" aria-live="polite"></span></div>
           <button class="ai-mascot-clear" type="button" title="Limpar conversa" aria-label="Limpar conversa">Limpar</button>
           <button class="ai-mascot-close" type="button" title="Fechar" aria-label="Fechar">×</button>

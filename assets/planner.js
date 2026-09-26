@@ -72,6 +72,7 @@ const LESSON_MIN_QUESTIONS = 10;
 const LESSON_MIN_FLASHCARDS = 10;
 const DAILY_QUESTION_TARGET = 20;
 const DAILY_FLASHCARD_TARGET = 30;
+const DAILY_STUDY_MINUTE_OPTIONS = [10, 25, 45, 90];
 const FLASHCARD_SPEED_TARGET_SECONDS = 30;
 const FLASHCARD_SPEED_WARNING_SECONDS = 15;
 const STUDY_DAY_START_HOUR = 5;
@@ -127,7 +128,7 @@ ensureSimTopics();
 ensureFeynman();
 ensureQuestionProgress();
 const DEFAULT_SCHEDULE_WEEK_ANCHOR = state.reschedule?.restartDate > studyDateKey() ? state.reschedule.restartDate : studyDateKey();
-let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', priority: 'Todas', scheduleBlock: 'Atual', scheduleBlockPinned: false, scheduleBlockScrollLeft: 0, scheduleSelectedId:'', scheduleDay: '', scheduleWeekAnchor: DEFAULT_SCHEDULE_WEEK_ANCHOR, refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', weeklyWeekOffset:0, areaChartMetric:'hours', areaChartWeekOffset:0, qBrowseMode:'block', qSpecialty:'Todas', qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, qFocusQuestionIds: [], justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialFocusMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', materialsSection:'apostila', materialSpecialty:'Todos', materialGlobalSearch:'', cadernoSearch: '', cadernoArea: 'Todas', cadernoEditId: '', flashcardView: 'overview', flashcardFilter: 'Aprendendo', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', flashcardFocusMode: false, flashcardFocusPaused: false, flashcardSpeedMode: false, flashcardCardStartedAt: 0, flashcardSpeedCardId: '', revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionTab:'prescricao', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
+let ui = { tab: INITIAL_ROUTE.tab || INITIAL_PARAMS.get('tab') || sessionStorage.getItem(UI_TAB_KEY) || 'painel', search: '', area: 'Todas', status: 'Todos', priority: 'Todas', scheduleBlock: 'Atual', scheduleBlockPinned: false, scheduleBlockScrollLeft: 0, scheduleSelectedId:'', scheduleDay: '', scheduleWeekAnchor: DEFAULT_SCHEDULE_WEEK_ANCHOR, refDate: studyDateKey(), analysisDate: studyDateKey(), weeklyMetric:'hours', weeklyWeekOffset:0, areaChartMetric:'hours', areaChartWeekOffset:0, qBrowseMode:'block', qSpecialty:'Todas', qBlock: 'Todos', qSource: 'Todas', qTopic: 'Todos', qStatus: 'Não respondidas', qSearch: '', qIndex: 0, qQuestionId: INITIAL_ROUTE.questionId || '', qRouteRestorePending: Boolean(INITIAL_ROUTE.questionId), qFocusTarget: 0, qFocusQuestionIds: [], justAnsweredId: '', highlightColor: 'yellow', suppressAnswerClick: false, highlightGestureUntil: 0, draftAnswers: {}, keyboardConfirmQuestion: '', keyboardConfirmUntil: 0, questionTimerOpen: false, materialBlock: 'Todos', materialScheduleId: '', materialSearch: '', materialDocId: '', materialEditMode:false, materialFocusMode:false, materialEditScope:'full', materialSectionIndex:0, materialHighlightColor:'yellow', materialsSection:'apostila', materialSpecialty:'Todos', materialGlobalSearch:'', cadernoSearch: '', cadernoArea: 'Todas', cadernoEditId: '', cadernoSessionIds: [], cadernoSessionIndex: 0, cadernoSessionAnswer: '', cadernoSessionConfidence: 0, cadernoSessionRevealed: false, flashcardView: 'overview', flashcardFilter: 'Aprendendo', flashcardArea: 'Todas', flashcardSubarea: 'Todas', flashcardDeck: '', flashcardIndex: 0, flashcardSessionDone: false, flashcardShowLibrary: false, flashcardNewCardType: 'basic', flashcardFocusMode: false, flashcardFocusPaused: false, flashcardSpeedMode: false, flashcardCardStartedAt: 0, flashcardSpeedCardId: '', revealedCards: {}, activeSimRunId: INITIAL_ROUTE.attemptId || '', simulationLibraryOpen: !INITIAL_ROUTE.attemptId, personalTaskDate: studyDateKey(), personalTaskFilter:'all', personalTaskEditorMode:null, personalTaskEditorTrigger:'', videoLessonId:'', videoSourceId:INITIAL_ROUTE.videoId || '', prescriptionTab:'prescricao', prescriptionCaseId:'', prescriptionScreen:'home', prescriptionReviewOpen:false, prescriptionPen:'pen', videoFocusMode: localStorage.getItem(VIDEO_FOCUS_KEY) === '1', videoSourceMode: INITIAL_PARAMS.get('videoSource') || localStorage.getItem(VIDEO_SOURCE_KEY) || 'auto', videoPlaybackRate: Number(localStorage.getItem(VIDEO_RATE_KEY)) || 1 };
 ui.legacyImportPreview = null;
 ui.scheduleBlockFocusPending ||= ui.scheduleBlock||'Atual';
 ui.scheduleWeekScrollLeft = n(ui.scheduleWeekScrollLeft);
@@ -231,19 +232,24 @@ let questionTagsHidden = localStorage.getItem(QUESTION_TAGS_HIDDEN_KEY) !== '0';
 const views = [
   ['painel','Dashboard','dashboard'],
   ['radar-saude','Radar Saúde','reading'],
-  ['cronograma','Missão','mission'], ['historico','Histórico','history'], ['areas','Áreas','areas'], ['analise','Análise','analysis'],
-  ['aulas','Aulas','video'], ['questoes','Questões','question'], ['simulados','Simulados','simulation'], ['caderno-erros','Caderno de erros','caderno'], ['flashcards','Flashcards','flashcard'], ['materiais','Materiais','materials'],
-  ['prescricao','Prescrição','prescription'], ['anatomia','Anatomia','xray'], ['semiologia','Semiologia','medical'], ['ecg','ECG','heart'], ['radiografia','Radiografia','xray'], ['feynman','Feynman','feynman'],
+  ['cronograma','Missão','mission'], ['aulas','Aulas','video'], ['materiais','Materiais','materials'],
+  ['questoes','Questões','question'], ['simulados','Simulados','simulation'], ['feynman','Feynman','feynman'],
+  ['caderno-erros','Caderno de erros','caderno'], ['flashcards','Flashcards','flashcard'],
+  ['prescricao','Prescrição','prescription'], ['anatomia','Anatomia','xray'], ['semiologia','Semiologia','medical'], ['ecg','ECG','heart'], ['radiografia','Radiografia','xray'],
+  ['analise','Análise','analysis'], ['areas','Áreas','areas'], ['historico','Histórico','history'],
   ['importar-questoes','Adicionar questões','upload'],
   ['ferramentas','Ferramentas','settings']
 ];
 const VIEW_GROUPS = {
-  cronograma:'Meus estudos', historico:'Meus estudos', areas:'Meus estudos', analise:'Meus estudos',
-  aulas:'Conteúdo', questoes:'Conteúdo', simulados:'Conteúdo', 'caderno-erros':'Conteúdo', flashcards:'Conteúdo', materiais:'Conteúdo',
-  prescricao:'Habilidade', anatomia:'Habilidade', semiologia:'Habilidade', ecg:'Habilidade', radiografia:'Habilidade', feynman:'Habilidade',
-  'importar-questoes':'Outros',
-  ferramentas:'Configuração'
+  painel:'Hoje', 'radar-saude':'Hoje',
+  cronograma:'Aprender', aulas:'Aprender', materiais:'Aprender',
+  questoes:'Praticar', simulados:'Praticar', feynman:'Praticar',
+  'caderno-erros':'Revisar', flashcards:'Revisar',
+  prescricao:'Habilidades', anatomia:'Habilidades', semiologia:'Habilidades', ecg:'Habilidades', radiografia:'Habilidades',
+  analise:'Progresso', areas:'Progresso', historico:'Progresso',
+  'importar-questoes':'Mais', ferramentas:'Mais'
 };
+const MOBILE_PRIMARY_VIEWS = new Set(['painel','cronograma','questoes','caderno-erros','flashcards']);
 applyTheme(localStorage.getItem(THEME_KEY) || 'light');
 // Toda gravação local passa por aqui. Antes, um localStorage cheio fazia o
 // setItem lançar QuotaExceededError no meio de persist(): o restante do
@@ -636,6 +642,8 @@ window.addEventListener('beforeunload', () => { if(saveStateOnlyTimer) flushSave
 
 function ensureQuestionProgress() {
   if(!state.questionProgress || typeof state.questionProgress !== 'object') state.questionProgress = {};
+  if(!Array.isArray(state.questionReviewHistory)) state.questionReviewHistory = [];
+  state.questionReviewHistory = state.questionReviewHistory.filter(entry=>entry?.questionId && entry?.reviewedAt).slice(-500);
   if(!state.questionProgressDeleted || typeof state.questionProgressDeleted !== 'object') state.questionProgressDeleted = {};
   if(!state.questionEdits || typeof state.questionEdits !== 'object') state.questionEdits = {};
   if(!state.questionDataRepairs || typeof state.questionDataRepairs !== 'object') state.questionDataRepairs = {};
@@ -677,6 +685,9 @@ function ensureQuestionProgress() {
   compactFlashcardReviewLogs();
   if(!state.importedQuestionTags || typeof state.importedQuestionTags !== 'object') state.importedQuestionTags = {};
   if(!state.dashboardSettings || typeof state.dashboardSettings !== 'object') state.dashboardSettings = {};
+  state.dashboardSettings.studyMinutes = DAILY_STUDY_MINUTE_OPTIONS.includes(n(state.dashboardSettings.studyMinutes))
+    ? n(state.dashboardSettings.studyMinutes)
+    : 25;
   if(!state.casoDoDia || typeof state.casoDoDia !== 'object') state.casoDoDia = {};
   if(!state.videoPlayer || typeof state.videoPlayer !== 'object') state.videoPlayer = {};
   if(!state.videoPlayer.bookmarks || typeof state.videoPlayer.bookmarks !== 'object') state.videoPlayer.bookmarks = {};
@@ -3924,29 +3935,27 @@ function renderScheduleDayPicker() {
   }).length;
   return `<div class="mission-days"><div class="mission-days-head"><div><h3>Aulas por dia</h3><span>Escolha uma data para ver somente as aulas daquele dia</span></div><button class="tiny-btn mission-day-all ${ui.scheduleDay?'':'active'}" type="button" data-schedule-day="" aria-pressed="${!ui.scheduleDay}">Todas as aulas</button></div><div class="mission-week"><button class="mission-week-nav" type="button" data-schedule-week="-7" aria-label="Semana anterior">${iconSvg('previous',{weight:'regular'})}</button>${days.map((day,index)=>{const count=countForDay(day);const selected=ui.scheduleDay===day;const isToday=day===today;return `<button class="mission-day ${selected?'active':''} ${isToday?'today':''}" type="button" data-schedule-day="${day}" aria-pressed="${selected}" aria-label="${labels[index]}, ${fmtDate(day)}: ${count} ${count===1?'aula':'aulas'}"><span>${labels[index]}</span><strong>${day.slice(8,10)}</strong><small>${isToday?'Hoje':`${count} ${count===1?'aula':'aulas'}`}</small></button>`;}).join('')}<button class="mission-week-nav" type="button" data-schedule-week="7" aria-label="Próxima semana">${iconSvg('next',{weight:'regular'})}</button><button class="tiny-btn mission-today-button" type="button" data-schedule-today>${iconSvg('calendar',{weight:'regular'})}<span>Ir para hoje</span></button></div></div>`;
 }
-function dayRoadItems(date) {
-  const lessons = state.schedule.filter(x => x.date === date).sort(byDate);
-  const log = getDayLog(date);
-  const dayVideoLessons = [...new Map(lessons.flatMap(item => videoLessonsForSchedule(item)).map(lesson => [lesson.id, lesson])).values()];
-  const dayVideoFiles = dayVideoLessons.flatMap(lesson => lesson.videos || []);
-  const dayVideoProgress = dayVideoLessons.reduce((total, lesson) => {
-    const progress = videoLessonProgress(lesson);
-    total.done += progress.done;
-    total.target += progress.total;
-    return total;
-  }, { done:0, target:0 });
-  const videoTarget = Math.max(1, dayVideoProgress.target || dayVideoLessons.length || lessons.length || 1);
-  const videosDone = Math.min(videoTarget, dayVideoProgress.done);
-  const questionTarget = DAILY_QUESTION_TARGET;
-  const flashcardTarget = DAILY_FLASHCARD_TARGET;
-  const lessonLabel = lessons.length
-    ? lessons.slice(0,2).map(item => item.topic).join(' + ') + (lessons.length > 2 ? ` +${lessons.length - 2}` : '')
-    : 'Abrir videoaula do dia';
-  return [
-    { id: 'daily-video', scheduleId: lessons[0]?.id || '', type: 'Videoaulas', icon: 'video', label: lessonLabel, done: videosDone >= videoTarget, progress: videosDone, target: videoTarget, unit: videoTarget === 1 ? 'aula' : 'aulas', foot: lessons.length ? `Bloco ${lessons[0].block} · ${dayVideoFiles.length ? `${dayVideoFiles.length} arquivos disponíveis` : lessons.map(item=>item.area).filter(Boolean).slice(0,2).join(' / ')}` : 'Aulas programadas para hoje' },
-    { id: 'daily-questions', scheduleId: lessons[0]?.id || '', type: 'Questões', icon: 'question', label: `${questionTarget} questões`, done: n(log.questions) >= questionTarget, progress: n(log.questions), target: questionTarget, unit: 'questões', foot: n(log.correct)+n(log.wrong) ? `${pct(dayScore(log))} de aproveitamento` : 'Meta diária' },
-    { id: 'daily-flashcards', scheduleId: lessons[0]?.id || '', type: 'Flashcards', icon: 'flashcard', label: `${flashcardTarget} flashcards`, done: n(log.flashcards) >= flashcardTarget, progress: n(log.flashcards), target: flashcardTarget, unit: 'flashcards', foot: 'Meta diária de revisão' }
-  ];
+function dailyDueErrorProgress(date=studyDateKey()) {
+  return Object.entries(state.questionProgress || {})
+    .filter(([,progress]) => progress?.answeredAt && !progress.correct && progress.nextReview && progress.nextReview <= date)
+    .sort(([,a],[,b]) => n(b.confidence)-n(a.confidence) || String(a.nextReview).localeCompare(String(b.nextReview)));
+}
+function dailyStudyTargets(date) {
+  const log=getDayLog(date);
+  const minutes=DAILY_STUDY_MINUTE_OPTIONS.includes(n(state.dashboardSettings?.studyMinutes)) ? n(state.dashboardSettings.studyMinutes) : 25;
+  const mood=n(log.mood) || 2;
+  const base=minutes<=10 ? {questions:3,flashcards:5,videos:0,errors:2}
+    : minutes<=25 ? {questions:6,flashcards:10,videos:0,errors:4}
+      : minutes<=45 ? {questions:10,flashcards:15,videos:1,errors:6}
+        : {questions:20,flashcards:30,videos:1,errors:10};
+  const factor=mood === 1 ? .75 : mood === 3 ? 1.15 : 1;
+  const dueErrors=dailyDueErrorProgress(date).length;
+  const dueFlashcards=flashcardActiveRecords().filter(card=>isFlashcardDue(card,date)).length;
+  const errors=Math.min(dueErrors,Math.max(1,Math.round(base.errors*factor)));
+  const questions=Math.max(2,Math.round(base.questions*factor)-Math.min(errors,Math.ceil(base.questions/2)));
+  const flashcards=Math.max(4,Math.min(dueFlashcards || Math.round(base.flashcards*factor),Math.round(base.flashcards*factor)));
+  const videos=mood===1 && (dueErrors || dueFlashcards) ? 0 : base.videos;
+  return {minutes,mood,questions,flashcards,videos,errors,dueErrors,dueFlashcards};
 }
 function dailyStudyCandidates(date) {
   const today = state.schedule.filter(item => item.date === date).sort(byDate);
@@ -3954,56 +3963,69 @@ function dailyStudyCandidates(date) {
     .filter(item => item.date && item.date <= date && statusOf(item) !== 'Concluído')
     .sort(byPendingBlockOrder);
   const ordered = [...today, ...due.filter(item => !today.some(current => current.id === item.id))];
+  const weak = [...ordered].sort((a,b) => {
+    const aStats=questionStatsForSchedule(a.id);
+    const bStats=questionStatsForSchedule(b.id);
+    const aRisk=(aStats.done>=2 ? 1-aStats.rate : 0)+(a.priority==='Alta'?.2:0)+(a.date<date?.15:0);
+    const bRisk=(bStats.done>=2 ? 1-bStats.rate : 0)+(b.priority==='Alta'?.2:0)+(b.date<date?.15:0);
+    return bRisk-aRisk || byPendingBlockOrder(a,b);
+  });
   const withVideos = ordered.filter(item => videoSourcesForSchedule(item).length);
   const video = withVideos.find(item => videoSourcesForSchedule(item).some(source => !state.videoPlayer.watched[source.id])) || withVideos[0];
-  const questions = ordered.find(item => Math.max(0, lessonQuestionTarget(item) - completedQuestions(item)) > 0) || ordered[0];
-  const flashcards = ordered.find(item => Math.max(0, lessonFlashcardTarget(item) - completedFlashcards(item)) > 0) || ordered[0];
+  const questions = weak.find(item => Math.max(0, lessonQuestionTarget(item) - completedQuestions(item)) > 0) || weak[0];
+  const dueCardScheduleIds=new Set(flashcardActiveRecords().filter(card=>isFlashcardDue(card,date)).map(card=>card.scheduleId).filter(Boolean));
+  const flashcards = ordered.find(item => dueCardScheduleIds.has(item.id)) || ordered.find(item => Math.max(0, lessonFlashcardTarget(item) - completedFlashcards(item)) > 0) || ordered[0];
   return { video, questions, flashcards };
+}
+function dayRoadItems(date) {
+  const log = getDayLog(date);
+  const targets=dailyStudyTargets(date);
+  const candidates=dailyStudyCandidates(date);
+  const videosDone=candidates.video ? videoLessonProgress(videoLessonsForSchedule(candidates.video)[0] || {videos:[]}).done : 0;
+  const errorReviews=Object.values(state.questionProgress || {}).filter(progress=>progress?.lastReviewAt && studyDateKey(progress.lastReviewAt)===date).length;
+  const items=[];
+  if(targets.errors) items.push({ id:'daily-errors', scheduleId:'', type:'Erros prioritários', icon:'caderno', label:`${targets.errors} revisões ativas`, done:errorReviews>=targets.errors, progress:errorReviews, target:targets.errors, unit:'erros', foot:`${targets.dueErrors} vencidos · alta confiança primeiro`, priority:100 });
+  items.push({ id:'daily-questions', scheduleId:candidates.questions?.id || '', type:'Questões', icon:'question', label:`${targets.questions} questões`, done:n(log.questions)>=targets.questions, progress:n(log.questions), target:targets.questions, unit:'questões', foot:candidates.questions ? `${candidates.questions.topic} · ${candidates.questions.area}` : 'Treino geral de questões', priority:targets.errors?70:90 });
+  items.push({ id:'daily-flashcards', scheduleId:candidates.flashcards?.id || '', type:'Flashcards', icon:'flashcard', label:`${targets.flashcards} flashcards`, done:n(log.flashcards)>=targets.flashcards, progress:n(log.flashcards), target:targets.flashcards, unit:'flashcards', foot:targets.dueFlashcards ? `${targets.dueFlashcards} revisões devidas` : (candidates.flashcards?.topic || 'Revisão espaçada'), priority:targets.dueFlashcards?85:60 });
+  if(targets.videos && candidates.video) items.push({ id:'daily-video', scheduleId:candidates.video.id, type:'Videoaula', icon:'video', label:candidates.video.topic, done:videosDone>=targets.videos, progress:videosDone, target:targets.videos, unit:targets.videos===1?'aula':'aulas', foot:`Bloco ${candidates.video.block} · ${candidates.video.area}`, priority:45 });
+  return items.sort((a,b)=>b.priority-a.priority).slice(0,3);
 }
 function runDailyStudyChoice(button, date) {
   if(!button || button.dataset.rolling === '1') return;
-  const candidates = dailyStudyCandidates(date);
-  const available = ['video', 'questions', 'flashcards'].filter(kind => candidates[kind]);
-  if(!available.length) {
-    showStudyToast('Ainda não há uma atividade disponível para sortear.');
-    return;
-  }
+  const item=dayRoadItems(date).find(step=>!step.done) || dayRoadItems(date)[0];
+  if(!item) { showStudyToast('Tudo concluído por hoje. Excelente trabalho.'); return; }
   button.dataset.rolling = '1';
   button.disabled = true;
-  button.classList.add('is-rolling');
-  const labels = { video:'Videoaula', questions:'Questões', flashcards:'Flashcards' };
-  let tick = 0;
-  const roll = () => {
-    const kind = available[tick % available.length];
-    button.innerHTML = `${iconSvg('dice')}<span>${labels[kind]}...</span>`;
-    tick += 1;
-  };
-  roll();
-  const interval = setInterval(roll, 160);
+  button.classList.add('is-starting');
+  button.innerHTML = `${iconSvg('next')}<span>Preparando ${escapeHtml(item.type.toLowerCase())}…</span>`;
   setTimeout(() => {
-    clearInterval(interval);
-    const kind = available[Math.floor(Math.random() * available.length)];
-    const item = candidates[kind];
-    button.innerHTML = `${iconSvg('dice')}<span>${labels[kind]} escolhidas</span>`;
     button.dataset.rolling = '0';
     button.disabled = false;
-    button.classList.remove('is-rolling');
-    showStudyToast(`${labels[kind]} escolhidas. Abrindo seu próximo passo.`);
-    if(kind === 'video') openVideosForSchedule(item.id);
-    else if(kind === 'questions') openQuestionsForSchedule(item.id);
-    else openFlashcardsForSchedule(item.id);
-  }, 2000);
+    button.classList.remove('is-starting');
+    if(item.id === 'daily-errors') { startCadernoReviewSession(); return; }
+    if(item.id === 'daily-video' && item.scheduleId) { openVideosForSchedule(item.scheduleId); return; }
+    if(item.id === 'daily-questions' && item.scheduleId) { openQuestionsForSchedule(item.scheduleId); return; }
+    if(item.id === 'daily-flashcards') {
+      const started=startFlashcardRecoveryTrail();
+      if(started) { navigateToTab('flashcards'); return; }
+      if(item.scheduleId) { openFlashcardsForSchedule(item.scheduleId); return; }
+      navigateToTab('flashcards');
+    }
+  }, 260);
 }
 function renderDailyRoad(date) {
   const items = dayRoadItems(date);
+  const targets=dailyStudyTargets(date);
   const completedCount = items.filter(item => item.done).length;
   const totalProgress = items.reduce((total,item) => total + clamp(n(item.progress) / Math.max(n(item.target),1)),0) / Math.max(items.length,1);
-  return `<div class="dashboard-road"><div class="daily-road-header"><div class="daily-road-heading"><span class="eyebrow">Seu plano de estudo</span><h2>Trilha do dia</h2><div class="muted">Três passos objetivos para manter o ritmo de hoje.</div></div><div class="daily-road-overview"><div class="daily-road-overview-copy"><span>Progresso de hoje</span><strong>${completedCount}<small>/${items.length} concluídos</small></strong></div><div class="daily-road-overall-progress" role="progressbar" aria-label="Progresso da trilha do dia" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${Math.round(totalProgress*100)}"><span style="width:${pct(totalProgress)}"></span></div></div><div class="daily-road-tools"><button class="icon-btn daily-random-choice" id="dailyRandomChoice" type="button" title="Deixe-me escolher" aria-label="Deixe-me escolher">${iconSvg('dice')}<span>Deixe-me escolher</span></button></div></div><div class="road-path">${items.map((item,index) => {
+  const primary=items.find(item=>!item.done) || items[0];
+  const moodReason=targets.mood===1?'ritmo leve':targets.mood===3?'ritmo intenso':'ritmo equilibrado';
+  return `<div class="dashboard-road"><div class="daily-prescription"><div><span class="eyebrow">Próxima melhor ação</span><h2>${escapeHtml(primary?.type || 'Plano concluído')}</h2><p>${primary ? `${escapeHtml(primary.label)} · ${escapeHtml(moodReason)} para ${targets.minutes} minutos.` : 'Você concluiu a sessão planejada.'}</p></div><button class="icon-btn primary daily-random-choice" id="dailyRandomChoice" type="button" ${primary?'':'disabled'}>${iconSvg('next')}<span>${primary?'Começar sessão':'Concluído'}</span></button></div><div class="daily-road-header"><div class="daily-road-heading"><span class="eyebrow">Seu plano adaptativo</span><h2>Trilha do dia</h2><div class="muted">Prioridade calculada por tempo, energia, erros e revisões vencidas.</div></div><div class="daily-road-overview"><div class="daily-road-overview-copy"><span>Progresso de hoje</span><strong>${completedCount}<small>/${items.length} concluídos</small></strong></div><div class="daily-road-overall-progress" role="progressbar" aria-label="Progresso da trilha do dia" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${Math.round(totalProgress*100)}"><span style="width:${pct(totalProgress)}"></span></div></div></div><div class="road-path">${items.map((item,index) => {
     const ratio = clamp(n(item.progress) / Math.max(n(item.target), 1));
     const partial = !item.done && n(item.progress) > 0;
     const statusText = item.done ? 'Concluído' : partial ? 'Em andamento' : 'Falta';
     const statusClass = item.done ? 'complete' : partial ? 'partial' : 'missing';
-    const actionText = item.id === 'daily-video' ? 'Abrir aulas' : item.id === 'daily-questions' ? 'Fazer questões' : 'Revisar cards';
+    const actionText = item.id === 'daily-errors' ? 'Revisar erros' : item.id === 'daily-video' ? 'Abrir aulas' : item.id === 'daily-questions' ? 'Fazer questões' : 'Revisar cards';
     return `<article class="road-step road-step-${index+1} ${statusClass}" style="--road-progress:${pct(ratio)}"><div class="road-step-accent" aria-hidden="true"></div><div class="road-step-head"><div class="road-icon">${iconSvg(item.icon)}</div><div class="road-step-title"><span>Passo ${String(index+1).padStart(2,'0')}</span><strong>${escapeHtml(item.type)}</strong></div><span class="road-status"><i></i>${statusText}</span></div><div class="road-content"><div class="road-label">${escapeHtml(item.label)}</div><div class="road-sub muted">${escapeHtml(item.foot)}</div></div><div class="road-progress"><div class="road-progress-row"><span>${Math.round(n(item.progress))} de ${Math.round(n(item.target))} ${escapeHtml(item.unit)}</span><strong>${pct(ratio)}</strong></div><div class="progress" role="progressbar" aria-label="Progresso em ${escapeAttr(item.type)}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${Math.round(ratio*100)}"><span style="width:${pct(ratio)}"></span></div></div><div class="road-actions"><button class="tiny-btn" data-road-step="${escapeAttr(item.id)}" data-road-schedule="${escapeAttr(item.scheduleId || '')}"><span>${actionText}</span>${iconSvg('next')}</button></div></article>`;
   }).join('')}</div></div>`;
 }
@@ -4242,24 +4264,46 @@ function renderTabs() {
   const tabs=document.getElementById('tabs');
   if(tabs && tabs.dataset.plannerTabsReady!=='1') {
     let lastGroup;
-    tabs.innerHTML = views.map(([id,label,icon]) => {
+    const regularTabs=views.map(([id,label,icon]) => {
       const group = VIEW_GROUPS[id] || null;
       const header = group && group !== lastGroup ? `<div class="tab-group-label">${escapeHtml(group)}</div>` : '';
       lastGroup = group;
-      return `${header}<button class="tab tab-${id.replace(/[^a-z0-9]+/gi,'-')}" data-tab="${id}" title="${escapeAttr(label)}"><span class="tab-icon">${iconSvg(icon)}</span><span class="tab-label">${label}</span></button>`;
+      return `${header}<button class="tab tab-${id.replace(/[^a-z0-9]+/gi,'-')} ${MOBILE_PRIMARY_VIEWS.has(id)?'mobile-primary':''}" data-tab="${id}" title="${escapeAttr(label)}"><span class="tab-icon">${iconSvg(icon)}</span><span class="tab-label">${label}</span></button>`;
     }).join('');
+    const moreItems=views.filter(([id])=>!MOBILE_PRIMARY_VIEWS.has(id)).map(([id,label,icon])=>`<button class="mobile-more-item" data-tab="${id}"><span>${iconSvg(icon)}</span><span><strong>${escapeHtml(label)}</strong><small>${escapeHtml(VIEW_GROUPS[id] || 'Mais')}</small></span></button>`).join('');
+    tabs.innerHTML = `${regularTabs}<button class="tab tab-more mobile-primary" id="mobileTabsMore" type="button" title="Mais áreas" aria-label="Abrir mais áreas" aria-expanded="false"><span class="tab-icon">${iconSvg('settings')}</span><span class="tab-label">Mais</span></button><div class="mobile-more-menu" id="mobileMoreMenu" hidden><div class="mobile-more-head"><strong>Todos os espaços</strong><button type="button" id="mobileMoreClose" aria-label="Fechar">×</button></div><div class="mobile-more-grid">${moreItems}</div></div>`;
     tabs.addEventListener('click',event=>{
-      const button=event.target.closest?.('.tab[data-tab]');
-      if(button && tabs.contains(button)) navigateToTab(button.dataset.tab);
+      const more=event.target.closest?.('#mobileTabsMore');
+      if(more) {
+        const menu=document.getElementById('mobileMoreMenu');
+        const opening=Boolean(menu?.hidden);
+        if(menu) menu.hidden=!opening;
+        more.setAttribute('aria-expanded',String(opening));
+        return;
+      }
+      if(event.target.closest?.('#mobileMoreClose')) {
+        const menu=document.getElementById('mobileMoreMenu');
+        if(menu) menu.hidden=true;
+        document.getElementById('mobileTabsMore')?.setAttribute('aria-expanded','false');
+        return;
+      }
+      const button=event.target.closest?.('[data-tab]');
+      if(button && tabs.contains(button)) {
+        const menu=document.getElementById('mobileMoreMenu');
+        if(menu) menu.hidden=true;
+        document.getElementById('mobileTabsMore')?.setAttribute('aria-expanded','false');
+        navigateToTab(button.dataset.tab);
+      }
     });
     tabs.dataset.plannerTabsReady='1';
   }
-  tabs?.querySelectorAll('.tab[data-tab]').forEach(button => {
+  tabs?.querySelectorAll('[data-tab]').forEach(button => {
     const active=button.dataset.tab===ui.tab;
     button.classList.toggle('active',active);
     if(active) button.setAttribute('aria-current','page');
     else button.removeAttribute('aria-current');
   });
+  tabs?.querySelector('#mobileTabsMore')?.classList.toggle('active',!MOBILE_PRIMARY_VIEWS.has(ui.tab));
   document.querySelectorAll('.view').forEach(v => v.classList.toggle('active', v.id===ui.tab));
   if(window.matchMedia('(max-width: 1180px)').matches) {
     requestAnimationFrame(() => {
@@ -4305,7 +4349,8 @@ function iconSvg(name,options={}) {
   return window.ENAMED_ICONS?.AppIcon(name,options) || '';
 }
 function renderDashboardMood(log) {
-  return `<section class="card dashboard-today-focus"><div class="dashboard-mood-copy"><div><span class="eyebrow">Hoje</span><h2>Como você está?</h2></div><span class="muted">Defina seu ritmo</span></div><div class="mood-row">${[[3,'🙂','Motivado'],[2,'😐','Mais ou menos'],[1,'😴','Lento']].map(([value,face,label]) => `<button class="mood-btn ${n(log.mood)===value?'active':''}" data-dashboard-mood="${value}" aria-pressed="${n(log.mood)===value}"><span>${face}</span><small>${label}</small></button>`).join('')}</div>${renderUpcomingReviews({compact:true})}</section>`;
+  const selectedMinutes=DAILY_STUDY_MINUTE_OPTIONS.includes(n(state.dashboardSettings?.studyMinutes)) ? n(state.dashboardSettings.studyMinutes) : 25;
+  return `<section class="card dashboard-today-focus"><div class="dashboard-mood-copy"><div><span class="eyebrow">Hoje</span><h2>Como você está?</h2></div><span class="muted">Ajuste a carga ao dia real</span></div><div class="mood-row">${[[3,'🙂','Motivado'],[2,'😐','Mais ou menos'],[1,'😴','Lento']].map(([value,face,label]) => `<button class="mood-btn ${n(log.mood)===value?'active':''}" data-dashboard-mood="${value}" aria-pressed="${n(log.mood)===value}"><span>${face}</span><small>${label}</small></button>`).join('')}</div><div class="daily-time-picker"><span>Quanto tempo você tem?</span><div role="group" aria-label="Tempo disponível para estudar">${DAILY_STUDY_MINUTE_OPTIONS.map(minutes=>`<button class="tiny-btn ${selectedMinutes===minutes?'active':''}" data-study-minutes="${minutes}" aria-pressed="${selectedMinutes===minutes}">${minutes} min</button>`).join('')}</div></div>${renderUpcomingReviews({compact:true})}</section>`;
 }
 function formatDailyStudyTime(minutes) {
   const total = Math.max(0, Math.round(n(minutes)));
@@ -4750,6 +4795,95 @@ function exportCadernoErrosCsv() {
   link.click();
   URL.revokeObjectURL(link.href);
 }
+function cadernoDueEntries() {
+  const today=studyDateKey();
+  return cadernoErrosEntries()
+    .filter(entry=>entry.progress.nextReview && entry.progress.nextReview<=today)
+    .sort((a,b)=>n(b.progress.confidence)-n(a.progress.confidence) || String(a.progress.nextReview).localeCompare(String(b.progress.nextReview)) || Date.parse(a.progress.updatedAt||0)-Date.parse(b.progress.updatedAt||0));
+}
+function resetCadernoReviewStep() {
+  ui.cadernoSessionAnswer='';
+  ui.cadernoSessionConfidence=0;
+  ui.cadernoSessionRevealed=false;
+}
+async function startCadernoReviewSession() {
+  if(!questionBankCatalogStatus().complete) await loadFullQuestionBank();
+  const ids=cadernoDueEntries().map(entry=>entry.id);
+  if(!ids.length) {
+    showStudyToast('Nenhuma revisão de erro está vencida agora.');
+    if(ui.tab!=='caderno-erros') navigateToTab('caderno-erros');
+    return;
+  }
+  ui.cadernoSessionIds=ids;
+  ui.cadernoSessionIndex=0;
+  resetCadernoReviewStep();
+  if(ui.tab==='caderno-erros') renderCadernoErros();
+  else navigateToTab('caderno-erros');
+}
+function stopCadernoReviewSession() {
+  ui.cadernoSessionIds=[];
+  ui.cadernoSessionIndex=0;
+  resetCadernoReviewStep();
+  renderCadernoErros();
+}
+function activeCadernoReviewEntry() {
+  const id=ui.cadernoSessionIds?.[ui.cadernoSessionIndex];
+  return id ? cadernoErrosEntries().find(entry=>entry.id===id) || null : null;
+}
+function renderCadernoReviewSession(entry) {
+  const {question,progress}=entry;
+  const revealed=Boolean(ui.cadernoSessionRevealed);
+  const selected=ui.cadernoSessionAnswer;
+  const correct=revealed && selected===question.answer;
+  const options=Object.entries(question.options || {}).map(([letter,text])=>{
+    const className=revealed ? (letter===question.answer?'correct':letter===selected?'wrong':'') : letter===selected?'selected':'';
+    return `<button class="caderno-review-option ${className}" type="button" data-caderno-review-answer="${escapeAttr(letter)}" ${revealed?'disabled':''}><span>${escapeHtml(letter)}</span><strong>${escapeHtml(text)}</strong></button>`;
+  }).join('');
+  const tag=questionTag(question);
+  const feedback=revealed ? `<div class="caderno-review-feedback ${correct?'correct':'wrong'}"><strong>${correct?'Recuperação correta.':'Ainda precisa consolidar.'}</strong><span>Sua resposta: ${escapeHtml(selected)} · Gabarito: ${escapeHtml(question.answer)}</span>${question.comment?`<div>${renderMarkdown(question.comment)}</div>`:'<p>Esta questão ainda não possui comentário completo. Use a regra corretiva e o material vinculado.</p>'}${progress.correctiveRule?`<p><b>Regra corretiva:</b> ${escapeHtml(progress.correctiveRule)}</p>`:''}</div>`:'';
+  return `<section class="card caderno-review-session"><div class="caderno-review-session-head"><div><span class="eyebrow">Recuperação ativa</span><h2>Revisão ${ui.cadernoSessionIndex+1} de ${ui.cadernoSessionIds.length}</h2><p>${escapeHtml(tag.area)} · ${escapeHtml(tag.topic || 'Tema geral')}</p></div><button class="tiny-btn" id="stopCadernoReview">Sair da sessão</button></div><div class="caderno-review-progress" role="progressbar" aria-valuemin="0" aria-valuemax="${ui.cadernoSessionIds.length}" aria-valuenow="${ui.cadernoSessionIndex}"><span style="width:${pct(ui.cadernoSessionIndex/Math.max(1,ui.cadernoSessionIds.length))}"></span></div><article class="caderno-review-question"><div class="question-stem">${renderHighlightedText(question.stem,[],false)}</div>${renderQuestionImages(question)}<div class="caderno-review-options">${options}</div></article>${revealed?'':`<fieldset class="caderno-review-confidence"><legend>Quão confiante você está antes de conferir?</legend>${[[30,'Baixa'],[60,'Média'],[90,'Alta']].map(([value,label])=>`<button type="button" class="tiny-btn ${ui.cadernoSessionConfidence===value?'active':''}" data-caderno-review-confidence="${value}" aria-pressed="${ui.cadernoSessionConfidence===value}">${label}</button>`).join('')}</fieldset><button class="icon-btn primary caderno-review-confirm" id="revealCadernoReview" ${selected&&ui.cadernoSessionConfidence?'':'disabled'}>Conferir resposta</button>`}${feedback}${revealed?`<button class="icon-btn primary caderno-review-next" id="completeCadernoReview">${ui.cadernoSessionIndex>=ui.cadernoSessionIds.length-1?'Concluir sessão':'Registrar e ir para a próxima'}</button>`:''}</section>`;
+}
+function completeCadernoReviewStep() {
+  const entry=activeCadernoReviewEntry();
+  if(!entry || !ui.cadernoSessionRevealed) return;
+  const now=new Date().toISOString();
+  const today=studyDateKey();
+  const correct=ui.cadernoSessionAnswer===entry.question.answer;
+  const previous=state.questionProgress[entry.id] || entry.progress || {};
+  const nextCount=correct ? n(previous.reviewCount)+1 : 0;
+  setQuestionProgress(entry.id,{
+    ...previous,
+    correct:false,
+    lastReviewAt:now,
+    lastReviewCorrect:correct,
+    lastReviewSelected:ui.cadernoSessionAnswer,
+    lastReviewConfidence:n(ui.cadernoSessionConfidence),
+    reviewCount:nextCount,
+    reviewed:true,
+    nextReview:nextErrorReviewDate(today,correct?errorReviewInterval(nextCount):1)
+  });
+  state.questionReviewHistory.push({questionId:entry.id,reviewedAt:now,selected:ui.cadernoSessionAnswer,answer:entry.question.answer,correct,confidence:n(ui.cadernoSessionConfidence),sourceRunId:previous.sourceRunId || ''});
+  state.questionReviewHistory=state.questionReviewHistory.slice(-500);
+  if(previous.sourceRunId) {
+    const run=state.simuladoRuns.find(item=>item.id===previous.sourceRunId);
+    if(run) {
+      run.reviewedErrors ||= {};
+      run.reviewedErrors[entry.id]=true;
+      run.updatedAt=now;
+      processSimulationReviewGamification(run,{silent:true});
+    }
+  }
+  persist();
+  ui.cadernoSessionIndex+=1;
+  resetCadernoReviewStep();
+  if(ui.cadernoSessionIndex>=ui.cadernoSessionIds.length) {
+    const total=ui.cadernoSessionIds.length;
+    ui.cadernoSessionIds=[];
+    ui.cadernoSessionIndex=0;
+    showStudyToast(`${total} ${total===1?'erro revisado':'erros revisados'} com recuperação ativa.`);
+  }
+  renderCadernoErros();
+}
 function renderCadernoErros() {
   const allEntries = cadernoErrosEntries();
   const areas = ['Todas', ...new Set(allEntries.map(entry => questionTag(entry.question).area).filter(Boolean))].sort();
@@ -4778,10 +4912,29 @@ function renderCadernoErros() {
     return haystack.includes(search);
   });
   const insightCards = `<section class="grid three caderno-insights"><div class="card"><span class="eyebrow">Temas mais frequentes</span>${areaCounts.length ? areaCounts.map(([label,count]) => `<div class="stat-line"><span>${escapeHtml(label)}</span><strong>${count}</strong></div>`).join('') : '<p class="muted">Ainda sem dados.</p>'}</div><div class="card"><span class="eyebrow">Tipos de erro</span>${typeCounts.length ? typeCounts.map(([label,count]) => `<div class="stat-line"><span>${escapeHtml(label)}</span><strong>${count}</strong></div>`).join('') : '<p class="muted">Classifique seus erros para ver padrões.</p>'}</div><div class="card"><span class="eyebrow">Confiança versus desempenho</span><div class="stat-line"><span>Falsa segurança</span><strong>${overconfident}</strong></div><div class="stat-line"><span>Conhecimento instável</span><strong>${unstable}</strong></div><p class="muted">Confiança alta com erro e confiança baixa com acerto.</p></div></section>`;
-  document.getElementById('caderno-erros').innerHTML = `<div class="library-overview"><div><span class="eyebrow">Meu caderno</span><h2>Caderno de erros</h2><p>Todos os comentários e reflexões que você escreveu nas questões, reunidos num só lugar.</p></div><div class="library-stats"><span><strong>${allEntries.length}</strong> anotações</span><span><strong>${dueCount}</strong> revisões pendentes</span><button class="icon-btn primary" id="startCadernoReview" ${dueCount?'':'disabled'}>Revisar pendentes</button><button class="icon-btn" id="exportCadernoCsv">Exportar CSV</button></div></div>${insightCards}<section class="card"><div class="section-title"><div><h2>Anotações</h2><div class="muted">${dueCount ? 'Comece pelas revisões pendentes.' : 'Nenhuma revisão está vencida.'}</div></div></div><div class="caderno-erros-filters"><label class="search-field"><span aria-hidden="true">⌕</span><input class="input" id="cadernoSearch" value="${escapeAttr(ui.cadernoSearch)}" placeholder="Buscar por enunciado, regra ou motivo"></label><select class="select" id="cadernoArea">${areas.map(area => `<option value="${escapeAttr(area)}" ${area === ui.cadernoArea ? 'selected' : ''}>${escapeHtml(area)}</option>`).join('')}</select><select class="select" id="cadernoReview"><option value="Todos" ${ui.cadernoReview === 'Todos' ? 'selected' : ''}>Todas as revisões</option><option value="Pendentes" ${ui.cadernoReview === 'Pendentes' ? 'selected' : ''}>Pendentes</option><option value="Agendadas" ${ui.cadernoReview === 'Agendadas' ? 'selected' : ''}>Agendadas</option></select></div><div class="list">${entries.length ? entries.map(renderCadernoErroCard).join('') : '<div class="empty">Nenhuma anotação encontrada para este filtro.</div>'}</div></section>`;
+  const sessionEntry=activeCadernoReviewEntry();
+  document.getElementById('caderno-erros').innerHTML = sessionEntry ? renderCadernoReviewSession(sessionEntry) : `<div class="library-overview"><div><span class="eyebrow">Meu caderno</span><h1>Caderno de erros</h1><p>Todos os comentários e reflexões que você escreveu nas questões, reunidos num só lugar.</p></div><div class="library-stats"><span><strong>${allEntries.length}</strong> anotações</span><span><strong>${dueCount}</strong> revisões pendentes</span><button class="icon-btn primary" id="startCadernoReview" ${dueCount?'':'disabled'}>Revisar pendentes</button><button class="icon-btn" id="exportCadernoCsv">Exportar CSV</button></div></div>${insightCards}<section class="card"><div class="section-title"><div><h2>Anotações</h2><div class="muted">${dueCount ? 'Comece pelas revisões pendentes.' : 'Nenhuma revisão está vencida.'}</div></div></div><div class="caderno-erros-filters"><label class="search-field"><span aria-hidden="true">⌕</span><input class="input" id="cadernoSearch" value="${escapeAttr(ui.cadernoSearch)}" placeholder="Buscar por enunciado, regra ou motivo" aria-label="Buscar no caderno de erros"></label><select class="select" id="cadernoArea" aria-label="Filtrar caderno por área">${areas.map(area => `<option value="${escapeAttr(area)}" ${area === ui.cadernoArea ? 'selected' : ''}>${escapeHtml(area)}</option>`).join('')}</select><select class="select" id="cadernoReview" aria-label="Filtrar caderno por situação da revisão"><option value="Todos" ${ui.cadernoReview === 'Todos' ? 'selected' : ''}>Todas as revisões</option><option value="Pendentes" ${ui.cadernoReview === 'Pendentes' ? 'selected' : ''}>Pendentes</option><option value="Agendadas" ${ui.cadernoReview === 'Agendadas' ? 'selected' : ''}>Agendadas</option></select></div><div class="list">${entries.length ? entries.map(renderCadernoErroCard).join('') : '<div class="empty">Nenhuma anotação encontrada para este filtro.</div>'}</div></section>`;
   bindCadernoErros();
 }
 function bindCadernoErros() {
+  if(activeCadernoReviewEntry()) {
+    document.querySelectorAll('[data-caderno-review-answer]').forEach(button=>button.onclick=event=>{
+      ui.cadernoSessionAnswer=event.currentTarget.dataset.cadernoReviewAnswer;
+      renderCadernoErros();
+    });
+    document.querySelectorAll('[data-caderno-review-confidence]').forEach(button=>button.onclick=event=>{
+      ui.cadernoSessionConfidence=n(event.currentTarget.dataset.cadernoReviewConfidence);
+      renderCadernoErros();
+    });
+    document.getElementById('revealCadernoReview')?.addEventListener('click',()=>{
+      if(!ui.cadernoSessionAnswer || !ui.cadernoSessionConfidence) return;
+      ui.cadernoSessionRevealed=true;
+      renderCadernoErros();
+    });
+    document.getElementById('completeCadernoReview')?.addEventListener('click',completeCadernoReviewStep);
+    document.getElementById('stopCadernoReview')?.addEventListener('click',stopCadernoReviewSession);
+    return;
+  }
   const search = document.getElementById('cadernoSearch');
   if(search) search.oninput = e => {
     ui.cadernoSearch = e.target.value;
@@ -4800,7 +4953,7 @@ function bindCadernoErros() {
   const reviewSelect = document.getElementById('cadernoReview');
   if(reviewSelect) reviewSelect.onchange = e => { ui.cadernoReview = e.target.value; localStorage.setItem(CADERNO_VIEW_KEY, JSON.stringify({review:ui.cadernoReview})); renderCadernoErros(); };
   document.getElementById('exportCadernoCsv')?.addEventListener('click', exportCadernoErrosCsv);
-  document.getElementById('startCadernoReview')?.addEventListener('click', () => { ui.cadernoReview = 'Pendentes'; localStorage.setItem(CADERNO_VIEW_KEY, JSON.stringify({review:ui.cadernoReview})); renderCadernoErros(); window.scrollTo({top:0, behavior:'smooth'}); });
+  document.getElementById('startCadernoReview')?.addEventListener('click', startCadernoReviewSession);
   document.querySelectorAll('[data-caderno-access]').forEach(button => button.onclick = e => {
     // Um erro sintetizado a partir de um simulado não tem state.questionProgress
     // (a resposta vive em run.answers): abrir isso na aba Questões mostraria a
@@ -5196,11 +5349,17 @@ function renderPainel() {
   document.querySelectorAll('[data-weekly-metric]').forEach(button=>button.addEventListener('click',event=>{ui.weeklyMetric=event.currentTarget.dataset.weeklyMetric;renderPainel();}));
   document.querySelectorAll('[data-weekly-week-nav]').forEach(button=>button.addEventListener('click',event=>{ui.weeklyWeekOffset=Math.min(0,(ui.weeklyWeekOffset||0)+Number(event.currentTarget.dataset.weeklyWeekNav));renderPainel();}));
   document.querySelectorAll('[data-dashboard-mood]').forEach(button => button.onclick = event => setDayLog(ui.refDate, 'mood', n(event.currentTarget.dataset.dashboardMood)));
+  document.querySelectorAll('[data-study-minutes]').forEach(button => button.onclick = event => {
+    state.dashboardSettings.studyMinutes=n(event.currentTarget.dataset.studyMinutes);
+    persist();
+    renderPainel();
+  });
   startDashboardCountdown();
   document.getElementById('dailyRandomChoice')?.addEventListener('click', event => runDailyStudyChoice(event.currentTarget, ui.refDate));
   document.querySelectorAll('[data-road-step]').forEach(button => button.onclick = e => {
     const target = e.currentTarget.dataset.roadStep;
     const scheduleId = e.currentTarget.dataset.roadSchedule;
+    if(target === 'daily-errors') { startCadernoReviewSession(); return; }
     if(target === 'daily-questions' && scheduleId) { openQuestionsForSchedule(scheduleId); return; }
     if(target === 'daily-flashcards' && scheduleId) { openFlashcardsForSchedule(scheduleId); return; }
     if(target === 'daily-video' && scheduleId) { openVideosForSchedule(scheduleId); return; }
@@ -5588,20 +5747,22 @@ function shuffle(items) {
 function buildBalancedSimulado(targets) {
   const selected = [];
   const used = new Set();
+  const simulationPool=questionBank.filter(questionReadyForSimulation);
   ENAMED_AREAS.forEach(area => {
-    const pool = shuffle(questionBank.filter(question => simQuestionArea(question) === area && !used.has(question.id)));
+    const pool = shuffle(simulationPool.filter(question => simQuestionArea(question) === area && !used.has(question.id)));
     pool.slice(0, Math.max(0, n(targets[area]))).forEach(question => { selected.push(question); used.add(question.id); });
   });
   const totalTarget = Object.values(targets).reduce((sum,value)=>sum+n(value),0);
   if(selected.length < totalTarget) {
-    shuffle(questionBank.filter(question => !used.has(question.id))).slice(0, totalTarget - selected.length).forEach(question => selected.push(question));
+    shuffle(simulationPool.filter(question => !used.has(question.id))).slice(0, totalTarget - selected.length).forEach(question => selected.push(question));
   }
   return shuffle(selected);
 }
 function renderSimuladoGenerator() {
   const targets = defaultSimuladoTargets();
-  const counts = ENAMED_AREAS.map(area => `${area}: ${questionBank.filter(q => simQuestionArea(q) === area).length}`).join(' · ');
-  return `<section class="card sim-generator-card" id="simGenerator"><div class="section-title"><div><span class="eyebrow">Personalizar</span><h2>Monte seu próprio desafio</h2><div class="muted">Defina a distribuição por área. As questões são embaralhadas e a correção só aparece ao finalizar.</div></div><span class="sim-bank-status"><i></i>${questionBank.length} questões no banco</span></div><div class="sim-command"><div class="sim-generator-main"><label class="sim-field-label" for="simRunName">Nome da prova</label><input class="input sim-name-input" id="simRunName" value="Simulado ENAMED ${state.simuladoRuns.length + 1}" aria-label="Nome do simulado"><div class="sim-field-label sim-areas-label">Distribuição de questões</div><div class="sim-targets">${ENAMED_AREAS.map(area => `<div class="sim-target"><label>${escapeHtml(area)}</label><div class="sim-target-control"><input class="input" type="number" min="0" max="40" step="1" data-sim-target="${escapeAttr(area)}" value="${targets[area]}"><span>questões</span></div></div>`).join('')}</div><div class="sim-availability">Disponibilidade atual: ${escapeHtml(counts)}</div></div><aside class="sim-generator-aside"><div class="sim-duration-icon">◷</div><label class="sim-field-label" for="simDuration">Tempo total</label><div class="sim-duration-control"><input class="input" id="simDuration" type="number" min="30" step="15" value="300" title="Tempo total em minutos"><span>min</span></div><small>Aproximadamente 3 minutos por questão.</small><button class="icon-btn primary" id="generateSimulado" ${questionBank.length?'':'disabled'}>Gerar e iniciar <span aria-hidden="true">→</span></button></aside></div></section>`;
+  const simulationPool=questionBank.filter(questionReadyForSimulation);
+  const counts = ENAMED_AREAS.map(area => `${area}: ${simulationPool.filter(q => simQuestionArea(q) === area).length}`).join(' · ');
+  return `<section class="card sim-generator-card" id="simGenerator"><div class="section-title"><div><span class="eyebrow">Personalizar</span><h2>Monte seu próprio desafio</h2><div class="muted">Defina a distribuição por área. Somente questões com gabarito e explicação confiáveis entram na prova.</div></div><span class="sim-bank-status"><i></i>${simulationPool.length} questões aptas</span></div><div class="sim-command"><div class="sim-generator-main"><label class="sim-field-label" for="simRunName">Nome da prova</label><input class="input sim-name-input" id="simRunName" value="Simulado ENAMED ${state.simuladoRuns.length + 1}" aria-label="Nome do simulado"><div class="sim-field-label sim-areas-label">Distribuição de questões</div><div class="sim-targets">${ENAMED_AREAS.map(area => `<div class="sim-target"><label>${escapeHtml(area)}</label><div class="sim-target-control"><input class="input" type="number" min="0" max="40" step="1" data-sim-target="${escapeAttr(area)}" value="${targets[area]}"><span>questões</span></div></div>`).join('')}</div><div class="sim-availability">Disponibilidade atual: ${escapeHtml(counts)}</div></div><aside class="sim-generator-aside"><div class="sim-duration-icon">◷</div><label class="sim-field-label" for="simDuration">Tempo total</label><div class="sim-duration-control"><input class="input" id="simDuration" type="number" min="30" step="15" value="300" title="Tempo total em minutos"><span>min</span></div><small>Aproximadamente 3 minutos por questão.</small><button class="icon-btn primary" id="generateSimulado" ${simulationPool.length?'':'disabled'}>Gerar e iniciar <span aria-hidden="true">→</span></button></aside></div></section>`;
 }
 function renderSimuladoRunsList() {
   if(!state.simuladoRuns.length) return '<div class="empty sim-empty-state"><strong>Nenhuma prova realizada ainda</strong><span>Crie um simulado personalizado ou escolha uma prova da biblioteca.</span><button class="tiny-btn" type="button" data-sim-scroll="simGenerator">Criar primeira prova</button></div>';
@@ -5958,16 +6119,22 @@ function startImportedSimulado(simId) {
   syncRouteFromUI('push');
   startSimuladoTimer(run, false);
 }
-function generateSimuladoRun() {
+async function generateSimuladoRun() {
   const targets = defaultSimuladoTargets();
   document.querySelectorAll('[data-sim-target]').forEach(input => { targets[input.dataset.simTarget] = Math.max(0, n(input.value)); });
+  const requestedName=document.getElementById('simRunName')?.value?.trim() || `Simulado ENAMED ${state.simuladoRuns.length + 1}`;
+  const duration = Math.max(30, n(document.getElementById('simDuration')?.value) || 300);
+  const generateButton=document.getElementById('generateSimulado');
+  if(!questionBankCatalogStatus().complete) {
+    if(generateButton) { generateButton.disabled=true; generateButton.innerHTML='Preparando banco confiável…'; }
+    await loadFullQuestionBank();
+  }
   const questions = buildBalancedSimulado(targets);
   if(!questions.length) { alert('Ainda não há questões carregadas para gerar o simulado.'); return; }
-  const duration = Math.max(30, n(document.getElementById('simDuration')?.value) || 300);
   const now=new Date().toISOString();
   const run = {
     id: `simrun-${Date.now()}`,
-    name: document.getElementById('simRunName')?.value?.trim() || `Simulado ENAMED ${state.simuladoRuns.length + 1}`,
+    name: requestedName,
     sourceType: 'generated',
     importedSimId: '',
     sourceSimulationId: `generated:${Gamification?.stableHash?.(questions.map(question=>question.id).sort())||Date.now()}`,
@@ -12099,6 +12266,30 @@ function questionSpecialtyGroup(value) {
   if(normalized.startsWith('ginecologia ') || normalized.startsWith('obstetricia ')) return 'Ginecologia e Obstetrícia';
   return group?.label || String(raw).trim() || 'Sem especialidade';
 }
+function questionQualityProfile(question) {
+  const effective=applyQuestionEdits(question);
+  const answer=String(effective.answer || '').trim().toUpperCase();
+  const pending=Boolean(effective.answerPending && !answer);
+  const comment=String(effective.comment || '').trim();
+  let score=0;
+  if(answer && effective.options?.[answer]) score+=35;
+  if(comment.length>=80) score+=30;
+  else if(comment.length>=20) score+=18;
+  if(String(effective.sourceLabel || effective.source || '').trim()) score+=10;
+  if(Array.isArray(effective.tags) && effective.tags.length) score+=10;
+  if(effective.scheduleId) score+=10;
+  if(effective.institution || effective.year) score+=5;
+  if(pending) score=0;
+  const label=score>=75?'Confiabilidade alta':score>=55?'Boa base':'Explicação limitada';
+  return {score,label,pending,hasExplanation:comment.length>=20,ready:Boolean(answer && effective.options?.[answer] && !pending)};
+}
+function questionReadyForStudy(question) {
+  return questionQualityProfile(question).ready;
+}
+function questionReadyForSimulation(question) {
+  const quality=questionQualityProfile(question);
+  return quality.ready && quality.hasExplanation && quality.score>=55;
+}
 function filteredQuestions() {
   const focusQuestionIds = new Set(Array.isArray(ui.qFocusQuestionIds) ? ui.qFocusQuestionIds : []);
   const cacheKey = JSON.stringify([ui.qFocusScheduleId || '', [...focusQuestionIds], ui.qBrowseMode, ui.qSpecialty, ui.qBlock, ui.qSource, ui.qTopic, ui.qStatus, normalizedTopic(ui.qSearch || ''), ui.justAnsweredId || '', n(ui.qFocusTarget), questionBank.length]);
@@ -12106,6 +12297,8 @@ function filteredQuestions() {
   const focusItem = ui.qFocusScheduleId ? state.schedule.find(item => item.id === ui.qFocusScheduleId) : null;
   const filtered = questionBank.filter(question => {
     const effectiveQuestion = applyQuestionEdits(question);
+    const quality = questionQualityProfile(effectiveQuestion);
+    if(quality.pending && ui.qStatus !== 'Gabarito pendente') return false;
     const result = questionResult(effectiveQuestion);
     const query = normalizedTopic(ui.qSearch || '');
     const searchable = normalizedTopic([
@@ -12130,6 +12323,7 @@ function filteredQuestions() {
       || (ui.qStatus === 'Erradas' && result && !result.correct)
       || (ui.qStatus === 'Certas' && result?.correct)
       || (ui.qStatus === 'Gabarito pendente' && Boolean(question.answerPending && !effectiveQuestion.answer))
+      || (ui.qStatus === 'Sem comentário' && !quality.hasExplanation)
       || (ui.qStatus === 'Gabarito suspeito' && Boolean(state.questionProgress[question.id]?.answerKeyIssue));
     return searchOk && focusOk && specialtyOk && blockOk && sourceOk && topicOk && statusOk;
   });
@@ -12403,7 +12597,7 @@ function renderQuestionBank() {
           : `<label class="question-filter-field"><span>Bloco</span><select class="select" id="questionBlock">${blockSelectOptions}</select></label>`}
         <label class="question-filter-field"><span>Fonte</span><select class="select" id="questionSource">${sources.map(source => `<option value="${escapeAttr(source)}" ${source===ui.qSource?'selected':''}>${escapeHtml(source)}</option>`).join('')}</select></label>
         <label class="question-filter-field"><span>Tema</span><select class="select" id="questionTopic">${topics.map(topic => `<option value="${escapeAttr(topic)}" ${topic===ui.qTopic?'selected':''}>${escapeHtml(topic)}</option>`).join('')}</select></label>
-        <label class="question-filter-field"><span>Status</span><select class="select" id="questionStatus">${['Todas','Não respondidas','Erradas','Certas','Gabarito pendente','Gabarito suspeito'].map(status => `<option ${status===ui.qStatus?'selected':''}>${status}</option>`).join('')}</select></label>
+        <label class="question-filter-field"><span>Status</span><select class="select" id="questionStatus">${['Todas','Não respondidas','Erradas','Certas','Sem comentário','Gabarito pendente','Gabarito suspeito'].map(status => `<option ${status===ui.qStatus?'selected':''}>${status}</option>`).join('')}</select></label>
         <button type="button" class="tiny-btn question-clear-filters" id="questionClearFilters">Limpar filtros</button>
       </div></details>
     </aside>
@@ -12827,6 +13021,7 @@ function renderQuestion(question, total) {
   const highlights = savedProgress.textHighlights || [];
   const eliminated = savedProgress.eliminated || [];
   const dataIssue = questionDataIssue(question);
+  const quality = questionQualityProfile(question);
   const answerKeyIssue = Boolean(savedProgress.answerKeyIssue);
   const options = Object.entries(question.options).map(([letter,text], optionIndex) => {
     let cls = '';
@@ -12849,7 +13044,7 @@ function renderQuestion(question, total) {
   const difficulty = ['facil','media','dificil'];
   const difficultyLabels = { facil:'Fácil', media:'Média', dificil:'Difícil' };
   const difficultyPicker = `<div class="question-difficulty" role="group" aria-label="Dificuldade percebida da questão"><span class="question-difficulty-label">Dificuldade:</span>${difficulty.map(level => `<button type="button" class="tiny-btn question-difficulty-btn difficulty-${level} ${savedProgress.difficulty===level?'active':''}" data-question-difficulty="${level}" aria-pressed="${savedProgress.difficulty===level}">${difficultyLabels[level]}</button>`).join('')}</div>`;
-  const questionInfo = `<div class="question-info-stack"><div class="question-meta" data-question-tags-for="${escapeAttr(question.id)}"><span class="badge today">${escapeHtml(collectionLabel)}</span><span class="badge today">Questão ${question.number}</span><span class="badge today" data-auto-study-clock title="Clique para pausar ou retomar o cronômetro" data-auto-study-prefix="Questões ·">Questões · 00:00</span>${question.edited?'<span class="badge wait">Editada</span>':''}<span class="badge wait">${escapeHtml(question.area)}</span><span class="badge done">${escapeHtml(question.topic)}</span></div>${renderQuestionTags(question)}</div>`;
+  const questionInfo = `<div class="question-info-stack"><div class="question-meta" data-question-tags-for="${escapeAttr(question.id)}"><span class="badge today">${escapeHtml(collectionLabel)}</span><span class="badge today">Questão ${question.number}</span><span class="badge ${quality.score>=75?'done':quality.score>=55?'today':'wait'}" title="Qualidade editorial: ${quality.score}/100">${escapeHtml(quality.label)}</span><span class="badge today" data-auto-study-clock title="Clique para pausar ou retomar o cronômetro" data-auto-study-prefix="Questões ·">Questões · 00:00</span>${question.edited?'<span class="badge wait">Editada</span>':''}<span class="badge wait">${escapeHtml(question.area)}</span><span class="badge done">${escapeHtml(question.topic)}</span></div>${renderQuestionTags(question)}</div>`;
   const focusInfo = questionSidebarCollapsed ? questionInfo : '';
   const bodyInfo = questionSidebarCollapsed ? '' : questionInfo;
   const sessionProgress = total ? Math.round(((ui.qIndex + 1) / total) * 100) : 0;
@@ -14530,7 +14725,7 @@ async function ensureViewAssets(tab) {
 }
 async function ensureViewData(tab) {
   await ensureViewAssets(tab);
-  if(['questoes','simulados','analise'].includes(tab)) await loadQuestionBank();
+  if(['questoes','simulados','analise','caderno-erros'].includes(tab)) await loadQuestionBank();
   if(['simulados','analise'].includes(tab)) await loadImportedSimulados();
   if(tab === 'materiais') await loadMaterialLibrary();
   if(tab === 'prescricao') await loadPrescriptionCatalog();

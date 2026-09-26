@@ -28,7 +28,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Só o item III está certo. O item I é uma pegadinha perigosa: mesmo sendo verdade que corticoide pode até melhorar temporariamente a LLA, NUNCA se deve dar corticoide como 'primeira escolha' antes de confirmar o diagnóstico — isso pode mascarar o exame da medula e atrasar o diagnóstico certo. O item II está errado porque atrasar a quimioterapia SIM prejudica a chance de cura. O item IV é o oposto da realidade: a chance de cura tem MELHORADO ao longo dos anos, não piorado. Já o item III está certo: como o tratamento derruba as defesas da criança, é padrão dar um antibiótico preventivo (sulfametoxazol+trimetoprima) contra um tipo de pneumonia oportunista (Pneumocystis).",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -64,7 +64,7 @@
       ],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Esse quadro (febre persistente mesmo com antibiótico, sintomas piorando, pouca urina) levanta suspeita de uma doença maligna escondida por trás do quadro respiratório — antes de decidir o tratamento, é fundamental pedir exames que rastreiem sinais de síndrome de lise tumoral (LDH, fósforo e ácido úrico), já que, se for mesmo uma leucemia/linfoma, essas substâncias podem disparar assim que o tratamento começar.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -98,7 +98,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "São números pra decorar mesmo: os critérios atuais (Cairo-Bishop) pra dizer que há síndrome de lise tumoral no laboratório exigem pelo menos duas dessas alterações: ácido úrico ≥8, potássio ≥6, fósforo ≥4,5, ou queda de mais de 25% do cálcio (ficando ≤7) — tudo isso entre 3 dias antes e 7 dias depois do tratamento.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -131,7 +131,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Febre recorrente, dor nas pernas, palidez, baço e gânglios aumentados numa criança — quadro sugestivo de leucemia. Como a doença 'invade' a medula óssea e atrapalha a fábrica de sangue, a anemia esperada é do tipo normocítica e normocrômica (hemácias de tamanho e cor normais), mas com reticulócitos BAIXOS — mostrando que a medula não está conseguindo repor as células como devia.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -164,7 +164,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Manchas roxas, cansaço, dor nas pernas, febre, gânglios e baço/fígado aumentados numa criança — é o quadro clássico de leucemia aguda infantil. Diante desse conjunto de sinais de alarme, a conduta certa é internar a criança e aguardar os exames com segurança, não simplesmente mandar pra casa.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -199,7 +199,7 @@
       ],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Uma massa abdominal grande, junto com LDH e ácido úrico muito altos, é sinal de um tumor que está crescendo (e morrendo) muito rápido, liberando o conteúdo das células destruídas no sangue — é a base da síndrome de lise tumoral. Uma das alterações mais previsíveis desse processo é a hiperfosfatemia: o fósforo que estava dentro das células agora vaza todo pro sangue.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -232,7 +232,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Dor óssea que piora à noite, gânglios firmes, perda de peso, exames inflamatórios altos (VHS e PCR) numa criança — é um quadro que pode ser confundido com doença reumatológica, mas que pede investigação de leucemia. O exame que confirma (ou descarta) essa suspeita é o mielograma, que analisa diretamente as células da medula óssea.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -266,7 +266,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "O linfoma de Burkitt é um dos tumores que mais 'derrete' rápido com a quimioterapia — por isso, quando o paciente já chega desidratado (bebendo/comendo pouco), o risco de síndrome de lise tumoral e falência renal aumenta bastante. Os sinais aqui (pouca urina, convulsão, potássio alto, cálcio baixo, ureia/creatinina subindo) fecham o quadro de lise tumoral.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -299,7 +299,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Os itens I e II estão certos: a lise tumoral realmente causa esse conjunto de alterações (com HIPOcalcemia, não hipercalcemia) e é fundamental identificar previamente os pacientes de risco pra prevenir. O item III tem um erro: quem causa arritmias graves e convulsões na lise tumoral é a HIPOcalcemia (cálcio baixo), não a hipercalcemia como diz o texto — por isso só I e II estão corretos.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -333,7 +333,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A tríade clássica da síndrome de lise tumoral (mais o cálcio, que cai): ácido úrico alto, potássio alto e fósforo alto — tudo que estava 'preso' dentro das células tumorais que morreram rápido demais.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -364,7 +364,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A frase está errada: nem todo gânglio maior que 1cm numa criança pequena precisa de ultrassom pra descartar câncer — muitos gânglios aumentados são reativos a infecções comuns (como as lesões de pele com crosta descritas no caso), e a investigação deve ser guiada pela clínica (tamanho, consistência, tempo de evolução, sintomas associados), não por uma regra fixa de tamanho.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -397,7 +397,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Dor óssea que atrapalha andar, febre, fígado/baço/gânglios aumentados numa criança — quadro clássico de leucemia linfoide aguda, a leucemia mais comum da infância.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -431,7 +431,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Cansaço, manchas roxas, dor nas pernas, anemia GRAVE (Hb 4!), leucócitos MUITO altos (600 mil — bem acima do normal) e plaquetas extremamente baixas, com fígado e baço aumentados — é um quadro clássico de leucemia linfocítica aguda, com um número de leucócitos tão alto que já indica um caso de hiperleucocitose (mais grave).",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -464,7 +464,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Febre, hematomas sem trauma, perda de peso, fígado/baço aumentados, e um hemograma bem alterado numa criança — quadro de leucemia aguda. Como o número de leucócitos está extremamente alto (385 mil), o paciente já entra automaticamente no grupo de ALTO RISCO pra síndrome de lise tumoral, que causa esse conjunto clássico: potássio alto, fósforo alto, cálcio baixo e ácido úrico alto.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -497,7 +497,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Enquanto aguarda a confirmação do tipo exato de linfoma, o médico já iniciou corticoide — só que isso pode disparar uma lise tumoral (o corticoide já mata células do tumor). Como o paciente evoluiu com inchaço nas pernas e pouca urina, os exames certos pra investigar são justamente os que rastreiam a lise tumoral: função renal, eletrólitos (fósforo, potássio, cálcio), ácido úrico e LDH.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -530,7 +530,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Bebê com leucemia aguda suspeita, leucócitos muito altos (320 mil) — antes de iniciar a quimioterapia propriamente dita, a conduta inicial é preparar o corpo pra receber o tratamento: hidratar bem na veia e dar um remédio que baixa o ácido úrico (hipouricemiante, como o alopurinol), prevenindo a lise tumoral que a quimioterapia vai desencadear.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -563,7 +563,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Os fatores de risco clássicos pra lise tumoral são: rim que já não filtra bem, potássio já alto antes do tratamento, e ácido úrico/LDH altos antes de começar (mostrando que o tumor já está com alto 'giro' de células). A anemia sozinha não é considerada um fator de risco clássico pra essa síndrome.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -596,7 +596,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Febre há dias, dor nas pernas, cansaço, manchas roxas, palidez, fígado/baço aumentados e pancitopenia (todas as três linhagens do sangue baixas) — quadro bem sugestivo de leucemia aguda, a causa mais preocupante desse conjunto de achados na infância.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -630,7 +630,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Antes de começar a quimioterapia do linfoma de Burkitt (um tumor que cresce e morre muito rápido), várias medidas preventivas contra a lise tumoral são padrão: hidratar bastante, alcalinizar a urina, dar alopurinol e evitar cálcio extra. A hemodiálise, porém, NÃO é feita de forma preventiva/rotineira antes de começar — ela é reservada pra quando a lise tumoral já causou uma falência renal grave.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -664,7 +664,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Dor nas pernas, dificuldade de andar, febre, dor nas juntas, palidez, sangramento, gânglios e fígado/baço aumentados numa criança — quadro sugestivo de leucemia. O primeiro exame simples e essencial pra começar a investigação é o hemograma, que já pode mostrar alterações bem sugestivas (anemia, plaquetas baixas, presença de células jovens anormais).",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -698,7 +698,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Depois de começar a quimioterapia da leucemia, a queda da urina com piora da função renal é bem sugestiva de síndrome de lise tumoral — causada pela destruição maciça das células cancerígenas, que libera potássio e fósforo em excesso (hipercalemia, hiperfosfatemia), enquanto o cálcio cai (hipocalcemia) e o ácido úrico sobe muito (hiperuricemia).",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -732,7 +732,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "As alterações da lise tumoral (ácido úrico alto, potássio alto, fósforo alto, cálcio baixo) são tratadas principalmente com bastante hidratação venosa e alopurinol (que reduz a produção de ácido úrico) — os pilares do tratamento dessa emergência.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -766,7 +766,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Os principais eletrólitos/substâncias monitorados na lise tumoral são: potássio (sobe e pode causar arritmia grave), ácido úrico (sobe e pode entupir os rins) e cálcio (cai e pode causar convulsão/arritmia) — junto com o fósforo, que também sobe bastante.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -799,7 +799,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Esse paciente com leucemia, recém-tratado com quimioterapia, agora tem os sinais clássicos de lise tumoral: potássio alto, fósforo alto, cálcio baixo e ácido úrico bem alto (12!), com o rim já sofrendo. A conduta inicial certa é monitorar de perto, hidratar bem na veia, corrigir os distúrbios dos eletrólitos, e usar a rasburicase (um remédio mais potente e rápido que o alopurinol pra baixar o ácido úrico em casos já estabelecidos).",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -832,7 +832,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Palidez progressiva, febre, petéquias, equimoses, dor óssea intensa que acorda a criança à noite, fígado/baço aumentados e hemograma com anemia+leucocitose+plaquetopenia — é o quadro clássico de leucemia aguda.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -866,7 +866,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Hematomas espontâneos, sangramento menstrual aumentado, epistaxe, cansaço, anemia grave, plaquetas baixas, TP/TTPa alargados, D-dímero alto, e células com muitos grânulos e bastonetes de Auer (em feixes) na lâmina — é o retrato bem específico da leucemia promielocítica aguda, um subtipo que já entra com risco alto de sangramento grave por atrapalhar a coagulação (parecido com CIVD).",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -900,7 +900,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Febre, dor nas pernas que acorda à noite, manchas roxas (mesmo achando que é 'trauma'), gânglios pequenos, anemia com reticulócitos baixos e plaquetas baixas numa criança sem outra causa clara — quadro clássico de leucemia linfocítica aguda, mesmo sem organomegalia evidente ainda.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -934,7 +934,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Fadiga, dor óssea e articular, febre, equimoses, gânglios e fígado/baço aumentados, plaquetas baixas — quadro clássico de leucemia aguda infantil. Um detalhe importante: a melhora da dor com corticoide é uma pista clássica que reforça essa suspeita (as células leucêmicas são sensíveis ao corticoide), mas isso não substitui o diagnóstico correto via mielograma.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -968,7 +968,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Náusea, letargia e convulsão durante o tratamento do linfoma de Burkitt são sinais de síndrome de lise tumoral, que classicamente causa esse trio: potássio alto (hipercalemia), fósforo alto (hiperfosfatemia) e cálcio baixo (hipocalcemia) — é o cálcio baixo, principalmente, que explica a convulsão.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -1001,7 +1001,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Os três itens estão certos e formam o padrão clássico do hemograma na leucemia linfoide aguda: leucócitos costumam estar altos (e, quando passam de 50 mil, é sinal de gravidade maior), a anemia é quase universal (normocítica normocrômica, com reticulócitos baixos, já que a medula está 'ocupada' pelas células doentes), e a maioria dos pacientes também tem plaquetas baixas.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -1034,7 +1034,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "O linfoma de Burkitt cresce e morre extremamente rápido, então antes mesmo de começar a quimioterapia já se prepara o paciente pra evitar a temida síndrome de lise tumoral, começando a hidratação e o alopurinol desde o dia anterior ao início do tratamento.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -1067,7 +1067,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A frase I tem um erro: a lise tumoral laboratorial é definida por hiperuricemia, hipercalemia, hiperfosfatemia e HIPOcalcemia (não hipercalcemia, como diz o texto). A frase IV também erra: hoje em dia, a alcalinização da urina não é mais tão recomendada em casos de insuficiência renal por lise tumoral, porque pode até piorar a precipitação de cálcio-fosfato nos rins. Já as frases II (definição de lise tumoral CLÍNICA) e III (rasburicase + hidratação como primeira linha em alto risco) estão corretas.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -1101,7 +1101,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Na leucemia mieloide aguda do adulto, o número de leucócitos no hemograma pode variar bastante — pode estar baixo, normal ou bem alto, dependendo do paciente. É um lembrete de que não dá pra descartar leucemia só porque os leucócitos estão normais ou baixos.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -1135,7 +1135,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Na leucemia linfoide aguda, ser da linhagem de células B (não T) é considerado um fator de bom prognóstico — junto com idade entre 1-9 anos e leucometria baixa, que são os outros fatores favoráveis clássicos (diferente do que dizem as outras alternativas, que descrevem justamente os fatores de MAU prognóstico).",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -1169,7 +1169,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "É uma questão de definição: 'leucemia' é quando as células malignas circulam no sangue e na medula, já 'linfoma' é quando essas mesmas células formam uma massa sólida localizada (geralmente em um gânglio) — a diferença é mais sobre ONDE as células estão do que sobre o tipo de célula em si.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -1202,7 +1202,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Na leucemia linfoide aguda, a idade entre 1 e 9 anos é considerada um fator de BOM prognóstico — é a faixa etária com melhor resposta ao tratamento, diferente de bebês muito pequenos ou pré-adolescentes/adolescentes, que têm prognóstico pior.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -1235,7 +1235,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Cansaço, dor nas pernas, prostração numa criança com hemograma bem alterado (anemia grave, leucócitos extremamente altos com 88% de blastos, plaquetas baixas) — leucemia aguda confirmada. Antes de iniciar o tratamento definitivo, a prioridade imediata é a hiper-hidratação venosa, pra proteger os rins da lise tumoral que vai acontecer assim que o tratamento matar essas células em excesso.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -1268,7 +1268,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Febre, sangramento de gengiva, pancitopenia, TAP e fibrinogênio alterados, e a medula com 55% de blastos do tipo promielócito — é o quadro clássico da leucemia promielocítica aguda. O remédio que revolucionou o tratamento e prognóstico dessa doença é o ácido transretinoico (ATRA), que faz essas células amadurecerem em vez de continuar se multiplicando descontroladamente.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -1302,7 +1302,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Dor nas pernas, cansaço, palidez, febre, equimoses, pancitopenia e fígado/baço aumentados numa criança — quadro clássico de leucemia aguda.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -1336,7 +1336,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A febre em si não é considerada um fator prognóstico da leucemia linfoide aguda (ela é só um sintoma comum, não um marcador que prediz o resultado do tratamento) — diferente do número inicial de leucócitos, do tipo de alteração cromossômica, da idade e do comprometimento do sistema nervoso central, que SIM influenciam diretamente o prognóstico.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -1369,7 +1369,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Sangramento de gengiva, sangue na urina, petéquias, febre, e no hemograma leucócitos baixos com muitas células imaturas (blastos) e plaquetas bem baixas — quadro de leucemia mieloide aguda. A confirmação vem pelo mielograma, e o tratamento inicial inclui transfundir plaquetas (pelo sangramento) e começar antibiótico de amplo espectro empiricamente (já que o paciente está com febre e as defesas comprometidas).",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -1402,7 +1402,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Antes mesmo de aparecerem sintomas de lise tumoral, quem tem um tumor grande e agressivo (como esse linfoma de pequenas células, com massa enorme) já entra automaticamente no grupo de alto risco. Por isso, a conduta preventiva é começar hidratação, rasburicase (pra evitar o acúmulo de ácido úrico) e alcalinizar a urina, tudo isso ANTES ou junto com o início da quimioterapia, e não só depois que os problemas aparecerem.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -1436,7 +1436,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "As frases I e III estão certas: a LMA realmente é definida assim (célula mieloide se comportando de forma anômala) e o transplante alogênico é o tratamento mais intenso, mas com riscos importantes. Já a frase II tem um erro pela palavra 'exclusivamente': os fatores prognósticos da LMA não dependem só das condições do paciente — também dependem MUITO das características genéticas/moleculares da própria doença (as mutações e alterações cromossômicas das células doentes).",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -1470,7 +1470,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Pra prevenir a anúria (parada da urina) causada pela lise tumoral em quem tem leucemia com muitos leucócitos, o ideal desde o início é: hidratar bastante o paciente, alcalinizar a urina, e usar um remédio que bloqueia a enzima que fabrica ácido úrico (inibidor de xantina oxidase, como o alopurinol) — tudo isso ajuda o corpo a eliminar o excesso de ácido úrico sem entupir os rins.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -1504,7 +1504,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Na síndrome de lise tumoral, o ácido úrico sobe (hiperuricemia) e o potássio também sobe (hipercalemia) — junto com o fósforo alto e o cálcio baixo, que não aparecem nessa alternativa específica, mas fazem parte do quadro completo.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -1538,7 +1538,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Sangramento de gengiva, febre, sangue na urina, petéquias e no hemograma leucócitos baixos com muitas células imaturas e plaquetas bem baixas — quadro de leucemia mieloide aguda. A confirmação vem pelo mielograma, e o tratamento inicial inclui transfundir plaquetas e começar antibiótico empírico.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -1571,7 +1571,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Na leucemia linfoide aguda infantil, ter idade entre 1 e 9 anos e leucometria abaixo de 50 mil são os fatores de BOM prognóstico — diferente do que dizem as outras alternativas: a LLA (e não a LMA) é a mais comum na infância, o corticoide nunca deve ser iniciado antes de confirmar o diagnóstico com o oncologista, e o transplante de medula não é o tratamento de primeira linha da LLA (é reservado pra casos específicos).",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -1604,7 +1604,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Dois dias depois de começar a quimioterapia, essa convulsão levanta forte suspeita de síndrome de lise tumoral — e o achado bioquímico mais característico (e mais fácil de detectar) desse quadro é a hiperuricemia, o ácido úrico alto no sangue, causado pela destruição maciça das células leucêmicas.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -1637,7 +1637,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A febre em si não conta como um fator prognóstico da leucemia linfoide aguda — é só um sintoma comum, diferente do número de leucócitos inicial, do cariótipo e da idade, que SIM influenciam diretamente as chances de cura.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -1670,7 +1670,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Sangramento de gengiva e nariz, febre, pneumonia associada, anemia, leucócitos com muitos mieloblastos, plaquetas baixas, medula com 45% de mieloblastos e a presença de bastonetes de Auer nos blastos — os bastonetes de Auer são a assinatura visual clássica que confirma a linhagem MIELOIDE, fechando o diagnóstico de leucemia mieloide aguda.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -1704,7 +1704,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Na síndrome de lise tumoral, o fósforo sobe (hiperfosfatemia) — junto com o ácido úrico e o potássio, enquanto o cálcio cai. As outras opções (hipouricemia, hipocalemia, hipernatremia) vão na direção contrária do que realmente acontece nessa síndrome.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -1737,7 +1737,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Criança com síndrome de Down (que já tem risco bem maior de leucemia), febre, cansaço, sangramento de gengiva, manchas roxas, anemia, leucócitos altos e plaquetas baixas — leucemia aguda confirmada pelo mielograma (90% de blastos!). A imunofenotipagem (positiva pra TdT, CD19 e CD10, negativa pra marcadores mieloides e de célula T) mostra que é uma leucemia linfoide aguda de linhagem B — o tipo mais comum, inclusive em crianças com Down.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -1770,7 +1770,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A tríade clássica da síndrome de lise tumoral é: ácido úrico alto, potássio alto e fósforo alto. O tratamento gira em torno de três pilares: hidratar bastante (mas sem dar potássio extra!), alcalinizar a urina, e usar um remédio que reduz o ácido úrico (hipouricemiante, como alopurinol ou rasburicase).",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -1803,7 +1803,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Dor óssea persistente que não passa com analgésico, febre, emagrecimento, dificuldade de andar, palidez, fígado/baço aumentados, petéquias, anemia, plaquetas baixas e leucócitos altos numa criança — quadro sugestivo de leucemia aguda. O próximo passo pra confirmar é o mielograma, que analisa diretamente as células da medula óssea.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -1836,7 +1836,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Pressão baixa, desidratação e metástases extensas são fatores que aumentam o risco de lise tumoral (porque pioram a função renal ou aumentam a quantidade de células destruídas). Já ter tido problema no fígado ANTES do câncer não é considerado um fator de risco clássico pra essa síndrome específica.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -1869,7 +1869,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Depois da quimioterapia pro linfoma de Burkitt (um tumor que se destrói muito rápido), a síndrome de lise tumoral causa esse conjunto clássico: ácido úrico alto (hiperuricemia), fósforo alto (hiperfosfatemia), cálcio baixo (hipocalcemia) e potássio alto (hiperpotassemia).",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -1903,7 +1903,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Vamos por item: (V) massas grandes e leucócitos muito altos realmente são fatores de risco pra lise tumoral. (F) quem causa risco pro rim não é a hipercalcemia — na lise tumoral, o cálcio CAI (hipocalcemia), não sobe. (F) o fósforo SOBE na lise tumoral (hiperfosfatemia), não cai como diz o texto ('hipofosfatemia' está errado). (V) realmente ocorre mais em tumores que respondem bem e rápido à quimioterapia, como linfoma de Burkitt e leucemias. (F) a prevenção certa é HIDRATAR bastante (não restringir líquido!) mais alopurinol. Juntando: V-F-F-V-F.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -1937,7 +1937,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Na síndrome de lise tumoral, o cálcio CAI (hipocalcemia), não sobe — por isso a hipercalcemia é a única opção que NÃO faz parte desse quadro, diferente do potássio, fósforo e ácido úrico altos, e da acidose lática, que são todos esperados.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -1970,7 +1970,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Cansaço, sangramento, febre, fígado/baço aumentados, gengiva engrossada (hipertrofia gengival — bem típica de um subtipo de leucemia que 'invade' a gengiva), anemia, plaquetas baixas e blastos no sangue e na medula — leucemia aguda. Na hora de olhar as células no microscópio, a presença de bastonetes de Auer (uns 'palitinhos' dentro do citoplasma) é o achado que confirma que a leucemia é da linhagem MIELOIDE, e não linfoide.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -2004,7 +2004,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Quando a quimioterapia da leucemia começa, as células doentes morrem em massa e liberam seu conteúdo no sangue — causando aumento do potássio (hiperpotassemia) e do fósforo (hiperfosfatemia), enquanto o cálcio cai (hipocalcemia), formando o padrão clássico da síndrome de lise tumoral.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -2038,7 +2038,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Na LMA-M3 (leucemia promielocítica aguda), o uso do ácido transretinoico (ATRA) durante a fase de indução ajuda a evitar os graves eventos hemorrágicos que essa leucemia costuma causar — ele faz as células promielocíticas amadurecerem em vez de continuar liberando substâncias que atrapalham a coagulação do sangue.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -2072,7 +2072,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "As alterações mais associadas à lise tumoral são: fósforo alto (hiperfosfatemia), potássio alto (hipercalemia), cálcio baixo (hipocalcemia), falência renal como consequência, e arritmias cardíacas (causadas pelo potássio alto e cálcio baixo).",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -2105,7 +2105,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Diminuição da urina, junto com potássio alto e cálcio baixo — tudo aponta pro rim sofrendo com a lise tumoral. Com pouca urina saindo há 24 horas, um dos achados mais IMPROVÁVEIS de encontrar seria hipopotassemia (potássio baixo), já que a lise tumoral faz o CONTRÁRIO: sobe o potássio (hipercalemia), especialmente quando o rim não está eliminando direito.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -2138,7 +2138,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Febre persistente, dificuldade de se alimentar por causa da gengiva sangrando/inchada, petéquias, leucócitos altos com 13% de blastos e plaquetas baixas — apesar de parecer amigdalite ou dengue à primeira vista, esse conjunto (principalmente os blastos circulando no sangue) aponta pra leucemia aguda.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -2172,7 +2172,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Sangramento de gengiva, hematomas espontâneos, anemia grave, leucócitos baixos com muitos blastos, plaquetas bem baixas, TP e TTPa alargados, D-dímero muito alto, fibrinogênio baixo, e a presença da translocação t(15;17) — é o quadro completo (incluindo a coagulopatia grave, tipo CIVD) da leucemia promielocítica aguda. Precisa começar o ácido transretinoico (ATRA) imediatamente, já que ele ajuda a corrigir essa coagulopatia perigosa, além de tratar a leucemia.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -2206,7 +2206,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Na síndrome de lise tumoral, o padrão clássico é: ácido úrico aumentado, potássio aumentado, fosfato aumentado e cálcio diminuído — tudo por causa do conteúdo das células tumorais destruídas sendo despejado no sangue de uma vez.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -2239,7 +2239,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A tríade clássica mais cobrada da síndrome de lise tumoral é: potássio alto (hiperpotassemia), fósforo alto (hiperfosfatemia) e ácido úrico alto (hiperuricemia) — o cálcio baixo geralmente é citado como uma quarta alteração associada, secundária ao fósforo alto.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -2272,7 +2272,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Febre, dor nas juntas, lesões na pele, palidez, gânglios e fígado/baço endurecidos e aumentados numa criança — quadro bem sugestivo de leucemia, que pode se disfarçar de doença reumatológica ou infecciosa no início.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -2306,7 +2306,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A abordagem inicial padrão da lise tumoral inclui: alopurinol (reduz a produção de ácido úrico), hidratação agressiva (protege o rim) e alcalinização da urina (ajuda a eliminar o ácido úrico). Já o diurético não faz parte da abordagem inicial padrão — pode até ser usado em situações específicas depois, mas não é um pilar do tratamento inicial.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -2339,7 +2339,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Artrite que 'migra' de uma articulação pra outra, dor na perna, sem resposta ao anti-inflamatório, febre no fim da tarde — pode lembrar doença reumatológica, mas é um padrão clássico de leucemia se apresentando como se fosse artrite. É importante lembrar que a leucemia pode disfarçar-se assim antes de aparecerem sinais mais óbvios (anemia, organomegalia).",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -2373,7 +2373,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "O tratamento com ácido transretinoico (ATRA) na leucemia promielocítica aguda pode causar uma complicação grave chamada síndrome retinoide (ou síndrome de diferenciação): febre, retenção de líquido, falta de ar, por causa das células que estão amadurecendo rápido demais e causando uma reação inflamatória exagerada.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -2409,7 +2409,7 @@
       ],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Questão baseada numa tabela/imagem de marcadores de imunofenotipagem que não está disponível aqui em texto — vale revisar a fonte original com a imagem completa pra entender bem a lógica da combinação correta.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -2442,7 +2442,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A complicação mais frequente e temida da leucemia promielocítica aguda é a coagulação intravascular disseminada (CIVD) — essas células liberam substâncias que bagunçam a coagulação, causando ao mesmo tempo sangramento grave e formação de coágulos.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -2475,7 +2475,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Durante a fase de indução da quimioterapia (quando a medula fica 'apagada' temporariamente), é normal e esperado ter contagens baixas de células no sangue. Esse paciente está assintomático e com plaquetas em 15 mil — um nível que, em paciente estável sem sangramento, ainda permite apenas observar, sem necessidade de transfusão imediata (o limite pra transfundir profilaticamente sem sangramento costuma ser bem mais baixo, em torno de 10 mil).",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -2509,7 +2509,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Tumores que crescem e morrem muito rápido (como leucemias e linfomas agressivos, incluindo o de Burkitt) são os que mais causam lise tumoral. Já o câncer de mama é um tumor sólido de crescimento bem mais lento, não sendo classicamente associado a alto risco dessa síndrome.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -2545,7 +2545,7 @@
       ],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Questão baseada em imagens que não estão disponíveis aqui em texto — vale revisar a fonte original com as figuras pra entender a lógica completa da resposta.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -2578,7 +2578,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Diferente do que se imagina, o comprometimento do sistema nervoso central NÃO é comum logo no diagnóstico da leucemia linfoblástica aguda infantil (acontece numa fração pequena dos casos) — dor óssea, edema articular e anemia, por outro lado, SÃO achados bem frequentes.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -2612,7 +2612,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A neutropenia febril (febre com as defesas baixas por causa da quimioterapia) é uma emergência bem comum no tratamento das leucemias, e precisa de antibiótico na veia rápido, porque uma infecção pode evoluir muito mal nesses pacientes sem defesas.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -2646,7 +2646,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Fraqueza, palidez, manchas roxas, sangramento nasal, fígado/baço aumentados, anemia grave, leucócitos muito altos (180 mil) e plaquetas muito baixas numa criança — leucemia aguda com hiperleucocitose. Nesse caso, é importante hidratar e transfundir plaquetas (pelo sangramento), mas EVITAR transfundir hemácias por enquanto: aumentar ainda mais a 'espessura' do sangue quando já tem tantos leucócitos pode piorar a circulação nos vasos pequenos (leucostase), um detalhe importante da hiperleucocitose.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -2680,7 +2680,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A translocação t(9;22), o famoso 'cromossomo Filadélfia', aparece em cerca de 3 a 5% das crianças com leucemia linfoide aguda (bem menos comum que nos adultos, onde chega a 25%) — e é considerada um fator de MAU prognóstico quando presente.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -2711,7 +2711,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A frase está errada: a lise tumoral não REDUZ o potássio, ela AUMENTA (hipercalemia) — junto com o fósforo, que também sobe (hiperfosfatemia), e o cálcio, que cai (hipocalcemia). A frase inverteu o que acontece com o potássio.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -2744,7 +2744,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Depois de iniciar o tratamento de um linfoma agressivo, além do ácido úrico subindo, o padrão clássico da lise tumoral também inclui: potássio alto (hipercalemia), fósforo alto (hiperfosfatemia) e cálcio baixo (hipocalcemia) — tudo dentro dos primeiros 7 dias de tratamento.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -2777,7 +2777,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Criança com síndrome de Down (que tem risco bem maior de leucemia), gengiva sangrando, menos ativa, palidez, baço aumentado e equimoses nas pernas — quadro sugestivo de leucemia, uma das complicações hematológicas mais associadas à síndrome de Down.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -2810,7 +2810,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "O padrão metabólico da síndrome de lise tumoral é: potássio alto (hipercalemia), ácido úrico alto (hiperuricemia), cálcio baixo (hipocalcemia) e acidose metabólica (o rim, sobrecarregado, não consegue equilibrar bem o pH do sangue).",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -2844,7 +2844,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "O benzeno (encontrado em solventes e derivados de petróleo) é o produto químico mais classicamente associado ao desenvolvimento de leucemia mieloide aguda, principalmente em quem tem exposição ocupacional prolongada.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -2878,7 +2878,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Astenia, febre, anemia, plaquetas baixas e um hemograma com 80% de promielócitos — quadro de leucemia promielocítica aguda. A complicação mais temida dessa doença é a coagulação intravascular disseminada (CIVD), que pode causar sangramentos graves e potencialmente fatais logo no início.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -2912,7 +2912,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A síndrome de lise tumoral, causada pela destruição maciça de células cancerígenas após a quimioterapia, tem como complicação mais temida a insuficiência renal — os rins ficam sobrecarregados tentando eliminar o excesso de ácido úrico e fósforo.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -2945,7 +2945,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A doença enxerto-hospedeiro (GVHD) acontece principalmente depois de um transplante ALOGÊNICO de medula óssea (ou seja, de outra pessoa) — as células imunes transplantadas 'estranham' o corpo do receptor e o atacam, como um enxerto que rejeita o próprio hospedeiro.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -2979,7 +2979,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "O benzeno é o agente químico ocupacional mais classicamente ligado ao desenvolvimento de leucemia mieloide aguda em trabalhadores expostos repetidamente a ele.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -3012,7 +3012,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Ter mais de 10 anos de idade (nesse caso, 12) é considerado um fator de prognóstico menos favorável na leucemia linfoide aguda infantil — a faixa etária com melhor resposta ao tratamento é entre 1 e 9 anos.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -3045,7 +3045,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A pergunta pede a frase ERRADA. A lise tumoral realmente causa hipercalemia, hiperuricemia e hiperfosfatemia — mas o cálcio CAI (hipocalcemia), não sobe como diz a alternativa A ('hipercalcemia'). Por isso essa é a frase incorreta.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -3079,7 +3079,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Na lise tumoral, o cálcio CAI (hipocalcemia), não sobe — por isso a hipercalcemia é a única alteração que NÃO faz parte desse quadro, diferente do ácido úrico, potássio e fósforo altos, e do LDH bem elevado (que mostra a destruição celular acontecendo).",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -3113,7 +3113,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Náusea, vômito, fraqueza, muita urina, desidratação, confusão mental, e um eletrocardiograma mostrando o intervalo QT ENCURTADO com o coração mais devagar — esse padrão é bem característico de hipercalcemia (cálcio alto), diferente da hipocalcemia (que alargaria o QT). Cálcio alto também explica a poliúria (o rim perde a capacidade de concentrar a urina).",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -3147,7 +3147,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Sem mais detalhes de exames de eletrólitos mostrados no texto, a resposta assume que os distúrbios eletrolíticos clássicos a serem corrigidos pra recuperar a função renal nesse contexto (mieloma múltiplo pós-quimioterapia) são a hipercalcemia (já presente pela doença de base) e a hiperuricemia (surgida com o tratamento) — ambas capazes de prejudicar o funcionamento renal quando não corrigidas.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -3181,7 +3181,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Palidez, prostração, manchas vermelhas na pele, gânglios aumentados, fígado/baço aumentados, anemia importante, leucócitos muito altos com muitas células atípicas e plaquetas bem baixas numa criança pequena — quadro de leucemia aguda. Entre os fatores citados, ter mais de 1 ano de idade é o único associado a bom prognóstico — bebês com menos de 1 ano têm chances de cura bem menores.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -3214,7 +3214,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A lise tumoral acontece mais em tumores de ALTO grau (que crescem e morrem rápido, como linfomas agressivos e câncer de pulmão de pequenas células), não em tumores de baixo grau/crescimento lento — diferente do que diz a primeira alternativa.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -3248,7 +3248,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "O padrão clássico da lise tumoral que o pediatra precisa reconhecer é: potássio alto (hipercalemia), fósforo alto (hiperfosfatemia), cálcio baixo (hipocalcemia) e ácido úrico alto (hiperuricemia) — todos por causa da destruição maciça das células leucêmicas liberando seu conteúdo no sangue.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -3282,7 +3282,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "As alterações cromossômicas de PIOR prognóstico na leucemia linfoide aguda infantil são: hipodiploidia (menos cromossomos que o normal), cromossomo Filadélfia (t(9;22)) e a translocação t(4;11) — diferente da hiperdiploidia, que na verdade é um fator de BOM prognóstico.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -3316,7 +3316,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A pergunta pede a frase INCORRETA. Apesar de os sintomas listados (gânglios, sangramentos, artrite, dor óssea) até serem reais na leucemia linfocítica aguda, essa combinação específica dita como 'os sintomas mais frequentes' não é a descrição mais precisa — as outras frases (sobre cloromas na leucemia mieloide, papel da imunofenotipagem, pior prognóstico em lactentes, e infiltração frequente de medula e outros órgãos) estão corretas e bem estabelecidas.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
@@ -3350,7 +3350,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A neutropenia febril é uma emergência oncológica muito comum durante o tratamento das leucemias (já que a quimioterapia derruba as defesas), e precisa de antibiótico na veia rapidamente, pois uma infecção pode piorar muito rápido nesses pacientes.",
       "tags": [
         "Hematologia",
         "Leucemias Agudas",

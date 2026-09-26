@@ -28,13 +28,13 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
       "tags": [
         "Ginecologia e Obstetrícia",
         "MED OBS 03",
         "MED"
       ],
-      "answerSource": "missing"
+      "answerSource": "missing",
+      "commentDeferred": false
     },
     {
       "id": "med-gineco-e-obstetricia-med-obs-03-29419",

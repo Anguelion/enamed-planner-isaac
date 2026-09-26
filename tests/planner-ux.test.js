@@ -137,7 +137,7 @@ test('integração mantém Pointer Events e Fazedor de questões no fim',()=>{
   const views=planner.match(/const views = \[([\s\S]*?)\n\];/)?.[1]||'';
   assert.ok(views.includes("['importar-questoes'"));
   const groups=planner.match(/const VIEW_GROUPS = \{([\s\S]*?)\n\};/)?.[1]||'';
-  assert.match(groups,/'importar-questoes':'Outros'/);
+  assert.match(groups,/'importar-questoes':'Mais'/);
 });
 
 test('banco de questões oferece navegação por especialidade, bloco e arquivo TXT',()=>{
@@ -348,4 +348,39 @@ test('edições do cronograma atualizam somente a linha e reutilizam eventos del
   assert.match(planner,/if\(scheduleInputsDelegated\) return;/);
   assert.match(planner,/document\.addEventListener\('change',event=>/);
   assert.doesNotMatch(planner,/document\.querySelectorAll\('\[data-id\]\[data-field\]'\)\.forEach/);
+});
+
+test('fluxo de estudo prioriza conteúdo confiável e revisão ativa',()=>{
+  const root=path.resolve(__dirname,'..');
+  const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');
+  const css=fs.readFileSync(path.join(root,'assets/planner.css'),'utf8');
+  assert.match(planner,/function dailyStudyTargets\(date\)/);
+  assert.match(planner,/DAILY_STUDY_MINUTE_OPTIONS = \[10, 25, 45, 90\]/);
+  assert.match(planner,/if\(quality\.pending && ui\.qStatus !== 'Gabarito pendente'\) return false/);
+  assert.match(planner,/questionBank\.filter\(questionReadyForSimulation\)/);
+  assert.match(planner,/async function generateSimuladoRun\(\)[\s\S]*?await loadFullQuestionBank\(\)/);
+  assert.match(planner,/function renderCadernoReviewSession\(entry\)/);
+  assert.match(planner,/questionReviewHistory\.push/);
+  assert.match(css,/\.qbank-mode\.sidebar-collapsed \.question-sidebar\{display:none!important\}/);
+  assert.match(css,/\.caderno-review-option\.correct/);
+});
+
+test('caderno de erros expõe título principal e nomes acessíveis nos filtros',()=>{
+  const root=path.resolve(__dirname,'..');
+  const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');
+  assert.match(planner,/<h1>Caderno de erros<\/h1>/);
+  assert.match(planner,/id="cadernoArea" aria-label="Filtrar caderno por área"/);
+  assert.match(planner,/id="cadernoReview" aria-label="Filtrar caderno por situação da revisão"/);
+});
+
+test('entrada pública carrega somente autenticação antes da sessão',()=>{
+  const root=path.resolve(__dirname,'..');
+  const html=fs.readFileSync(path.join(root,'index.html'),'utf8');
+  const loader=fs.readFileSync(path.join(root,'assets/app-loader.js'),'utf8');
+  assert.match(html,/assets\/auth-shell\.css/);
+  assert.match(html,/assets\/app-loader\.js/);
+  assert.doesNotMatch(html,/assets\/planner\.js/);
+  assert.doesNotMatch(html,/assets\/dr-sotero\.png/);
+  assert.match(loader,/function bootFullApp\(\)/);
+  assert.match(loader,/requestIdleCallback\(load,\{timeout:3500\}\)/);
 });

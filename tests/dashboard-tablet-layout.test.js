@@ -9,10 +9,11 @@ const root = path.resolve(__dirname, '..');
 const planner = fs.readFileSync(path.join(root, 'assets/planner.js'), 'utf8');
 const css = fs.readFileSync(path.join(root, 'assets/planner.css'), 'utf8');
 
-test('sorteio da trilha fica compacto e acessível', () => {
-  assert.match(planner, /id="dailyRandomChoice"[^>]*title="Deixe-me escolher"[^>]*aria-label="Deixe-me escolher"/);
-  assert.match(css, /\.daily-road-tools \.daily-random-choice\{width:36px;height:36px;min-height:36px;padding:0;border-radius:10px\}/);
-  assert.match(css, /\.daily-road-tools \.daily-random-choice span\{display:none\}/);
+test('próxima melhor ação fica explícita e acessível', () => {
+  assert.match(planner, /class="daily-prescription"/);
+  assert.match(planner, /id="dailyRandomChoice"[^>]*type="button"/);
+  assert.match(planner, /Próxima melhor ação/);
+  assert.match(css, /\.daily-prescription \.daily-random-choice\{flex:0 0 auto;min-width:170px;justify-content:center\}/);
 });
 
 test('gamificação ocupa o espaço ao lado de continuar estudando no tablet', () => {

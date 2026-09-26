@@ -12791,13 +12791,13 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
       "tags": [
         "Clínica Médica",
         "MED CLM 17",
         "MED"
       ],
-      "answerSource": "missing"
+      "answerSource": "missing",
+      "commentDeferred": false
     },
     {
       "id": "med-clinica-medica-med-clm-17-252399",

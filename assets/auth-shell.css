@@ -1,0 +1,22 @@
+:root{color-scheme:light;--auth-ink:#10243a;--auth-muted:#627184;--auth-line:rgba(21,75,104,.16);--auth-blue:#176b9a;--auth-teal:#12877c;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+*{box-sizing:border-box}
+html,body{min-height:100%;margin:0}
+body{background:radial-gradient(circle at 12% 12%,rgba(65,170,190,.18),transparent 34%),radial-gradient(circle at 88% 82%,rgba(54,108,181,.15),transparent 35%),#f5f8fb;color:var(--auth-ink)}
+body.auth-locked .app-sidebar,body.auth-locked .app-header,body.auth-locked main{display:none!important}
+.login-screen{min-height:100dvh;display:grid;place-items:center;padding:24px}
+.login-card{width:min(430px,100%);padding:34px;border:1px solid var(--auth-line);border-radius:24px;background:rgba(255,255,255,.94);box-shadow:0 24px 80px rgba(25,67,93,.16);text-align:center;backdrop-filter:blur(18px)}
+.login-mark{display:grid;place-items:center;width:58px;height:58px;margin:0 auto 16px;border-radius:18px;background:linear-gradient(135deg,var(--auth-teal),var(--auth-blue));color:#fff;font-size:19px;font-weight:900;letter-spacing:-.04em;box-shadow:0 12px 26px rgba(23,107,154,.24)}
+.login-card h1{margin:0;font-size:30px;letter-spacing:-.045em}
+.login-copy{max-width:34ch;margin:9px auto 24px;color:var(--auth-muted);font-size:14px;line-height:1.55}
+.auth-box{display:grid;gap:11px}
+.auth-box .input{width:100%;min-height:48px;padding:0 14px;border:1px solid var(--auth-line);border-radius:13px;background:#fff;color:var(--auth-ink);font:inherit;outline:0}
+.auth-box .input:focus{border-color:var(--auth-blue);box-shadow:0 0 0 3px rgba(23,107,154,.12)}
+.auth-actions{display:grid;margin-top:3px}
+.auth-actions button{min-height:48px;border:0;border-radius:13px;background:linear-gradient(135deg,var(--auth-teal),var(--auth-blue));color:#fff;font:800 14px/1 inherit;cursor:pointer}
+.auth-actions button:disabled{opacity:.62;cursor:wait}
+.auth-message{min-height:18px;color:var(--auth-muted);font-size:12px;line-height:1.45}
+.login-screen.hidden{display:none}
+body.app-loading.authenticated .login-screen{display:none}
+body.app-loading.authenticated:before{content:"Preparando seu plano de estudos…";position:fixed;inset:0;z-index:9999;display:grid;place-items:center;padding:24px;background:#f5f8fb;color:var(--auth-muted);font-size:14px;font-weight:750}
+@media(max-width:520px){.login-screen{padding:14px}.login-card{padding:27px 20px;border-radius:20px}}
+@media(prefers-color-scheme:dark){body{background:#10181f}.login-card{background:#18242c;color:#eef7fa}.auth-box .input{background:#111b22;color:#eef7fa}.login-copy,.auth-message{color:#a9b9c4}body.app-loading.authenticated:before{background:#10181f;color:#a9b9c4}}

@@ -1947,7 +1947,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Ver que as hemácias estão pequenas e pálidas (microcíticas e hipocrômicas) já entrega uma pista forte de anemia por falta de ferro. Mas pra ter certeza do MECANISMO (será que é falta de ferro mesmo, ou outra causa que imita esse padrão?), o exame certo é a ferritina, que mostra o estoque de ferro do corpo.",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -1981,7 +1981,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A frase errada é a A: a anemia hemolítica autoimune (AHAI) não é 'hipoproliferativa' — é justamente o contrário! Na AHAI, as hemácias estão sendo destruídas rápido demais, e a medula responde produzindo MAIS células (reticulocitose), tentando compensar. Já anemia ferropriva, megaloblástica e a substituição da medula por gordura na aplasia são exemplos reais de baixa produção (hipoproliferativas), e as anemias microangiopáticas realmente mostram esquizócitos (hemácias fragmentadas) no sangue.",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -2015,7 +2015,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Os corpos de Howell-Jolly são pedacinhos de material genético que sobram dentro da hemácia — normalmente o baço 'limpa' esses restos antes da célula cair na circulação. Quando eles aparecem no sangue, é sinal de que o baço não está fazendo esse trabalho de limpeza, o que é bem comum em quem já teve o baço retirado (esplenectomia).",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -2049,7 +2049,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Formigamento nas pernas por um ano, parou de andar, anemia com hemácias grandes (VCM 110), neutrófilos hipersegmentados e anticorpos contra as células do estômago (que produzem o 'fator intrínseco' necessário pra absorver B12) — é o retrato clássico da anemia perniciosa, uma forma autoimune de deficiência de vitamina B12.",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -2083,7 +2083,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "As duas anemias que deixam as hemácias pequenas E pálidas (hipocrômicas e microcíticas) ao mesmo tempo são a anemia ferropriva (falta de ferro) e a betatalassemia (problema genético na fabricação da hemoglobina) — ambas atrapalham a produção de hemoglobina dentro da célula.",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -2117,7 +2117,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Quando a hemácia tem tamanho e cor normais (normocítica e normocrômica), a primeira suspeita, na maioria das vezes, é a anemia de doença crônica — aquela que aparece 'de tabela' em quem tem uma inflamação ou doença crônica de base (como artrite reumatoide, câncer ou infecção prolongada), sem ser um problema direto da fábrica de sangue.",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -2150,7 +2150,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Depois de uma cirurgia bariátrica, o corpo absorve pior certas vitaminas — e uma das mais importantes é a B12 (cobalamina), que precisa de um caminho específico no estômago/intestino pra ser absorvida, caminho esse que fica alterado depois da cirurgia. O VCM alto (110) e os neutrófilos hipersegmentados reforçam essa suspeita, mesmo com o ferro sendo reposto direitinho (já que o problema aqui não é falta de ferro).",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -2184,7 +2184,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Palidez importante numa bebê que só toma leite artificial, com reticulócitos e LDH bem AUMENTADOS — esses dois detalhes são a chave: se fosse falta de ferro (a suspeita mais óbvia pela dieta), os reticulócitos estariam baixos, não altos. Reticulócitos altos + LDH alto mostram que as hemácias estão sendo destruídas rápido (hemólise), e a medula está tentando repor, produzindo mais.",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -2218,7 +2218,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "O detalhe chave aqui é: MUITAS hemácias (6,5 milhões, acima do normal) mas cada uma carregando POUCA hemoglobina (9,2), com tamanho uniforme (RDW normal, 14,1%) — esse padrão (hemácias em excesso mas 'fraquinhas' e parecidas entre si) é bem típico de talassemia, considerada o defeito genético mais comum do mundo, mais frequente até que a anemia falciforme.",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -2251,7 +2251,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Anemia isolada (leucócitos e plaquetas normais) com reticulócitos baixos (0,6%, mostrando que a medula não está compensando) num idoso — esse padrão combina com causas que 'travam' a produção de sangue sem afetar tanto as outras linhagens no início, como a deficiência de vitamina B12 e a mielofibrose (uma doença que substitui a medula por fibrose).",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -2284,7 +2284,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Pra começar a investigar qualquer anemia, os dois exames-base são o hemograma (que já mostra o tamanho e cor das hemácias) e a contagem de reticulócitos (que mostra se a medula está compensando ou não a anemia) — com esses dois já dá pra direcionar o resto da investigação.",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -2317,7 +2317,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Microcitose é, por definição, quando o volume corpuscular médio (VCM) — que mede o tamanho médio da hemácia — está abaixo do normal. É literalmente isso que a palavra significa: célula pequena.",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -2351,7 +2351,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Mielodisplasia, deficiência de B12, ferropriva e anemia sideroblástica são causas de anemia por PRODUÇÃO baixa — por isso os reticulócitos ficam baixos (a medula não está compensando). Já a esferocitose hereditária é uma anemia HEMOLÍTICA: as hemácias são destruídas rápido, e a medula responde produzindo MAIS, então os reticulócitos ficam altos, não baixos — por isso é a exceção certa.",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -2385,7 +2385,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "As causas mais clássicas de anemia MICROCÍTICA são a falta de ferro e as hemoglobinopatias (como talassemia) — ambas atrapalham a fabricação da hemoglobina dentro da célula, deixando-a pequena e pálida. As outras alternativas erram: o corte de hemoglobina pra diagnosticar anemia MUDA conforme idade/sexo/gravidez (não é sempre 12), macrocítica vem principalmente de falta de B12/folato (não hemorragia, que causa anemia normocítica aguda), e sempre vale avaliar as outras séries do sangue ao investigar anemia.",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -2418,7 +2418,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Comparando com os valores normais: hemoglobina/hematócrito baixos = anemia; leucócitos abaixo de 4.000-4.500 = leucopenia; plaquetas abaixo de 150.000 = plaquetopenia. Juntando os três achados dessa paciente: anemia, leucopenia e plaquetopenia.",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -2452,7 +2452,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Se apareceram corpos de Howell-Jolly no sangue mesmo 45 dias depois da lesão no baço, isso mostra que o baço realmente parou de funcionar (foi retirado ou perdeu a função) — e não há um 'baço acessório' compensando esse trabalho de limpeza que o baço normalmente faz.",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -2485,7 +2485,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Em quem tem anemia falciforme, o baço vai sendo destruído aos poucos por micro-infartos repetidos (causados pelas próprias hemácias falcizadas entupindo os vasinhos), até parar de funcionar completamente — isso se chama hipoesplenismo, e por isso aparecem corpos de Howell-Jolly no sangue (sem o baço, ninguém 'limpa' esses restinhos das hemácias).",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -2520,7 +2520,7 @@
       ],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Febre e dor nas juntas num jovem, com anemia e uma lâmina de sangue mostrando (presumivelmente) hemácias em formato de foice — é o retrato clássico de uma crise de anemia falciforme, geralmente desencadeada por uma infecção ou outro gatilho.",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -2553,7 +2553,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A anemia sideroblástica é uma das causas que entram no diagnóstico diferencial das anemias microcíticas — nela, a medula até tem ferro disponível, mas não consegue usá-lo direito pra fabricar hemoglobina, formando hemácias pequenas e pálidas parecidas com a ferropriva.",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -2589,7 +2589,7 @@
       ],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Sem poder ver a imagem original da lâmina, a resposta indicada (Rouleaux - Hipergamaglobulinemia) descreve o padrão clássico em que as hemácias se empilham como moedas — um achado bem associado a doenças que produzem excesso de proteínas no sangue, como o mieloma múltiplo.",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -2623,7 +2623,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A dapsona (remédio usado, por exemplo, na hanseníase) é um gatilho clássico de hemólise em quem tem deficiência de G6PD — uma enzima que protege a hemácia do estresse oxidativo. Sem ela funcionando direito, a hemoglobina se desnatura dentro da célula, formando os corpos de Heinz, e a hemácia acaba sendo destruída.",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -2656,7 +2656,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Os números contam a história: hemácias pequenas (VCM 72, baixo) e pálidas (CHCM baixo) — o padrão clássico da falta de ferro. Por isso, o tratamento que mais provavelmente vai fazer essa anemia melhorar é a reposição de ferro.",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -2690,7 +2690,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Quando o VCM está alto (hemácias grandes, anemia macrocítica), uma das causas clássicas a se pensar é a deficiência de folato (ácido fólico) — junto com a deficiência de vitamina B12, ambas atrapalham a divisão celular normal da medula óssea, deixando as células maiores que o normal.",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -2724,7 +2724,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Um joguinho de combinar: o paciente III tem HbA2 alta, marca do traço talassêmico, que dá anemia MICROCÍTICA. O paciente II tem artrite reumatoide (doença inflamatória crônica), que dá anemia NORMOCÍTICA (anemia de doença crônica). O paciente I tem TSH muito alto (hipotireoidismo), que classicamente dá anemia MACROCÍTICA. Juntando na ordem pedida (micro, normo, macro): III, II, I — a alternativa D.",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -2757,7 +2757,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A anemia causada por inflamação crônica (como no lúpus) costuma ser normocítica — ou seja, as hemácias mantêm um tamanho dentro da faixa normal (80 a 100 fl), diferente da anemia ferropriva (microcítica) ou da anemia por falta de B12/folato (macrocítica).",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -2791,7 +2791,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Aplasia, falta de B12, falta de ferro e mielodisplasia são todas causas de PRODUÇÃO baixa de hemácias (a fábrica trabalhando devagar). Já a anemia hemolítica autoimune é o contrário: a produção está normal (ou até aumentada), o problema é que as hemácias estão sendo DESTRUÍDAS rápido demais — por isso é a exceção certa.",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -2824,7 +2824,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Um combo bem didático: a doença celíaca atrapalha a absorção de ferro no intestino, causando anemia hipocrômica e microcítica; a anemia aplástica (medula parada) é normocrômica e normocítica; e a falta de ácido fólico causa anemia normocrômica macrocítica — cada doença representando um padrão diferente de tamanho de hemácia.",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -2858,7 +2858,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "De novo: microcitose é, por definição, quando o volume corpuscular médio (VCM) está abaixo do normal — a medida direta do tamanho da hemácia.",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -2891,7 +2891,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A associação errada é a D: neutrófilos hipersegmentados (com muitos 'lóbulos' no núcleo) são a marca registrada da anemia MEGALOBLÁSTICA (falta de B12/folato), não de infecção — infecção costuma causar o efeito contrário, com neutrófilos mais jovens aparecendo no sangue (desvio à esquerda). As outras associações (Howell-Jolly com baço ruim, hemácias grandes e ovaladas com megaloblástica, esferócitos com anemia hemolítica autoimune) estão corretas.",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -2926,7 +2926,7 @@
       ],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Fraqueza, falta de ar, inchaço nas pernas, palpitações, palidez com um toque de icterícia, formigamento nas mãos e pés — e no hemograma, anemia GRAVE (Hb 4,4!) com hemácias enormes (VCM 117), leucócitos e plaquetas baixos, reticulócitos baixos. É um quadro avançado e grave de anemia perniciosa (falta de B12 de causa autoimune), que também pode mexer com outras linhagens do sangue quando muito avançada, além dos sintomas neurológicos (formigamento).",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -2960,7 +2960,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Entre as causas clássicas de anemia microcítica estão a talassemia e a deficiência de ferro — a mielodisplasia entra como uma causa possível (mais rara) nesse grupo, dependendo do subtipo. As outras alternativas misturam causas de anemia MACROcítica (folato e B12), que não combinam com o padrão microcítico pedido na pergunta.",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -2995,7 +2995,7 @@
       ],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Quando uma suposta anemia ferropriva não melhora mesmo com bastante tempo de sulfato ferroso, é hora de duvidar do diagnóstico inicial — e uma causa clássica que 'imita' a ferropriva no hemograma (hemácias pequenas e pálidas), mas não responde ao ferro porque o problema é genético (não é falta de ferro), é a talassemia.",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -3028,7 +3028,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Grávida com doença de Crohn (que pode atrapalhar a absorção de vitaminas no intestino), enjoos, anemia com hemácias GRANDES (VCM 100) e neutrófilos hipersegmentados — esse padrão aponta pra uma anemia por falta de vitamina B12 (chamada aqui de perniciosa), já que a doença de Crohn pode comprometer a parte do intestino responsável por essa absorção.",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -3062,7 +3062,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Reticulocitose (reticulócitos altos) acontece quando a medula está tentando COMPENSAR uma perda de hemácias — seja por hemólise, hemorragia, ou logo depois de começar a reposição de ferro/B12/folato (a medula 'acorda' e passa a produzir mais). Já na anemia aplásica, a medula está parada/danificada, então NÃO consegue produzir mais reticulócitos — por isso é a exceção.",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -3096,7 +3096,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Pela definição da OMS, uma gestante é considerada anêmica quando a hemoglobina está igual ou abaixo de 11 g/dL — esse é o número usado como corte oficial no pré-natal.",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -3130,7 +3130,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A associação certa é: esquizócitos (hemácias fragmentadas, como se tivessem passado por um liquidificador) combinam com anemia hemolítica microangiopática — situações em que as hemácias são cortadas ao passar por vasos pequenos com coágulos ou próteses. As outras associações trocam os conceitos: rouleaux está mais ligado a excesso de proteína (não infecção crônica em si), anemia megaloblástica causa HIPERsegmentação (não hipossegmentação), granulações tóxicas indicam infecção (não intoxicação por chumbo), e mieloblastos indicam leucemia MIELOIDE (não linfoblástica).",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -3164,7 +3164,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Quando a medula não está compensando a anemia (reticulócitos baixos), olhar o tamanho da hemácia (VCM) ajuda a direcionar a investigação. Se o VCM está NORMAL, é preciso pensar em causas que 'travam' a produção sem mudar o tamanho da célula, como a aplasia de medula óssea. As outras opções trocam os conceitos: VCM baixo combina com ferropriva (não B12/folato), e VCM alto combina com B12/folato (não com ferro ou talassemia, que dão células pequenas).",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -3198,7 +3198,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Hemácias grandes (VCM 114) junto com neutrófilos hipersegmentados formam a dupla clássica da anemia megaloblástica — só que esse achado sozinho não diferencia se é falta de B12, de folato, ou das duas juntas, já que ambas causam exatamente o mesmo padrão morfológico no sangue.",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -3232,7 +3232,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Vamos combinar cada caso: (1) anemia com Coombs positivo, icterícia e baço aumentado é hemólise autoimune — aqui as hemácias são destruídas rápido, a medula responde com muitos reticulócitos (que são maiores, elevando o VCM) e RDW alto (tamanhos variados) → combina com o padrão 5. (2) pancitopenia com gastrite atrófica é anemia perniciosa (falta de B12) — VCM alto, RDW alto, mas reticulócitos BAIXOS (a medula não compensa) → padrão 4. (3) anemia hereditária com HbA2 alta é talassemia — hemácias pequenas mas uniformes (RDW normal) → padrão 2. Juntando: 5-4-2.",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -3266,7 +3266,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A anemia por falta de ferro é o exemplo clássico de anemia hipocrômica (hemácias pálidas) e microcítica (hemácias pequenas) — porque sem ferro suficiente, a célula não consegue fabricar hemoglobina direito, ficando menor e mais 'clarinha'.",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -3300,7 +3300,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Reticulócitos baixos (medula não compensando) + VCM alto (hemácias grandes) é o padrão clássico da anemia perniciosa — a falta de vitamina B12 atrapalha tanto a produção quanto o tamanho normal das hemácias, deixando-as grandes e em pouca quantidade.",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
@@ -3333,7 +3333,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Macrocitose com neutrófilos hipersegmentados é o padrão clássico de falta de B12 ou folato — e todas as causas listadas (uso de bloqueador de bomba protônica, que atrapalha absorção de B12; cirurgia bariátrica; doença de Crohn) realmente podem levar a essa deficiência. Já a intoxicação por chumbo causa um padrão bem diferente (anemia microcítica, com pontilhado basofílico nas hemácias), não macrocitose — por isso é a que NÃO deve ser considerada.",
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",

@@ -8176,13 +8176,13 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
       "tags": [
         "Clínica Médica",
         "MED CLM 03",
         "MED"
       ],
-      "answerSource": "missing"
+      "answerSource": "missing",
+      "commentDeferred": false
     },
     {
       "id": "med-clinica-medica-med-clm-03-88622",
@@ -12763,13 +12763,13 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
       "tags": [
         "Clínica Médica",
         "MED CLM 03",
         "MED"
       ],
-      "answerSource": "missing"
+      "answerSource": "missing",
+      "commentDeferred": false
     },
     {
       "id": "med-clinica-medica-med-clm-03-246519",

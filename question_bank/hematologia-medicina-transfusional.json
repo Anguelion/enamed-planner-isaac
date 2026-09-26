@@ -28,7 +28,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "O quadro (febre, falta de ar grave e aquela espuma rosada saindo pela via aérea, junto com a transfusão) é a cara do TRALI — uma reação em que anticorpos que vêm DENTRO da bolsa de sangue do doador atacam os pulmões do paciente, causando um 'vazamento' que enche os pulmões de líquido, como uma esponja encharcada. Como o problema veio do doador, o banco de sangue precisa ser avisado pra descobrir quem doou aquele sangue e impedir que essa pessoa doe de novo (geralmente são mulheres que já tiveram várias gestações, porque elas desenvolvem esses anticorpos ao longo da vida).",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -61,7 +61,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Febre, falta de ar e uma radiografia toda 'embaçada' dos dois lados, começando logo no início da transfusão — isso é o TRALI de novo. Repare que a questão já descarta a hemólise de propósito: sem icterícia (olho amarelo), sem dor de barriga, sem urina escura — então não é uma reação hemolítica. É o pulmão sendo atacado pelos anticorpos do doador.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -94,7 +94,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Esse quadro (febre rápida, calafrios, dor no local da veia, dor nos flancos e sangramento pelo nariz) é bem preocupante — parece uma reação hemolítica aguda grave, que pode destruir as hemácias transfundidas e sobrecarregar o rim, além de mexer na coagulação. Por isso a conduta certa é investigar tudo: ver se está mesmo hemolisando, ver como está o rim, ver a coagulação, procurar infecção (hemocultura) e hidratar bem o paciente pra proteger os rins. É um 'check-up completo' pra entender e tratar a gravidade da reação.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -128,7 +128,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Um dos critérios pra dizer que é TRALI (e não outra coisa) é o tempo: os sintomas de falta de ar têm que aparecer em até 6 horas depois da transfusão. Fora desse prazo, já se pensa em outra causa. As outras alternativas (corticoide indicado, ventilação com volume alto, diurético indicado, só ocorre com hemácias) estão erradas: TRALI pode ocorrer com qualquer hemocomponente, não tem tratamento específico com corticoide, e na ventilação mecânica usa-se volume BAIXO (proteção pulmonar), não alto.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -162,7 +162,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Aqui é só comparar os números com os 'limites de alerta': hemoglobina abaixo de 7-8 já pede transfusão de hemácias, e plaquetas abaixo de 10.000 (principalmente em paciente oncológico) já pedem transfusão de plaquetas, mesmo sem sangramento, pelo risco de sangramento espontâneo. Só a opção C tem os dois valores baixos o suficiente pra precisar dos dois hemocomponentes ao mesmo tempo.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -196,7 +196,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Esse idoso ficou com falta de ar, pressão alta e coração acelerado durante a transfusão, mas SEM febre — isso lembra muito mais um 'excesso de líquido' (o coração não aguentou o volume extra do sangue transfundido) do que uma reação alérgica ou pulmonar imune. Essa sobrecarga se chama TACO, e o tratamento é parar a transfusão e dar um diurético pra tirar esse líquido em excesso, aliviando o coração.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -229,7 +229,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Nas reações alérgicas leves (coceira, urticária, tosse, rouquidão), depois que os sintomas melhoram com o tratamento (anti-histamínico, por exemplo), é permitido continuar a mesma transfusão — diferente de reações mais graves, em que a bolsa tem que ser descartada. As outras frases têm erros: a reação febril não hemolítica pode aparecer bem depois de 1h do fim da transfusão, a TRALI É mediada pelo sistema imune (não é 'não imunológica'), e hipercalemia/hipotermia não são reações imunológicas.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -262,7 +262,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Antes de uma cirurgia cardíaca (que sangra bastante e é feita com circulação extracorpórea), é recomendado garantir uma contagem de plaquetas mais alta que o normal — por isso, mesmo sem sangramento, esse paciente com 70.000 se beneficia da transfusão profilática antes da cirurgia. As outras opções mostram situações em que a transfusão NÃO é a mais indicada: hemoglobina de 8 numa anemia crônica estável não precisa de sangue, e os números de crioprecipitado/plasma nas outras alternativas não combinam com a indicação real desses hemocomponentes.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -295,7 +295,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Uma queda súbita de oxigênio e de pressão, minutos depois de começar a transfusão, com líquido claro saindo pelo tubo — de novo é o TRALI, que pode acontecer com qualquer hemocomponente, inclusive plaquetas (não é só com concentrado de hemácias). O líquido claro (não é pus nem sangue) mostra que é o pulmão 'vazando' por causa da reação imune, e não uma infecção (sepse) ou reação alérgica.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -328,7 +328,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Quando o paciente está com febre e infecção (neutropenia febril), o corpo consome e destrói plaquetas mais rápido, então o limite pra transfundir profilaticamente sobe de 10 mil para 20 mil — por isso esse paciente com 15 mil e febre já tem indicação, mesmo sem sangramento ativo. Os outros pacientes têm situações onde a plaqueta baixa não é o problema principal (por exemplo, na púrpura trombocitopênica trombótica, transfundir plaqueta pode até piorar a doença).",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -364,7 +364,7 @@
       ],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Seis horas depois de receber plasma fresco (pra reverter o efeito do anticoagulante), o paciente ficou com falta de ar grave — isso está dentro da janela de tempo do TRALI (até 6h) e é uma reação bem conhecida ao plasma fresco, que é rico em anticorpos do doador. Não bate com sobrecarga de volume (foram só 600ml) nem com embolia pulmonar (não há fator de risco pra isso no caso).",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -397,7 +397,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A regra geral (estratégia restritiva) pra pacientes graves sem sangramento ativo é só transfundir quando a hemoglobina cair abaixo de 7 g/dL — estudos mostram que manter a hemoglobina mais baixa que isso, sem necessidade, não traz benefício e ainda evita os riscos da transfusão.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -431,7 +431,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Vamos por paciente: o I tem hemoglobina de 8 sem sangramento — está acima do limite de 7, não precisa transfundir. O III tem 65 mil plaquetas, já suficiente pra segurança numa fratura sem cirurgia imediata. Já o II está com febre e neutropenia com plaquetas bem baixas (4.800) — abaixo do limite de segurança, então precisa. E o IV está sangrando muito e tomando anticoagulante — sangramento ativo sempre é indicação de transfusão/reversão. Por isso só II e IV entram.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -465,7 +465,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Pressão alta, coração acelerado e falta de ar aparecendo durante a transfusão, SEM febre, num paciente idoso com problema no rim (que já tem dificuldade de eliminar líquido) — é o quadro clássico de sobrecarga de volume (TACO). O coração e os rins dele não aguentaram receber tanto líquido de uma vez.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -499,7 +499,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A pergunta pede a frase ERRADA. Na vida real, a transfusão profilática de plaquetas (sem sangramento e sem procedimento) só é indicada quando a contagem cai abaixo de 10.000/mm³, e não 50.000 como diz a alternativa D — 50.000 é um limite bem mais alto do que o necessário. As outras frases (sobre hemácias e plasma) estão corretas.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -532,7 +532,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "O crioprecipitado é feito só com as proteínas que 'sobram congeladas' quando o plasma fresco descongela devagar — nele sobra fibrinogênio, fator VIII, fator de Von Willebrand e fator XIII. O fator IX não faz parte dessa 'sobra', por isso não está no crioprecipitado.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -565,7 +565,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "É o mesmo raciocínio de um caso parecido: plasma fresco pra reverter anticoagulante, e 6 horas depois falta de ar com radiografia mostrando os dois pulmões comprometidos — isso é lesão pulmonar aguda relacionada à transfusão (TRALI), reação do sistema imune aos anticorpos que vêm no plasma do doador.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -599,7 +599,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Febre isolada (sem outros sintomas) durante a transfusão é a reação mais comum de todas: a reação febril não hemolítica, causada pelos leucócitos (glóbulos brancos) que vêm junto na bolsa de sangue. Por isso, sempre se notifica o caso, devolve a bolsa que causou o problema, e nas próximas transfusões se usa um hemocomponente desleucocitado — ou seja, filtrado, sem esses leucócitos que provocam a febre.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -632,7 +632,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "É uma questão de decorar números: uma bolsa de concentrado de hemácias tem hematócrito bem concentrado (perto de 80%), e quando transfundida num adulto de 70kg, costuma subir a hemoglobina em cerca de 1 g/dl. O tempo recomendado de infusão é de 1 a 4 horas — nem rápido demais (sobrecarrega o coração) nem devagar demais (o sangue estraga fora da geladeira).",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -666,7 +666,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Mais um caso de sobrecarga de volume (TACO): falta de ar, estertores nos pulmões e radiografia de congestão pulmonar depois de receber várias bolsas de sangue, sem sinais de reação alérgica ou febre importante. O tratamento é parar/reduzir a transfusão e dar diurético pra aliviar esse excesso de líquido no pulmão.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -700,7 +700,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A reação mais comum de todas durante uma transfusão é a febril não hemolítica — aquela febre que aparece por causa dos leucócitos do doador, sem ser nada grave na maioria das vezes.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -734,7 +734,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "As indicações de transfusão de plaquetas variam de acordo com o risco de sangramento de cada situação: quando já tem sangramento ativo, sempre se transfunde; para procedimentos, cada um tem seu próprio 'limite de segurança' — cirurgias muito delicadas, como a oftalmológica, pedem plaquetas bem mais altas (perto de 100.000) do que uma punção lombar comum (50.000). A alternativa E é a única que respeita corretamente esses limites específicos de cada situação.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -767,7 +767,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Mesma lógica de um caso parecido: febre isolada, sem outros sintomas, durante a transfusão — reação febril não hemolítica, causada pelos leucócitos do doador. Conduta: notificar, devolver a bolsa e usar hemocomponente desleucocitado nas próximas vezes.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -800,7 +800,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Cirurgias no cérebro (neurocirurgia) são extremamente sensíveis a qualquer sangramento, porque não há espaço pra folga dentro do crânio. Por isso, o limite de plaquetas exigido antes dela é bem mais alto que o normal (perto de 100.000) — e esse paciente com 90.000 ainda está abaixo do ideal, precisando da transfusão profilática antes da cirurgia. As outras situações (punção venosa, epistaxe leve, PTI) não exigem esse nível tão alto de plaquetas.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -833,7 +833,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A explicação certa da reação febril não hemolítica é que o corpo do paciente (principalmente quem já recebeu transfusões ou gestações antes) desenvolveu anticorpos contra os glóbulos brancos (HLA) que vêm na bolsa — quando esses anticorpos encontram os leucócitos do doador, geram febre. Não é uma bactéria (sepse) nem algo raro — é bem comum.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -867,7 +867,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Mesmo sendo uma reação 'não grave', a bolsa de sangue que causou a febre não pode ser reaproveitada — ela é sempre analisada e descartada, como uma medida de segurança, mesmo que os sintomas melhorem.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -901,7 +901,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Como já vimos, neurocirurgia exige um limite de plaquetas bem mais alto (por volta de 100.000) do que outras cirurgias, por causa do risco de sangramento dentro do crânio — por isso essa é a indicação correta entre as opções.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -935,7 +935,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Lembra do limite de 10.000/mm³ que vimos antes? Um paciente com 7.000 plaquetas já está abaixo dele, então precisa de transfusão profilática mesmo sem estar sangrando e sem nenhum procedimento planejado — só o risco de sangramento espontâneo já justifica.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -968,7 +968,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Entre os quatro pacientes, o que mais se beneficia da transfusão é aquele que está com sintomas (falta de ar aos esforços) causados diretamente pela anemia, mostrando que o corpo dele não está tolerando bem esse nível baixo de hemoglobina. Os outros pacientes, mesmo com hemoglobina baixa, estão mais estáveis ou têm causas (como anemia ferropriva crônica) que se tratam melhor de outras formas, sem necessariamente precisar de sangue agora.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -1002,7 +1002,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Coceira e placas na pele (urticária), sem outros sintomas graves, é uma reação alérgica leve — trata-se com um anti-histamínico, pausa a transfusão até melhorar, e depois pode continuar. Não precisa de adrenalina (isso é só pra reação anafilática grave, com falta de ar e queda de pressão).",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -1036,7 +1036,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "O plasma fresco congelado NÃO deve ser usado só pra 'encher o tanque' de volume sanguíneo — pra isso existem soluções bem mais seguras e baratas, como soro fisiológico. O plasma é reservado pra repor fatores de coagulação, proteínas específicas ou tratar a PTT — não pra expansão de volume.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -1069,7 +1069,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Hoje em dia, o plasma fresco congelado é usado com bastante restrição, principalmente pra reverter rapidamente o efeito de anticoagulantes como a varfarina (efeito cumarínico) em situações de sangramento urgente — não deve ser usado pra repor volume, nutrição ou como 'sangue completo' nos grandes queimados.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -1103,7 +1103,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Já que ela teve duas reações febris não hemolíticas antes (causadas pelos leucócitos do doador), a solução é usar hemácias desleucotizadas — ou seja, filtradas, sem esses leucócitos que provocam a febre. Não é preciso irradiar (isso é pra prevenir doença enxerto-hospedeiro) nem lavar (isso é pra reações alérgicas graves).",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -1136,7 +1136,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "O crioprecipitado serve pra repor fibrinogênio e fator VIII — por isso ajuda em CIVD, transfusão maciça e hemofilia A. Já um INR alto (que mede outros fatores de coagulação, não fibrinogênio) se corrige com plasma fresco congelado, não com crioprecipitado — por isso essa é a exceção, a resposta certa.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -1170,7 +1170,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "De novo o limite de 10.000/mm³: em paciente com a medula 'desligada' pela quimioterapia, esse é o ponto de corte pra transfundir plaquetas profilaticamente, pelo risco real de sangramento espontâneo — não é 50.000 (esse número é usado só pra procedimentos, não pra decisão de rotina sem sangramento).",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -1204,7 +1204,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Na púrpura trombocitopênica imune (PTI), o próprio corpo do paciente tem anticorpos que destroem as plaquetas — então transfundir plaquetas novas praticamente não adianta, porque esses anticorpos vão destruí-las quase na mesma hora, como jogar comida numa fogueira. Por isso, de forma geral, a transfusão não costuma ajudar nesse caso (só se usa em sangramento com risco de vida).",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -1238,7 +1238,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A pergunta pede a frase ERRADA. Diferente do que diz a alternativa A, não existe boa evidência de que dar ferro e eritropoetina de rotina traga benefício clínico claro para pacientes graves internados em UTI com anemia — por isso essa afirmação está incorreta. As outras frases sobre crioprecipitado, hemocomponentes desleucocitados, limite de 10.000 plaquetas e plasma fresco sem sangramento estão certas.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -1272,7 +1272,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Entre as opções listadas, a hepatite C historicamente foi a infecção transmitida por transfusão mais comum (mais que HIV e hepatite B), por isso é a resposta certa aqui. É importante notar que, na prática, a reação febril não hemolítica é a complicação MAIS comum de todas — mas essa questão está comparando especificamente as complicações infecciosas entre si.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -1305,7 +1305,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Calafrios muito intensos (tremores fortes) durante a transfusão, mesmo sem febre ainda, costumam ser tratados com petidina (meperidina), que é bem eficaz pra cortar esse tremor. Além disso, se notifica o incidente e devolve a bolsa suspeita pro banco de sangue analisar.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -1339,7 +1339,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Apesar de ter febre, o que fecha o diagnóstico aqui é a ausência de sinais de sobrecarga de volume (sem inchaço, coração normal na ausculta) junto com um infiltrado bilateral no pulmão — isso aponta pra TRALI, e não pra TACO (que teria sinais claros de congestão) nem pra uma simples reação febril (que não causaria essa queda tão grande de oxigênio).",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -1373,7 +1373,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Na dengue, mesmo com plaquetas bem baixas, não se transfunde plaquetas só por causa do número — a queda de plaquetas na dengue tem um mecanismo diferente (mais destruição do que falta de produção) e a transfusão profilática não mostrou benefício nesses casos, sendo reservada só para sangramento ativo importante.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -1407,7 +1407,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Vamos por item: I é falso (o limite pra transfundir é hemoglobina abaixo de 7, não 10, em paciente estável). II é verdadeiro (crioprecipitado vem do plasma fresco centrifugado e é rico em fibrinogênio, fator VIII e fator de von Willebrand). III é verdadeiro (a dose padrão de plaquetas de doador randômico é mesmo cerca de 1 bolsa a cada 10kg). IV é falso (uma bolsa de hemácias sobe o hematócrito uns 3%, não 6%). V é falso (o plasma fresco reverte o efeito da varfarina, não da heparina — a heparina tem seu próprio antídoto, a protamina). Juntando: F-V-V-F-F, alternativa C.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -1440,7 +1440,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Quando o sangue transfundido está contaminado por bactéria, os germes mais comuns são justamente os da própria pele do doador ou de quem coletou a bolsa, como Staphylococcus aureus e epidermidis — eles conseguem entrar durante a punção da veia, mesmo com toda a assepsia.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -1473,7 +1473,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Os sintomas mais clássicos e comuns da reação febril não hemolítica são exatamente esses: tremores, calafrios e febre — é literalmente o nome da reação descrevendo os próprios sintomas.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -1506,7 +1506,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A alternativa C erra nos números: uma unidade de sangue total (assim como uma unidade de concentrado de hemácias) aumenta a hemoglobina em cerca de 1 g/dl, e não 3 g/dl como diz o texto — esse valor exagerado é o que torna essa alternativa incorreta. Hoje, além disso, o sangue total é pouco usado na prática, preferindo-se os componentes separados.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -1540,7 +1540,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Regrinha pra guardar: cada bolsa de concentrado de hemácias transfundida costuma subir a hemoglobina em aproximadamente 1 g/dl (num adulto de tamanho médio).",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -1573,7 +1573,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Antes de liberar uma bolsa de sangue, o banco de sangue faz uma checagem completa: descobre o tipo sanguíneo do paciente (ABO/RhD), procura anticorpos estranhos que ele possa ter, confere de novo o tipo sanguíneo da bolsa do doador, e ainda faz um 'teste de compatibilidade' misturando uma gotinha do sangue do doador com o soro do paciente pra ver se reagem mal juntos. É como testar se duas peças de quebra-cabeça realmente se encaixam antes de juntar de vez.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -1604,7 +1604,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A frase está errada: o TRALI não tem nada a ver com pressão coloidosmótica ou poder osmótico do sangue transfundido — isso seria mais parecido com o mecanismo do TACO (sobrecarga de volume). O TRALI é uma lesão pulmonar causada pelo sistema imune, quando anticorpos do doador atacam os glóbulos brancos do paciente dentro do pulmão, causando inflamação e vazamento de líquido — não é um problema de 'pressão osmótica'.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -1638,7 +1638,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A frase incorreta é a A: no hiperesplenismo (baço grande sequestrando as células do sangue), não faz sentido transfundir plaquetas dias antes da cirurgia, porque o baço aumentado vai simplesmente sequestrar e destruir essas plaquetas novas rapidinho, sem benefício nenhum — é como jogar água num balde furado. O ideal é reservar a transfusão pra perto ou durante a cirurgia, se necessário.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -1672,7 +1672,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A descrição certa do TRALI é exatamente essa: falta de ar e sinais de pulmão cheio de líquido, mas SEM os sinais de sobrecarga de volume que apareceriam no coração (sem veia do pescoço estufada, sem inchaço nas pernas), começando logo nas primeiras horas após a transfusão. Isso ajuda a diferenciar do TACO, que teria esses sinais de sobrecarga cardíaca.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -1705,7 +1705,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Assim que aparece febre durante uma transfusão, o procedimento correto é parar a infusão na hora — porque a febre pode ser só o começo de uma reação bem mais grave (como hemólise), então é melhor prevenir do que arriscar continuar.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -1738,7 +1738,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Com hemoculturas negativas (ou seja, não é infecção) e o padrão repetido de febre com calafrios durante a transfusão, a causa mais provável são os leucócitos que vêm junto na bolsa de hemácias — eles são os principais responsáveis pela reação febril não hemolítica.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -1772,7 +1772,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Em pacientes com o sistema imune muito fraco (imunossuprimidos), os linfócitos vivos que vêm dentro da bolsa de sangue podem 'atacar' o corpo do paciente, já que ele não consegue se defender — isso é a doença do enxerto contra hospedeiro. A irradiação do sangue antes da transfusão 'desliga' esses linfócitos (impede que eles se multipliquem), prevenindo essa complicação grave.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -1806,7 +1806,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Aqui a questão troca as definições de propósito: a frase I descreve errado o TRALI (isso na verdade seria mais parecido com o TRIM, que é uma imunomodulação, não uma lesão pulmonar aguda). A frase II também descreve errado o TRIM (ele não é definido como lesão pulmonar aguda, isso é o TRALI). Já a frase III sobre o TACO está certa: é realmente frequente e tem taxas altas de complicação, principalmente quando se transfunde muito volume rápido. Por isso: I-F, II-F, III-V.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -1840,7 +1840,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Mesma pegadinha de antes: o limite real pra transfusão profilática de plaquetas é 10.000/mm³, não 50.000 como diz a alternativa D — por isso essa é a frase incorreta pedida na questão.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -1874,7 +1874,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A melhor indicação do plasma fresco congelado é repor fatores de coagulação que estão faltando — ele é rico em quase todos os fatores da coagulação, diferente do crioprecipitado (que só tem alguns específicos) ou de outras opções que não são a indicação principal dele.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -1907,7 +1907,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Como o coração dele funciona normalmente (função ventricular normal), fica mais difícil culpar um edema cardiogênico. A queda da relação PaO2/FiO2 logo depois do plasma fresco aponta pra lesão pulmonar aguda relacionada à transfusão (TRALI) — o plasma é justamente um dos hemocomponentes mais associados a essa reação, por ser rico em anticorpos do doador.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -1941,7 +1941,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Vários estudos importantes mostraram que manter a hemoglobina baixa (só transfundir quando cair abaixo de 7) em pacientes graves e estáveis não piora, e às vezes até melhora, o desfecho — por isso a 'estratégia restritiva' é considerada mais segura que transfundir demais.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -1975,7 +1975,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "Pacientes que já têm risco de doença coronariana e podem sangrar significativamente (por exemplo, no pré ou pós-operatório) têm um limite mais alto de segurança — transfunde-se com hemoglobina abaixo de 10, não 7 como nos pacientes sem esse risco extra.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
@@ -2009,7 +2009,7 @@
       "images": [],
       "optionImages": {},
       "commentImages": [],
-      "comment": "",
+      "comment": "A pergunta pede a EXCEÇÃO (a frase errada). Depois de descongelado, o plasma fresco não pode voltar a ser recongelado mantendo a mesma validade longa de antes — ele precisa ser usado rapidamente (em poucas horas) ou guardado só por pouco tempo a mais na geladeira. Por isso essa frase (D) está errada, e é a resposta pedida.",
       "tags": [
         "Hematologia",
         "Medicina Transfusional",
