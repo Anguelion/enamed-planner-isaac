@@ -567,10 +567,24 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Principais doenças",
+        "Hemofilia",
+        "Tratamento",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069405",
-      "ankiGuid": "E;?>Dth1VV"
+      "ankiGuid": "E;?>Dth1VV",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Lactente-sexo11186c510c9/",
+        "sourceQuestionId": "4000165594",
+        "matchedAt": "2026-09-26T21:15:53.777Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-62c0759752a1db0b",

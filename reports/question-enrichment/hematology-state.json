@@ -3933,53 +3933,53 @@
     },
     "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-a39a8db2d3f21247": {
       "number": "1027b",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-19T20:46:57.888Z",
-      "nextAttemptAt": "2026-09-26T20:46:57.888Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-09-26T21:15:23.208Z",
+      "nextAttemptAt": "2026-10-10T21:15:23.208Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-que-contem169161d47e/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-3112a8b717d57734": {
       "number": "1028b",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-19T20:47:03.229Z",
-      "nextAttemptAt": "2026-09-26T20:47:03.229Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-09-26T21:15:29.214Z",
+      "nextAttemptAt": "2026-10-10T21:15:29.214Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Com-aos6259b9704e/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     },
     "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-72332b1e2c353ed3": {
       "number": "1029b",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-19T20:47:08.428Z",
-      "nextAttemptAt": "2026-09-26T20:47:08.428Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-09-26T21:15:35.386Z",
+      "nextAttemptAt": "2026-10-10T21:15:35.386Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Todos-fatores1336ee1495/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
     },
     "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-99751df1d87239a1": {
       "number": "1030b",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-19T20:47:13.639Z",
-      "nextAttemptAt": "2026-09-26T20:47:13.639Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-09-26T21:15:41.567Z",
+      "nextAttemptAt": "2026-10-10T21:15:41.567Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-35-anos-uso3212a10b8b/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     },
     "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-291d1cec4ea74a45": {
       "number": "1031b",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-19T20:47:18.857Z",
-      "nextAttemptAt": "2026-09-26T20:47:18.857Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-09-26T21:15:47.425Z",
+      "nextAttemptAt": "2026-10-10T21:15:47.425Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/J-K-L-67-anos-sexo63e09aa4e4/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
     },
     "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-c620771a80b68f39": {
       "number": "1032b",
@@ -4470,7 +4470,17 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-3e132f88ca04763b": {
+      "number": "1017c",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-26T21:15:53.777Z",
+      "nextAttemptAt": "2026-10-03T21:15:53.777Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Lactente-sexo11186c510c9/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     }
   },
-  "updatedAt": "2026-09-26T11:31:52.732Z"
+  "updatedAt": "2026-09-26T21:15:53.777Z"
 }

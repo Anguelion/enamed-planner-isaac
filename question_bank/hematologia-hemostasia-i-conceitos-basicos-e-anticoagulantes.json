@@ -647,10 +647,23 @@
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Heparinas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742439651987",
-      "ankiGuid": "DHwCpILbv]"
+      "ankiGuid": "DHwCpILbv]",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-que-contem169161d47e/",
+        "sourceQuestionId": "4000104387",
+        "matchedAt": "2026-09-26T21:15:23.206Z",
+        "confidence": 0.9662499999999999
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-3112a8b717d57734",
@@ -681,10 +694,28 @@
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Cardiologia",
+        "Valvopatias",
+        "Anticoagulação na doença orovalvar",
+        "Agentes anticoagulantes",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Anticoagulantes antagonistas da vitamina K",
+        "Anticoagulantes orais diretos",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742439651988",
-      "ankiGuid": "C>J{uMMq$d"
+      "ankiGuid": "C>J{uMMq$d",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Com-aos6259b9704e/",
+        "sourceQuestionId": "4000064335",
+        "matchedAt": "2026-09-26T21:15:29.212Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-72332b1e2c353ed3",
@@ -715,10 +746,22 @@
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Outras alterações dos fatores e agentes da coagulação",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742439651989",
-      "ankiGuid": "x6+,!]Om>Z"
+      "ankiGuid": "x6+,!]Om>Z",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Todos-fatores1336ee1495/",
+        "sourceQuestionId": "4000061138",
+        "matchedAt": "2026-09-26T21:15:35.386Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-99751df1d87239a1",
@@ -748,10 +791,23 @@
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Anticoagulantes antagonistas da vitamina K",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742439651990",
-      "ankiGuid": "bplSSyPK{f"
+      "ankiGuid": "bplSSyPK{f",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-35-anos-uso3212a10b8b/",
+        "sourceQuestionId": "4000052109",
+        "matchedAt": "2026-09-26T21:15:41.567Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-291d1cec4ea74a45",
@@ -781,10 +837,27 @@
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Trombocitopenia induzida pela heparina (HIT)",
+        "Diagnóstico da trombocitopenia induzida pela heparina (HIT)",
+        "Tratamento da trombocitopenia induzida pela heparina (HIT)",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Fondaparinux",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742439651991",
-      "ankiGuid": "fr/n|McGfU"
+      "ankiGuid": "fr/n|McGfU",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/J-K-L-67-anos-sexo63e09aa4e4/",
+        "sourceQuestionId": "4000033560",
+        "matchedAt": "2026-09-26T21:15:47.424Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-c620771a80b68f39",
