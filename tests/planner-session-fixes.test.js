@@ -8,6 +8,8 @@
 
 const test = require('node:test');
 const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
 const { loadPlannerSandbox } = require('./planner-sandbox.js');
 
 // Objetos vindos do sandbox de vm pertencem a outro "realm": seus Array/Object
@@ -41,6 +43,33 @@ test('Dor pélvica compartilha a videoaula com DIP sem duplicar o arquivo de mí
   assert.equal(links.length, 1);
   assert.equal(links[0].topic, 'Doença Inflamatória Pélvica Aguda');
   assert.equal(links[0].block, 9);
+});
+
+test('Missão mantém o acesso às videoaulas existentes em todos os blocos publicados', () => {
+  const ctx = loadPlannerSandbox();
+  const catalog = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'video_library', 'catalog.json'), 'utf8'));
+  ctx.__setVideoCatalog(catalog.lessons);
+  const schedule = ctx.__getState().schedule;
+  const missingPublished = schedule
+    .filter(item => Number(item.block) <= 25)
+    .filter(item => ctx.plannedVideoCountForSchedule(item) === 0)
+    .map(item => `B${item.block} · ${item.topic}`);
+
+  assert.deepEqual(plain(missingPublished), [], 'nenhuma aula dos blocos 1–25 pode perder o botão de vídeo');
+  const acls = schedule.find(item => item.topic === 'Taquiarritmias e ACL/BLS');
+  assert.ok(acls);
+  assert.deepEqual(plain(ctx.scheduleVideoAvailability(acls)), {
+    state:'available',
+    count:1,
+    available:true
+  });
+  assert.equal(ctx.videoSourcesForSchedule(acls).length, 2, 'aula completa e COFEXPRESS devem abrir pela Missão');
+  const futureWithoutMedia = schedule.find(item => Number(item.block) === 26);
+  assert.deepEqual(plain(ctx.scheduleVideoAvailability(futureWithoutMedia)), {
+    state:'unavailable',
+    count:0,
+    available:false
+  });
 });
 
 test('catálogo ativo ignora Anki, MedCurso, MED e coleções especiais', () => {

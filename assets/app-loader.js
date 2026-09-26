@@ -3,7 +3,7 @@
 
   const SUPABASE_URL='https://wbxzptiacftymhvfkiyx.supabase.co';
   const SUPABASE_PUBLISHABLE_KEY='sb_publishable_XrBwqjkwlt4Mb4rdmE-xVw_7Vt3euvP';
-  const VERSION='20260926-6';
+  const VERSION='20260926-7';
   const isLocal=location.protocol==='file:' || ['localhost','127.0.0.1','::1'].includes(location.hostname);
   let bootPromise=null;
   let authClient=null;

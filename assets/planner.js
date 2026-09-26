@@ -82,6 +82,7 @@ let materialLibrary = [];
 let videoCatalog = [];
 let officialSchedule = [];
 let videoCatalogStatus = 'Carregando videoaulas locais...';
+let videoCatalogLoadState = 'loading';
 let materialMarkdownCache = {};
 let materialImageCache = new Map();
 let flashcardImageCache = new Map();
@@ -875,13 +876,16 @@ function repairUniformScheduleDates() {
 const VIDEO_SCHEDULE_OVERRIDES = {
   '8:cofbasics lesoes elementares pediatria': { block:9, topic:'CofBasics - Lesões Elementares (Pediatria)' },
   '9:dor pelvica': { block:12, topic:'Dor Pélvica' },
-  '18:cofbasics propedeutica em uroginecologia': { block:18, order:8 }
+  '18:cofbasics propedeutica em uroginecologia': { block:18, order:8, topic:'CofBasics - Propedêutica em Uroginecologia (G.O)' }
 };
 const VIDEO_SHARED_SCHEDULE_LINKS = {
   // A pasta de Dor pélvica do bloco 9 traz a ficha-resumo específica de DIP.
   // O mesmo arquivo também atende Endometriose no bloco 12, sem duplicar mídia
   // ou progresso de reprodução.
-  '9:dor pelvica': [{ block:9, topic:'Doença Inflamatória Pélvica Aguda' }]
+  '9:dor pelvica': [{ block:9, topic:'Doença Inflamatória Pélvica Aguda' }],
+  // O cronograma antigo mantinha esta aula no bloco 8; a grade oficial nova a
+  // reposicionou no bloco 9. Durante a migração, ambos precisam abrir o mesmo vídeo.
+  '8:cofbasics lesoes elementares pediatria': [{ block:8, topic:'CofBasics - Lesões Elementares (Pediatria)' }]
 };
 function priorityClass(priority='') { return `priority-${normalizedTopic(priority) || 'baixa'}`; }
 function priorityLegend() {
@@ -940,6 +944,7 @@ function applyOfficialSchedule() {
   });
   state.schedule = ordered;
   state.officialScheduleVersion = version;
+  invalidateVideoScheduleCache();
   ensureDayLogs();
   saveStateOnly();
   return true;
@@ -5408,7 +5413,9 @@ function renderCronograma() {
   const priorityOptions=['Todas','Alta','Média','Baixa'];
   const selectedLesson=state.schedule.find(item=>item.id===ui.scheduleSelectedId) || null;
   if(ui.scheduleSelectedId&&!selectedLesson) ui.scheduleSelectedId='';
-  const selectedLessonActions=selectedLesson ? `<div class="mission-selected-actions">${plannedVideoCountForSchedule(selectedLesson)>0?`<button class="tiny-btn" type="button" data-open-schedule-videos="${escapeAttr(selectedLesson.id)}">Videoaula</button>`:''}<button class="tiny-btn" type="button" data-open-schedule-questions="${escapeAttr(selectedLesson.id)}">Questões</button><button class="tiny-btn" type="button" data-open-schedule-flashcards="${escapeAttr(selectedLesson.id)}">Flashcards</button></div>` : '';
+  const selectedVideo=selectedLesson ? scheduleVideoAvailability(selectedLesson) : null;
+  const selectedVideoLabel=selectedVideo?.state==='loading' ? 'Carregando videoaula' : selectedVideo?.state==='error' ? 'Catálogo indisponível' : 'Videoaula indisponível';
+  const selectedLessonActions=selectedLesson ? `<div class="mission-selected-actions">${selectedVideo?.available?`<button class="tiny-btn" type="button" data-open-schedule-videos="${escapeAttr(selectedLesson.id)}">Videoaula</button>`:`<button class="tiny-btn mission-video-unavailable" type="button" disabled title="${escapeAttr(selectedVideoLabel)}">${escapeHtml(selectedVideoLabel)}</button>`}<button class="tiny-btn" type="button" data-open-schedule-questions="${escapeAttr(selectedLesson.id)}">Questões</button><button class="tiny-btn" type="button" data-open-schedule-flashcards="${escapeAttr(selectedLesson.id)}">Flashcards</button></div>` : '';
   const selectedLessonBanner=selectedLesson ? `<div class="mission-selected-lesson" role="status" aria-live="polite"><span class="mission-selected-check" aria-hidden="true">✓</span><div><small>Aula selecionada</small><strong>${escapeHtml(selectedLesson.topic)}</strong><span>Bloco ${escapeHtml(String(selectedLesson.block))} · ${escapeHtml(selectedLesson.area)}</span></div>${selectedLessonActions}</div>` : '';
   const toolbar=`<div class="schedule-toolbar" role="search" aria-label="Filtrar cronograma">
     <label class="schedule-search-field"><span class="sr-only">Buscar no cronograma</span>${iconSvg('search',{weight:'regular'})}<input class="input schedule-toolbar-search" id="search" placeholder="Buscar tema, área ou data" value="${escapeAttr(ui.search)}"></label>
@@ -5616,13 +5623,18 @@ function enhanceScheduleStudyIcons() {
     openVideo?.remove();
     const colorable=n(item.block)<=currentBlock;
     const stateClass=done=>done?'done':colorable?'missing':'future';
+    const videoAvailability=scheduleVideoAvailability(item);
     const videoDone=scheduleVideoCompleted(item);
     const questionDone=completedQuestions(item)>=lessonQuestionTarget(item);
     const questionBankRemaining=Math.max(0,n(availableQuestionsForLesson(item))-questionStatsForSchedule(item.id).done);
     const flashcardDone=completedFlashcards(item)>=lessonFlashcardTarget(item);
     const icons=document.createElement('span');
     icons.className='schedule-study-icons';
-    icons.innerHTML=`${plannedVideoCountForSchedule(item)>0?`<button class="schedule-study-icon ${stateClass(videoDone)}" data-open-schedule-videos="${escapeAttr(item.id)}" title="${videoDone?'Videoaula concluída':'Videoaula pendente'}" aria-label="Videoaula">${iconSvg('play')}</button>`:''}<button class="schedule-study-icon ${stateClass(questionDone)} ${questionDone&&questionBankRemaining?'has-extra':''}" data-open-schedule-questions="${escapeAttr(item.id)}" title="${questionDone&&questionBankRemaining?`Meta concluída · ${questionBankRemaining} questões extras disponíveis`:`${completedQuestions(item)}/${lessonQuestionTarget(item)} questões`}" aria-label="Questões${questionDone&&questionBankRemaining?`, ${questionBankRemaining} extras disponíveis`:''}">${iconSvg('brain')}${questionDone&&questionBankRemaining?`<small>+${questionBankRemaining}</small>`:''}</button><button class="schedule-study-icon ${stateClass(flashcardDone)}" data-open-schedule-flashcards="${escapeAttr(item.id)}" title="${completedFlashcards(item)}/${lessonFlashcardTarget(item)} flashcards" aria-label="Flashcards">${iconSvg('cards')}</button>`;
+    const videoUnavailableLabel=videoAvailability.state==='loading' ? 'Carregando vínculo da videoaula' : videoAvailability.state==='error' ? 'Catálogo de videoaulas indisponível' : 'Videoaula ainda não disponível';
+    const videoIcon=videoAvailability.available
+      ? `<button class="schedule-study-icon ${stateClass(videoDone)}" data-open-schedule-videos="${escapeAttr(item.id)}" title="${videoDone?'Videoaula concluída':'Videoaula pendente'}" aria-label="Videoaula">${iconSvg('play')}</button>`
+      : `<button class="schedule-study-icon video-unavailable ${videoAvailability.state}" type="button" disabled title="${escapeAttr(videoUnavailableLabel)}" aria-label="${escapeAttr(videoUnavailableLabel)}">${iconSvg('play')}</button>`;
+    icons.innerHTML=`${videoIcon}<button class="schedule-study-icon ${stateClass(questionDone)} ${questionDone&&questionBankRemaining?'has-extra':''}" data-open-schedule-questions="${escapeAttr(item.id)}" title="${questionDone&&questionBankRemaining?`Meta concluída · ${questionBankRemaining} questões extras disponíveis`:`${completedQuestions(item)}/${lessonQuestionTarget(item)} questões`}" aria-label="Questões${questionDone&&questionBankRemaining?`, ${questionBankRemaining} extras disponíveis`:''}">${iconSvg('brain')}${questionDone&&questionBankRemaining?`<small>+${questionBankRemaining}</small>`:''}</button><button class="schedule-study-icon ${stateClass(flashcardDone)}" data-open-schedule-flashcards="${escapeAttr(item.id)}" title="${completedFlashcards(item)}/${lessonFlashcardTarget(item)} flashcards" aria-label="Flashcards">${iconSvg('cards')}</button>`;
     topicLine.append(icons);
   });
 }
@@ -7852,11 +7864,17 @@ function parseVideoTime(value='') {
     : numbers[0] * 60 + numbers[1];
   return Number.isFinite(seconds) ? seconds : null;
 }
+function scheduleForVideoLink(link={}) {
+  return state.schedule.find(item => n(item.block)===n(link.block) && (
+    (link.order && n(item.lessonOrder)===n(link.order))
+    || (link.topic && canonicalTopic(item.topic)===canonicalTopic(link.topic))
+  )) || null;
+}
 function videoScheduleForLesson(lesson) {
   if(lesson?.scheduleId) return state.schedule.find(item => item.id === lesson.scheduleId) || null;
   const target = canonicalTopic(lesson.title);
   const override = VIDEO_SCHEDULE_OVERRIDES[`${n(lesson?.block)}:${target}`];
-  if(override) return state.schedule.find(item => n(item.block)===n(override.block) && (override.order ? n(item.lessonOrder)===n(override.order) : canonicalTopic(item.topic)===canonicalTopic(override.topic))) || null;
+  if(override) return scheduleForVideoLink(override);
   const candidates = state.schedule.filter(item => n(item.block) === n(lesson.block));
   return candidates.find(item => canonicalTopic(item.topic) === target)
     || candidates.find(item => target.length >= 6 && (canonicalTopic(item.topic).includes(target) || target.includes(canonicalTopic(item.topic))))
@@ -7866,7 +7884,7 @@ function videoScheduleForVideo(lesson, video) {
   if(!lesson || !video) return null;
   const target = canonicalTopic(videoContentLabel(video));
   const override = VIDEO_SCHEDULE_OVERRIDES[`${n(lesson.block)}:${target}`];
-  if(override) return state.schedule.find(item => n(item.block)===n(override.block) && (override.order ? n(item.lessonOrder)===n(override.order) : canonicalTopic(item.topic)===canonicalTopic(override.topic))) || null;
+  if(override) return scheduleForVideoLink(override);
   const candidates = state.schedule.filter(item => n(item.block) === n(lesson.block));
   return candidates.find(item => canonicalTopic(item.topic) === target)
     || candidates.find(item => target.length >= 6 && (canonicalTopic(item.topic).includes(target) || target.includes(canonicalTopic(item.topic))))
@@ -7874,7 +7892,11 @@ function videoScheduleForVideo(lesson, video) {
 }
 function sharedVideoSchedulesForLesson(lesson) {
   const links = VIDEO_SHARED_SCHEDULE_LINKS[`${n(lesson?.block)}:${canonicalTopic(lesson?.title)}`] || [];
-  return links.map(link => state.schedule.find(item => n(item.block)===n(link.block) && (link.order ? n(item.lessonOrder)===n(link.order) : canonicalTopic(item.topic)===canonicalTopic(link.topic)))).filter(Boolean);
+  return links.map(scheduleForVideoLink).filter(Boolean);
+}
+function invalidateVideoScheduleCache() {
+  renderCache.videoDisplay = null;
+  renderCache.videoLessons.clear();
 }
 function displayVideoLessons() {
   if(renderCache.videoDisplay) return renderCache.videoDisplay;
@@ -8167,6 +8189,13 @@ function videoSourcesForSchedule(item) {
 }
 function plannedVideoCountForSchedule(item) {
   return videoLessonsForSchedule(item).filter(lesson => lesson.videos?.length).reduce((total, lesson) => total + (videoSummaryExpressVideos(lesson).length ? 1 : Math.max(1, videoParts(lesson).length)), 0);
+}
+function scheduleVideoAvailability(item) {
+  const count = plannedVideoCountForSchedule(item);
+  if(count > 0) return { state:'available', count, available:true };
+  if(videoCatalogLoadState === 'loading') return { state:'loading', count:0, available:false };
+  if(videoCatalogLoadState === 'error') return { state:'error', count:0, available:false };
+  return { state:'unavailable', count:0, available:false };
 }
 function scheduleVideoCompleted(item) {
   const lessons = videoLessonsForSchedule(item);
@@ -8985,21 +9014,23 @@ function bindVideoPlayer(source, schedule, lesson) {
   document.querySelectorAll('[data-video-bookmark-star]').forEach(button => button.onclick = event => { const id=event.currentTarget.dataset.videoBookmarkStar; const entries=state.videoPlayer.bookmarks[source.id] || []; const bookmark=entries.find(item=>item.id===id); if(!bookmark) return; bookmark.starred=!bookmark.starred; bookmark.updatedAt=new Date().toISOString(); saveStateOnly(); renderAulas(); });
 }
 async function loadVideoCatalog() {
+  videoCatalogLoadState = 'loading';
   try {
     const response = await fetch('video_library/catalog.json', {cache:'no-store'});
     if(!response.ok) throw new Error(`HTTP ${response.status}`);
     const payload = await response.json();
     videoCatalog = Array.isArray(payload.lessons) ? payload.lessons : [];
+    videoCatalogLoadState = 'ready';
     videoCatalogStatus = `${videoCatalog.length} aulas locais disponíveis`;
     markCompletedLessonsThroughBlockNine();
     reconcileCompletedBlockXP();
   } catch(error) {
     console.warn('Catálogo de videoaulas indisponível:', error);
     videoCatalog = [];
+    videoCatalogLoadState = 'error';
     videoCatalogStatus = 'Não encontrei o catálogo de videoaulas locais';
   }
-  renderCache.videoDisplay = null;
-  renderCache.videoLessons.clear();
+  invalidateVideoScheduleCache();
   if(ui.tab === 'aulas') renderAulas();
   else render();
 }

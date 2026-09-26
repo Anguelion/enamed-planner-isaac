@@ -122,6 +122,9 @@ function loadPlannerSandbox({ origin = 'http://localhost:8766' } = {}) {
   const anchor = 'let state = loadState();';
   if(!plannerSource.includes(anchor)) throw new Error('planner-sandbox: ancora "let state = loadState();" nao encontrada — planner.js mudou de forma inesperada.');
   plannerSource = plannerSource.replace(anchor, `${anchor}\nglobalThis.__getState=()=>state;\nglobalThis.__setState=(value)=>{state=value;};\nglobalThis.__getQuestionBank=()=>questionBank;\nglobalThis.__setQuestionBank=(value)=>{questionBank=value;};\n`);
+  const videoCatalogAnchor = 'let videoCatalog = [];';
+  if(!plannerSource.includes(videoCatalogAnchor)) throw new Error('planner-sandbox: ancora de videoCatalog nao encontrada — planner.js mudou de forma inesperada.');
+  plannerSource = plannerSource.replace(videoCatalogAnchor, `${videoCatalogAnchor}\nglobalThis.__setVideoCatalog=(value)=>{videoCatalog=value;videoCatalogLoadState='ready';invalidateVideoScheduleCache();};\nglobalThis.__getVideoCatalog=()=>videoCatalog;\n`);
   const uiObjAnchor = /let ui = \{[^]*?\};\r?\n/;
   if(!uiObjAnchor.test(plannerSource)) throw new Error('planner-sandbox: ancora do objeto ui nao encontrada — planner.js mudou de forma inesperada.');
   plannerSource = plannerSource.replace(uiObjAnchor, match => `${match}globalThis.__getUi=()=>ui;\n`);
