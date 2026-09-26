@@ -4410,7 +4410,67 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-dad31f9a15ad880b": {
+      "number": "1011c",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-26T11:31:25.852Z",
+      "nextAttemptAt": "2026-10-03T11:31:25.852Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-a0de8fee2819180d": {
+      "number": "1012c",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-26T11:31:31.043Z",
+      "nextAttemptAt": "2026-10-03T11:31:31.043Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-16a3241b1a624d4c": {
+      "number": "1013c",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-26T11:31:36.236Z",
+      "nextAttemptAt": "2026-10-03T11:31:36.236Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-0b18336c1668b276": {
+      "number": "1014c",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-26T11:31:41.417Z",
+      "nextAttemptAt": "2026-10-03T11:31:41.417Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-8140a7f9deed6435": {
+      "number": "1015c",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-26T11:31:46.608Z",
+      "nextAttemptAt": "2026-10-03T11:31:46.608Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-5f6b4203d07820f7": {
+      "number": "1016c",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-26T11:31:52.732Z",
+      "nextAttemptAt": "2026-10-03T11:31:52.732Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-09-25T21:39:34.055Z"
+  "updatedAt": "2026-09-26T11:31:52.732Z"
 }
