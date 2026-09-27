@@ -1155,7 +1155,23 @@
       ],
       "suggestedComment": "Gabarito confirmado: C. Assunto: Fármacos e agentes relacionados a hemostasia primária (antiplaquetários). Conduta/resposta: Bernard-Soullier",
       "reviewedAt": "2026-09-25T21:39:28.554Z"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-70c1a58fe0a42382": {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-70c1a58fe0a42382",
+      "number": "1023c",
+      "status": "low_confidence",
+      "localAnswer": null,
+      "remoteAnswer": null,
+      "sourceUrl": null,
+      "similarity": {
+        "stem": 0.9782608695652174,
+        "options": 0.48207792207792205,
+        "combined": 0.8294059853190288
+      },
+      "tags": [],
+      "suggestedComment": "",
+      "reviewedAt": "2026-09-27T12:10:09.483Z"
     }
   },
-  "updatedAt": "2026-09-25T21:39:28.555Z"
+  "updatedAt": "2026-09-27T12:10:09.483Z"
 }

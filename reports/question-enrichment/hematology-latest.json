@@ -1,85 +1,83 @@
 {
-  "generatedAt": "2026-09-26T21:15:22.238Z",
+  "generatedAt": "2026-09-27T12:09:38.735Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 6,
+  "changed": 5,
   "results": [
     {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-a39a8db2d3f21247",
-      "number": "1027b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-62c0759752a1db0b",
+      "number": "1018c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-que-contem169161d47e/",
-      "sourceQuestionId": "4000104387",
-      "matchedAt": "2026-09-26T21:15:23.206Z",
-      "similarity": {
-        "stem": 1,
-        "options": 0.8875,
-        "combined": 0.9662499999999999
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Hemostasia Secundária",
-        "Fármacos e agentes relacionados a hemostasia secundária",
-        "Heparinas"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Heparinas. Conduta/resposta: Plasma Fresco e Sulfato de Protamina",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/alternativa-que-contem169161d47e/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-3112a8b717d57734",
-      "number": "1028b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Com-aos6259b9704e/",
-      "sourceQuestionId": "4000064335",
-      "matchedAt": "2026-09-26T21:15:29.212Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/crianc-5-anos-e8652064f4e/",
+      "sourceQuestionId": "4000191603",
+      "matchedAt": "2026-09-27T12:09:39.882Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
+      "localAnswer": "E",
+      "remoteAnswer": "E",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
-        "Cardiologia",
-        "Valvopatias",
-        "Anticoagulação na doença orovalvar",
-        "Agentes anticoagulantes",
         "Hematologia",
         "Hemostasia",
-        "Hemostasia Secundária",
-        "Fármacos e agentes relacionados a hemostasia secundária",
-        "Anticoagulantes antagonistas da vitamina K",
-        "Anticoagulantes orais diretos"
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Anticoagulantes orais diretos. Conduta/resposta: 3 – 2 – 1 – 2.",
+      "comment": "Gabarito confirmado: E. Assunto: Diagnóstico da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: Púrpura trombocitopênica imune.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Com-aos6259b9704e/"
+        "https://med.estrategia.com/public/questoes/crianc-5-anos-e86fb48957e/",
+        "https://med.estrategia.com/public/questoes/crianc-5-anos-e8652064f4e/"
       ]
     },
     {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-72332b1e2c353ed3",
-      "number": "1029b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-f0100bbafc76b148",
+      "number": "1019c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Todos-fatores1336ee1495/",
-      "sourceQuestionId": "4000061138",
-      "matchedAt": "2026-09-26T21:15:35.386Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/hemofilias-B1371089ba2/",
+      "sourceQuestionId": "4000143557",
+      "matchedAt": "2026-09-27T12:09:45.824Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "E",
+      "remoteAnswer": "E",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Fisiologia",
+        "Hemostasia Secundária",
+        "Principais doenças",
+        "Hemofilia",
+        "Classificação"
+      ],
+      "comment": "Gabarito confirmado: E. Assunto: Classificação. Conduta/resposta: VIII e IX.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/hemofilias-B1371089ba2/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-d9182d39dc85296d",
+      "number": "1020c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-39-anos-sexo60cac1758c/",
+      "sourceQuestionId": "4000140998",
+      "matchedAt": "2026-09-27T12:09:51.584Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -93,111 +91,90 @@
         "Hematologia",
         "Hemostasia",
         "Hemostasia Secundária",
-        "Outras alterações dos fatores e agentes da coagulação"
+        "Principais doenças",
+        "Hemofilia",
+        "Diagnóstico"
       ],
-      "comment": "Gabarito confirmado: E. Assunto: Outras alterações dos fatores e agentes da coagulação. Conduta/resposta: Fator VIII.",
+      "comment": "Gabarito confirmado: E. Assunto: Diagnóstico. Conduta/resposta: hemofilia.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Todos-fatores1336ee1495/",
-        "https://med.estrategia.com/public/questoes/Todos-fatores131349bbb7/"
+        "https://med.estrategia.com/public/questoes/Paciente-39-anos-sexo60cac1758c/"
       ]
     },
     {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-99751df1d87239a1",
-      "number": "1030b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-039753e08408e147",
+      "number": "1021c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-35-anos-uso3212a10b8b/",
-      "sourceQuestionId": "4000052109",
-      "matchedAt": "2026-09-26T21:15:41.567Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Menina-5-anos-idade80a590f3ba/",
+      "sourceQuestionId": "4000140678",
+      "matchedAt": "2026-09-27T12:09:57.771Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Hemostasia Secundária",
-        "Fármacos e agentes relacionados a hemostasia secundária",
-        "Anticoagulantes antagonistas da vitamina K"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Anticoagulantes antagonistas da vitamina K. Conduta/resposta: houve complicação do uso do cumarínico",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-35-anos-uso3212a10b8b/",
-        "https://med.estrategia.com/public/questoes/paciente-35-anos-idade667f6e70b9/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-291d1cec4ea74a45",
-      "number": "1031b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/J-K-L-67-anos-sexo63e09aa4e4/",
-      "sourceQuestionId": "4000033560",
-      "matchedAt": "2026-09-26T21:15:47.424Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
+      "localAnswer": "B",
+      "remoteAnswer": "B",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
         "Hemostasia",
         "Hemostasia primária",
-        "Trombocitopenia induzida pela heparina (HIT)",
-        "Diagnóstico da trombocitopenia induzida pela heparina (HIT)",
-        "Tratamento da trombocitopenia induzida pela heparina (HIT)",
-        "Hemostasia Secundária",
-        "Fármacos e agentes relacionados a hemostasia secundária",
-        "Fondaparinux"
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Tratamento da púrpura trombocitopênica imunológica (PTI)"
       ],
-      "comment": "Gabarito confirmado: A. Assunto: Fondaparinux. Conduta/resposta: Deve-se evitar o uso de fondaparinux (inibidor indireto de fator Xa).",
+      "comment": "Gabarito confirmado: B. Assunto: Tratamento da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: Observação para casos mais leves, corticosteroide ou imunoglobulina para casos mais graves.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/J-K-L-67-anos-sexo63e09aa4e4/"
+        "https://med.estrategia.com/public/questoes/Menina-5-anos-idade80a590f3ba/",
+        "https://med.estrategia.com/public/questoes/Menina-5-anos57c652caa3/"
       ]
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-3e132f88ca04763b",
-      "number": "1017c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-46326c152ff4e309",
+      "number": "1022c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Lactente-sexo11186c510c9/",
-      "sourceQuestionId": "4000165594",
-      "matchedAt": "2026-09-26T21:15:53.777Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Maria-Fernanda-tres118fadbea6b/",
+      "sourceQuestionId": "4000140475",
+      "matchedAt": "2026-09-27T12:10:03.537Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
+      "localAnswer": "E",
+      "remoteAnswer": "E",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
         "Hemostasia",
-        "Hemostasia Secundária",
-        "Principais doenças",
-        "Hemofilia",
-        "Tratamento"
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Tratamento. Conduta/resposta: Administração de fator VIII (correção 100%); sedação e tomografia de crânio.",
+      "comment": "Gabarito confirmado: E. Assunto: Púrpura trombocitopênica imunológica (PTI). Conduta/resposta: púrpura trombocitopênica imunológica.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Lactente-sexo11186c510c9/",
-        "https://med.estrategia.com/public/questoes/Lactente-sexo12548339845/",
-        "https://med.estrategia.com/public/questoes/Lactente-masculino-1185e5eb14dc/"
+        "https://med.estrategia.com/public/questoes/Maria-Fernanda-tres118fadbea6b/"
       ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-70c1a58fe0a42382",
+      "number": "1023c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": false,
+      "status": "low_confidence",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-30-anos474274ec84/",
+        "https://med.estrategia.com/public/questoes/Paciente-40-anos72a5abbd17/"
+      ],
+      "bestSimilarity": {
+        "stem": 0.9782608695652174,
+        "options": 0.48207792207792205,
+        "combined": 0.8294059853190288
+      }
     }
   ]
 }
