@@ -3,7 +3,8 @@
 
   const SUPABASE_URL='https://wbxzptiacftymhvfkiyx.supabase.co';
   const SUPABASE_PUBLISHABLE_KEY='sb_publishable_XrBwqjkwlt4Mb4rdmE-xVw_7Vt3euvP';
-  const VERSION='20260926-8';
+  const SUPABASE_CLIENT_KEY='__SOQUEROMED_SUPABASE_CLIENT__';
+  const VERSION='20260926-9';
   const isLocal=location.protocol==='file:' || ['localhost','127.0.0.1','::1'].includes(location.hostname);
   let bootPromise=null;
   let authClient=null;
@@ -31,8 +32,27 @@
     if(node) node.textContent=value;
   };
 
+  function showAuthenticatedShell(){
+    document.body.classList.remove('auth-locked');
+    document.getElementById('authPanel')?.classList.add('hidden');
+  }
+
+  function showLoginShell(){
+    document.body.classList.add('auth-locked');
+    document.getElementById('authPanel')?.classList.remove('hidden');
+  }
+
   function registerServiceWorker(){
     if(!('serviceWorker' in navigator) || !(location.protocol==='https:' || isLocal)) return;
+    const hadController=Boolean(navigator.serviceWorker.controller);
+    if(hadController) {
+      let refreshing=false;
+      navigator.serviceWorker.addEventListener('controllerchange',()=>{
+        if(refreshing) return;
+        refreshing=true;
+        location.reload();
+      },{once:true});
+    }
     navigator.serviceWorker.register('./service-worker.js',{updateViaCache:'none'}).then(registration=>registration.update()).catch(()=>{});
   }
 
@@ -44,6 +64,7 @@
 
   function bootFullApp(){
     if(bootPromise) return bootPromise;
+    showAuthenticatedShell();
     document.body.classList.add('app-loading','authenticated');
     const form=document.getElementById('authForm');
     if(form && form.__appLoaderSubmit) form.removeEventListener('submit',form.__appLoaderSubmit);
@@ -65,6 +86,7 @@
     }).catch(error=>{
       bootPromise=null;
       document.body.classList.remove('app-loading','authenticated');
+      showLoginShell();
       setMessage('Não foi possível abrir o aplicativo. Atualize a página e tente novamente.');
       console.error('Falha no carregamento do aplicativo:',error);
       throw error;
@@ -82,9 +104,11 @@
     if(button) button.disabled=true;
     setMessage('Entrando…');
     try {
-      const {error}=await authClient.auth.signInWithPassword({email,password});
+      const {data,error}=await authClient.auth.signInWithPassword({email,password});
       if(error) { setMessage('Não foi possível entrar. Confira o e-mail e a senha e tente novamente.'); return; }
+      if(!data?.session) { setMessage('A conta respondeu, mas a sessão não foi confirmada. Tente novamente.'); return; }
       setMessage('Conta conectada. Preparando seu plano…');
+      showAuthenticatedShell();
       await bootFullApp();
     } catch(error) {
       console.error('Falha no acesso:',error);
@@ -98,8 +122,17 @@
     registerServiceWorker();
     if(isLocal) { await bootFullApp(); return; }
     if(!window.supabase?.createClient) { setMessage('O serviço de acesso não carregou. Atualize a página.'); return; }
-    authClient=window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY,{
+    authClient=window[SUPABASE_CLIENT_KEY] || window.supabase.createClient(SUPABASE_URL,SUPABASE_PUBLISHABLE_KEY,{
       auth:{persistSession:true,autoRefreshToken:true,storage:window.localStorage,storageKey:'soqueromed-auth'}
+    });
+    window[SUPABASE_CLIENT_KEY]=authClient;
+    // Registre antes de getSession(): em alguns WebViews Android a leitura da
+    // sessão pode demorar. O evento de login ainda precisa conseguir abrir o app.
+    authClient.auth.onAuthStateChange((event,session)=>{
+      if(!session || bootPromise || !['INITIAL_SESSION','SIGNED_IN','TOKEN_REFRESHED'].includes(event)) return;
+      setMessage('Conta conectada. Preparando seu plano…');
+      showAuthenticatedShell();
+      setTimeout(()=>bootFullApp().catch(()=>{}),0);
     });
     const form=document.getElementById('authForm');
     if(form) {
@@ -108,10 +141,17 @@
     }
     try {
       const {data}=await authClient.auth.getSession();
-      if(data.session) await bootFullApp();
-      else document.body.classList.remove('app-loading');
+      if(data.session) {
+        showAuthenticatedShell();
+        await bootFullApp();
+      } else {
+        document.body.classList.remove('app-loading');
+        showLoginShell();
+      }
     } catch(error) {
       console.error('Falha ao verificar a sessão:',error);
+      document.body.classList.remove('app-loading','authenticated');
+      showLoginShell();
       setMessage('Não foi possível verificar sua sessão. Tente entrar novamente.');
     }
   }

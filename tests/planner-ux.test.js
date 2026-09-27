@@ -167,6 +167,17 @@ test('integração móvel mantém correções de autenticação, flashcard e lay
   assert.match(css,/\.qbank-mode \.question-card\{overflow:visible\}/);
 });
 
+test('autenticação móvel compartilha um cliente e confirma a sessão sem depender do evento tardio',()=>{
+  const root=path.resolve(__dirname,'..');
+  const loader=fs.readFileSync(path.join(root,'assets/app-loader.js'),'utf8');
+  const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');
+  assert.match(loader,/window\[SUPABASE_CLIENT_KEY\]=authClient/);
+  assert.ok(loader.indexOf('authClient.auth.onAuthStateChange') < loader.indexOf('await authClient.auth.getSession()'));
+  assert.match(planner,/window\[SUPABASE_CLIENT_KEY\] \|\| window\.supabase\?\.createClient/);
+  assert.ok(planner.indexOf('sbClient.auth.onAuthStateChange') < planner.indexOf('await sbClient.auth.getSession()'));
+  assert.match(planner,/applyCloudAuthSession\('SIGNED_IN',data\.session\)/);
+});
+
 test('marca-texto usa seletor flutuante único e permite editar marcações salvas',()=>{
   const root=path.resolve(__dirname,'..');
   const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');

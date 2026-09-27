@@ -70,6 +70,7 @@ for(const relative of versionedAssets) {
   if(htmlVersion!==swVersion) failures.push(`versão divergente entre index.html e service-worker.js para ${relative}: html="${htmlVersion}" sw="${swVersion}"`);
 }
 if(!/const VERSION='[\w-]+'/.test(appLoader)) failures.push('carregador do aplicativo precisa versionar os assets dinâmicos');
+if(!appLoader.includes("__SOQUEROMED_SUPABASE_CLIENT__") || !plannerRuntime.includes("__SOQUEROMED_SUPABASE_CLIENT__")) failures.push('carregador e planner precisam compartilhar o mesmo cliente Supabase');
 const iconRuntime=fs.readFileSync(path.join(root,'assets/app-icons.js'),'utf8');
 if(/(?:unpkg|jsdelivr|iconify|https?:\/\/[^'" ]+\.(?:svg|js))/i.test(iconRuntime)) failures.push('sistema de ícones contém dependência externa de runtime');
 if(failures.length) {

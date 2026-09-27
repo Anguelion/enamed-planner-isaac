@@ -75,9 +75,11 @@ const DEVICE_ID = getOrCreateDeviceId();
 const OFFLINE_FIRST = false;
 const SUPABASE_URL = 'https://wbxzptiacftymhvfkiyx.supabase.co';
 const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_XrBwqjkwlt4Mb4rdmE-xVw_7Vt3euvP';
-const sbClient = window.supabase?.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, {
+const SUPABASE_CLIENT_KEY = '__SOQUEROMED_SUPABASE_CLIENT__';
+const sbClient = window[SUPABASE_CLIENT_KEY] || window.supabase?.createClient(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, {
   auth: { persistSession: true, autoRefreshToken: true, storage: window.localStorage, storageKey: 'soqueromed-auth' }
 }) || null;
+if(sbClient) window[SUPABASE_CLIENT_KEY] = sbClient;
 const MATERIAL_IMAGE_BUCKET = 'materials-images';
 // As chaves acima sao fixas no codigo: qualquer copia destes arquivos (um
 // servidor local de teste, uma porta nova, etc.) fala com o MESMO projeto
@@ -215,6 +217,8 @@ let cloudRevision = 0;
 let lastCloudSyncAt = 0;
 let cloudSyncPoll = null;
 let cloudPushPoll = null;
+let lastAuthSyncSessionKey = '';
+let authInitialSyncPending = false;
 let serverClockOffsetMs = 0;
 let lastSyncConflictAt = 0;
 let syncConflictCount = 0;
@@ -2939,6 +2943,42 @@ async function requestPersistentStorage() {
     if(!already) await navigator.storage.persist();
   } catch(error) { console.warn('Não foi possível solicitar armazenamento persistente:', error); }
 }
+function applyCloudAuthSession(event, session) {
+  const wasLoggedOut = !currentUser;
+  currentUser = session?.user || null;
+  const accountChanged = currentUser ? activateAccountState(currentUser.id) : false;
+  updateAccountUI();
+  if(!currentUser) {
+    lastAuthSyncSessionKey='';
+    authInitialSyncPending=false;
+    if(cloudSyncPoll) { clearInterval(cloudSyncPoll); cloudSyncPoll=null; }
+    if(cloudPushPoll) { clearInterval(cloudPushPoll); cloudPushPoll=null; }
+    return;
+  }
+  if(accountChanged) render().catch(error=>console.error('Falha ao abrir o estado local da conta:',error));
+  if(event !== 'SIGNED_IN' && event !== 'INITIAL_SESSION') {
+    if(!authInitialSyncPending) startCloudSyncPolling();
+    return;
+  }
+  const sessionKey=`${currentUser.id}:${session?.expires_at || ''}:${String(session?.access_token || '').slice(-16)}`;
+  if(lastAuthSyncSessionKey===sessionKey) {
+    if(!authInitialSyncPending) startCloudSyncPolling();
+    return;
+  }
+  lastAuthSyncSessionKey=sessionKey;
+  authInitialSyncPending=true;
+  const syncUserId=currentUser.id;
+  setTimeout(async()=>{
+    try {
+      if(currentUser?.id!==syncUserId) return;
+      await pullCloudState({firstLogin: wasLoggedOut || accountChanged});
+      if(accountChanged) render();
+    } finally {
+      authInitialSyncPending=false;
+      if(currentUser?.id===syncUserId) startCloudSyncPolling();
+    }
+  },0);
+}
 async function initCloud() {
   requestPersistentStorage();
   if(OFFLINE_FIRST) {
@@ -2957,34 +2997,20 @@ async function initCloud() {
     }
     return;
   }
-  const { data } = await sbClient.auth.getSession();
-  currentUser = data.session?.user || null;
-  const accountChanged = currentUser ? activateAccountState(currentUser.id) : false;
-  if(!currentUser && isLocalPlanner()) {
-    document.body.classList.remove('auth-locked');
-    setSyncStatus('Local', '', 'Modo local neste aparelho');
-  } else {
-    updateAccountUI();
-  }
-  if(currentUser) {
-    await pullCloudState({firstLogin:true});
-    startCloudSyncPolling();
-    if(accountChanged) render();
-  }
+  // O listener vem antes da leitura inicial. Assim, um login iniciado enquanto
+  // getSession ainda aguarda o armazenamento do Android não fica sem consumidor.
   sbClient.auth.onAuthStateChange((event, session) => {
-    const wasLoggedOut = !currentUser;
-    currentUser = session?.user || null;
-    const accountChanged = currentUser ? activateAccountState(currentUser.id) : false;
-    updateAccountUI();
-    if(currentUser) startCloudSyncPolling();
-    else if(cloudSyncPoll) { clearInterval(cloudSyncPoll); cloudSyncPoll=null; }
-    if(currentUser && (event === 'SIGNED_IN' || event === 'INITIAL_SESSION')) {
-      setTimeout(async() => {
-        await pullCloudState({firstLogin: wasLoggedOut || accountChanged});
-        if(accountChanged) render();
-      }, 0);
-    }
+    setTimeout(()=>applyCloudAuthSession(event,session),0);
   });
+  try {
+    const { data, error } = await sbClient.auth.getSession();
+    if(error) throw error;
+    if(data.session) applyCloudAuthSession('INITIAL_SESSION',data.session);
+    else if(!currentUser) applyCloudAuthSession('SIGNED_OUT',null);
+  } catch(error) {
+    console.error('Falha ao verificar a sessão do planner:',error);
+    if(!currentUser) updateAccountUI();
+  }
 }
 
 function ensureDayLogs() {
@@ -15327,12 +15353,30 @@ document.getElementById('authForm')?.addEventListener('submit', async event => {
   event.preventDefault();
   if(OFFLINE_FIRST || !sbClient) return;
   const email = document.getElementById('authEmail').value.trim();
-  const password = document.getElementById('authPassword').value;
+  const passwordInput = document.getElementById('authPassword');
+  const password = passwordInput.value;
   const message = document.getElementById('authMessage');
+  const button = document.getElementById('signInBtn');
   if(!email || !password) { message.textContent = 'Informe seu e-mail e sua senha.'; return; }
+  if(button) button.disabled=true;
   message.textContent = 'Entrando...';
-  const { error } = await sbClient.auth.signInWithPassword({ email, password });
-  message.textContent = error ? 'Não foi possível entrar. Confira o e-mail e a senha e tente novamente.' : 'Conta conectada.';
+  try {
+    const { data, error } = await sbClient.auth.signInWithPassword({ email, password });
+    if(error || !data?.session) {
+      message.textContent = 'Não foi possível entrar. Confira o e-mail e a senha e tente novamente.';
+      return;
+    }
+    passwordInput.value='';
+    message.textContent = 'Conta conectada. Abrindo seu plano…';
+    // Não dependa apenas de onAuthStateChange: no Android o evento pode chegar
+    // depois da promessa de login e a tela não pode continuar bloqueada nesse meio-tempo.
+    applyCloudAuthSession('SIGNED_IN',data.session);
+  } catch(error) {
+    console.error('Falha no login:',error);
+    message.textContent = 'Não foi possível conectar agora. Confira sua internet e tente novamente.';
+  } finally {
+    if(button) button.disabled=false;
+  }
 });
 document.addEventListener('visibilitychange', () => {
   if(document.visibilityState === 'hidden') {
