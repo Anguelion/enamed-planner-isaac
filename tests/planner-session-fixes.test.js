@@ -45,6 +45,26 @@ test('Dor pélvica compartilha a videoaula com DIP sem duplicar o arquivo de mí
   assert.equal(links[0].block, 9);
 });
 
+test('catálogo correlaciona vídeos avulsos dos blocos finais pela ordem oficial', () => {
+  const ctx = loadPlannerSandbox();
+  const state = ctx.__getState();
+  state.schedule = [
+    {id:'b26-populacoes',block:26,lessonOrder:1,topic:'Atenção à Saúde de Populações Específicas'},
+    {id:'b27-dermato',block:27,lessonOrder:3,topic:'Dermatologia na APS'},
+    {id:'b27-fetal',block:27,lessonOrder:5,topic:'Sofrimento Fetal Crônico'},
+    {id:'b27-ortopedia',block:27,lessonOrder:7,topic:'Ortopedia no ENAMED'},
+    {id:'b28-colagenoses',block:28,lessonOrder:6,topic:'Colagenoses: Lupus e SAF'},
+    {id:'b28-miscelaneas',block:28,lessonOrder:7,topic:'Miscelâneas em reumatologia: Sjogren, Esclerose Sistêmica e Miopatias'},
+    {id:'b30-vacinacao',block:30,lessonOrder:2,topic:'Vacinação'},
+    {id:'b30-reanimacao',block:30,lessonOrder:3,topic:'Reanimação Neonatal'},
+    {id:'b30-cabeca',block:30,lessonOrder:4,topic:'Cabeça e pescoço para o ENAMED'}
+  ];
+
+  assert.equal(ctx.videoScheduleForLesson({block:30,title:'Vacina Pneumocócica - 20V no SUS',scheduleOrder:2})?.id,'b30-vacinacao');
+  assert.equal(ctx.videoScheduleForLesson({block:27,title:'Sofrimento Fetal Crônico e Restrição de Crescimento Fetal',scheduleOrder:5})?.id,'b27-fetal');
+  assert.equal(ctx.videoScheduleForLesson({block:28,title:'Colagenoses Lupus e SAF',scheduleOrder:6})?.id,'b28-colagenoses');
+});
+
 test('Missão mantém o acesso às videoaulas existentes em todos os blocos publicados', () => {
   const ctx = loadPlannerSandbox();
   const catalog = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'video_library', 'catalog.json'), 'utf8'));
@@ -64,11 +84,11 @@ test('Missão mantém o acesso às videoaulas existentes em todos os blocos publ
     available:true
   });
   assert.equal(ctx.videoSourcesForSchedule(acls).length, 2, 'aula completa e COFEXPRESS devem abrir pela Missão');
-  const futureWithoutMedia = schedule.find(item => Number(item.block) === 26);
-  assert.deepEqual(plain(ctx.scheduleVideoAvailability(futureWithoutMedia)), {
-    state:'unavailable',
-    count:0,
-    available:false
+  const newlyPublished = schedule.find(item => Number(item.block) === 26 && item.topic === 'Atenção à Saúde de Populações Específicas');
+  assert.deepEqual(plain(ctx.scheduleVideoAvailability(newlyPublished)), {
+    state:'available',
+    count:1,
+    available:true
   });
 });
 
@@ -156,6 +176,8 @@ test('videoLessonSpecialty cria uma visão por especialidade sem duplicar a tril
   assert.equal(ctx.videoLessonSpecialty({title:'Cirrose Hepática 1',area:'Clínica Médica',videos:[]}), 'Gastroenterologia');
   assert.equal(ctx.videoLessonSpecialty({title:'Ciclo Menstrual',area:'GO',videos:[]}), 'Ginecologia e Obstetrícia');
   assert.equal(ctx.videoLessonSpecialty({title:'Avaliação do Hemograma e Anemias',area:'Clínica Médica',videos:[]}), 'Hematologia');
+  assert.equal(ctx.videoLessonSpecialty({title:'Colagenoses: Lupus e SAF',area:'Clínica Médica',videos:[]}), 'Reumatologia');
+  assert.equal(ctx.videoLessonSpecialty({title:'Miscelâneas em reumatologia: Sjogren, Esclerose Sistêmica e Miopatias',area:'Clínica Médica',videos:[]}), 'Reumatologia');
   assert.deepEqual(
     plain(ctx.videoLessonSpecialties({title:'Síndromes Hipertensivas na Gestação',area:'GO',videos:[]})),
     ['Cardiologia','Ginecologia e Obstetrícia'],

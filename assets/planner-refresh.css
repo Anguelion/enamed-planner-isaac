@@ -609,6 +609,8 @@ body.dark .continue-study-card { background: radial-gradient(circle at 92% 0, rg
   .header-context { display: none; }
   .header-actions { width: 100%; justify-content: flex-start; }
   .sync-status { margin-right: auto; }
+  #printBtn, #headerSendBtn, #headerReceiveBtn { display: none !important; }
+  #headerLogoutBtn { min-width: 40px; min-height: 40px; padding: 8px; }
   main, body.sidebar-collapsed main { width: 100%; margin-left: 0; padding: 18px 11px calc(var(--mobile-nav-height) + 24px); }
   .view.active { gap: 14px; }
   .card { padding: 16px; border-radius: 15px; }

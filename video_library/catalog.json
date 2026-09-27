@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-25T16:16:28.780Z",
+  "generatedAt": "2026-09-27T02:06:26.993Z",
   "source": "E:\\MedCof 2026",
   "lessons": [
     {
@@ -111,33 +111,6 @@
       ]
     },
     {
-      "id": "b01|cirurgia|trauma conceitos iniciais atls",
-      "block": 1,
-      "area": "Cirurgia",
-      "title": "Trauma - Conceitos iniciais ATLS",
-      "folderOrder": 5,
-      "videos": [
-        {
-          "id": "b01|Cirurgia|Trauma - Conceitos iniciais ATLS|Trauma - Conceitos iniciais e atendimento inicial ao trauma - ATLS",
-          "title": "Trauma - Conceitos iniciais e atendimento inicial ao trauma - ATLS",
-          "type": "complete",
-          "relativePath": "Bloco 01/04 - Cirurgia/05 - Trauma - Conceitos iniciais ATLS/05 - Trauma - Conceitos iniciais e atendimento inicial ao trauma - ATLS.mp4",
-          "extension": ".mp4",
-          "size": 193726163,
-          "onlinePath": "Bloco 01/04 - Cirurgia/05 - Trauma - Conceitos iniciais ATLS/05 - Trauma - Conceitos iniciais e atendimento inicial ao trauma - ATLS.mp4"
-        },
-        {
-          "id": "b01|Cirurgia|Trauma - Conceitos iniciais ATLS|Trauma - Conceitos iniciais e atendimento inicial ao trauma - ATLS COFEXPRESS",
-          "title": "Trauma - Conceitos iniciais e atendimento inicial ao trauma - ATLS COFEXPRESS",
-          "type": "express",
-          "relativePath": "Bloco 01/04 - Cirurgia/05 - Trauma - Conceitos iniciais ATLS/05.1 - Trauma - Conceitos iniciais e atendimento inicial ao trauma - ATLS COFEXPRESS.mp4",
-          "extension": ".mp4",
-          "size": 47075964,
-          "onlinePath": "Bloco 01/04 - Cirurgia/05 - Trauma - Conceitos iniciais ATLS/05.1 - Trauma - Conceitos iniciais e atendimento inicial ao trauma - ATLS COFEXPRESS.mp4"
-        }
-      ]
-    },
-    {
       "id": "b01|clinica medica|avaliacao do hemograma e anemias",
       "block": 1,
       "area": "Clínica Médica",
@@ -170,6 +143,33 @@
           "extension": ".mp4",
           "size": 89669393,
           "onlinePath": "Bloco 01/05 - Clínica Médica/06 - Avaliação do Hemograma e Anemias/06.1 - Anemias COFEXPRESS.mp4"
+        }
+      ]
+    },
+    {
+      "id": "b01|cirurgia|trauma conceitos iniciais atls",
+      "block": 1,
+      "area": "Cirurgia",
+      "title": "Trauma - Conceitos iniciais ATLS",
+      "folderOrder": 5,
+      "videos": [
+        {
+          "id": "b01|Cirurgia|Trauma - Conceitos iniciais ATLS|Trauma - Conceitos iniciais e atendimento inicial ao trauma - ATLS",
+          "title": "Trauma - Conceitos iniciais e atendimento inicial ao trauma - ATLS",
+          "type": "complete",
+          "relativePath": "Bloco 01/04 - Cirurgia/05 - Trauma - Conceitos iniciais ATLS/05 - Trauma - Conceitos iniciais e atendimento inicial ao trauma - ATLS.mp4",
+          "extension": ".mp4",
+          "size": 193726163,
+          "onlinePath": "Bloco 01/04 - Cirurgia/05 - Trauma - Conceitos iniciais ATLS/05 - Trauma - Conceitos iniciais e atendimento inicial ao trauma - ATLS.mp4"
+        },
+        {
+          "id": "b01|Cirurgia|Trauma - Conceitos iniciais ATLS|Trauma - Conceitos iniciais e atendimento inicial ao trauma - ATLS COFEXPRESS",
+          "title": "Trauma - Conceitos iniciais e atendimento inicial ao trauma - ATLS COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 01/04 - Cirurgia/05 - Trauma - Conceitos iniciais ATLS/05.1 - Trauma - Conceitos iniciais e atendimento inicial ao trauma - ATLS COFEXPRESS.mp4",
+          "extension": ".mp4",
+          "size": 47075964,
+          "onlinePath": "Bloco 01/04 - Cirurgia/05 - Trauma - Conceitos iniciais ATLS/05.1 - Trauma - Conceitos iniciais e atendimento inicial ao trauma - ATLS COFEXPRESS.mp4"
         }
       ]
     },
@@ -1074,24 +1074,6 @@
       ]
     },
     {
-      "id": "b06|saude coletiva|prevencao quaternaria e quinquenaria",
-      "block": 6,
-      "area": "Saúde Coletiva",
-      "title": "Prevenção Quaternária e Quinquenária",
-      "folderOrder": 2,
-      "videos": [
-        {
-          "id": "b06|Saúde Coletiva|Prevenção Quaternária e Quinquenária|Prevenção Quaternária e Quinquenária",
-          "title": "Prevenção Quaternária e Quinquenária",
-          "type": "complete",
-          "relativePath": "Bloco 06/01 - Saúde Coletiva/02 - Prevenção Quaternária e Quinquenária/Prevenção Quaternária e Quinquenária.mp4",
-          "extension": ".mp4",
-          "size": 243924414,
-          "onlinePath": "Bloco 06/01 - Saúde Coletiva/02 - Prevenção Quaternária e Quinquenária/Prevenção Quaternária e Quinquenária.mp4"
-        }
-      ]
-    },
-    {
       "id": "b06|medicina de familia e comunidade|sifilis e uretrites infecciosas",
       "block": 6,
       "area": "Medicina de Família e Comunidade",
@@ -1250,6 +1232,24 @@
           "extension": ".mp4",
           "size": 25023645,
           "onlinePath": "Bloco 06/05 - Cirurgia/07 - Abdome Agudo - Introdução/Abdome agudo - introduçao e abordagem sindrômica COFEXPRESS.mp4"
+        }
+      ]
+    },
+    {
+      "id": "b06|saude coletiva|prevencao quaternaria e quinquenaria",
+      "block": 6,
+      "area": "Saúde Coletiva",
+      "title": "Prevenção Quaternária e Quinquenária",
+      "folderOrder": 2,
+      "videos": [
+        {
+          "id": "b06|Saúde Coletiva|Prevenção Quaternária e Quinquenária|Prevenção Quaternária e Quinquenária",
+          "title": "Prevenção Quaternária e Quinquenária",
+          "type": "complete",
+          "relativePath": "Bloco 06/01 - Saúde Coletiva/02 - Prevenção Quaternária e Quinquenária/Prevenção Quaternária e Quinquenária.mp4",
+          "extension": ".mp4",
+          "size": 243924414,
+          "onlinePath": "Bloco 06/01 - Saúde Coletiva/02 - Prevenção Quaternária e Quinquenária/Prevenção Quaternária e Quinquenária.mp4"
         }
       ]
     },
@@ -1416,6 +1416,33 @@
       ]
     },
     {
+      "id": "b07|clinica medica|gasometria arterial e disturbios acido base",
+      "block": 7,
+      "area": "Clínica Médica",
+      "title": "Gasometria Arterial e distúrbios ácido-base",
+      "folderOrder": 7,
+      "videos": [
+        {
+          "id": "b07|Clínica Médica|Gasometria Arterial e distúrbios ácido-base|Gasometria Arterial e distúrbios ácido-base",
+          "title": "Gasometria Arterial e distúrbios ácido-base",
+          "type": "complete",
+          "relativePath": "Bloco 07/06 - Clínica Médica/07 - Gasometria Arterial e distúrbios ácido-base/07 - Gasometria Arterial e distúrbios ácido-base.mp4",
+          "extension": ".mp4",
+          "size": 556694823,
+          "onlinePath": "Bloco 07/06 - Clínica Médica/07 - Gasometria Arterial e distúrbios ácido-base/07 - Gasometria Arterial e distúrbios ácido-base.mp4"
+        },
+        {
+          "id": "b07|Clínica Médica|Gasometria Arterial e distúrbios ácido-base|Gasometria Arterial e distúrbios ácido-base COFEXPRESS",
+          "title": "Gasometria Arterial e distúrbios ácido-base COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 07/06 - Clínica Médica/07 - Gasometria Arterial e distúrbios ácido-base/07.1 - Gasometria Arterial e distúrbios ácido-base COFEXPRESS.mp4",
+          "extension": ".mp4",
+          "size": 61555601,
+          "onlinePath": "Bloco 07/06 - Clínica Médica/01 - Gasometria Arterial e distúrbios ácido-base/Gasometria Arterial e distúrbios ácido-base COFEXPRESS.mp4"
+        }
+      ]
+    },
+    {
       "id": "b07|clinica medica|disturbios de sodio e potassio",
       "block": 7,
       "area": "Clínica Médica",
@@ -1448,33 +1475,6 @@
           "extension": ".mp4",
           "size": 39714854,
           "onlinePath": "Bloco 07/06 - Clínica Médica/02 - Distúrbios de Sódio e Potássio/Disturbios do Sódio e Potássio COFEXPRESS.mp4"
-        }
-      ]
-    },
-    {
-      "id": "b07|clinica medica|gasometria arterial e disturbios acido base",
-      "block": 7,
-      "area": "Clínica Médica",
-      "title": "Gasometria Arterial e distúrbios ácido-base",
-      "folderOrder": 7,
-      "videos": [
-        {
-          "id": "b07|Clínica Médica|Gasometria Arterial e distúrbios ácido-base|Gasometria Arterial e distúrbios ácido-base",
-          "title": "Gasometria Arterial e distúrbios ácido-base",
-          "type": "complete",
-          "relativePath": "Bloco 07/06 - Clínica Médica/07 - Gasometria Arterial e distúrbios ácido-base/07 - Gasometria Arterial e distúrbios ácido-base.mp4",
-          "extension": ".mp4",
-          "size": 556694823,
-          "onlinePath": "Bloco 07/06 - Clínica Médica/07 - Gasometria Arterial e distúrbios ácido-base/07 - Gasometria Arterial e distúrbios ácido-base.mp4"
-        },
-        {
-          "id": "b07|Clínica Médica|Gasometria Arterial e distúrbios ácido-base|Gasometria Arterial e distúrbios ácido-base COFEXPRESS",
-          "title": "Gasometria Arterial e distúrbios ácido-base COFEXPRESS",
-          "type": "express",
-          "relativePath": "Bloco 07/06 - Clínica Médica/07 - Gasometria Arterial e distúrbios ácido-base/07.1 - Gasometria Arterial e distúrbios ácido-base COFEXPRESS.mp4",
-          "extension": ".mp4",
-          "size": 61555601,
-          "onlinePath": "Bloco 07/06 - Clínica Médica/01 - Gasometria Arterial e distúrbios ácido-base/Gasometria Arterial e distúrbios ácido-base COFEXPRESS.mp4"
         }
       ]
     },
@@ -1704,24 +1704,6 @@
       ]
     },
     {
-      "id": "b08|cofbasics|cofbasics lesoes elementares pediatria",
-      "block": 8,
-      "area": "CofBasics",
-      "title": "CofBasics - Lesões Elementares (Pediatria)",
-      "folderOrder": 9,
-      "videos": [
-        {
-          "id": "b08|CofBasics|CofBasics - Lesões Elementares (Pediatria)|CofBasics - Lesões Elementares (Pediatria)",
-          "title": "CofBasics - Lesões Elementares (Pediatria)",
-          "type": "complete",
-          "relativePath": "Bloco 08/05 - CofBasics/09 - CofBasics - Lesões Elementares (Pediatria)/CofBasics - Lesões Elementares (Pediatria).mp4",
-          "extension": ".mp4",
-          "size": 188376915,
-          "onlinePath": "Bloco 08/05 - CofBasics/09 - CofBasics - Lesões Elementares (Pediatria)/CofBasics - Lesões Elementares (Pediatria).mp4"
-        }
-      ]
-    },
-    {
       "id": "b08|saude mental|transtorno do desenvolvimento e aprendizagem",
       "block": 8,
       "area": "Saúde Mental",
@@ -1745,6 +1727,24 @@
           "extension": ".mp4",
           "size": 214509822,
           "onlinePath": "Bloco 08/06 - Saúde Mental/01 - Transtorno do desenvolvimento e aprendizagem/Transtornos do neurodesenvolvimento TEA TDAH TOD.mp4"
+        }
+      ]
+    },
+    {
+      "id": "b08|cofbasics|cofbasics lesoes elementares pediatria",
+      "block": 8,
+      "area": "CofBasics",
+      "title": "CofBasics - Lesões Elementares (Pediatria)",
+      "folderOrder": 9,
+      "videos": [
+        {
+          "id": "b08|CofBasics|CofBasics - Lesões Elementares (Pediatria)|CofBasics - Lesões Elementares (Pediatria)",
+          "title": "CofBasics - Lesões Elementares (Pediatria)",
+          "type": "complete",
+          "relativePath": "Bloco 08/05 - CofBasics/09 - CofBasics - Lesões Elementares (Pediatria)/CofBasics - Lesões Elementares (Pediatria).mp4",
+          "extension": ".mp4",
+          "size": 188376915,
+          "onlinePath": "Bloco 08/05 - CofBasics/09 - CofBasics - Lesões Elementares (Pediatria)/CofBasics - Lesões Elementares (Pediatria).mp4"
         }
       ]
     },
@@ -1884,33 +1884,6 @@
       ]
     },
     {
-      "id": "b09|g o|dor pelvica",
-      "block": 9,
-      "area": "G.O",
-      "title": "Dor pélvica",
-      "folderOrder": 5,
-      "videos": [
-        {
-          "id": "b09|G.O|Dor pélvica|Dor Pélvica COFEXPRESS",
-          "title": "Dor Pélvica COFEXPRESS",
-          "type": "express",
-          "relativePath": "Bloco 09/03 - G.O/05 - Dor pélvica/Dor Pélvica COFEXPRESS.mp4",
-          "extension": ".mp4",
-          "size": 49094408,
-          "onlinePath": "Bloco 09/03 - G.O/05 - Dor pélvica/Dor Pélvica COFEXPRESS.mp4"
-        },
-        {
-          "id": "b09|G.O|Dor pélvica|Dor Pélvica",
-          "title": "Dor Pélvica",
-          "type": "complete",
-          "relativePath": "Bloco 09/03 - G.O/05 - Dor pélvica/Dor Pélvica.mp4",
-          "extension": ".mp4",
-          "size": 144448636,
-          "onlinePath": "Bloco 09/03 - G.O/05 - Dor pélvica/Dor Pélvica.mp4"
-        }
-      ]
-    },
-    {
       "id": "b09|pediatria|dermatite atopica e lesoes benignas do recem nascido",
       "block": 9,
       "area": "Pediatria",
@@ -1961,6 +1934,33 @@
           "extension": ".mp4",
           "size": 68481440,
           "onlinePath": "Bloco 09/05 - Cirurgia/09 - Abdome agudo inflamatório - diverticulite e abcesso hepático/Abdome agudo inflamatório - diverticulite e abcesso hepático COFEXPRESS.mp4"
+        }
+      ]
+    },
+    {
+      "id": "b09|g o|dor pelvica",
+      "block": 9,
+      "area": "G.O",
+      "title": "Dor pélvica",
+      "folderOrder": 5,
+      "videos": [
+        {
+          "id": "b09|G.O|Dor pélvica|Dor Pélvica COFEXPRESS",
+          "title": "Dor Pélvica COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 09/03 - G.O/05 - Dor pélvica/Dor Pélvica COFEXPRESS.mp4",
+          "extension": ".mp4",
+          "size": 49094408,
+          "onlinePath": "Bloco 09/03 - G.O/05 - Dor pélvica/Dor Pélvica COFEXPRESS.mp4"
+        },
+        {
+          "id": "b09|G.O|Dor pélvica|Dor Pélvica",
+          "title": "Dor Pélvica",
+          "type": "complete",
+          "relativePath": "Bloco 09/03 - G.O/05 - Dor pélvica/Dor Pélvica.mp4",
+          "extension": ".mp4",
+          "size": 144448636,
+          "onlinePath": "Bloco 09/03 - G.O/05 - Dor pélvica/Dor Pélvica.mp4"
         }
       ]
     },
@@ -2397,33 +2397,6 @@
       ]
     },
     {
-      "id": "b12|g o|endometriose",
-      "block": 12,
-      "area": "G.O",
-      "title": "Endometriose",
-      "folderOrder": 4,
-      "videos": [
-        {
-          "id": "b12|G.O|Endometriose|Endometriose COFEXPRESS",
-          "title": "Endometriose COFEXPRESS",
-          "type": "express",
-          "relativePath": "Bloco 12/03 - G.O/04 - Endometriose/Endometriose COFEXPRESS.mp4",
-          "extension": ".mp4",
-          "size": 40233839,
-          "onlinePath": "Bloco 12/03 - G.O/04 - Endometriose/Endometriose COFEXPRESS.mp4"
-        },
-        {
-          "id": "b12|G.O|Endometriose|Endometriose",
-          "title": "Endometriose",
-          "type": "complete",
-          "relativePath": "Bloco 12/03 - G.O/04 - Endometriose/Endometriose.mp4",
-          "extension": ".mp4",
-          "size": 181769932,
-          "onlinePath": "Bloco 12/03 - G.O/04 - Endometriose/Endometriose.mp4"
-        }
-      ]
-    },
-    {
       "id": "b12|go|sangramento uterino anormal",
       "block": 12,
       "area": "GO",
@@ -2478,33 +2451,6 @@
       ]
     },
     {
-      "id": "b12|clinica medica|taquiarritmias e aclbls",
-      "block": 12,
-      "area": "Clínica Médica",
-      "title": "Taquiarritmias e ACLBLS",
-      "folderOrder": 6,
-      "videos": [
-        {
-          "id": "b12|Clínica Médica|Taquiarritmias e ACLBLS|Taquiarritmias e ACLBLS",
-          "title": "Taquiarritmias e ACLBLS",
-          "type": "complete",
-          "relativePath": "Bloco 12/05 - Clínica Médica/06 - Taquiarritmias e ACLBLS/06 - Taquiarritmias e ACLBLS.mp4",
-          "extension": ".mp4",
-          "size": 498116119,
-          "onlinePath": "Bloco 12/05 - Clínica Médica/06 - Taquiarritmias e ACLBLS/06 - Taquiarritmias e ACLBLS.mp4"
-        },
-        {
-          "id": "b12|Clínica Médica|Taquiarritmias e ACLBLS|Taquiarritmias e ACLBLS COFEXPRESS",
-          "title": "Taquiarritmias e ACLBLS COFEXPRESS",
-          "type": "express",
-          "relativePath": "Bloco 12/05 - Clínica Médica/06 - Taquiarritmias e ACLBLS/06.1 - Taquiarritmias e ACLBLS COFEXPRESS.mp4",
-          "extension": ".mp4",
-          "size": 79384142,
-          "onlinePath": "Bloco 12/05 - Clínica Médica/06 - Taquiarritmias e ACLBLS/06.1 - Taquiarritmias e ACLBLS COFEXPRESS.mp4"
-        }
-      ]
-    },
-    {
       "id": "b12|clinica medica|bradiarritmias e sincope",
       "block": 12,
       "area": "Clínica Médica",
@@ -2528,6 +2474,60 @@
           "extension": ".mp4",
           "size": 69690789,
           "onlinePath": "Bloco 12/05 - Clínica Médica/07 - Bradiarritmias e Síncope/07.1 - Bradiarritmias e síncope COFEXPRESS.mp4"
+        }
+      ]
+    },
+    {
+      "id": "b12|g o|endometriose",
+      "block": 12,
+      "area": "G.O",
+      "title": "Endometriose",
+      "folderOrder": 4,
+      "videos": [
+        {
+          "id": "b12|G.O|Endometriose|Endometriose COFEXPRESS",
+          "title": "Endometriose COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 12/03 - G.O/04 - Endometriose/Endometriose COFEXPRESS.mp4",
+          "extension": ".mp4",
+          "size": 40233839,
+          "onlinePath": "Bloco 12/03 - G.O/04 - Endometriose/Endometriose COFEXPRESS.mp4"
+        },
+        {
+          "id": "b12|G.O|Endometriose|Endometriose",
+          "title": "Endometriose",
+          "type": "complete",
+          "relativePath": "Bloco 12/03 - G.O/04 - Endometriose/Endometriose.mp4",
+          "extension": ".mp4",
+          "size": 181769932,
+          "onlinePath": "Bloco 12/03 - G.O/04 - Endometriose/Endometriose.mp4"
+        }
+      ]
+    },
+    {
+      "id": "b12|clinica medica|taquiarritmias e aclbls",
+      "block": 12,
+      "area": "Clínica Médica",
+      "title": "Taquiarritmias e ACLBLS",
+      "folderOrder": 6,
+      "videos": [
+        {
+          "id": "b12|Clínica Médica|Taquiarritmias e ACLBLS|Taquiarritmias e ACLBLS",
+          "title": "Taquiarritmias e ACLBLS",
+          "type": "complete",
+          "relativePath": "Bloco 12/05 - Clínica Médica/06 - Taquiarritmias e ACLBLS/06 - Taquiarritmias e ACLBLS.mp4",
+          "extension": ".mp4",
+          "size": 498116119,
+          "onlinePath": "Bloco 12/05 - Clínica Médica/06 - Taquiarritmias e ACLBLS/06 - Taquiarritmias e ACLBLS.mp4"
+        },
+        {
+          "id": "b12|Clínica Médica|Taquiarritmias e ACLBLS|Taquiarritmias e ACLBLS COFEXPRESS",
+          "title": "Taquiarritmias e ACLBLS COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 12/05 - Clínica Médica/06 - Taquiarritmias e ACLBLS/06.1 - Taquiarritmias e ACLBLS COFEXPRESS.mp4",
+          "extension": ".mp4",
+          "size": 79384142,
+          "onlinePath": "Bloco 12/05 - Clínica Médica/06 - Taquiarritmias e ACLBLS/06.1 - Taquiarritmias e ACLBLS COFEXPRESS.mp4"
         }
       ]
     },
@@ -3297,33 +3297,6 @@
       ]
     },
     {
-      "id": "b17|pediatria|itu e meningite pediatria",
-      "block": 17,
-      "area": "Pediatria",
-      "title": "ITU e Meningite (Pediatria)",
-      "folderOrder": 3,
-      "videos": [
-        {
-          "id": "b17|Pediatria|ITU e Meningite (Pediatria)|Infecção de Trato Urinário e Meningite",
-          "title": "Infecção de Trato Urinário e Meningite",
-          "type": "complete",
-          "relativePath": "Bloco 17/03 - Pediatria/03 - ITU e Meningite (Pediatria)/03 - Infecção de Trato Urinário e Meningite.mp4",
-          "extension": ".mp4",
-          "size": 332921753,
-          "onlinePath": "Bloco 17/03 - Pediatria/03 - ITU e Meningite (Pediatria)/03 - Infecção de Trato Urinário e Meningite.mp4"
-        },
-        {
-          "id": "b17|Pediatria|ITU e Meningite (Pediatria)|Infecção de Trato Urinário e Meningite COFEXPRESS",
-          "title": "Infecção de Trato Urinário e Meningite COFEXPRESS",
-          "type": "express",
-          "relativePath": "Bloco 17/03 - Pediatria/03 - ITU e Meningite (Pediatria)/03.1 - Infecção de Trato Urinário e Meningite COFEXPRESS.mp4",
-          "extension": ".mp4",
-          "size": 54144235,
-          "onlinePath": "Bloco 17/03 - Pediatria/03 - ITU e Meningite (Pediatria)/03.1 - Infecção de Trato Urinário e Meningite COFEXPRESS.mp4"
-        }
-      ]
-    },
-    {
       "id": "b17|cirurgia|trauma urologico",
       "block": 17,
       "area": "Cirurgia",
@@ -3419,6 +3392,33 @@
           "extension": ".mp4",
           "size": 111918763,
           "onlinePath": "Bloco 17/07 - CofBasics/07 - CofBasics - Propedêutica Mamária/CofBasics - Propedêutica Mamária (G.O).mp4"
+        }
+      ]
+    },
+    {
+      "id": "b17|pediatria|itu e meningite pediatria",
+      "block": 17,
+      "area": "Pediatria",
+      "title": "ITU e Meningite (Pediatria)",
+      "folderOrder": 3,
+      "videos": [
+        {
+          "id": "b17|Pediatria|ITU e Meningite (Pediatria)|Infecção de Trato Urinário e Meningite",
+          "title": "Infecção de Trato Urinário e Meningite",
+          "type": "complete",
+          "relativePath": "Bloco 17/03 - Pediatria/03 - ITU e Meningite (Pediatria)/03 - Infecção de Trato Urinário e Meningite.mp4",
+          "extension": ".mp4",
+          "size": 332921753,
+          "onlinePath": "Bloco 17/03 - Pediatria/03 - ITU e Meningite (Pediatria)/03 - Infecção de Trato Urinário e Meningite.mp4"
+        },
+        {
+          "id": "b17|Pediatria|ITU e Meningite (Pediatria)|Infecção de Trato Urinário e Meningite COFEXPRESS",
+          "title": "Infecção de Trato Urinário e Meningite COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 17/03 - Pediatria/03 - ITU e Meningite (Pediatria)/03.1 - Infecção de Trato Urinário e Meningite COFEXPRESS.mp4",
+          "extension": ".mp4",
+          "size": 54144235,
+          "onlinePath": "Bloco 17/03 - Pediatria/03 - ITU e Meningite (Pediatria)/03.1 - Infecção de Trato Urinário e Meningite COFEXPRESS.mp4"
         }
       ]
     },
@@ -4251,33 +4251,6 @@
       ]
     },
     {
-      "id": "b22|saude coletiva|doencas relacionadas ao trabalho",
-      "block": 22,
-      "area": "Saúde Coletiva",
-      "title": "Doenças Relacionadas ao Trabalho",
-      "folderOrder": 2,
-      "videos": [
-        {
-          "id": "b22|Saúde Coletiva|Doenças Relacionadas ao Trabalho|Principais Doenças e Agravos Relacionados ao Trabalho COFEXPRESS",
-          "title": "Principais Doenças e Agravos Relacionados ao Trabalho COFEXPRESS",
-          "type": "express",
-          "relativePath": "Bloco 22/01 - Saúde Coletiva/02 - Doenças Relacionadas ao Trabalho/Principais Doenças e Agravos Relacionados ao Trabalho COFEXPRESS.mp4",
-          "extension": ".mp4",
-          "size": 100397994,
-          "onlinePath": "Bloco 22/01 - Saúde Coletiva/02 - Doenças Relacionadas ao Trabalho/Principais Doenças e Agravos Relacionados ao Trabalho COFEXPRESS.mp4"
-        },
-        {
-          "id": "b22|Saúde Coletiva|Doenças Relacionadas ao Trabalho|Principais Doenças e Agravos Relacionados ao Trabalho",
-          "title": "Principais Doenças e Agravos Relacionados ao Trabalho",
-          "type": "complete",
-          "relativePath": "Bloco 22/01 - Saúde Coletiva/02 - Doenças Relacionadas ao Trabalho/Principais Doenças e Agravos Relacionados ao Trabalho.mp4",
-          "extension": ".mp4",
-          "size": 360253246,
-          "onlinePath": "Bloco 22/01 - Saúde Coletiva/02 - Doenças Relacionadas ao Trabalho/Principais Doenças e Agravos Relacionados ao Trabalho.mp4"
-        }
-      ]
-    },
-    {
       "id": "b22|pediatria|exantematicas",
       "block": 22,
       "area": "Pediatria",
@@ -4391,6 +4364,33 @@
           "extension": ".mp4",
           "size": 49175192,
           "onlinePath": "Bloco 22/04 - Clínica Médica/06 - Dor Torácica Não Anginosa/06.1 - Dor Torácica Não Anginosa COFEXPRESS.mp4"
+        }
+      ]
+    },
+    {
+      "id": "b22|saude coletiva|doencas relacionadas ao trabalho",
+      "block": 22,
+      "area": "Saúde Coletiva",
+      "title": "Doenças Relacionadas ao Trabalho",
+      "folderOrder": 2,
+      "videos": [
+        {
+          "id": "b22|Saúde Coletiva|Doenças Relacionadas ao Trabalho|Principais Doenças e Agravos Relacionados ao Trabalho COFEXPRESS",
+          "title": "Principais Doenças e Agravos Relacionados ao Trabalho COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 22/01 - Saúde Coletiva/02 - Doenças Relacionadas ao Trabalho/Principais Doenças e Agravos Relacionados ao Trabalho COFEXPRESS.mp4",
+          "extension": ".mp4",
+          "size": 100397994,
+          "onlinePath": "Bloco 22/01 - Saúde Coletiva/02 - Doenças Relacionadas ao Trabalho/Principais Doenças e Agravos Relacionados ao Trabalho COFEXPRESS.mp4"
+        },
+        {
+          "id": "b22|Saúde Coletiva|Doenças Relacionadas ao Trabalho|Principais Doenças e Agravos Relacionados ao Trabalho",
+          "title": "Principais Doenças e Agravos Relacionados ao Trabalho",
+          "type": "complete",
+          "relativePath": "Bloco 22/01 - Saúde Coletiva/02 - Doenças Relacionadas ao Trabalho/Principais Doenças e Agravos Relacionados ao Trabalho.mp4",
+          "extension": ".mp4",
+          "size": 360253246,
+          "onlinePath": "Bloco 22/01 - Saúde Coletiva/02 - Doenças Relacionadas ao Trabalho/Principais Doenças e Agravos Relacionados ao Trabalho.mp4"
         }
       ]
     },
@@ -4942,12 +4942,228 @@
           "onlinePath": "Bloco 25/04 - Clínica Médica/07 - HIV/07.1 - HIV COFEXPRESS.mp4"
         }
       ]
+    },
+    {
+      "id": "b26|saude coletiva|atencao a saude de populacoes especificas",
+      "block": 26,
+      "area": "Saúde Coletiva",
+      "title": "Atenção à Saúde de Populações Específicas",
+      "folderOrder": 1,
+      "scheduleOrder": 1,
+      "videos": [
+        {
+          "id": "b26|Saúde Coletiva|Atenção à Saúde de Populações Específicas|Atenção à Saúde de Populações Específicas_COFEXPRESS",
+          "title": "Atenção à Saúde de Populações Específicas_COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 26/Atenção à Saúde de Populações Específicas_COFEXPRESS.mp4",
+          "extension": ".mp4",
+          "size": 125826397,
+          "onlinePath": "Bloco 26/Atenção à Saúde de Populações Específicas_COFEXPRESS.mp4"
+        }
+      ]
+    },
+    {
+      "id": "b27|medicina de familia e comunidade|dermatologia na aps",
+      "block": 27,
+      "area": "Medicina de Família e Comunidade",
+      "title": "Dermatologia na APS",
+      "folderOrder": 3,
+      "scheduleOrder": 3,
+      "videos": [
+        {
+          "id": "b27|Medicina de Família e Comunidade|Dermatologia na APS|Dermatologia na APS_COFEXPRESS",
+          "title": "Dermatologia na APS_COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 27/Medicina de família e Comunidade/Dermatologia na APS_COFEXPRESS.mp4",
+          "extension": ".mp4",
+          "size": 83960156,
+          "onlinePath": "Bloco 27/Medicina de família e Comunidade/Dermatologia na APS_COFEXPRESS.mp4"
+        }
+      ]
+    },
+    {
+      "id": "b27|g o|sofrimento fetal cronico",
+      "block": 27,
+      "area": "G.O",
+      "title": "Sofrimento Fetal Crônico",
+      "folderOrder": 5,
+      "scheduleOrder": 5,
+      "videos": [
+        {
+          "id": "b27|G.O|Sofrimento Fetal Crônico|Sofrimento Fetal Crônico e Restrição de Crescimento Fetal_COFEXPRESS",
+          "title": "Sofrimento Fetal Crônico e Restrição de Crescimento Fetal_COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 27/G.O/Sofrimento Fetal Crônico e Restrição de Crescimento Fetal_COFEXPRESS.mp4",
+          "extension": ".mp4",
+          "size": 101387082,
+          "onlinePath": "Bloco 27/G.O/Sofrimento Fetal Crônico e Restrição de Crescimento Fetal_COFEXPRESS.mp4"
+        },
+        {
+          "id": "b27|G.O|Sofrimento Fetal Crônico|Sofrimento Fetal Crônico e Restrição de Crescimento Fetal",
+          "title": "Sofrimento Fetal Crônico e Restrição de Crescimento Fetal",
+          "type": "complete",
+          "relativePath": "Bloco 27/G.O/Sofrimento Fetal Crônico e Restrição de Crescimento Fetal.mp4",
+          "extension": ".mp4",
+          "size": 327002686,
+          "onlinePath": "Bloco 27/G.O/Sofrimento Fetal Crônico e Restrição de Crescimento Fetal.mp4"
+        }
+      ]
+    },
+    {
+      "id": "b27|cirurgia|ortopedia no enamed",
+      "block": 27,
+      "area": "Cirurgia",
+      "title": "Ortopedia no ENAMED",
+      "folderOrder": 7,
+      "scheduleOrder": 7,
+      "videos": [
+        {
+          "id": "b27|Cirurgia|Ortopedia no ENAMED|Ortopedia no ENAMED_COFEXPRESS (cortar o final)_EDITADO",
+          "title": "Ortopedia no ENAMED_COFEXPRESS (cortar o final)_EDITADO",
+          "type": "express",
+          "relativePath": "Bloco 27/Cirurgia/Ortopedia no ENAMED_COFEXPRESS (cortar o final)_EDITADO.mp4",
+          "extension": ".mp4",
+          "size": 156409575,
+          "onlinePath": "Bloco 27/Cirurgia/Ortopedia no ENAMED_COFEXPRESS (cortar o final)_EDITADO.mp4"
+        },
+        {
+          "id": "b27|Cirurgia|Ortopedia no ENAMED|Ortopedia no ENAMED",
+          "title": "Ortopedia no ENAMED",
+          "type": "complete",
+          "relativePath": "Bloco 27/Cirurgia/Ortopedia no ENAMED.mp4",
+          "extension": ".mp4",
+          "size": 981554750,
+          "onlinePath": "Bloco 27/Cirurgia/Ortopedia no ENAMED.mp4"
+        }
+      ]
+    },
+    {
+      "id": "b28|clinica medica|colagenoses lupus e saf",
+      "block": 28,
+      "area": "Clínica Médica",
+      "title": "Colagenoses: Lupus e SAF",
+      "folderOrder": 6,
+      "scheduleOrder": 6,
+      "videos": [
+        {
+          "id": "b28|Clínica Médica|Colagenoses: Lupus e SAF|Colagenoses Lupus e SAF_COFEXPRESS",
+          "title": "Colagenoses Lupus e SAF_COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 28/Colagenoses Lupus e SAF_COFEXPRESS.mp4",
+          "extension": ".mp4",
+          "size": 139571179,
+          "onlinePath": "Bloco 28/Colagenoses Lupus e SAF_COFEXPRESS.mp4"
+        },
+        {
+          "id": "b28|Clínica Médica|Colagenoses: Lupus e SAF|Colagenoses Lupus e SAF",
+          "title": "Colagenoses Lupus e SAF",
+          "type": "complete",
+          "relativePath": "Bloco 28/Colagenoses Lupus e SAF.mp4",
+          "extension": ".mp4",
+          "size": 434297962,
+          "onlinePath": "Bloco 28/Colagenoses Lupus e SAF.mp4"
+        }
+      ]
+    },
+    {
+      "id": "b28|clinica medica|miscelaneas em reumatologia sjogren esclerose sistemica e miopatias",
+      "block": 28,
+      "area": "Clínica Médica",
+      "title": "Miscelâneas em reumatologia: Sjogren, Esclerose Sistêmica e Miopatias",
+      "folderOrder": 7,
+      "scheduleOrder": 7,
+      "videos": [
+        {
+          "id": "b28|Clínica Médica|Miscelâneas em reumatologia: Sjogren, Esclerose Sistêmica e Miopatias|Miscelâneas em reumatologia Sjogren, Esclerose Sistêmica e Miopatias_COFEXPRESS",
+          "title": "Miscelâneas em reumatologia Sjogren, Esclerose Sistêmica e Miopatias_COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 28/Miscelâneas em reumatologia Sjogren, Esclerose Sistêmica e Miopatias_COFEXPRESS.mp4",
+          "extension": ".mp4",
+          "size": 66941113,
+          "onlinePath": "Bloco 28/Miscelâneas em reumatologia Sjogren, Esclerose Sistêmica e Miopatias_COFEXPRESS.mp4"
+        }
+      ]
+    },
+    {
+      "id": "b30|pediatria|vacinacao",
+      "block": 30,
+      "area": "Pediatria",
+      "title": "Vacinação",
+      "folderOrder": 2,
+      "scheduleOrder": 2,
+      "videos": [
+        {
+          "id": "b30|Pediatria|Vacinação|Vacina Pneumocócica - 20V no SUS",
+          "title": "Vacina Pneumocócica - 20V no SUS",
+          "type": "complete",
+          "relativePath": "Bloco 30/Vacina Pneumocócica - 20V no SUS.mp4",
+          "extension": ".mp4",
+          "size": 33372563,
+          "onlinePath": "Bloco 30/Vacina Pneumocócica - 20V no SUS.mp4"
+        },
+        {
+          "id": "b30|Pediatria|Vacinação|Vacinação",
+          "title": "Vacinação",
+          "type": "complete",
+          "relativePath": "Bloco 30/Vacinação.mp4",
+          "extension": ".mp4",
+          "size": 507489338,
+          "onlinePath": "Bloco 30/Vacinação.mp4"
+        }
+      ]
+    },
+    {
+      "id": "b30|pediatria|reanimacao neonatal",
+      "block": 30,
+      "area": "Pediatria",
+      "title": "Reanimação Neonatal",
+      "folderOrder": 3,
+      "scheduleOrder": 3,
+      "videos": [
+        {
+          "id": "b30|Pediatria|Reanimação Neonatal|Reanimação neonatal - Novas diretrizes de reanimação neonatal",
+          "title": "Reanimação neonatal - Novas diretrizes de reanimação neonatal",
+          "type": "complete",
+          "relativePath": "Bloco 30/Reanimação neonatal - Novas diretrizes de reanimação neonatal.mp4",
+          "extension": ".mp4",
+          "size": 155293095,
+          "onlinePath": "Bloco 30/Reanimação neonatal - Novas diretrizes de reanimação neonatal.mp4"
+        }
+      ]
+    },
+    {
+      "id": "b30|cirurgia|cabeca e pescoco para o enamed",
+      "block": 30,
+      "area": "Cirurgia",
+      "title": "Cabeça e pescoço para o ENAMED",
+      "folderOrder": 4,
+      "scheduleOrder": 4,
+      "videos": [
+        {
+          "id": "b30|Cirurgia|Cabeça e pescoço para o ENAMED|Cabeça e pescoço para ENAMED",
+          "title": "Cabeça e pescoço para ENAMED",
+          "type": "complete",
+          "relativePath": "Bloco 30/Cabeça e pescoço para ENAMED.mp4",
+          "extension": ".mp4",
+          "size": 565981955,
+          "onlinePath": "Bloco 30/Cabeça e pescoço para ENAMED.mp4"
+        },
+        {
+          "id": "b30|Cirurgia|Cabeça e pescoço para o ENAMED|Cabeça e Pescoço_COFEXPRESS",
+          "title": "Cabeça e Pescoço_COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 30/Cabeça e Pescoço_COFEXPRESS.mp4",
+          "extension": ".mp4",
+          "size": 112228636,
+          "onlinePath": "Bloco 30/Cabeça e Pescoço_COFEXPRESS.mp4"
+        }
+      ]
     }
   ],
   "r2": {
     "remote": "cloudflare:enamed-videos",
     "prefix": "video_library/media/",
-    "reconciledAt": "2026-09-25T21:09:30.632Z",
-    "availableVideos": 371
+    "reconciledAt": "2026-09-27T02:23:15.960Z",
+    "availableVideos": 385
   }
 }

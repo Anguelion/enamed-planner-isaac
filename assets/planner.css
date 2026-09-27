@@ -3416,10 +3416,10 @@ body.dark .video-command-center .video-tabs,body.dark .video-command-center .vid
 @media(max-width:767px){
   #questoes.view.active{animation:none!important;transform:none!important}
   .app-sidebar .tab.mobile-primary.active{background:#244ca8!important;color:#fff!important}
-  .app-sidebar .tabs,body.sidebar-collapsed .app-sidebar .tabs{position:relative;overflow:visible!important;display:grid!important;grid-template-columns:repeat(6,minmax(0,1fr));gap:2px!important;padding:5px max(5px,env(safe-area-inset-right)) calc(5px + env(safe-area-inset-bottom)) max(5px,env(safe-area-inset-left))!important}
+  .app-sidebar .tabs,body.sidebar-collapsed .app-sidebar .tabs{position:relative;overflow:visible!important;display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr));gap:2px!important;padding:5px max(5px,env(safe-area-inset-right)) calc(5px + env(safe-area-inset-bottom)) max(5px,env(safe-area-inset-left))!important}
   .app-sidebar .tabs>.tab:not(.mobile-primary),.app-sidebar .tab-group-label{display:none!important}
   .app-sidebar .tabs>.tab.mobile-primary{display:flex!important;min-width:0!important;width:auto!important;padding-inline:2px!important}
-  .app-sidebar .tab-more{display:flex!important}
+  .app-sidebar .tab-more{display:none!important}
   .mobile-more-menu{position:fixed;right:8px;bottom:calc(var(--mobile-nav-height) + 8px);left:8px;z-index:1250;max-height:min(70dvh,560px);overflow:auto;padding:14px;border:1px solid var(--line);border-radius:18px;background:var(--panel);box-shadow:0 22px 70px rgba(12,40,54,.28)}
   .mobile-more-menu:not([hidden]){display:block}
   .mobile-more-menu[hidden]{display:none!important}

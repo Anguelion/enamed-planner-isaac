@@ -385,3 +385,26 @@ test('entrada pública carrega somente autenticação antes da sessão',()=>{
   assert.match(loader,/function bootFullApp\(\)/);
   assert.match(loader,/requestIdleCallback\(load,\{timeout:3500\}\)/);
 });
+
+test('celular mostra somente os cinco destinos essenciais sem simplificar o tablet',()=>{
+  const root=path.resolve(__dirname,'..');
+  const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');
+  const css=fs.readFileSync(path.join(root,'assets/planner.css'),'utf8');
+  const refresh=fs.readFileSync(path.join(root,'assets/planner-refresh.css'),'utf8');
+  assert.match(planner,/MOBILE_PRIMARY_VIEWS = new Set\(\['painel','cronograma','aulas','questoes','flashcards'\]\)/);
+  assert.doesNotMatch(planner,/id="mobileTabsMore"/);
+  assert.match(css,/@media\(max-width:767px\)\{[\s\S]*?grid-template-columns:repeat\(5,minmax\(0,1fr\)\)[\s\S]*?\.tabs>\.tab:not\(\.mobile-primary\)/);
+  assert.match(refresh,/@media \(max-width: 767px\) \{[\s\S]*?#printBtn, #headerSendBtn, #headerReceiveBtn \{ display: none !important; \}/);
+  const compactRule=css.indexOf('.app-sidebar .tabs>.tab:not(.mobile-primary)');
+  assert.equal(css.lastIndexOf('@media(max-width:767px)',compactRule),css.lastIndexOf('@media',compactRule),'o corte de módulos deve pertencer ao breakpoint de celular');
+  assert.match(refresh,/@media \(max-width: 1180px\) and \(min-width: 768px\) \{[\s\S]*?\.app-sidebar \.tabs/,'tablet deve conservar sua navegação própria e completa');
+});
+
+test('detecção remota usa a revisão confirmada pelo servidor, não o relógio do salvamento local',()=>{
+  const planner=fs.readFileSync(path.resolve(__dirname,'..','assets/planner.js'),'utf8');
+  const start=planner.indexOf('async function checkForRemoteUpdate()');
+  const end=planner.indexOf('async function pullRemoteUpdateNow()',start);
+  const source=planner.slice(start,end);
+  assert.match(source,/remoteAt > \(lastCloudSyncAt \|\| 0\)/);
+  assert.doesNotMatch(source,/Math\.max\(lastCloudSyncAt[^)]*localStateStamp/,'um carimbo local não pode mascarar uma revisão remota');
+});

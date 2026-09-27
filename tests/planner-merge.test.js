@@ -157,6 +157,105 @@ test('cronograma versiona cada campo como o Anki: edição mais nova vence, lega
   assert.equal(merged.manualFCUpdatedAt, '2026-08-12T11:00:00.000Z');
 });
 
+test('dois aparelhos somam atividades distintas do mesmo dia a partir dos eventos, sem duplicar o que já era comum', () => {
+  const ctx=loadPlannerSandbox();
+  const date='2026-09-26';
+  const remote={
+    schedule:[{id:'aula',topic:'ACLS',block:12}],
+    dayLogs:[{...ctx.defaultDayLog(date),questions:1,correct:1,flashcards:1,videos:1,lessonMinutes:20}],
+    questionProgress:{q1:{answeredAt:`${date}T10:00:00.000Z`,updatedAt:`${date}T10:00:00.000Z`,correct:true}},
+    questionLogged:{q1:date},
+    flashcardSystem:{reviewLogs:[{id:'review-1',cardId:'fc-1',reviewedAt:`${date}T10:10:00.000Z`}]},
+    videoPlayer:{watched:{v1:true},watchedAt:{v1:`${date}T10:20:00.000Z`}},
+    studySessions:[{id:'session-1',date,kind:'video',seconds:1200,savedAt:`${date}T10:40:00.000Z`}]
+  };
+  const local={
+    schedule:[{id:'aula',topic:'ACLS',block:12}],
+    dayLogs:[{...ctx.defaultDayLog(date),questions:1,wrong:1,flashcards:1,videos:1,lessonMinutes:15}],
+    questionProgress:{q2:{answeredAt:`${date}T11:00:00.000Z`,updatedAt:`${date}T11:00:00.000Z`,correct:false}},
+    questionLogged:{q2:date},
+    flashcardSystem:{reviewLogs:[{id:'review-2',cardId:'fc-2',reviewedAt:`${date}T11:10:00.000Z`}]},
+    videoPlayer:{watched:{v2:true},watchedAt:{v2:`${date}T11:20:00.000Z`}},
+    studySessions:[{id:'session-2',date,kind:'video',seconds:900,savedAt:`${date}T11:40:00.000Z`}]
+  };
+  const merged=ctx.mergePlannerActivityState(remote,local,true);
+  const log=merged.dayLogs.find(item=>item.date===date);
+  assert.deepEqual({questions:log.questions,correct:log.correct,wrong:log.wrong},{questions:2,correct:1,wrong:1});
+  assert.equal(log.flashcards,2);
+  assert.equal(log.videos,2);
+  assert.equal(log.lessonMinutes,35,'sessões com ids diferentes devem ser somadas uma única vez');
+});
+
+test('progresso de flashcards é unido por card e o registro mais recente vence apenas o mesmo card', () => {
+  const ctx=loadPlannerSandbox();
+  const merged=ctx.mergePlannerActivityState(
+    {flashcardProgress:{a:{reviews:2,lastReviewedAt:'2026-09-26T10:00:00.000Z'},b:{reviews:1,lastReviewedAt:'2026-09-26T09:00:00.000Z'}}},
+    {flashcardProgress:{a:{reviews:3,lastReviewedAt:'2026-09-26T11:00:00.000Z'},c:{reviews:1,lastReviewedAt:'2026-09-26T09:30:00.000Z'}}},
+    false
+  );
+  assert.deepEqual(Object.keys(merged.flashcardProgress).sort(),['a','b','c']);
+  assert.equal(merged.flashcardProgress.a.reviews,3);
+});
+
+test('player mantém progresso independente por vídeo e respeita desmarcação mais recente', () => {
+  const ctx=loadPlannerSandbox();
+  const merged=ctx.mergeVideoPlayerState(
+    {
+      resume:{v1:120},resumeUpdatedAt:{v1:'2026-09-26T10:00:00.000Z'},progress:{v1:{currentTime:120,updatedAt:'2026-09-26T10:00:00.000Z'}},
+      watched:{v1:true},watchedAt:{v1:'2026-09-26T10:10:00.000Z'},watchedUpdatedAt:{v1:'2026-09-26T10:10:00.000Z'}
+    },
+    {
+      resume:{v2:240},resumeUpdatedAt:{v2:'2026-09-26T11:00:00.000Z'},progress:{v2:{currentTime:240,updatedAt:'2026-09-26T11:00:00.000Z'}},
+      watched:{v1:false},watchedAt:{v1:''},watchedUpdatedAt:{v1:'2026-09-26T12:00:00.000Z'}
+    },
+    true
+  );
+  assert.deepEqual(Object.keys(merged.progress).sort(),['v1','v2']);
+  assert.equal(merged.resume.v1,120);
+  assert.equal(merged.resume.v2,240);
+  assert.equal(merged.watched.v1,false,'uma desmarcação explícita não pode ser ressuscitada por outro aparelho');
+});
+
+test('armazenamento local é isolado por conta no mesmo navegador', () => {
+  const ctx=loadPlannerSandbox();
+  assert.equal(ctx.activateAccountState('conta-a'),true);
+  ctx.__setState({schedule:[{id:'aula-a'}],questionProgress:{qa:{answeredAt:'2026-09-26T10:00:00.000Z'}}});
+  ctx.writeLocalState();
+  assert.equal(ctx.activateAccountState('conta-b'),true);
+  assert.equal(Boolean(ctx.__getState().questionProgress?.qa),false,'a conta B não pode herdar atividade da conta A');
+  ctx.__setState({schedule:[{id:'aula-b'}],questionProgress:{qb:{answeredAt:'2026-09-26T11:00:00.000Z'}}});
+  ctx.writeLocalState();
+  assert.equal(ctx.activateAccountState('conta-a'),true);
+  assert.ok(ctx.__getState().questionProgress.qa,'a conta A deve recuperar somente seu próprio estado');
+  assert.equal(ctx.__getState().questionProgress.qb,undefined);
+});
+
+test('exclusões sincronizadas não ressuscitam questão importada nem revisão desfeita',()=>{
+  const ctx=loadPlannerSandbox();
+  const deletedAt='2026-09-26T12:00:00.000Z';
+  const merged=ctx.mergePlannerActivityState(
+    {
+      importedQuestions:[{id:'importada-1',stem:'Questão antiga',createdAt:'2026-09-26T09:00:00.000Z'}],
+      flashcardSystem:{
+        reviewLogs:[{id:'review-1',cardId:'fc-1',reviewedAt:'2026-09-26T10:00:00.000Z'}],
+        sessionReports:[{id:'session-1',endedAt:'2026-09-26T10:05:00.000Z'}]
+      }
+    },
+    {
+      deletedQuestions:{'importada-1':deletedAt},
+      flashcardSystem:{
+        reviewLogsDeleted:{'review-1':deletedAt},
+        sessionReportsDeleted:{'session-1':deletedAt}
+      }
+    },
+    true
+  );
+  assert.equal(merged.importedQuestions.some(question=>question.id==='importada-1'),false);
+  assert.equal(merged.flashcardSystem.reviewLogs.some(review=>review.id==='review-1'),false);
+  assert.equal(merged.flashcardSystem.sessionReports.some(report=>report.id==='session-1'),false);
+  assert.equal(merged.deletedQuestions['importada-1'],deletedAt);
+});
+
 test('isEditingTextField: detecta textarea e input de texto, ignora checkbox e nada focado', () => {
   const ctx = loadPlannerSandbox();
   ctx.document.activeElement = { tagName: 'TEXTAREA' };

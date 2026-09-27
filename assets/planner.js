@@ -13,6 +13,9 @@ const QUESTION_BANK_ASSET_VERSION = '20260716-33';
 const QUESTION_IMPORT_MAX = 200;
 const QUESTION_IMPORT_DRAFT_KEY = 'soqueromed-question-import-draft';
 const LOCAL_BACKUPS_KEY = 'soqueromed-local-backups-v1';
+const ACTIVE_ACCOUNT_KEY = 'soqueromed-active-account-v1';
+const LEGACY_STATE_OWNER_KEY = 'soqueromed-legacy-state-owner-v1';
+const DEVICE_ID_KEY = 'soqueromed-device-id-v1';
 const LOCAL_BACKUP_LIMIT = 12;
 const AUTO_BACKUP_RETENTION_DAYS = 7;
 const ACTIVITY_RESET_VERSION = 'activity-from-2026-08-11-v1';
@@ -48,6 +51,26 @@ const POMODORO_CYCLES_KEY = 'enamed-planner-pomodoro-cycles';
 // Carimbo da última gravação local bem-sucedida. É ele que decide, ao abrir o
 // planner, se o estado deste aparelho está na frente do que está na nuvem.
 const LOCAL_STATE_STAMP_KEY = 'enamed-planner-state-updated-at';
+function scopedStorageKey(base, accountId='') {
+  const clean = String(accountId || '').trim();
+  return clean ? `${base}:account:${clean}` : base;
+}
+function getOrCreateDeviceId() {
+  try {
+    const saved = localStorage.getItem(DEVICE_ID_KEY);
+    if(saved) return saved;
+    const id = globalThis.crypto?.randomUUID?.() || `device-${Date.now()}-${Math.random().toString(36).slice(2,10)}`;
+    localStorage.setItem(DEVICE_ID_KEY,id);
+    return id;
+  } catch(error) {
+    return `device-session-${Date.now()}-${Math.random().toString(36).slice(2,10)}`;
+  }
+}
+let activeAccountId = localStorage.getItem(ACTIVE_ACCOUNT_KEY) || '';
+let activeStateStorageKey = scopedStorageKey(STORAGE_KEY,activeAccountId);
+let activeStateStampKey = scopedStorageKey(LOCAL_STATE_STAMP_KEY,activeAccountId);
+let activeLocalBackupsKey = scopedStorageKey(LOCAL_BACKUPS_KEY,activeAccountId);
+const DEVICE_ID = getOrCreateDeviceId();
 // O navegador continua local-first; quando houver internet, sincroniza com o Supabase.
 const OFFLINE_FIRST = false;
 const SUPABASE_URL = 'https://wbxzptiacftymhvfkiyx.supabase.co';
@@ -233,7 +256,7 @@ let questionTagsHidden = localStorage.getItem(QUESTION_TAGS_HIDDEN_KEY) !== '0';
 const views = [
   ['painel','Dashboard','dashboard'],
   ['radar-saude','Radar Saúde','reading'],
-  ['cronograma','Missão','mission'], ['aulas','Aulas','video'], ['materiais','Materiais','materials'],
+  ['cronograma','Missão','mission'], ['aulas','Videoaulas','video'], ['materiais','Materiais','materials'],
   ['questoes','Questões','question'], ['simulados','Simulados','simulation'], ['feynman','Feynman','feynman'],
   ['caderno-erros','Caderno de erros','caderno'], ['flashcards','Flashcards','flashcard'],
   ['prescricao','Prescrição','prescription'], ['anatomia','Anatomia','xray'], ['semiologia','Semiologia','medical'], ['ecg','ECG','heart'], ['radiografia','Radiografia','xray'],
@@ -250,7 +273,7 @@ const VIEW_GROUPS = {
   analise:'Progresso', areas:'Progresso', historico:'Progresso',
   'importar-questoes':'Mais', ferramentas:'Mais'
 };
-const MOBILE_PRIMARY_VIEWS = new Set(['painel','cronograma','questoes','caderno-erros','flashcards']);
+const MOBILE_PRIMARY_VIEWS = new Set(['painel','cronograma','aulas','questoes','flashcards']);
 applyTheme(localStorage.getItem(THEME_KEY) || 'light');
 // Toda gravação local passa por aqui. Antes, um localStorage cheio fazia o
 // setItem lançar QuotaExceededError no meio de persist(): o restante do
@@ -273,11 +296,11 @@ function dropOldestLocalBackups() {
   try {
     if(!Array.isArray(localBackups) || !localBackups.length) return false;
     localBackups = localBackups.slice(0, Math.max(0, localBackups.length - Math.max(1, Math.ceil(localBackups.length / 2))));
-    try { localStorage.setItem(LOCAL_BACKUPS_KEY, JSON.stringify(localBackups)); }
-    catch(error) { try { localStorage.removeItem(LOCAL_BACKUPS_KEY); } catch(nested) {} }
+    try { localStorage.setItem(activeLocalBackupsKey, JSON.stringify(localBackups)); }
+    catch(error) { try { localStorage.removeItem(activeLocalBackupsKey); } catch(nested) {} }
     return true;
   } catch(error) {
-    try { localStorage.removeItem(LOCAL_BACKUPS_KEY); return true; } catch(nested) { return false; }
+    try { localStorage.removeItem(activeLocalBackupsKey); return true; } catch(nested) { return false; }
   }
 }
 // `var` de propósito: writeLocalState roda no bootstrap antes desta linha ser
@@ -298,7 +321,7 @@ function progressFingerprint(s) {
 function guardAgainstSilentProgressLoss() {
   if(allowLargeProgressDrop) return;
   try {
-    const previous = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null');
+    const previous = JSON.parse(localStorage.getItem(activeStateStorageKey) || 'null');
     if(!previous) return;
     const before = progressFingerprint(previous);
     const after = progressFingerprint(state);
@@ -315,11 +338,12 @@ function guardAgainstSilentProgressLoss() {
 }
 function writeLocalState() {
   guardAgainstSilentProgressLoss();
+  touchSyncMetadata(state);
   const payload = JSON.stringify(state);
   for(let attempt = 0; attempt < 4; attempt += 1) {
     try {
-      localStorage.setItem(STORAGE_KEY, payload);
-      localStorage.setItem(LOCAL_STATE_STAMP_KEY, localStateStampIso());
+      localStorage.setItem(activeStateStorageKey, payload);
+      localStorage.setItem(activeStateStampKey, localStateStampIso());
       // Se a tentativa anterior tinha ficado marcada como "Sem espaço", a
       // recuperação (descartar backups antigos) já resolveu — o indicador não
       // deve continuar preso num erro que não existe mais. currentUser pode não
@@ -357,11 +381,11 @@ function warnLocalStorageFull() {
   }
 }
 function localStateStamp() {
-  return Date.parse(localStorage.getItem(LOCAL_STATE_STAMP_KEY) || '') || 0;
+  return Date.parse(localStorage.getItem(activeStateStampKey) || '') || 0;
 }
 function loadState() {
   try {
-    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
+    const saved = JSON.parse(localStorage.getItem(activeStateStorageKey));
     if(saved && typeof saved === 'object') {
       const base = structuredClone(seed);
       return {
@@ -372,6 +396,71 @@ function loadState() {
     }
   } catch(e) {}
   return structuredClone(seed);
+}
+function devicePlatformLabel() {
+  const raw = String(navigator.userAgentData?.platform || navigator.platform || 'Navegador').trim();
+  return raw.slice(0,60) || 'Navegador';
+}
+function touchSyncMetadata(target, touchedAt=localStateStampIso()) {
+  if(!target || typeof target !== 'object') return;
+  const previous = target.syncMeta && typeof target.syncMeta === 'object' ? target.syncMeta : {};
+  const devices = previous.devices && typeof previous.devices === 'object' ? previous.devices : {};
+  target.syncMeta = {
+    ...previous,
+    version:2,
+    devices:{
+      ...devices,
+      [DEVICE_ID]:{
+        ...(devices[DEVICE_ID] || {}),
+        id:DEVICE_ID,
+        platform:devicePlatformLabel(),
+        lastSeenAt:touchedAt
+      }
+    },
+    lastDeviceId:DEVICE_ID,
+    lastSavedAt:touchedAt
+  };
+}
+function accountStateExists(key) {
+  try {
+    const parsed=JSON.parse(localStorage.getItem(key) || 'null');
+    return Boolean(parsed && typeof parsed==='object' && Array.isArray(parsed.schedule) && parsed.schedule.length);
+  } catch(error) { return false; }
+}
+function activateAccountState(accountId) {
+  const nextId=String(accountId || '').trim();
+  if(!nextId || (activeAccountId===nextId && activeStateStorageKey===scopedStorageKey(STORAGE_KEY,nextId))) return false;
+  const nextStateKey=scopedStorageKey(STORAGE_KEY,nextId);
+  const nextStampKey=scopedStorageKey(LOCAL_STATE_STAMP_KEY,nextId);
+  const nextBackupsKey=scopedStorageKey(LOCAL_BACKUPS_KEY,nextId);
+  const legacyOwner=localStorage.getItem(LEGACY_STATE_OWNER_KEY) || '';
+  const canClaimLegacy=!legacyOwner || legacyOwner===nextId;
+  if(!accountStateExists(nextStateKey) && canClaimLegacy && accountStateExists(STORAGE_KEY)) {
+    localStorage.setItem(nextStateKey,localStorage.getItem(STORAGE_KEY));
+    const legacyStamp=localStorage.getItem(LOCAL_STATE_STAMP_KEY);
+    const legacyBackups=localStorage.getItem(LOCAL_BACKUPS_KEY);
+    if(legacyStamp) localStorage.setItem(nextStampKey,legacyStamp);
+    if(legacyBackups) localStorage.setItem(nextBackupsKey,legacyBackups);
+    localStorage.setItem(LEGACY_STATE_OWNER_KEY,nextId);
+  }
+  activeAccountId=nextId;
+  activeStateStorageKey=nextStateKey;
+  activeStateStampKey=nextStampKey;
+  activeLocalBackupsKey=nextBackupsKey;
+  localStorage.setItem(ACTIVE_ACCOUNT_KEY,nextId);
+  state=loadState();
+  localBackups=loadLocalBackups();
+  ensureGamificationState();
+  ensureImportedQuestions();
+  normalizeOfficialScheduleNames();
+  ensureRestartFromBlockTwelve();
+  ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress();
+  if(officialSchedule.length) applyOfficialSchedule();
+  invalidateActivityRenderCache();
+  lastCloudSyncAt=0;
+  remoteUpdateAvailableAt=0;
+  cloudDirty=false;
+  return true;
 }
 function activityResetMarker(value) {
   return value?.activityReset?.version===ACTIVITY_RESET_VERSION ? value.activityReset : null;
@@ -449,7 +538,7 @@ function resetActivityStateFromDate(target, cutoff=ACTIVITY_RESET_DATE, appliedA
     const player=target.videoPlayer;
     Object.entries(player.watchedAt||{}).forEach(([sourceId,date])=>{
       if(!activityDateOnOrAfter(date,cutoff)) return;
-      delete player.watchedAt[sourceId]; delete player.watched?.[sourceId]; summary.videos+=1;
+      delete player.watchedAt[sourceId]; delete player.watchedUpdatedAt?.[sourceId]; delete player.watched?.[sourceId]; summary.videos+=1;
     });
     Object.entries(player.progress||{}).forEach(([sourceId,progress])=>{ if(activityDateOnOrAfter(progress?.updatedAt,cutoff)) delete player.progress[sourceId]; });
     Object.entries(player.resumeUpdatedAt||{}).forEach(([sourceId,date])=>{ if(activityDateOnOrAfter(date,cutoff)) { delete player.resumeUpdatedAt[sourceId]; delete player.resume?.[sourceId]; } });
@@ -638,8 +727,13 @@ function scheduleStateFlushAfterPaint() {
   if(typeof requestAnimationFrame === 'function') requestAnimationFrame(schedule);
   else setTimeout(schedule, 0);
 }
-document.addEventListener('visibilitychange', () => { if(document.visibilityState === 'hidden') { if(saveStateOnlyTimer) flushSaveStateOnly(); flushCloudSaveNow(); } });
+document.addEventListener('visibilitychange', () => {
+  if(document.visibilityState === 'hidden') { if(saveStateOnlyTimer) flushSaveStateOnly(); flushCloudSaveNow(); return; }
+  if(currentUser && CLOUD_SYNC_ALLOWED) checkForRemoteUpdate();
+});
 window.addEventListener('beforeunload', () => { if(saveStateOnlyTimer) flushSaveStateOnly(); flushCloudSaveNow(); });
+window.addEventListener('online',()=>{ if(currentUser && CLOUD_SYNC_ALLOWED) cloudDirty ? pushCloudState() : checkForRemoteUpdate(); });
+window.addEventListener('focus',()=>{ if(currentUser && CLOUD_SYNC_ALLOWED) checkForRemoteUpdate(); });
 
 function ensureQuestionProgress() {
   if(!state.questionProgress || typeof state.questionProgress !== 'object') state.questionProgress = {};
@@ -647,6 +741,7 @@ function ensureQuestionProgress() {
   state.questionReviewHistory = state.questionReviewHistory.filter(entry=>entry?.questionId && entry?.reviewedAt).slice(-500);
   if(!state.questionProgressDeleted || typeof state.questionProgressDeleted !== 'object') state.questionProgressDeleted = {};
   if(!state.questionEdits || typeof state.questionEdits !== 'object') state.questionEdits = {};
+  if(!state.questionEditsDeleted || typeof state.questionEditsDeleted !== 'object') state.questionEditsDeleted = {};
   if(!state.questionDataRepairs || typeof state.questionDataRepairs !== 'object') state.questionDataRepairs = {};
   if(!state.questionDataRepairs.indicadoresSaudeV2) {
     const officialAnswers=['D','D','C','D','D','C','C','D','A','B','C','E','A','A'];
@@ -675,8 +770,10 @@ function ensureQuestionProgress() {
   if(!Array.isArray(state.flashcardLibrary)) state.flashcardLibrary = [];
   if(!state.flashcardSystem || typeof state.flashcardSystem !== 'object') state.flashcardSystem = {};
   if(!Array.isArray(state.flashcardSystem.reviewLogs)) state.flashcardSystem.reviewLogs = [];
+  if(!state.flashcardSystem.reviewLogsDeleted || typeof state.flashcardSystem.reviewLogsDeleted !== 'object') state.flashcardSystem.reviewLogsDeleted = {};
   if(!Array.isArray(state.flashcardSystem.captureSessions)) state.flashcardSystem.captureSessions = [];
   if(!Array.isArray(state.flashcardSystem.sessionReports)) state.flashcardSystem.sessionReports = [];
+  if(!state.flashcardSystem.sessionReportsDeleted || typeof state.flashcardSystem.sessionReportsDeleted !== 'object') state.flashcardSystem.sessionReportsDeleted = {};
   state.flashcardSystem.sessionReports = state.flashcardSystem.sessionReports.filter(report=>report?.id && report?.endedAt).slice(-100);
   if(!Array.isArray(state.flashcardSystem.versions)) state.flashcardSystem.versions = [];
   if(!Array.isArray(state.flashcardSystem.undoStack)) state.flashcardSystem.undoStack = [];
@@ -703,6 +800,7 @@ function ensureQuestionProgress() {
   if(!state.videoPlayer.resumeUpdatedAt || typeof state.videoPlayer.resumeUpdatedAt !== 'object') state.videoPlayer.resumeUpdatedAt = {};
   if(!state.videoPlayer.watched || typeof state.videoPlayer.watched !== 'object') state.videoPlayer.watched = {};
   if(!state.videoPlayer.watchedAt || typeof state.videoPlayer.watchedAt !== 'object') state.videoPlayer.watchedAt = {};
+  if(!state.videoPlayer.watchedUpdatedAt || typeof state.videoPlayer.watchedUpdatedAt !== 'object') state.videoPlayer.watchedUpdatedAt = {};
   if(!state.videoPlayer.progress || typeof state.videoPlayer.progress !== 'object') state.videoPlayer.progress = {};
   Object.keys(state.videoPlayer.resume).forEach(sourceId => {
     state.videoPlayer.progress[sourceId] = PlannerUX?.normalizeVideoProgress(state.videoPlayer.progress[sourceId], {
@@ -772,6 +870,12 @@ function removeQuestionProgress(questionId, deletedAt=new Date().toISOString()) 
   if(!state.questionProgressDeleted || typeof state.questionProgressDeleted !== 'object') state.questionProgressDeleted = {};
   state.questionProgressDeleted[questionId] = deletedAt;
   delete state.questionProgress[questionId];
+}
+function removeQuestionEdit(questionId,deletedAt=nowIso()) {
+  if(!state.questionEdits || typeof state.questionEdits!=='object') state.questionEdits={};
+  if(!state.questionEditsDeleted || typeof state.questionEditsDeleted!=='object') state.questionEditsDeleted={};
+  state.questionEditsDeleted[questionId]=deletedAt;
+  delete state.questionEdits[questionId];
 }
 
 function reconcileQuestionDailyLog() {
@@ -1281,6 +1385,135 @@ function remapScheduleRecord(record, remap) {
   if(clone.lessonId) clone.lessonId = mapped;
   return clone;
 }
+function mergeTimestampMap(remoteMap={}, localMap={}) {
+  const merged={};
+  new Set([...Object.keys(remoteMap || {}),...Object.keys(localMap || {})]).forEach(key=>{
+    const remoteValue=remoteMap?.[key] || '';
+    const localValue=localMap?.[key] || '';
+    merged[key]=timestampOf(localValue)>=timestampOf(remoteValue)?localValue:remoteValue;
+  });
+  return merged;
+}
+function mergeSyncMetadata(remoteMeta={},localMeta={}) {
+  const remote=remoteMeta&&typeof remoteMeta==='object'?remoteMeta:{};
+  const local=localMeta&&typeof localMeta==='object'?localMeta:{};
+  const devices={};
+  new Set([...Object.keys(remote.devices||{}),...Object.keys(local.devices||{})]).forEach(id=>{
+    const remoteDevice=remote.devices?.[id] || {};
+    const localDevice=local.devices?.[id] || {};
+    devices[id]=timestampOf(localDevice.lastSeenAt)>=timestampOf(remoteDevice.lastSeenAt)
+      ? structuredClone(localDevice)
+      : structuredClone(remoteDevice);
+  });
+  const latest=[...Object.values(devices)].sort((a,b)=>timestampOf(b.lastSeenAt)-timestampOf(a.lastSeenAt))[0] || {};
+  return {
+    ...remote,
+    ...local,
+    version:Math.max(2,n(remote.version),n(local.version)),
+    devices,
+    lastDeviceId:latest.id || local.lastDeviceId || remote.lastDeviceId || '',
+    lastSavedAt:latest.lastSeenAt || local.lastSavedAt || remote.lastSavedAt || ''
+  };
+}
+function mergeRecordMapByKey(remoteMap={},localMap={},preferLocal=false) {
+  const merged={};
+  new Set([...Object.keys(remoteMap||{}),...Object.keys(localMap||{})]).forEach(key=>{
+    const remoteRecord=remoteMap?.[key];
+    const localRecord=localMap?.[key];
+    if(remoteRecord===undefined) { merged[key]=structuredClone(localRecord); return; }
+    if(localRecord===undefined) { merged[key]=structuredClone(remoteRecord); return; }
+    const remoteTime=recordRecencyTimestamp(remoteRecord);
+    const localTime=recordRecencyTimestamp(localRecord);
+    const remoteVersion=Math.max(n(remoteRecord?.rowVersion),n(remoteRecord?.contentVersion),n(remoteRecord?.reviews),n(remoteRecord?.repetitions));
+    const localVersion=Math.max(n(localRecord?.rowVersion),n(localRecord?.contentVersion),n(localRecord?.reviews),n(localRecord?.repetitions));
+    const useLocal=localTime!==remoteTime ? localTime>remoteTime : localVersion!==remoteVersion ? localVersion>remoteVersion : preferLocal;
+    merged[key]=structuredClone(useLocal?localRecord:remoteRecord);
+  });
+  return merged;
+}
+function mergeHistoryRecords(remoteRecords,localRecords,keyOf,limit=500) {
+  const byKey=new Map();
+  [...(remoteRecords||[]),...(localRecords||[])].forEach((record,index)=>{
+    if(!record || typeof record!=='object') return;
+    const key=keyOf(record) || `legacy-${index}-${recordRecencyTimestamp(record)}`;
+    const previous=byKey.get(key);
+    if(!previous || recordRecencyTimestamp(record)>=recordRecencyTimestamp(previous)) byKey.set(key,structuredClone(record));
+  });
+  return [...byKey.values()].sort((a,b)=>recordRecencyTimestamp(a)-recordRecencyTimestamp(b)).slice(-limit);
+}
+function reconcileMergedActivityCounters(target) {
+  if(!target || typeof target!=='object') return;
+  const logs=new Map((target.dayLogs||[]).map(log=>[log.date,{...defaultDayLog(log.date),...log}]));
+  const ensureLog=date=>{
+    if(!date) return null;
+    if(!logs.has(date)) logs.set(date,defaultDayLog(date));
+    return logs.get(date);
+  };
+  const questionsByDate=new Map();
+  Object.entries(target.questionLogged||{}).forEach(([questionId,date])=>{
+    const progress=target.questionProgress?.[questionId];
+    if(!date || !progress?.answeredAt) return;
+    const counts=questionsByDate.get(date)||{questions:0,correct:0,wrong:0,latestAt:''};
+    counts.questions+=1;
+    if(progress.correct) counts.correct+=1; else counts.wrong+=1;
+    if(timestampOf(progress.updatedAt||progress.answeredAt)>timestampOf(counts.latestAt)) counts.latestAt=progress.updatedAt||progress.answeredAt;
+    questionsByDate.set(date,counts);
+  });
+  questionsByDate.forEach((counts,date)=>{
+    const log=ensureLog(date);
+    if(counts.questions>=n(log.questions)) {
+      log.questions=counts.questions; log.correct=counts.correct; log.wrong=counts.wrong;
+    }
+    log.questionsOn=n(log.questions)>0||n(log.questionMinutes)>0;
+    if(timestampOf(counts.latestAt)>timestampOf(log.updatedAt)) log.updatedAt=counts.latestAt;
+  });
+  const reviewsByDate=new Map();
+  (target.flashcardSystem?.reviewLogs||[]).forEach(review=>{
+    const date=studyDateKey(review?.reviewedAt);
+    if(date) reviewsByDate.set(date,n(reviewsByDate.get(date))+1);
+  });
+  reviewsByDate.forEach((count,date)=>{
+    const log=ensureLog(date);
+    log.flashcards=Math.max(n(log.flashcards),count+n(log.manualFlashcards));
+    log.flashcardsOn=n(log.flashcards)>0||n(log.flashcardMinutes)>0;
+  });
+  const videosByDate=new Map();
+  Object.entries(target.videoPlayer?.watched||{}).forEach(([sourceId,watched])=>{
+    if(!watched) return;
+    const date=studyDateKey(target.videoPlayer?.watchedAt?.[sourceId]);
+    if(date) videosByDate.set(date,n(videosByDate.get(date))+1);
+  });
+  videosByDate.forEach((count,date)=>{
+    const log=ensureLog(date);
+    log.videos=Math.max(n(log.videos),count);
+    log.videosOn=n(log.videos)>0||n(log.lessonMinutes)>0;
+  });
+  const sessionMinutes=new Map();
+  (target.studySessions||[]).forEach(session=>{
+    const date=session?.date||studyDateKey(session?.savedAt);
+    if(!date || n(session?.seconds)<=0) return;
+    const totals=sessionMinutes.get(date)||{video:0,flashcards:0,material:0,simulado:0,questions:0};
+    const kind=String(session.kind||'questions');
+    if(kind==='video') totals.video+=n(session.seconds)/60;
+    else if(kind==='flashcards') totals.flashcards+=n(session.seconds)/60;
+    else if(kind==='material') totals.material+=n(session.seconds)/60;
+    else if(kind==='simulado') totals.simulado+=n(session.seconds)/60;
+    else totals.questions+=n(session.seconds)/60;
+    sessionMinutes.set(date,totals);
+  });
+  sessionMinutes.forEach((totals,date)=>{
+    const log=ensureLog(date);
+    log.lessonMinutes=Math.max(n(log.lessonMinutes),Math.round(totals.video*100)/100);
+    log.flashcardMinutes=Math.max(n(log.flashcardMinutes),Math.round(totals.flashcards*100)/100);
+    log.materialMinutes=Math.max(n(log.materialMinutes),Math.round(totals.material*100)/100);
+    log.simuladoMinutes=Math.max(n(log.simuladoMinutes),Math.round(totals.simulado*100)/100);
+    log.questionMinutes=Math.max(n(log.questionMinutes),Math.round(totals.questions*100)/100);
+    log.videosOn=Boolean(log.videosOn||n(log.videos)||n(log.lessonMinutes));
+    log.flashcardsOn=Boolean(log.flashcardsOn||n(log.flashcards)||n(log.flashcardMinutes));
+    log.questionsOn=Boolean(log.questionsOn||n(log.questions)||n(log.questionMinutes)||n(log.simuladoMinutes));
+  });
+  target.dayLogs=[...logs.values()].sort((a,b)=>String(a.date).localeCompare(String(b.date)));
+}
 function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
   let remote = remoteState && typeof remoteState === 'object' ? structuredClone(remoteState) : {};
   let local = localState && typeof localState === 'object' ? localState : {};
@@ -1298,6 +1531,7 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
     Object.keys(local.questionProgress||{}).forEach(id=>{ delete remote.questionProgressDeleted?.[id]; });
   }
   const merged = preferLocal ? { ...remote, ...local } : { ...local, ...remote };
+  merged.syncMeta=mergeSyncMetadata(remote.syncMeta,local.syncMeta);
   const resetMarker=localReset||remoteReset||activityResetMarker(local)||activityResetMarker(remote);
   if(resetMarker) merged.activityReset=structuredClone(resetMarker);
   const remoteHiddenAt = remote.historyHiddenAt && typeof remote.historyHiddenAt === 'object' ? remote.historyHiddenAt : {};
@@ -1359,22 +1593,48 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
     const remoteLog = remoteLogs.get(date) || defaultDayLog(date);
     const localLog = localLogs.get(date) || defaultDayLog(date);
     const questionSource = n(localLog.questions) >= n(remoteLog.questions) ? localLog : remoteLog;
-    const log = { ...remoteLog, ...localLog, date };
+    const localIsNewer = timestampOf(localLog.updatedAt) > timestampOf(remoteLog.updatedAt)
+      || (timestampOf(localLog.updatedAt) === timestampOf(remoteLog.updatedAt) && preferLocal);
+    const newestLog = localIsNewer ? localLog : remoteLog;
+    const log = { ...remoteLog, ...localLog, ...newestLog, date };
     ['flashcards','manualFlashcards','videos','flashcardMinutes','lessonMinutes','questionMinutes','materialMinutes','simuladoMinutes'].forEach(field => {
       log[field] = Math.max(n(remoteLog[field]), n(localLog[field]));
     });
     ['questions','correct','wrong'].forEach(field => { log[field] = n(questionSource[field]); });
     ['flashcardsOn','videosOn','questionsOn'].forEach(field => { log[field] = Boolean(remoteLog[field] || localLog[field]); });
-    ['videoNames','notes','pace'].forEach(field => { log[field] = localLog[field] || remoteLog[field] || ''; });
-    log.mood = n(localLog.mood) || n(remoteLog.mood);
+    ['videoNames','notes','pace'].forEach(field => { log[field] = newestLog[field] || (localIsNewer ? remoteLog[field] : localLog[field]) || ''; });
+    log.mood = n(newestLog.mood) || n(localIsNewer ? remoteLog.mood : localLog.mood);
+    log.updatedAt = localIsNewer ? (localLog.updatedAt || remoteLog.updatedAt || '') : (remoteLog.updatedAt || localLog.updatedAt || '');
     return log;
   }).sort((a,b) => a.date.localeCompare(b.date));
 
-  merged.flashcardSystem = { ...(remote.flashcardSystem || {}), ...(local.flashcardSystem || {}) };
-  merged.flashcardSystem.reviewLogs = mergeRecordsById(remote.flashcardSystem?.reviewLogs, local.flashcardSystem?.reviewLogs, preferLocal);
+  merged.flashcardSystem = preferLocal
+    ? { ...(remote.flashcardSystem || {}), ...(local.flashcardSystem || {}) }
+    : { ...(local.flashcardSystem || {}), ...(remote.flashcardSystem || {}) };
+  merged.flashcardSystem.reviewLogsDeleted=mergeTimestampMap(remote.flashcardSystem?.reviewLogsDeleted,local.flashcardSystem?.reviewLogsDeleted);
+  merged.flashcardSystem.reviewLogs = mergeRecordsById(remote.flashcardSystem?.reviewLogs, local.flashcardSystem?.reviewLogs, preferLocal).filter(review=>{
+    const deletedAt=merged.flashcardSystem.reviewLogsDeleted[review.id];
+    if(!deletedAt || recordRecencyTimestamp(review)>timestampOf(deletedAt)) {
+      if(deletedAt) delete merged.flashcardSystem.reviewLogsDeleted[review.id];
+      return true;
+    }
+    return false;
+  });
+  merged.flashcardSystem.captureSessions = mergeHistoryRecords(remote.flashcardSystem?.captureSessions, local.flashcardSystem?.captureSessions, record=>record.id||record.key,500);
+  merged.flashcardSystem.sessionReportsDeleted=mergeTimestampMap(remote.flashcardSystem?.sessionReportsDeleted,local.flashcardSystem?.sessionReportsDeleted);
+  merged.flashcardSystem.sessionReports = mergeRecordsById(remote.flashcardSystem?.sessionReports, local.flashcardSystem?.sessionReports, preferLocal).filter(report=>{
+    const deletedAt=merged.flashcardSystem.sessionReportsDeleted[report.id];
+    if(!deletedAt || recordRecencyTimestamp(report)>timestampOf(deletedAt)) {
+      if(deletedAt) delete merged.flashcardSystem.sessionReportsDeleted[report.id];
+      return true;
+    }
+    return false;
+  }).slice(-100);
+  merged.flashcardSystem.versions=mergeHistoryRecords(remote.flashcardSystem?.versions,local.flashcardSystem?.versions,record=>`${record.cardId||''}|${record.version||''}|${record.kind||''}|${record.at||''}`,2000);
   // Mesma noção de "questão igual" usada ao montar o banco (bloco + enunciado),
   // não o contentHash: assim uma correção de gabarito/alternativa continua
   // sendo tratada como a mesma questão em vez de virar uma cópia divergente.
+  merged.deletedQuestions = mergeTimestampMap(remote.deletedQuestions,local.deletedQuestions);
   const importedByKey = new Map();
   [...(remote.importedQuestions || []), ...(local.importedQuestions || [])].forEach(question => {
     if(!question?.id) return;
@@ -1385,12 +1645,23 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
     const currentTime = Date.parse(question.updatedAt || question.incorporatedAt || question.createdAt || '') || 0;
     importedByKey.set(key, currentTime >= previousTime ? question : previous);
   });
-  merged.importedQuestions = [...importedByKey.values()];
-  merged.deletedQuestions = { ...(remote.deletedQuestions || {}), ...(local.deletedQuestions || {}) };
+  merged.importedQuestions = [...importedByKey.values()].filter(question=>{
+    const deletedAt=merged.deletedQuestions[question.id];
+    if(!deletedAt || recordRecencyTimestamp(question)>timestampOf(deletedAt)) {
+      if(deletedAt) delete merged.deletedQuestions[question.id];
+      return true;
+    }
+    return false;
+  });
   // Ao contrário do spread raso do topo (que faz um lado vencer por inteiro),
   // essas três dependem do id da questão: uniões por chave evitam que editar
   // uma questão num aparelho apague edições/flashcards/tags feitos no outro.
-  merged.questionEdits = preferLocal ? { ...(remote.questionEdits || {}), ...(local.questionEdits || {}) } : { ...(local.questionEdits || {}), ...(remote.questionEdits || {}) };
+  merged.questionEditsDeleted=mergeTimestampMap(remote.questionEditsDeleted,local.questionEditsDeleted);
+  merged.questionEdits = mergeRecordMapByKey(remote.questionEdits,local.questionEdits,preferLocal);
+  Object.entries(merged.questionEditsDeleted).forEach(([id,deletedAt])=>{
+    if(timestampOf(deletedAt)>=recordRecencyTimestamp(merged.questionEdits[id])) delete merged.questionEdits[id];
+    else delete merged.questionEditsDeleted[id];
+  });
   merged.importedQuestionTags = preferLocal ? { ...(remote.importedQuestionTags || {}), ...(local.importedQuestionTags || {}) } : { ...(local.importedQuestionTags || {}), ...(remote.importedQuestionTags || {}) };
   merged.questionFlashcards = {};
   new Set([...Object.keys(remote.questionFlashcards || {}), ...Object.keys(local.questionFlashcards || {})]).forEach(id => {
@@ -1416,6 +1687,7 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
     }
   });
   merged.dailyTasks = PlannerUX?.compactOccurrences ? PlannerUX.compactOccurrences([...tasksById.values()]) : [...tasksById.values()];
+  merged.taskTemplates = mergeRecordsById(remote.taskTemplates,local.taskTemplates,preferLocal);
 
   // Datas, bloco, tema e ordem fazem parte do plano local/oficial e não são
   // atividade sincronizável. Manter a estrutura local impede que um cronograma
@@ -1454,8 +1726,9 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
   });
 
   merged.flashcardLibrary = mergeRecordsById(remote.flashcardLibrary, local.flashcardLibrary, preferLocal);
-  if(remoteReset&&!localReset) merged.flashcardProgress={...(local.flashcardProgress||{}),...(remote.flashcardProgress||{})};
-  else if(localReset&&!remoteReset) merged.flashcardProgress={...(remote.flashcardProgress||{}),...(local.flashcardProgress||{})};
+  merged.flashcardProgress = mergeRecordMapByKey(remote.flashcardProgress,local.flashcardProgress,preferLocal);
+  merged.questionReviewHistory = mergeHistoryRecords(remote.questionReviewHistory,local.questionReviewHistory,record=>`${record.questionId||''}|${record.reviewedAt||''}`,500);
+  merged.flashcardReviewHistory = mergeHistoryRecords(remote.flashcardReviewHistory,local.flashcardReviewHistory,record=>`${record.cardId||''}|${record.reviewedAt||''}`,50);
   merged.casoDoDia = {};
   new Set([...Object.keys(remote.casoDoDia || {}), ...Object.keys(local.casoDoDia || {})]).forEach(key => {
     const r = remote.casoDoDia?.[key] || {}, l = local.casoDoDia?.[key] || {};
@@ -1470,6 +1743,9 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
   merged.studySessions = mergeRecordsById(remote.studySessions, local.studySessions, preferLocal);
   merged.videoPlayer = mergeVideoPlayerState(remote.videoPlayer, local.videoPlayer, preferLocal);
   merged.gamification = mergeGamificationState(remote.gamification, local.gamification);
+  const feynmanDeleted=mergeTimestampMap(remote.feynmanDeleted,local.feynmanDeleted);
+  merged.feynmanDeleted=feynmanDeleted;
+  merged.feynman=mergeRecordsById(remote.feynman,local.feynman,preferLocal).filter(item=>!feynmanDeleted[item.id]||timestampOf(item.updatedAt)>timestampOf(feynmanDeleted[item.id]));
 
   const remoteRuns = Array.isArray(remote.simuladoRuns) ? remote.simuladoRuns : [];
   const localRuns = Array.isArray(local.simuladoRuns) ? local.simuladoRuns : [];
@@ -1516,6 +1792,8 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
     };
   });
 
+  reconcileMergedActivityCounters(merged);
+
   return merged;
 }
 function timestampOf(value) { return Date.parse(value || '') || 0; }
@@ -1532,28 +1810,44 @@ function mergeVideoPlayerState(remotePlayer={}, localPlayer={}, preferLocal=fals
   const remote = remotePlayer && typeof remotePlayer === 'object' ? remotePlayer : {};
   const local = localPlayer && typeof localPlayer === 'object' ? localPlayer : {};
   const merged = preferLocal ? { ...remote, ...local } : { ...local, ...remote };
-  const sourceIds = new Set([...Object.keys(remote.resume || {}), ...Object.keys(local.resume || {})]);
+  const sourceIds = new Set([
+    ...Object.keys(remote.resume || {}),...Object.keys(local.resume || {}),
+    ...Object.keys(remote.progress || {}),...Object.keys(local.progress || {}),
+    ...Object.keys(remote.watched || {}),...Object.keys(local.watched || {}),
+    ...Object.keys(remote.watchedAt || {}),...Object.keys(local.watchedAt || {})
+  ]);
   merged.resume = {};
   merged.resumeUpdatedAt = {};
+  merged.progress = {};
+  merged.watched = {};
+  merged.watchedAt = {};
+  merged.watchedUpdatedAt = {};
   sourceIds.forEach(sourceId => {
-    const remoteTime = timestampOf(remote.resumeUpdatedAt?.[sourceId]);
-    const localTime = timestampOf(local.resumeUpdatedAt?.[sourceId]);
-    const useLocal = localTime > remoteTime || (localTime === remoteTime && preferLocal);
-    merged.resume[sourceId] = n((useLocal ? local : remote).resume?.[sourceId]);
-    merged.resumeUpdatedAt[sourceId] = (useLocal ? local : remote).resumeUpdatedAt?.[sourceId] || '';
+    const remoteProgress=remote.progress?.[sourceId];
+    const localProgress=local.progress?.[sourceId];
+    const remoteTime = Math.max(timestampOf(remote.resumeUpdatedAt?.[sourceId]),timestampOf(remoteProgress?.updatedAt));
+    const localTime = Math.max(timestampOf(local.resumeUpdatedAt?.[sourceId]),timestampOf(localProgress?.updatedAt));
+    const remoteHasResume=remote.resume?.[sourceId]!==undefined||remoteProgress!==undefined;
+    const localHasResume=local.resume?.[sourceId]!==undefined||localProgress!==undefined;
+    const useLocal = !remoteHasResume || (localHasResume && (localTime > remoteTime || (localTime === remoteTime && preferLocal)));
+    const selected=useLocal?local:remote;
+    merged.resume[sourceId] = n(selected.resume?.[sourceId] ?? selected.progress?.[sourceId]?.currentTime);
+    merged.resumeUpdatedAt[sourceId] = selected.resumeUpdatedAt?.[sourceId] || selected.progress?.[sourceId]?.updatedAt || '';
+    if(remoteProgress!==undefined||localProgress!==undefined) merged.progress[sourceId]=structuredClone(useLocal?(localProgress||remoteProgress):(remoteProgress||localProgress));
+
+    const remoteWatchedTime=timestampOf(remote.watchedUpdatedAt?.[sourceId]||remote.watchedAt?.[sourceId]);
+    const localWatchedTime=timestampOf(local.watchedUpdatedAt?.[sourceId]||local.watchedAt?.[sourceId]);
+    let useLocalWatched=localWatchedTime>remoteWatchedTime||(localWatchedTime===remoteWatchedTime&&preferLocal);
+    if(!remoteWatchedTime&&!localWatchedTime&&Boolean(remote.watched?.[sourceId])!==Boolean(local.watched?.[sourceId])) useLocalWatched=Boolean(local.watched?.[sourceId]);
+    const watchedSource=useLocalWatched?local:remote;
+    merged.watched[sourceId]=Boolean(watchedSource.watched?.[sourceId]);
+    merged.watchedAt[sourceId]=merged.watched[sourceId]?(watchedSource.watchedAt?.[sourceId]||''):'';
+    merged.watchedUpdatedAt[sourceId]=watchedSource.watchedUpdatedAt?.[sourceId]||watchedSource.watchedAt?.[sourceId]||'';
   });
-  merged.watched = { ...(remote.watched || {}), ...(local.watched || {}) };
-  merged.watchedAt = { ...(remote.watchedAt || {}), ...(local.watchedAt || {}) };
   const bookmarkSources = new Set([...Object.keys(remote.bookmarks || {}), ...Object.keys(local.bookmarks || {})]);
   merged.bookmarks = {};
   bookmarkSources.forEach(sourceId => {
-    const points = new Map();
-    [...(remote.bookmarks?.[sourceId] || []), ...(local.bookmarks?.[sourceId] || [])].forEach((point,index) => {
-      const id = point?.id || `legacy-${sourceId}-${n(point?.time)}-${index}`;
-      const previous = points.get(id);
-      if(!previous || timestampOf(point.updatedAt || point.createdAt) >= timestampOf(previous.updatedAt || previous.createdAt)) points.set(id, {...point, id});
-    });
-    merged.bookmarks[sourceId] = [...points.values()].sort((a,b) => n(a.time)-n(b.time));
+    merged.bookmarks[sourceId] = mergeRecordsById(remote.bookmarks?.[sourceId],local.bookmarks?.[sourceId],preferLocal).sort((a,b) => n(a.time)-n(b.time));
   });
   const remoteOpen = remote.lastOpen || {};
   const localOpen = local.lastOpen || {};
@@ -1562,7 +1856,7 @@ function mergeVideoPlayerState(remotePlayer={}, localPlayer={}, preferLocal=fals
   return merged;
 }
 function recordRecencyTimestamp(record) {
-  return Date.parse(record?.updatedAt || record?.lastReviewedAt || record?.reviewedAt || record?.editedAt || record?.createdAt || '') || 0;
+  return Date.parse(record?.deletedAt || record?.updatedAt || record?.lastReviewedAt || record?.lastOpenedAt || record?.reviewedAt || record?.answeredAt || record?.endedAt || record?.finishedAt || record?.completedAt || record?.savedAt || record?.editedAt || record?.incorporatedAt || record?.importedAt || record?.startedAt || record?.createdAt || record?.at || '') || 0;
 }
 function mergeRecordsById(remoteRecords, localRecords, preferLocal=false) {
   const records = new Map();
@@ -1603,7 +1897,7 @@ function capBackupList(list) {
 }
 function loadLocalBackups() {
   try {
-    const backups = JSON.parse(localStorage.getItem(LOCAL_BACKUPS_KEY) || '[]');
+    const backups = JSON.parse(localStorage.getItem(activeLocalBackupsKey) || '[]');
     return Array.isArray(backups) ? capBackupList(backups.filter(item => item?.id && item?.data)) : [];
   } catch(error) {
     return [];
@@ -1613,7 +1907,7 @@ function saveLocalBackups() {
   let backups = capBackupList(localBackups);
   while(backups.length) {
     try {
-      localStorage.setItem(LOCAL_BACKUPS_KEY, JSON.stringify(backups));
+      localStorage.setItem(activeLocalBackupsKey, JSON.stringify(backups));
       localBackups = backups;
       return;
     } catch(error) {
@@ -1691,14 +1985,14 @@ function invalidateQuestionBankRenderCache() {
   renderCache.questionAvailabilityReady = false;
   renderCache.questionAvailabilityScheduleKey = '';
 }
-const CLOUD_SYNC_DEBOUNCE_MS = 3 * 60 * 1000;
+const CLOUD_SYNC_DEBOUNCE_MS = 45 * 1000;
 // Teto de espera: o debounce sozinho reinicia a cada gravação, então uma sessão
 // contínua de estudo (que salva a cada poucos segundos) nunca chegava a enviar
 // nada para a nuvem. Este relógio não é reiniciado enquanto houver algo pendente.
-// Durante edição contínua, um envio completo a cada 45s gerava vários GB de
-// egress porque o estado pessoal já passa de 3 MB. O debounce ainda envia após
-// 3 min de inatividade; este teto só limita sessões sem pausa.
-const CLOUD_SYNC_MAX_WAIT_MS = 5 * 60 * 1000;
+// O estado pessoal é grande, então não enviamos a cada tecla. Quarenta e cinco
+// segundos de inatividade dão convergência perceptível entre aparelhos sem
+// transformar digitação contínua em dezenas de uploads; o teto garante envio.
+const CLOUD_SYNC_MAX_WAIT_MS = 3 * 60 * 1000;
 let cloudMaxWaitTimer = null;
 // Antes, um erro de rede ou do Supabase deixava o indicador travado em "Erro"
 // até algum outro evento (digitar, trocar de aba) tentar de novo — na prática,
@@ -1819,6 +2113,7 @@ async function pushCloudStateImpl({skipRemoteMerge=false}={}) {
           writeLocalState();
         }
       }
+      touchSyncMetadata(state,nowIso());
       const payload = { user_id: currentUser.id, data: state, updated_at: new Date().toISOString() };
       const saveResult = !skipRemoteMerge && remoteMeta?.updated_at
         ? await sbClient.from('planner_states').update(payload).eq('user_id', currentUser.id).eq('updated_at', remoteMeta.updated_at).select('updated_at').maybeSingle()
@@ -1897,7 +2192,7 @@ function applyCrossTabPlannerState(externalState) {
   return recoveredLocalProgress;
 }
 window.addEventListener('storage', event => {
-  if(event.key !== STORAGE_KEY || !event.newValue) return;
+  if(event.key !== activeStateStorageKey || !event.newValue) return;
   try {
     const externalState = JSON.parse(event.newValue);
     if(isEditingTextField()) { pendingCrossTabState = externalState; return; }
@@ -1980,17 +2275,24 @@ async function pullCloudState({ firstLogin=false }={}) {
   }
 }
 let remoteUpdateAvailableAt = 0;
-// Em vez de puxar e mesclar sozinho em segundo plano (era a origem dos bugs de
-// sincronização), só avisamos que há algo novo; quem decide puxar é a pessoa.
+// O servidor é a fonte da revisão remota. Não comparamos esse carimbo com a
+// hora da última gravação local: uma escrita local alguns milissegundos depois
+// poderia esconder para sempre uma revisão válida feita por outro aparelho.
 async function checkForRemoteUpdate() {
   if(!currentUser || !sbClient || !CLOUD_SYNC_ALLOWED || syncInFlight) return;
   try {
     const { data, error } = await sbClient.from('planner_states').select('updated_at').eq('user_id', currentUser.id).maybeSingle();
     if(error || !data?.updated_at) return;
     const remoteAt = Date.parse(data.updated_at) || 0;
-    if(remoteAt > Math.max(lastCloudSyncAt || 0, localStateStamp())) {
+    if(remoteAt > (lastCloudSyncAt || 0)) {
       remoteUpdateAvailableAt = remoteAt;
-      setSyncStatus('Nova versão', 'busy', 'Há uma versão mais nova na nuvem — clique para puxar');
+      if(isEditingTextField()) {
+        setSyncStatus('Nova versão', 'busy', 'Há dados novos em outro aparelho; serão recebidos ao terminar esta edição');
+        return;
+      }
+      if(cloudDirty) await pushCloudState();
+      else await pullCloudState();
+      remoteUpdateAvailableAt=0;
     }
   } catch(error) { console.warn('Falha ao checar nuvem:', error); }
 }
@@ -2001,15 +2303,14 @@ async function pullRemoteUpdateNow() {
   showStudyToast('Dados mais recentes da nuvem foram puxados para este aparelho.');
   if(ui.tab === 'ferramentas') renderFerramentas();
 }
-// Sincronização real (puxar/mesclar) é só manual (botões Enviar/Receber) — isso não
-// muda. Mas sem nenhum aviso, o aparelho nunca fica sabendo que a nuvem tem algo mais
-// novo. checkForRemoteUpdate só lê o updated_at (sem mesclar, sem gravar nada) e
-// acende o indicador "Nova versão" — quem decide puxar continua sendo a pessoa.
+// A consulta periódica lê apenas o carimbo leve. Quando ele muda, o fluxo
+// normal faz pull ou push+merge com revisão otimista; edições em andamento
+// continuam protegidas e só recebem o estado remoto ao perder o foco.
 function startCloudSyncPolling() {
   if(cloudSyncPoll) clearInterval(cloudSyncPoll);
   if(cloudPushPoll) clearInterval(cloudPushPoll);
   checkForRemoteUpdate();
-  cloudSyncPoll = setInterval(checkForRemoteUpdate, 5 * 60 * 1000);
+  cloudSyncPoll = setInterval(checkForRemoteUpdate, 60 * 1000);
 }
 function fullPlannerBackup() {
   checkpointAutoStudyTime(true);
@@ -2658,6 +2959,7 @@ async function initCloud() {
   }
   const { data } = await sbClient.auth.getSession();
   currentUser = data.session?.user || null;
+  const accountChanged = currentUser ? activateAccountState(currentUser.id) : false;
   if(!currentUser && isLocalPlanner()) {
     document.body.classList.remove('auth-locked');
     setSyncStatus('Local', '', 'Modo local neste aparelho');
@@ -2667,15 +2969,20 @@ async function initCloud() {
   if(currentUser) {
     await pullCloudState({firstLogin:true});
     startCloudSyncPolling();
+    if(accountChanged) render();
   }
   sbClient.auth.onAuthStateChange((event, session) => {
     const wasLoggedOut = !currentUser;
     currentUser = session?.user || null;
+    const accountChanged = currentUser ? activateAccountState(currentUser.id) : false;
     updateAccountUI();
     if(currentUser) startCloudSyncPolling();
     else if(cloudSyncPoll) { clearInterval(cloudSyncPoll); cloudSyncPoll=null; }
     if(currentUser && (event === 'SIGNED_IN' || event === 'INITIAL_SESSION')) {
-      setTimeout(() => pullCloudState({firstLogin: wasLoggedOut}), 0);
+      setTimeout(async() => {
+        await pullCloudState({firstLogin: wasLoggedOut || accountChanged});
+        if(accountChanged) render();
+      }, 0);
     }
   });
 }
@@ -3499,7 +3806,9 @@ function findScheduleByTopic(topic) {
 function importanceBadge(value) { return `<span class="importance ${escapeAttr(value)}">${escapeHtml(value)}</span>`; }
 function ensureFeynman() {
   if(!Array.isArray(state.feynman)) state.feynman = [];
+  if(!state.feynmanDeleted || typeof state.feynmanDeleted!=='object') state.feynmanDeleted={};
   state.feynman = state.feynman.map((item, idx) => ({ id: item.id || `feyn-${idx}-${Date.now()}`, topic: item.topic || '', scheduleId: item.scheduleId || '', area: item.area || '', explain: item.explain || '', gaps: item.gaps || '', analogy: item.analogy || '', nextStep: item.nextStep || '', mastery: n(item.mastery), reviewDate: item.reviewDate || localISODate(new Date()), updatedAt: item.updatedAt || localISODate(new Date()) }));
+  state.feynman=state.feynman.filter(item=>!state.feynmanDeleted[item.id]||timestampOf(item.updatedAt)>timestampOf(state.feynmanDeleted[item.id]));
 }
 function feynmanPriority(item) {
   const due = item.reviewDate && item.reviewDate <= localISODate(new Date());
@@ -4294,28 +4603,10 @@ function renderTabs() {
       lastGroup = group;
       return `${header}<button class="tab tab-${id.replace(/[^a-z0-9]+/gi,'-')} ${MOBILE_PRIMARY_VIEWS.has(id)?'mobile-primary':''}" data-tab="${id}" title="${escapeAttr(label)}"><span class="tab-icon">${iconSvg(icon)}</span><span class="tab-label">${label}</span></button>`;
     }).join('');
-    const moreItems=views.filter(([id])=>!MOBILE_PRIMARY_VIEWS.has(id)).map(([id,label,icon])=>`<button class="mobile-more-item" data-tab="${id}"><span>${iconSvg(icon)}</span><span><strong>${escapeHtml(label)}</strong><small>${escapeHtml(VIEW_GROUPS[id] || 'Mais')}</small></span></button>`).join('');
-    tabs.innerHTML = `${regularTabs}<button class="tab tab-more mobile-primary" id="mobileTabsMore" type="button" title="Mais áreas" aria-label="Abrir mais áreas" aria-expanded="false"><span class="tab-icon">${iconSvg('settings')}</span><span class="tab-label">Mais</span></button><div class="mobile-more-menu" id="mobileMoreMenu" hidden><div class="mobile-more-head"><strong>Todos os espaços</strong><button type="button" id="mobileMoreClose" aria-label="Fechar">×</button></div><div class="mobile-more-grid">${moreItems}</div></div>`;
+    tabs.innerHTML = regularTabs;
     tabs.addEventListener('click',event=>{
-      const more=event.target.closest?.('#mobileTabsMore');
-      if(more) {
-        const menu=document.getElementById('mobileMoreMenu');
-        const opening=Boolean(menu?.hidden);
-        if(menu) menu.hidden=!opening;
-        more.setAttribute('aria-expanded',String(opening));
-        return;
-      }
-      if(event.target.closest?.('#mobileMoreClose')) {
-        const menu=document.getElementById('mobileMoreMenu');
-        if(menu) menu.hidden=true;
-        document.getElementById('mobileTabsMore')?.setAttribute('aria-expanded','false');
-        return;
-      }
       const button=event.target.closest?.('[data-tab]');
       if(button && tabs.contains(button)) {
-        const menu=document.getElementById('mobileMoreMenu');
-        if(menu) menu.hidden=true;
-        document.getElementById('mobileTabsMore')?.setAttribute('aria-expanded','false');
         navigateToTab(button.dataset.tab);
       }
     });
@@ -4327,7 +4618,6 @@ function renderTabs() {
     if(active) button.setAttribute('aria-current','page');
     else button.removeAttribute('aria-current');
   });
-  tabs?.querySelector('#mobileTabsMore')?.classList.toggle('active',!MOBILE_PRIMARY_VIEWS.has(ui.tab));
   document.querySelectorAll('.view').forEach(v => v.classList.toggle('active', v.id===ui.tab));
   if(window.matchMedia('(max-width: 1180px)').matches) {
     requestAnimationFrame(() => {
@@ -7011,7 +7301,7 @@ function bindPrescriptionCanvas(item,touch) {
 function bindFeynmanInputs() {
   const add = document.getElementById('addFeynman');
   if(add) add.onclick = () => { state.feynman.unshift({ id: `feyn-${Date.now()}`, topic: '', scheduleId: '', area: '', explain: '', gaps: '', analogy: '', nextStep: '', mastery: 0, reviewDate: localISODate(new Date()), updatedAt: localISODate(new Date()) }); persist(); };
-  document.querySelectorAll('[data-remove-feynman]').forEach(btn => btn.onclick = e => { state.feynman = state.feynman.filter(x => x.id !== e.currentTarget.dataset.removeFeynman); persist(); });
+  document.querySelectorAll('[data-remove-feynman]').forEach(btn => btn.onclick = e => { const id=e.currentTarget.dataset.removeFeynman; state.feynmanDeleted[id]=nowIso(); state.feynman = state.feynman.filter(x => x.id !== id); persist(); });
   document.querySelectorAll('[data-feynman][data-field]').forEach(el => {
     const update = (target, shouldRender) => {
       const item = state.feynman.find(x => x.id === target.dataset.feynman);
@@ -7872,6 +8162,10 @@ function scheduleForVideoLink(link={}) {
 }
 function videoScheduleForLesson(lesson) {
   if(lesson?.scheduleId) return state.schedule.find(item => item.id === lesson.scheduleId) || null;
+  if(lesson?.scheduleOrder) {
+    const scheduled = scheduleForVideoLink({block:lesson.block, order:lesson.scheduleOrder});
+    if(scheduled) return scheduled;
+  }
   const target = canonicalTopic(lesson.title);
   const override = VIDEO_SCHEDULE_OVERRIDES[`${n(lesson?.block)}:${target}`];
   if(override) return scheduleForVideoLink(override);
@@ -7966,7 +8260,7 @@ function videoContentLabel(video) {
   const cleaned = String(video?.title || '')
     // remove nosso prefixo de organização: "06 - ", "01.1 - " (COFEXPRESS) e "06 - 2 aula - "
     .replace(/^\d+(?:\.\d+)?\s*-\s*(?:\d+\s*aula\s*-\s*)?/i, '')
-    .replace(/\bcof[\s_-]*express\b/ig, '')
+    .replace(/cof[\s_-]*express/ig, '')
     .replace(/\benamed\b/ig, '')
     .replace(/\s*[-.]\s*$/g, '')
     .replace(/\s+/g, ' ')
@@ -8205,10 +8499,11 @@ function setVideoWatchedState(videoId, watched) {
   if(!videoId) return;
   const wasWatched = Boolean(state.videoPlayer.watched[videoId]);
   if(watched && !wasWatched) {
-    const completedAt = new Date().toISOString();
+    const completedAt = nowIso();
     const date = studyDateKey(completedAt);
     state.videoPlayer.watched[videoId] = true;
     state.videoPlayer.watchedAt[videoId] = completedAt;
+    state.videoPlayer.watchedUpdatedAt[videoId] = completedAt;
     awardVideoCompletionXP(videoId,completedAt);
     const log = getDayLog(date);
     log.videosOn = true;
@@ -8216,9 +8511,11 @@ function setVideoWatchedState(videoId, watched) {
     return;
   }
   if(!watched && wasWatched) {
+    const changedAt=nowIso();
     const completedDate = studyDateKey(state.videoPlayer.watchedAt[videoId] || '');
-    delete state.videoPlayer.watched[videoId];
-    delete state.videoPlayer.watchedAt[videoId];
+    state.videoPlayer.watched[videoId]=false;
+    state.videoPlayer.watchedAt[videoId]='';
+    state.videoPlayer.watchedUpdatedAt[videoId]=changedAt;
     if(completedDate) {
       const log = getDayLog(completedDate);
       log.videos = Math.max(0, n(log.videos) - 1);
@@ -8257,7 +8554,7 @@ const VIDEO_SPECIALTY_RULES = [
   ['Endocrinologia',['diabetes','hipoglicemia','hiperglicem','cetoacidose','sindrome metabolica','obesidade','osteoporose','disturbios do calcio','baixa estatura']],
   ['Neurologia',['neurovascular','neurolog','convulsoes','traumatismo cranioencefalico','cefaleia','meningite','insuficiencia cognitiva']],
   ['Hematologia',['hemograma','anemia','hematopediatria','coagulopatia','onco hematologia']],
-  ['Reumatologia',['artrite','fibromialgia']],
+  ['Reumatologia',['reumatologia','artrite','fibromialgia','colagenose','lupus','saf','sjogren','esclerose sistemica','miopatia']],
   ['Dermatologia',['dermat','lesoes elementares','hanseniase']],
   ['Infectologia',['tuberculose','sifilis','uretrite','febre maculosa','infeccoes congenitas','doencas negligenciadas','arbovirose','parasitoses','hiv','dengue','sepse','choque septico']],
   ['Urologia',['urolog','infeccao urinaria','itu e','hiperplasia prostatica','fournier']],
@@ -8480,7 +8777,7 @@ function renderAulas() {
   const schedule = lesson ? videoScheduleForLesson(lesson) : null;
   const parts = lesson ? videoParts(lesson) : [];
   const summaryExpress = lesson ? videoSummaryExpressVideos(lesson) : [];
-  const bookmarks = source ? (state.videoPlayer.bookmarks[source.id] || []) : [];
+  const bookmarks = source ? (state.videoPlayer.bookmarks[source.id] || []).filter(item=>!item.deletedAt) : [];
   const progressRecord = source ? state.videoPlayer.progress?.[source.id] || {} : {};
   const resume = source ? (PlannerUX?.resumeTime(progressRecord) ?? n(state.videoPlayer.resume[source.id])) : 0;
   const watched = source ? state.videoPlayer.watched[source.id] : false;
@@ -9010,7 +9307,7 @@ function bindVideoPlayer(source, schedule, lesson) {
     input.select();
     input.onkeydown = keyEvent => { if(keyEvent.key === 'Enter') event.currentTarget.click(); };
   });
-  document.querySelectorAll('[data-video-bookmark-delete]').forEach(button => button.onclick = event => { const id=event.currentTarget.dataset.videoBookmarkDelete; state.videoPlayer.bookmarks[source.id]=state.videoPlayer.bookmarks[source.id].filter(item=>item.id!==id); saveStateOnly(); renderAulas(); });
+  document.querySelectorAll('[data-video-bookmark-delete]').forEach(button => button.onclick = event => { const id=event.currentTarget.dataset.videoBookmarkDelete; const deletedAt=nowIso(); state.videoPlayer.bookmarks[source.id]=state.videoPlayer.bookmarks[source.id].map(item=>item.id===id?{...item,deletedAt,updatedAt:deletedAt}:item); saveStateOnly(); renderAulas(); });
   document.querySelectorAll('[data-video-bookmark-star]').forEach(button => button.onclick = event => { const id=event.currentTarget.dataset.videoBookmarkStar; const entries=state.videoPlayer.bookmarks[source.id] || []; const bookmark=entries.find(item=>item.id===id); if(!bookmark) return; bookmark.starred=!bookmark.starred; bookmark.updatedAt=new Date().toISOString(); saveStateOnly(); renderAulas(); });
 }
 async function loadVideoCatalog() {
@@ -11487,8 +11784,11 @@ function undoFlashcardReview() {
     if(systemUndo.previousProgress && Object.keys(systemUndo.previousProgress).length) state.flashcardProgress[systemUndo.cardId] = systemUndo.previousProgress;
     else delete state.flashcardProgress[systemUndo.cardId];
     const review = state.flashcardSystem.reviewLogs.find(log => log.id === systemUndo.reviewId);
+    const deletedAt=nowIso();
+    if(review?.id) state.flashcardSystem.reviewLogsDeleted[review.id]=deletedAt;
     state.flashcardSystem.reviewLogs = state.flashcardSystem.reviewLogs.filter(log => log.id !== systemUndo.reviewId);
     if(review?.sessionId && (state.flashcardSystem.sessionReports||[]).some(report=>report.id===review.sessionId)) {
+      state.flashcardSystem.sessionReportsDeleted[review.sessionId]=deletedAt;
       state.flashcardSystem.sessionReports=state.flashcardSystem.sessionReports.filter(report=>report.id!==review.sessionId);
       if(ui.flashcardSessionReportId===review.sessionId) ui.flashcardSessionReportId='';
     }
@@ -12887,12 +13187,14 @@ function deleteIncorporatedQuestion(questionId) {
   const question = state.importedQuestions.find(item => item.id === questionId);
   if(!question) return;
   if(!confirm('Excluir esta questão do banco geral? Ela será removida em todos os dispositivos sincronizados.')) return;
+  const deletedAt=nowIso();
   state.importedQuestions = state.importedQuestions.filter(item => item.id !== questionId);
+  state.deletedQuestions[questionId]=deletedAt;
   const history = state.incorporationHistory.find(entry => entry.questionId === questionId);
-  if(history) { history.deletedAt = new Date().toISOString(); history.updatedAt = history.deletedAt; }
+  if(history) { history.deletedAt = deletedAt; history.updatedAt = deletedAt; }
   removeQuestionProgress(questionId);
-  delete state.questionEdits[questionId];
-  delete state.questionFlashcards[questionId];
+  removeQuestionEdit(questionId);
+  deleteFlashcardsByIds((state.questionFlashcards[questionId] || []).map(card=>card.id));
   delete state.questionLogged[questionId];
   questionBank = questionBank.filter(item => item.id !== questionId);
   invalidateQuestionBankRenderCache();
@@ -13563,7 +13865,7 @@ function bindQuestionActions(questions, question) {
   if(copyFullQuestion) copyFullQuestion.onclick = () => copyFullQuestionText(question);
   if(editReset) editReset.onclick = () => {
     if(confirm('Restaurar o texto original desta questão?')) {
-      delete state.questionEdits[question.id];
+      removeQuestionEdit(question.id);
       reconcileQuestionProgressForQuestion(questionBank.find(item => item.id === question.id) || question);
       ui.editQuestionId = '';
       persist();
@@ -13661,15 +13963,16 @@ function deleteQuestionFromPlanner(question) {
     ? 'Excluir esta questão importada do seu banco? Esta ação também será sincronizada.'
     : 'Ocultar esta questão do seu banco em todos os aparelhos? O arquivo original local não será apagado.';
   if(!confirm(message)) return;
+  const deletedAt=nowIso();
   if(imported) {
     state.importedQuestions.splice(importedIndex, 1);
     const history = state.incorporationHistory?.find(entry => entry.questionId === question.id);
-    if(history) { history.deletedAt = new Date().toISOString(); history.updatedAt = history.deletedAt; }
+    if(history) { history.deletedAt = deletedAt; history.updatedAt = deletedAt; }
   }
-  else state.deletedQuestions[question.id] = new Date().toISOString();
+  state.deletedQuestions[question.id] = deletedAt;
   removeQuestionProgress(question.id);
-  delete state.questionEdits[question.id];
-  delete state.questionFlashcards[question.id];
+  removeQuestionEdit(question.id);
+  deleteFlashcardsByIds((state.questionFlashcards[question.id] || []).map(card=>card.id));
   delete state.questionLogged[question.id];
   delete ui.draftAnswers[question.id];
   questionBank = questionBank.filter(item => item.id !== question.id);
@@ -13725,11 +14028,13 @@ function saveQuestionEdit(question) {
     area: document.querySelector('[data-question-edit="area"]')?.value || question.area || '',
     topic: document.querySelector('[data-question-edit="topic"]')?.value || question.topic || '',
     comment: document.querySelector('[data-question-edit="comment"]')?.value || question.comment || '',
-    options: {}
+    options: {},
+    updatedAt:nowIso()
   };
   document.querySelectorAll('[data-question-edit-option]').forEach(input => {
     edit.options[input.dataset.questionEditOption] = input.value;
   });
+  delete state.questionEditsDeleted?.[question.id];
   state.questionEdits[question.id] = edit;
   reconcileQuestionProgressForQuestion(questionBank.find(item => item.id === question.id) || question);
   ui.editQuestionId = '';

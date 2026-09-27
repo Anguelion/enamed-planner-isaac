@@ -11,7 +11,9 @@ const path = require('path');
 
 const ROOT = process.argv[2] || 'E:\\MedCof 2026';
 const OUT = path.join(__dirname, '..', 'video_library', 'catalog.json');
+const OFFICIAL_SCHEDULE = path.join(__dirname, '..', 'official_schedule.json');
 const VIDEO_EXT = new Set(['.mp4', '.mkv', '.avi', '.mov', '.webm', '.m4v']);
+const officialSchedule = JSON.parse(fs.readFileSync(OFFICIAL_SCHEDULE, 'utf8')).items || [];
 
 // O caminho público no R2 é independente do nome atual no disco. Ao regenerar o
 // catálogo, reaproveitamos a associação anterior por caminho exato ou por tamanho
@@ -58,6 +60,36 @@ function blockNumber(name) {
   return match ? parseInt(match[1], 10) : null;
 }
 
+function cleanVideoTopic(value) {
+  const cleaned = stripVideoOrderPrefix(String(value || ''))
+    .replace(/cof[\s_-]*express/ig, ' ')
+    .replace(/\benamed\b/ig, ' ')
+    .replace(/\([^)]*\)/g, ' ')
+    .replace(/\beditado\b/ig, ' ');
+  return slug(cleaned);
+}
+
+const DIRECT_TOPIC_ALIASES = new Map([
+  ['vacina pneumococica 20v no sus', 'vacinacao']
+]);
+
+function scheduleMatch(block, value) {
+  let target = cleanVideoTopic(value);
+  target = DIRECT_TOPIC_ALIASES.get(target) || target;
+  if (!target) return null;
+  const candidates = officialSchedule.filter(item => Number(item.block) === Number(block));
+  const exact = candidates.find(item => cleanVideoTopic(item.topic) === target);
+  if (exact) return exact;
+  const best = candidates
+    .map(item => {
+      const official = cleanVideoTopic(item.topic);
+      const contains = target.length >= 6 && (official.includes(target) || target.includes(official));
+      return { item, score: contains ? 1000 + Math.min(target.length, official.length) : 0 };
+    })
+    .sort((a, b) => b.score - a.score)[0];
+  return best?.score > 0 ? best.item : null;
+}
+
 function buildVideos(files, lessonPath, blockId, areaName, lessonTitle) {
   return files.map(file => {
     const extension = path.extname(file.name);
@@ -70,7 +102,7 @@ function buildVideos(files, lessonPath, blockId, areaName, lessonTitle) {
     const priorBySize = previousBySize.get(size) || [];
     const prior = priorByPath || (priorBySize.length === 1 ? priorBySize[0] : null);
     const video = {
-      id: `${blockId}|${areaName}|${lessonTitle}|${videoTitle}`,
+      id: prior?.onlinePath ? prior.id : `${blockId}|${areaName}|${lessonTitle}|${videoTitle}`,
       title: videoTitle,
       type,
       relativePath,
@@ -80,6 +112,33 @@ function buildVideos(files, lessonPath, blockId, areaName, lessonTitle) {
     if (prior?.onlinePath) video.onlinePath = prior.onlinePath;
     return video;
   });
+}
+
+function directLessons(files, lessonPath, block, blockId, fallbackArea = '', fallbackTitle = '') {
+  const grouped = new Map();
+  files
+    .slice()
+    .sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'))
+    .forEach(file => {
+      const extension = path.extname(file.name);
+      const videoTitle = stripVideoOrderPrefix(file.name.slice(0, -extension.length));
+      const match = scheduleMatch(block, videoTitle);
+      const area = match?.area || fallbackArea || 'Sem área definida';
+      const title = match?.topic || fallbackTitle || videoTitle.replace(/cof[\s_-]*express/ig, '').trim();
+      const key = match ? `schedule:${match.block}:${match.order}` : `${slug(area)}:${slug(title)}`;
+      if (!grouped.has(key)) grouped.set(key, { area, title, match, files: [] });
+      grouped.get(key).files.push(file);
+    });
+
+  return [...grouped.values()].map(group => ({
+    id: `${blockId}|${slug(group.area)}|${slug(group.title)}`,
+    block,
+    area: group.area,
+    title: group.title,
+    folderOrder: group.match?.order ?? 0,
+    ...(group.match ? { scheduleOrder: Number(group.match.order) } : {}),
+    videos: buildVideos(group.files, lessonPath, blockId, group.area, group.title)
+  }));
 }
 
 const issues = { missingExpected: [], orphanFiles: [], badBlockFolders: [], emptyLessons: [] };
@@ -95,8 +154,16 @@ for (const blockDir of blockDirs) {
   const blockPath = path.join(ROOT, blockDir.name);
   const blockId = `b${String(block).padStart(2, '0')}`;
 
+  // Os blocos finais vieram também com MP4s diretamente na raiz do bloco.
+  // Cada arquivo é associado ao tópico oficial para que versões completa,
+  // COFEXPRESS e complementares apareçam juntas e na ordem do cronograma.
+  const blockDirectFiles = fs.readdirSync(blockPath, { withFileTypes: true })
+    .filter(entry => entry.isFile() && VIDEO_EXT.has(path.extname(entry.name).toLowerCase()));
+  lessons.push(...directLessons(blockDirectFiles, blockPath, block, blockId));
+
   const areaDirs = fs.readdirSync(blockPath, { withFileTypes: true })
-    .filter(entry => entry.isDirectory());
+    .filter(entry => entry.isDirectory())
+    .sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
 
   for (const areaDir of areaDirs) {
     const { name: areaName } = stripOrderPrefix(areaDir.name);
@@ -111,18 +178,23 @@ for (const blockDir of blockDirs) {
       const cofbasicMatch = areaName.match(/^(CofBasics)\s*-\s*(.+)$/i);
       const directAreaName = cofbasicMatch ? 'CofBasics' : areaName;
       const directLessonTitle = cofbasicMatch ? cofbasicMatch[2].trim() : areaName;
-      lessons.push({
-        id: `${blockId}|${slug(directAreaName)}|${slug(directLessonTitle)}`,
-        block,
-        area: directAreaName,
-        title: directLessonTitle,
-        folderOrder: 0,
-        videos: buildVideos(directFiles, areaPath, blockId, directAreaName, directLessonTitle)
-      });
+      if (cofbasicMatch) {
+        lessons.push({
+          id: `${blockId}|${slug(directAreaName)}|${slug(directLessonTitle)}`,
+          block,
+          area: directAreaName,
+          title: directLessonTitle,
+          folderOrder: 0,
+          videos: buildVideos(directFiles, areaPath, blockId, directAreaName, directLessonTitle)
+        });
+      } else {
+        lessons.push(...directLessons(directFiles, areaPath, block, blockId, directAreaName, directLessonTitle));
+      }
     }
 
     const lessonDirs = fs.readdirSync(areaPath, { withFileTypes: true })
-      .filter(entry => entry.isDirectory());
+      .filter(entry => entry.isDirectory())
+      .sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
 
     for (const lessonDir of lessonDirs) {
       const { order: folderOrder, name: lessonTitle } = stripOrderPrefix(lessonDir.name);
@@ -173,7 +245,16 @@ for (const lesson of lessons) {
     existing.videos.push(...lesson.videos);
   }
 }
-const mergedLessons = [...mergedByKey.values()];
+const mergedLessons = [...mergedByKey.values()]
+  .sort((a, b) => {
+    const orderA = Number(a.scheduleOrder || scheduleMatch(a.block, a.title)?.order) || 999;
+    const orderB = Number(b.scheduleOrder || scheduleMatch(b.block, b.title)?.order) || 999;
+    return a.block - b.block
+      || orderA - orderB
+      || (a.folderOrder || 0) - (b.folderOrder || 0)
+      || a.area.localeCompare(b.area, 'pt-BR')
+      || a.title.localeCompare(b.title, 'pt-BR');
+  });
 issues.splitAcrossFolders = splitAcrossFolders;
 
 // Compara com o catálogo anterior para reportar o que sumiu/apareceu.

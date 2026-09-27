@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-25T21:09:30.632Z",
+  "generatedAt": "2026-09-27T02:23:15.960Z",
   "remote": "cloudflare:enamed-videos",
-  "remoteObjects": 371,
-  "localVideos": 371,
+  "remoteObjects": 385,
+  "localVideos": 385,
   "matchedExact": [
     {
       "remotePath": "video_library/media/Bloco 01/01 - Saúde Coletiva/01 - História e Princípios do SUS/01 - História e Princípios do SUS.mp4",
@@ -1851,6 +1851,90 @@
       "localPath": "Bloco 25/04 - Clínica Médica/07 - HIV/07.1 - HIV COFEXPRESS.mp4",
       "videoId": "b25|Clínica Médica|HIV|HIV COFEXPRESS",
       "size": 93980225
+    },
+    {
+      "remotePath": "video_library/media/Bloco 26/Atenção à Saúde de Populações Específicas_COFEXPRESS.mp4",
+      "localPath": "Bloco 26/Atenção à Saúde de Populações Específicas_COFEXPRESS.mp4",
+      "videoId": "b26|Saúde Coletiva|Atenção à Saúde de Populações Específicas|Atenção à Saúde de Populações Específicas_COFEXPRESS",
+      "size": 125826397
+    },
+    {
+      "remotePath": "video_library/media/Bloco 27/Cirurgia/Ortopedia no ENAMED.mp4",
+      "localPath": "Bloco 27/Cirurgia/Ortopedia no ENAMED.mp4",
+      "videoId": "b27|Cirurgia|Ortopedia no ENAMED|Ortopedia no ENAMED",
+      "size": 981554750
+    },
+    {
+      "remotePath": "video_library/media/Bloco 27/Cirurgia/Ortopedia no ENAMED_COFEXPRESS (cortar o final)_EDITADO.mp4",
+      "localPath": "Bloco 27/Cirurgia/Ortopedia no ENAMED_COFEXPRESS (cortar o final)_EDITADO.mp4",
+      "videoId": "b27|Cirurgia|Ortopedia no ENAMED|Ortopedia no ENAMED_COFEXPRESS (cortar o final)_EDITADO",
+      "size": 156409575
+    },
+    {
+      "remotePath": "video_library/media/Bloco 27/G.O/Sofrimento Fetal Crônico e Restrição de Crescimento Fetal.mp4",
+      "localPath": "Bloco 27/G.O/Sofrimento Fetal Crônico e Restrição de Crescimento Fetal.mp4",
+      "videoId": "b27|G.O|Sofrimento Fetal Crônico|Sofrimento Fetal Crônico e Restrição de Crescimento Fetal",
+      "size": 327002686
+    },
+    {
+      "remotePath": "video_library/media/Bloco 27/G.O/Sofrimento Fetal Crônico e Restrição de Crescimento Fetal_COFEXPRESS.mp4",
+      "localPath": "Bloco 27/G.O/Sofrimento Fetal Crônico e Restrição de Crescimento Fetal_COFEXPRESS.mp4",
+      "videoId": "b27|G.O|Sofrimento Fetal Crônico|Sofrimento Fetal Crônico e Restrição de Crescimento Fetal_COFEXPRESS",
+      "size": 101387082
+    },
+    {
+      "remotePath": "video_library/media/Bloco 27/Medicina de família e Comunidade/Dermatologia na APS_COFEXPRESS.mp4",
+      "localPath": "Bloco 27/Medicina de família e Comunidade/Dermatologia na APS_COFEXPRESS.mp4",
+      "videoId": "b27|Medicina de Família e Comunidade|Dermatologia na APS|Dermatologia na APS_COFEXPRESS",
+      "size": 83960156
+    },
+    {
+      "remotePath": "video_library/media/Bloco 28/Colagenoses Lupus e SAF.mp4",
+      "localPath": "Bloco 28/Colagenoses Lupus e SAF.mp4",
+      "videoId": "b28|Clínica Médica|Colagenoses: Lupus e SAF|Colagenoses Lupus e SAF",
+      "size": 434297962
+    },
+    {
+      "remotePath": "video_library/media/Bloco 28/Colagenoses Lupus e SAF_COFEXPRESS.mp4",
+      "localPath": "Bloco 28/Colagenoses Lupus e SAF_COFEXPRESS.mp4",
+      "videoId": "b28|Clínica Médica|Colagenoses: Lupus e SAF|Colagenoses Lupus e SAF_COFEXPRESS",
+      "size": 139571179
+    },
+    {
+      "remotePath": "video_library/media/Bloco 28/Miscelâneas em reumatologia Sjogren, Esclerose Sistêmica e Miopatias_COFEXPRESS.mp4",
+      "localPath": "Bloco 28/Miscelâneas em reumatologia Sjogren, Esclerose Sistêmica e Miopatias_COFEXPRESS.mp4",
+      "videoId": "b28|Clínica Médica|Miscelâneas em reumatologia: Sjogren, Esclerose Sistêmica e Miopatias|Miscelâneas em reumatologia Sjogren, Esclerose Sistêmica e Miopatias_COFEXPRESS",
+      "size": 66941113
+    },
+    {
+      "remotePath": "video_library/media/Bloco 30/Cabeça e Pescoço_COFEXPRESS.mp4",
+      "localPath": "Bloco 30/Cabeça e Pescoço_COFEXPRESS.mp4",
+      "videoId": "b30|Cirurgia|Cabeça e pescoço para o ENAMED|Cabeça e Pescoço_COFEXPRESS",
+      "size": 112228636
+    },
+    {
+      "remotePath": "video_library/media/Bloco 30/Cabeça e pescoço para ENAMED.mp4",
+      "localPath": "Bloco 30/Cabeça e pescoço para ENAMED.mp4",
+      "videoId": "b30|Cirurgia|Cabeça e pescoço para o ENAMED|Cabeça e pescoço para ENAMED",
+      "size": 565981955
+    },
+    {
+      "remotePath": "video_library/media/Bloco 30/Reanimação neonatal - Novas diretrizes de reanimação neonatal.mp4",
+      "localPath": "Bloco 30/Reanimação neonatal - Novas diretrizes de reanimação neonatal.mp4",
+      "videoId": "b30|Pediatria|Reanimação Neonatal|Reanimação neonatal - Novas diretrizes de reanimação neonatal",
+      "size": 155293095
+    },
+    {
+      "remotePath": "video_library/media/Bloco 30/Vacina Pneumocócica - 20V no SUS.mp4",
+      "localPath": "Bloco 30/Vacina Pneumocócica - 20V no SUS.mp4",
+      "videoId": "b30|Pediatria|Vacinação|Vacina Pneumocócica - 20V no SUS",
+      "size": 33372563
+    },
+    {
+      "remotePath": "video_library/media/Bloco 30/Vacinação.mp4",
+      "localPath": "Bloco 30/Vacinação.mp4",
+      "videoId": "b30|Pediatria|Vacinação|Vacinação",
+      "size": 507489338
     }
   ],
   "matchedBySize": [
