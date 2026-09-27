@@ -1,114 +1,185 @@
 {
-  "generatedAt": "2026-09-27T12:09:38.735Z",
+  "generatedAt": "2026-09-27T21:25:01.599Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 5,
+  "changed": 6,
   "results": [
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-62c0759752a1db0b",
-      "number": "1018c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-7a9e468c13b5694d",
+      "number": "1039b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/crianc-5-anos-e8652064f4e/",
-      "sourceQuestionId": "4000191603",
-      "matchedAt": "2026-09-27T12:09:39.882Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-submetido22b172b5c9/",
+      "sourceQuestionId": "4000032194",
+      "matchedAt": "2026-09-27T21:25:02.610Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "E",
-      "remoteAnswer": "E",
+      "localAnswer": "D",
+      "remoteAnswer": "D",
       "answerMismatch": false,
       "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Heparinas",
+        "Heparina não fracionada"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Heparina não fracionada. Conduta/resposta: Sua maior afinidade por proteínas plasmáticas lhe confere maior biodisponibilidade e maior meia-vida plasmática",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/paciente-submetido22b172b5c9/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-01ae6cee0ed07750",
+      "number": "1040b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/warfarina-e34ad6e863a/",
+      "sourceQuestionId": "4000021900",
+      "matchedAt": "2026-09-27T21:25:08.468Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Anticoagulantes antagonistas da vitamina K"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Anticoagulantes antagonistas da vitamina K. Conduta/resposta: 2,0 e 3,0",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/warfarina-e34ad6e863a/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-b9e37d9739028124",
+      "number": "1024c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Idosa-65-anos699a4b957c/",
+      "sourceQuestionId": "4000133695",
+      "matchedAt": "2026-09-27T21:25:14.212Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Pediatria",
+        "Reumatologia Pediátrica",
+        "Púrpura de Henoch-Schöinlein/Vasculite por IgA",
+        "Clínica Médica",
+        "Reumatologia",
+        "Vasculites",
+        "Vasculites de pequenos vasos",
+        "Vasculite por IgA ou púrpura de Henoch-Schönlein (PHS)",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Púrpura trombocitopênica imunológica (PTI). Conduta/resposta: púrpura trombocitopênica imune / observação clínica .",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Idosa-65-anos699a4b957c/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-0395331bb71dedbd",
+      "number": "1025c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-seis-anos61e7988dd7/",
+      "sourceQuestionId": "4000132852",
+      "matchedAt": "2026-09-27T21:25:20.255Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Pediatria",
         "Clínica Médica",
         "Hematologia",
         "Hemostasia",
         "Hemostasia primária",
-        "Púrpura trombocitopênica imunológica (PTI)",
-        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)"
+        "Púrpura trombocitopênica imunológica (PTI)"
       ],
-      "comment": "Gabarito confirmado: E. Assunto: Diagnóstico da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: Púrpura trombocitopênica imune.",
+      "comment": "Gabarito confirmado: C. Assunto: Púrpura trombocitopênica imunológica (PTI). Conduta/resposta: O uso de corticoide é uma opção terapêutica nessa situação, visto que o caso do paciente é sugestivo de trombocitopenia imune.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/crianc-5-anos-e86fb48957e/",
-        "https://med.estrategia.com/public/questoes/crianc-5-anos-e8652064f4e/"
+        "https://med.estrategia.com/public/questoes/Paciente-seis-anos61e7988dd7/",
+        "https://med.estrategia.com/public/questoes/5ca5ba068fb39b57a7a0e02b/"
       ]
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-f0100bbafc76b148",
-      "number": "1019c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-41506a9b7324f4c3",
+      "number": "1026c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/hemofilias-B1371089ba2/",
-      "sourceQuestionId": "4000143557",
-      "matchedAt": "2026-09-27T12:09:45.824Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-19-anos597be62cd1/",
+      "sourceQuestionId": "4000128410",
+      "matchedAt": "2026-09-27T21:25:26.008Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "E",
-      "remoteAnswer": "E",
+      "localAnswer": "C",
+      "remoteAnswer": "C",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Fisiologia",
-        "Hemostasia Secundária",
-        "Principais doenças",
+        "Reumatologia",
+        "Diagnóstico diferencial das artropatias",
+        "Avaliação dos pacientes com monoartrite",
+        "Doenças sistêmicas com manifestações reumatológicas",
+        "Artropatias associadas a doenças hematológicas",
         "Hemofilia",
-        "Classificação"
-      ],
-      "comment": "Gabarito confirmado: E. Assunto: Classificação. Conduta/resposta: VIII e IX.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/hemofilias-B1371089ba2/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-d9182d39dc85296d",
-      "number": "1020c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-39-anos-sexo60cac1758c/",
-      "sourceQuestionId": "4000140998",
-      "matchedAt": "2026-09-27T12:09:51.584Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "E",
-      "remoteAnswer": "E",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
         "Hematologia",
         "Hemostasia",
         "Hemostasia Secundária",
         "Principais doenças",
-        "Hemofilia",
-        "Diagnóstico"
+        "Diagnóstico",
+        "Tratamento"
       ],
-      "comment": "Gabarito confirmado: E. Assunto: Diagnóstico. Conduta/resposta: hemofilia.",
+      "comment": "Gabarito confirmado: C. Assunto: Tratamento. Conduta/resposta: O uso de Prednisona está indicado para efeito anti-inflamatório",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-39-anos-sexo60cac1758c/"
+        "https://med.estrategia.com/public/questoes/Paciente-19-anos597be62cd1/"
       ]
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-039753e08408e147",
-      "number": "1021c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-acbd8b872ce5e5d5",
+      "number": "1027c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Menina-5-anos-idade80a590f3ba/",
-      "sourceQuestionId": "4000140678",
-      "matchedAt": "2026-09-27T12:09:57.771Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-51a-procedente80ce3effd2/",
+      "sourceQuestionId": "4000130278",
+      "matchedAt": "2026-09-27T21:25:31.959Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -123,58 +194,13 @@
         "Hemostasia",
         "Hemostasia primária",
         "Púrpura trombocitopênica imunológica (PTI)",
-        "Tratamento da púrpura trombocitopênica imunológica (PTI)"
+        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Tratamento da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: Observação para casos mais leves, corticosteroide ou imunoglobulina para casos mais graves.",
+      "comment": "Gabarito confirmado: B. Assunto: Diagnóstico da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: Púrpura trombocitopênica imune.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Menina-5-anos-idade80a590f3ba/",
-        "https://med.estrategia.com/public/questoes/Menina-5-anos57c652caa3/"
+        "https://med.estrategia.com/public/questoes/Mulher-51a-procedente80ce3effd2/",
+        "https://med.estrategia.com/public/questoes/Mulher-51a-procura83d798d276/"
       ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-46326c152ff4e309",
-      "number": "1022c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Maria-Fernanda-tres118fadbea6b/",
-      "sourceQuestionId": "4000140475",
-      "matchedAt": "2026-09-27T12:10:03.537Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "E",
-      "remoteAnswer": "E",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Hemostasia primária",
-        "Púrpura trombocitopênica imunológica (PTI)"
-      ],
-      "comment": "Gabarito confirmado: E. Assunto: Púrpura trombocitopênica imunológica (PTI). Conduta/resposta: púrpura trombocitopênica imunológica.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Maria-Fernanda-tres118fadbea6b/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-70c1a58fe0a42382",
-      "number": "1023c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": false,
-      "status": "low_confidence",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-30-anos474274ec84/",
-        "https://med.estrategia.com/public/questoes/Paciente-40-anos72a5abbd17/"
-      ],
-      "bestSimilarity": {
-        "stem": 0.9782608695652174,
-        "options": 0.48207792207792205,
-        "combined": 0.8294059853190288
-      }
     }
   ]
 }

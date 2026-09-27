@@ -1113,10 +1113,24 @@
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Heparinas",
+        "Heparina não fracionada",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742439651999",
-      "ankiGuid": "NvXFUtPFeJ"
+      "ankiGuid": "NvXFUtPFeJ",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-submetido22b172b5c9/",
+        "sourceQuestionId": "4000032194",
+        "matchedAt": "2026-09-27T21:25:02.610Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-01ae6cee0ed07750",
@@ -1147,10 +1161,23 @@
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Anticoagulantes antagonistas da vitamina K",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742439652000",
-      "ankiGuid": "n8B-1WlnR^"
+      "ankiGuid": "n8B-1WlnR^",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/warfarina-e34ad6e863a/",
+        "sourceQuestionId": "4000021900",
+        "matchedAt": "2026-09-27T21:25:08.468Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-f1060e82fceb1346",

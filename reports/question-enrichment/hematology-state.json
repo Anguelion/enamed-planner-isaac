@@ -4043,23 +4043,23 @@
     },
     "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-7a9e468c13b5694d": {
       "number": "1039b",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-20T20:54:17.615Z",
-      "nextAttemptAt": "2026-09-27T20:54:17.615Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-09-27T21:25:02.611Z",
+      "nextAttemptAt": "2026-10-11T21:25:02.611Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-submetido22b172b5c9/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     },
     "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-01ae6cee0ed07750": {
       "number": "1040b",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-20T20:54:23.180Z",
-      "nextAttemptAt": "2026-09-27T20:54:23.180Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-09-27T21:25:08.469Z",
+      "nextAttemptAt": "2026-10-11T21:25:08.469Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/warfarina-e34ad6e863a/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-f1060e82fceb1346": {
       "number": "1041b",
@@ -4540,7 +4540,47 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-b9e37d9739028124": {
+      "number": "1024c",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-27T21:25:14.213Z",
+      "nextAttemptAt": "2026-10-04T21:25:14.213Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Idosa-65-anos699a4b957c/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-0395331bb71dedbd": {
+      "number": "1025c",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-27T21:25:20.255Z",
+      "nextAttemptAt": "2026-10-04T21:25:20.255Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-seis-anos61e7988dd7/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-41506a9b7324f4c3": {
+      "number": "1026c",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-27T21:25:26.009Z",
+      "nextAttemptAt": "2026-10-04T21:25:26.009Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-19-anos597be62cd1/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-acbd8b872ce5e5d5": {
+      "number": "1027c",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-27T21:25:31.959Z",
+      "nextAttemptAt": "2026-10-04T21:25:31.959Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-51a-procedente80ce3effd2/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     }
   },
-  "updatedAt": "2026-09-27T12:10:09.483Z"
+  "updatedAt": "2026-09-27T21:25:31.959Z"
 }

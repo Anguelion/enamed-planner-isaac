@@ -886,10 +886,29 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Pediatria",
+        "Reumatologia Pediátrica",
+        "Púrpura de Henoch-Schöinlein/Vasculite por IgA",
+        "Clínica Médica",
+        "Reumatologia",
+        "Vasculites",
+        "Vasculites de pequenos vasos",
+        "Vasculite por IgA ou púrpura de Henoch-Schönlein (PHS)",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069412",
-      "ankiGuid": "sJM,~#e4&~"
+      "ankiGuid": "sJM,~#e4&~",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Idosa-65-anos699a4b957c/",
+        "sourceQuestionId": "4000133695",
+        "matchedAt": "2026-09-27T21:25:14.212Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-0395331bb71dedbd",
@@ -919,10 +938,23 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Pediatria",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069413",
-      "ankiGuid": "lF.6`b_0@d"
+      "ankiGuid": "lF.6`b_0@d",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-seis-anos61e7988dd7/",
+        "sourceQuestionId": "4000132852",
+        "matchedAt": "2026-09-27T21:25:20.255Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-41506a9b7324f4c3",
@@ -953,10 +985,30 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Reumatologia",
+        "Diagnóstico diferencial das artropatias",
+        "Avaliação dos pacientes com monoartrite",
+        "Doenças sistêmicas com manifestações reumatológicas",
+        "Artropatias associadas a doenças hematológicas",
+        "Hemofilia",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Principais doenças",
+        "Diagnóstico",
+        "Tratamento",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069414",
-      "ankiGuid": "c_XGFTF2f~"
+      "ankiGuid": "c_XGFTF2f~",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-19-anos597be62cd1/",
+        "sourceQuestionId": "4000128410",
+        "matchedAt": "2026-09-27T21:25:26.008Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-acbd8b872ce5e5d5",
@@ -986,10 +1038,23 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069415",
-      "ankiGuid": "mt:FL+M$4d"
+      "ankiGuid": "mt:FL+M$4d",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-51a-procedente80ce3effd2/",
+        "sourceQuestionId": "4000130278",
+        "matchedAt": "2026-09-27T21:25:31.959Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-8db07e1438dfe0be",
