@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-27T02:23:15.960Z",
+  "generatedAt": "2026-09-27T03:28:45.167Z",
   "remote": "cloudflare:enamed-videos",
-  "remoteObjects": 385,
-  "localVideos": 385,
+  "remoteObjects": 444,
+  "localVideos": 444,
   "matchedExact": [
     {
       "remotePath": "video_library/media/Bloco 01/01 - Saúde Coletiva/01 - História e Princípios do SUS/01 - História e Princípios do SUS.mp4",
@@ -1853,10 +1853,94 @@
       "size": 93980225
     },
     {
+      "remotePath": "video_library/media/Bloco 26/Atenção à Saúde de Populações Específicas.mp4",
+      "localPath": "Bloco 26/Atenção à Saúde de Populações Específicas.mp4",
+      "videoId": "b26|Saúde Coletiva|Atenção à Saúde de Populações Específicas|Atenção à Saúde de Populações Específicas",
+      "size": 432890972
+    },
+    {
       "remotePath": "video_library/media/Bloco 26/Atenção à Saúde de Populações Específicas_COFEXPRESS.mp4",
       "localPath": "Bloco 26/Atenção à Saúde de Populações Específicas_COFEXPRESS.mp4",
       "videoId": "b26|Saúde Coletiva|Atenção à Saúde de Populações Específicas|Atenção à Saúde de Populações Específicas_COFEXPRESS",
       "size": 125826397
+    },
+    {
+      "remotePath": "video_library/media/Bloco 26/Cirurgia Plastica no ENAMED.mp4",
+      "localPath": "Bloco 26/Cirurgia Plastica no ENAMED.mp4",
+      "videoId": "b26|Cirurgia|Cirurgia Plastica no ENAMED|Cirurgia Plastica no ENAMED",
+      "size": 545875844
+    },
+    {
+      "remotePath": "video_library/media/Bloco 26/Cirurgia Plastica no ENAMED_Cofexpress.mp4",
+      "localPath": "Bloco 26/Cirurgia Plastica no ENAMED_Cofexpress.mp4",
+      "videoId": "b26|Cirurgia|Cirurgia Plastica no ENAMED|Cirurgia Plastica no ENAMED_Cofexpress",
+      "size": 65544156
+    },
+    {
+      "remotePath": "video_library/media/Bloco 26/Cofexpress Cuidado à Saúde LGBTQIAPN+.mp4",
+      "localPath": "Bloco 26/Cofexpress Cuidado à Saúde LGBTQIAPN+.mp4",
+      "videoId": "b26|Medicina de Família e Comunidade|Cuidado à Saúde LGBTQIAPN+|Cofexpress Cuidado à Saúde LGBTQIAPN+",
+      "size": 42600585
+    },
+    {
+      "remotePath": "video_library/media/Bloco 26/Cuidado à Saúde LGBTQIAPN+_COFEXPRESS.mp4",
+      "localPath": "Bloco 26/Cuidado à Saúde LGBTQIAPN+_COFEXPRESS.mp4",
+      "videoId": "b26|Medicina de Família e Comunidade|Cuidado à Saúde LGBTQIAPN+|Cuidado à Saúde LGBTQIAPN+_COFEXPRESS",
+      "size": 311196610
+    },
+    {
+      "remotePath": "video_library/media/Bloco 26/Peçonhentos.mp4",
+      "localPath": "Bloco 26/Peçonhentos.mp4",
+      "videoId": "b26|Medicina de Família e Comunidade|Peçonhentos, Raiva e Tétano|Peçonhentos",
+      "size": 191704206
+    },
+    {
+      "remotePath": "video_library/media/Bloco 26/Peçonhentos_COFEXPRESS.mp4",
+      "localPath": "Bloco 26/Peçonhentos_COFEXPRESS.mp4",
+      "videoId": "b26|Medicina de Família e Comunidade|Peçonhentos, Raiva e Tétano|Peçonhentos_COFEXPRESS",
+      "size": 77333901
+    },
+    {
+      "remotePath": "video_library/media/Bloco 26/Valvopatias, Febre reumática e Endocardite parte 2.mp4",
+      "localPath": "Bloco 26/Valvopatias, Febre reumática e Endocardite parte 2.mp4",
+      "videoId": "b26|Clínica Médica|Valvopatias, Febre reumática e Endocardite|Valvopatias, Febre reumática e Endocardite parte 2",
+      "size": 158615117
+    },
+    {
+      "remotePath": "video_library/media/Bloco 26/Valvopatias, Febre reumática e Endocardite.mp4",
+      "localPath": "Bloco 26/Valvopatias, Febre reumática e Endocardite.mp4",
+      "videoId": "b26|Clínica Médica|Valvopatias, Febre reumática e Endocardite|Valvopatias, Febre reumática e Endocardite",
+      "size": 366333988
+    },
+    {
+      "remotePath": "video_library/media/Bloco 26/Valvopatias, Febre reumática e Endocardite_Cofexpress.mp4",
+      "localPath": "Bloco 26/Valvopatias, Febre reumática e Endocardite_Cofexpress.mp4",
+      "videoId": "b26|Clínica Médica|Valvopatias, Febre reumática e Endocardite|Valvopatias, Febre reumática e Endocardite_Cofexpress",
+      "size": 60778902
+    },
+    {
+      "remotePath": "video_library/media/Bloco 26/Violência e Maus Tratos infantis.mp4",
+      "localPath": "Bloco 26/Violência e Maus Tratos infantis.mp4",
+      "videoId": "b26|Pediatria|Violência e Maus Tratos Infantis|Violência e Maus Tratos infantis",
+      "size": 161037135
+    },
+    {
+      "remotePath": "video_library/media/Bloco 26/Violência e maus tratos infantis_Cofexpress.mp4",
+      "localPath": "Bloco 26/Violência e maus tratos infantis_Cofexpress.mp4",
+      "videoId": "b26|Pediatria|Violência e Maus Tratos Infantis|Violência e maus tratos infantis_Cofexpress",
+      "size": 26986525
+    },
+    {
+      "remotePath": "video_library/media/Bloco 26/Violências.mp4",
+      "localPath": "Bloco 26/Violências.mp4",
+      "videoId": "b26|Saúde Coletiva|Violências|Violências",
+      "size": 405463317
+    },
+    {
+      "remotePath": "video_library/media/Bloco 26/Violências_COFEXPRESS.mp4",
+      "localPath": "Bloco 26/Violências_COFEXPRESS.mp4",
+      "videoId": "b26|Saúde Coletiva|Violências|Violências_COFEXPRESS",
+      "size": 56280960
     },
     {
       "remotePath": "video_library/media/Bloco 27/Cirurgia/Ortopedia no ENAMED.mp4",
@@ -1883,10 +1967,64 @@
       "size": 101387082
     },
     {
+      "remotePath": "video_library/media/Bloco 27/Medicina de família e Comunidade/Dermatologia na APS.mp4",
+      "localPath": "Bloco 27/Medicina de família e Comunidade/Dermatologia na APS.mp4",
+      "videoId": "b27|Medicina de Família e Comunidade|Dermatologia na APS|Dermatologia na APS",
+      "size": 262839848
+    },
+    {
       "remotePath": "video_library/media/Bloco 27/Medicina de família e Comunidade/Dermatologia na APS_COFEXPRESS.mp4",
       "localPath": "Bloco 27/Medicina de família e Comunidade/Dermatologia na APS_COFEXPRESS.mp4",
       "videoId": "b27|Medicina de Família e Comunidade|Dermatologia na APS|Dermatologia na APS_COFEXPRESS",
       "size": 83960156
+    },
+    {
+      "remotePath": "video_library/media/Bloco 27/Medicina de família e Comunidade/Doenças Virais e Pandêmicas.mp4",
+      "localPath": "Bloco 27/Medicina de família e Comunidade/Doenças Virais e Pandêmicas.mp4",
+      "videoId": "b27|Medicina de Família e Comunidade|Doenças Virais e Pandêmicas|Doenças Virais e Pandêmicas",
+      "size": 543625660
+    },
+    {
+      "remotePath": "video_library/media/Bloco 27/Medicina de família e Comunidade/Doenças Virais e Pandêmicas_Cofexpress.mp4",
+      "localPath": "Bloco 27/Medicina de família e Comunidade/Doenças Virais e Pandêmicas_Cofexpress.mp4",
+      "videoId": "b27|Medicina de Família e Comunidade|Doenças Virais e Pandêmicas|Doenças Virais e Pandêmicas_Cofexpress",
+      "size": 83751079
+    },
+    {
+      "remotePath": "video_library/media/Bloco 27/Pediatria/Reumatologia Pediátrica.mp4",
+      "localPath": "Bloco 27/Pediatria/Reumatologia Pediátrica.mp4",
+      "videoId": "b27|Pediatria|Reumatologia Pediátrica|Reumatologia Pediátrica",
+      "size": 290941142
+    },
+    {
+      "remotePath": "video_library/media/Bloco 27/Pediatria/Reumatologia Pediátrica_Cofexpress.mp4",
+      "localPath": "Bloco 27/Pediatria/Reumatologia Pediátrica_Cofexpress.mp4",
+      "videoId": "b27|Pediatria|Reumatologia Pediátrica|Reumatologia Pediátrica_Cofexpress",
+      "size": 66094682
+    },
+    {
+      "remotePath": "video_library/media/Bloco 27/Saúde mental/Síndrome Psicótica.mp4",
+      "localPath": "Bloco 27/Saúde mental/Síndrome Psicótica.mp4",
+      "videoId": "b27|Saúde Mental|Síndrome Psicótica|Síndrome Psicótica",
+      "size": 273551882
+    },
+    {
+      "remotePath": "video_library/media/Bloco 27/Saúde mental/Síndrome psicótica_Cofexpress.mp4",
+      "localPath": "Bloco 27/Saúde mental/Síndrome psicótica_Cofexpress.mp4",
+      "videoId": "b27|Saúde Mental|Síndrome Psicótica|Síndrome psicótica_Cofexpress",
+      "size": 42927485
+    },
+    {
+      "remotePath": "video_library/media/Bloco 28/Anestesiologia no ENAMED.mp4",
+      "localPath": "Bloco 28/Anestesiologia no ENAMED.mp4",
+      "videoId": "b28|Cirurgia|Anestesiologia no ENAMED|Anestesiologia no ENAMED",
+      "size": 472128531
+    },
+    {
+      "remotePath": "video_library/media/Bloco 28/Anestesiologia no ENAMED_cofexpress.mp4",
+      "localPath": "Bloco 28/Anestesiologia no ENAMED_cofexpress.mp4",
+      "videoId": "b28|Cirurgia|Anestesiologia no ENAMED|Anestesiologia no ENAMED_cofexpress",
+      "size": 164236881
     },
     {
       "remotePath": "video_library/media/Bloco 28/Colagenoses Lupus e SAF.mp4",
@@ -1901,10 +2039,172 @@
       "size": 139571179
     },
     {
+      "remotePath": "video_library/media/Bloco 28/Emergências Psiquiátricas.mp4",
+      "localPath": "Bloco 28/Emergências Psiquiátricas.mp4",
+      "videoId": "b28|Saúde Mental|Emergências Psiquiátricas|Emergências Psiquiátricas",
+      "size": 305245613
+    },
+    {
+      "remotePath": "video_library/media/Bloco 28/Emergências Psiquiátricas_Cofexpress.mp4",
+      "localPath": "Bloco 28/Emergências Psiquiátricas_Cofexpress.mp4",
+      "videoId": "b28|Saúde Mental|Emergências Psiquiátricas|Emergências Psiquiátricas_Cofexpress",
+      "size": 47428509
+    },
+    {
       "remotePath": "video_library/media/Bloco 28/Miscelâneas em reumatologia Sjogren, Esclerose Sistêmica e Miopatias_COFEXPRESS.mp4",
       "localPath": "Bloco 28/Miscelâneas em reumatologia Sjogren, Esclerose Sistêmica e Miopatias_COFEXPRESS.mp4",
       "videoId": "b28|Clínica Médica|Miscelâneas em reumatologia: Sjogren, Esclerose Sistêmica e Miopatias|Miscelâneas em reumatologia Sjogren, Esclerose Sistêmica e Miopatias_COFEXPRESS",
       "size": 66941113
+    },
+    {
+      "remotePath": "video_library/media/Bloco 28/Miscelâneas em reumatologia_ Sjogren, Esclerose Sistêmica e Miopatias.mp4",
+      "localPath": "Bloco 28/Miscelâneas em reumatologia_ Sjogren, Esclerose Sistêmica e Miopatias.mp4",
+      "videoId": "b28|Clínica Médica|Miscelâneas em reumatologia: Sjogren, Esclerose Sistêmica e Miopatias|Miscelâneas em reumatologia_ Sjogren, Esclerose Sistêmica e Miopatias",
+      "size": 307597077
+    },
+    {
+      "remotePath": "video_library/media/Bloco 28/Nefrolitíase.mp4",
+      "localPath": "Bloco 28/Nefrolitíase.mp4",
+      "videoId": "b29|Clínica Médica|Nefrolitíase|Nefrolitíase",
+      "size": 355565243
+    },
+    {
+      "remotePath": "video_library/media/Bloco 28/Nefrolitíase_Cofexpress.mp4",
+      "localPath": "Bloco 28/Nefrolitíase_Cofexpress.mp4",
+      "videoId": "b29|Clínica Médica|Nefrolitíase|Nefrolitíase_Cofexpress",
+      "size": 47757757
+    },
+    {
+      "remotePath": "video_library/media/Bloco 28/Pneumologia Pediátrica.mp4",
+      "localPath": "Bloco 28/Pneumologia Pediátrica.mp4",
+      "videoId": "b28|Pediatria|Pneumologia Pediátrica|Pneumologia Pediátrica",
+      "size": 187954731
+    },
+    {
+      "remotePath": "video_library/media/Bloco 28/Pneumologia Pediátrica_Cofexpress.mp4",
+      "localPath": "Bloco 28/Pneumologia Pediátrica_Cofexpress.mp4",
+      "videoId": "b28|Pediatria|Pneumologia Pediátrica|Pneumologia Pediátrica_Cofexpress",
+      "size": 24547741
+    },
+    {
+      "remotePath": "video_library/media/Bloco 28/Transtornos alimentares, somatoformes e de personalidade.mp4",
+      "localPath": "Bloco 28/Transtornos alimentares, somatoformes e de personalidade.mp4",
+      "videoId": "b28|Saúde Mental|Transtornos alimentares, somatoformes e de personalidade|Transtornos alimentares, somatoformes e de personalidade",
+      "size": 369817602
+    },
+    {
+      "remotePath": "video_library/media/Bloco 28/Transtornos alimentares, somatoformes e de personalidade_Cofexpress.mp4",
+      "localPath": "Bloco 28/Transtornos alimentares, somatoformes e de personalidade_Cofexpress.mp4",
+      "videoId": "b28|Saúde Mental|Transtornos alimentares, somatoformes e de personalidade|Transtornos alimentares, somatoformes e de personalidade_Cofexpress",
+      "size": 95515661
+    },
+    {
+      "remotePath": "video_library/media/Bloco 29/Cirurgia Pediátrica no ENAMED.mp4",
+      "localPath": "Bloco 29/Cirurgia Pediátrica no ENAMED.mp4",
+      "videoId": "b29|Pediatria|Cirurgia Pediátrica no ENAMED|Cirurgia Pediátrica no ENAMED",
+      "size": 336178444
+    },
+    {
+      "remotePath": "video_library/media/Bloco 29/Cirurgia Pediátrica no ENAMED_Cofexpress.mp4",
+      "localPath": "Bloco 29/Cirurgia Pediátrica no ENAMED_Cofexpress.mp4",
+      "videoId": "b29|Pediatria|Cirurgia Pediátrica no ENAMED|Cirurgia Pediátrica no ENAMED_Cofexpress",
+      "size": 68250116
+    },
+    {
+      "remotePath": "video_library/media/Bloco 29/Hipertireoidismo.mp4",
+      "localPath": "Bloco 29/Hipertireoidismo.mp4",
+      "videoId": "b29|Clínica Médica|Hipertireoidismo|Hipertireoidismo",
+      "size": 177686988
+    },
+    {
+      "remotePath": "video_library/media/Bloco 29/Hipertireoidismo_Cofexpress.mp4",
+      "localPath": "Bloco 29/Hipertireoidismo_Cofexpress.mp4",
+      "videoId": "b29|Clínica Médica|Hipertireoidismo|Hipertireoidismo_Cofexpress",
+      "size": 44071643
+    },
+    {
+      "remotePath": "video_library/media/Bloco 29/Hipotireoidismo.mp4",
+      "localPath": "Bloco 29/Hipotireoidismo.mp4",
+      "videoId": "b29|Clínica Médica|Hipotireoidismo|Hipotireoidismo",
+      "size": 156179613
+    },
+    {
+      "remotePath": "video_library/media/Bloco 29/Hipotireoidismo_Cofexpress.mp4",
+      "localPath": "Bloco 29/Hipotireoidismo_Cofexpress.mp4",
+      "videoId": "b29|Clínica Médica|Hipotireoidismo|Hipotireoidismo_Cofexpress",
+      "size": 38296645
+    },
+    {
+      "remotePath": "video_library/media/Bloco 29/Nódulos e Câncer de Tireoide.mp4",
+      "localPath": "Bloco 29/Nódulos e Câncer de Tireoide.mp4",
+      "videoId": "b29|Clínica Médica|Nódulos e Câncer de Tireoide|Nódulos e Câncer de Tireoide",
+      "size": 169327427
+    },
+    {
+      "remotePath": "video_library/media/Bloco 29/Nódulos e Câncer de Tireoide_Cofexpress.mp4",
+      "localPath": "Bloco 29/Nódulos e Câncer de Tireoide_Cofexpress.mp4",
+      "videoId": "b29|Clínica Médica|Nódulos e Câncer de Tireoide|Nódulos e Câncer de Tireoide_Cofexpress",
+      "size": 39900465
+    },
+    {
+      "remotePath": "video_library/media/Bloco 29/Prematuridade - Colo Curto e incompetências istmocervical.mp4",
+      "localPath": "Bloco 29/Prematuridade - Colo Curto e incompetências istmocervical.mp4",
+      "videoId": "b29|G.O|Prematuridade|Prematuridade - Colo Curto e incompetências istmocervical",
+      "size": 184424298
+    },
+    {
+      "remotePath": "video_library/media/Bloco 29/Prematuridade - Trabalho de parto prematuro.mp4",
+      "localPath": "Bloco 29/Prematuridade - Trabalho de parto prematuro.mp4",
+      "videoId": "b29|G.O|Prematuridade|Prematuridade - Trabalho de parto prematuro",
+      "size": 18503630
+    },
+    {
+      "remotePath": "video_library/media/Bloco 29/Prematuridade.mp4",
+      "localPath": "Bloco 29/Prematuridade.mp4",
+      "videoId": "b29|G.O|Prematuridade|Prematuridade",
+      "size": 205165025
+    },
+    {
+      "remotePath": "video_library/media/Bloco 29/Prematuridade_Cofexpress.mp4",
+      "localPath": "Bloco 29/Prematuridade_Cofexpress.mp4",
+      "videoId": "b29|G.O|Prematuridade|Prematuridade_Cofexpress",
+      "size": 14303869
+    },
+    {
+      "remotePath": "video_library/media/Bloco 29/Ética em Pediatria.mp4",
+      "localPath": "Bloco 29/Ética em Pediatria.mp4",
+      "videoId": "b29|Pediatria|Ética em Pediatria|Ética em Pediatria",
+      "size": 281451920
+    },
+    {
+      "remotePath": "video_library/media/Bloco 29/Ética em Pediatria_cofexpress.mp4",
+      "localPath": "Bloco 29/Ética em Pediatria_cofexpress.mp4",
+      "videoId": "b29|Pediatria|Ética em Pediatria|Ética em Pediatria_cofexpress",
+      "size": 65833705
+    },
+    {
+      "remotePath": "video_library/media/Bloco 30/Adrenal e Cushing.mp4",
+      "localPath": "Bloco 30/Adrenal e Cushing.mp4",
+      "videoId": "b30|Clínica Médica|Adrenal e Cushing|Adrenal e Cushing",
+      "size": 344267054
+    },
+    {
+      "remotePath": "video_library/media/Bloco 30/Adrenal e Cushing_Cofexpress.mp4",
+      "localPath": "Bloco 30/Adrenal e Cushing_Cofexpress.mp4",
+      "videoId": "b30|Clínica Médica|Adrenal e Cushing|Adrenal e Cushing_Cofexpress",
+      "size": 79099389
+    },
+    {
+      "remotePath": "video_library/media/Bloco 30/Alergologia_ reações de hipersensibilidade, rinite e angioedema.mp4",
+      "localPath": "Bloco 30/Alergologia_ reações de hipersensibilidade, rinite e angioedema.mp4",
+      "videoId": "b30|Clínica Médica|Alergologia: reações de hipersensibilidade, rinite e angioedema|Alergologia_ reações de hipersensibilidade, rinite e angioedema",
+      "size": 355707274
+    },
+    {
+      "remotePath": "video_library/media/Bloco 30/Alergologia_ reações de hipersensibilidade, rinite e angioedema_Cofexpress.mp4",
+      "localPath": "Bloco 30/Alergologia_ reações de hipersensibilidade, rinite e angioedema_Cofexpress.mp4",
+      "videoId": "b30|Clínica Médica|Alergologia: reações de hipersensibilidade, rinite e angioedema|Alergologia_ reações de hipersensibilidade, rinite e angioedema_Cofexpress",
+      "size": 157205386
     },
     {
       "remotePath": "video_library/media/Bloco 30/Cabeça e Pescoço_COFEXPRESS.mp4",
@@ -1919,10 +2219,58 @@
       "size": 565981955
     },
     {
+      "remotePath": "video_library/media/Bloco 30/Encerramento Cirurgia ENAMED.mp4",
+      "localPath": "Bloco 30/Encerramento Cirurgia ENAMED.mp4",
+      "videoId": "b30|Cirurgia|Encerramento Cirurgia ENAMED|Encerramento Cirurgia ENAMED",
+      "size": 21161840
+    },
+    {
+      "remotePath": "video_library/media/Bloco 30/Reanimação Neonatal.mp4",
+      "localPath": "Bloco 30/Reanimação Neonatal.mp4",
+      "videoId": "b30|Pediatria|Reanimação Neonatal|Reanimação Neonatal",
+      "size": 209038896
+    },
+    {
+      "remotePath": "video_library/media/Bloco 30/Reanimação Neonatal_Cofexpress.mp4",
+      "localPath": "Bloco 30/Reanimação Neonatal_Cofexpress.mp4",
+      "videoId": "b30|Pediatria|Reanimação Neonatal|Reanimação Neonatal_Cofexpress",
+      "size": 27948150
+    },
+    {
       "remotePath": "video_library/media/Bloco 30/Reanimação neonatal - Novas diretrizes de reanimação neonatal.mp4",
       "localPath": "Bloco 30/Reanimação neonatal - Novas diretrizes de reanimação neonatal.mp4",
       "videoId": "b30|Pediatria|Reanimação Neonatal|Reanimação neonatal - Novas diretrizes de reanimação neonatal",
       "size": 155293095
+    },
+    {
+      "remotePath": "video_library/media/Bloco 30/Sepse, anafilaxia e outros choques - Atualização do SCC 2026.mp4",
+      "localPath": "Bloco 30/Sepse, anafilaxia e outros choques - Atualização do SCC 2026.mp4",
+      "videoId": "b30|Clínica Médica|Sepse, anafilaxia e outros choques|Sepse, anafilaxia e outros choques - Atualização do SCC 2026",
+      "size": 197329098
+    },
+    {
+      "remotePath": "video_library/media/Bloco 30/Sepse, anafilaxia e outros choques.mp4",
+      "localPath": "Bloco 30/Sepse, anafilaxia e outros choques.mp4",
+      "videoId": "b30|Clínica Médica|Sepse, anafilaxia e outros choques|Sepse, anafilaxia e outros choques",
+      "size": 478693426
+    },
+    {
+      "remotePath": "video_library/media/Bloco 30/Sepse, anafilaxia e outros choques_Cofexpress.mp4",
+      "localPath": "Bloco 30/Sepse, anafilaxia e outros choques_Cofexpress.mp4",
+      "videoId": "b30|Clínica Médica|Sepse, anafilaxia e outros choques|Sepse, anafilaxia e outros choques_Cofexpress",
+      "size": 114564334
+    },
+    {
+      "remotePath": "video_library/media/Bloco 30/Transtornos relacionados a Substâncias - Álcool.mp4",
+      "localPath": "Bloco 30/Transtornos relacionados a Substâncias - Álcool.mp4",
+      "videoId": "b30|Saúde Mental|Transtornos relacionados a Substâncias - Álcool|Transtornos relacionados a Substâncias - Álcool",
+      "size": 294645166
+    },
+    {
+      "remotePath": "video_library/media/Bloco 30/Transtornos relacionados a Substâncias - Álcool_Cofexpress.mp4",
+      "localPath": "Bloco 30/Transtornos relacionados a Substâncias - Álcool_Cofexpress.mp4",
+      "videoId": "b30|Saúde Mental|Transtornos relacionados a Substâncias - Álcool|Transtornos relacionados a Substâncias - Álcool_Cofexpress",
+      "size": 72870989
     },
     {
       "remotePath": "video_library/media/Bloco 30/Vacina Pneumocócica - 20V no SUS.mp4",
@@ -1935,6 +2283,12 @@
       "localPath": "Bloco 30/Vacinação.mp4",
       "videoId": "b30|Pediatria|Vacinação|Vacinação",
       "size": 507489338
+    },
+    {
+      "remotePath": "video_library/media/Bloco 30/Vacinação_Cofexpress.mp4",
+      "localPath": "Bloco 30/Vacinação_Cofexpress.mp4",
+      "videoId": "b30|Pediatria|Vacinação|Vacinação_Cofexpress",
+      "size": 44422657
     }
   ],
   "matchedBySize": [

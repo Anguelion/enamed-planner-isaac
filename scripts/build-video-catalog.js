@@ -3,6 +3,8 @@
 // Não move nem renomeia nenhum arquivo de vídeo — só relê o disco e corrige o mapeamento.
 //
 // Estrutura esperada: <root>/Bloco NN/NN - Area/NN - Titulo da aula/*.mp4|*.mkv|*.avi
+// Contêineres .ts precisam ser remultiplexados antes com remux-ts-videos.js;
+// o navegador não os reproduz de forma portátil como arquivo avulso.
 //
 // Uso: node scripts/build-video-catalog.js "E:\MedCof 2026"
 
@@ -13,6 +15,7 @@ const ROOT = process.argv[2] || 'E:\\MedCof 2026';
 const OUT = path.join(__dirname, '..', 'video_library', 'catalog.json');
 const OFFICIAL_SCHEDULE = path.join(__dirname, '..', 'official_schedule.json');
 const VIDEO_EXT = new Set(['.mp4', '.mkv', '.avi', '.mov', '.webm', '.m4v']);
+const REMUX_EXT = new Set(['.ts']);
 const officialSchedule = JSON.parse(fs.readFileSync(OFFICIAL_SCHEDULE, 'utf8')).items || [];
 
 // O caminho público no R2 é independente do nome atual no disco. Ao regenerar o
@@ -87,7 +90,12 @@ function scheduleMatch(block, value) {
       return { item, score: contains ? 1000 + Math.min(target.length, official.length) : 0 };
     })
     .sort((a, b) => b.score - a.score)[0];
-  return best?.score > 0 ? best.item : null;
+  if (best?.score > 0) return best.item;
+  // O provedor às vezes coloca a aula na pasta do bloco anterior/seguinte.
+  // Só corrigimos entre blocos quando há uma correspondência global exata e
+  // única, evitando associações aproximadas perigosas.
+  const globalExact = officialSchedule.filter(item => cleanVideoTopic(item.topic) === target);
+  return globalExact.length === 1 ? globalExact[0] : null;
 }
 
 function buildVideos(files, lessonPath, blockId, areaName, lessonTitle) {
@@ -130,18 +138,22 @@ function directLessons(files, lessonPath, block, blockId, fallbackArea = '', fal
       grouped.get(key).files.push(file);
     });
 
-  return [...grouped.values()].map(group => ({
-    id: `${blockId}|${slug(group.area)}|${slug(group.title)}`,
-    block,
-    area: group.area,
-    title: group.title,
-    folderOrder: group.match?.order ?? 0,
-    ...(group.match ? { scheduleOrder: Number(group.match.order) } : {}),
-    videos: buildVideos(group.files, lessonPath, blockId, group.area, group.title)
-  }));
+  return [...grouped.values()].map(group => {
+    const targetBlock = Number(group.match?.block || block);
+    const targetBlockId = `b${String(targetBlock).padStart(2, '0')}`;
+    return {
+      id: `${targetBlockId}|${slug(group.area)}|${slug(group.title)}`,
+      block: targetBlock,
+      area: group.area,
+      title: group.title,
+      folderOrder: group.match?.order ?? 0,
+      ...(group.match ? { scheduleOrder: Number(group.match.order) } : {}),
+      videos: buildVideos(group.files, lessonPath, targetBlockId, group.area, group.title)
+    };
+  });
 }
 
-const issues = { missingExpected: [], orphanFiles: [], badBlockFolders: [], emptyLessons: [] };
+const issues = { missingExpected: [], orphanFiles: [], badBlockFolders: [], emptyLessons: [], unconvertedVideos: [] };
 const lessons = [];
 
 const blockDirs = fs.readdirSync(ROOT, { withFileTypes: true })
@@ -153,6 +165,21 @@ for (const blockDir of blockDirs) {
   if (!block) { issues.badBlockFolders.push(blockDir.name); continue; }
   const blockPath = path.join(ROOT, blockDir.name);
   const blockId = `b${String(block).padStart(2, '0')}`;
+
+  // Relate explicitamente os arquivos que existem, mas ainda não podem entrar
+  // no player. Isso impede que uma nova leva em .ts volte a parecer ausente.
+  const pending = [blockPath];
+  while (pending.length) {
+    const current = pending.pop();
+    for (const entry of fs.readdirSync(current, { withFileTypes: true })) {
+      const absolute = path.join(current, entry.name);
+      if (entry.isDirectory()) pending.push(absolute);
+      else if (entry.isFile() && REMUX_EXT.has(path.extname(entry.name).toLowerCase())) {
+        const mp4 = absolute.slice(0, -path.extname(absolute).length) + '.mp4';
+        if (!fs.existsSync(mp4)) issues.unconvertedVideos.push(path.relative(ROOT, absolute));
+      }
+    }
+  }
 
   // Os blocos finais vieram também com MP4s diretamente na raiz do bloco.
   // Cada arquivo é associado ao tópico oficial para que versões completa,
@@ -203,10 +230,7 @@ for (const blockDir of blockDirs) {
       const files = fs.readdirSync(lessonPath, { withFileTypes: true })
         .filter(entry => entry.isFile() && VIDEO_EXT.has(path.extname(entry.name).toLowerCase()));
 
-      if (!files.length) {
-        issues.emptyLessons.push(path.relative(ROOT, lessonPath));
-        continue;
-      }
+      if (!files.length) continue;
 
       const videos = buildVideos(files, lessonPath, blockId, areaName, lessonTitle);
 
@@ -256,6 +280,21 @@ const mergedLessons = [...mergedByKey.values()]
       || a.title.localeCompare(b.title, 'pt-BR');
   });
 issues.splitAcrossFolders = splitAcrossFolders;
+// A pasta oficial pode conter apenas PDFs enquanto seus vídeos ficam na raiz
+// do bloco. Nos blocos finais, que chegam nesse formato avulso, calcule a
+// cobertura após a mesclagem para não chamar essas aulas de vazias.
+const availableLessonKeys = new Set(mergedLessons.map(lesson => `${lesson.block}|${slug(lesson.title)}`));
+issues.emptyLessons = officialSchedule
+  .filter(item => Number(item.block) >= 26)
+  .filter(item => !availableLessonKeys.has(`${Number(item.block)}|${slug(item.topic)}`))
+  .map(item => `Bloco ${String(item.block).padStart(2, '0')} | ${String(item.order).padStart(2, '0')} | ${item.topic}`);
+const finalScheduleCount = officialSchedule.filter(item => Number(item.block) >= 26).length;
+issues.finalScheduleCoverage = {
+  fromBlock: 26,
+  scheduledLessons: finalScheduleCount,
+  lessonsWithVideo: finalScheduleCount - issues.emptyLessons.length,
+  lessonsWithoutVideo: issues.emptyLessons.length
+};
 
 // Compara com o catálogo anterior para reportar o que sumiu/apareceu.
 if (previous) {
@@ -270,6 +309,12 @@ const catalog = {
   source: ROOT,
   lessons: mergedLessons
 };
+if (previous?.r2) {
+  catalog.r2 = {
+    ...previous.r2,
+    availableVideos: mergedLessons.reduce((total, lesson) => total + lesson.videos.filter(video => video.onlinePath).length, 0)
+  };
+}
 
 fs.mkdirSync(path.dirname(OUT), { recursive: true });
 if (previous) fs.writeFileSync(OUT + '.bak', JSON.stringify(previous, null, 2), 'utf8');
@@ -279,7 +324,8 @@ const totalVideos = mergedLessons.reduce((sum, l) => sum + l.videos.length, 0);
 console.log(`Blocos encontrados: ${blockDirs.length}`);
 console.log(`Aulas: ${mergedLessons.length}  |  Vídeos: ${totalVideos}`);
 if (issues.badBlockFolders.length) console.log(`Pastas de bloco com nome inesperado: ${issues.badBlockFolders.join(', ')}`);
-if (issues.emptyLessons.length) console.log(`Aulas sem nenhum vídeo (${issues.emptyLessons.length}):\n  - ${issues.emptyLessons.join('\n  - ')}`);
+if (issues.emptyLessons.length) console.log(`Aulas dos blocos finais sem nenhum vídeo (${issues.emptyLessons.length}):\n  - ${issues.emptyLessons.join('\n  - ')}`);
+if (issues.unconvertedVideos.length) console.log(`Vídeos .ts aguardando conversão para MP4 (${issues.unconvertedVideos.length}):\n  - ${issues.unconvertedVideos.join('\n  - ')}`);
 if (issues.splitAcrossFolders.length) console.log(`Aulas com arquivos espalhados em pastas diferentes, mescladas no catálogo (${issues.splitAcrossFolders.length}):\n  - ${issues.splitAcrossFolders.map(s => `Bloco ${s.block} "${s.title}": ${s.areas.join(' + ')}`).join('\n  - ')}`);
 if (previous) {
   console.log(`Vídeos que sumiram do catálogo anterior (${issues.missingExpected.length})`);

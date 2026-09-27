@@ -3,56 +3,10 @@
   "orphanFiles": [],
   "badBlockFolders": [],
   "emptyLessons": [
-    "Bloco 01\\00 - Materiais & Questões Semanais\\Ficha resumo",
-    "Bloco 01\\00 - Materiais & Questões Semanais\\PDF Slide",
-    "Bloco 01\\00 - Materiais & Questões Semanais\\Questões e tags semanais",
-    "Bloco 02\\00 - Materiais & Questões Semanais\\Ficha Resumo",
-    "Bloco 07\\00 - Materiais & Questões Semanais\\Material e Questões Semanais",
-    "Bloco 08\\00 - Materiais & Questões Semanais\\pdf",
-    "Bloco 08\\00 - Materiais & Questões Semanais\\Prova",
-    "Bloco 08\\00 - Materiais & Questões Semanais\\Questões",
-    "Bloco 08\\00 - Materiais & Questões Semanais\\Simulados",
-    "Bloco 09\\00 - Materiais & Questões Semanais\\Materiais",
-    "Bloco 09\\00 - Materiais & Questões Semanais\\Questões Semanais",
-    "Bloco 09\\00 - Materiais & Questões Semanais\\Tarefas Mínimas",
-    "Bloco 10\\00 - Materiais & Questões Semanais\\Questões",
-    "Bloco 10\\00 - Materiais & Questões Semanais\\Tarefas Mínimas",
-    "Bloco 11\\00 - Materiais & Questões Semanais\\Questões",
-    "Bloco 14\\00 - Materiais & Questões Semanais\\_Não classificados",
-    "Bloco 15\\00 - Materiais & Questões Semanais\\_Não classificados",
-    "Bloco 26\\01 - Saúde Coletiva\\01 - Atenção à Saúde de Populações Específicas",
-    "Bloco 26\\01 - Saúde Coletiva\\02 - Violências",
-    "Bloco 26\\02 - Medicina de Família e Comunidade\\03 - Peçonhentos, Raiva e Tétano",
-    "Bloco 26\\03 - Clínica Médica\\04 - Cuidado à Saúde LGBTQIAPN+",
-    "Bloco 26\\03 - Clínica Médica\\05 - Violência e Maus Tratos Infantis",
-    "Bloco 26\\03 - Clínica Médica\\07 - Valvopatias, Febre Reumática e Endocardite",
-    "Bloco 26\\04 - Cirurgia\\06 - Cirurgia Plástica no ENAMED",
-    "Bloco 27\\01 - Medicina de Família e Comunidade\\01 - Doenças Virais e Pandêmicas",
-    "Bloco 27\\01 - Medicina de Família e Comunidade\\03 - Dermatologia na APS",
-    "Bloco 27\\02 - Saúde Mental\\04 - Síndrome Psicótica",
-    "Bloco 27\\03 - G.O\\05 - Sofrimento Fetal Crônico",
-    "Bloco 27\\04 - Clínica Médica\\06 - Reumatologia Pediátrica",
-    "Bloco 27\\05 - Cirurgia\\07 - Ortopedia no ENAMED",
-    "Bloco 28\\01 - Saúde Mental\\01 - Emergências Psiquiátricas",
-    "Bloco 28\\02 - Clínica Médica\\02 - Transtornos Alimentares e de Personalidade",
-    "Bloco 28\\02 - Clínica Médica\\04 - Pneumologia Pediátrica",
-    "Bloco 28\\02 - Clínica Médica\\06 - Colagenoses - Lúpus e SAF",
-    "Bloco 28\\02 - Clínica Médica\\07 - Miscelâneas em Reumatologia",
-    "Bloco 28\\03 - Cirurgia\\05 - Anestesiologia no ENAMED",
-    "Bloco 29\\01 - Clínica Médica\\01 - Hipotireoidismo",
-    "Bloco 29\\01 - Clínica Médica\\02 - Hipertireoidismo",
-    "Bloco 29\\01 - Clínica Médica\\03 - Nódulos e Câncer de Tireoide",
-    "Bloco 29\\03 - Cirurgia\\05 - Cirurgia Pediátrica no ENAMED",
-    "Bloco 29\\04 - Pediatria\\06 - Ética em Pediatria",
-    "Bloco 30\\01 - Saúde Mental\\01 - Transtornos Relacionados a Substâncias - Álcool",
-    "Bloco 30\\02 - Pediatria\\02 - Vacinação",
-    "Bloco 30\\02 - Pediatria\\03 - Reanimação Neonatal",
-    "Bloco 30\\03 - Cirurgia\\04 - Cabeça e Pescoço para o ENAMED",
-    "Bloco 30\\03 - Cirurgia\\05 - Encerramento Cirurgia ENAMED",
-    "Bloco 30\\04 - Clínica Médica\\06 - Alergologia - Hipersensibilidade",
-    "Bloco 30\\04 - Clínica Médica\\07 - Sepse, Anafilaxia e Outros Choques",
-    "Bloco 30\\04 - Clínica Médica\\08 - Adrenal e Cushing"
+    "Bloco 27 | 02 | Acidentes com Animais Peçonhentos",
+    "Bloco 28 | 03 | Psiquiatria na Infância e Adolescência"
   ],
+  "unconvertedVideos": [],
   "splitAcrossFolders": [
     {
       "block": 6,
@@ -70,5 +24,11 @@
         "Medicina de Família e Comunidade"
       ]
     }
-  ]
+  ],
+  "finalScheduleCoverage": {
+    "fromBlock": 26,
+    "scheduledLessons": 36,
+    "lessonsWithVideo": 34,
+    "lessonsWithoutVideo": 2
+  }
 }

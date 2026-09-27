@@ -92,6 +92,33 @@ test('Missão mantém o acesso às videoaulas existentes em todos os blocos publ
   });
 });
 
+test('blocos 26–30 mantêm aulas completas e COFEXPRESS juntos no cronograma', () => {
+  const ctx = loadPlannerSandbox();
+  const catalog = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'video_library', 'catalog.json'), 'utf8'));
+  ctx.__setVideoCatalog(catalog.lessons);
+  const finalLessons = catalog.lessons.filter(lesson => Number(lesson.block) >= 26 && Number(lesson.block) <= 30);
+  const finalVideos = finalLessons.flatMap(lesson => lesson.videos || []);
+
+  assert.equal(finalLessons.length, 34);
+  assert.equal(finalVideos.length, 73);
+  assert.equal(finalVideos.filter(video => video.type === 'express').length, 34);
+  assert.equal(finalVideos.filter(video => /cof[\s_-]*express/i.test(video.title)).every(video => video.type === 'express'), true);
+  assert.equal(new Set(finalVideos.map(video => video.relativePath)).size, finalVideos.length, 'nenhum arquivo pode sumir ou aparecer duplicado');
+
+  const schedule = ctx.__getState().schedule;
+  const missing = schedule
+    .filter(item => Number(item.block) >= 26 && Number(item.block) <= 30)
+    .filter(item => ctx.videoSourcesForSchedule(item).length === 0)
+    .map(item => `B${item.block} · ${item.topic}`);
+  assert.deepEqual(plain(missing), [
+    'B27 · Acidentes com Animais Peçonhentos',
+    'B28 · Psiquiatria na Infância e Adolescência'
+  ], 'somente aulas sem arquivo físico podem permanecer sem vídeo');
+
+  const nefrolitiase = schedule.find(item => Number(item.block) === 29 && item.topic === 'Nefrolitíase');
+  assert.deepEqual(plain(ctx.videoSourcesForSchedule(nefrolitiase).map(video => video.type).sort()), ['complete', 'express']);
+});
+
 test('catálogo ativo ignora Anki, MedCurso, MED e coleções especiais', () => {
   const ctx = loadPlannerSandbox();
   ctx.window.ENAMED_LOCAL_QUESTION_INDEX = {
