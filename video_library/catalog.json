@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T09:32:14.327Z",
+  "generatedAt": "2026-09-27T10:19:52.114Z",
   "source": "E:\\MedCof 2026",
   "lessons": [
     {
@@ -4949,25 +4949,24 @@
       "area": "Saúde Coletiva",
       "title": "Atenção à Saúde de Populações Específicas",
       "folderOrder": 1,
-      "scheduleOrder": 1,
       "videos": [
-        {
-          "id": "b26|Saúde Coletiva|Atenção à Saúde de Populações Específicas|Atenção à Saúde de Populações Específicas_COFEXPRESS",
-          "title": "Atenção à Saúde de Populações Específicas_COFEXPRESS",
-          "type": "express",
-          "relativePath": "Bloco 26/Atenção à Saúde de Populações Específicas_COFEXPRESS.mp4",
-          "extension": ".mp4",
-          "size": 125826397,
-          "onlinePath": "Bloco 26/Atenção à Saúde de Populações Específicas_COFEXPRESS.mp4"
-        },
         {
           "id": "b26|Saúde Coletiva|Atenção à Saúde de Populações Específicas|Atenção à Saúde de Populações Específicas",
           "title": "Atenção à Saúde de Populações Específicas",
           "type": "complete",
-          "relativePath": "Bloco 26/Atenção à Saúde de Populações Específicas.mp4",
+          "relativePath": "Bloco 26/01 - Saúde Coletiva/01 - Atenção à Saúde de Populações Específicas/Atenção à Saúde de Populações Específicas.mp4",
           "extension": ".mp4",
           "size": 432890972,
           "onlinePath": "Bloco 26/Atenção à Saúde de Populações Específicas.mp4"
+        },
+        {
+          "id": "b26|Saúde Coletiva|Atenção à Saúde de Populações Específicas|Atenção à Saúde de Populações Específicas_COFEXPRESS",
+          "title": "Atenção à Saúde de Populações Específicas_COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 26/01 - Saúde Coletiva/01 - Atenção à Saúde de Populações Específicas/Atenção à Saúde de Populações Específicas_COFEXPRESS.mp4",
+          "extension": ".mp4",
+          "size": 125826397,
+          "onlinePath": "Bloco 26/Atenção à Saúde de Populações Específicas_COFEXPRESS.mp4"
         }
       ]
     },
@@ -4977,25 +4976,24 @@
       "area": "Saúde Coletiva",
       "title": "Violências",
       "folderOrder": 2,
-      "scheduleOrder": 2,
       "videos": [
-        {
-          "id": "b26|Saúde Coletiva|Violências|Violências_COFEXPRESS",
-          "title": "Violências_COFEXPRESS",
-          "type": "express",
-          "relativePath": "Bloco 26/Violências_COFEXPRESS.mp4",
-          "extension": ".mp4",
-          "size": 56280960,
-          "onlinePath": "Bloco 26/Violências_COFEXPRESS.mp4"
-        },
         {
           "id": "b26|Saúde Coletiva|Violências|Violências",
           "title": "Violências",
           "type": "complete",
-          "relativePath": "Bloco 26/Violências.mp4",
+          "relativePath": "Bloco 26/01 - Saúde Coletiva/02 - Violências/Violências.mp4",
           "extension": ".mp4",
           "size": 405463317,
           "onlinePath": "Bloco 26/Violências.mp4"
+        },
+        {
+          "id": "b26|Saúde Coletiva|Violências|Violências_COFEXPRESS",
+          "title": "Violências_COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 26/01 - Saúde Coletiva/02 - Violências/Violências_COFEXPRESS.mp4",
+          "extension": ".mp4",
+          "size": 56280960,
+          "onlinePath": "Bloco 26/Violências_COFEXPRESS.mp4"
         }
       ]
     },
@@ -5005,25 +5003,24 @@
       "area": "Medicina de Família e Comunidade",
       "title": "Peçonhentos, Raiva e Tétano",
       "folderOrder": 3,
-      "scheduleOrder": 3,
       "videos": [
-        {
-          "id": "b26|Medicina de Família e Comunidade|Peçonhentos, Raiva e Tétano|Peçonhentos_COFEXPRESS",
-          "title": "Peçonhentos_COFEXPRESS",
-          "type": "express",
-          "relativePath": "Bloco 26/Peçonhentos_COFEXPRESS.mp4",
-          "extension": ".mp4",
-          "size": 77333901,
-          "onlinePath": "Bloco 26/Peçonhentos_COFEXPRESS.mp4"
-        },
         {
           "id": "b26|Medicina de Família e Comunidade|Peçonhentos, Raiva e Tétano|Peçonhentos",
           "title": "Peçonhentos",
           "type": "complete",
-          "relativePath": "Bloco 26/Peçonhentos.mp4",
+          "relativePath": "Bloco 26/02 - Medicina de Família e Comunidade/03 - Peçonhentos, Raiva e Tétano/Peçonhentos.mp4",
           "extension": ".mp4",
           "size": 191704206,
           "onlinePath": "Bloco 26/Peçonhentos.mp4"
+        },
+        {
+          "id": "b26|Medicina de Família e Comunidade|Peçonhentos, Raiva e Tétano|Peçonhentos_COFEXPRESS",
+          "title": "Peçonhentos_COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 26/02 - Medicina de Família e Comunidade/03 - Peçonhentos, Raiva e Tétano/Peçonhentos_COFEXPRESS.mp4",
+          "extension": ".mp4",
+          "size": 77333901,
+          "onlinePath": "Bloco 26/Peçonhentos_COFEXPRESS.mp4"
         }
       ]
     },
@@ -5033,13 +5030,12 @@
       "area": "Medicina de Família e Comunidade",
       "title": "Cuidado à Saúde LGBTQIAPN+",
       "folderOrder": 4,
-      "scheduleOrder": 4,
       "videos": [
         {
           "id": "b26|Medicina de Família e Comunidade|Cuidado à Saúde LGBTQIAPN+|Cofexpress Cuidado à Saúde LGBTQIAPN+",
           "title": "Cofexpress Cuidado à Saúde LGBTQIAPN+",
           "type": "express",
-          "relativePath": "Bloco 26/Cofexpress Cuidado à Saúde LGBTQIAPN+.mp4",
+          "relativePath": "Bloco 26/02 - Medicina de Família e Comunidade/04 - Cuidado à Saúde LGBTQIAPN+/Cofexpress Cuidado à Saúde LGBTQIAPN+.mp4",
           "extension": ".mp4",
           "size": 42600585,
           "onlinePath": "Bloco 26/Cofexpress Cuidado à Saúde LGBTQIAPN+.mp4"
@@ -5048,7 +5044,7 @@
           "id": "b26|Medicina de Família e Comunidade|Cuidado à Saúde LGBTQIAPN+|Cuidado à Saúde LGBTQIAPN+_COFEXPRESS",
           "title": "Cuidado à Saúde LGBTQIAPN+_COFEXPRESS",
           "type": "express",
-          "relativePath": "Bloco 26/Cuidado à Saúde LGBTQIAPN+_COFEXPRESS.mp4",
+          "relativePath": "Bloco 26/02 - Medicina de Família e Comunidade/04 - Cuidado à Saúde LGBTQIAPN+/Cuidado à Saúde LGBTQIAPN+_COFEXPRESS.mp4",
           "extension": ".mp4",
           "size": 311196610,
           "onlinePath": "Bloco 26/Cuidado à Saúde LGBTQIAPN+_COFEXPRESS.mp4"
@@ -5061,25 +5057,24 @@
       "area": "Pediatria",
       "title": "Violência e Maus Tratos Infantis",
       "folderOrder": 5,
-      "scheduleOrder": 5,
       "videos": [
-        {
-          "id": "b26|Pediatria|Violência e Maus Tratos Infantis|Violência e maus tratos infantis_Cofexpress",
-          "title": "Violência e maus tratos infantis_Cofexpress",
-          "type": "express",
-          "relativePath": "Bloco 26/Violência e maus tratos infantis_Cofexpress.mp4",
-          "extension": ".mp4",
-          "size": 26986525,
-          "onlinePath": "Bloco 26/Violência e maus tratos infantis_Cofexpress.mp4"
-        },
         {
           "id": "b26|Pediatria|Violência e Maus Tratos Infantis|Violência e Maus Tratos infantis",
           "title": "Violência e Maus Tratos infantis",
           "type": "complete",
-          "relativePath": "Bloco 26/Violência e Maus Tratos infantis.mp4",
+          "relativePath": "Bloco 26/05 - Pediatria/05 - Violência e Maus Tratos Infantis/Violência e Maus Tratos infantis.mp4",
           "extension": ".mp4",
           "size": 161037135,
           "onlinePath": "Bloco 26/Violência e Maus Tratos infantis.mp4"
+        },
+        {
+          "id": "b26|Pediatria|Violência e Maus Tratos Infantis|Violência e maus tratos infantis_Cofexpress",
+          "title": "Violência e maus tratos infantis_Cofexpress",
+          "type": "express",
+          "relativePath": "Bloco 26/05 - Pediatria/05 - Violência e Maus Tratos Infantis/Violência e maus tratos infantis_Cofexpress.mp4",
+          "extension": ".mp4",
+          "size": 26986525,
+          "onlinePath": "Bloco 26/Violência e maus tratos infantis_Cofexpress.mp4"
         }
       ]
     },
@@ -5087,27 +5082,26 @@
       "id": "b26|cirurgia|cirurgia plastica no enamed",
       "block": 26,
       "area": "Cirurgia",
-      "title": "Cirurgia Plastica no ENAMED",
+      "title": "Cirurgia Plástica no ENAMED",
       "folderOrder": 6,
-      "scheduleOrder": 6,
       "videos": [
-        {
-          "id": "b26|Cirurgia|Cirurgia Plastica no ENAMED|Cirurgia Plastica no ENAMED_Cofexpress",
-          "title": "Cirurgia Plastica no ENAMED_Cofexpress",
-          "type": "express",
-          "relativePath": "Bloco 26/Cirurgia Plastica no ENAMED_Cofexpress.mp4",
-          "extension": ".mp4",
-          "size": 65544156,
-          "onlinePath": "Bloco 26/Cirurgia Plastica no ENAMED_Cofexpress.mp4"
-        },
         {
           "id": "b26|Cirurgia|Cirurgia Plastica no ENAMED|Cirurgia Plastica no ENAMED",
           "title": "Cirurgia Plastica no ENAMED",
           "type": "complete",
-          "relativePath": "Bloco 26/Cirurgia Plastica no ENAMED.mp4",
+          "relativePath": "Bloco 26/04 - Cirurgia/06 - Cirurgia Plástica no ENAMED/Cirurgia Plastica no ENAMED.mp4",
           "extension": ".mp4",
           "size": 545875844,
           "onlinePath": "Bloco 26/Cirurgia Plastica no ENAMED.mp4"
+        },
+        {
+          "id": "b26|Cirurgia|Cirurgia Plastica no ENAMED|Cirurgia Plastica no ENAMED_Cofexpress",
+          "title": "Cirurgia Plastica no ENAMED_Cofexpress",
+          "type": "express",
+          "relativePath": "Bloco 26/04 - Cirurgia/06 - Cirurgia Plástica no ENAMED/Cirurgia Plastica no ENAMED_Cofexpress.mp4",
+          "extension": ".mp4",
+          "size": 65544156,
+          "onlinePath": "Bloco 26/Cirurgia Plastica no ENAMED_Cofexpress.mp4"
         }
       ]
     },
@@ -5115,36 +5109,35 @@
       "id": "b26|clinica medica|valvopatias febre reumatica e endocardite",
       "block": 26,
       "area": "Clínica Médica",
-      "title": "Valvopatias, Febre reumática e Endocardite",
+      "title": "Valvopatias, Febre Reumática e Endocardite",
       "folderOrder": 7,
-      "scheduleOrder": 7,
       "videos": [
         {
           "id": "b26|Clínica Médica|Valvopatias, Febre reumática e Endocardite|Valvopatias, Febre reumática e Endocardite parte 2",
           "title": "Valvopatias, Febre reumática e Endocardite parte 2",
           "type": "complete",
-          "relativePath": "Bloco 26/Valvopatias, Febre reumática e Endocardite parte 2.mp4",
+          "relativePath": "Bloco 26/03 - Clínica Médica/07 - Valvopatias, Febre Reumática e Endocardite/Valvopatias, Febre reumática e Endocardite parte 2.mp4",
           "extension": ".mp4",
           "size": 158615117,
           "onlinePath": "Bloco 26/Valvopatias, Febre reumática e Endocardite parte 2.mp4"
         },
         {
-          "id": "b26|Clínica Médica|Valvopatias, Febre reumática e Endocardite|Valvopatias, Febre reumática e Endocardite_Cofexpress",
-          "title": "Valvopatias, Febre reumática e Endocardite_Cofexpress",
-          "type": "express",
-          "relativePath": "Bloco 26/Valvopatias, Febre reumática e Endocardite_Cofexpress.mp4",
-          "extension": ".mp4",
-          "size": 60778902,
-          "onlinePath": "Bloco 26/Valvopatias, Febre reumática e Endocardite_Cofexpress.mp4"
-        },
-        {
           "id": "b26|Clínica Médica|Valvopatias, Febre reumática e Endocardite|Valvopatias, Febre reumática e Endocardite",
           "title": "Valvopatias, Febre reumática e Endocardite",
           "type": "complete",
-          "relativePath": "Bloco 26/Valvopatias, Febre reumática e Endocardite.mp4",
+          "relativePath": "Bloco 26/03 - Clínica Médica/07 - Valvopatias, Febre Reumática e Endocardite/Valvopatias, Febre reumática e Endocardite.mp4",
           "extension": ".mp4",
           "size": 366333988,
           "onlinePath": "Bloco 26/Valvopatias, Febre reumática e Endocardite.mp4"
+        },
+        {
+          "id": "b26|Clínica Médica|Valvopatias, Febre reumática e Endocardite|Valvopatias, Febre reumática e Endocardite_Cofexpress",
+          "title": "Valvopatias, Febre reumática e Endocardite_Cofexpress",
+          "type": "express",
+          "relativePath": "Bloco 26/03 - Clínica Médica/07 - Valvopatias, Febre Reumática e Endocardite/Valvopatias, Febre reumática e Endocardite_Cofexpress.mp4",
+          "extension": ".mp4",
+          "size": 60778902,
+          "onlinePath": "Bloco 26/Valvopatias, Febre reumática e Endocardite_Cofexpress.mp4"
         }
       ]
     },
@@ -5154,25 +5147,24 @@
       "area": "Medicina de Família e Comunidade",
       "title": "Doenças Virais e Pandêmicas",
       "folderOrder": 1,
-      "scheduleOrder": 1,
       "videos": [
-        {
-          "id": "b27|Medicina de Família e Comunidade|Doenças Virais e Pandêmicas|Doenças Virais e Pandêmicas_Cofexpress",
-          "title": "Doenças Virais e Pandêmicas_Cofexpress",
-          "type": "express",
-          "relativePath": "Bloco 27/Medicina de família e Comunidade/Doenças Virais e Pandêmicas_Cofexpress.mp4",
-          "extension": ".mp4",
-          "size": 83751079,
-          "onlinePath": "Bloco 27/Medicina de família e Comunidade/Doenças Virais e Pandêmicas_Cofexpress.mp4"
-        },
         {
           "id": "b27|Medicina de Família e Comunidade|Doenças Virais e Pandêmicas|Doenças Virais e Pandêmicas",
           "title": "Doenças Virais e Pandêmicas",
           "type": "complete",
-          "relativePath": "Bloco 27/Medicina de família e Comunidade/Doenças Virais e Pandêmicas.mp4",
+          "relativePath": "Bloco 27/01 - Medicina de Família e Comunidade/01 - Doenças Virais e Pandêmicas/Doenças Virais e Pandêmicas.mp4",
           "extension": ".mp4",
           "size": 543625660,
           "onlinePath": "Bloco 27/Medicina de família e Comunidade/Doenças Virais e Pandêmicas.mp4"
+        },
+        {
+          "id": "b27|Medicina de Família e Comunidade|Doenças Virais e Pandêmicas|Doenças Virais e Pandêmicas_Cofexpress",
+          "title": "Doenças Virais e Pandêmicas_Cofexpress",
+          "type": "express",
+          "relativePath": "Bloco 27/01 - Medicina de Família e Comunidade/01 - Doenças Virais e Pandêmicas/Doenças Virais e Pandêmicas_Cofexpress.mp4",
+          "extension": ".mp4",
+          "size": 83751079,
+          "onlinePath": "Bloco 27/Medicina de família e Comunidade/Doenças Virais e Pandêmicas_Cofexpress.mp4"
         }
       ]
     },
@@ -5182,25 +5174,24 @@
       "area": "Medicina de Família e Comunidade",
       "title": "Dermatologia na APS",
       "folderOrder": 3,
-      "scheduleOrder": 3,
       "videos": [
-        {
-          "id": "b27|Medicina de Família e Comunidade|Dermatologia na APS|Dermatologia na APS_COFEXPRESS",
-          "title": "Dermatologia na APS_COFEXPRESS",
-          "type": "express",
-          "relativePath": "Bloco 27/Medicina de família e Comunidade/Dermatologia na APS_COFEXPRESS.mp4",
-          "extension": ".mp4",
-          "size": 83960156,
-          "onlinePath": "Bloco 27/Medicina de família e Comunidade/Dermatologia na APS_COFEXPRESS.mp4"
-        },
         {
           "id": "b27|Medicina de Família e Comunidade|Dermatologia na APS|Dermatologia na APS",
           "title": "Dermatologia na APS",
           "type": "complete",
-          "relativePath": "Bloco 27/Medicina de família e Comunidade/Dermatologia na APS.mp4",
+          "relativePath": "Bloco 27/01 - Medicina de Família e Comunidade/03 - Dermatologia na APS/Dermatologia na APS.mp4",
           "extension": ".mp4",
           "size": 262839848,
           "onlinePath": "Bloco 27/Medicina de família e Comunidade/Dermatologia na APS.mp4"
+        },
+        {
+          "id": "b27|Medicina de Família e Comunidade|Dermatologia na APS|Dermatologia na APS_COFEXPRESS",
+          "title": "Dermatologia na APS_COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 27/01 - Medicina de Família e Comunidade/03 - Dermatologia na APS/Dermatologia na APS_COFEXPRESS.mp4",
+          "extension": ".mp4",
+          "size": 83960156,
+          "onlinePath": "Bloco 27/Medicina de família e Comunidade/Dermatologia na APS_COFEXPRESS.mp4"
         }
       ]
     },
@@ -5210,25 +5201,24 @@
       "area": "Saúde Mental",
       "title": "Síndrome Psicótica",
       "folderOrder": 4,
-      "scheduleOrder": 4,
       "videos": [
-        {
-          "id": "b27|Saúde Mental|Síndrome Psicótica|Síndrome psicótica_Cofexpress",
-          "title": "Síndrome psicótica_Cofexpress",
-          "type": "express",
-          "relativePath": "Bloco 27/Saúde mental/Síndrome psicótica_Cofexpress.mp4",
-          "extension": ".mp4",
-          "size": 42927485,
-          "onlinePath": "Bloco 27/Saúde mental/Síndrome psicótica_Cofexpress.mp4"
-        },
         {
           "id": "b27|Saúde Mental|Síndrome Psicótica|Síndrome Psicótica",
           "title": "Síndrome Psicótica",
           "type": "complete",
-          "relativePath": "Bloco 27/Saúde mental/Síndrome Psicótica.mp4",
+          "relativePath": "Bloco 27/02 - Saúde Mental/04 - Síndrome Psicótica/Síndrome Psicótica.mp4",
           "extension": ".mp4",
           "size": 273551882,
           "onlinePath": "Bloco 27/Saúde mental/Síndrome Psicótica.mp4"
+        },
+        {
+          "id": "b27|Saúde Mental|Síndrome Psicótica|Síndrome psicótica_Cofexpress",
+          "title": "Síndrome psicótica_Cofexpress",
+          "type": "express",
+          "relativePath": "Bloco 27/02 - Saúde Mental/04 - Síndrome Psicótica/Síndrome psicótica_Cofexpress.mp4",
+          "extension": ".mp4",
+          "size": 42927485,
+          "onlinePath": "Bloco 27/Saúde mental/Síndrome psicótica_Cofexpress.mp4"
         }
       ]
     },
@@ -5238,25 +5228,24 @@
       "area": "G.O",
       "title": "Sofrimento Fetal Crônico",
       "folderOrder": 5,
-      "scheduleOrder": 5,
       "videos": [
-        {
-          "id": "b27|G.O|Sofrimento Fetal Crônico|Sofrimento Fetal Crônico e Restrição de Crescimento Fetal_COFEXPRESS",
-          "title": "Sofrimento Fetal Crônico e Restrição de Crescimento Fetal_COFEXPRESS",
-          "type": "express",
-          "relativePath": "Bloco 27/G.O/Sofrimento Fetal Crônico e Restrição de Crescimento Fetal_COFEXPRESS.mp4",
-          "extension": ".mp4",
-          "size": 101387082,
-          "onlinePath": "Bloco 27/G.O/Sofrimento Fetal Crônico e Restrição de Crescimento Fetal_COFEXPRESS.mp4"
-        },
         {
           "id": "b27|G.O|Sofrimento Fetal Crônico|Sofrimento Fetal Crônico e Restrição de Crescimento Fetal",
           "title": "Sofrimento Fetal Crônico e Restrição de Crescimento Fetal",
           "type": "complete",
-          "relativePath": "Bloco 27/G.O/Sofrimento Fetal Crônico e Restrição de Crescimento Fetal.mp4",
+          "relativePath": "Bloco 27/03 - G.O/05 - Sofrimento Fetal Crônico/Sofrimento Fetal Crônico e Restrição de Crescimento Fetal.mp4",
           "extension": ".mp4",
           "size": 327002686,
           "onlinePath": "Bloco 27/G.O/Sofrimento Fetal Crônico e Restrição de Crescimento Fetal.mp4"
+        },
+        {
+          "id": "b27|G.O|Sofrimento Fetal Crônico|Sofrimento Fetal Crônico e Restrição de Crescimento Fetal_COFEXPRESS",
+          "title": "Sofrimento Fetal Crônico e Restrição de Crescimento Fetal_COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 27/03 - G.O/05 - Sofrimento Fetal Crônico/Sofrimento Fetal Crônico e Restrição de Crescimento Fetal_COFEXPRESS.mp4",
+          "extension": ".mp4",
+          "size": 101387082,
+          "onlinePath": "Bloco 27/G.O/Sofrimento Fetal Crônico e Restrição de Crescimento Fetal_COFEXPRESS.mp4"
         }
       ]
     },
@@ -5266,25 +5255,24 @@
       "area": "Pediatria",
       "title": "Reumatologia Pediátrica",
       "folderOrder": 6,
-      "scheduleOrder": 6,
       "videos": [
-        {
-          "id": "b27|Pediatria|Reumatologia Pediátrica|Reumatologia Pediátrica_Cofexpress",
-          "title": "Reumatologia Pediátrica_Cofexpress",
-          "type": "express",
-          "relativePath": "Bloco 27/Pediatria/Reumatologia Pediátrica_Cofexpress.mp4",
-          "extension": ".mp4",
-          "size": 66094682,
-          "onlinePath": "Bloco 27/Pediatria/Reumatologia Pediátrica_Cofexpress.mp4"
-        },
         {
           "id": "b27|Pediatria|Reumatologia Pediátrica|Reumatologia Pediátrica",
           "title": "Reumatologia Pediátrica",
           "type": "complete",
-          "relativePath": "Bloco 27/Pediatria/Reumatologia Pediátrica.mp4",
+          "relativePath": "Bloco 27/04 - Pediatria/06 - Reumatologia Pediátrica/Reumatologia Pediátrica.mp4",
           "extension": ".mp4",
           "size": 290941142,
           "onlinePath": "Bloco 27/Pediatria/Reumatologia Pediátrica.mp4"
+        },
+        {
+          "id": "b27|Pediatria|Reumatologia Pediátrica|Reumatologia Pediátrica_Cofexpress",
+          "title": "Reumatologia Pediátrica_Cofexpress",
+          "type": "express",
+          "relativePath": "Bloco 27/04 - Pediatria/06 - Reumatologia Pediátrica/Reumatologia Pediátrica_Cofexpress.mp4",
+          "extension": ".mp4",
+          "size": 66094682,
+          "onlinePath": "Bloco 27/Pediatria/Reumatologia Pediátrica_Cofexpress.mp4"
         }
       ]
     },
@@ -5294,25 +5282,24 @@
       "area": "Cirurgia",
       "title": "Ortopedia no ENAMED",
       "folderOrder": 7,
-      "scheduleOrder": 7,
       "videos": [
-        {
-          "id": "b27|Cirurgia|Ortopedia no ENAMED|Ortopedia no ENAMED_COFEXPRESS (cortar o final)_EDITADO",
-          "title": "Ortopedia no ENAMED_COFEXPRESS (cortar o final)_EDITADO",
-          "type": "express",
-          "relativePath": "Bloco 27/Cirurgia/Ortopedia no ENAMED_COFEXPRESS (cortar o final)_EDITADO.mp4",
-          "extension": ".mp4",
-          "size": 156409575,
-          "onlinePath": "Bloco 27/Cirurgia/Ortopedia no ENAMED_COFEXPRESS (cortar o final)_EDITADO.mp4"
-        },
         {
           "id": "b27|Cirurgia|Ortopedia no ENAMED|Ortopedia no ENAMED",
           "title": "Ortopedia no ENAMED",
           "type": "complete",
-          "relativePath": "Bloco 27/Cirurgia/Ortopedia no ENAMED.mp4",
+          "relativePath": "Bloco 27/05 - Cirurgia/07 - Ortopedia no ENAMED/Ortopedia no ENAMED.mp4",
           "extension": ".mp4",
           "size": 981554750,
           "onlinePath": "Bloco 27/Cirurgia/Ortopedia no ENAMED.mp4"
+        },
+        {
+          "id": "b27|Cirurgia|Ortopedia no ENAMED|Ortopedia no ENAMED_COFEXPRESS (cortar o final)_EDITADO",
+          "title": "Ortopedia no ENAMED_COFEXPRESS (cortar o final)_EDITADO",
+          "type": "express",
+          "relativePath": "Bloco 27/05 - Cirurgia/07 - Ortopedia no ENAMED/Ortopedia no ENAMED_COFEXPRESS (cortar o final)_EDITADO.mp4",
+          "extension": ".mp4",
+          "size": 156409575,
+          "onlinePath": "Bloco 27/Cirurgia/Ortopedia no ENAMED_COFEXPRESS (cortar o final)_EDITADO.mp4"
         }
       ]
     },
@@ -5322,25 +5309,24 @@
       "area": "Saúde Mental",
       "title": "Emergências Psiquiátricas",
       "folderOrder": 1,
-      "scheduleOrder": 1,
       "videos": [
-        {
-          "id": "b28|Saúde Mental|Emergências Psiquiátricas|Emergências Psiquiátricas_Cofexpress",
-          "title": "Emergências Psiquiátricas_Cofexpress",
-          "type": "express",
-          "relativePath": "Bloco 28/Emergências Psiquiátricas_Cofexpress.mp4",
-          "extension": ".mp4",
-          "size": 47428509,
-          "onlinePath": "Bloco 28/Emergências Psiquiátricas_Cofexpress.mp4"
-        },
         {
           "id": "b28|Saúde Mental|Emergências Psiquiátricas|Emergências Psiquiátricas",
           "title": "Emergências Psiquiátricas",
           "type": "complete",
-          "relativePath": "Bloco 28/Emergências Psiquiátricas.mp4",
+          "relativePath": "Bloco 28/01 - Saúde Mental/01 - Emergências Psiquiátricas/Emergências Psiquiátricas.mp4",
           "extension": ".mp4",
           "size": 305245613,
           "onlinePath": "Bloco 28/Emergências Psiquiátricas.mp4"
+        },
+        {
+          "id": "b28|Saúde Mental|Emergências Psiquiátricas|Emergências Psiquiátricas_Cofexpress",
+          "title": "Emergências Psiquiátricas_Cofexpress",
+          "type": "express",
+          "relativePath": "Bloco 28/01 - Saúde Mental/01 - Emergências Psiquiátricas/Emergências Psiquiátricas_Cofexpress.mp4",
+          "extension": ".mp4",
+          "size": 47428509,
+          "onlinePath": "Bloco 28/Emergências Psiquiátricas_Cofexpress.mp4"
         }
       ]
     },
@@ -5350,25 +5336,24 @@
       "area": "Saúde Mental",
       "title": "Transtornos alimentares, somatoformes e de personalidade",
       "folderOrder": 2,
-      "scheduleOrder": 2,
       "videos": [
-        {
-          "id": "b28|Saúde Mental|Transtornos alimentares, somatoformes e de personalidade|Transtornos alimentares, somatoformes e de personalidade_Cofexpress",
-          "title": "Transtornos alimentares, somatoformes e de personalidade_Cofexpress",
-          "type": "express",
-          "relativePath": "Bloco 28/Transtornos alimentares, somatoformes e de personalidade_Cofexpress.mp4",
-          "extension": ".mp4",
-          "size": 95515661,
-          "onlinePath": "Bloco 28/Transtornos alimentares, somatoformes e de personalidade_Cofexpress.mp4"
-        },
         {
           "id": "b28|Saúde Mental|Transtornos alimentares, somatoformes e de personalidade|Transtornos alimentares, somatoformes e de personalidade",
           "title": "Transtornos alimentares, somatoformes e de personalidade",
           "type": "complete",
-          "relativePath": "Bloco 28/Transtornos alimentares, somatoformes e de personalidade.mp4",
+          "relativePath": "Bloco 28/01 - Saúde Mental/02 - Transtornos alimentares, somatoformes e de personalidade/Transtornos alimentares, somatoformes e de personalidade.mp4",
           "extension": ".mp4",
           "size": 369817602,
           "onlinePath": "Bloco 28/Transtornos alimentares, somatoformes e de personalidade.mp4"
+        },
+        {
+          "id": "b28|Saúde Mental|Transtornos alimentares, somatoformes e de personalidade|Transtornos alimentares, somatoformes e de personalidade_Cofexpress",
+          "title": "Transtornos alimentares, somatoformes e de personalidade_Cofexpress",
+          "type": "express",
+          "relativePath": "Bloco 28/01 - Saúde Mental/02 - Transtornos alimentares, somatoformes e de personalidade/Transtornos alimentares, somatoformes e de personalidade_Cofexpress.mp4",
+          "extension": ".mp4",
+          "size": 95515661,
+          "onlinePath": "Bloco 28/Transtornos alimentares, somatoformes e de personalidade_Cofexpress.mp4"
         }
       ]
     },
@@ -5378,25 +5363,24 @@
       "area": "Pediatria",
       "title": "Pneumologia Pediátrica",
       "folderOrder": 4,
-      "scheduleOrder": 4,
       "videos": [
-        {
-          "id": "b28|Pediatria|Pneumologia Pediátrica|Pneumologia Pediátrica_Cofexpress",
-          "title": "Pneumologia Pediátrica_Cofexpress",
-          "type": "express",
-          "relativePath": "Bloco 28/Pneumologia Pediátrica_Cofexpress.mp4",
-          "extension": ".mp4",
-          "size": 24547741,
-          "onlinePath": "Bloco 28/Pneumologia Pediátrica_Cofexpress.mp4"
-        },
         {
           "id": "b28|Pediatria|Pneumologia Pediátrica|Pneumologia Pediátrica",
           "title": "Pneumologia Pediátrica",
           "type": "complete",
-          "relativePath": "Bloco 28/Pneumologia Pediátrica.mp4",
+          "relativePath": "Bloco 28/04 - Pediatria/04 - Pneumologia Pediátrica/Pneumologia Pediátrica.mp4",
           "extension": ".mp4",
           "size": 187954731,
           "onlinePath": "Bloco 28/Pneumologia Pediátrica.mp4"
+        },
+        {
+          "id": "b28|Pediatria|Pneumologia Pediátrica|Pneumologia Pediátrica_Cofexpress",
+          "title": "Pneumologia Pediátrica_Cofexpress",
+          "type": "express",
+          "relativePath": "Bloco 28/04 - Pediatria/04 - Pneumologia Pediátrica/Pneumologia Pediátrica_Cofexpress.mp4",
+          "extension": ".mp4",
+          "size": 24547741,
+          "onlinePath": "Bloco 28/Pneumologia Pediátrica_Cofexpress.mp4"
         }
       ]
     },
@@ -5406,25 +5390,24 @@
       "area": "Cirurgia",
       "title": "Anestesiologia no ENAMED",
       "folderOrder": 5,
-      "scheduleOrder": 5,
       "videos": [
-        {
-          "id": "b28|Cirurgia|Anestesiologia no ENAMED|Anestesiologia no ENAMED_cofexpress",
-          "title": "Anestesiologia no ENAMED_cofexpress",
-          "type": "express",
-          "relativePath": "Bloco 28/Anestesiologia no ENAMED_cofexpress.mp4",
-          "extension": ".mp4",
-          "size": 164236881,
-          "onlinePath": "Bloco 28/Anestesiologia no ENAMED_cofexpress.mp4"
-        },
         {
           "id": "b28|Cirurgia|Anestesiologia no ENAMED|Anestesiologia no ENAMED",
           "title": "Anestesiologia no ENAMED",
           "type": "complete",
-          "relativePath": "Bloco 28/Anestesiologia no ENAMED.mp4",
+          "relativePath": "Bloco 28/03 - Cirurgia/05 - Anestesiologia no ENAMED/Anestesiologia no ENAMED.mp4",
           "extension": ".mp4",
           "size": 472128531,
           "onlinePath": "Bloco 28/Anestesiologia no ENAMED.mp4"
+        },
+        {
+          "id": "b28|Cirurgia|Anestesiologia no ENAMED|Anestesiologia no ENAMED_cofexpress",
+          "title": "Anestesiologia no ENAMED_cofexpress",
+          "type": "express",
+          "relativePath": "Bloco 28/03 - Cirurgia/05 - Anestesiologia no ENAMED/Anestesiologia no ENAMED_cofexpress.mp4",
+          "extension": ".mp4",
+          "size": 164236881,
+          "onlinePath": "Bloco 28/Anestesiologia no ENAMED_cofexpress.mp4"
         }
       ]
     },
@@ -5432,27 +5415,26 @@
       "id": "b28|clinica medica|colagenoses lupus e saf",
       "block": 28,
       "area": "Clínica Médica",
-      "title": "Colagenoses: Lupus e SAF",
+      "title": "Colagenoses - Lúpus e SAF",
       "folderOrder": 6,
-      "scheduleOrder": 6,
       "videos": [
-        {
-          "id": "b28|Clínica Médica|Colagenoses: Lupus e SAF|Colagenoses Lupus e SAF_COFEXPRESS",
-          "title": "Colagenoses Lupus e SAF_COFEXPRESS",
-          "type": "express",
-          "relativePath": "Bloco 28/Colagenoses Lupus e SAF_COFEXPRESS.mp4",
-          "extension": ".mp4",
-          "size": 139571179,
-          "onlinePath": "Bloco 28/Colagenoses Lupus e SAF_COFEXPRESS.mp4"
-        },
         {
           "id": "b28|Clínica Médica|Colagenoses: Lupus e SAF|Colagenoses Lupus e SAF",
           "title": "Colagenoses Lupus e SAF",
           "type": "complete",
-          "relativePath": "Bloco 28/Colagenoses Lupus e SAF.mp4",
+          "relativePath": "Bloco 28/02 - Clínica Médica/06 - Colagenoses - Lúpus e SAF/Colagenoses Lupus e SAF.mp4",
           "extension": ".mp4",
           "size": 434297962,
           "onlinePath": "Bloco 28/Colagenoses Lupus e SAF.mp4"
+        },
+        {
+          "id": "b28|Clínica Médica|Colagenoses: Lupus e SAF|Colagenoses Lupus e SAF_COFEXPRESS",
+          "title": "Colagenoses Lupus e SAF_COFEXPRESS",
+          "type": "express",
+          "relativePath": "Bloco 28/02 - Clínica Médica/06 - Colagenoses - Lúpus e SAF/Colagenoses Lupus e SAF_COFEXPRESS.mp4",
+          "extension": ".mp4",
+          "size": 139571179,
+          "onlinePath": "Bloco 28/Colagenoses Lupus e SAF_COFEXPRESS.mp4"
         }
       ]
     },
@@ -5460,15 +5442,14 @@
       "id": "b28|clinica medica|miscelaneas em reumatologia sjogren esclerose sistemica e miopatias",
       "block": 28,
       "area": "Clínica Médica",
-      "title": "Miscelâneas em reumatologia: Sjogren, Esclerose Sistêmica e Miopatias",
+      "title": "Miscelâneas em reumatologia - Sjogren, Esclerose Sistêmica e Miopatias",
       "folderOrder": 7,
-      "scheduleOrder": 7,
       "videos": [
         {
           "id": "b28|Clínica Médica|Miscelâneas em reumatologia: Sjogren, Esclerose Sistêmica e Miopatias|Miscelâneas em reumatologia Sjogren, Esclerose Sistêmica e Miopatias_COFEXPRESS",
           "title": "Miscelâneas em reumatologia Sjogren, Esclerose Sistêmica e Miopatias_COFEXPRESS",
           "type": "express",
-          "relativePath": "Bloco 28/Miscelâneas em reumatologia Sjogren, Esclerose Sistêmica e Miopatias_COFEXPRESS.mp4",
+          "relativePath": "Bloco 28/02 - Clínica Médica/07 - Miscelâneas em reumatologia - Sjogren, Esclerose Sistêmica e Miopatias/Miscelâneas em reumatologia Sjogren, Esclerose Sistêmica e Miopatias_COFEXPRESS.mp4",
           "extension": ".mp4",
           "size": 66941113,
           "onlinePath": "Bloco 28/Miscelâneas em reumatologia Sjogren, Esclerose Sistêmica e Miopatias_COFEXPRESS.mp4"
@@ -5477,7 +5458,7 @@
           "id": "b28|Clínica Médica|Miscelâneas em reumatologia: Sjogren, Esclerose Sistêmica e Miopatias|Miscelâneas em reumatologia_ Sjogren, Esclerose Sistêmica e Miopatias",
           "title": "Miscelâneas em reumatologia_ Sjogren, Esclerose Sistêmica e Miopatias",
           "type": "complete",
-          "relativePath": "Bloco 28/Miscelâneas em reumatologia_ Sjogren, Esclerose Sistêmica e Miopatias.mp4",
+          "relativePath": "Bloco 28/02 - Clínica Médica/07 - Miscelâneas em reumatologia - Sjogren, Esclerose Sistêmica e Miopatias/Miscelâneas em reumatologia_ Sjogren, Esclerose Sistêmica e Miopatias.mp4",
           "extension": ".mp4",
           "size": 307597077,
           "onlinePath": "Bloco 28/Miscelâneas em reumatologia_ Sjogren, Esclerose Sistêmica e Miopatias.mp4"
@@ -5490,25 +5471,24 @@
       "area": "Clínica Médica",
       "title": "Hipotireoidismo",
       "folderOrder": 1,
-      "scheduleOrder": 1,
       "videos": [
-        {
-          "id": "b29|Clínica Médica|Hipotireoidismo|Hipotireoidismo_Cofexpress",
-          "title": "Hipotireoidismo_Cofexpress",
-          "type": "express",
-          "relativePath": "Bloco 29/Hipotireoidismo_Cofexpress.mp4",
-          "extension": ".mp4",
-          "size": 38296645,
-          "onlinePath": "Bloco 29/Hipotireoidismo_Cofexpress.mp4"
-        },
         {
           "id": "b29|Clínica Médica|Hipotireoidismo|Hipotireoidismo",
           "title": "Hipotireoidismo",
           "type": "complete",
-          "relativePath": "Bloco 29/Hipotireoidismo.mp4",
+          "relativePath": "Bloco 29/01 - Clínica Médica/01 - Hipotireoidismo/Hipotireoidismo.mp4",
           "extension": ".mp4",
           "size": 156179613,
           "onlinePath": "Bloco 29/Hipotireoidismo.mp4"
+        },
+        {
+          "id": "b29|Clínica Médica|Hipotireoidismo|Hipotireoidismo_Cofexpress",
+          "title": "Hipotireoidismo_Cofexpress",
+          "type": "express",
+          "relativePath": "Bloco 29/01 - Clínica Médica/01 - Hipotireoidismo/Hipotireoidismo_Cofexpress.mp4",
+          "extension": ".mp4",
+          "size": 38296645,
+          "onlinePath": "Bloco 29/Hipotireoidismo_Cofexpress.mp4"
         }
       ]
     },
@@ -5518,25 +5498,24 @@
       "area": "Clínica Médica",
       "title": "Hipertireoidismo",
       "folderOrder": 2,
-      "scheduleOrder": 2,
       "videos": [
-        {
-          "id": "b29|Clínica Médica|Hipertireoidismo|Hipertireoidismo_Cofexpress",
-          "title": "Hipertireoidismo_Cofexpress",
-          "type": "express",
-          "relativePath": "Bloco 29/Hipertireoidismo_Cofexpress.mp4",
-          "extension": ".mp4",
-          "size": 44071643,
-          "onlinePath": "Bloco 29/Hipertireoidismo_Cofexpress.mp4"
-        },
         {
           "id": "b29|Clínica Médica|Hipertireoidismo|Hipertireoidismo",
           "title": "Hipertireoidismo",
           "type": "complete",
-          "relativePath": "Bloco 29/Hipertireoidismo.mp4",
+          "relativePath": "Bloco 29/01 - Clínica Médica/02 - Hipertireoidismo/Hipertireoidismo.mp4",
           "extension": ".mp4",
           "size": 177686988,
           "onlinePath": "Bloco 29/Hipertireoidismo.mp4"
+        },
+        {
+          "id": "b29|Clínica Médica|Hipertireoidismo|Hipertireoidismo_Cofexpress",
+          "title": "Hipertireoidismo_Cofexpress",
+          "type": "express",
+          "relativePath": "Bloco 29/01 - Clínica Médica/02 - Hipertireoidismo/Hipertireoidismo_Cofexpress.mp4",
+          "extension": ".mp4",
+          "size": 44071643,
+          "onlinePath": "Bloco 29/Hipertireoidismo_Cofexpress.mp4"
         }
       ]
     },
@@ -5546,25 +5525,24 @@
       "area": "Clínica Médica",
       "title": "Nódulos e Câncer de Tireoide",
       "folderOrder": 3,
-      "scheduleOrder": 3,
       "videos": [
-        {
-          "id": "b29|Clínica Médica|Nódulos e Câncer de Tireoide|Nódulos e Câncer de Tireoide_Cofexpress",
-          "title": "Nódulos e Câncer de Tireoide_Cofexpress",
-          "type": "express",
-          "relativePath": "Bloco 29/Nódulos e Câncer de Tireoide_Cofexpress.mp4",
-          "extension": ".mp4",
-          "size": 39900465,
-          "onlinePath": "Bloco 29/Nódulos e Câncer de Tireoide_Cofexpress.mp4"
-        },
         {
           "id": "b29|Clínica Médica|Nódulos e Câncer de Tireoide|Nódulos e Câncer de Tireoide",
           "title": "Nódulos e Câncer de Tireoide",
           "type": "complete",
-          "relativePath": "Bloco 29/Nódulos e Câncer de Tireoide.mp4",
+          "relativePath": "Bloco 29/01 - Clínica Médica/03 - Nódulos e Câncer de Tireoide/Nódulos e Câncer de Tireoide.mp4",
           "extension": ".mp4",
           "size": 169327427,
           "onlinePath": "Bloco 29/Nódulos e Câncer de Tireoide.mp4"
+        },
+        {
+          "id": "b29|Clínica Médica|Nódulos e Câncer de Tireoide|Nódulos e Câncer de Tireoide_Cofexpress",
+          "title": "Nódulos e Câncer de Tireoide_Cofexpress",
+          "type": "express",
+          "relativePath": "Bloco 29/01 - Clínica Médica/03 - Nódulos e Câncer de Tireoide/Nódulos e Câncer de Tireoide_Cofexpress.mp4",
+          "extension": ".mp4",
+          "size": 39900465,
+          "onlinePath": "Bloco 29/Nódulos e Câncer de Tireoide_Cofexpress.mp4"
         }
       ]
     },
@@ -5574,13 +5552,12 @@
       "area": "G.O",
       "title": "Prematuridade",
       "folderOrder": 4,
-      "scheduleOrder": 4,
       "videos": [
         {
           "id": "b29|G.O|Prematuridade|Prematuridade - Colo Curto e incompetências istmocervical",
           "title": "Prematuridade - Colo Curto e incompetências istmocervical",
           "type": "complete",
-          "relativePath": "Bloco 29/Prematuridade - Colo Curto e incompetências istmocervical.mp4",
+          "relativePath": "Bloco 29/02 - G.O/04 - Prematuridade/Prematuridade - Colo Curto e incompetências istmocervical.mp4",
           "extension": ".mp4",
           "size": 184424298,
           "onlinePath": "Bloco 29/Prematuridade - Colo Curto e incompetências istmocervical.mp4"
@@ -5589,28 +5566,28 @@
           "id": "b29|G.O|Prematuridade|Prematuridade - Trabalho de parto prematuro",
           "title": "Prematuridade - Trabalho de parto prematuro",
           "type": "complete",
-          "relativePath": "Bloco 29/Prematuridade - Trabalho de parto prematuro.mp4",
+          "relativePath": "Bloco 29/02 - G.O/04 - Prematuridade/Prematuridade - Trabalho de parto prematuro.mp4",
           "extension": ".mp4",
           "size": 18503630,
           "onlinePath": "Bloco 29/Prematuridade - Trabalho de parto prematuro.mp4"
         },
         {
-          "id": "b29|G.O|Prematuridade|Prematuridade_Cofexpress",
-          "title": "Prematuridade_Cofexpress",
-          "type": "express",
-          "relativePath": "Bloco 29/Prematuridade_Cofexpress.mp4",
-          "extension": ".mp4",
-          "size": 14303869,
-          "onlinePath": "Bloco 29/Prematuridade_Cofexpress.mp4"
-        },
-        {
           "id": "b29|G.O|Prematuridade|Prematuridade",
           "title": "Prematuridade",
           "type": "complete",
-          "relativePath": "Bloco 29/Prematuridade.mp4",
+          "relativePath": "Bloco 29/02 - G.O/04 - Prematuridade/Prematuridade.mp4",
           "extension": ".mp4",
           "size": 205165025,
           "onlinePath": "Bloco 29/Prematuridade.mp4"
+        },
+        {
+          "id": "b29|G.O|Prematuridade|Prematuridade_Cofexpress",
+          "title": "Prematuridade_Cofexpress",
+          "type": "express",
+          "relativePath": "Bloco 29/02 - G.O/04 - Prematuridade/Prematuridade_Cofexpress.mp4",
+          "extension": ".mp4",
+          "size": 14303869,
+          "onlinePath": "Bloco 29/Prematuridade_Cofexpress.mp4"
         }
       ]
     },
@@ -5620,25 +5597,24 @@
       "area": "Pediatria",
       "title": "Cirurgia Pediátrica no ENAMED",
       "folderOrder": 5,
-      "scheduleOrder": 5,
       "videos": [
-        {
-          "id": "b29|Pediatria|Cirurgia Pediátrica no ENAMED|Cirurgia Pediátrica no ENAMED_Cofexpress",
-          "title": "Cirurgia Pediátrica no ENAMED_Cofexpress",
-          "type": "express",
-          "relativePath": "Bloco 29/Cirurgia Pediátrica no ENAMED_Cofexpress.mp4",
-          "extension": ".mp4",
-          "size": 68250116,
-          "onlinePath": "Bloco 29/Cirurgia Pediátrica no ENAMED_Cofexpress.mp4"
-        },
         {
           "id": "b29|Pediatria|Cirurgia Pediátrica no ENAMED|Cirurgia Pediátrica no ENAMED",
           "title": "Cirurgia Pediátrica no ENAMED",
           "type": "complete",
-          "relativePath": "Bloco 29/Cirurgia Pediátrica no ENAMED.mp4",
+          "relativePath": "Bloco 29/04 - Pediatria/05 - Cirurgia Pediátrica no ENAMED/Cirurgia Pediátrica no ENAMED.mp4",
           "extension": ".mp4",
           "size": 336178444,
           "onlinePath": "Bloco 29/Cirurgia Pediátrica no ENAMED.mp4"
+        },
+        {
+          "id": "b29|Pediatria|Cirurgia Pediátrica no ENAMED|Cirurgia Pediátrica no ENAMED_Cofexpress",
+          "title": "Cirurgia Pediátrica no ENAMED_Cofexpress",
+          "type": "express",
+          "relativePath": "Bloco 29/04 - Pediatria/05 - Cirurgia Pediátrica no ENAMED/Cirurgia Pediátrica no ENAMED_Cofexpress.mp4",
+          "extension": ".mp4",
+          "size": 68250116,
+          "onlinePath": "Bloco 29/Cirurgia Pediátrica no ENAMED_Cofexpress.mp4"
         }
       ]
     },
@@ -5648,25 +5624,24 @@
       "area": "Pediatria",
       "title": "Ética em Pediatria",
       "folderOrder": 6,
-      "scheduleOrder": 6,
       "videos": [
-        {
-          "id": "b29|Pediatria|Ética em Pediatria|Ética em Pediatria_cofexpress",
-          "title": "Ética em Pediatria_cofexpress",
-          "type": "express",
-          "relativePath": "Bloco 29/Ética em Pediatria_cofexpress.mp4",
-          "extension": ".mp4",
-          "size": 65833705,
-          "onlinePath": "Bloco 29/Ética em Pediatria_cofexpress.mp4"
-        },
         {
           "id": "b29|Pediatria|Ética em Pediatria|Ética em Pediatria",
           "title": "Ética em Pediatria",
           "type": "complete",
-          "relativePath": "Bloco 29/Ética em Pediatria.mp4",
+          "relativePath": "Bloco 29/04 - Pediatria/06 - Ética em Pediatria/Ética em Pediatria.mp4",
           "extension": ".mp4",
           "size": 281451920,
           "onlinePath": "Bloco 29/Ética em Pediatria.mp4"
+        },
+        {
+          "id": "b29|Pediatria|Ética em Pediatria|Ética em Pediatria_cofexpress",
+          "title": "Ética em Pediatria_cofexpress",
+          "type": "express",
+          "relativePath": "Bloco 29/04 - Pediatria/06 - Ética em Pediatria/Ética em Pediatria_cofexpress.mp4",
+          "extension": ".mp4",
+          "size": 65833705,
+          "onlinePath": "Bloco 29/Ética em Pediatria_cofexpress.mp4"
         }
       ]
     },
@@ -5676,25 +5651,24 @@
       "area": "Clínica Médica",
       "title": "Nefrolitíase",
       "folderOrder": 7,
-      "scheduleOrder": 7,
       "videos": [
-        {
-          "id": "b29|Clínica Médica|Nefrolitíase|Nefrolitíase_Cofexpress",
-          "title": "Nefrolitíase_Cofexpress",
-          "type": "express",
-          "relativePath": "Bloco 28/Nefrolitíase_Cofexpress.mp4",
-          "extension": ".mp4",
-          "size": 47757757,
-          "onlinePath": "Bloco 28/Nefrolitíase_Cofexpress.mp4"
-        },
         {
           "id": "b29|Clínica Médica|Nefrolitíase|Nefrolitíase",
           "title": "Nefrolitíase",
           "type": "complete",
-          "relativePath": "Bloco 28/Nefrolitíase.mp4",
+          "relativePath": "Bloco 29/01 - Clínica Médica/07 - Nefrolitíase/Nefrolitíase.mp4",
           "extension": ".mp4",
           "size": 355565243,
           "onlinePath": "Bloco 28/Nefrolitíase.mp4"
+        },
+        {
+          "id": "b29|Clínica Médica|Nefrolitíase|Nefrolitíase_Cofexpress",
+          "title": "Nefrolitíase_Cofexpress",
+          "type": "express",
+          "relativePath": "Bloco 29/01 - Clínica Médica/07 - Nefrolitíase/Nefrolitíase_Cofexpress.mp4",
+          "extension": ".mp4",
+          "size": 47757757,
+          "onlinePath": "Bloco 28/Nefrolitíase_Cofexpress.mp4"
         }
       ]
     },
@@ -5702,27 +5676,26 @@
       "id": "b30|saude mental|transtornos relacionados a substancias alcool",
       "block": 30,
       "area": "Saúde Mental",
-      "title": "Transtornos relacionados a Substâncias - Álcool",
+      "title": "Transtornos Relacionados a Substâncias - Álcool",
       "folderOrder": 1,
-      "scheduleOrder": 1,
       "videos": [
-        {
-          "id": "b30|Saúde Mental|Transtornos relacionados a Substâncias - Álcool|Transtornos relacionados a Substâncias - Álcool_Cofexpress",
-          "title": "Transtornos relacionados a Substâncias - Álcool_Cofexpress",
-          "type": "express",
-          "relativePath": "Bloco 30/Transtornos relacionados a Substâncias - Álcool_Cofexpress.mp4",
-          "extension": ".mp4",
-          "size": 72870989,
-          "onlinePath": "Bloco 30/Transtornos relacionados a Substâncias - Álcool_Cofexpress.mp4"
-        },
         {
           "id": "b30|Saúde Mental|Transtornos relacionados a Substâncias - Álcool|Transtornos relacionados a Substâncias - Álcool",
           "title": "Transtornos relacionados a Substâncias - Álcool",
           "type": "complete",
-          "relativePath": "Bloco 30/Transtornos relacionados a Substâncias - Álcool.mp4",
+          "relativePath": "Bloco 30/01 - Saúde Mental/01 - Transtornos Relacionados a Substâncias - Álcool/Transtornos relacionados a Substâncias - Álcool.mp4",
           "extension": ".mp4",
           "size": 294645166,
           "onlinePath": "Bloco 30/Transtornos relacionados a Substâncias - Álcool.mp4"
+        },
+        {
+          "id": "b30|Saúde Mental|Transtornos relacionados a Substâncias - Álcool|Transtornos relacionados a Substâncias - Álcool_Cofexpress",
+          "title": "Transtornos relacionados a Substâncias - Álcool_Cofexpress",
+          "type": "express",
+          "relativePath": "Bloco 30/01 - Saúde Mental/01 - Transtornos Relacionados a Substâncias - Álcool/Transtornos relacionados a Substâncias - Álcool_Cofexpress.mp4",
+          "extension": ".mp4",
+          "size": 72870989,
+          "onlinePath": "Bloco 30/Transtornos relacionados a Substâncias - Álcool_Cofexpress.mp4"
         }
       ]
     },
@@ -5732,34 +5705,33 @@
       "area": "Pediatria",
       "title": "Vacinação",
       "folderOrder": 2,
-      "scheduleOrder": 2,
       "videos": [
         {
           "id": "b30|Pediatria|Vacinação|Vacina Pneumocócica - 20V no SUS",
           "title": "Vacina Pneumocócica - 20V no SUS",
           "type": "complete",
-          "relativePath": "Bloco 30/Vacina Pneumocócica - 20V no SUS.mp4",
+          "relativePath": "Bloco 30/02 - Pediatria/02 - Vacinação/Vacina Pneumocócica - 20V no SUS.mp4",
           "extension": ".mp4",
           "size": 33372563,
           "onlinePath": "Bloco 30/Vacina Pneumocócica - 20V no SUS.mp4"
         },
         {
-          "id": "b30|Pediatria|Vacinação|Vacinação_Cofexpress",
-          "title": "Vacinação_Cofexpress",
-          "type": "express",
-          "relativePath": "Bloco 30/Vacinação_Cofexpress.mp4",
-          "extension": ".mp4",
-          "size": 44422657,
-          "onlinePath": "Bloco 30/Vacinação_Cofexpress.mp4"
-        },
-        {
           "id": "b30|Pediatria|Vacinação|Vacinação",
           "title": "Vacinação",
           "type": "complete",
-          "relativePath": "Bloco 30/Vacinação.mp4",
+          "relativePath": "Bloco 30/02 - Pediatria/02 - Vacinação/Vacinação.mp4",
           "extension": ".mp4",
           "size": 507489338,
           "onlinePath": "Bloco 30/Vacinação.mp4"
+        },
+        {
+          "id": "b30|Pediatria|Vacinação|Vacinação_Cofexpress",
+          "title": "Vacinação_Cofexpress",
+          "type": "express",
+          "relativePath": "Bloco 30/02 - Pediatria/02 - Vacinação/Vacinação_Cofexpress.mp4",
+          "extension": ".mp4",
+          "size": 44422657,
+          "onlinePath": "Bloco 30/Vacinação_Cofexpress.mp4"
         }
       ]
     },
@@ -5769,34 +5741,33 @@
       "area": "Pediatria",
       "title": "Reanimação Neonatal",
       "folderOrder": 3,
-      "scheduleOrder": 3,
       "videos": [
         {
           "id": "b30|Pediatria|Reanimação Neonatal|Reanimação neonatal - Novas diretrizes de reanimação neonatal",
           "title": "Reanimação neonatal - Novas diretrizes de reanimação neonatal",
           "type": "complete",
-          "relativePath": "Bloco 30/Reanimação neonatal - Novas diretrizes de reanimação neonatal.mp4",
+          "relativePath": "Bloco 30/02 - Pediatria/03 - Reanimação Neonatal/Reanimação neonatal - Novas diretrizes de reanimação neonatal.mp4",
           "extension": ".mp4",
           "size": 155293095,
           "onlinePath": "Bloco 30/Reanimação neonatal - Novas diretrizes de reanimação neonatal.mp4"
         },
         {
-          "id": "b30|Pediatria|Reanimação Neonatal|Reanimação Neonatal_Cofexpress",
-          "title": "Reanimação Neonatal_Cofexpress",
-          "type": "express",
-          "relativePath": "Bloco 30/Reanimação Neonatal_Cofexpress.mp4",
-          "extension": ".mp4",
-          "size": 27948150,
-          "onlinePath": "Bloco 30/Reanimação Neonatal_Cofexpress.mp4"
-        },
-        {
           "id": "b30|Pediatria|Reanimação Neonatal|Reanimação Neonatal",
           "title": "Reanimação Neonatal",
           "type": "complete",
-          "relativePath": "Bloco 30/Reanimação Neonatal.mp4",
+          "relativePath": "Bloco 30/02 - Pediatria/03 - Reanimação Neonatal/Reanimação Neonatal.mp4",
           "extension": ".mp4",
           "size": 209038896,
           "onlinePath": "Bloco 30/Reanimação Neonatal.mp4"
+        },
+        {
+          "id": "b30|Pediatria|Reanimação Neonatal|Reanimação Neonatal_Cofexpress",
+          "title": "Reanimação Neonatal_Cofexpress",
+          "type": "express",
+          "relativePath": "Bloco 30/02 - Pediatria/03 - Reanimação Neonatal/Reanimação Neonatal_Cofexpress.mp4",
+          "extension": ".mp4",
+          "size": 27948150,
+          "onlinePath": "Bloco 30/Reanimação Neonatal_Cofexpress.mp4"
         }
       ]
     },
@@ -5804,15 +5775,14 @@
       "id": "b30|cirurgia|cabeca e pescoco para o enamed",
       "block": 30,
       "area": "Cirurgia",
-      "title": "Cabeça e pescoço para o ENAMED",
+      "title": "Cabeça e Pescoço para o ENAMED",
       "folderOrder": 4,
-      "scheduleOrder": 4,
       "videos": [
         {
           "id": "b30|Cirurgia|Cabeça e pescoço para o ENAMED|Cabeça e pescoço para ENAMED",
           "title": "Cabeça e pescoço para ENAMED",
           "type": "complete",
-          "relativePath": "Bloco 30/Cabeça e pescoço para ENAMED.mp4",
+          "relativePath": "Bloco 30/03 - Cirurgia/04 - Cabeça e Pescoço para o ENAMED/Cabeça e pescoço para ENAMED.mp4",
           "extension": ".mp4",
           "size": 565981955,
           "onlinePath": "Bloco 30/Cabeça e pescoço para ENAMED.mp4"
@@ -5821,7 +5791,7 @@
           "id": "b30|Cirurgia|Cabeça e pescoço para o ENAMED|Cabeça e Pescoço_COFEXPRESS",
           "title": "Cabeça e Pescoço_COFEXPRESS",
           "type": "express",
-          "relativePath": "Bloco 30/Cabeça e Pescoço_COFEXPRESS.mp4",
+          "relativePath": "Bloco 30/03 - Cirurgia/04 - Cabeça e Pescoço para o ENAMED/Cabeça e Pescoço_COFEXPRESS.mp4",
           "extension": ".mp4",
           "size": 112228636,
           "onlinePath": "Bloco 30/Cabeça e Pescoço_COFEXPRESS.mp4"
@@ -5834,13 +5804,12 @@
       "area": "Cirurgia",
       "title": "Encerramento Cirurgia ENAMED",
       "folderOrder": 5,
-      "scheduleOrder": 5,
       "videos": [
         {
           "id": "b30|Cirurgia|Encerramento Cirurgia ENAMED|Encerramento Cirurgia ENAMED",
           "title": "Encerramento Cirurgia ENAMED",
           "type": "complete",
-          "relativePath": "Bloco 30/Encerramento Cirurgia ENAMED.mp4",
+          "relativePath": "Bloco 30/03 - Cirurgia/05 - Encerramento Cirurgia ENAMED/Encerramento Cirurgia ENAMED.mp4",
           "extension": ".mp4",
           "size": 21161840,
           "onlinePath": "Bloco 30/Encerramento Cirurgia ENAMED.mp4"
@@ -5851,27 +5820,26 @@
       "id": "b30|clinica medica|alergologia reacoes de hipersensibilidade rinite e angioedema",
       "block": 30,
       "area": "Clínica Médica",
-      "title": "Alergologia: reações de hipersensibilidade, rinite e angioedema",
+      "title": "Alergologia - reações de hipersensibilidade, rinite e angioedema",
       "folderOrder": 6,
-      "scheduleOrder": 6,
       "videos": [
-        {
-          "id": "b30|Clínica Médica|Alergologia: reações de hipersensibilidade, rinite e angioedema|Alergologia_ reações de hipersensibilidade, rinite e angioedema_Cofexpress",
-          "title": "Alergologia_ reações de hipersensibilidade, rinite e angioedema_Cofexpress",
-          "type": "express",
-          "relativePath": "Bloco 30/Alergologia_ reações de hipersensibilidade, rinite e angioedema_Cofexpress.mp4",
-          "extension": ".mp4",
-          "size": 157205386,
-          "onlinePath": "Bloco 30/Alergologia_ reações de hipersensibilidade, rinite e angioedema_Cofexpress.mp4"
-        },
         {
           "id": "b30|Clínica Médica|Alergologia: reações de hipersensibilidade, rinite e angioedema|Alergologia_ reações de hipersensibilidade, rinite e angioedema",
           "title": "Alergologia_ reações de hipersensibilidade, rinite e angioedema",
           "type": "complete",
-          "relativePath": "Bloco 30/Alergologia_ reações de hipersensibilidade, rinite e angioedema.mp4",
+          "relativePath": "Bloco 30/04 - Clínica Médica/06 - Alergologia - reações de hipersensibilidade, rinite e angioedema/Alergologia_ reações de hipersensibilidade, rinite e angioedema.mp4",
           "extension": ".mp4",
           "size": 355707274,
           "onlinePath": "Bloco 30/Alergologia_ reações de hipersensibilidade, rinite e angioedema.mp4"
+        },
+        {
+          "id": "b30|Clínica Médica|Alergologia: reações de hipersensibilidade, rinite e angioedema|Alergologia_ reações de hipersensibilidade, rinite e angioedema_Cofexpress",
+          "title": "Alergologia_ reações de hipersensibilidade, rinite e angioedema_Cofexpress",
+          "type": "express",
+          "relativePath": "Bloco 30/04 - Clínica Médica/06 - Alergologia - reações de hipersensibilidade, rinite e angioedema/Alergologia_ reações de hipersensibilidade, rinite e angioedema_Cofexpress.mp4",
+          "extension": ".mp4",
+          "size": 157205386,
+          "onlinePath": "Bloco 30/Alergologia_ reações de hipersensibilidade, rinite e angioedema_Cofexpress.mp4"
         }
       ]
     },
@@ -5879,36 +5847,35 @@
       "id": "b30|clinica medica|sepse anafilaxia e outros choques",
       "block": 30,
       "area": "Clínica Médica",
-      "title": "Sepse, anafilaxia e outros choques",
+      "title": "Sepse, Anafilaxia e Outros Choques",
       "folderOrder": 7,
-      "scheduleOrder": 7,
       "videos": [
         {
           "id": "b30|Clínica Médica|Sepse, anafilaxia e outros choques|Sepse, anafilaxia e outros choques - Atualização do SCC 2026",
           "title": "Sepse, anafilaxia e outros choques - Atualização do SCC 2026",
           "type": "complete",
-          "relativePath": "Bloco 30/Sepse, anafilaxia e outros choques - Atualização do SCC 2026.mp4",
+          "relativePath": "Bloco 30/04 - Clínica Médica/07 - Sepse, Anafilaxia e Outros Choques/Sepse, anafilaxia e outros choques - Atualização do SCC 2026.mp4",
           "extension": ".mp4",
           "size": 197329098,
           "onlinePath": "Bloco 30/Sepse, anafilaxia e outros choques - Atualização do SCC 2026.mp4"
         },
         {
-          "id": "b30|Clínica Médica|Sepse, anafilaxia e outros choques|Sepse, anafilaxia e outros choques_Cofexpress",
-          "title": "Sepse, anafilaxia e outros choques_Cofexpress",
-          "type": "express",
-          "relativePath": "Bloco 30/Sepse, anafilaxia e outros choques_Cofexpress.mp4",
-          "extension": ".mp4",
-          "size": 114564334,
-          "onlinePath": "Bloco 30/Sepse, anafilaxia e outros choques_Cofexpress.mp4"
-        },
-        {
           "id": "b30|Clínica Médica|Sepse, anafilaxia e outros choques|Sepse, anafilaxia e outros choques",
           "title": "Sepse, anafilaxia e outros choques",
           "type": "complete",
-          "relativePath": "Bloco 30/Sepse, anafilaxia e outros choques.mp4",
+          "relativePath": "Bloco 30/04 - Clínica Médica/07 - Sepse, Anafilaxia e Outros Choques/Sepse, anafilaxia e outros choques.mp4",
           "extension": ".mp4",
           "size": 478693426,
           "onlinePath": "Bloco 30/Sepse, anafilaxia e outros choques.mp4"
+        },
+        {
+          "id": "b30|Clínica Médica|Sepse, anafilaxia e outros choques|Sepse, anafilaxia e outros choques_Cofexpress",
+          "title": "Sepse, anafilaxia e outros choques_Cofexpress",
+          "type": "express",
+          "relativePath": "Bloco 30/04 - Clínica Médica/07 - Sepse, Anafilaxia e Outros Choques/Sepse, anafilaxia e outros choques_Cofexpress.mp4",
+          "extension": ".mp4",
+          "size": 114564334,
+          "onlinePath": "Bloco 30/Sepse, anafilaxia e outros choques_Cofexpress.mp4"
         }
       ]
     },
@@ -5918,25 +5885,24 @@
       "area": "Clínica Médica",
       "title": "Adrenal e Cushing",
       "folderOrder": 8,
-      "scheduleOrder": 8,
       "videos": [
-        {
-          "id": "b30|Clínica Médica|Adrenal e Cushing|Adrenal e Cushing_Cofexpress",
-          "title": "Adrenal e Cushing_Cofexpress",
-          "type": "express",
-          "relativePath": "Bloco 30/Adrenal e Cushing_Cofexpress.mp4",
-          "extension": ".mp4",
-          "size": 79099389,
-          "onlinePath": "Bloco 30/Adrenal e Cushing_Cofexpress.mp4"
-        },
         {
           "id": "b30|Clínica Médica|Adrenal e Cushing|Adrenal e Cushing",
           "title": "Adrenal e Cushing",
           "type": "complete",
-          "relativePath": "Bloco 30/Adrenal e Cushing.mp4",
+          "relativePath": "Bloco 30/04 - Clínica Médica/08 - Adrenal e Cushing/Adrenal e Cushing.mp4",
           "extension": ".mp4",
           "size": 344267054,
           "onlinePath": "Bloco 30/Adrenal e Cushing.mp4"
+        },
+        {
+          "id": "b30|Clínica Médica|Adrenal e Cushing|Adrenal e Cushing_Cofexpress",
+          "title": "Adrenal e Cushing_Cofexpress",
+          "type": "express",
+          "relativePath": "Bloco 30/04 - Clínica Médica/08 - Adrenal e Cushing/Adrenal e Cushing_Cofexpress.mp4",
+          "extension": ".mp4",
+          "size": 79099389,
+          "onlinePath": "Bloco 30/Adrenal e Cushing_Cofexpress.mp4"
         }
       ]
     }
@@ -5944,7 +5910,7 @@
   "r2": {
     "remote": "cloudflare:enamed-videos",
     "prefix": "video_library/media/",
-    "reconciledAt": "2026-09-27T03:28:45.167Z",
+    "reconciledAt": "2026-09-27T10:19:14.320Z",
     "availableVideos": 444
   }
 }

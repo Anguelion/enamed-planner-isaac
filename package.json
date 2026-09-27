@@ -17,6 +17,8 @@
     "questions:import-apkg": "python scripts/import-anki-apkg.py",
     "questions:enrich": "node scripts/enrich-anki-questions.js",
     "videos:remux": "node scripts/remux-ts-videos.js \"E:\\MedCof 2026\" --blocks=26-30",
+    "videos:organize:check": "pwsh -NoProfile -File scripts/organize-final-block-videos.ps1",
+    "videos:organize": "pwsh -NoProfile -File scripts/organize-final-block-videos.ps1 -Apply -DeleteTs",
     "videos:catalog": "node scripts/build-video-catalog.js \"E:\\MedCof 2026\"",
     "videos:r2:reconcile": "node scripts/reconcile-r2-video-catalog.js --write",
     "offline:sync": "node scripts/sync-offline-entry.js",
