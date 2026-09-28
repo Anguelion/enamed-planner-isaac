@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T21:25:01.599Z",
+  "generatedAt": "2026-09-28T14:05:38.199Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
@@ -7,14 +7,14 @@
   "changed": 6,
   "results": [
     {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-7a9e468c13b5694d",
-      "number": "1039b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-8db07e1438dfe0be",
+      "number": "1028c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-submetido22b172b5c9/",
-      "sourceQuestionId": "4000032194",
-      "matchedAt": "2026-09-27T21:25:02.610Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Olivia-4-anos-idade9078c91cbb/",
+      "sourceQuestionId": "4000120099",
+      "matchedAt": "2026-09-28T14:05:39.912Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -27,159 +27,55 @@
         "Clínica Médica",
         "Hematologia",
         "Hemostasia",
-        "Hemostasia Secundária",
-        "Fármacos e agentes relacionados a hemostasia secundária",
-        "Heparinas",
-        "Heparina não fracionada"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Heparina não fracionada. Conduta/resposta: Sua maior afinidade por proteínas plasmáticas lhe confere maior biodisponibilidade e maior meia-vida plasmática",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/paciente-submetido22b172b5c9/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-01ae6cee0ed07750",
-      "number": "1040b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/warfarina-e34ad6e863a/",
-      "sourceQuestionId": "4000021900",
-      "matchedAt": "2026-09-27T21:25:08.468Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Hemostasia Secundária",
-        "Fármacos e agentes relacionados a hemostasia secundária",
-        "Anticoagulantes antagonistas da vitamina K"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Anticoagulantes antagonistas da vitamina K. Conduta/resposta: 2,0 e 3,0",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/warfarina-e34ad6e863a/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-b9e37d9739028124",
-      "number": "1024c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Idosa-65-anos699a4b957c/",
-      "sourceQuestionId": "4000133695",
-      "matchedAt": "2026-09-27T21:25:14.212Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Pediatria",
-        "Reumatologia Pediátrica",
-        "Púrpura de Henoch-Schöinlein/Vasculite por IgA",
-        "Clínica Médica",
-        "Reumatologia",
-        "Vasculites",
-        "Vasculites de pequenos vasos",
-        "Vasculite por IgA ou púrpura de Henoch-Schönlein (PHS)",
-        "Hematologia",
-        "Hemostasia",
         "Hemostasia primária",
-        "Púrpura trombocitopênica imunológica (PTI)"
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Púrpura trombocitopênica imunológica (PTI). Conduta/resposta: púrpura trombocitopênica imune / observação clínica .",
+      "comment": "Gabarito confirmado: D. Assunto: Diagnóstico da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: Púrpura trombocitopênica imune.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Idosa-65-anos699a4b957c/"
+        "https://med.estrategia.com/public/questoes/Olivia-4-anos-idade9078c91cbb/"
       ]
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-0395331bb71dedbd",
-      "number": "1025c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-933fc5b26ea3db25",
+      "number": "1029c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-seis-anos61e7988dd7/",
-      "sourceQuestionId": "4000132852",
-      "matchedAt": "2026-09-27T21:25:20.255Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Joa-7-anos-idade-foi810e787e18/",
+      "sourceQuestionId": "4000120093",
+      "matchedAt": "2026-09-28T14:05:46.444Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
+      "localAnswer": "A",
+      "remoteAnswer": "A",
       "answerMismatch": false,
       "tags": [
-        "Pediatria",
         "Clínica Médica",
         "Hematologia",
         "Hemostasia",
         "Hemostasia primária",
-        "Púrpura trombocitopênica imunológica (PTI)"
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Tratamento da púrpura trombocitopênica imunológica (PTI)"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Púrpura trombocitopênica imunológica (PTI). Conduta/resposta: O uso de corticoide é uma opção terapêutica nessa situação, visto que o caso do paciente é sugestivo de trombocitopenia imune.",
+      "comment": "Gabarito confirmado: A. Assunto: Tratamento da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: Conduta expectante.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-seis-anos61e7988dd7/",
-        "https://med.estrategia.com/public/questoes/5ca5ba068fb39b57a7a0e02b/"
+        "https://med.estrategia.com/public/questoes/Joa-7-anos-idade-foi810e787e18/",
+        "https://med.estrategia.com/public/questoes/pre-escolar-com-6-anos121b7fc1099/"
       ]
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-41506a9b7324f4c3",
-      "number": "1026c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-bbe71c47079a91dd",
+      "number": "1030c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-19-anos597be62cd1/",
-      "sourceQuestionId": "4000128410",
-      "matchedAt": "2026-09-27T21:25:26.008Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Reumatologia",
-        "Diagnóstico diferencial das artropatias",
-        "Avaliação dos pacientes com monoartrite",
-        "Doenças sistêmicas com manifestações reumatológicas",
-        "Artropatias associadas a doenças hematológicas",
-        "Hemofilia",
-        "Hematologia",
-        "Hemostasia",
-        "Hemostasia Secundária",
-        "Principais doenças",
-        "Diagnóstico",
-        "Tratamento"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Tratamento. Conduta/resposta: O uso de Prednisona está indicado para efeito anti-inflamatório",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-19-anos597be62cd1/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-acbd8b872ce5e5d5",
-      "number": "1027c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-51a-procedente80ce3effd2/",
-      "sourceQuestionId": "4000130278",
-      "matchedAt": "2026-09-27T21:25:31.959Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-45-anos-com1239eec913c/",
+      "sourceQuestionId": "4000083830",
+      "matchedAt": "2026-09-28T14:05:52.622Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -194,12 +90,114 @@
         "Hemostasia",
         "Hemostasia primária",
         "Púrpura trombocitopênica imunológica (PTI)",
-        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)"
+        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)",
+        "Tratamento da púrpura trombocitopênica imunológica (PTI)"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Diagnóstico da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: Púrpura trombocitopênica imune.",
+      "comment": "Gabarito confirmado: B. Assunto: Tratamento da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: púrpura trombocitopênica imune / iniciar corticoide",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-51a-procedente80ce3effd2/",
-        "https://med.estrategia.com/public/questoes/Mulher-51a-procura83d798d276/"
+        "https://med.estrategia.com/public/questoes/Mulher-45-anos-com1239eec913c/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-62f7fd03d280a9df",
+      "number": "1031c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/jovem-20-anos-cehga662b731508/",
+      "sourceQuestionId": "4000059006",
+      "matchedAt": "2026-09-28T14:05:59.897Z",
+      "similarity": {
+        "stem": 0.9719626168224299,
+        "options": 1,
+        "combined": 0.9803738317757009
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)",
+        "Tratamento da púrpura trombocitopênica imunológica (PTI)"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Tratamento da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: Prednisona",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/jovem-20-anos-idade8079df9f3f/",
+        "https://med.estrategia.com/public/questoes/jovem-20-anos-cehga662b731508/",
+        "https://med.estrategia.com/public/questoes/paciente-com-20-anos166d3c83943/",
+        "https://med.estrategia.com/public/questoes/jovem-20-anos-vitima693b093242/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-3d0915e00f3d2c7d",
+      "number": "1032c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/purpura1060922995/",
+      "sourceQuestionId": "4000054664",
+      "matchedAt": "2026-09-28T14:06:05.948Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Introdução à púrpura trombocitopênica imunológica (PTI)",
+        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)",
+        "Classificação da púrpura trombocitopênica imunológica (PTI)",
+        "Tratamento da púrpura trombocitopênica imunológica (PTI)"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Tratamento da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: Em mulheres gestantes com PTI, a via de parto preferencial é a cesariana pelo risco de sangramento de sistema nervoso central no feto.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/purpura1060922995/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-83f355139218b9a4",
+      "number": "1033c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/situacoes-seguir-que22621f53cb/",
+      "sourceQuestionId": "4000051384",
+      "matchedAt": "2026-09-28T14:06:12.755Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Introdução à púrpura trombocitopênica imunológica (PTI)",
+        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)",
+        "Classificação da púrpura trombocitopênica imunológica (PTI)",
+        "Tratamento da púrpura trombocitopênica imunológica (PTI)"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Tratamento da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: Diagnóstico de PTI há 6 meses, contagem plaquetária de mais de 50.000/mm³ e ausência de sangramentos.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/situacoes-seguir-que22621f53cb/",
+        "https://med.estrategia.com/public/questoes/que-situaca-especifica12c9265289/",
+        "https://med.estrategia.com/public/questoes/colecistectomia-e-3a223e4a0449/"
       ]
     }
   ]

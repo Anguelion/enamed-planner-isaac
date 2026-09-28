@@ -4580,7 +4580,67 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-51a-procedente80ce3effd2/",
       "localAnswer": "B",
       "remoteAnswer": "B"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-8db07e1438dfe0be": {
+      "number": "1028c",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-28T14:05:39.913Z",
+      "nextAttemptAt": "2026-10-05T14:05:39.913Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Olivia-4-anos-idade9078c91cbb/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-933fc5b26ea3db25": {
+      "number": "1029c",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-28T14:05:46.445Z",
+      "nextAttemptAt": "2026-10-05T14:05:46.445Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Joa-7-anos-idade-foi810e787e18/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-bbe71c47079a91dd": {
+      "number": "1030c",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-28T14:05:52.622Z",
+      "nextAttemptAt": "2026-10-05T14:05:52.622Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-45-anos-com1239eec913c/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-62f7fd03d280a9df": {
+      "number": "1031c",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-28T14:05:59.897Z",
+      "nextAttemptAt": "2026-10-05T14:05:59.897Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/jovem-20-anos-cehga662b731508/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-3d0915e00f3d2c7d": {
+      "number": "1032c",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-28T14:06:05.949Z",
+      "nextAttemptAt": "2026-10-05T14:06:05.949Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/purpura1060922995/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-83f355139218b9a4": {
+      "number": "1033c",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-28T14:06:12.755Z",
+      "nextAttemptAt": "2026-10-05T14:06:12.755Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/situacoes-seguir-que22621f53cb/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     }
   },
-  "updatedAt": "2026-09-27T21:25:31.959Z"
+  "updatedAt": "2026-09-28T14:06:12.755Z"
 }
