@@ -4640,7 +4640,67 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/situacoes-seguir-que22621f53cb/",
       "localAnswer": "D",
       "remoteAnswer": "D"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-17d225ef0c157481": {
+      "number": "1034c",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-28T23:20:33.969Z",
+      "nextAttemptAt": "2026-10-05T23:20:33.969Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/JBS-29-anos-G2P1125373015f5/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-e11cad87e136fb22": {
+      "number": "1035c",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-28T23:20:39.338Z",
+      "nextAttemptAt": "2026-10-05T23:20:39.338Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-8e0964b7446f03ae": {
+      "number": "1036c",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-28T23:20:44.616Z",
+      "nextAttemptAt": "2026-10-05T23:20:44.616Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-5cc56a97ca7471fe": {
+      "number": "1037c",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-28T23:20:49.950Z",
+      "nextAttemptAt": "2026-10-05T23:20:49.950Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-94d2981b7bbc52ee": {
+      "number": "1038c",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-28T23:20:55.250Z",
+      "nextAttemptAt": "2026-10-05T23:20:55.250Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-d44b28c565909beb": {
+      "number": "1039c",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-28T23:21:00.515Z",
+      "nextAttemptAt": "2026-10-05T23:21:00.515Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-09-28T14:06:12.755Z"
+  "updatedAt": "2026-09-28T23:21:00.515Z"
 }

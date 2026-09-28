@@ -1374,10 +1374,30 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Reumatologia",
+        "Doenças autoimunes do tecido conjuntivo",
+        "Síndrome antifosfolípide (SAF)",
+        "Diagnóstico",
+        "Tratamento",
+        "Hemostasia",
+        "Trombofilia",
+        "Principais trombofilias adquiridas",
+        "Síndrome do anticorpo anti-fosfolipídeo (SAAF)",
+        "Diagnóstico da síndrome do anticorpo anti-fosfolipídeo (SAAF)",
+        "Tratamento da síndrome do anticorpo anti-fosfolipídeo (SAAF)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069422",
-      "ankiGuid": "z#3~g0|Xvb"
+      "ankiGuid": "z#3~g0|Xvb",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/JBS-29-anos-G2P1125373015f5/",
+        "sourceQuestionId": "4000050711",
+        "matchedAt": "2026-09-28T23:20:33.967Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-e11cad87e136fb22",
