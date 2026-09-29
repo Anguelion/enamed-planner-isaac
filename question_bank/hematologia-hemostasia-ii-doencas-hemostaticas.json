@@ -1660,10 +1660,27 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Laboratório da hemostasia",
+        "Hemostasia Secundária",
+        "Principais doenças",
+        "Hemofilia",
+        "Hemostasia primária",
+        "Alterações qualitativas das plaquetas",
+        "Doença de von Willebrand",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069430",
-      "ankiGuid": "zP]pc;m34S"
+      "ankiGuid": "zP]pc;m34S",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/jovem-20-anos-procura65f4164459/",
+        "sourceQuestionId": "4000068810",
+        "matchedAt": "2026-09-29T22:21:29.113Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-eec0cbf6d779b084",
@@ -1694,10 +1711,22 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Trombofilia",
+        "Principais trombofilias hereditárias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069431",
-      "ankiGuid": "LFrU*8RA2I"
+      "ankiGuid": "LFrU*8RA2I",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-e-causa-mais13861ef12e/",
+        "sourceQuestionId": "4000054386",
+        "matchedAt": "2026-09-29T22:21:34.989Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-7c6372f38d5f3ae2",
@@ -1728,10 +1757,27 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Reumatologia",
+        "Doenças autoimunes do tecido conjuntivo",
+        "Síndrome antifosfolípide (SAF)",
+        "Manifestações clínicas",
+        "Hemostasia",
+        "Trombofilia",
+        "Principais trombofilias adquiridas",
+        "Síndrome do anticorpo anti-fosfolipídeo (SAAF)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069432",
-      "ankiGuid": "B)d%EC?P/e"
+      "ankiGuid": "B)d%EC?P/e",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-manifestacoes7d6b387be/",
+        "sourceQuestionId": "4000052426",
+        "matchedAt": "2026-09-29T22:21:41.348Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-3d999be5410d07b2",

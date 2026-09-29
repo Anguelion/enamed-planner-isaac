@@ -4223,33 +4223,33 @@
     },
     "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-cfe1c7799ccffc07": {
       "number": "1060b",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-22T21:24:28.602Z",
-      "nextAttemptAt": "2026-09-29T21:24:28.602Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-09-29T22:21:09.991Z",
+      "nextAttemptAt": "2026-10-13T22:21:09.991Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-65-anos93d43627d4/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-908ea652ff76d6f8": {
       "number": "1061b",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-22T21:24:34.114Z",
-      "nextAttemptAt": "2026-09-29T21:24:34.114Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-09-29T22:21:16.643Z",
+      "nextAttemptAt": "2026-10-13T22:21:16.643Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-45-anos88d4ffd884/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
     },
     "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-735e5aaa02a81e88": {
       "number": "1062b",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-22T21:24:39.568Z",
-      "nextAttemptAt": "2026-09-29T21:24:39.568Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-09-29T22:21:22.682Z",
+      "nextAttemptAt": "2026-10-13T22:21:22.682Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/trombocitopenia133bef58cd/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     },
     "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-8b4a94c84f8f5c35": {
       "number": "1063b",
@@ -4720,7 +4720,37 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-f2c832dd7cebb355": {
+      "number": "1042c",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-29T22:21:29.114Z",
+      "nextAttemptAt": "2026-10-06T22:21:29.114Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/jovem-20-anos-procura65f4164459/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-eec0cbf6d779b084": {
+      "number": "1043c",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-29T22:21:34.989Z",
+      "nextAttemptAt": "2026-10-06T22:21:34.989Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-e-causa-mais13861ef12e/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-7c6372f38d5f3ae2": {
+      "number": "1044c",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-29T22:21:41.348Z",
+      "nextAttemptAt": "2026-10-06T22:21:41.348Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-manifestacoes7d6b387be/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     }
   },
-  "updatedAt": "2026-09-29T13:01:16.531Z"
+  "updatedAt": "2026-09-29T22:21:41.348Z"
 }
