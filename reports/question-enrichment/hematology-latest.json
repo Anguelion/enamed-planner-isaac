@@ -1,84 +1,54 @@
 {
-  "generatedAt": "2026-09-28T23:20:31.930Z",
+  "generatedAt": "2026-09-29T13:00:48.641Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 1,
+  "changed": 0,
   "results": [
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-17d225ef0c157481",
-      "number": "1034c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/JBS-29-anos-G2P1125373015f5/",
-      "sourceQuestionId": "4000050711",
-      "matchedAt": "2026-09-28T23:20:33.967Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Reumatologia",
-        "Doenças autoimunes do tecido conjuntivo",
-        "Síndrome antifosfolípide (SAF)",
-        "Diagnóstico",
-        "Tratamento",
-        "Hematologia",
-        "Hemostasia",
-        "Trombofilia",
-        "Principais trombofilias adquiridas",
-        "Síndrome do anticorpo anti-fosfolipídeo (SAAF)",
-        "Diagnóstico da síndrome do anticorpo anti-fosfolipídeo (SAAF)",
-        "Tratamento da síndrome do anticorpo anti-fosfolipídeo (SAAF)"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Tratamento da síndrome do anticorpo anti-fosfolipídeo (SAAF). Conduta/resposta: A utilização do AAS durante a gestação, em caso de SAF confirmado, deve ser interrompida 2 semanas antes do parto, enquanto que a enoxaparina pode ser mantida até 24 horas antes do parto, sendo que ambos podem ser reintroduzidos de 8 a 12 horas no pós-parto.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/JBS-29-anos-G2P1125373015f5/",
-        "https://med.estrategia.com/public/questoes/Mulher-28-anos-G2P1999aeab0d9/"
-      ]
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-f027e7283c8a2a78",
+      "number": "1056b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-e11cad87e136fb22",
-      "number": "1035c",
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-a618108a8eae2c49",
+      "number": "1057b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-8ac742eff3bc306a",
+      "number": "1058b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-03aaa0aa7c6faf77",
+      "number": "1059b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-fe8ebf9684c016b1",
+      "number": "1040c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-8e0964b7446f03ae",
-      "number": "1036c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-5cc56a97ca7471fe",
-      "number": "1037c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-94d2981b7bbc52ee",
-      "number": "1038c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-d44b28c565909beb",
-      "number": "1039c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-6cc0438c3ec3a52b",
+      "number": "1041c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": false,
       "status": "not_found",
