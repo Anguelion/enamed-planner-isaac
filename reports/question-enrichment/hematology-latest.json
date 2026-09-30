@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-26T21:15:22.238Z",
+  "generatedAt": "2026-09-29T22:21:08.767Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
@@ -7,18 +7,18 @@
   "changed": 6,
   "results": [
     {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-a39a8db2d3f21247",
-      "number": "1027b",
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-cfe1c7799ccffc07",
+      "number": "1060b",
       "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-que-contem169161d47e/",
-      "sourceQuestionId": "4000104387",
-      "matchedAt": "2026-09-26T21:15:23.206Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-65-anos93d43627d4/",
+      "sourceQuestionId": "4000022758",
+      "matchedAt": "2026-09-29T22:21:09.989Z",
       "similarity": {
         "stem": 1,
-        "options": 0.8875,
-        "combined": 0.9662499999999999
+        "options": 0.95,
+        "combined": 0.9849999999999999
       },
       "localAnswer": "C",
       "remoteAnswer": "C",
@@ -27,120 +27,29 @@
         "Clínica Médica",
         "Hematologia",
         "Hemostasia",
+        "Hemostasia primária",
+        "Trombocitopenia induzida pela heparina (HIT)",
+        "Diagnóstico da trombocitopenia induzida pela heparina (HIT)",
+        "Tratamento da trombocitopenia induzida pela heparina (HIT)",
         "Hemostasia Secundária",
         "Fármacos e agentes relacionados a hemostasia secundária",
-        "Heparinas"
+        "Heparinas",
+        "Heparina baixo peso molecular"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Heparinas. Conduta/resposta: Plasma Fresco e Sulfato de Protamina",
+      "comment": "Gabarito confirmado: C. Assunto: Heparina baixo peso molecular. Conduta/resposta: Suspensão da enoxaparina.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/alternativa-que-contem169161d47e/"
+        "https://med.estrategia.com/public/questoes/paciente-65-anos93d43627d4/"
       ]
     },
     {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-3112a8b717d57734",
-      "number": "1028b",
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-908ea652ff76d6f8",
+      "number": "1061b",
       "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Com-aos6259b9704e/",
-      "sourceQuestionId": "4000064335",
-      "matchedAt": "2026-09-26T21:15:29.212Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Cardiologia",
-        "Valvopatias",
-        "Anticoagulação na doença orovalvar",
-        "Agentes anticoagulantes",
-        "Hematologia",
-        "Hemostasia",
-        "Hemostasia Secundária",
-        "Fármacos e agentes relacionados a hemostasia secundária",
-        "Anticoagulantes antagonistas da vitamina K",
-        "Anticoagulantes orais diretos"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Anticoagulantes orais diretos. Conduta/resposta: 3 – 2 – 1 – 2.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Com-aos6259b9704e/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-72332b1e2c353ed3",
-      "number": "1029b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Todos-fatores1336ee1495/",
-      "sourceQuestionId": "4000061138",
-      "matchedAt": "2026-09-26T21:15:35.386Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "E",
-      "remoteAnswer": "E",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Hemostasia Secundária",
-        "Outras alterações dos fatores e agentes da coagulação"
-      ],
-      "comment": "Gabarito confirmado: E. Assunto: Outras alterações dos fatores e agentes da coagulação. Conduta/resposta: Fator VIII.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Todos-fatores1336ee1495/",
-        "https://med.estrategia.com/public/questoes/Todos-fatores131349bbb7/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-99751df1d87239a1",
-      "number": "1030b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-35-anos-uso3212a10b8b/",
-      "sourceQuestionId": "4000052109",
-      "matchedAt": "2026-09-26T21:15:41.567Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Hemostasia Secundária",
-        "Fármacos e agentes relacionados a hemostasia secundária",
-        "Anticoagulantes antagonistas da vitamina K"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Anticoagulantes antagonistas da vitamina K. Conduta/resposta: houve complicação do uso do cumarínico",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-35-anos-uso3212a10b8b/",
-        "https://med.estrategia.com/public/questoes/paciente-35-anos-idade667f6e70b9/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-291d1cec4ea74a45",
-      "number": "1031b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/J-K-L-67-anos-sexo63e09aa4e4/",
-      "sourceQuestionId": "4000033560",
-      "matchedAt": "2026-09-26T21:15:47.424Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-45-anos88d4ffd884/",
+      "sourceQuestionId": "4000008263",
+      "matchedAt": "2026-09-29T22:21:16.642Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -159,44 +68,139 @@
         "Tratamento da trombocitopenia induzida pela heparina (HIT)",
         "Hemostasia Secundária",
         "Fármacos e agentes relacionados a hemostasia secundária",
-        "Fondaparinux"
+        "Heparinas"
       ],
-      "comment": "Gabarito confirmado: A. Assunto: Fondaparinux. Conduta/resposta: Deve-se evitar o uso de fondaparinux (inibidor indireto de fator Xa).",
+      "comment": "Gabarito confirmado: A. Assunto: Heparinas. Conduta/resposta: Iniciar argatroban.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/J-K-L-67-anos-sexo63e09aa4e4/"
+        "https://med.estrategia.com/public/questoes/Paciente-45-anos88d4ffd884/",
+        "https://med.estrategia.com/public/questoes/homem-com-45-anos74d943f18b/"
       ]
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-3e132f88ca04763b",
-      "number": "1017c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-735e5aaa02a81e88",
+      "number": "1062b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Lactente-sexo11186c510c9/",
-      "sourceQuestionId": "4000165594",
-      "matchedAt": "2026-09-26T21:15:53.777Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/trombocitopenia133bef58cd/",
+      "sourceQuestionId": "4000045504",
+      "matchedAt": "2026-09-29T22:21:22.682Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
+      "localAnswer": "B",
+      "remoteAnswer": "B",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
         "Hemostasia",
+        "Hemostasia primária",
+        "Trombocitopenia induzida pela heparina (HIT)"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Trombocitopenia induzida pela heparina (HIT). Conduta/resposta: ocorre entre o quinto e décimo dias de tratamento e é decorrente de processo autoimune dependente de IgG.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/trombocitopenia133bef58cd/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-f2c832dd7cebb355",
+      "number": "1042c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/jovem-20-anos-procura65f4164459/",
+      "sourceQuestionId": "4000068810",
+      "matchedAt": "2026-09-29T22:21:29.113Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Laboratório da hemostasia",
         "Hemostasia Secundária",
         "Principais doenças",
         "Hemofilia",
-        "Tratamento"
+        "Hemostasia primária",
+        "Alterações qualitativas das plaquetas",
+        "Doença de von Willebrand"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Tratamento. Conduta/resposta: Administração de fator VIII (correção 100%); sedação e tomografia de crânio.",
+      "comment": "Gabarito confirmado: B. Assunto: Doença de von Willebrand. Conduta/resposta: Hemofilia A, hemofilia B e doença de von Willebrand.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Lactente-sexo11186c510c9/",
-        "https://med.estrategia.com/public/questoes/Lactente-sexo12548339845/",
-        "https://med.estrategia.com/public/questoes/Lactente-masculino-1185e5eb14dc/"
+        "https://med.estrategia.com/public/questoes/jovem-20-anos-procura65f4164459/",
+        "https://med.estrategia.com/public/questoes/jovem-20-anos-procura652b2ffa0a/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-eec0cbf6d779b084",
+      "number": "1043c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-e-causa-mais13861ef12e/",
+      "sourceQuestionId": "4000054386",
+      "matchedAt": "2026-09-29T22:21:34.989Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Trombofilia",
+        "Principais trombofilias hereditárias"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Principais trombofilias hereditárias. Conduta/resposta: Fator V de Leiden.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Qual-e-causa-mais13861ef12e/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-7c6372f38d5f3ae2",
+      "number": "1044c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-manifestacoes7d6b387be/",
+      "sourceQuestionId": "4000052426",
+      "matchedAt": "2026-09-29T22:21:41.348Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Reumatologia",
+        "Doenças autoimunes do tecido conjuntivo",
+        "Síndrome antifosfolípide (SAF)",
+        "Manifestações clínicas",
+        "Hematologia",
+        "Hemostasia",
+        "Trombofilia",
+        "Principais trombofilias adquiridas",
+        "Síndrome do anticorpo anti-fosfolipídeo (SAAF)"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Síndrome do anticorpo anti-fosfolipídeo (SAAF). Conduta/resposta: Ataque isquêmico transitório, livedo reticularis, vegetação de Liebman Sacks.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Sa-manifestacoes7d6b387be/"
       ]
     }
   ]
