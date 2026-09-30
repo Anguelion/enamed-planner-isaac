@@ -131,6 +131,7 @@ test('merge do cronograma preserva as datas oficiais locais e incorpora apenas o
 
 test('sincronização entre abas nunca reduz os contadores de uma aula concluída', () => {
   const ctx = loadPlannerSandbox();
+  ctx.render=()=>{};
   const state = ctx.__getState();
   state.schedule = [{ id:'bloco-10-aula', block:10, lessonOrder:1, topic:'Indicadores de Saúde', area:'Saúde Coletiva', manualQ:10, manualFC:10, hours:2 }];
   const staleTab = {

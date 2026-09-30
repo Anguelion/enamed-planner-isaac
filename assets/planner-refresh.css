@@ -1532,3 +1532,46 @@ body.dark #personalMobileLinks .personal-more-icon{background:#ffffff0d;box-shad
   .personal-compact *{scroll-behavior:auto;animation:none;transition:none}
   #personalMobileLinks .personal-more-link{transition:none}
 }
+
+/* A trilha ocupa o centro da barra; o estado de envio não desloca os controles. */
+.app-header{display:block;max-width:none}
+.header-inner{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:12px;overflow:visible}
+.header-leading{grid-column:1;min-width:0}
+.header-context{min-width:0}
+.header-context strong,.header-context span{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.header-center{grid-column:2;justify-self:center}
+.header-actions{grid-column:3;justify-self:end;width:auto;max-width:none;flex-wrap:nowrap;overflow:visible;padding-bottom:0}
+.sync-status{min-width:120px;justify-content:center;white-space:nowrap;flex-shrink:0}
+#sidebarBrandToggle{border:0;padding:0;font-family:inherit;font-size:inherit;cursor:pointer}
+#sidebarBrandToggle:focus-visible{outline:3px solid var(--primary);outline-offset:4px}
+body.sidebar-collapsed .sidebar-brand #sidebarToggle{display:none!important}
+@media(min-width:768px) and (max-width:1320px){
+  .header-actions .sync-status{min-width:38px;width:38px;padding:8px}
+  .header-actions #syncText{display:none}
+  .header-context span{display:none}
+}
+@media(min-width:768px) and (max-width:1024px){
+  #printBtn,#headerSendBtn,#headerReceiveBtn{display:none!important}
+}
+@media(max-width:767px){
+  .header-inner{grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:6px;padding-inline:10px}
+  .header-leading{display:none}
+  .header-center{grid-column:2;grid-row:1}
+  .header-actions{display:contents}
+  #personalMobileMenu{grid-column:1;grid-row:1;justify-self:start}
+  #syncStatus{grid-column:1;grid-row:1;justify-self:end;min-width:30px;width:30px;padding:6px;margin:0;background:transparent;border-color:transparent}
+  #syncText{display:none}
+  .header-center .daily-mission-trigger{width:auto;padding:0 10px;gap:5px;font-size:12px;white-space:nowrap}
+  .header-center .daily-mission-trigger span{display:inline}
+  #globalPomodoro{grid-column:3;grid-row:1;justify-self:start}
+  #headerLogoutBtn{grid-column:3;grid-row:1;justify-self:end}
+}
+@media(max-width:359px){
+  .header-inner{gap:4px;padding-inline:8px}
+  #personalMobileMenu summary{padding:8px;font-size:12px}
+  #syncStatus{min-width:24px;width:24px;padding:4px}
+  .header-center .daily-mission-trigger{padding-inline:8px;font-size:11px}
+  #globalPomodoro{width:36px;height:36px;min-width:36px}
+  .header-inner .pomodoro-fruit{width:36px;height:36px;min-width:36px}
+  #headerLogoutBtn{min-width:34px;width:34px;padding:6px}
+}

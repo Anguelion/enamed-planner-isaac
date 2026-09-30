@@ -29,5 +29,44 @@
     const age=Math.floor((parse(today)-parse(publishedAt))/86400000);
     return Number.isFinite(age)&&age>=0?age:null;
   }
-  return {STORAGE_KEY,defaults,navigation,read,write,editionAge};
+  function preserveSearchFields(document,ids){
+    const fields=ids.map(id=>{
+      const input=document.getElementById(id);
+      return input ? {id,input,focused:document.activeElement===input,start:input.selectionStart,end:input.selectionEnd,direction:input.selectionDirection} : null;
+    }).filter(Boolean);
+    return ()=>fields.forEach(({id,input,focused,start,end,direction})=>{
+      const replacement=document.getElementById(id);
+      if(!replacement || replacement===input) return;
+      // Reutilizar o campo mantém a composição de texto e os seus listeners.
+      if(input.value!==replacement.value) input.value=replacement.value;
+      replacement.replaceWith(input);
+      if(focused && input.isConnected && (!document.activeElement || document.activeElement===document.body || document.activeElement===replacement)) {
+        input.focus({preventScroll:true});
+        input.setSelectionRange(start,end,direction);
+      }
+    });
+  }
+  function bindLiveSearch(input,onValue,render,delay=180){
+    if(!input) return;
+    let timer=null;
+    let composing=false;
+    const update=()=>{
+      clearTimeout(timer);
+      const value=input.value;
+      onValue(value);
+      if(composing) return;
+      timer=setTimeout(()=>{
+        const view=input.closest('.view');
+        if(!input.isConnected || input.value!==value || (view && !view.classList.contains('active'))) return;
+        render();
+      },delay);
+    };
+    input.oncompositionstart=()=>{composing=true;clearTimeout(timer);};
+    input.oncompositionend=()=>{composing=false;update();};
+    input.oninput=event=>{
+      if(event.isComposing) {clearTimeout(timer);onValue(input.value);return;}
+      update();
+    };
+  }
+  return {STORAGE_KEY,defaults,navigation,read,write,editionAge,preserveSearchFields,bindLiveSearch};
 });

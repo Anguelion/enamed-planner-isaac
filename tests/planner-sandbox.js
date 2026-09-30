@@ -16,7 +16,7 @@ function makeElementStub() {
       if(prop === 'classList') return { toggle(){}, add(){}, remove(){}, contains(){ return false; } };
       if(prop === 'dataset') return {};
       if(prop === 'style') return {};
-      const noopMethods = ['addEventListener','removeEventListener','setAttribute','getAttribute','removeAttribute','appendChild','removeChild','append','remove','focus','blur','click','scrollIntoView','setSelectionRange'];
+      const noopMethods = ['addEventListener','removeEventListener','setAttribute','getAttribute','removeAttribute','appendChild','removeChild','append','remove','replaceWith','focus','blur','click','scrollIntoView','setSelectionRange'];
       if(noopMethods.includes(prop)) return () => {};
       if(prop === 'matches' || prop === 'closest') return () => false;
       if(prop === 'querySelector') return () => null;
@@ -36,7 +36,7 @@ function extractSeedJson(root) {
   return html.slice(start, end);
 }
 
-function loadPlannerSandbox({ origin = 'http://localhost:8766', initialState } = {}) {
+function loadPlannerSandbox({ origin = 'http://localhost:8766', initialState, supabaseClient } = {}) {
   const root = path.resolve(__dirname, '..');
   const seedJson = extractSeedJson(root);
   const storage = () => {
@@ -95,6 +95,7 @@ function loadPlannerSandbox({ origin = 'http://localhost:8766', initialState } =
   sandbox.window.addEventListener = () => {};
   sandbox.window.removeEventListener = () => {};
   sandbox.window.supabase = undefined;
+  if(supabaseClient) sandbox.window.__SOQUEROMED_SUPABASE_CLIENT__=supabaseClient;
   sandbox.window.matchMedia = () => ({ matches: false, addEventListener(){}, removeEventListener(){}, addListener(){}, removeListener(){} });
   sandbox.window.getComputedStyle = () => ({ getPropertyValue: () => '' });
   sandbox.window.scrollTo = () => {};

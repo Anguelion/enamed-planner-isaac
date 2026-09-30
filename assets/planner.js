@@ -199,7 +199,6 @@ let pomodoroAlarmInterval = null;
 let pomodoroPanelCloseTimer = null;
 let dailyMissionPanelCloseTimer = null;
 let questionSearchRenderTimer = null;
-let cadernoSearchRenderTimer = null;
 let pomodoro = loadPomodoroSession();
 let simuladoTimer = { interval: null, runId: '' };
 let motivationRefreshInterval = null;
@@ -324,14 +323,14 @@ function guardAgainstSilentProgressLoss() {
     }
   } catch(error) { console.warn('Falha ao checar queda de progresso:', error); }
 }
-function writeLocalState() {
+function writeLocalState({touch=true,stamp=localStateStampIso()}={}) {
   guardAgainstSilentProgressLoss();
-  touchSyncMetadata(state);
+  if(touch) touchSyncMetadata(state,stamp);
   const payload = JSON.stringify(state);
   for(let attempt = 0; attempt < 4; attempt += 1) {
     try {
       localStorage.setItem(activeStateStorageKey, payload);
-      localStorage.setItem(activeStateStampKey, localStateStampIso());
+      localStorage.setItem(activeStateStampKey, stamp);
       // Se a tentativa anterior tinha ficado marcada como "Sem espaço", a
       // recuperação (descartar backups antigos) já resolveu — o indicador não
       // deve continuar preso num erro que não existe mais. currentUser pode não
@@ -1318,9 +1317,13 @@ function setSyncStatus(text, kind='', fullText='') {
   const box = document.getElementById('syncStatus');
   const label = document.getElementById('syncText');
   if(!box || !label) return;
-  label.textContent = text;
-  box.title = `${fullText || text} · clique para detalhes`;
-  box.className = `sync-status ${kind}`;
+  const labelText=kind==='busy' ? 'Sincronizando' : text;
+  const title=`${fullText || text} · clique para detalhes`;
+  if(label.textContent!==labelText) label.textContent=labelText;
+  if(box.title!==title) box.title=title;
+  box.setAttribute('aria-label',title);
+  const className=`sync-status ${kind}`;
+  if(box.className!==className) box.className=className;
 }
 function showStudyToast(message) {
   document.querySelector('.study-toast')?.remove();
@@ -2161,22 +2164,37 @@ function isEditingTextField() {
 // A fusão existente já é monotônica para questões, flashcards manuais e horas;
 // aqui fazemos as abas convergirem antes que qualquer uma envie para a nuvem.
 let pendingCrossTabState = null;
-function applyCrossTabPlannerState(externalState) {
-  if(!externalState || typeof externalState !== 'object' || !Array.isArray(externalState.schedule)) return false;
-  const incomingPayload = JSON.stringify(externalState);
-  state = mergePlannerActivityState(externalState, state, true);
+function samePlannerContent(left,right) {
+  const equal=(a,b,root=false)=>{
+    if(a===b) return true;
+    if(!a || !b || typeof a!=='object' || typeof b!=='object' || Array.isArray(a)!==Array.isArray(b)) return false;
+    const keys=Object.keys(a).filter(key=>!root || key!=='syncMeta');
+    const otherKeys=Object.keys(b).filter(key=>!root || key!=='syncMeta');
+    return keys.length===otherKeys.length && keys.every(key=>Object.prototype.hasOwnProperty.call(b,key) && equal(a[key],b[key]));
+  };
+  return equal(left,right,true);
+}
+function normalizeSyncedPlannerState() {
   normalizeOfficialScheduleNames();
   ensureRestartFromBlockTwelve();
   ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress();
   if(officialSchedule.length) applyOfficialSchedule();
-  invalidateActivityRenderCache();
-  const recoveredLocalProgress = JSON.stringify(state) !== incomingPayload;
+}
+function applyCrossTabPlannerState(externalState) {
+  if(!externalState || typeof externalState !== 'object' || !Array.isArray(externalState.schedule)) return false;
+  const previousState=state;
+  const incomingState=mergePlannerActivityState(externalState,externalState,true);
+  state = mergePlannerActivityState(externalState, state, true);
+  normalizeSyncedPlannerState();
+  // Ordem de propriedades e identificação do aparelho não são novo estudo.
+  const recoveredLocalProgress=!samePlannerContent(state,incomingState);
+  const contentChanged=!samePlannerContent(state,previousState);
   if(recoveredLocalProgress) {
     writeLocalState();
     if(currentUser && sbClient && CLOUD_SYNC_ALLOWED) scheduleCloudSave({immediate:true});
   }
-  render();
-  setSyncStatus(recoveredLocalProgress ? 'Pendente' : 'Atualizado', recoveredLocalProgress ? 'busy' : 'online', recoveredLocalProgress ? 'Progresso de outra aba preservado e aguardando envio' : 'Abas sincronizadas');
+  if(contentChanged) {invalidateActivityRenderCache();render();}
+  if(contentChanged || recoveredLocalProgress) setSyncStatus(recoveredLocalProgress ? 'Pendente' : 'Atualizado', recoveredLocalProgress ? 'busy' : 'online', recoveredLocalProgress ? 'Progresso de outra aba preservado e aguardando envio' : 'Abas sincronizadas');
   return recoveredLocalProgress;
 }
 window.addEventListener('storage', event => {
@@ -2189,9 +2207,12 @@ window.addEventListener('storage', event => {
 });
 document.addEventListener('focusout', () => {
   if(!pendingCrossTabState) return;
-  const externalState = pendingCrossTabState;
-  pendingCrossTabState = null;
-  setTimeout(() => applyCrossTabPlannerState(externalState), 0);
+  setTimeout(() => {
+    if(isEditingTextField() || !pendingCrossTabState) return;
+    const externalState=pendingCrossTabState;
+    pendingCrossTabState=null;
+    applyCrossTabPlannerState(externalState);
+  },0);
 });
 async function pullCloudState({ firstLogin=false }={}) {
   if(!currentUser || !CLOUD_SYNC_ALLOWED) return;
@@ -2232,25 +2253,25 @@ async function pullCloudState({ firstLogin=false }={}) {
       const hasSignificantTimestampDrift = remoteAt && Math.abs(remoteAt - Date.now()) > 60000;
       if(hasSignificantTimestampDrift) recordSyncConflict('Significant clock drift detected');
       recordSyncTelemetry('merge', false);
+      const previousState=state;
+      const incomingState=mergePlannerActivityState(data.data,data.data,true);
       state = mergePlannerActivityState(data.data, state, localIsAhead);
       recordSyncTelemetry('pull', false);
-      cloudDirty = localIsAhead;
       lastCloudSyncAt = remoteAt || Date.now();
-      normalizeOfficialScheduleNames();
-      ensureRestartFromBlockTwelve();
-      ensureDayLogs(); ensureDailyTasks(); ensureSimTopics(); ensureFeynman(); ensureQuestionProgress();
-      invalidateActivityRenderCache();
       // A nuvem pode conter uma versao anterior sem a ordem bloco.aula.
       // Reaplica o cronograma oficial antes de exibir ou reenviar o estado.
-      if(officialSchedule.length) applyOfficialSchedule();
-      writeLocalState();
+      normalizeSyncedPlannerState();
+      const recoveredLocalProgress=!samePlannerContent(state,incomingState);
+      cloudDirty=recoveredLocalProgress;
+      if(recoveredLocalProgress) writeLocalState();
+      else writeLocalState({touch:false,stamp:new Date(lastCloudSyncAt).toISOString()});
       if(firstLogin && state.videoPlayer?.lastOpen?.lessonId) {
         ui.videoLessonId = '';
         ui.videoSourceId = '';
       }
-      render();
-      scheduleCloudSave();
-      setSyncStatus('Sincronizado', 'online', 'Dados atualizados');
+      if(firstLogin || !samePlannerContent(state,previousState)) {invalidateActivityRenderCache();render();}
+      if(recoveredLocalProgress) scheduleCloudSave();
+      else setSyncStatus('Sincronizado', 'online', 'Dados atualizados');
     } else if(firstLogin) {
       await pushCloudState();
     } else {
@@ -3203,13 +3224,15 @@ function repairDailyActivityData() {
     if(date) reviewsByDate.set(date, n(reviewsByDate.get(date)) + 1);
   });
   // Do not carry accumulated totals into the current or a future study day.
+  let changed=false;
   state.dayLogs.filter(log => log.date >= today).forEach(log => {
     const automatic = n(reviewsByDate.get(log.date));
     const manual = n(log.manualFlashcards);
+    if(log.flashcards!==automatic+manual || log.flashcardsOn!==(automatic+manual>0 || n(log.flashcardMinutes)>0)) changed=true;
     log.flashcards = automatic + manual;
     log.flashcardsOn = log.flashcards > 0 || n(log.flashcardMinutes) > 0;
   });
-  state.activityDataRepairs.flashcardsDailyV2 = { repairedAt:new Date().toISOString(), studyDate:today };
+  if(changed || state.activityDataRepairs.flashcardsDailyV2?.studyDate!==today) state.activityDataRepairs.flashcardsDailyV2 = { repairedAt:new Date().toISOString(), studyDate:today };
   repairFutureBlockCompletionDates();
 }
 // Blocos concluídos ficavam registrados na "Atividades realizadas" com a data
@@ -3218,12 +3241,13 @@ function repairDailyActivityData() {
 function repairFutureBlockCompletionDates() {
   if(!state.activityDataRepairs || typeof state.activityDataRepairs !== 'object') state.activityDataRepairs = {};
   const now = new Date();
+  let changed=false;
   (state.gamification?.xpTransactions || []).forEach(t => {
     if(t.activity_type !== 'block_completion') return;
     const occurred = new Date(t.occurred_at || '');
-    if(!Number.isNaN(occurred.getTime()) && occurred.getTime() > now.getTime()) t.occurred_at = now.toISOString();
+    if(!Number.isNaN(occurred.getTime()) && occurred.getTime() > now.getTime()) {t.occurred_at=now.toISOString();changed=true;}
   });
-  state.activityDataRepairs.blockCompletionDatesV1 = { repairedAt: now.toISOString() };
+  if(changed || !state.activityDataRepairs.blockCompletionDatesV1) state.activityDataRepairs.blockCompletionDatesV1 = { repairedAt: now.toISOString() };
 }
 function dayLogHasActivity(log) {
   return n(log?.videos) + n(log?.flashcards) + n(log?.questions) + n(log?.lessonMinutes) + n(log?.flashcardMinutes) + n(log?.questionMinutes) + n(log?.materialMinutes) + n(log?.simuladoMinutes) > 0
@@ -3493,9 +3517,11 @@ function ensureDailyMissionWidget() {
   const widget=document.createElement('div');
   widget.id='globalDailyMission'; widget.className='global-daily-mission';
   widget.innerHTML=`<button class="daily-mission-trigger" id="dailyMissionTrigger" type="button" title="Abrir trilha do dia" aria-label="Abrir trilha do dia" aria-expanded="false" aria-controls="dailyMissionPanel">${iconSvg('sparkle')}<span>Trilha do dia</span></button><div class="daily-mission-panel" id="dailyMissionPanel" hidden></div>`;
+  const center=document.getElementById('headerDailyMission');
   const pomodoro=document.getElementById('globalPomodoro');
   const headerActions=document.querySelector('.header-actions');
-  if(pomodoro) pomodoro.insertAdjacentElement('beforebegin',widget);
+  if(center) center.append(widget);
+  else if(pomodoro) pomodoro.insertAdjacentElement('beforebegin',widget);
   else (headerActions||document.body).append(widget);
   document.getElementById('dailyMissionTrigger').onclick=()=>{
     const panel=document.getElementById('dailyMissionPanel');
@@ -4630,6 +4656,12 @@ function renderTabs() {
       mobileLinks.innerHTML=views.filter(([id])=>!visibleSidebarIds.has(id)).map(([id,label,icon])=>`<button type="button" class="personal-more-link" aria-label="${escapeAttr(label)}" data-mobile-destination="${id}"><span class="personal-more-icon">${iconSvg(icon)}</span><span class="personal-more-label">${escapeHtml(label)}</span></button>`).join('');
     };
     mobileMenu.addEventListener('toggle',()=>{mobileLinks.hidden=!mobileMenu.open;});
+    document.addEventListener('pointerdown',event=>{
+      if(mobileMenu.open && !mobileMenu.contains(event.target) && !mobileLinks.contains(event.target)) {
+        mobileMenu.open=false;
+        mobileLinks.hidden=true;
+      }
+    });
     document.addEventListener('keydown',event=>{if(event.key==='Escape') {mobileMenu.open=false;mobileLinks.hidden=true;}});
     mobileViewport.addEventListener('change',renderMoreLinks);
     renderMoreLinks();
@@ -4674,6 +4706,7 @@ function resumePomodoroSession() {
 }
 function setupSidebar() {
   const toggle = document.getElementById('sidebarToggle');
+  const brand=document.getElementById('sidebarBrandToggle');
   const apply = collapsed => {
     document.body.classList.toggle('sidebar-collapsed', collapsed);
     if(toggle) {
@@ -4682,13 +4715,20 @@ function setupSidebar() {
       toggle.setAttribute('aria-label', toggle.title);
       toggle.setAttribute('aria-expanded', String(!collapsed));
     }
+    if(brand) {
+      brand.title=collapsed ? 'Expandir menu' : 'Recolher menu';
+      brand.setAttribute('aria-label',brand.title);
+      brand.setAttribute('aria-expanded',String(!collapsed));
+    }
   };
   apply(localStorage.getItem(SIDEBAR_KEY) === '1');
-  if(toggle) toggle.onclick = () => {
+  const toggleSidebar=() => {
     const collapsed = !document.body.classList.contains('sidebar-collapsed');
     localStorage.setItem(SIDEBAR_KEY, collapsed ? '1' : '0');
     apply(collapsed);
   };
+  if(toggle) toggle.onclick=toggleSidebar;
+  if(brand) brand.onclick=toggleSidebar;
 }
 function iconSvg(name,options={}) {
   return window.ENAMED_ICONS?.AppIcon(name,options) || '';
@@ -5277,6 +5317,10 @@ function completeCadernoReviewStep() {
   renderCadernoErros();
 }
 function renderCadernoErros() {
+  const restore=PersonalUI.preserveSearchFields(document,['cadernoSearch']);
+  try {return renderCadernoErrosContent();} finally {restore();}
+}
+function renderCadernoErrosContent() {
   const allEntries = cadernoErrosEntries();
   const areas = ['Todas', ...new Set(allEntries.map(entry => questionTag(entry.question).area).filter(Boolean))].sort();
   const search = normalizedTopic(ui.cadernoSearch || '');
@@ -5328,18 +5372,7 @@ function bindCadernoErros() {
     return;
   }
   const search = document.getElementById('cadernoSearch');
-  if(search) search.oninput = e => {
-    ui.cadernoSearch = e.target.value;
-    const selectionStart=e.target.selectionStart;
-    const selectionEnd=e.target.selectionEnd;
-    if(cadernoSearchRenderTimer) clearTimeout(cadernoSearchRenderTimer);
-    cadernoSearchRenderTimer=setTimeout(()=>{
-      renderCadernoErros();
-      const restored=document.getElementById('cadernoSearch');
-      restored?.focus({preventScroll:true});
-      restored?.setSelectionRange?.(selectionStart,selectionEnd);
-    },180);
-  };
+  PersonalUI.bindLiveSearch(search,value=>{ui.cadernoSearch=value;},renderCadernoErros);
   const areaSelect = document.getElementById('cadernoArea');
   if(areaSelect) areaSelect.onchange = e => { ui.cadernoArea = e.target.value; renderCadernoErros(); };
   const reviewSelect = document.getElementById('cadernoReview');
@@ -5768,7 +5801,11 @@ function renderPendencias() {
   document.getElementById('pendencias').innerHTML = `<div class="grid cards">${metric('Aulas pendentes', items.length, `até ${fmtDate(ui.refDate)}`)}${metric('Questões pendentes', Math.round(t.debtQ), 'diferença entre meta e realizado')}${metric('Flashcards pendentes', Math.round(t.debtFC), 'diferença entre meta e realizado')}</div><div class="card"><div class="section-title"><div><h2>Pendências por bloco</h2><div class="muted">A revisão começa pelos blocos mais antigos. Cada aula conclui com vídeo, até 10 questões disponíveis e 10 flashcards.</div></div><input class="input" id="pendDate" type="date" value="${ui.refDate}"></div>${renderPendingLessons(items)}</div>`;
   document.getElementById('pendDate').onchange = e => { ui.refDate=e.target.value; render(); }; bindScheduleInputs();
 }
-function renderCronograma() {
+function renderCronograma(resultsOnly=false) {
+  const restore=PersonalUI.preserveSearchFields(document,['search']);
+  try {return renderCronogramaContent(resultsOnly);} finally {restore();}
+}
+function renderCronogramaContent(resultsOnly=false) {
   const areas = ['Todas', ...new Set(state.schedule.map(x=>x.area).filter(Boolean).sort())];
   const rows = filteredSchedule();
   const changed = lastChangedLesson();
@@ -5786,6 +5823,42 @@ function renderCronograma() {
   const selectedVideoLabel=selectedVideo?.state==='loading' ? 'Carregando videoaula' : selectedVideo?.state==='error' ? 'Catálogo indisponível' : 'Videoaula indisponível';
   const selectedLessonActions=selectedLesson ? `<div class="mission-selected-actions">${selectedVideo?.available?`<button class="tiny-btn" type="button" data-open-schedule-videos="${escapeAttr(selectedLesson.id)}">Videoaula</button>`:`<button class="tiny-btn mission-video-unavailable" type="button" disabled title="${escapeAttr(selectedVideoLabel)}">${escapeHtml(selectedVideoLabel)}</button>`}<button class="tiny-btn" type="button" data-open-schedule-questions="${escapeAttr(selectedLesson.id)}">Questões</button><button class="tiny-btn" type="button" data-open-schedule-flashcards="${escapeAttr(selectedLesson.id)}">Flashcards</button></div>` : '';
   const selectedLessonBanner=selectedLesson ? `<div class="mission-selected-lesson" role="status" aria-live="polite"><span class="mission-selected-check" aria-hidden="true">✓</span><div><small>Aula selecionada</small><strong>${escapeHtml(selectedLesson.topic)}</strong><span>Bloco ${escapeHtml(String(selectedLesson.block))} · ${escapeHtml(selectedLesson.area)}</span></div>${selectedLessonActions}</div>` : '';
+  const resultsMarkup=`<div class="section-title"><div><h2>${ui.scheduleDay?`Aulas de ${fmtDate(ui.scheduleDay)}`:'Cronograma editável'}</h2><span class="muted">${ui.scheduleDay?'Mostrando somente as aulas da data selecionada.':'Clique no nome de uma aula para selecioná-la.'}</span></div><span class="schedule-result-count">${rows.length} ${rows.length===1?'item':'itens'}</span></div>${selectedLessonBanner}${priorityLegend()}${renderScheduleTable(rows, true)}`;
+  const results=document.querySelector('#cronograma .schedule-list-card');
+  if(resultsOnly && results) {
+    results.innerHTML=resultsMarkup;
+    enhanceScheduleStudyIcons();
+    updateScheduleMissionProgress();
+    document.querySelectorAll('#cronograma [data-schedule-block]').forEach(button=>{
+      const active=button.dataset.scheduleBlock===selectedBlock;
+      button.classList.toggle('active',active);
+      button.setAttribute('aria-pressed',String(active));
+    });
+    const pin=document.getElementById('blockPinToggle');
+    if(pin) {
+      pin.disabled=selectedBlock==='Todos';
+      pin.classList.toggle('active',Boolean(ui.scheduleBlockPinned));
+      pin.setAttribute('aria-pressed',String(Boolean(ui.scheduleBlockPinned)));
+      pin.title=ui.scheduleBlockPinned ? `Bloco ${selectedBlock} fixado — clique para destravar` : 'Fixar o bloco selecionado';
+      pin.setAttribute('aria-label',ui.scheduleBlockPinned ? `Desfixar bloco ${selectedBlock}` : 'Fixar o bloco selecionado');
+    }
+    document.querySelectorAll('#cronograma .mission-day[data-schedule-day]').forEach(button=>{
+      const day=button.dataset.scheduleDay;
+      const count=selectedItems.filter(item=>item.date===day).length;
+      const countLabel=`${count} ${count===1?'aula':'aulas'}`;
+      const label=button.querySelector('small');
+      if(label) label.textContent=day===studyDateKey() ? 'Hoje' : countLabel;
+      button.setAttribute('aria-label',`${button.querySelector('span')?.textContent}, ${fmtDate(day)}: ${countLabel}`);
+    });
+    const clear=document.getElementById('clearFilters');
+    if(clear) {
+      clear.disabled=!filterCount;
+      clear.classList.toggle('has-filters',Boolean(filterCount));
+      clear.querySelector('span').textContent=`Limpar${filterCount?` (${filterCount})`:''}`;
+    }
+    ui.scheduleBlockFocusPending='';
+    return;
+  }
   const toolbar=`<div class="schedule-toolbar" role="search" aria-label="Filtrar cronograma">
     <label class="schedule-search-field"><span class="sr-only">Buscar no cronograma</span>${iconSvg('search',{weight:'regular'})}<input class="input schedule-toolbar-search" id="search" placeholder="Buscar tema, área ou data" value="${escapeAttr(ui.search)}"></label>
     <div class="schedule-filter-group">
@@ -5799,7 +5872,7 @@ function renderCronograma() {
   const missionLabel = selectedBlock==='Todos' ? 'Visão geral' : `Bloco ${selectedBlock}`;
   const plan = state.reschedule || {};
   const planSummary = plan.restartDate ? `<div class="mission-plan-summary" aria-label="Resumo do cronograma reorganizado"><div><span>Recomeço</span><strong>${fmtDate(plan.restartDate)}</strong></div><div><span>Ritmo semanal</span><strong>${n(plan.weeklyTarget)} aulas</strong><small>1 seg · 1 ter · 2 qua · 1 qui · 1 sex</small></div><div><span>Até 31 de dezembro</span><strong>${n(plan.lessonsByYearEnd)} aulas</strong><small>${n(plan.lessonsAfterYearEnd)} seguem em 2027</small></div><div class="mission-plan-finish"><span>Conclusão prevista</span><strong>${fmtDate(plan.plannedFinishDate)}</strong></div></div>` : '';
-  document.getElementById('cronograma').innerHTML = `<section class="card mission-card"><div class="mission-header"><div class="mission-heading"><span class="mission-heading-icon">${iconSvg('mission')}</span><div><span class="eyebrow">Plano de estudo</span><h2>Organize seu caminho até o ENAMED</h2><p>${changed ? `Última atividade: <strong>${escapeHtml(changed.topic)}</strong> · ${fmtDate(changed.date)}` : 'Escolha um bloco e avance aula por aula.'}</p></div></div><div class="mission-progress" aria-label="${selectedProgress}% concluído em ${escapeAttr(missionLabel)}"><div><span>${escapeHtml(missionLabel)}</span><strong>${selectedDone}<small>/${selectedItems.length}</small></strong><small>aulas concluídas</small></div><div class="mission-progress-ring" style="--mission-progress:${selectedProgress * 3.6}deg"><span>${selectedProgress}%</span></div></div></div>${planSummary}<div class="mission-blocks"><div class="mission-blocks-head"><div><h3>Blocos do cronograma</h3><span>Selecione para ver apenas as aulas daquele bloco</span></div><div class="mission-legend" aria-label="Legenda dos blocos"><span class="done">Concluído</span><span class="pending">Pendente</span><span class="current">Atual</span></div></div>${renderBlockStrip()}</div>${renderScheduleDayPicker()}${toolbar}</section><div class="card schedule-list-card"><div class="section-title"><div><h2>${ui.scheduleDay?`Aulas de ${fmtDate(ui.scheduleDay)}`:'Cronograma editável'}</h2><span class="muted">${ui.scheduleDay?'Mostrando somente as aulas da data selecionada.':'Clique no nome de uma aula para selecioná-la.'}</span></div><span class="schedule-result-count">${rows.length} ${rows.length===1?'item':'itens'}</span></div>${selectedLessonBanner}${priorityLegend()}${renderScheduleTable(rows, true)}</div>`;
+  document.getElementById('cronograma').innerHTML = `<section class="card mission-card"><div class="mission-header"><div class="mission-heading"><span class="mission-heading-icon">${iconSvg('mission')}</span><div><span class="eyebrow">Plano de estudo</span><h2>Organize seu caminho até o ENAMED</h2><p>${changed ? `Última atividade: <strong>${escapeHtml(changed.topic)}</strong> · ${fmtDate(changed.date)}` : 'Escolha um bloco e avance aula por aula.'}</p></div></div><div class="mission-progress" aria-label="${selectedProgress}% concluído em ${escapeAttr(missionLabel)}"><div><span>${escapeHtml(missionLabel)}</span><strong>${selectedDone}<small>/${selectedItems.length}</small></strong><small>aulas concluídas</small></div><div class="mission-progress-ring" style="--mission-progress:${selectedProgress * 3.6}deg"><span>${selectedProgress}%</span></div></div></div>${planSummary}<div class="mission-blocks"><div class="mission-blocks-head"><div><h3>Blocos do cronograma</h3><span>Selecione para ver apenas as aulas daquele bloco</span></div><div class="mission-legend" aria-label="Legenda dos blocos"><span class="done">Concluído</span><span class="pending">Pendente</span><span class="current">Atual</span></div></div>${renderBlockStrip()}</div>${renderScheduleDayPicker()}${toolbar}</section><div class="card schedule-list-card">${resultsMarkup}</div>`;
   enhanceScheduleStudyIcons();
   const blockStrip=document.querySelector('#cronograma .block-strip');
   if(blockStrip) {
@@ -5830,18 +5903,14 @@ function renderCronograma() {
     });
     weekStrip.addEventListener('scroll',()=>{ ui.scheduleWeekScrollLeft=weekStrip.scrollLeft; },{passive:true});
   }
-  document.getElementById('search').oninput = debounce(e => {
-    const value=e.target.value;
-    const cursor=e.target.selectionStart;
+  PersonalUI.bindLiveSearch(document.getElementById('search'),value=>{
     ui.search=value;
     if(value.trim()&&ui.scheduleBlock!=='Todos') {
       ui.scheduleBlock='Todos';
       ui.scheduleBlockPinned=false;
       ui.scheduleBlockFocusPending='Todos';
     }
-    renderCronograma();
-    requestAnimationFrame(() => { const input=document.getElementById('search'); if(input) { input.focus(); input.setSelectionRange(cursor,cursor); } });
-  }, 220);
+  },()=>renderCronograma(true),220);
   document.getElementById('areaFilter').onchange = e => { ui.area=e.target.value; render(); };
   document.getElementById('statusFilter').onchange = e => { ui.status=e.target.value; render(); };
   document.getElementById('priorityFilter').onchange = e => { ui.priority=e.target.value; render(); };
@@ -8842,6 +8911,10 @@ function togglePinnedVideo(lesson, source) {
   renderAulas();
 }
 function renderAulas() {
+  const restore=PersonalUI.preserveSearchFields(document,['videoSearch']);
+  try {return renderAulasContent();} finally {restore();}
+}
+function renderAulasContent() {
   stopAutoStudy('questions');
   const mount = document.getElementById('aulas');
   if(!videoCatalog.length) {
@@ -8988,16 +9061,12 @@ function renderAulas() {
   const specialtyInput = document.getElementById('videoSpecialty');
   if(specialtyInput) specialtyInput.onchange = event => { ui.videoSpecialty=event.target.value; ui.videoLessonId=''; ui.videoSourceId=''; renderAulas(); };
   const searchInput = document.getElementById('videoSearch');
-  if(searchInput) searchInput.oninput = debounce(event => {
-    const value=event.target.value;
-    const cursor=event.target.selectionStart;
-    ui.videoSearch=value;
-    if(value.trim()) ui.videoBlock='Todos';
+  PersonalUI.bindLiveSearch(searchInput,value=>{ui.videoSearch=value;},()=>{
+    if(ui.videoSearch.trim()) ui.videoBlock='Todos';
     ui.videoLessonId='';
     ui.videoSourceId='';
     renderAulas();
-    requestAnimationFrame(() => { const input=document.getElementById('videoSearch'); if(input) { input.focus(); input.setSelectionRange(cursor,cursor); } });
-  }, 220);
+  },220);
   document.querySelectorAll('[data-video-lesson]').forEach(button => button.onclick = event => {
     stopAutoStudy('video');
     saveOpenVideoPosition();
@@ -10967,6 +11036,10 @@ function renderFlashcardManage(all) {
   return `<div class="fc-manage-page"><section class="card fc-manage-hero"><div><span class="eyebrow">Controle da coleção</span><h2>Gerenciar baralhos</h2><p>Escolha o que exportar, reorganize conjuntos, cuide da qualidade e mantenha a exclusão sob confirmação reforçada.</p></div><div><strong>${groups.length}</strong><span>baralhos</span><b>${all.length} cards</b></div></section>${qualitySection}<section class="card fc-manage-export"><div class="section-title"><div><span class="eyebrow">Exportação seletiva</span><h3>Quais baralhos deseja exportar?</h3><div class="muted">O arquivo preserva o nome de cada conjunto para a próxima importação.</div></div><button class="icon-btn primary" id="fcExportSelected" ${selectedCards?'':'disabled'}>Exportar ${selectedCards} ${selectedCards===1?'card':'cards'}</button></div><div class="fc-manage-toolbar"><input class="input" id="fcManageSearch" value="${escapeAttr(search)}" placeholder="Buscar baralho ou aula"><button class="tiny-btn" id="fcExportSelectAll">Selecionar todos</button><button class="tiny-btn" id="fcExportSelectNone">Limpar seleção</button><span><b>${selected.size}</b> de ${groups.length} baralhos</span></div><div class="fc-manage-deck-list">${rows}</div></section>${organizeSection}<details class="card fc-manage-danger" ${deleting?'open':''}><summary><span><strong>Excluir conjuntos de flashcards</strong><small>Zona protegida · exclusão permanente</small></span><span class="badge no">Cuidado</span></summary><div class="fc-manage-danger-body"><div class="fc-manage-warning"><strong>Faça um backup antes de excluir.</strong><span>A exclusão também remove o progresso dos cards escolhidos e será sincronizada entre dispositivos.</span><button class="tiny-btn" id="fcManageBackup">Baixar backup agora</button></div>${confirmation}<div class="fc-manage-delete-list">${deleteRows}</div></div></details></div>`;
 }
 function renderFlashcards() {
+  const restore=PersonalUI.preserveSearchFields(document,['fcBrowserSearch','flashcardOrganizerSearch','fcManageSearch']);
+  try {return renderFlashcardsContent();} finally {restore();}
+}
+function renderFlashcardsContent() {
   // O overlay vive no body (fora de #flashcards), então não é substituído pelo
   // innerHTML abaixo: precisa ser removido explicitamente a cada render.
   document.getElementById('flashcardOrganizerOverlay')?.remove();
@@ -11061,7 +11134,7 @@ function renderFlashcards() {
     const selected=new Set(ui.flashcardExportKeys || []);
     exportAnkiTsv(flashcardCollectionGroups(all).filter(group=>selected.has(group.key)).flatMap(group=>group.cards));
   });
-  document.getElementById('fcManageSearch')?.addEventListener('change',event=>{ui.flashcardManageSearch=event.currentTarget.value; renderFlashcards();});
+  PersonalUI.bindLiveSearch(document.getElementById('fcManageSearch'),value=>{ui.flashcardManageSearch=value;},renderFlashcards);
   document.getElementById('fcManageBackup')?.addEventListener('click',exportFlashcardBackup);
   document.querySelectorAll('[data-fc-quality-select]').forEach(input=>input.addEventListener('change',event=>{
     const selected=new Set(ui.flashcardQualitySelected||[]);
@@ -11305,14 +11378,10 @@ function renderFlashcards() {
   const heatToday=document.querySelector('.fc-heat-cell.today');
   if(heatShell && heatToday) requestAnimationFrame(()=>{ heatShell.scrollLeft=Math.max(0,n(heatToday.offsetLeft)-n(heatShell.clientWidth)*.62); });
   const browserSearch = document.getElementById('fcBrowserSearch');
-  if(browserSearch) browserSearch.oninput = event => {
-    const caret = event.currentTarget.selectionStart;
-    ui.flashcardBrowserSearch = event.currentTarget.value;
+  PersonalUI.bindLiveSearch(browserSearch,value=>{
+    ui.flashcardBrowserSearch=value;
     ui.flashcardBrowserCardId = '';
-    renderFlashcards();
-    const next = document.getElementById('fcBrowserSearch');
-    if(next) { next.focus(); next.setSelectionRange(caret,caret); }
-  };
+  },renderFlashcards);
   document.getElementById('fcBrowserStatus')?.addEventListener('change', event => { ui.flashcardBrowserStatus=event.currentTarget.value; ui.flashcardBrowserCardId=''; renderFlashcards(); });
   document.getElementById('fcBrowserArea')?.addEventListener('change', event => { ui.flashcardBrowserArea=event.currentTarget.value; ui.flashcardBrowserCardId=''; renderFlashcards(); });
   document.getElementById('fcBrowserSort')?.addEventListener('change', event => { ui.flashcardBrowserSort=event.currentTarget.value; renderFlashcards(); });
@@ -11391,17 +11460,7 @@ function renderFlashcards() {
   // da aba Aulas cai numa tela aparentemente inalterada.
   if(ui.flashcardImport) document.querySelector('.flashcard-import-panel')?.scrollIntoView({block:'center', behavior:'smooth'});
   const organizerSearchInput = document.getElementById('flashcardOrganizerSearch');
-  if(organizerSearchInput) {
-    // Re-render a cada tecla apaga o campo focado; restaurar foco e cursor
-    // mantém a digitação fluida.
-    organizerSearchInput.oninput = e => {
-      const caret = e.currentTarget.selectionStart;
-      ui.flashcardOrganizerSearch = e.currentTarget.value;
-      renderFlashcards();
-      const next = document.getElementById('flashcardOrganizerSearch');
-      if(next) { next.focus(); next.setSelectionRange(caret, caret); }
-    };
-  }
+  PersonalUI.bindLiveSearch(organizerSearchInput,value=>{ui.flashcardOrganizerSearch=value;},renderFlashcards);
   document.getElementById('flashcardOrganizerLinkSearch')?.addEventListener('click', () => {
     const scheduleId = document.querySelector('[data-organizer-search-lesson]')?.value || '';
     if(!scheduleId) { alert('Escolha a aula antes de vincular.'); return; }
@@ -12908,10 +12967,6 @@ function bindQuestionEmptyState() {
   document.getElementById('backToQuestionBlocksBtn')?.addEventListener('click', backToQuestionSelection);
 }
 function refreshQuestionSearchResults() {
-  const searchInput = document.getElementById('questionSearch');
-  const keepSearchFocus = document.activeElement === searchInput;
-  const selectionStart = searchInput?.selectionStart ?? (ui.qSearch || '').length;
-  const selectionEnd = searchInput?.selectionEnd ?? selectionStart;
   const questions = filteredQuestions();
   ui.qIndex = Math.max(0, Math.min(ui.qIndex, Math.max(questions.length - 1, 0)));
   const question = questions[ui.qIndex];
@@ -12923,10 +12978,6 @@ function refreshQuestionSearchResults() {
   bindQuestionActions(questions, activeQuestion);
   bindQuestionEmptyState();
   updateAutoStudyIndicator();
-  if(keepSearchFocus && searchInput?.isConnected) requestAnimationFrame(() => {
-    searchInput.focus({ preventScroll:true });
-    searchInput.setSelectionRange(selectionStart,selectionEnd);
-  });
 }
 function setQuestionFocusMode(enabled) {
   const wasEnabled=questionSidebarCollapsed;
@@ -13134,12 +13185,18 @@ function renderQuestionBank() {
   document.getElementById('exploreQuestionBank').onclick = exploreQuestionBank;
   document.getElementById('questionClearFilters').onclick = exploreQuestionBank;
   const questionSearch = document.getElementById('questionSearch');
-  questionSearch.oninput = e => {
-    ui.qSearch = e.target.value;
+  questionSearch.oninput = event => {
+    ui.qSearch = questionSearch.value;
     ui.qIndex = 0;
     clearTimeout(questionSearchRenderTimer);
-    questionSearchRenderTimer = setTimeout(refreshQuestionSearchResults,140);
+    if(event.isComposing) return;
+    questionSearchRenderTimer = setTimeout(()=>{
+      questionSearchRenderTimer=null;
+      if(questionSearch.isConnected && ui.tab==='questoes') refreshQuestionSearchResults();
+    },140);
   };
+  questionSearch.oncompositionstart=()=>clearTimeout(questionSearchRenderTimer);
+  questionSearch.oncompositionend=()=>questionSearch.oninput({isComposing:false});
   document.getElementById('showQuestionIssues').onclick = () => { ui.qBlock='Todos'; ui.qSpecialty='Todas'; ui.qSource='Todas'; ui.qTopic='Todos'; ui.qSearch=''; ui.qFocusScheduleId=''; ui.qFocusQuestionIds=[]; ui.qStatus='Gabarito suspeito'; ui.qIndex=0; ui.qQuestionId=''; ui.justAnsweredId=''; render(); };
   document.getElementById('clearQuestionIssues')?.addEventListener('click', () => {
     if(!confirm(`Limpar as ${flagged} marcações de gabarito suspeito?`)) return;

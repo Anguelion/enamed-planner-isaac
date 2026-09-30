@@ -13,9 +13,9 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/icon-32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
-<link rel="stylesheet" href="assets/auth-shell.css?v=20260930-6">
+<link rel="stylesheet" href="assets/auth-shell.css?v=20260930-7">
 <script defer src="assets/vendor/supabase.js"></script>
-<script defer src="assets/app-loader.js?v=20260930-6"></script>
+<script defer src="assets/app-loader.js?v=20260930-7"></script>
 </head>
 <body class="offline-priority auth-locked app-loading">
 <section class="login-screen" id="authPanel">
@@ -35,7 +35,7 @@
 </section>
 <aside class="app-sidebar" id="appSidebar">
   <div class="sidebar-brand">
-    <div class="brand-mark">SQ</div>
+    <button type="button" class="brand-mark" id="sidebarBrandToggle" aria-controls="appSidebar" aria-label="Recolher menu" aria-expanded="true">SQ</button>
     <div class="sidebar-brand-copy"><strong>SÓqueroMed</strong><small>ENAMED 2026</small></div>
     <button class="sidebar-toggle" id="sidebarToggle" title="Recolher menu" aria-label="Recolher menu" aria-expanded="true"></button>
   </div>
@@ -51,6 +51,7 @@
       </nav>
       <div class="header-context"><strong>Central de estudos</strong><span>Seu percurso para o ENAMED, organizado em um só lugar.</span></div>
     </div>
+    <div class="header-center" id="headerDailyMission"></div>
     <div class="header-actions">
       <details id="personalMobileMenu" class="personal-mobile-menu"><summary aria-controls="personalMobileLinks">Mais</summary></details>
       <div class="sync-status" id="syncStatus" title="Estado da sincronização"><span class="sync-dot"></span><span id="syncText">Local</span></div>

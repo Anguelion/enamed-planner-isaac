@@ -451,8 +451,8 @@
   function refreshProfile(container) {
     ensureCollections(container);
     const xp=totalXP(container.xpTransactions);
+    if(container.profile.cachedTotalXP!==xp || !container.profile.updatedAt) container.profile.updatedAt=new Date().toISOString();
     container.profile.cachedTotalXP=xp;
-    container.profile.updatedAt=new Date().toISOString();
     return {...container.profile,...calculateLevelFromXP(xp,container.rules)};
   }
   function ensureCollections(container) {

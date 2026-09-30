@@ -8,12 +8,16 @@
 - Radar Saúde separado em JS/CSS carregados sob demanda, com data e aviso após 14 dias. Atualizar relê a edição disponível; não produz notícias novas.
 - SDK Supabase 2.57.4 distribuído localmente com sua licença MIT e precacheado. A abertura offline continua dependendo de ter aberto o site e seus módulos online anteriormente; login novo precisa de rede.
 - Mensagens de salvamento alinhadas com sincronização automática.
+- O menu Mais fecha ao clicar fora ou pressionar Escape, mantendo disponíveis os módulos ausentes da navegação lateral.
+- Busca do cronograma atualiza apenas a lista de resultados; os campos de busca de videoaulas e revisões são preservados durante a atualização, incluindo seleção e composição de texto. Filtros atrasados são descartados ao sair da tela.
+- Sincronização entre abas compara conteúdo, sem considerar ordem de propriedades ou metadados do aparelho. Receber conteúdo já sincronizado não dispara outro upload nem recria a tela; progresso local adicional continua sendo mesclado e enviado. Datas de reparos e perfil são atualizadas somente quando o conteúdo muda.
+- Trilha do dia centralizada na barra superior. Com o menu recolhido, o próprio SQ permite expandir o menu, sem a seta solta ao lado da marca.
 - Ícones carregados após DOMContentLoaded são preenchidos imediatamente.
 - Cache de navegação não é substituído por respostas HTTP de erro. Atualizações removem apenas caches do próprio planner.
 - Relatório de curadoria: `reports/question-duplicates-review.json`. São 673 repetições em 630 grupos; 404 grupos têm diferenças no enunciado literal, alternativas ou gabarito. Nenhuma questão foi excluída, evitando quebrar IDs associados ao histórico.
 
 ## Validação
 
-Executar `npm test`, `npm run lint`, `npm run build` e `npm run health-news:check`. O build confere os módulos novos. Testes incluem preservação de respostas recentes, preferências inválidas, rotas, SDK local, fallback offline e erros HTTP.
+Executar `npm test`, `npm run lint`, `npm run build` e `npm run health-news:check`. O build confere os módulos novos. Testes incluem preservação de respostas recentes, preferências inválidas, rotas, SDK local, fallback offline, erros HTTP, digitação/composição de texto e sincronização sem eco entre abas ou reenvio desnecessário da nuvem.
 
 Por preferência do usuário, cada ajuste deve terminar com validação, commit e envio para `origin/main`, seguido da confirmação da publicação automática no Cloudflare Pages. Esta rodada não modifica o banco Supabase. A reorganização ampla do restante de planner.js e a curadoria clínica dos grupos divergentes exigem trabalho específico; a modularização desta rodada cobre a apresentação pessoal e o Radar Saúde.
