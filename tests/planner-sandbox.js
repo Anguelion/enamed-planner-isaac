@@ -36,7 +36,7 @@ function extractSeedJson(root) {
   return html.slice(start, end);
 }
 
-function loadPlannerSandbox({ origin = 'http://localhost:8766' } = {}) {
+function loadPlannerSandbox({ origin = 'http://localhost:8766', initialState } = {}) {
   const root = path.resolve(__dirname, '..');
   const seedJson = extractSeedJson(root);
   const storage = () => {
@@ -103,6 +103,7 @@ function loadPlannerSandbox({ origin = 'http://localhost:8766' } = {}) {
   sandbox.window.innerHeight = 800;
   sandbox.self = sandbox.window;
   const context = vm.createContext(sandbox);
+  if(initialState) sandbox.localStorage.setItem('enamed-planner-v3', JSON.stringify(initialState));
 
   const uxSource = fs.readFileSync(path.join(root, 'assets/planner-ux.js'), 'utf8');
   vm.runInContext(uxSource, context, { filename: 'planner-ux.js' });
@@ -111,6 +112,7 @@ function loadPlannerSandbox({ origin = 'http://localhost:8766' } = {}) {
   // O wrapper UMD de cada arquivo anexa em `root.ENAMED_X`, e `root` resolve para
   // o proprio objeto de contexto (globalThis dentro do vm), nao para `window`.
   sandbox.window.ENAMED_PLANNER_UX = context.ENAMED_PLANNER_UX;
+  sandbox.window.ENAMED_PERSONAL_UI = require('../assets/personal-ui.js');
   sandbox.window.ENAMED_GAMIFICATION = context.ENAMED_GAMIFICATION;
 
   let plannerSource = fs.readFileSync(path.join(root, 'assets/planner.js'), 'utf8');

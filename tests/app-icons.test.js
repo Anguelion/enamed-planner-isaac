@@ -9,6 +9,14 @@ const Icons=require('../assets/app-icons.js');
 const root=path.resolve(__dirname,'..');
 const tones=new Set(['fire','water','earth','air','xp','simulation','success','warning','error','neutral']);
 
+test('ícones carregados depois do DOM são preenchidos imediatamente',()=>{
+  const vm=require('node:vm');
+  const button={dataset:{appIcon:'upload'},getAttribute:()=>'',innerHTML:''};
+  const document={readyState:'complete',querySelectorAll:()=>[button],addEventListener(){throw new Error('DOMContentLoaded já ocorreu');}};
+  vm.runInNewContext(fs.readFileSync(path.join(root,'assets/app-icons.js'),'utf8'),{document});
+  assert.match(button.innerHTML,/<svg/);
+});
+
 test('mapa semântico usa apenas tons e pesos suportados',()=>{
   for(const [name,item] of Object.entries(Icons.ICON_MAP)) {
     assert.ok(tones.has(item.tone),`${name}: tom inválido`);

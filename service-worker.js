@@ -1,9 +1,10 @@
-const CACHE_NAME = 'soqueromed-shell-v348';
+const CACHE_NAME = 'soqueromed-shell-v349';
 const APP_SHELL = [
   './',
   './manifest.webmanifest',
-  './assets/auth-shell.css?v=20260926-9',
-  './assets/app-loader.js?v=20260926-9',
+  './assets/vendor/supabase.js',
+  './assets/auth-shell.css?v=20260930-2',
+  './assets/app-loader.js?v=20260930-2',
   './assets/icons/icon-192.png',
   './assets/icons/icon-512.png',
   './assets/icons/icon-512-maskable.png',
@@ -19,7 +20,7 @@ self.addEventListener('install', event => {
 self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys()
-      .then(keys => Promise.all(keys.filter(key => key !== CACHE_NAME).map(key => caches.delete(key))))
+      .then(keys => Promise.all(keys.filter(key => key.startsWith('soqueromed-shell-') && key !== CACHE_NAME).map(key => caches.delete(key))))
       .then(() => self.clients.claim())
   );
 });
@@ -35,8 +36,10 @@ self.addEventListener('fetch', event => {
     event.respondWith(
       fetch(request)
         .then(response => {
-          const copy = response.clone();
-          caches.open(CACHE_NAME).then(cache => cache.put(request, copy));
+          if(response.ok) {
+            const copy=response.clone();
+            event.waitUntil(caches.open(CACHE_NAME).then(cache=>cache.put(request,copy)));
+          }
           return response;
         })
         .catch(() => caches.match(request).then(cached => cached || caches.match('./')))
@@ -44,7 +47,10 @@ self.addEventListener('fetch', event => {
     return;
   }
 
-  const networkFirst = url.pathname.includes('/question_bank/')
+  const networkFirst = url.pathname.endsWith('/assets/personal-ui.js')
+    || url.pathname.endsWith('/assets/radar-saude.css')
+    || url.pathname.endsWith('/assets/radar-saude.js')
+    || url.pathname.includes('/question_bank/')
     || url.pathname.endsWith('/assets/app-loader.js')
     || url.pathname.endsWith('/assets/auth-shell.css')
     || url.pathname.endsWith('/assets/planner.js')
@@ -73,7 +79,7 @@ self.addEventListener('fetch', event => {
         .then(response => {
           if (response.ok) {
             const copy = response.clone();
-            caches.open(CACHE_NAME).then(cache => cache.put(request, copy));
+            event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.put(request, copy)));
           }
           return response;
         })
@@ -87,7 +93,7 @@ self.addEventListener('fetch', event => {
       const refresh = fetch(request).then(response => {
         if (response.ok) {
           const copy = response.clone();
-          caches.open(CACHE_NAME).then(cache => cache.put(request, copy));
+          event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.put(request, copy)));
         }
         return response;
       }).catch(() => cached);

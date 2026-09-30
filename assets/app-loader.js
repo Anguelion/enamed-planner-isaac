@@ -4,7 +4,7 @@
   const SUPABASE_URL='https://wbxzptiacftymhvfkiyx.supabase.co';
   const SUPABASE_PUBLISHABLE_KEY='sb_publishable_XrBwqjkwlt4Mb4rdmE-xVw_7Vt3euvP';
   const SUPABASE_CLIENT_KEY='__SOQUEROMED_SUPABASE_CLIENT__';
-  const VERSION='20260926-9';
+  const VERSION='20260930-2';
   const isLocal=location.protocol==='file:' || ['localhost','127.0.0.1','::1'].includes(location.hostname);
   let bootPromise=null;
   let authClient=null;
@@ -57,6 +57,9 @@
   }
 
   function scheduleMascot(){
+    if(!window.ENAMED_PERSONAL_UI.read(window.localStorage).mascot) return;
+    if(window.__personalMascotScheduled) return;
+    window.__personalMascotScheduled=true;
     const load=()=>Promise.all([loadStyle('assets/mascote-ia.css'),loadScript('assets/mascote-ia.js')]).catch(error=>console.warn('Tutor não carregado:',error));
     if('requestIdleCallback' in window) requestIdleCallback(load,{timeout:3500});
     else setTimeout(load,900);
@@ -74,6 +77,7 @@
     ]).then(async()=>{
       for(const script of [
         'question_bank/index.js',
+        'assets/personal-ui.js',
         'assets/app-icons.js',
         'assets/gamification.js',
         'assets/planner-ux.js',
@@ -81,6 +85,7 @@
         'assets/caso-do-dia.js',
         'assets/planner.js'
       ]) await loadScript(script);
+      window.ENAMED_ICONS?.hydrateIcons(document);
       document.body.classList.remove('app-loading','authenticated');
       scheduleMascot();
     }).catch(error=>{
@@ -156,5 +161,6 @@
     }
   }
 
+  window.addEventListener('personal-mascot-enable',scheduleMascot);
   start();
 })();

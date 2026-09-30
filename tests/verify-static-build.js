@@ -13,6 +13,8 @@ const referenceSource=`${html}\n${plannerRuntime}\n${appLoader}`;
 const required=[
   'assets/auth-shell.css',
   'assets/app-loader.js',
+  'assets/personal-ui.js',
+  'assets/vendor/supabase.js',
   'assets/planner.css',
   'assets/anatomia.css',
   'assets/planner-refresh.css',
@@ -47,7 +49,7 @@ for(const relative of deferredAppAssets) {
   if(html.includes(relative)) failures.push(`asset pesado voltou ao carregamento inicial: ${relative}`);
   if(appShellSource.includes(relative)) failures.push(`asset pesado voltou ao precache inicial: ${relative}`);
 }
-const lazyAssets=['assets/anatomia.css','assets/anatomia.js','assets/ecg-simulator.js','assets/radiografia-aulas.js','assets/radiografia.js','assets/semiologia-aulas.js','assets/semiologia.js','assets/consulta-doencas.js','assets/consulta-clinica.js'];
+const lazyAssets=['assets/radar-saude.css','assets/radar-saude.js','assets/anatomia.css','assets/anatomia.js','assets/ecg-simulator.js','assets/radiografia-aulas.js','assets/radiografia.js','assets/semiologia-aulas.js','assets/semiologia.js','assets/consulta-doencas.js','assets/consulta-clinica.js'];
 for(const relative of lazyAssets) {
   if(!fs.existsSync(path.join(root,relative))) failures.push(`asset sob demanda ausente: ${relative}`);
   if(!plannerRuntime.includes(relative)) failures.push(`asset sob demanda sem referência no runtime: ${relative}`);

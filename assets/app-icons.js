@@ -87,7 +87,10 @@
     });
   }
 
-  if(typeof document!=='undefined') document.addEventListener('DOMContentLoaded',()=>hydrateIcons(document));
+  if(typeof document!=='undefined') {
+    if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',()=>hydrateIcons(document),{once:true});
+    else hydrateIcons(document);
+  }
 
   return {AppIcon,RpgAsset,hydrateIcons,ICON_MAP,LEGACY_MAP,RPG_ASSET_MAP,SPRITE_PATH,resolveIcon};
 });

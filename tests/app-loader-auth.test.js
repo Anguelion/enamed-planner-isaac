@@ -63,6 +63,8 @@ test('login abre o aplicativo mesmo quando getSession fica pendente no Android',
     supabase: { createClient() { createClientCalls += 1; return authClient; } },
     requestIdleCallback() {}
   };
+  window.addEventListener = () => {};
+  window.ENAMED_PERSONAL_UI = require('../assets/personal-ui.js');
   const context = vm.createContext({
     window,
     document,
@@ -85,7 +87,7 @@ test('login abre o aplicativo mesmo quando getSession fica pendente no Android',
   }
   await new Promise(resolve => setTimeout(resolve, 20));
 
-  assert.ok(appendedScripts.some(src => src?.includes('assets/planner.js?v=20260926-9')), JSON.stringify(appendedScripts));
+  assert.ok(appendedScripts.some(src => src?.includes('assets/planner.js?v=20260930-2')), JSON.stringify(appendedScripts));
   assert.equal(bodyClasses.contains('auth-locked'), false);
   assert.equal(bodyClasses.contains('app-loading'), false);
   assert.equal(panelClasses.contains('hidden'), true);
