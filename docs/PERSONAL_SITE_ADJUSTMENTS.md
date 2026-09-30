@@ -11,6 +11,7 @@
 - O menu Mais fecha ao clicar fora ou pressionar Escape, mantendo disponíveis os módulos ausentes da navegação lateral.
 - Busca do cronograma atualiza apenas a lista de resultados; os campos de busca de videoaulas e revisões são preservados durante a atualização, incluindo seleção e composição de texto. Filtros atrasados são descartados ao sair da tela.
 - Sincronização entre abas compara conteúdo, sem considerar ordem de propriedades ou metadados do aparelho. Receber conteúdo já sincronizado não dispara outro upload nem recria a tela; progresso local adicional continua sendo mesclado e enviado. Datas de reparos e perfil são atualizadas somente quando o conteúdo muda.
+- A migração dos dados antigos para a conta preserva a origem se faltar espaço para duplicá-la. O armazenamento original fica vinculado ao dono, inclusive após reabrir o site, sem expor dados a outra conta. Quando a cópia é bem-sucedida, a origem idêntica só é removida após verificar o destino; backups seguem a mesma regra.
 - Trilha do dia centralizada na barra superior. Com o menu recolhido, o próprio SQ permite expandir o menu, sem a seta solta ao lado da marca.
 - Ícones carregados após DOMContentLoaded são preenchidos imediatamente.
 - Cache de navegação não é substituído por respostas HTTP de erro. Atualizações removem apenas caches do próprio planner.

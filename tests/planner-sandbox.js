@@ -36,7 +36,7 @@ function extractSeedJson(root) {
   return html.slice(start, end);
 }
 
-function loadPlannerSandbox({ origin = 'http://localhost:8766', initialState, supabaseClient } = {}) {
+function loadPlannerSandbox({ origin = 'http://localhost:8766', initialState, initialStorage, supabaseClient } = {}) {
   const root = path.resolve(__dirname, '..');
   const seedJson = extractSeedJson(root);
   const storage = () => {
@@ -105,6 +105,7 @@ function loadPlannerSandbox({ origin = 'http://localhost:8766', initialState, su
   sandbox.self = sandbox.window;
   const context = vm.createContext(sandbox);
   if(initialState) sandbox.localStorage.setItem('enamed-planner-v3', JSON.stringify(initialState));
+  Object.entries(initialStorage||{}).forEach(([key,value])=>sandbox.localStorage.setItem(key,value));
 
   const uxSource = fs.readFileSync(path.join(root, 'assets/planner-ux.js'), 'utf8');
   vm.runInContext(uxSource, context, { filename: 'planner-ux.js' });

@@ -1,10 +1,10 @@
-const CACHE_NAME = 'soqueromed-shell-v354';
+const CACHE_NAME = 'soqueromed-shell-v355';
 const APP_SHELL = [
   './',
   './manifest.webmanifest',
   './assets/vendor/supabase.js',
-  './assets/auth-shell.css?v=20260930-7',
-  './assets/app-loader.js?v=20260930-7',
+  './assets/auth-shell.css?v=20260930-8',
+  './assets/app-loader.js?v=20260930-8',
   './assets/icons/icon-192.png',
   './assets/icons/icon-512.png',
   './assets/icons/icon-512-maskable.png',

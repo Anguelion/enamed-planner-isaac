@@ -55,6 +55,26 @@ function scopedStorageKey(base, accountId='') {
   const clean = String(accountId || '').trim();
   return clean ? `${base}:account:${clean}` : base;
 }
+function ownedAccountStorageKey(base,accountId='') {
+  const scoped=scopedStorageKey(base,accountId);
+  if(!accountId || localStorage.getItem(LEGACY_STATE_OWNER_KEY)!==accountId) return scoped;
+  const hasScoped=base===STORAGE_KEY ? accountStateExists(scoped) : Boolean(localStorage.getItem(scoped));
+  return !hasScoped && localStorage.getItem(base) ? base : scoped;
+}
+function migrateOwnedLegacyStorage(base,accountId) {
+  if(localStorage.getItem(LEGACY_STATE_OWNER_KEY)!==accountId) return;
+  const payload=localStorage.getItem(base);
+  if(!payload) return;
+  const scoped=scopedStorageKey(base,accountId);
+  try {
+    localStorage.setItem(scoped,payload);
+    // A origem só sai depois de existir uma cópia idêntica e durável.
+    if(localStorage.getItem(scoped)===payload) localStorage.removeItem(base);
+  } catch(error) {
+    // Sem espaço para duas cópias: continua usando a original, vinculada ao dono.
+    console.warn('Dados locais preservados na chave original; não foi possível duplicar o armazenamento da conta.',error.name);
+  }
+}
 function getOrCreateDeviceId() {
   try {
     const saved = localStorage.getItem(DEVICE_ID_KEY);
@@ -67,9 +87,9 @@ function getOrCreateDeviceId() {
   }
 }
 let activeAccountId = localStorage.getItem(ACTIVE_ACCOUNT_KEY) || '';
-let activeStateStorageKey = scopedStorageKey(STORAGE_KEY,activeAccountId);
-let activeStateStampKey = scopedStorageKey(LOCAL_STATE_STAMP_KEY,activeAccountId);
-let activeLocalBackupsKey = scopedStorageKey(LOCAL_BACKUPS_KEY,activeAccountId);
+let activeStateStorageKey = ownedAccountStorageKey(STORAGE_KEY,activeAccountId);
+let activeStateStampKey = ownedAccountStorageKey(LOCAL_STATE_STAMP_KEY,activeAccountId);
+let activeLocalBackupsKey = ownedAccountStorageKey(LOCAL_BACKUPS_KEY,activeAccountId);
 const DEVICE_ID = getOrCreateDeviceId();
 // O navegador continua local-first; quando houver internet, sincroniza com o Supabase.
 const OFFLINE_FIRST = false;
@@ -416,25 +436,23 @@ function accountStateExists(key) {
 }
 function activateAccountState(accountId) {
   const nextId=String(accountId || '').trim();
-  if(!nextId || (activeAccountId===nextId && activeStateStorageKey===scopedStorageKey(STORAGE_KEY,nextId))) return false;
+  if(!nextId || (activeAccountId===nextId && activeStateStorageKey===ownedAccountStorageKey(STORAGE_KEY,nextId))) return false;
   const nextStateKey=scopedStorageKey(STORAGE_KEY,nextId);
-  const nextStampKey=scopedStorageKey(LOCAL_STATE_STAMP_KEY,nextId);
-  const nextBackupsKey=scopedStorageKey(LOCAL_BACKUPS_KEY,nextId);
   const legacyOwner=localStorage.getItem(LEGACY_STATE_OWNER_KEY) || '';
   const canClaimLegacy=!legacyOwner || legacyOwner===nextId;
   if(!accountStateExists(nextStateKey) && canClaimLegacy && accountStateExists(STORAGE_KEY)) {
-    localStorage.setItem(nextStateKey,localStorage.getItem(STORAGE_KEY));
-    const legacyStamp=localStorage.getItem(LOCAL_STATE_STAMP_KEY);
-    const legacyBackups=localStorage.getItem(LOCAL_BACKUPS_KEY);
-    if(legacyStamp) localStorage.setItem(nextStampKey,legacyStamp);
-    if(legacyBackups) localStorage.setItem(nextBackupsKey,legacyBackups);
-    localStorage.setItem(LEGACY_STATE_OWNER_KEY,nextId);
+    // Registra o dono antes da migração para nunca expor o legado a outra conta.
+    if(legacyOwner!==nextId) localStorage.setItem(LEGACY_STATE_OWNER_KEY,nextId);
+    for(const key of [STORAGE_KEY,LOCAL_STATE_STAMP_KEY,LOCAL_BACKUPS_KEY]) {
+      if(!localStorage.getItem(scopedStorageKey(key,nextId))) migrateOwnedLegacyStorage(key,nextId);
+    }
   }
   activeAccountId=nextId;
-  activeStateStorageKey=nextStateKey;
-  activeStateStampKey=nextStampKey;
-  activeLocalBackupsKey=nextBackupsKey;
-  localStorage.setItem(ACTIVE_ACCOUNT_KEY,nextId);
+  activeStateStorageKey=ownedAccountStorageKey(STORAGE_KEY,nextId);
+  activeStateStampKey=ownedAccountStorageKey(LOCAL_STATE_STAMP_KEY,nextId);
+  activeLocalBackupsKey=ownedAccountStorageKey(LOCAL_BACKUPS_KEY,nextId);
+  try {localStorage.setItem(ACTIVE_ACCOUNT_KEY,nextId);}
+  catch(error) {console.warn('Não foi possível guardar a conta ativa neste aparelho.',error.name);}
   state=loadState();
   localBackups=loadLocalBackups();
   ensureGamificationState();
