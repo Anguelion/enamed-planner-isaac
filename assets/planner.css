@@ -702,7 +702,7 @@ body.dark .highlight-popup-copy{background:var(--panel)}
 .qbank-mode.sidebar-collapsed{display:block}
 .qbank-mode.sidebar-collapsed .qbank-overview{display:none}
 .qbank-mode.sidebar-collapsed .question-sidebar{display:none}
-.qbank-mode.sidebar-collapsed .question-card{width:min(940px,100%);margin:0 auto}
+.qbank-mode.sidebar-collapsed .question-card{width:100%;max-width:none;margin:0}
 .question-tools-menu{position:relative}
 .question-tools-menu>summary{align-items:center;display:flex;justify-content:center;list-style:none;min-width:42px}
 .question-tools-menu>summary::-webkit-details-marker{display:none}

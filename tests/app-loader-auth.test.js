@@ -87,7 +87,7 @@ test('login abre o aplicativo mesmo quando getSession fica pendente no Android',
   }
   await new Promise(resolve => setTimeout(resolve, 20));
 
-  assert.ok(appendedScripts.some(src => src?.includes('assets/planner.js?v=20260930-2')), JSON.stringify(appendedScripts));
+  assert.ok(appendedScripts.some(src => src?.includes('assets/planner.js?v=20260930-6')), JSON.stringify(appendedScripts));
   assert.equal(bodyClasses.contains('auth-locked'), false);
   assert.equal(bodyClasses.contains('app-loading'), false);
   assert.equal(panelClasses.contains('hidden'), true);

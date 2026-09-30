@@ -4611,12 +4611,8 @@ function restoreNavigation(event) {
 function renderTabs() {
   const tabs=document.getElementById('tabs');
   if(tabs && tabs.dataset.plannerTabsReady!=='1') {
-    const tabButton=(id,label,icon,primary=false)=>`<button type="button" class="tab tab-${id} ${primary&&MOBILE_PRIMARY_VIEWS.has(id)?'mobile-primary':''}" data-tab="${id}" title="${escapeAttr(label)}"><span class="tab-icon">${iconSvg(icon)}</span><span class="tab-label">${escapeHtml(label)}</span></button>`;
-    tabs.innerHTML=PersonalUI.navigation.map(group=>{
-      const main=tabButton(group.id,group.label,group.icon,true);
-      const children=group.children.map(id=>{const view=views.find(view=>view[0]===id);return tabButton(...view);}).join('');
-      return group.children.length?`${main}<details class="personal-nav-details" data-nav-parent="${group.id}"><summary>Mais em ${escapeHtml(group.label.toLowerCase())}</summary>${children}</details>`:main;
-    }).join('');
+    const tabButton=(id,label,icon,primary=false)=>`<button type="button" class="tab tab-${id} ${primary&&MOBILE_PRIMARY_VIEWS.has(id)?'mobile-primary':''}" data-tab="${id}" title="${escapeAttr(label)}" aria-label="${escapeAttr(label)}"><span class="tab-icon">${iconSvg(icon)}</span><span class="tab-label">${escapeHtml(label)}</span></button>`;
+    tabs.innerHTML=PersonalUI.navigation.map(group=>tabButton(group.id,group.label,group.icon,true)).join('');
     tabs.addEventListener('click',event=>{
       const button=event.target.closest?.('[data-tab]');
       if(button && tabs.contains(button)) {
@@ -4628,9 +4624,15 @@ function renderTabs() {
   const mobileLinks=document.getElementById('personalMobileLinks');
   if(mobileLinks && !mobileLinks.dataset.ready) {
     const mobileMenu=document.getElementById('personalMobileMenu');
+    const mobileViewport=window.matchMedia('(max-width:767px)');
+    const renderMoreLinks=()=>{
+      const visibleSidebarIds=new Set(PersonalUI.navigation.filter(group=>!mobileViewport.matches||MOBILE_PRIMARY_VIEWS.has(group.id)).map(group=>group.id));
+      mobileLinks.innerHTML=views.filter(([id])=>!visibleSidebarIds.has(id)).map(([id,label,icon])=>`<button type="button" class="personal-more-link" aria-label="${escapeAttr(label)}" data-mobile-destination="${id}"><span class="personal-more-icon">${iconSvg(icon)}</span><span class="personal-more-label">${escapeHtml(label)}</span></button>`).join('');
+    };
     mobileMenu.addEventListener('toggle',()=>{mobileLinks.hidden=!mobileMenu.open;});
     document.addEventListener('keydown',event=>{if(event.key==='Escape') {mobileMenu.open=false;mobileLinks.hidden=true;}});
-    mobileLinks.innerHTML=views.map(([id,label])=>`<button type="button" class="tiny-btn" aria-label="${escapeAttr(label)}" data-mobile-destination="${id}">${escapeHtml(label)}</button>`).join('');
+    mobileViewport.addEventListener('change',renderMoreLinks);
+    renderMoreLinks();
     mobileLinks.addEventListener('click',event=>{
       const button=event.target.closest?.('[data-mobile-destination]');
       if(!button) return;
@@ -4641,12 +4643,12 @@ function renderTabs() {
     mobileLinks.dataset.ready='1';
   }
   tabs?.querySelectorAll('[data-tab]').forEach(button => {
-    const active=button.dataset.tab===ui.tab;
+    const selected=PersonalUI.navigation.find(group=>group.id===ui.tab)||PersonalUI.navigation.find(group=>group.children.includes(ui.tab));
+    const active=button.dataset.tab===(selected?.id||ui.tab);
     button.classList.toggle('active',active);
     if(active) button.setAttribute('aria-current','page');
     else button.removeAttribute('aria-current');
   });
-  tabs?.querySelectorAll('[data-nav-parent]').forEach(details=>{const group=PersonalUI.navigation.find(group=>group.id===details.dataset.navParent); if(group.children.includes(ui.tab)) details.open=true;});
   document.querySelectorAll('.view').forEach(v => v.classList.toggle('active', v.id===ui.tab));
   if(window.matchMedia('(max-width: 1180px)').matches) {
     requestAnimationFrame(() => {
@@ -4984,7 +4986,7 @@ function applyPersonalPreferences() {
   document.body.classList.toggle('personal-no-motivation',!personalPreferences.motivation);
 }
 function renderPersonalSettings() {
-  const labels={compactDashboard:'Painel essencial: tarefas, próxima sessão e revisões',gamification:'Exibir gamificação e recompensas',mascot:'Exibir tutor flutuante',motivation:'Exibir mensagens motivacionais'};
+  const labels={compactDashboard:'Painel essencial: Caso do Dia, tarefas, próxima sessão e revisões',gamification:'Exibir gamificação e recompensas',mascot:'Exibir tutor flutuante',motivation:'Exibir mensagens motivacionais'};
   return `<section class="card personal-settings"><h2>Preferências do site</h2><p class="muted">Personalize este aparelho. Seu histórico e suas recompensas são preservados.</p>${Object.entries(labels).map(([key,label])=>`<label><input type="checkbox" data-personal-preference="${key}" ${personalPreferences[key]?'checked':''}> ${escapeHtml(label)}</label>`).join('')}</section>`;
 }
 function renderBiblioteca() {
@@ -5706,7 +5708,7 @@ function renderPainel() {
     <div class="dashboard-global-head"><div class="dashboard-greeting"><h1>${escapeHtml(greetingMessage())}</h1></div><label class="dashboard-date-control"><span class="sr-only">Data do painel</span><div class="dashboard-date-input-row"><button class="tiny-btn" id="dashboardDatePrev" type="button" aria-label="Dia anterior">‹</button><input class="input" id="dashboardDate" inputmode="numeric" placeholder="dd/mm/aaaa"><button class="tiny-btn" id="dashboardDateNext" type="button" aria-label="Dia seguinte">›</button><button class="tiny-btn primary" id="dashboardDateToday" type="button">Hoje</button></div></label><div class="dashboard-head-tools">${renderCountdown()}</div></div>
     <div class="dashboard-desktop-grid">
       ${renderContinueStudying()}
-      ${personalPreferences.compactDashboard?'':renderCasoDoDia()}
+      ${renderCasoDoDia()}
       ${personalPreferences.compactDashboard?'':renderCasosParaEstudar()}
       ${renderPersonalDailyTasks(ui.refDate)}
       ${renderDashboardMood(dashboardLog)}

@@ -29,7 +29,7 @@
   --focus: 0 0 0 4px rgba(40, 88, 214, .14);
   --radius: 18px;
   --radius-sm: 13px;
-  --sidebar-width: 276px;
+  --sidebar-width: 248px;
   --sidebar-collapsed-width: 68px;
   --shell-gutter: clamp(18px, 2.5vw, 46px);
 }
@@ -143,6 +143,8 @@ h3 { font-size: 15px; font-weight: 600; }
   font-weight: 500;
   transition: color .18s ease, background .18s ease, transform .18s ease;
 }
+.app-sidebar .tab-label{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+body.sidebar-collapsed .app-sidebar .tab-label{display:none}
 
 .app-sidebar .tab:hover {
   color: #fff;
@@ -496,6 +498,10 @@ tr:hover td { background: color-mix(in srgb, var(--soft-blue) 58%, transparent);
 }
 
 .qbank-mode .question-topbar { border-color: var(--line); background: color-mix(in srgb, var(--panel) 94%, var(--soft-blue)); }
+.question-layout.qbank-mode{max-width:none}
+.qbank-mode .question-main{width:100%;max-width:none}
+.qbank-mode .question-comment-card p{max-width:none}
+@media(min-width:768px){.qbank-mode .question-body{padding:24px clamp(18px,2vw,30px) 32px}}
 .qbank-mode .question-stem { border-radius: 15px; background: color-mix(in srgb, var(--soft-blue) 62%, var(--panel)); }
 .answer-option, .sim-answer { border-color: var(--line); border-radius: 13px; background: var(--panel); }
 .answer-option:hover, .sim-answer:hover { border-color: rgba(40, 88, 214, .4); background: var(--soft-blue); }
@@ -590,7 +596,7 @@ body.dark .continue-study-card { background: radial-gradient(circle at 92% 0, rg
 
 /* Responsividade */
 @media (max-width: 1180px) and (min-width: 768px) {
-  :root { --tablet-sidebar: 88px; }
+  :root { --tablet-sidebar: 72px; }
   .app-sidebar, body.sidebar-collapsed .app-sidebar { width: var(--tablet-sidebar) !important; }
   .app-header, body.sidebar-collapsed .app-header,
   main, body.sidebar-collapsed main { width: calc(100% - var(--tablet-sidebar)); margin-left: var(--tablet-sidebar); }
@@ -598,7 +604,15 @@ body.dark .continue-study-card { background: radial-gradient(circle at 92% 0, rg
   .sidebar-brand-copy, .sidebar-toggle, .sidebar-foot, .tab-group-label { display: none; }
   .app-sidebar .tabs { padding: 14px 8px; }
   .app-sidebar .tab, body.sidebar-collapsed .app-sidebar .tab { min-height: 60px; flex-direction: column; gap: 3px; padding: 7px 3px; }
-  .app-sidebar .tab-label, body.sidebar-collapsed .app-sidebar .tab-label { color: inherit; font-size: 9px; line-height: 1.15; }
+  .app-sidebar .tab-label, body.sidebar-collapsed .app-sidebar .tab-label { display:none!important; }
+}
+@media(min-width:960px) and (max-width:1180px){
+  :root{--tablet-sidebar:216px}
+  .sidebar-brand{grid-template-columns:44px minmax(0,1fr);justify-content:start;padding:18px 14px;gap:10px}
+  .sidebar-brand-copy{display:block}
+  .sidebar-brand-copy strong{font-size:15px}
+  .app-sidebar .tab,body.sidebar-collapsed .app-sidebar .tab{flex-direction:row;min-height:46px;padding:9px 10px;gap:10px;justify-content:flex-start}
+  .app-sidebar .tab-label,body.sidebar-collapsed .app-sidebar .tab-label{display:block!important;max-width:none;color:inherit;font-size:13px;line-height:1.4;white-space:nowrap;text-align:left}
 }
 
 @media (max-width: 767px) {
@@ -1463,9 +1477,6 @@ body.dark #flashcards .flashcard-stage { background: radial-gradient(circle at 5
 /* Personal workspace: restrained surfaces and secondary navigation. */
 main{grid-template-columns:minmax(0,1fr)}
 main>.view{min-width:0}
-.personal-nav-details{margin:0 8px 8px;border-left:1px solid var(--border,#dbe2e8)}
-.personal-nav-details summary{padding:7px 12px;font-size:.75rem;color:var(--muted,#64748b);cursor:pointer}
-.personal-nav-details .tab{width:100%;margin:2px 0;font-size:.85rem}
 .personal-settings label{display:flex;align-items:center;gap:10px;margin:14px 0;cursor:pointer}
 .personal-settings input{width:18px;height:18px;accent-color:var(--primary,#2563eb)}
 .personal-library-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-top:24px}
@@ -1475,28 +1486,49 @@ main>.view{min-width:0}
 .personal-no-gamification .dashboard-gamification-popover,.personal-no-gamification .rank-promotion-overlay,.personal-no-gamification .simulation-reward-overlay{display:none}
 .personal-compact #painel .dashboard-desktop-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
 .personal-compact #painel .dashboard-desktop-grid> *{grid-column:auto;grid-row:auto}
-.personal-compact #painel .dashboard-road-region,.personal-compact #painel .continue-study-card{grid-column:1/-1}
+.personal-compact #painel .dashboard-road-region,.personal-compact #painel .continue-study-card,.personal-compact #painel .caso-do-dia-card{grid-column:1/-1}
 .personal-compact .card{box-shadow:0 2px 8px #00000008}
 .personal-compact #painel .dashboard-greeting h1{font-size:1.6rem}
 .personal-compact #painel .dashboard-road{background:transparent}
 .tool-danger-zone{flex-wrap:wrap}
 .personal-history-cleanup{margin-top:20px;flex-basis:100%}
-.personal-mobile-menu{display:none}
+.personal-mobile-menu{display:block}
+.personal-mobile-menu summary{padding:8px 12px;border:1px solid var(--line,#dbe2e8);border-radius:8px;cursor:pointer;font-size:.8rem;white-space:nowrap}
 #personalMobileLinks{display:none}
-@media(min-width:768px) and (max-width:1180px){
-  .personal-nav-details{display:none}
-  .personal-mobile-menu{display:block}
-  #personalMobileLinks:not([hidden]){position:fixed;right:20px;top:80px;bottom:40px;z-index:1000;width:320px;overflow:auto;background:var(--panel,#fff);border:1px solid var(--line,#dbe2e8);border-radius:12px;box-shadow:0 8px 24px #0002;padding:12px;display:grid;gap:6px}
-  #personalMobileLinks button{min-height:44px;color:var(--text);font-size:.9rem}
-}
+#personalMobileLinks:not([hidden]){position:fixed;right:20px;top:80px;z-index:1000;width:500px;max-width:calc(100vw - 40px);max-height:calc(100dvh - 112px);overflow:auto;overscroll-behavior:contain;background:var(--panel,#fff);border:1px solid var(--line,#dbe2e8);border-radius:18px;box-shadow:0 18px 48px #17213b26;padding:18px 18px 23px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-content:start;gap:14px 12px}
+#personalMobileLinks .personal-more-link{--more-hue:210;--more-top:hsl(var(--more-hue) 75% 97%);--more-bottom:hsl(var(--more-hue) 65% 90%);--more-edge:hsl(var(--more-hue) 45% 66%);--more-border:hsl(var(--more-hue) 48% 79%);--more-ink:hsl(var(--more-hue) 55% 27%);display:flex;align-items:center;gap:10px;min-height:62px;min-width:0;padding:10px 12px;border:1px solid var(--more-border);border-radius:13px;background:linear-gradient(145deg,var(--more-top),var(--more-bottom));color:var(--more-ink);font-size:13px;font-weight:650;text-align:left;box-shadow:0 4px 0 var(--more-edge),0 7px 14px #17213b12,inset 0 1px 0 #ffffffb3;transition:transform .16s ease,box-shadow .16s ease}
+#personalMobileLinks .personal-more-icon{display:grid;place-items:center;flex:0 0 34px;width:34px;height:34px;border-radius:10px;background:#ffffff80;box-shadow:inset 0 1px 2px #17213b0d,0 1px 0 #ffffff99}
+#personalMobileLinks .personal-more-icon .app-icon{--icon-size:21px;color:inherit}
+#personalMobileLinks .personal-more-label{min-width:0;white-space:nowrap}
+#personalMobileLinks .personal-more-link:focus-visible{outline:3px solid var(--primary);outline-offset:6px}
+@media(hover:hover){#personalMobileLinks .personal-more-link:hover{transform:translateY(-2px);box-shadow:0 6px 0 var(--more-edge),0 10px 18px #17213b1c,inset 0 1px 0 #ffffffb3}}
+#personalMobileLinks .personal-more-link:active{transform:translateY(3px);box-shadow:0 1px 0 var(--more-edge),0 3px 8px #17213b12,inset 0 1px 0 #ffffffb3}
+#personalMobileLinks [data-mobile-destination="radar-saude"]{--more-hue:196}
+#personalMobileLinks [data-mobile-destination="materiais"]{--more-hue:42}
+#personalMobileLinks [data-mobile-destination="feynman"]{--more-hue:264}
+#personalMobileLinks [data-mobile-destination="caderno-erros"]{--more-hue:9}
+#personalMobileLinks [data-mobile-destination="prescricao"]{--more-hue:148}
+#personalMobileLinks [data-mobile-destination="anatomia"]{--more-hue:324}
+#personalMobileLinks [data-mobile-destination="semiologia"]{--more-hue:222}
+#personalMobileLinks [data-mobile-destination="ecg"]{--more-hue:350}
+#personalMobileLinks [data-mobile-destination="radiografia"]{--more-hue:292}
+#personalMobileLinks [data-mobile-destination="areas"]{--more-hue:174}
+#personalMobileLinks [data-mobile-destination="historico"]{--more-hue:240}
+#personalMobileLinks [data-mobile-destination="importar-questoes"]{--more-hue:27}
+#personalMobileLinks [data-mobile-destination="aulas"]{--more-hue:202}
+#personalMobileLinks [data-mobile-destination="questoes"]{--more-hue:78}
+#personalMobileLinks [data-mobile-destination="biblioteca"]{--more-hue:53}
+#personalMobileLinks [data-mobile-destination="ferramentas"]{--more-hue:210}
+body.dark #personalMobileLinks .personal-more-link{--more-top:hsl(var(--more-hue) 32% 26%);--more-bottom:hsl(var(--more-hue) 28% 19%);--more-edge:hsl(var(--more-hue) 32% 11%);--more-border:hsl(var(--more-hue) 28% 37%);--more-ink:hsl(var(--more-hue) 72% 88%);box-shadow:0 4px 0 var(--more-edge),0 7px 14px #0003,inset 0 1px 0 #ffffff14}
+body.dark #personalMobileLinks .personal-more-icon{background:#ffffff0d;box-shadow:inset 0 1px 2px #0002,0 1px 0 #ffffff0d}
 @media(max-width:767px){
   .personal-compact #painel .dashboard-desktop-grid{grid-template-columns:minmax(0,1fr);gap:14px}
-  .personal-nav-details{display:none}
-  .personal-mobile-menu{display:block}
-  .personal-mobile-menu summary{padding:8px 12px;border:1px solid var(--line,#dbe2e8);border-radius:8px;cursor:pointer;font-size:.8rem}
-  #personalMobileLinks:not([hidden]){position:fixed;right:12px;top:72px;bottom:88px;z-index:1000;width:min(320px,calc(100vw - 24px));overflow:auto;background:var(--panel,#fff);border:1px solid var(--line,#dbe2e8);border-radius:12px;box-shadow:0 8px 24px #0002;padding:12px;display:grid;gap:6px}
-  #personalMobileLinks button{justify-content:flex-start;min-height:44px;color:var(--text);font-size:.9rem}
+  #personalMobileLinks:not([hidden]){right:12px;top:72px;max-width:calc(100vw - 24px);max-height:calc(100dvh - 160px)}
+}
+@media(max-width:599px){
+  #personalMobileLinks:not([hidden]){width:320px;grid-template-columns:minmax(0,1fr)}
 }
 @media(prefers-reduced-motion:reduce){
   .personal-compact *{scroll-behavior:auto;animation:none;transition:none}
+  #personalMobileLinks .personal-more-link{transition:none}
 }

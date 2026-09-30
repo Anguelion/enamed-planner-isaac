@@ -9,6 +9,8 @@
   const navigation=[
     {id:'painel',label:'Hoje',icon:'dashboard',children:[]},
     {id:'cronograma',label:'Blocos',icon:'mission',children:['aulas','questoes','materiais']},
+    {id:'aulas',label:'Videoaulas',icon:'video',children:[]},
+    {id:'questoes',label:'Questões',icon:'question',children:[]},
     {id:'flashcards',label:'Revisões',icon:'flashcard',children:['caderno-erros','feynman']},
     {id:'simulados',label:'Simulados',icon:'simulation',children:[]},
     {id:'analise',label:'Progresso',icon:'analysis',children:['areas','historico']},
