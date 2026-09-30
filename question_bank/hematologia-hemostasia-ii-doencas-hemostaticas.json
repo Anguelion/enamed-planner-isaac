@@ -2107,10 +2107,22 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069439",
-      "ankiGuid": "u,]|.)BH?y"
+      "ankiGuid": "u,]|.)BH?y",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Graziella-13-anos-e111f17566ff/",
+        "sourceQuestionId": "4000126002",
+        "matchedAt": "2026-09-30T22:21:10.614Z",
+        "confidence": 0.9894117647058822
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-4142ecd02629af54",
