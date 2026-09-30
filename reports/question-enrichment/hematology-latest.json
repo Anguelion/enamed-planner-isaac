@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-29T22:21:08.767Z",
+  "generatedAt": "2026-09-30T12:43:20.923Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
@@ -7,177 +7,182 @@
   "changed": 6,
   "results": [
     {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-cfe1c7799ccffc07",
-      "number": "1060b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-3d999be5410d07b2",
+      "number": "1045c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-65-anos93d43627d4/",
-      "sourceQuestionId": "4000022758",
-      "matchedAt": "2026-09-29T22:21:09.989Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-3-anos-idade418f822ecf/",
+      "sourceQuestionId": "4000050310",
+      "matchedAt": "2026-09-30T12:43:22.195Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Pediatria",
+        "Hematologia Pediátrica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Diagnóstico da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: Plaquetopenia isolada com valor de 19 mil apresentando petéquias e equimoses sem sangramento mucoso.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-3-anos-idade418f822ecf/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-94fb1c7b031fe0e8",
+      "number": "1046c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Sindrome-Anticorpo108070f972/",
+      "sourceQuestionId": "4000042942",
+      "matchedAt": "2026-09-30T12:43:28.816Z",
       "similarity": {
         "stem": 1,
         "options": 0.95,
         "combined": 0.9849999999999999
       },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
+      "localAnswer": "E",
+      "remoteAnswer": "E",
       "answerMismatch": false,
       "tags": [
+        "Obstetrícia",
+        "Intercorrências obstétricas /obstetrícia patológica",
+        "Abortamento habitual (Abortamento de repetição) e insuficiência istmocervical",
         "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Hemostasia primária",
-        "Trombocitopenia induzida pela heparina (HIT)",
-        "Diagnóstico da trombocitopenia induzida pela heparina (HIT)",
-        "Tratamento da trombocitopenia induzida pela heparina (HIT)",
-        "Hemostasia Secundária",
-        "Fármacos e agentes relacionados a hemostasia secundária",
-        "Heparinas",
-        "Heparina baixo peso molecular"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Heparina baixo peso molecular. Conduta/resposta: Suspensão da enoxaparina.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/paciente-65-anos93d43627d4/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-908ea652ff76d6f8",
-      "number": "1061b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-45-anos88d4ffd884/",
-      "sourceQuestionId": "4000008263",
-      "matchedAt": "2026-09-29T22:21:16.642Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Hemostasia primária",
-        "Trombocitopenia induzida pela heparina (HIT)",
-        "Diagnóstico da trombocitopenia induzida pela heparina (HIT)",
-        "Tratamento da trombocitopenia induzida pela heparina (HIT)",
-        "Hemostasia Secundária",
-        "Fármacos e agentes relacionados a hemostasia secundária",
-        "Heparinas"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Heparinas. Conduta/resposta: Iniciar argatroban.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-45-anos88d4ffd884/",
-        "https://med.estrategia.com/public/questoes/homem-com-45-anos74d943f18b/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-735e5aaa02a81e88",
-      "number": "1062b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/trombocitopenia133bef58cd/",
-      "sourceQuestionId": "4000045504",
-      "matchedAt": "2026-09-29T22:21:22.682Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Hemostasia primária",
-        "Trombocitopenia induzida pela heparina (HIT)"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Trombocitopenia induzida pela heparina (HIT). Conduta/resposta: ocorre entre o quinto e décimo dias de tratamento e é decorrente de processo autoimune dependente de IgG.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/trombocitopenia133bef58cd/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-f2c832dd7cebb355",
-      "number": "1042c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/jovem-20-anos-procura65f4164459/",
-      "sourceQuestionId": "4000068810",
-      "matchedAt": "2026-09-29T22:21:29.113Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Laboratório da hemostasia",
-        "Hemostasia Secundária",
-        "Principais doenças",
-        "Hemofilia",
-        "Hemostasia primária",
-        "Alterações qualitativas das plaquetas",
-        "Doença de von Willebrand"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Doença de von Willebrand. Conduta/resposta: Hemofilia A, hemofilia B e doença de von Willebrand.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/jovem-20-anos-procura65f4164459/",
-        "https://med.estrategia.com/public/questoes/jovem-20-anos-procura652b2ffa0a/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-eec0cbf6d779b084",
-      "number": "1043c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-e-causa-mais13861ef12e/",
-      "sourceQuestionId": "4000054386",
-      "matchedAt": "2026-09-29T22:21:34.989Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
+        "Reumatologia",
+        "Doenças autoimunes do tecido conjuntivo",
+        "Síndrome antifosfolípide (SAF)",
+        "Etiologia do abortamento habitual",
+        "Manifestações clínicas",
+        "Investigação diagnóstica e tratamento",
+        "Causas hematológicas",
+        "Complicações obstétricas",
         "Hematologia",
         "Hemostasia",
         "Trombofilia",
-        "Principais trombofilias hereditárias"
+        "Principais trombofilias adquiridas",
+        "Síndrome do anticorpo anti-fosfolipídeo (SAAF)",
+        "Trombofilias adquiridas"
       ],
-      "comment": "Gabarito confirmado: A. Assunto: Principais trombofilias hereditárias. Conduta/resposta: Fator V de Leiden.",
+      "comment": "Gabarito confirmado: E. Assunto: Trombofilias adquiridas. Conduta/resposta: perdas fetais recorrentes no segundo trimestre da gestação.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Qual-e-causa-mais13861ef12e/"
+        "https://med.estrategia.com/public/questoes/Sindrome-Anticorpo108070f972/"
       ]
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-7c6372f38d5f3ae2",
-      "number": "1044c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-8785af2d2199e7cf",
+      "number": "1047c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-manifestacoes7d6b387be/",
-      "sourceQuestionId": "4000052426",
-      "matchedAt": "2026-09-29T22:21:41.348Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/jovem-com-historia587ea13c70/",
+      "sourceQuestionId": "4000011195",
+      "matchedAt": "2026-09-30T12:43:34.732Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Obstetrícia",
+        "Intercorrências obstétricas /obstetrícia patológica",
+        "Abortamento habitual (Abortamento de repetição) e insuficiência istmocervical",
+        "Clínica Médica",
+        "Reumatologia",
+        "Doenças autoimunes do tecido conjuntivo",
+        "Síndrome antifosfolípide (SAF)",
+        "Diagnóstico",
+        "Hematologia",
+        "Hemostasia",
+        "Trombofilia",
+        "Principais trombofilias adquiridas",
+        "Síndrome do anticorpo anti-fosfolipídeo (SAAF)"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Síndrome do anticorpo anti-fosfolipídeo (SAAF). Conduta/resposta: do anticorpo antifosfolipídeo.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/jovem-com-historia587ea13c70/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-29f52e97201ba69c",
+      "number": "1048c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Dadas-afirmativas4643ecf633/",
+      "sourceQuestionId": "4000006658",
+      "matchedAt": "2026-09-30T12:43:41.323Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Púrpura trombocitopênica imunológica (PTI). Conduta/resposta: II, apenas.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Dadas-afirmativas4643ecf633/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-3fce42e03fc969eb",
+      "number": "1049c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/insuficiencia-cardiaca38f860956f/",
+      "sourceQuestionId": "4000003202",
+      "matchedAt": "2026-09-30T12:43:47.200Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Trombofilia"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Trombofilia. Conduta/resposta: Estase sanguínea intracardíaca e periférica; lesão endotelial; status pró-trombótico.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/insuficiencia-cardiaca38f860956f/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-e135f54de8422bda",
+      "number": "1050c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Menino-4m-e-trazido-a66026ea3ab/",
+      "sourceQuestionId": "4000130207",
+      "matchedAt": "2026-09-30T12:43:53.488Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -188,19 +193,16 @@
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
-        "Reumatologia",
-        "Doenças autoimunes do tecido conjuntivo",
-        "Síndrome antifosfolípide (SAF)",
-        "Manifestações clínicas",
         "Hematologia",
         "Hemostasia",
-        "Trombofilia",
-        "Principais trombofilias adquiridas",
-        "Síndrome do anticorpo anti-fosfolipídeo (SAAF)"
+        "Classificação",
+        "Hemostasia Secundária",
+        "Principais doenças",
+        "Hemofilia"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Síndrome do anticorpo anti-fosfolipídeo (SAAF). Conduta/resposta: Ataque isquêmico transitório, livedo reticularis, vegetação de Liebman Sacks.",
+      "comment": "Gabarito confirmado: D. Assunto: Hemofilia. Conduta/resposta: Reposição de Fator VIII.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Sa-manifestacoes7d6b387be/"
+        "https://med.estrategia.com/public/questoes/Menino-4m-e-trazido-a66026ea3ab/"
       ]
     }
   ]

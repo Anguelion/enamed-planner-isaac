@@ -4750,7 +4750,67 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-manifestacoes7d6b387be/",
       "localAnswer": "D",
       "remoteAnswer": "D"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-3d999be5410d07b2": {
+      "number": "1045c",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-30T12:43:22.196Z",
+      "nextAttemptAt": "2026-10-07T12:43:22.196Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-3-anos-idade418f822ecf/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-94fb1c7b031fe0e8": {
+      "number": "1046c",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-30T12:43:28.819Z",
+      "nextAttemptAt": "2026-10-07T12:43:28.819Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Sindrome-Anticorpo108070f972/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-8785af2d2199e7cf": {
+      "number": "1047c",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-30T12:43:34.733Z",
+      "nextAttemptAt": "2026-10-07T12:43:34.733Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/jovem-com-historia587ea13c70/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-29f52e97201ba69c": {
+      "number": "1048c",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-30T12:43:41.324Z",
+      "nextAttemptAt": "2026-10-07T12:43:41.324Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Dadas-afirmativas4643ecf633/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-3fce42e03fc969eb": {
+      "number": "1049c",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-30T12:43:47.200Z",
+      "nextAttemptAt": "2026-10-07T12:43:47.200Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/insuficiencia-cardiaca38f860956f/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-e135f54de8422bda": {
+      "number": "1050c",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-09-30T12:43:53.489Z",
+      "nextAttemptAt": "2026-10-07T12:43:53.489Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Menino-4m-e-trazido-a66026ea3ab/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     }
   },
-  "updatedAt": "2026-09-29T22:21:41.348Z"
+  "updatedAt": "2026-09-30T12:43:53.489Z"
 }
