@@ -1,85 +1,118 @@
 {
-  "generatedAt": "2026-10-01T13:27:29.920Z",
+  "generatedAt": "2026-10-01T22:45:05.915Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 2,
+  "changed": 6,
   "results": [
     {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-42c84acaf1996f11",
-      "number": "1003b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-512a183cd73c237b",
+      "number": "1001c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-48-anos87404fa461/",
-      "sourceQuestionId": "4000183892",
-      "matchedAt": "2026-10-01T13:27:31.163Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino1297a0ce477/",
+      "sourceQuestionId": "4000185578",
+      "matchedAt": "2026-10-01T22:45:07.016Z",
       "similarity": {
-        "stem": 0.9852941176470589,
+        "stem": 1,
         "options": 1,
-        "combined": 0.9897058823529412
+        "combined": 1
       },
       "localAnswer": "D",
       "remoteAnswer": "D",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
+        "Reumatologia",
+        "Doenças autoimunes do tecido conjuntivo",
+        "Síndrome antifosfolípide (SAF)",
         "Hematologia",
         "Hemostasia",
-        "Hemostasia Secundária",
-        "Fármacos e agentes relacionados a hemostasia secundária",
-        "Anticoagulantes orais diretos"
+        "Trombofilia",
+        "Principais trombofilias adquiridas",
+        "Síndrome do anticorpo anti-fosfolipídeo (SAAF)",
+        "Diagnóstico da síndrome do anticorpo anti-fosfolipídeo (SAAF)",
+        "Tratamento da síndrome do anticorpo anti-fosfolipídeo (SAAF)"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Anticoagulantes orais diretos. Conduta/resposta: idarucizumabe",
+      "comment": "Gabarito confirmado: D. Assunto: Tratamento da síndrome do anticorpo anti-fosfolipídeo (SAAF). Conduta/resposta: Enoxaparina para anticoagulação a curto prazo e warfarin para longo prazo.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-48-anos87404fa461/"
+        "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino1297a0ce477/"
       ]
     },
     {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-f40052d8d21dee25",
-      "number": "1004b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
-      "changed": false,
-      "status": "answer_mismatch",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Primigesta-34-anos-com755b9bdbb9/",
-      "sourceQuestionId": "4000182115",
-      "matchedAt": "2026-10-01T13:27:37.620Z",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-29718ab5e999c649",
+      "number": "1002c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/jovem-21-anos-e-levado8490119493/",
+      "sourceQuestionId": "4000184688",
+      "matchedAt": "2026-10-01T22:45:13.008Z",
       "similarity": {
-        "stem": 0.984375,
-        "options": 0.9040646853146853,
-        "combined": 0.9602819055944055
+        "stem": 1,
+        "options": 1,
+        "combined": 1
       },
-      "localAnswer": "A",
-      "remoteAnswer": "B",
-      "answerMismatch": true,
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
       "tags": [
-        "Obstetrícia",
-        "Doenças associadas à gestação",
-        "Trombose na gestação",
         "Clínica Médica",
         "Hematologia",
         "Hemostasia",
-        "Hemostasia Secundária",
-        "Fármacos e agentes relacionados a hemostasia secundária",
-        "Anticoagulantes antagonistas da vitamina K",
-        "Heparinas"
+        "Laboratório da hemostasia",
+        "Hemostasia terciária",
+        "Fármacos e agentes relacionados a hemostasia terciária (fibrinolíticos e antifibrinolíticos)",
+        "Medicina transfusional",
+        "Hemoderivados",
+        "Concentrado protrombínico"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Heparinas. Conduta/resposta: Suspender warfarin e iniciar dose terapêutica de enoxaparina.",
+      "comment": "Gabarito confirmado: C. Assunto: Concentrado protrombínico. Conduta/resposta: Repetir 1,0 grama de Ácido Tranexâmico",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Primigesta-34-anos-com755b9bdbb9/",
-        "https://med.estrategia.com/public/questoes/Primigesta-16-anos-32782f5f1555/"
+        "https://med.estrategia.com/public/questoes/jovem-21-anos-e-levado8490119493/"
       ]
     },
     {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-7ad8918382c770be",
-      "number": "1005b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-199695956d76a816",
+      "number": "1003c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-considerados9f1f7605e/",
-      "sourceQuestionId": "4000181613",
-      "matchedAt": "2026-10-01T13:27:44.237Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-21-anos12570610534/",
+      "sourceQuestionId": "4000184650",
+      "matchedAt": "2026-10-01T22:45:18.631Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Diagnóstico da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: Anticorpos anti-HIV.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Homem-21-anos12570610534/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-52c3873bcc13d616",
+      "number": "1004c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/pediatria-sa-causas99aad35f9/",
+      "sourceQuestionId": "4000184640",
+      "matchedAt": "2026-10-01T22:45:24.648Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -92,40 +125,87 @@
         "Clínica Médica",
         "Hematologia",
         "Hemostasia",
-        "Hemostasia Secundária",
-        "Fármacos e agentes relacionados a hemostasia secundária",
-        "Anticoagulantes orais diretos",
-        "Heparinas",
-        "Heparina baixo peso molecular"
+        "Hemostasia primária",
+        "Principais doenças associadas a plaquetose e plaquetopenia",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)",
+        "Leucemias",
+        "Leucemias agudas",
+        "Leucemia linfoide aguda (LLA)",
+        "Quadro clínico da leucemia linfoide aguda (LLA)"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Heparina baixo peso molecular. Conduta/resposta: dabigatrana.",
+      "comment": "Gabarito confirmado: D. Assunto: Quadro clínico da leucemia linfoide aguda (LLA). Conduta/resposta: Púrpura trombocitopênica autoimune (P.T.I) e púrpura de Henoch-Sehonlein.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Sa-considerados9f1f7605e/"
+        "https://med.estrategia.com/public/questoes/pediatria-sa-causas99aad35f9/",
+        "https://med.estrategia.com/public/questoes/pediatria-sa-causas988ac9e52/"
       ]
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-29a1ec9cb5a8eaaf",
-      "number": "1057c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-650115f87af4559f",
+      "number": "1005c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/trombocitopenia-imune9db7fe2e5/",
+      "sourceQuestionId": "4000184635",
+      "matchedAt": "2026-10-01T22:45:30.502Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Diagnóstico da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: É caracterizada com plaquetopenia abaixo de 100.000/mm³.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/trombocitopenia-imune9db7fe2e5/"
+      ]
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-0e47178571a26ce2",
-      "number": "1058c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-4940c1a22db4696c",
+      "number": "1060c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-0d7f8e8605d3628c",
-      "number": "1059c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-34-anos-passou1801cceeebf/",
+      "sourceQuestionId": "4000033337",
+      "matchedAt": "2026-10-01T22:45:36.484Z",
+      "similarity": {
+        "stem": 0.9926470588235294,
+        "options": 1,
+        "combined": 0.9948529411764706
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Introdução à púrpura trombocitopênica imunológica (PTI)",
+        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)",
+        "Anemias hemolíticas",
+        "Anemias Microangiopáticas",
+        "Púrpura Trombocitopênica Trombótica (PTT)",
+        "Fisiopatologia da púrpura trombocitopênica trombótica (PTT)",
+        "Quadro clínico da púrpura trombocitopênica trombótica (PTT)"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Quadro clínico da púrpura trombocitopênica trombótica (PTT). Conduta/resposta: Destruição de plaquetas por autoanticorpos e possível inibição da produção/liberação dessas células pelos megacariócitos.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Mulher-34-anos-passou1801cceeebf/",
+        "https://med.estrategia.com/public/questoes/Mulher-32-anos-idade97bb80d3a8/"
+      ]
     }
   ]
 }

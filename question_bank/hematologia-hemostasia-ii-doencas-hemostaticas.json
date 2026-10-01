@@ -31,10 +31,28 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Reumatologia",
+        "Doenças autoimunes do tecido conjuntivo",
+        "Síndrome antifosfolípide (SAF)",
+        "Hemostasia",
+        "Trombofilia",
+        "Principais trombofilias adquiridas",
+        "Síndrome do anticorpo anti-fosfolipídeo (SAAF)",
+        "Diagnóstico da síndrome do anticorpo anti-fosfolipídeo (SAAF)",
+        "Tratamento da síndrome do anticorpo anti-fosfolipídeo (SAAF)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069389",
-      "ankiGuid": "Ean[7PeeCy"
+      "ankiGuid": "Ean[7PeeCy",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino1297a0ce477/",
+        "sourceQuestionId": "4000185578",
+        "matchedAt": "2026-10-01T22:45:07.016Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-29718ab5e999c649",
@@ -64,10 +82,26 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Laboratório da hemostasia",
+        "Hemostasia terciária",
+        "Fármacos e agentes relacionados a hemostasia terciária (fibrinolíticos e antifibrinolíticos)",
+        "Medicina transfusional",
+        "Hemoderivados",
+        "Concentrado protrombínico",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069390",
-      "ankiGuid": "th`qI@(r1M"
+      "ankiGuid": "th`qI@(r1M",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/jovem-21-anos-e-levado8490119493/",
+        "sourceQuestionId": "4000184688",
+        "matchedAt": "2026-10-01T22:45:13.008Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-199695956d76a816",
@@ -97,10 +131,23 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069391",
-      "ankiGuid": "ms%wF9rldB"
+      "ankiGuid": "ms%wF9rldB",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-21-anos12570610534/",
+        "sourceQuestionId": "4000184650",
+        "matchedAt": "2026-10-01T22:45:18.631Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-52c3873bcc13d616",
@@ -130,10 +177,28 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Principais doenças associadas a plaquetose e plaquetopenia",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)",
+        "Leucemias",
+        "Leucemias agudas",
+        "Leucemia linfoide aguda (LLA)",
+        "Quadro clínico da leucemia linfoide aguda (LLA)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069392",
-      "ankiGuid": "M3(U,?t_{W"
+      "ankiGuid": "M3(U,?t_{W",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/pediatria-sa-causas99aad35f9/",
+        "sourceQuestionId": "4000184640",
+        "matchedAt": "2026-10-01T22:45:24.648Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-650115f87af4559f",
@@ -163,10 +228,23 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069393",
-      "ankiGuid": "GCW[?LX5x%"
+      "ankiGuid": "GCW[?LX5x%",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/trombocitopenia-imune9db7fe2e5/",
+        "sourceQuestionId": "4000184635",
+        "matchedAt": "2026-10-01T22:45:30.502Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-6dda1e2a1253756e",
@@ -2421,10 +2499,29 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Introdução à púrpura trombocitopênica imunológica (PTI)",
+        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)",
+        "Anemias hemolíticas",
+        "Anemias Microangiopáticas",
+        "Púrpura Trombocitopênica Trombótica (PTT)",
+        "Fisiopatologia da púrpura trombocitopênica trombótica (PTT)",
+        "Quadro clínico da púrpura trombocitopênica trombótica (PTT)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069448",
-      "ankiGuid": "Aq4yxhNI+L"
+      "ankiGuid": "Aq4yxhNI+L",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-34-anos-passou1801cceeebf/",
+        "sourceQuestionId": "4000033337",
+        "matchedAt": "2026-10-01T22:45:36.484Z",
+        "confidence": 0.9948529411764706
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-86df04683dc9a31c",
