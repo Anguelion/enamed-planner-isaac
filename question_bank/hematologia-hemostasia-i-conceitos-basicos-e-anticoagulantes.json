@@ -2015,10 +2015,23 @@
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Anticoagulantes orais diretos",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742439693075",
-      "ankiGuid": "L>0[.g9-aw"
+      "ankiGuid": "L>0[.g9-aw",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-48-anos87404fa461/",
+        "sourceQuestionId": "4000183892",
+        "matchedAt": "2026-10-01T13:27:31.163Z",
+        "confidence": 0.9897058823529412
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-f40052d8d21dee25",
@@ -2081,10 +2094,25 @@
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Anticoagulantes orais diretos",
+        "Heparinas",
+        "Heparina baixo peso molecular",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742439693077",
-      "ankiGuid": "sB7eAv$l=c"
+      "ankiGuid": "sB7eAv$l=c",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-considerados9f1f7605e/",
+        "sourceQuestionId": "4000181613",
+        "matchedAt": "2026-10-01T13:27:44.237Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-5f2eb302ed51ec77",

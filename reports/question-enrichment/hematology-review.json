@@ -1171,7 +1171,34 @@
       "tags": [],
       "suggestedComment": "",
       "reviewedAt": "2026-09-27T12:10:09.483Z"
+    },
+    "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-f40052d8d21dee25": {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-f40052d8d21dee25",
+      "number": "1004b",
+      "status": "answer_mismatch",
+      "localAnswer": "A",
+      "remoteAnswer": "B",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Primigesta-34-anos-com755b9bdbb9/",
+      "similarity": {
+        "stem": 0.984375,
+        "options": 0.9040646853146853,
+        "combined": 0.9602819055944055
+      },
+      "tags": [
+        "Obstetrícia",
+        "Doenças associadas à gestação",
+        "Trombose na gestação",
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Anticoagulantes antagonistas da vitamina K",
+        "Heparinas"
+      ],
+      "suggestedComment": "Gabarito confirmado: B. Assunto: Heparinas. Conduta/resposta: Suspender warfarin e iniciar dose terapêutica de enoxaparina.",
+      "reviewedAt": "2026-10-01T13:27:37.620Z"
     }
   },
-  "updatedAt": "2026-09-27T12:10:09.483Z"
+  "updatedAt": "2026-10-01T13:27:37.620Z"
 }

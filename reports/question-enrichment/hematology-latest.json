@@ -1,24 +1,24 @@
 {
-  "generatedAt": "2026-09-30T22:21:08.683Z",
+  "generatedAt": "2026-10-01T13:27:29.920Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 1,
+  "changed": 2,
   "results": [
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-254709ede02e9c73",
-      "number": "1051c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-42c84acaf1996f11",
+      "number": "1003b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Graziella-13-anos-e111f17566ff/",
-      "sourceQuestionId": "4000126002",
-      "matchedAt": "2026-09-30T22:21:10.614Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-48-anos87404fa461/",
+      "sourceQuestionId": "4000183892",
+      "matchedAt": "2026-10-01T13:27:31.163Z",
       "similarity": {
-        "stem": 1,
-        "options": 0.9647058823529411,
-        "combined": 0.9894117647058822
+        "stem": 0.9852941176470589,
+        "options": 1,
+        "combined": 0.9897058823529412
       },
       "localAnswer": "D",
       "remoteAnswer": "D",
@@ -27,50 +27,101 @@
         "Clínica Médica",
         "Hematologia",
         "Hemostasia",
-        "Hemostasia primária",
-        "Púrpura trombocitopênica imunológica (PTI)"
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Anticoagulantes orais diretos"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Púrpura trombocitopênica imunológica (PTI). Conduta/resposta: Púrpura trombocitopênica – sorologias, FAN, triagem neoplásica.",
+      "comment": "Gabarito confirmado: D. Assunto: Anticoagulantes orais diretos. Conduta/resposta: idarucizumabe",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Graziella-13-anos-e111f17566ff/",
-        "https://med.estrategia.com/public/questoes/Menina-13-anos-idade-e125d6bba143/"
+        "https://med.estrategia.com/public/questoes/Paciente-48-anos87404fa461/"
       ]
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-4142ecd02629af54",
-      "number": "1052c",
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-f40052d8d21dee25",
+      "number": "1004b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": false,
+      "status": "answer_mismatch",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Primigesta-34-anos-com755b9bdbb9/",
+      "sourceQuestionId": "4000182115",
+      "matchedAt": "2026-10-01T13:27:37.620Z",
+      "similarity": {
+        "stem": 0.984375,
+        "options": 0.9040646853146853,
+        "combined": 0.9602819055944055
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "B",
+      "answerMismatch": true,
+      "tags": [
+        "Obstetrícia",
+        "Doenças associadas à gestação",
+        "Trombose na gestação",
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Anticoagulantes antagonistas da vitamina K",
+        "Heparinas"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Heparinas. Conduta/resposta: Suspender warfarin e iniciar dose terapêutica de enoxaparina.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Primigesta-34-anos-com755b9bdbb9/",
+        "https://med.estrategia.com/public/questoes/Primigesta-16-anos-32782f5f1555/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-7ad8918382c770be",
+      "number": "1005b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-considerados9f1f7605e/",
+      "sourceQuestionId": "4000181613",
+      "matchedAt": "2026-10-01T13:27:44.237Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Anticoagulantes orais diretos",
+        "Heparinas",
+        "Heparina baixo peso molecular"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Heparina baixo peso molecular. Conduta/resposta: dabigatrana.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Sa-considerados9f1f7605e/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-29a1ec9cb5a8eaaf",
+      "number": "1057c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-52bf9b7e5b38dba6",
-      "number": "1053c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-0e47178571a26ce2",
+      "number": "1058c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-4225449856151bdb",
-      "number": "1054c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-a95fd4d386b39647",
-      "number": "1055c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-c1d8e797aa1c6697",
-      "number": "1056c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-0d7f8e8605d3628c",
+      "number": "1059c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": false,
       "status": "not_found",
