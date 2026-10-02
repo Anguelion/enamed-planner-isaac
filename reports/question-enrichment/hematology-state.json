@@ -3014,9 +3014,9 @@
     "anki-hematologia-anemias-microciticas-a1a9531ff5a0bd09": {
       "number": "1088d",
       "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-09-18T20:57:55.843Z",
-      "nextAttemptAt": "2026-10-02T20:57:55.843Z",
+      "attempts": 3,
+      "lastAttemptAt": "2026-10-02T22:19:03.349Z",
+      "nextAttemptAt": "2026-10-23T22:19:03.349Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -4404,9 +4404,9 @@
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-6ccf329bc7eab851": {
       "number": "1010c",
       "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-25T21:39:34.055Z",
-      "nextAttemptAt": "2026-10-02T21:39:34.055Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-02T22:19:08.591Z",
+      "nextAttemptAt": "2026-10-16T22:19:08.591Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -4930,7 +4930,47 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-considerados6244103fb/",
       "localAnswer": "C",
       "remoteAnswer": "C"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-7c9ae9219ef0cfc5": {
+      "number": "1063c",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-02T22:19:13.775Z",
+      "nextAttemptAt": "2026-10-09T22:19:13.775Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-b09c1c5d34e05fb0": {
+      "number": "1064c",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-02T22:19:18.956Z",
+      "nextAttemptAt": "2026-10-09T22:19:18.956Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-5592c901935a3c6b": {
+      "number": "1065c",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-02T22:19:24.217Z",
+      "nextAttemptAt": "2026-10-09T22:19:24.217Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-6c0d5479905815e1": {
+      "number": "1066c",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-02T22:19:29.490Z",
+      "nextAttemptAt": "2026-10-09T22:19:29.490Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-10-02T12:46:03.132Z"
+  "updatedAt": "2026-10-02T22:19:29.490Z"
 }
