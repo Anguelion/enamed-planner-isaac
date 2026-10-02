@@ -4363,43 +4363,43 @@
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-6dda1e2a1253756e": {
       "number": "1006c",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-25T11:57:07.068Z",
-      "nextAttemptAt": "2026-10-02T11:57:07.068Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-02T12:45:31.541Z",
+      "nextAttemptAt": "2026-10-16T12:45:31.541Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Quanto-as-trombofilias147b490274/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-4e8102530e4b0ffb": {
       "number": "1007c",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-25T11:57:12.880Z",
-      "nextAttemptAt": "2026-10-02T11:57:12.880Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-02T12:45:38.268Z",
+      "nextAttemptAt": "2026-10-16T12:45:38.268Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-16-anos494280c07d/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-6656b50daf85388e": {
       "number": "1008c",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-25T11:57:18.321Z",
-      "nextAttemptAt": "2026-10-02T11:57:18.321Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-02T12:45:44.253Z",
+      "nextAttemptAt": "2026-10-16T12:45:44.253Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Joa-Lucas-dois-anos69fc7ee1ce/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-c1be4e8ee435f095": {
       "number": "1009c",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-25T11:57:23.846Z",
-      "nextAttemptAt": "2026-10-02T11:57:23.846Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-02T12:45:50.507Z",
+      "nextAttemptAt": "2026-10-16T12:45:50.507Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Menina-13-anos-idade82d1a622fe/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-6ccf329bc7eab851": {
       "number": "1010c",
@@ -4910,7 +4910,27 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-34-anos-passou1801cceeebf/",
       "localAnswer": "B",
       "remoteAnswer": "B"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-86df04683dc9a31c": {
+      "number": "1061c",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-02T12:45:56.745Z",
+      "nextAttemptAt": "2026-10-09T12:45:56.745Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Com-a-Trombocitopenia1130f741a7/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-b7835a97863eeb5a": {
+      "number": "1062c",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-02T12:46:03.132Z",
+      "nextAttemptAt": "2026-10-09T12:46:03.132Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-considerados6244103fb/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     }
   },
-  "updatedAt": "2026-10-01T22:45:36.485Z"
+  "updatedAt": "2026-10-02T12:46:03.132Z"
 }
