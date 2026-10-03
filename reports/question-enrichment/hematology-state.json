@@ -4413,63 +4413,63 @@
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-dad31f9a15ad880b": {
       "number": "1011c",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-26T11:31:25.852Z",
-      "nextAttemptAt": "2026-10-03T11:31:25.852Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-03T11:45:43.687Z",
+      "nextAttemptAt": "2026-10-17T11:45:43.687Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Menina-10-anos-idade96cec804b4/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-a0de8fee2819180d": {
       "number": "1012c",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-26T11:31:31.043Z",
-      "nextAttemptAt": "2026-10-03T11:31:31.043Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-03T11:45:49.380Z",
+      "nextAttemptAt": "2026-10-17T11:45:49.380Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Quando-paciente-com2636ba3b9e/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-16a3241b1a624d4c": {
       "number": "1013c",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-26T11:31:36.236Z",
-      "nextAttemptAt": "2026-10-03T11:31:36.236Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-03T11:45:55.241Z",
+      "nextAttemptAt": "2026-10-17T11:45:55.241Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Crianc-9-anos-idade4057fd4815/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-0b18336c1668b276": {
       "number": "1014c",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-26T11:31:41.417Z",
-      "nextAttemptAt": "2026-10-03T11:31:41.417Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "answer_mismatch",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-03T11:46:01.288Z",
+      "nextAttemptAt": "2027-10-03T11:46:01.288Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-1-ano-6-meses25480a35e8a/",
+      "localAnswer": "B",
+      "remoteAnswer": "A"
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-8140a7f9deed6435": {
       "number": "1015c",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-26T11:31:46.608Z",
-      "nextAttemptAt": "2026-10-03T11:31:46.608Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-03T11:46:07.121Z",
+      "nextAttemptAt": "2026-10-17T11:46:07.121Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-16-anos-idade10756352af0/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-5f6b4203d07820f7": {
       "number": "1016c",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-26T11:31:52.732Z",
-      "nextAttemptAt": "2026-10-03T11:31:52.732Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-03T11:46:13.524Z",
+      "nextAttemptAt": "2026-10-17T11:46:13.524Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-75-anos-idade52a94547f5/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-3e132f88ca04763b": {
       "number": "1017c",
@@ -4972,5 +4972,5 @@
       "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-10-02T22:19:29.490Z"
+  "updatedAt": "2026-10-03T11:46:13.524Z"
 }

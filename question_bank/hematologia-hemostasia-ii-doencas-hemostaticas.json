@@ -506,10 +506,23 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Tratamento da púrpura trombocitopênica imunológica (PTI)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069399",
-      "ankiGuid": "nTu~|e/HDb"
+      "ankiGuid": "nTu~|e/HDb",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Menina-10-anos-idade96cec804b4/",
+        "sourceQuestionId": "4000169952",
+        "matchedAt": "2026-10-03T11:45:43.686Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-a0de8fee2819180d",
@@ -540,10 +553,23 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Introdução à púrpura trombocitopênica imunológica (PTI)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069400",
-      "ankiGuid": "gg}AP3LR/p"
+      "ankiGuid": "gg}AP3LR/p",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Quando-paciente-com2636ba3b9e/",
+        "sourceQuestionId": "4000169433",
+        "matchedAt": "2026-10-03T11:45:49.380Z",
+        "confidence": 0.963157894736842
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-16a3241b1a624d4c",
@@ -574,10 +600,23 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Tratamento da púrpura trombocitopênica imunológica (PTI)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069401",
-      "ankiGuid": "fd$;4G684F"
+      "ankiGuid": "fd$;4G684F",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Crianc-9-anos-idade4057fd4815/",
+        "sourceQuestionId": "4000169064",
+        "matchedAt": "2026-10-03T11:45:55.240Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-0b18336c1668b276",
@@ -639,10 +678,22 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Trombofilia",
+        "Exames laboratoriais",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069403",
-      "ankiGuid": "y>gdtpAY;e"
+      "ankiGuid": "y>gdtpAY;e",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-16-anos-idade10756352af0/",
+        "sourceQuestionId": "4000167801",
+        "matchedAt": "2026-10-03T11:46:07.121Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-5f6b4203d07820f7",
@@ -672,10 +723,23 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069404",
-      "ankiGuid": "t$!m@Bi`Br"
+      "ankiGuid": "t$!m@Bi`Br",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-75-anos-idade52a94547f5/",
+        "sourceQuestionId": "4000166306",
+        "matchedAt": "2026-10-03T11:46:13.523Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-3e132f88ca04763b",

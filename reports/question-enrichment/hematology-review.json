@@ -1198,7 +1198,26 @@
       ],
       "suggestedComment": "Gabarito confirmado: B. Assunto: Heparinas. Conduta/resposta: Suspender warfarin e iniciar dose terapêutica de enoxaparina.",
       "reviewedAt": "2026-10-01T13:27:37.620Z"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-0b18336c1668b276": {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-0b18336c1668b276",
+      "number": "1014c",
+      "status": "answer_mismatch",
+      "localAnswer": "B",
+      "remoteAnswer": "A",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-1-ano-6-meses25480a35e8a/",
+      "similarity": {
+        "stem": 0.9294117647058824,
+        "options": 1,
+        "combined": 0.9505882352941175
+      },
+      "tags": [
+        "Pediatria",
+        "Maus tratos à crianças e adolescentes"
+      ],
+      "suggestedComment": "Gabarito confirmado: A. Assunto: Maus tratos à crianças e adolescentes. Conduta/resposta: Certo.",
+      "reviewedAt": "2026-10-03T11:46:01.288Z"
     }
   },
-  "updatedAt": "2026-10-01T13:27:37.620Z"
+  "updatedAt": "2026-10-03T11:46:01.288Z"
 }
