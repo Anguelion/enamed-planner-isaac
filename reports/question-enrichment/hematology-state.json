@@ -4970,7 +4970,67 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-969b4842e4940152": {
+      "number": "1067c",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-03T21:23:35.725Z",
+      "nextAttemptAt": "2026-10-10T21:23:35.725Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-53-anos-relata123c4f44782/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-87c4e83e067b0651": {
+      "number": "1068c",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-03T21:23:42.142Z",
+      "nextAttemptAt": "2026-10-10T21:23:42.142Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/sindrome-anticorpos32f2895798/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-cf45a1efcf238f1e": {
+      "number": "1069c",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-03T21:23:48.589Z",
+      "nextAttemptAt": "2026-10-10T21:23:48.589Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-48anos-procura110d56818f8/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-29c5f372e05bd7f0": {
+      "number": "1070c",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-03T21:23:54.048Z",
+      "nextAttemptAt": "2026-10-10T21:23:54.048Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-ece5588e6ad6a594": {
+      "number": "1071c",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-03T21:23:59.323Z",
+      "nextAttemptAt": "2026-10-10T21:23:59.323Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-d1322418e44804f4": {
+      "number": "1072c",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-03T21:24:04.592Z",
+      "nextAttemptAt": "2026-10-10T21:24:04.592Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-10-03T11:46:13.524Z"
+  "updatedAt": "2026-10-03T21:24:04.592Z"
 }

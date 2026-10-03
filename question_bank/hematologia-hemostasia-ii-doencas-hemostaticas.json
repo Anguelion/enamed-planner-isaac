@@ -2902,10 +2902,23 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069455",
-      "ankiGuid": "HyfRmD}]w&"
+      "ankiGuid": "HyfRmD}]w&",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-53-anos-relata123c4f44782/",
+        "sourceQuestionId": "4000098068",
+        "matchedAt": "2026-10-03T21:23:35.724Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-87c4e83e067b0651",
@@ -2936,10 +2949,27 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Reumatologia",
+        "Doenças autoimunes do tecido conjuntivo",
+        "Síndrome antifosfolípide (SAF)",
+        "Laboratório",
+        "Hemostasia",
+        "Trombofilia",
+        "Principais trombofilias adquiridas",
+        "Síndrome do anticorpo anti-fosfolipídeo (SAAF)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069456",
-      "ankiGuid": "pmT_!k0m$3"
+      "ankiGuid": "pmT_!k0m$3",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/sindrome-anticorpos32f2895798/",
+        "sourceQuestionId": "4000057586",
+        "matchedAt": "2026-10-03T21:23:42.141Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-cf45a1efcf238f1e",
@@ -2970,10 +3000,22 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069457",
-      "ankiGuid": "fQh`$w2Rw7"
+      "ankiGuid": "fQh`$w2Rw7",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-48anos-procura110d56818f8/",
+        "sourceQuestionId": "4000045740",
+        "matchedAt": "2026-10-03T21:23:48.588Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-29c5f372e05bd7f0",

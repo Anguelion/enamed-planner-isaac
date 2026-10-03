@@ -1,136 +1,20 @@
 {
-  "generatedAt": "2026-10-03T11:45:42.663Z",
+  "generatedAt": "2026-10-03T21:23:34.726Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 5,
+  "changed": 3,
   "results": [
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-dad31f9a15ad880b",
-      "number": "1011c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-969b4842e4940152",
+      "number": "1067c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Menina-10-anos-idade96cec804b4/",
-      "sourceQuestionId": "4000169952",
-      "matchedAt": "2026-10-03T11:45:43.686Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Hemostasia primária",
-        "Púrpura trombocitopênica imunológica (PTI)",
-        "Tratamento da púrpura trombocitopênica imunológica (PTI)"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Tratamento da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: trombocitopenia imune primária; esclarecer sobre a evolução autolimitada e orientar a não realizar esportes ou usar medicamentos.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Menina-10-anos-idade96cec804b4/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-a0de8fee2819180d",
-      "number": "1012c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Quando-paciente-com2636ba3b9e/",
-      "sourceQuestionId": "4000169433",
-      "matchedAt": "2026-10-03T11:45:49.380Z",
-      "similarity": {
-        "stem": 0.9473684210526315,
-        "options": 1,
-        "combined": 0.963157894736842
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Hemostasia primária",
-        "Púrpura trombocitopênica imunológica (PTI)",
-        "Introdução à púrpura trombocitopênica imunológica (PTI)"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Introdução à púrpura trombocitopênica imunológica (PTI). Conduta/resposta: Os anticorpos antiplaquetários da classe IgG envolvidos são capazes de cruzar a membrana placentária, podendo causar trombocitopenia fetal autoimune, petéquias neonatais e até hemorragia intraventricular.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Quando-paciente-com2636ba3b9e/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-16a3241b1a624d4c",
-      "number": "1013c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Crianc-9-anos-idade4057fd4815/",
-      "sourceQuestionId": "4000169064",
-      "matchedAt": "2026-10-03T11:45:55.240Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Hemostasia primária",
-        "Púrpura trombocitopênica imunológica (PTI)",
-        "Tratamento da púrpura trombocitopênica imunológica (PTI)"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Tratamento da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: observação clínica e seguimento laboratorial.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Crianc-9-anos-idade4057fd4815/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-0b18336c1668b276",
-      "number": "1014c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": false,
-      "status": "answer_mismatch",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-1-ano-6-meses25480a35e8a/",
-      "sourceQuestionId": "4000167808",
-      "matchedAt": "2026-10-03T11:46:01.288Z",
-      "similarity": {
-        "stem": 0.9294117647058824,
-        "options": 1,
-        "combined": 0.9505882352941175
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "A",
-      "answerMismatch": true,
-      "tags": [
-        "Pediatria",
-        "Maus tratos à crianças e adolescentes"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Maus tratos à crianças e adolescentes. Conduta/resposta: Certo.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/paciente-1-ano-6-meses25480a35e8a/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-8140a7f9deed6435",
-      "number": "1015c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-16-anos-idade10756352af0/",
-      "sourceQuestionId": "4000167801",
-      "matchedAt": "2026-10-03T11:46:07.121Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-53-anos-relata123c4f44782/",
+      "sourceQuestionId": "4000098068",
+      "matchedAt": "2026-10-03T21:23:35.724Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -143,23 +27,59 @@
         "Clínica Médica",
         "Hematologia",
         "Hemostasia",
-        "Trombofilia",
-        "Exames laboratoriais"
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Exames laboratoriais. Conduta/resposta: Errado.",
+      "comment": "Gabarito confirmado: B. Assunto: Diagnóstico da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: Produção de anticorpos antiplaquetas.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/paciente-16-anos-idade10756352af0/"
+        "https://med.estrategia.com/public/questoes/Mulher-53-anos-relata123c4f44782/"
       ]
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-5f6b4203d07820f7",
-      "number": "1016c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-87c4e83e067b0651",
+      "number": "1068c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-75-anos-idade52a94547f5/",
-      "sourceQuestionId": "4000166306",
-      "matchedAt": "2026-10-03T11:46:13.523Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/sindrome-anticorpos32f2895798/",
+      "sourceQuestionId": "4000057586",
+      "matchedAt": "2026-10-03T21:23:42.141Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Reumatologia",
+        "Doenças autoimunes do tecido conjuntivo",
+        "Síndrome antifosfolípide (SAF)",
+        "Laboratório",
+        "Hematologia",
+        "Hemostasia",
+        "Trombofilia",
+        "Principais trombofilias adquiridas",
+        "Síndrome do anticorpo anti-fosfolipídeo (SAAF)"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Síndrome do anticorpo anti-fosfolipídeo (SAAF). Conduta/resposta: Antibeta-2-glicoproteína.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/sindrome-anticorpos32f2895798/",
+        "https://med.estrategia.com/public/questoes/sindrome329578f2c4/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-cf45a1efcf238f1e",
+      "number": "1069c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-48anos-procura110d56818f8/",
+      "sourceQuestionId": "4000045740",
+      "matchedAt": "2026-10-03T21:23:48.588Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -173,14 +93,36 @@
         "Hematologia",
         "Hemostasia",
         "Hemostasia primária",
-        "Púrpura trombocitopênica imunológica (PTI)",
-        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)"
+        "Púrpura trombocitopênica imunológica (PTI)"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Diagnóstico da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: Púrpura trombocitopênica imune.",
+      "comment": "Gabarito confirmado: C. Assunto: Púrpura trombocitopênica imunológica (PTI). Conduta/resposta: Produção de anticorpos antiplaquetas.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-75-anos-idade52a94547f5/",
-        "https://med.estrategia.com/public/questoes/baa03eced9aee30cea0ac214/"
+        "https://med.estrategia.com/public/questoes/Mulher-48anos-procura110d56818f8/"
       ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-29c5f372e05bd7f0",
+      "number": "1070c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-ece5588e6ad6a594",
+      "number": "1071c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-d1322418e44804f4",
+      "number": "1072c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     }
   ]
 }
