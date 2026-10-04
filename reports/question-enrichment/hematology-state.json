@@ -3214,9 +3214,9 @@
     "anki-hematologia-gamopatias-monoclonais-a65e59a6c8f3f058": {
       "number": "1008j",
       "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-09-20T20:53:55.711Z",
-      "nextAttemptAt": "2026-10-04T20:53:55.711Z",
+      "attempts": 3,
+      "lastAttemptAt": "2026-10-04T21:35:01.415Z",
+      "nextAttemptAt": "2026-10-25T21:35:01.415Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -3224,9 +3224,9 @@
     "anki-hematologia-gamopatias-monoclonais-3336f8e8c87c439d": {
       "number": "1010j",
       "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-09-20T20:54:01.214Z",
-      "nextAttemptAt": "2026-10-04T20:54:01.214Z",
+      "attempts": 3,
+      "lastAttemptAt": "2026-10-04T21:35:06.779Z",
+      "nextAttemptAt": "2026-10-25T21:35:06.779Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -3244,9 +3244,9 @@
     "anki-hematologia-gamopatias-monoclonais-9cfc04572db0f9ce": {
       "number": "1012j",
       "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-09-20T20:54:06.733Z",
-      "nextAttemptAt": "2026-10-04T20:54:06.733Z",
+      "attempts": 3,
+      "lastAttemptAt": "2026-10-04T21:35:12.144Z",
+      "nextAttemptAt": "2026-10-25T21:35:12.144Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -3254,9 +3254,9 @@
     "anki-hematologia-gamopatias-monoclonais-2c1081ef3fd98e37": {
       "number": "1013j",
       "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-09-20T20:54:12.170Z",
-      "nextAttemptAt": "2026-10-04T20:54:12.170Z",
+      "attempts": 3,
+      "lastAttemptAt": "2026-10-04T21:35:17.506Z",
+      "nextAttemptAt": "2026-10-25T21:35:17.506Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -5090,7 +5090,27 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-f03186fc1f1f8c1d": {
+      "number": "1079c",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-04T21:35:22.868Z",
+      "nextAttemptAt": "2026-10-11T21:35:22.868Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-5fe22b4c99445663": {
+      "number": "1080c",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-04T21:35:28.226Z",
+      "nextAttemptAt": "2026-10-11T21:35:28.226Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-10-04T12:29:18.281Z"
+  "updatedAt": "2026-10-04T21:35:28.226Z"
 }

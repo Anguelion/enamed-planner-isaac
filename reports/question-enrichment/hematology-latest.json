@@ -1,78 +1,54 @@
 {
-  "generatedAt": "2026-10-04T12:28:49.850Z",
+  "generatedAt": "2026-10-04T21:35:00.068Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 1,
+  "changed": 0,
   "results": [
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-da3da62fda3af316",
-      "number": "1073c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/ma-crianc-sexo51657199e2/",
-      "sourceQuestionId": "4000002053",
-      "matchedAt": "2026-10-04T12:28:51.908Z",
-      "similarity": {
-        "stem": 0.9767441860465116,
-        "options": 1,
-        "combined": 0.983720930232558
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Hemostasia Secundária",
-        "Principais doenças",
-        "Hemofilia"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Hemofilia. Conduta/resposta: Fator VIII.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/crianc-sexo-masculino150fa97fbef/",
-        "https://med.estrategia.com/public/questoes/ma-crianc-sexo51657199e2/",
-        "https://med.estrategia.com/public/questoes/4ba30b579727b034dd23adfd/"
-      ]
+      "id": "anki-hematologia-gamopatias-monoclonais-a65e59a6c8f3f058",
+      "number": "1008j",
+      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-027c3929abaa083b",
-      "number": "1074c",
+      "id": "anki-hematologia-gamopatias-monoclonais-3336f8e8c87c439d",
+      "number": "1010j",
+      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-gamopatias-monoclonais-9cfc04572db0f9ce",
+      "number": "1012j",
+      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-gamopatias-monoclonais-2c1081ef3fd98e37",
+      "number": "1013j",
+      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-f03186fc1f1f8c1d",
+      "number": "1079c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-268e0e0b828fd672",
-      "number": "1075c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-fedf37b9fa4a7a51",
-      "number": "1076c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-297a218e2e735b73",
-      "number": "1077c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-d8ed8c1eadfc2aac",
-      "number": "1078c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-5fe22b4c99445663",
+      "number": "1080c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": false,
       "status": "not_found",
