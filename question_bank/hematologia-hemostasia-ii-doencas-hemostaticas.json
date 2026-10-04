@@ -3145,10 +3145,23 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Principais doenças",
+        "Hemofilia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069461",
-      "ankiGuid": "C8?{@xVAM!"
+      "ankiGuid": "C8?{@xVAM!",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/ma-crianc-sexo51657199e2/",
+        "sourceQuestionId": "4000002053",
+        "matchedAt": "2026-10-04T12:28:51.908Z",
+        "confidence": 0.983720930232558
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-027c3929abaa083b",

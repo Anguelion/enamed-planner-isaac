@@ -1,24 +1,24 @@
 {
-  "generatedAt": "2026-10-03T21:23:34.726Z",
+  "generatedAt": "2026-10-04T12:28:49.850Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 3,
+  "changed": 1,
   "results": [
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-969b4842e4940152",
-      "number": "1067c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-da3da62fda3af316",
+      "number": "1073c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-53-anos-relata123c4f44782/",
-      "sourceQuestionId": "4000098068",
-      "matchedAt": "2026-10-03T21:23:35.724Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/ma-crianc-sexo51657199e2/",
+      "sourceQuestionId": "4000002053",
+      "matchedAt": "2026-10-04T12:28:51.908Z",
       "similarity": {
-        "stem": 1,
+        "stem": 0.9767441860465116,
         "options": 1,
-        "combined": 1
+        "combined": 0.983720930232558
       },
       "localAnswer": "B",
       "remoteAnswer": "B",
@@ -27,98 +27,52 @@
         "Clínica Médica",
         "Hematologia",
         "Hemostasia",
-        "Hemostasia primária",
-        "Púrpura trombocitopênica imunológica (PTI)",
-        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)"
+        "Hemostasia Secundária",
+        "Principais doenças",
+        "Hemofilia"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Diagnóstico da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: Produção de anticorpos antiplaquetas.",
+      "comment": "Gabarito confirmado: B. Assunto: Hemofilia. Conduta/resposta: Fator VIII.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-53-anos-relata123c4f44782/"
+        "https://med.estrategia.com/public/questoes/crianc-sexo-masculino150fa97fbef/",
+        "https://med.estrategia.com/public/questoes/ma-crianc-sexo51657199e2/",
+        "https://med.estrategia.com/public/questoes/4ba30b579727b034dd23adfd/"
       ]
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-87c4e83e067b0651",
-      "number": "1068c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/sindrome-anticorpos32f2895798/",
-      "sourceQuestionId": "4000057586",
-      "matchedAt": "2026-10-03T21:23:42.141Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Reumatologia",
-        "Doenças autoimunes do tecido conjuntivo",
-        "Síndrome antifosfolípide (SAF)",
-        "Laboratório",
-        "Hematologia",
-        "Hemostasia",
-        "Trombofilia",
-        "Principais trombofilias adquiridas",
-        "Síndrome do anticorpo anti-fosfolipídeo (SAAF)"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Síndrome do anticorpo anti-fosfolipídeo (SAAF). Conduta/resposta: Antibeta-2-glicoproteína.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/sindrome-anticorpos32f2895798/",
-        "https://med.estrategia.com/public/questoes/sindrome329578f2c4/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-cf45a1efcf238f1e",
-      "number": "1069c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-48anos-procura110d56818f8/",
-      "sourceQuestionId": "4000045740",
-      "matchedAt": "2026-10-03T21:23:48.588Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Hemostasia primária",
-        "Púrpura trombocitopênica imunológica (PTI)"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Púrpura trombocitopênica imunológica (PTI). Conduta/resposta: Produção de anticorpos antiplaquetas.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-48anos-procura110d56818f8/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-29c5f372e05bd7f0",
-      "number": "1070c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-027c3929abaa083b",
+      "number": "1074c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-ece5588e6ad6a594",
-      "number": "1071c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-268e0e0b828fd672",
+      "number": "1075c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-d1322418e44804f4",
-      "number": "1072c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-fedf37b9fa4a7a51",
+      "number": "1076c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-297a218e2e735b73",
+      "number": "1077c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-d8ed8c1eadfc2aac",
+      "number": "1078c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": false,
       "status": "not_found",

@@ -5030,7 +5030,67 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-da3da62fda3af316": {
+      "number": "1073c",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-04T12:28:51.909Z",
+      "nextAttemptAt": "2026-10-11T12:28:51.909Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/ma-crianc-sexo51657199e2/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-027c3929abaa083b": {
+      "number": "1074c",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-04T12:28:57.301Z",
+      "nextAttemptAt": "2026-10-11T12:28:57.301Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-268e0e0b828fd672": {
+      "number": "1075c",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-04T12:29:02.534Z",
+      "nextAttemptAt": "2026-10-11T12:29:02.534Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-fedf37b9fa4a7a51": {
+      "number": "1076c",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-04T12:29:07.812Z",
+      "nextAttemptAt": "2026-10-11T12:29:07.812Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-297a218e2e735b73": {
+      "number": "1077c",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-04T12:29:13.054Z",
+      "nextAttemptAt": "2026-10-11T12:29:13.054Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-d8ed8c1eadfc2aac": {
+      "number": "1078c",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-04T12:29:18.281Z",
+      "nextAttemptAt": "2026-10-11T12:29:18.281Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-10-03T21:24:04.592Z"
+  "updatedAt": "2026-10-04T12:29:18.281Z"
 }
