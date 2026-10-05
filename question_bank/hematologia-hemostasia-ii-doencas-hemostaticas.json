@@ -3424,10 +3424,23 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Tratamento da púrpura trombocitopênica imunológica (PTI)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069469",
-      "ankiGuid": "i]TQ@9x`go"
+      "ankiGuid": "i]TQ@9x`go",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-30-anos-refere129267252e2/",
+        "sourceQuestionId": "4000106764",
+        "matchedAt": "2026-10-05T14:51:07.347Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-dd37a55d100d5bce",
@@ -3457,10 +3470,23 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Tratamento da púrpura trombocitopênica imunológica (PTI)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069470",
-      "ankiGuid": "k*,9x|=ehO"
+      "ankiGuid": "k*,9x|=ehO",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/consulta-mulher-38975d48265a/",
+        "sourceQuestionId": "4000076202",
+        "matchedAt": "2026-10-05T14:51:13.507Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-af0ea92e9e11bde9",
@@ -3491,10 +3517,24 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)",
+        "Tratamento da púrpura trombocitopênica imunológica (PTI)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069471",
-      "ankiGuid": "t)]n[M[+gd"
+      "ankiGuid": "t)]n[M[+gd",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Sueli-4-anos-com748866aedb/",
+        "sourceQuestionId": "4000059560",
+        "matchedAt": "2026-10-05T14:51:19.580Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-04cb47e84b66aec3",
@@ -3525,10 +3565,24 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)",
+        "Tratamento da púrpura trombocitopênica imunológica (PTI)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069472",
-      "ankiGuid": "q?PU281m*%"
+      "ankiGuid": "q?PU281m*%",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-feminina-2364817411c1/",
+        "sourceQuestionId": "4000049622",
+        "matchedAt": "2026-10-05T14:51:25.278Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-b37d2ea43ba28485",
@@ -3559,10 +3613,23 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Principais doenças",
+        "Hemofilia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069473",
-      "ankiGuid": "xl3TcA6OPk"
+      "ankiGuid": "xl3TcA6OPk",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/opca-hemofilia69c18d9a5/",
+        "sourceQuestionId": "4000049610",
+        "matchedAt": "2026-10-05T14:51:30.994Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-4947cb784c992786",
@@ -3592,10 +3659,28 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Reumatologia",
+        "Doenças autoimunes do tecido conjuntivo",
+        "Síndrome antifosfolípide (SAF)",
+        "Manifestações clínicas",
+        "Manifestações clínicas não critério",
+        "Hemostasia",
+        "Trombofilia",
+        "Principais trombofilias adquiridas",
+        "Síndrome do anticorpo anti-fosfolipídeo (SAAF)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069474",
-      "ankiGuid": "dwoWE|v:Bq"
+      "ankiGuid": "dwoWE|v:Bq",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Todos-achados-esta12775a65f6/",
+        "sourceQuestionId": "4000021014",
+        "matchedAt": "2026-10-05T14:51:36.887Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-4d684ec7795b4f26",

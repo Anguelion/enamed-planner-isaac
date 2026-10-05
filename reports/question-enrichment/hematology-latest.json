@@ -1,58 +1,198 @@
 {
-  "generatedAt": "2026-10-04T21:35:00.068Z",
+  "generatedAt": "2026-10-05T14:51:06.234Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 0,
+  "changed": 6,
   "results": [
     {
-      "id": "anki-hematologia-gamopatias-monoclonais-a65e59a6c8f3f058",
-      "number": "1008j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-gamopatias-monoclonais-3336f8e8c87c439d",
-      "number": "1010j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-gamopatias-monoclonais-9cfc04572db0f9ce",
-      "number": "1012j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-gamopatias-monoclonais-2c1081ef3fd98e37",
-      "number": "1013j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-f03186fc1f1f8c1d",
-      "number": "1079c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-e1e80cca7cbee54c",
+      "number": "1081c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-30-anos-refere129267252e2/",
+      "sourceQuestionId": "4000106764",
+      "matchedAt": "2026-10-05T14:51:07.347Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Tratamento da púrpura trombocitopênica imunológica (PTI)"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Tratamento da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: Prednisona.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Mulher-30-anos-refere129267252e2/"
+      ]
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-5fe22b4c99445663",
-      "number": "1080c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-dd37a55d100d5bce",
+      "number": "1082c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/consulta-mulher-38975d48265a/",
+      "sourceQuestionId": "4000076202",
+      "matchedAt": "2026-10-05T14:51:13.507Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Tratamento da púrpura trombocitopênica imunológica (PTI)"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Tratamento da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: A esplenectomia pode ser necessária, mas deve-se primeiro tentar o tratamento com corticoide.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/consulta-mulher-38975d48265a/",
+        "https://med.estrategia.com/public/questoes/Mulher-38-anos-sem626cf690ea/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-af0ea92e9e11bde9",
+      "number": "1083c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Sueli-4-anos-com748866aedb/",
+      "sourceQuestionId": "4000059560",
+      "matchedAt": "2026-10-05T14:51:19.580Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "E",
+      "remoteAnswer": "E",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)",
+        "Tratamento da púrpura trombocitopênica imunológica (PTI)"
+      ],
+      "comment": "Gabarito confirmado: E. Assunto: Tratamento da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: Expectante.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Sueli-4-anos-com748866aedb/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-04cb47e84b66aec3",
+      "number": "1084c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-feminina-2364817411c1/",
+      "sourceQuestionId": "4000049622",
+      "matchedAt": "2026-10-05T14:51:25.278Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)",
+        "Tratamento da púrpura trombocitopênica imunológica (PTI)"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Tratamento da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: Iniciar corticoide.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-feminina-2364817411c1/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-b37d2ea43ba28485",
+      "number": "1085c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/opca-hemofilia69c18d9a5/",
+      "sourceQuestionId": "4000049610",
+      "matchedAt": "2026-10-05T14:51:30.994Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Principais doenças",
+        "Hemofilia"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Hemofilia. Conduta/resposta: A intensidade do prolongamento do tempo de protrombina irá depender da gravidade da doença.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/opca-hemofilia69c18d9a5/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-4947cb784c992786",
+      "number": "1086c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Todos-achados-esta12775a65f6/",
+      "sourceQuestionId": "4000021014",
+      "matchedAt": "2026-10-05T14:51:36.887Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Reumatologia",
+        "Doenças autoimunes do tecido conjuntivo",
+        "Síndrome antifosfolípide (SAF)",
+        "Manifestações clínicas",
+        "Manifestações clínicas não critério",
+        "Hematologia",
+        "Hemostasia",
+        "Trombofilia",
+        "Principais trombofilias adquiridas",
+        "Síndrome do anticorpo anti-fosfolipídeo (SAAF)"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Síndrome do anticorpo anti-fosfolipídeo (SAAF). Conduta/resposta: Perda fetal, livedo reticularis e fotossensibilidade.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Todos-achados-esta12775a65f6/"
+      ]
     }
   ]
 }
