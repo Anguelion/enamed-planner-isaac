@@ -1,120 +1,54 @@
 {
-  "generatedAt": "2026-10-06T13:24:09.210Z",
+  "generatedAt": "2026-10-06T22:41:12.510Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 3,
+  "changed": 0,
   "results": [
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-e11cad87e136fb22",
-      "number": "1035c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/crianc-trombocitopenia69f2927a0/",
-      "sourceQuestionId": "4000030582",
-      "matchedAt": "2026-10-06T13:24:10.503Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Hemostasia primária",
-        "Púrpura trombocitopênica imunológica (PTI)",
-        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Diagnóstico da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: é geralmente um distúrbio agudo, autolimitado e imunomediado.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/crianc-trombocitopenia69f2927a0/"
-      ]
+      "id": "anki-hematologia-gamopatias-monoclonais-8463e41e61278868",
+      "number": "1034j",
+      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-8e0964b7446f03ae",
-      "number": "1036c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-doenc119fa4d9d7/",
-      "sourceQuestionId": "4000002788",
-      "matchedAt": "2026-10-06T13:24:17.027Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Trombofilia",
-        "Principais trombofilias adquiridas"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Principais trombofilias adquiridas. Conduta/resposta: Síndrome antifosfolípede.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Qual-doenc119fa4d9d7/",
-        "https://med.estrategia.com/public/questoes/Qual-doenc112d073766/"
-      ]
+      "id": "anki-hematologia-gamopatias-monoclonais-92d9ac3a2692932f",
+      "number": "1036j",
+      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-5cc56a97ca7471fe",
-      "number": "1037c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-com369803a0dd/",
-      "sourceQuestionId": "4000115033",
-      "matchedAt": "2026-10-06T13:24:23.923Z",
-      "similarity": {
-        "stem": 1,
-        "options": 0.9080634920634921,
-        "combined": 0.9724190476190475
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Hemostasia primária",
-        "Púrpura trombocitopênica imunológica (PTI)",
-        "Tratamento da púrpura trombocitopênica imunológica (PTI)"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Tratamento da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: Em casos com risco de morte, deve-se considerar associação de imunoglubulina,transfusão de plaquetas e avaliação da lesão local relacionada ao sangramento.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-com369803a0dd/"
-      ]
+      "id": "anki-hematologia-gamopatias-monoclonais-a35cb5a31f1bb515",
+      "number": "1037j",
+      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-94d2981b7bbc52ee",
-      "number": "1038c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-6cc0438c3ec3a52b",
+      "number": "1041c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-d44b28c565909beb",
-      "number": "1039c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-4d684ec7795b4f26",
+      "number": "1087c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-fe8ebf9684c016b1",
-      "number": "1040c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-784bb4023104f823",
+      "number": "1088c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": false,
       "status": "not_found",
