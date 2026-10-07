@@ -4824,9 +4824,9 @@
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-4142ecd02629af54": {
       "number": "1052c",
       "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-30T22:21:15.908Z",
-      "nextAttemptAt": "2026-10-07T22:21:15.908Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-07T23:09:37.123Z",
+      "nextAttemptAt": "2026-10-21T23:09:37.123Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -4834,9 +4834,9 @@
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-52bf9b7e5b38dba6": {
       "number": "1053c",
       "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-30T22:21:21.185Z",
-      "nextAttemptAt": "2026-10-07T22:21:21.185Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-07T23:09:42.361Z",
+      "nextAttemptAt": "2026-10-21T23:09:42.361Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -4844,9 +4844,9 @@
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-4225449856151bdb": {
       "number": "1054c",
       "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-30T22:21:26.410Z",
-      "nextAttemptAt": "2026-10-07T22:21:26.410Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-07T23:09:47.542Z",
+      "nextAttemptAt": "2026-10-21T23:09:47.542Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -4854,9 +4854,9 @@
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-a95fd4d386b39647": {
       "number": "1055c",
       "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-30T22:21:31.766Z",
-      "nextAttemptAt": "2026-10-07T22:21:31.766Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-07T23:09:52.747Z",
+      "nextAttemptAt": "2026-10-21T23:09:52.747Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -4864,9 +4864,9 @@
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-c1d8e797aa1c6697": {
       "number": "1056c",
       "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-30T22:21:37.065Z",
-      "nextAttemptAt": "2026-10-07T22:21:37.065Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-07T23:09:57.968Z",
+      "nextAttemptAt": "2026-10-21T23:09:57.968Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -5240,7 +5240,17 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/hemofilias-podem-ser158ec982fb/",
       "localAnswer": "C",
       "remoteAnswer": "C"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-a621f6ae564fd1c9": {
+      "number": "1094c",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-07T23:10:03.156Z",
+      "nextAttemptAt": "2026-10-14T23:10:03.156Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-10-07T13:33:31.590Z"
+  "updatedAt": "2026-10-07T23:10:03.156Z"
 }
