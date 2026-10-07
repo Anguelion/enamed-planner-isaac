@@ -3817,10 +3817,27 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Reumatologia",
+        "Doenças autoimunes do tecido conjuntivo",
+        "Síndrome antifosfolípide (SAF)",
+        "Laboratório",
+        "Hemostasia",
+        "Trombofilia",
+        "Principais trombofilias adquiridas",
+        "Síndrome do anticorpo anti-fosfolipídeo (SAAF)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069477",
-      "ankiGuid": "Am,o^K;`>("
+      "ankiGuid": "Am,o^K;`>(",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-25-anos6717aae57f/",
+        "sourceQuestionId": "4000114250",
+        "matchedAt": "2026-10-07T13:33:07.829Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-432290937f8cb528",
@@ -3851,10 +3868,23 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Trombofilia",
+        "Principais trombofilias hereditárias",
+        "Principais trombofilias adquiridas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069478",
-      "ankiGuid": "ohC/sUd]L+"
+      "ankiGuid": "ohC/sUd]L+",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/estados-hipercoagulaca7249b3c4d4/",
+        "sourceQuestionId": "4000093233",
+        "matchedAt": "2026-10-07T13:33:13.616Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-397cb3574211d83a",
@@ -3884,10 +3914,24 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)",
+        "Tratamento da púrpura trombocitopênica imunológica (PTI)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069479",
-      "ankiGuid": "H_2})F?X+@"
+      "ankiGuid": "H_2})F?X+@",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/mulher-36-anos-procura4313ef5c95/",
+        "sourceQuestionId": "4000082944",
+        "matchedAt": "2026-10-07T13:33:19.706Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-ac014ac86037ce8e",
@@ -3918,10 +3962,22 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Trombofilia",
+        "Principais trombofilias adquiridas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069480",
-      "ankiGuid": "dxa6Qkf|5$"
+      "ankiGuid": "dxa6Qkf|5$",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/trombofilias-sa18e74d647a/",
+        "sourceQuestionId": "4000053869",
+        "matchedAt": "2026-10-07T13:33:25.529Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-532ff2d5c1bd7501",
@@ -3952,10 +4008,23 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Principais doenças",
+        "Hemofilia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069481",
-      "ankiGuid": "si|Z/Yd#PT"
+      "ankiGuid": "si|Z/Yd#PT",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/hemofilias-podem-ser158ec982fb/",
+        "sourceQuestionId": "4000042610",
+        "matchedAt": "2026-10-07T13:33:31.589Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-a621f6ae564fd1c9",

@@ -1,58 +1,198 @@
 {
-  "generatedAt": "2026-10-06T22:41:12.510Z",
+  "generatedAt": "2026-10-07T13:33:00.091Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 0,
+  "changed": 6,
   "results": [
     {
-      "id": "anki-hematologia-gamopatias-monoclonais-8463e41e61278868",
-      "number": "1034j",
+      "id": "anki-hematologia-gamopatias-monoclonais-711ac8caa8946fd4",
+      "number": "1045j",
       "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/macroglobulinemia1324dd362f/",
+      "sourceQuestionId": "4000057485",
+      "matchedAt": "2026-10-07T13:33:01.307Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "E",
+      "remoteAnswer": "E",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Gamopatias monoclonais",
+        "Macroglobulinemia de Waldenström (MW)",
+        "Introdução à Macroglobulinemia de Waldenström (MW)",
+        "Patologia da Macroglobulinemia de Waldenström (MW)",
+        "Quadro Clínico da Macroglobulinemia de Waldenström (MW)",
+        "Classificação da Macroglobulinemia de Waldenström (MW)",
+        "Tratamento da Macroglobulinemia de Waldenström (MW)"
+      ],
+      "comment": "Gabarito confirmado: E. Assunto: Tratamento da Macroglobulinemia de Waldenström (MW). Conduta/resposta: IgM.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/macroglobulinemia1324dd362f/"
+      ]
     },
     {
-      "id": "anki-hematologia-gamopatias-monoclonais-92d9ac3a2692932f",
-      "number": "1036j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-gamopatias-monoclonais-a35cb5a31f1bb515",
-      "number": "1037j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-6cc0438c3ec3a52b",
-      "number": "1041c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-3a0df37dadb2f4d3",
+      "number": "1089c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-25-anos6717aae57f/",
+      "sourceQuestionId": "4000114250",
+      "matchedAt": "2026-10-07T13:33:07.829Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Reumatologia",
+        "Doenças autoimunes do tecido conjuntivo",
+        "Síndrome antifosfolípide (SAF)",
+        "Laboratório",
+        "Hematologia",
+        "Hemostasia",
+        "Trombofilia",
+        "Principais trombofilias adquiridas",
+        "Síndrome do anticorpo anti-fosfolipídeo (SAAF)"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Síndrome do anticorpo anti-fosfolipídeo (SAAF). Conduta/resposta: Antibeta-2-glicoproteína l.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Mulher-25-anos679a318d04/",
+        "https://med.estrategia.com/public/questoes/Mulher-25-anos6717aae57f/"
+      ]
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-4d684ec7795b4f26",
-      "number": "1087c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-432290937f8cb528",
+      "number": "1090c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/estados-hipercoagulaca7249b3c4d4/",
+      "sourceQuestionId": "4000093233",
+      "matchedAt": "2026-10-07T13:33:13.616Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Trombofilia",
+        "Principais trombofilias hereditárias",
+        "Principais trombofilias adquiridas"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Principais trombofilias adquiridas. Conduta/resposta: I e III, apenas.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/estados-hipercoagulaca7249b3c4d4/"
+      ]
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-784bb4023104f823",
-      "number": "1088c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-397cb3574211d83a",
+      "number": "1091c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/mulher-36-anos-procura4313ef5c95/",
+      "sourceQuestionId": "4000082944",
+      "matchedAt": "2026-10-07T13:33:19.706Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)",
+        "Tratamento da púrpura trombocitopênica imunológica (PTI)"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Tratamento da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: Trata-se de púrpura trombocitopênica imunológica, que pode ser tratada com corticosteroides, imunoglobulina intravenosa, azatioprina e/ou rituximabe.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/mulher-36-anos-procura4313ef5c95/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-ac014ac86037ce8e",
+      "number": "1092c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/trombofilias-sa18e74d647a/",
+      "sourceQuestionId": "4000053869",
+      "matchedAt": "2026-10-07T13:33:25.529Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "E",
+      "remoteAnswer": "E",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Trombofilia",
+        "Principais trombofilias adquiridas"
+      ],
+      "comment": "Gabarito confirmado: E. Assunto: Principais trombofilias adquiridas. Conduta/resposta: Síndrome antifosfolípide (SAF).",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/trombofilias-sa18e74d647a/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-532ff2d5c1bd7501",
+      "number": "1093c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/hemofilias-podem-ser158ec982fb/",
+      "sourceQuestionId": "4000042610",
+      "matchedAt": "2026-10-07T13:33:31.589Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Principais doenças",
+        "Hemofilia"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Hemofilia. Conduta/resposta: São as hemofilias mais comuns e já se iniciam na primeira infância.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/hemofilias-podem-ser158ec982fb/"
+      ]
     }
   ]
 }

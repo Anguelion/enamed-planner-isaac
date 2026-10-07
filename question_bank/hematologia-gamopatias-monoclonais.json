@@ -1863,10 +1863,25 @@
       "tags": [
         "Hematologia",
         "Gamopatias Monoclonais",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Macroglobulinemia de Waldenström (MW)",
+        "Introdução à Macroglobulinemia de Waldenström (MW)",
+        "Patologia da Macroglobulinemia de Waldenström (MW)",
+        "Quadro Clínico da Macroglobulinemia de Waldenström (MW)",
+        "Classificação da Macroglobulinemia de Waldenström (MW)",
+        "Tratamento da Macroglobulinemia de Waldenström (MW)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516587538",
-      "ankiGuid": "MXSh74~a1v"
+      "ankiGuid": "MXSh74~a1v",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/macroglobulinemia1324dd362f/",
+        "sourceQuestionId": "4000057485",
+        "matchedAt": "2026-10-07T13:33:01.307Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-gamopatias-monoclonais-0edc62ba31d0227d",

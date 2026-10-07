@@ -3573,13 +3573,13 @@
     },
     "anki-hematologia-gamopatias-monoclonais-711ac8caa8946fd4": {
       "number": "1045j",
-      "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-09-23T11:46:10.655Z",
-      "nextAttemptAt": "2026-10-07T11:46:10.655Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 3,
+      "lastAttemptAt": "2026-10-07T13:33:01.308Z",
+      "nextAttemptAt": "2026-10-28T13:33:01.308Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/macroglobulinemia1324dd362f/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
     },
     "anki-hematologia-gamopatias-monoclonais-0edc62ba31d0227d": {
       "number": "1046j",
@@ -5190,7 +5190,57 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-3a0df37dadb2f4d3": {
+      "number": "1089c",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-07T13:33:07.830Z",
+      "nextAttemptAt": "2026-10-14T13:33:07.830Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-25-anos6717aae57f/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-432290937f8cb528": {
+      "number": "1090c",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-07T13:33:13.616Z",
+      "nextAttemptAt": "2026-10-14T13:33:13.616Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/estados-hipercoagulaca7249b3c4d4/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-397cb3574211d83a": {
+      "number": "1091c",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-07T13:33:19.707Z",
+      "nextAttemptAt": "2026-10-14T13:33:19.707Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/mulher-36-anos-procura4313ef5c95/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-ac014ac86037ce8e": {
+      "number": "1092c",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-07T13:33:25.529Z",
+      "nextAttemptAt": "2026-10-14T13:33:25.529Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/trombofilias-sa18e74d647a/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-532ff2d5c1bd7501": {
+      "number": "1093c",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-07T13:33:31.590Z",
+      "nextAttemptAt": "2026-10-14T13:33:31.590Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/hemofilias-podem-ser158ec982fb/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     }
   },
-  "updatedAt": "2026-10-06T22:41:40.339Z"
+  "updatedAt": "2026-10-07T13:33:31.590Z"
 }
