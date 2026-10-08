@@ -31,10 +31,21 @@
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885704",
-      "ankiGuid": "j-QU8A{DE{"
+      "ankiGuid": "j-QU8A{DE{",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-causas-anemia5509d4730/",
+        "sourceQuestionId": "4000185798",
+        "matchedAt": "2026-10-08T23:25:26.073Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-dd722d0faee712d1",
@@ -75,10 +86,21 @@
         "#Reticulócitos",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Classificações das anemias",
+        "Classificação funcional das anemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885705",
-      "ankiGuid": "KuCUby**Wc"
+      "ankiGuid": "KuCUby**Wc",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-masculino-3829dafc05b3/",
+        "sourceQuestionId": "4000166564",
+        "matchedAt": "2026-10-08T23:25:31.724Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-10a2fec4ecddf586",

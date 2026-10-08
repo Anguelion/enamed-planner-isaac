@@ -4204,10 +4204,23 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Tratamento da púrpura trombocitopênica imunológica (PTI)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069486",
-      "ankiGuid": "ku=#hq^173"
+      "ankiGuid": "ku=#hq^173",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-24-anos-idade909c9344d4/",
+        "sourceQuestionId": "4000081634",
+        "matchedAt": "2026-10-08T23:25:08.554Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-45eacaa22075f5a8",
@@ -4238,10 +4251,23 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Principais doenças",
+        "Hemofilia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069487",
-      "ankiGuid": "K-OBm0]FEF"
+      "ankiGuid": "K-OBm0]FEF",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-31-anos-idade472388a5ba/",
+        "sourceQuestionId": "4000071528",
+        "matchedAt": "2026-10-08T23:25:14.514Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-fd899ec45e886d0b",
@@ -4272,10 +4298,25 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Reumatologia",
+        "Doenças autoimunes do tecido conjuntivo",
+        "Síndrome antifosfolípide (SAF)",
+        "Hemostasia",
+        "Trombofilia",
+        "Principais trombofilias adquiridas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069488",
-      "ankiGuid": "F^o9.q/Iln"
+      "ankiGuid": "F^o9.q/Iln",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-25-anos416d691b14/",
+        "sourceQuestionId": "4000046731",
+        "matchedAt": "2026-10-08T23:25:20.228Z",
+        "confidence": 1
+      }
     }
   ]
 }

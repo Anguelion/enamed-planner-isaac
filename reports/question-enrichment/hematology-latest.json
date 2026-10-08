@@ -1,20 +1,142 @@
 {
-  "generatedAt": "2026-10-08T13:38:31.163Z",
+  "generatedAt": "2026-10-08T23:25:07.620Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 1,
+  "changed": 5,
   "results": [
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-29a1ec9cb5a8eaaf",
-      "number": "1057c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-db45309c5f52f857",
+      "number": "1098c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Pre-escolar-cinco-anos621c1a0e54/",
-      "sourceQuestionId": "4000054109",
-      "matchedAt": "2026-10-08T13:38:32.822Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-24-anos-idade909c9344d4/",
+      "sourceQuestionId": "4000081634",
+      "matchedAt": "2026-10-08T23:25:08.554Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "E",
+      "remoteAnswer": "E",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Tratamento da púrpura trombocitopênica imunológica (PTI)"
+      ],
+      "comment": "Gabarito confirmado: E. Assunto: Tratamento da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: A maioria dos pacientes responde bem à prednisona por via oral, após 2 a 4 semanas de tratamento.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Mulher-24-anos-idade909c9344d4/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-45eacaa22075f5a8",
+      "number": "1099c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-31-anos-idade472388a5ba/",
+      "sourceQuestionId": "4000071528",
+      "matchedAt": "2026-10-08T23:25:14.514Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "E",
+      "remoteAnswer": "E",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Principais doenças",
+        "Hemofilia"
+      ],
+      "comment": "Gabarito confirmado: E. Assunto: Hemofilia. Conduta/resposta: Plasmaférese.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Homem-31-anos-idade472388a5ba/",
+        "https://med.estrategia.com/public/questoes/Homem-31-anos-idade463ac9fd9b/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-fd899ec45e886d0b",
+      "number": "10100c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-25-anos416d691b14/",
+      "sourceQuestionId": "4000046731",
+      "matchedAt": "2026-10-08T23:25:20.228Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Reumatologia",
+        "Doenças autoimunes do tecido conjuntivo",
+        "Síndrome antifosfolípide (SAF)",
+        "Hematologia",
+        "Hemostasia",
+        "Trombofilia",
+        "Principais trombofilias adquiridas"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Principais trombofilias adquiridas. Conduta/resposta: Síndrome do anticorpo antifosfolípide",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Mulher-25-anos416d691b14/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-03b3561df5061a71",
+      "number": "1001a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-causas-anemia5509d4730/",
+      "sourceQuestionId": "4000185798",
+      "matchedAt": "2026-10-08T23:25:26.073Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Classificação morfológica das anemias. Conduta/resposta: Doença renal, doença crônica.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Sa-causas-anemia5509d4730/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-dd722d0faee712d1",
+      "number": "1002a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-masculino-3829dafc05b3/",
+      "sourceQuestionId": "4000166564",
+      "matchedAt": "2026-10-08T23:25:31.724Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -26,56 +148,30 @@
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Hemostasia",
-        "Hemostasia primária",
-        "Púrpura trombocitopênica imunológica (PTI)",
-        "Introdução à púrpura trombocitopênica imunológica (PTI)",
-        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)"
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
+        "Classificação funcional das anemias"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Diagnóstico da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: Púrpura trombocitopênica idiopática.",
+      "comment": "Gabarito confirmado: B. Assunto: Classificação funcional das anemias. Conduta/resposta: Deficiência de ferro.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Pre-escolar-cinco-anos621c1a0e54/"
+        "https://med.estrategia.com/public/questoes/Paciente-masculino-3829dafc05b3/"
       ]
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-0e47178571a26ce2",
-      "number": "1058c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-10a2fec4ecddf586",
+      "number": "1003a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-0d7f8e8605d3628c",
-      "number": "1059c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-71e3c05e31b548bd",
-      "number": "1095c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-3b110257827e8bec",
-      "number": "1096c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-2156c603f3ee399d",
-      "number": "1097c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "status": "low_confidence",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Homem-50-anos-relata6794ec5212/",
+        "https://med.estrategia.com/public/questoes/Homem-45-anos-com7358150d43/"
+      ],
+      "bestSimilarity": {
+        "stem": 0.3185840707964602,
+        "options": 0,
+        "combined": 0.2230088495575221
+      }
     }
   ]
 }

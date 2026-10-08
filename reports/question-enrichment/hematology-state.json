@@ -5280,7 +5280,67 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-db45309c5f52f857": {
+      "number": "1098c",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-08T23:25:08.556Z",
+      "nextAttemptAt": "2026-10-15T23:25:08.556Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-24-anos-idade909c9344d4/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-45eacaa22075f5a8": {
+      "number": "1099c",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-08T23:25:14.515Z",
+      "nextAttemptAt": "2026-10-15T23:25:14.515Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-31-anos-idade472388a5ba/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-fd899ec45e886d0b": {
+      "number": "10100c",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-08T23:25:20.228Z",
+      "nextAttemptAt": "2026-10-15T23:25:20.228Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-25-anos416d691b14/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-03b3561df5061a71": {
+      "number": "1001a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-08T23:25:26.073Z",
+      "nextAttemptAt": "2026-10-15T23:25:26.073Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-causas-anemia5509d4730/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-dd722d0faee712d1": {
+      "number": "1002a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-08T23:25:31.725Z",
+      "nextAttemptAt": "2026-10-15T23:25:31.725Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-masculino-3829dafc05b3/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-10a2fec4ecddf586": {
+      "number": "1003a",
+      "status": "low_confidence",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-08T23:25:37.684Z",
+      "nextAttemptAt": "2026-12-07T23:25:37.684Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-10-08T13:38:59.012Z"
+  "updatedAt": "2026-10-08T23:25:37.684Z"
 }
