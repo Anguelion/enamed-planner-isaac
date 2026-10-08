@@ -1,54 +1,77 @@
 {
-  "generatedAt": "2026-10-07T23:09:36.695Z",
+  "generatedAt": "2026-10-08T13:38:31.163Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 0,
+  "changed": 1,
   "results": [
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-4142ecd02629af54",
-      "number": "1052c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-29a1ec9cb5a8eaaf",
+      "number": "1057c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Pre-escolar-cinco-anos621c1a0e54/",
+      "sourceQuestionId": "4000054109",
+      "matchedAt": "2026-10-08T13:38:32.822Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Introdução à púrpura trombocitopênica imunológica (PTI)",
+        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Diagnóstico da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: Púrpura trombocitopênica idiopática.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Pre-escolar-cinco-anos621c1a0e54/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-0e47178571a26ce2",
+      "number": "1058c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-52bf9b7e5b38dba6",
-      "number": "1053c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-0d7f8e8605d3628c",
+      "number": "1059c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-4225449856151bdb",
-      "number": "1054c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-71e3c05e31b548bd",
+      "number": "1095c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-a95fd4d386b39647",
-      "number": "1055c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-3b110257827e8bec",
+      "number": "1096c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-c1d8e797aa1c6697",
-      "number": "1056c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-a621f6ae564fd1c9",
-      "number": "1094c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-2156c603f3ee399d",
+      "number": "1097c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": false,
       "status": "not_found",

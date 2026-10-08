@@ -4873,20 +4873,20 @@
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-29a1ec9cb5a8eaaf": {
       "number": "1057c",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-01T13:27:49.630Z",
-      "nextAttemptAt": "2026-10-08T13:27:49.630Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-08T13:38:32.824Z",
+      "nextAttemptAt": "2026-10-22T13:38:32.824Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Pre-escolar-cinco-anos621c1a0e54/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-0e47178571a26ce2": {
       "number": "1058c",
       "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-01T13:27:54.992Z",
-      "nextAttemptAt": "2026-10-08T13:27:54.992Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-08T13:38:38.164Z",
+      "nextAttemptAt": "2026-10-22T13:38:38.164Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -4894,9 +4894,9 @@
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-0d7f8e8605d3628c": {
       "number": "1059c",
       "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-01T13:28:00.339Z",
-      "nextAttemptAt": "2026-10-08T13:28:00.339Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-08T13:38:43.382Z",
+      "nextAttemptAt": "2026-10-22T13:38:43.382Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -5250,7 +5250,37 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-71e3c05e31b548bd": {
+      "number": "1095c",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-08T13:38:48.587Z",
+      "nextAttemptAt": "2026-10-15T13:38:48.587Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-3b110257827e8bec": {
+      "number": "1096c",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-08T13:38:53.801Z",
+      "nextAttemptAt": "2026-10-15T13:38:53.801Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-2156c603f3ee399d": {
+      "number": "1097c",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-08T13:38:59.012Z",
+      "nextAttemptAt": "2026-10-15T13:38:59.012Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-10-07T23:10:03.156Z"
+  "updatedAt": "2026-10-08T13:38:59.012Z"
 }
