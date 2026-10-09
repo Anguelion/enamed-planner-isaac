@@ -259,10 +259,21 @@
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Fisiologia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742439651975",
-      "ankiGuid": "B[.x-(k#;l"
+      "ankiGuid": "B[.x-(k#;l",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-protei-e-mediador902d8bb33/",
+        "sourceQuestionId": "4000072762",
+        "matchedAt": "2026-10-09T13:24:38.571Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-6c28463a626c0f1a",

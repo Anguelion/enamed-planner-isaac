@@ -3833,13 +3833,13 @@
     },
     "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-ef4acb782a0fb130": {
       "number": "1015b",
-      "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-09-25T11:57:01.592Z",
-      "nextAttemptAt": "2026-10-09T11:57:01.592Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 3,
+      "lastAttemptAt": "2026-10-09T13:24:38.571Z",
+      "nextAttemptAt": "2026-10-30T13:24:38.571Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-protei-e-mediador902d8bb33/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
     },
     "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-6c28463a626c0f1a": {
       "number": "1016b",
@@ -5340,7 +5340,57 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-748029ccf368f6b7": {
+      "number": "1004a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-09T13:24:44.767Z",
+      "nextAttemptAt": "2026-10-16T13:24:44.767Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-45-anos745e3c4612/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-44fa1c1300c42859": {
+      "number": "1005a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-09T13:24:50.762Z",
+      "nextAttemptAt": "2026-10-16T13:24:50.762Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/diagnostico-anemias39fa4aafbe/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-63c36a481c9196ff": {
+      "number": "1006a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-09T13:24:56.898Z",
+      "nextAttemptAt": "2026-10-16T13:24:56.898Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Anemias-microciticas64079ae27/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-7a8a2bc530e58a25": {
+      "number": "1007a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-09T13:25:02.697Z",
+      "nextAttemptAt": "2026-10-16T13:25:02.697Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Causas-hematimetria1010ad454f/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-360e970a5f33a7a1": {
+      "number": "1008a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-09T13:25:08.797Z",
+      "nextAttemptAt": "2026-10-16T13:25:08.797Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/morfologia-hemacia2162c0d050/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     }
   },
-  "updatedAt": "2026-10-08T23:25:37.684Z"
+  "updatedAt": "2026-10-09T13:25:08.797Z"
 }

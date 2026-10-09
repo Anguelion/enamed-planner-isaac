@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-10-08T23:25:07.620Z",
+  "generatedAt": "2026-10-09T13:24:37.566Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 5,
+  "changed": 6,
   "results": [
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-db45309c5f52f857",
-      "number": "1098c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-ef4acb782a0fb130",
+      "number": "1015b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-24-anos-idade909c9344d4/",
-      "sourceQuestionId": "4000081634",
-      "matchedAt": "2026-10-08T23:25:08.554Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-protei-e-mediador902d8bb33/",
+      "sourceQuestionId": "4000072762",
+      "matchedAt": "2026-10-09T13:24:38.571Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -27,116 +27,22 @@
         "Clínica Médica",
         "Hematologia",
         "Hemostasia",
-        "Hemostasia primária",
-        "Púrpura trombocitopênica imunológica (PTI)",
-        "Tratamento da púrpura trombocitopênica imunológica (PTI)"
+        "Fisiologia"
       ],
-      "comment": "Gabarito confirmado: E. Assunto: Tratamento da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: A maioria dos pacientes responde bem à prednisona por via oral, após 2 a 4 semanas de tratamento.",
+      "comment": "Gabarito confirmado: E. Assunto: Fisiologia. Conduta/resposta: Fator de Von Willebrand.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-24-anos-idade909c9344d4/"
+        "https://med.estrategia.com/public/questoes/Qual-protei-e-mediador902d8bb33/"
       ]
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-45eacaa22075f5a8",
-      "number": "1099c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-31-anos-idade472388a5ba/",
-      "sourceQuestionId": "4000071528",
-      "matchedAt": "2026-10-08T23:25:14.514Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "E",
-      "remoteAnswer": "E",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Hemostasia Secundária",
-        "Principais doenças",
-        "Hemofilia"
-      ],
-      "comment": "Gabarito confirmado: E. Assunto: Hemofilia. Conduta/resposta: Plasmaférese.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Homem-31-anos-idade472388a5ba/",
-        "https://med.estrategia.com/public/questoes/Homem-31-anos-idade463ac9fd9b/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-fd899ec45e886d0b",
-      "number": "10100c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-25-anos416d691b14/",
-      "sourceQuestionId": "4000046731",
-      "matchedAt": "2026-10-08T23:25:20.228Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Reumatologia",
-        "Doenças autoimunes do tecido conjuntivo",
-        "Síndrome antifosfolípide (SAF)",
-        "Hematologia",
-        "Hemostasia",
-        "Trombofilia",
-        "Principais trombofilias adquiridas"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Principais trombofilias adquiridas. Conduta/resposta: Síndrome do anticorpo antifosfolípide",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-25-anos416d691b14/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-03b3561df5061a71",
-      "number": "1001a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-748029ccf368f6b7",
+      "number": "1004a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-causas-anemia5509d4730/",
-      "sourceQuestionId": "4000185798",
-      "matchedAt": "2026-10-08T23:25:26.073Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Introdução ao Estudo das Anemias",
-        "Classificações das anemias",
-        "Classificação morfológica das anemias"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Classificação morfológica das anemias. Conduta/resposta: Doença renal, doença crônica.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Sa-causas-anemia5509d4730/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-dd722d0faee712d1",
-      "number": "1002a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-masculino-3829dafc05b3/",
-      "sourceQuestionId": "4000166564",
-      "matchedAt": "2026-10-08T23:25:31.724Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-45-anos745e3c4612/",
+      "sourceQuestionId": "4000164043",
+      "matchedAt": "2026-10-09T13:24:44.766Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -150,28 +56,137 @@
         "Hematologia",
         "Introdução ao Estudo das Anemias",
         "Classificações das anemias",
-        "Classificação funcional das anemias"
+        "Classificação funcional das anemias",
+        "Os reticulócitos"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Classificação funcional das anemias. Conduta/resposta: Deficiência de ferro.",
+      "comment": "Gabarito confirmado: B. Assunto: Os reticulócitos. Conduta/resposta: hipoproliferativa / defeito na formação da hemoglobina",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-masculino-3829dafc05b3/"
+        "https://med.estrategia.com/public/questoes/Homem-45-anos745e3c4612/",
+        "https://med.estrategia.com/public/questoes/Homem-45-anos-com7358150d43/"
       ]
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-10a2fec4ecddf586",
-      "number": "1003a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-44fa1c1300c42859",
+      "number": "1005a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": false,
-      "status": "low_confidence",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Homem-50-anos-relata6794ec5212/",
-        "https://med.estrategia.com/public/questoes/Homem-45-anos-com7358150d43/"
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/diagnostico-anemias39fa4aafbe/",
+      "sourceQuestionId": "4000144920",
+      "matchedAt": "2026-10-09T13:24:50.761Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias microcíticas",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias"
       ],
-      "bestSimilarity": {
-        "stem": 0.3185840707964602,
-        "options": 0,
-        "combined": 0.2230088495575221
-      }
+      "comment": "Gabarito confirmado: B. Assunto: Classificação morfológica das anemias. Conduta/resposta: Anemia por deficiência de ferro",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/diagnostico-anemias39fa4aafbe/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-63c36a481c9196ff",
+      "number": "1006a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Anemias-microciticas64079ae27/",
+      "sourceQuestionId": "4000144615",
+      "matchedAt": "2026-10-09T13:24:56.897Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Classificação morfológica das anemias. Conduta/resposta: deficiência crônica de ferro.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Anemias-microciticas64079ae27/",
+        "https://med.estrategia.com/public/questoes/Anemias-microciticas29f152aa69/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-7a8a2bc530e58a25",
+      "number": "1007a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Causas-hematimetria1010ad454f/",
+      "sourceQuestionId": "4000144077",
+      "matchedAt": "2026-10-09T13:25:02.697Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Classificação morfológica das anemias. Conduta/resposta: Excesso de ácido fólico.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Causas-hematimetria1010ad454f/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-360e970a5f33a7a1",
+      "number": "1008a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/morfologia-hemacia2162c0d050/",
+      "sourceQuestionId": "4000186767",
+      "matchedAt": "2026-10-09T13:25:08.796Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias microcíticas",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Anemia ferropriva",
+        "Hemoglobinopatias",
+        "Talassemias",
+        "Beta-talassemias"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Beta-talassemias. Conduta/resposta: Anemia ferropriva e Beta Talassemia.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/morfologia-hemacia229d5679d5/",
+        "https://med.estrategia.com/public/questoes/morfologia-hemacia2162c0d050/"
+      ]
     }
   ]
 }

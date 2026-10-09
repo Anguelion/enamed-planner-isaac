@@ -173,10 +173,22 @@
         "#Microcítica",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Classificações das anemias",
+        "Classificação funcional das anemias",
+        "Os reticulócitos",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885707",
-      "ankiGuid": "kW,u=/6G~A"
+      "ankiGuid": "kW,u=/6G~A",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-45-anos745e3c4612/",
+        "sourceQuestionId": "4000164043",
+        "matchedAt": "2026-10-09T13:24:44.766Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-44fa1c1300c42859",
@@ -212,10 +224,23 @@
         "#Pediatria",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias microcíticas",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885708",
-      "ankiGuid": "N]+i4>}>?N"
+      "ankiGuid": "N]+i4>}>?N",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/diagnostico-anemias39fa4aafbe/",
+        "sourceQuestionId": "4000144920",
+        "matchedAt": "2026-10-09T13:24:50.761Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-63c36a481c9196ff",
@@ -250,10 +275,21 @@
         "#Hemoglobina",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885709",
-      "ankiGuid": "n5,oN~5F`4"
+      "ankiGuid": "n5,oN~5F`4",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Anemias-microciticas64079ae27/",
+        "sourceQuestionId": "4000144615",
+        "matchedAt": "2026-10-09T13:24:56.897Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-7a8a2bc530e58a25",
@@ -289,10 +325,21 @@
         "#Álcool",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885710",
-      "ankiGuid": "u-&*g/B*|1"
+      "ankiGuid": "u-&*g/B*|1",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Causas-hematimetria1010ad454f/",
+        "sourceQuestionId": "4000144077",
+        "matchedAt": "2026-10-09T13:25:02.697Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-360e970a5f33a7a1",
@@ -333,10 +380,25 @@
         "#SaúdePública",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias microcíticas",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Anemia ferropriva",
+        "Hemoglobinopatias",
+        "Talassemias",
+        "Beta-talassemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885711",
-      "ankiGuid": "G^wj|ku@bR"
+      "ankiGuid": "G^wj|ku@bR",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/morfologia-hemacia2162c0d050/",
+        "sourceQuestionId": "4000186767",
+        "matchedAt": "2026-10-09T13:25:08.796Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-9c05ea7fd63b497d",
