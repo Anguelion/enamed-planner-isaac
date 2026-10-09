@@ -2819,10 +2819,29 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Trombofilia",
+        "Pneumologia",
+        "Tromboembolismo Pulmonar (TEP)",
+        "Obstetrícia",
+        "Intercorrências obstétricas /obstetrícia patológica",
+        "Abortamento habitual (Abortamento de repetição) e insuficiência istmocervical",
+        "Investigação diagnóstica e tratamento",
+        "Causas hematológicas",
+        "Trombofilias hereditárias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069451",
-      "ankiGuid": "kBHic<epAF"
+      "ankiGuid": "kBHic<epAF",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Sabe-hoje-que-cerca-203679610fba/",
+        "sourceQuestionId": "4000000076",
+        "matchedAt": "2026-10-09T22:43:18.011Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-b09c1c5d34e05fb0",
@@ -2853,10 +2872,28 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Reumatologia",
+        "Doenças autoimunes do tecido conjuntivo",
+        "Síndrome antifosfolípide (SAF)",
+        "Manifestações clínicas",
+        "Manifestações clínicas não critério",
+        "Hemostasia",
+        "Trombofilia",
+        "Principais trombofilias adquiridas",
+        "Síndrome do anticorpo anti-fosfolipídeo (SAAF)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069452",
-      "ankiGuid": "KW^@dM/8A"
+      "ankiGuid": "KW^@dM/8A",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/manifestacoes-clinicas153f28e2d5/",
+        "sourceQuestionId": "4000126298",
+        "matchedAt": "2026-10-09T22:43:24.039Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-5592c901935a3c6b",
@@ -2887,10 +2924,23 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Principais doenças",
+        "Hemofilia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069453",
-      "ankiGuid": "fKN2HW7u_S"
+      "ankiGuid": "fKN2HW7u_S",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Lactente-9-meses-sexo49d1be4d87/",
+        "sourceQuestionId": "4000125098",
+        "matchedAt": "2026-10-09T22:43:29.759Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-6c0d5479905815e1",
@@ -2921,10 +2971,23 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Tratamento da púrpura trombocitopênica imunológica (PTI)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069454",
-      "ankiGuid": "Gj_BI)nb3d"
+      "ankiGuid": "Gj_BI)nb3d",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/jovem-20-anos-idade8079df9f3f/",
+        "sourceQuestionId": "4000105909",
+        "matchedAt": "2026-10-09T22:43:35.814Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-969b4842e4940152",

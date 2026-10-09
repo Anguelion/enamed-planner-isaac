@@ -4933,43 +4933,43 @@
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-7c9ae9219ef0cfc5": {
       "number": "1063c",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-02T22:19:13.775Z",
-      "nextAttemptAt": "2026-10-09T22:19:13.775Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-09T22:43:18.013Z",
+      "nextAttemptAt": "2026-10-23T22:43:18.013Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Sabe-hoje-que-cerca-203679610fba/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-b09c1c5d34e05fb0": {
       "number": "1064c",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-02T22:19:18.956Z",
-      "nextAttemptAt": "2026-10-09T22:19:18.956Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-09T22:43:24.040Z",
+      "nextAttemptAt": "2026-10-23T22:43:24.040Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/manifestacoes-clinicas153f28e2d5/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-5592c901935a3c6b": {
       "number": "1065c",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-02T22:19:24.217Z",
-      "nextAttemptAt": "2026-10-09T22:19:24.217Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-09T22:43:29.759Z",
+      "nextAttemptAt": "2026-10-23T22:43:29.759Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Lactente-9-meses-sexo49d1be4d87/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-6c0d5479905815e1": {
       "number": "1066c",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-02T22:19:29.490Z",
-      "nextAttemptAt": "2026-10-09T22:19:29.490Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-09T22:43:35.815Z",
+      "nextAttemptAt": "2026-10-23T22:43:35.815Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/jovem-20-anos-idade8079df9f3f/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-969b4842e4940152": {
       "number": "1067c",
@@ -5390,7 +5390,27 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/morfologia-hemacia2162c0d050/",
       "localAnswer": "B",
       "remoteAnswer": "B"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-9c05ea7fd63b497d": {
+      "number": "1009a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-09T22:43:41.594Z",
+      "nextAttemptAt": "2026-10-16T22:43:41.594Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-32-anos404ff10b77/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-a539354acd97eb5f": {
+      "number": "1010a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-09T22:43:47.480Z",
+      "nextAttemptAt": "2026-10-16T22:43:47.480Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-causas-anemia56ac671e3/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     }
   },
-  "updatedAt": "2026-10-09T13:25:08.797Z"
+  "updatedAt": "2026-10-09T22:43:47.480Z"
 }
