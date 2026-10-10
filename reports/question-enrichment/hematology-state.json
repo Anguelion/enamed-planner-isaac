@@ -5410,7 +5410,67 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-causas-anemia56ac671e3/",
       "localAnswer": "B",
       "remoteAnswer": "B"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-a7580ee1bc791f2e": {
+      "number": "1011a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-10T12:40:04.507Z",
+      "nextAttemptAt": "2026-10-17T12:40:04.507Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-seguintes-achados2780fc96d5/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-a0a69ae5e3a9c812": {
+      "number": "1012a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-10T12:40:10.695Z",
+      "nextAttemptAt": "2026-10-17T12:40:10.695Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-48-anos-queixa75c0f675f3/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-b2499441440c6185": {
+      "number": "1013a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-10T12:40:16.616Z",
+      "nextAttemptAt": "2026-10-17T12:40:16.616Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/apresentadas-qual10c2410511/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-b4d8d86507af268d": {
+      "number": "1014a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-10T12:40:23.251Z",
+      "nextAttemptAt": "2026-10-17T12:40:23.251Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-21-anos-idade742d1cd58b/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-9a8bd5563eeb6bb9": {
+      "number": "1015a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-10T12:40:29.266Z",
+      "nextAttemptAt": "2026-10-17T12:40:29.266Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-ferropriva-sob3565ebb9d5/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-ad036715f9b6bb20": {
+      "number": "1016a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-10T12:40:35.712Z",
+      "nextAttemptAt": "2026-10-17T12:40:35.712Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Voce-esta-investigando1063068580f/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
     }
   },
-  "updatedAt": "2026-10-09T22:43:47.480Z"
+  "updatedAt": "2026-10-10T12:40:35.712Z"
 }

@@ -538,10 +538,21 @@
         "#HowellJolly",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Esfregaço do sangue periférico",
+        "Corpúsculos citoplasmáticos das hemácias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885714",
-      "ankiGuid": "IHgz>!FG&o"
+      "ankiGuid": "IHgz>!FG&o",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-seguintes-achados2780fc96d5/",
+        "sourceQuestionId": "4000134649",
+        "matchedAt": "2026-10-10T12:40:04.506Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-a0a69ae5e3a9c812",
@@ -577,10 +588,31 @@
         "#VitaminaB12",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados",
+        "Neurologia",
+        "Doenças Neuromusculares",
+        "Neuropatias Periféricas",
+        "Polineuropatias",
+        "Polineuropatias Carenciais",
+        "Deficiência de Vitamina B12 e Ácido Fólico",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885715",
-      "ankiGuid": "oY]hT*$wxN"
+      "ankiGuid": "oY]hT*$wxN",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-48-anos-queixa75c0f675f3/",
+        "sourceQuestionId": "4000125755",
+        "matchedAt": "2026-10-10T12:40:10.693Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-b2499441440c6185",
@@ -615,10 +647,21 @@
         "#Metástases",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Classificações das anemias",
+        "Classificação funcional das anemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885716",
-      "ankiGuid": "xJO?_2N#!."
+      "ankiGuid": "xJO?_2N#!.",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/apresentadas-qual10c2410511/",
+        "sourceQuestionId": "4000106314",
+        "matchedAt": "2026-10-10T12:40:16.616Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-b4d8d86507af268d",
@@ -655,10 +698,26 @@
         "#Hematologia",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Esfregaço do sangue periférico",
+        "Corpúsculos citoplasmáticos das hemácias",
+        "Corpos de Heinz",
+        "Anemias hemolíticas",
+        "Anemias hemolíticas por deficiências enzimáticas",
+        "Deficiência de G6PD",
+        "Quadro clínico da deficiência de G6PD",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885717",
-      "ankiGuid": "s4)EnjY(Ib"
+      "ankiGuid": "s4)EnjY(Ib",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-21-anos-idade742d1cd58b/",
+        "sourceQuestionId": "4000102302",
+        "matchedAt": "2026-10-10T12:40:23.249Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-9a8bd5563eeb6bb9",
@@ -697,10 +756,25 @@
         "#Microcítica",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Pediatria",
+        "Hematologia Pediátrica",
+        "Anemia ferropriva na infância",
+        "Classificação das anemias - Foco na ferropriva",
+        "Clínica Médica",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885718",
-      "ankiGuid": "B~$2ufn-sB"
+      "ankiGuid": "B~$2ufn-sB",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-ferropriva-sob3565ebb9d5/",
+        "sourceQuestionId": "4000084350",
+        "matchedAt": "2026-10-10T12:40:29.264Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-ad036715f9b6bb20",
@@ -736,10 +810,22 @@
         "#ÍndiceReticulocitário",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Classificações das anemias",
+        "Classificação funcional das anemias",
+        "Os reticulócitos",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885719",
-      "ankiGuid": "P$:K:}LrlV"
+      "ankiGuid": "P$:K:}LrlV",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Voce-esta-investigando1063068580f/",
+        "sourceQuestionId": "4000081821",
+        "matchedAt": "2026-10-10T12:40:35.712Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-5ddadbe618179c46",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T22:43:17.128Z",
+  "generatedAt": "2026-10-10T12:40:02.913Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
@@ -7,85 +7,14 @@
   "changed": 6,
   "results": [
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-7c9ae9219ef0cfc5",
-      "number": "1063c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-a7580ee1bc791f2e",
+      "number": "1011a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Sabe-hoje-que-cerca-203679610fba/",
-      "sourceQuestionId": "4000000076",
-      "matchedAt": "2026-10-09T22:43:18.011Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Trombofilia",
-        "Pneumologia",
-        "Tromboembolismo Pulmonar (TEP)",
-        "Obstetrícia",
-        "Intercorrências obstétricas /obstetrícia patológica",
-        "Abortamento habitual (Abortamento de repetição) e insuficiência istmocervical",
-        "Investigação diagnóstica e tratamento",
-        "Causas hematológicas",
-        "Trombofilias hereditárias"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Trombofilias hereditárias. Conduta/resposta: Proteína C ativada.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Sabe-hoje-que-cerca-203679610fba/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-b09c1c5d34e05fb0",
-      "number": "1064c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/manifestacoes-clinicas153f28e2d5/",
-      "sourceQuestionId": "4000126298",
-      "matchedAt": "2026-10-09T22:43:24.039Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Reumatologia",
-        "Doenças autoimunes do tecido conjuntivo",
-        "Síndrome antifosfolípide (SAF)",
-        "Manifestações clínicas",
-        "Manifestações clínicas não critério",
-        "Hematologia",
-        "Hemostasia",
-        "Trombofilia",
-        "Principais trombofilias adquiridas",
-        "Síndrome do anticorpo anti-fosfolipídeo (SAAF)"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Síndrome do anticorpo anti-fosfolipídeo (SAAF). Conduta/resposta: Abortos, tromboses vasculares, plaquetopenia.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/manifestacoes-clinicas153f28e2d5/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-5592c901935a3c6b",
-      "number": "1065c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Lactente-9-meses-sexo49d1be4d87/",
-      "sourceQuestionId": "4000125098",
-      "matchedAt": "2026-10-09T22:43:29.759Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-seguintes-achados2780fc96d5/",
+      "sourceQuestionId": "4000134649",
+      "matchedAt": "2026-10-10T12:40:04.506Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -97,25 +26,24 @@
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Hemostasia",
-        "Hemostasia Secundária",
-        "Principais doenças",
-        "Hemofilia"
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico",
+        "Corpúsculos citoplasmáticos das hemácias"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Hemofilia. Conduta/resposta: Tempo de Tromboplastina Parcial Ativado (TTPA).",
+      "comment": "Gabarito confirmado: D. Assunto: Corpúsculos citoplasmáticos das hemácias. Conduta/resposta: Hemácias com inclusões basofílicas.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Lactente-9-meses-sexo49d1be4d87/"
+        "https://med.estrategia.com/public/questoes/Qual-seguintes-achados2780fc96d5/"
       ]
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-6c0d5479905815e1",
-      "number": "1066c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-a0a69ae5e3a9c812",
+      "number": "1012a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/jovem-20-anos-idade8079df9f3f/",
-      "sourceQuestionId": "4000105909",
-      "matchedAt": "2026-10-09T22:43:35.814Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-48-anos-queixa75c0f675f3/",
+      "sourceQuestionId": "4000125755",
+      "matchedAt": "2026-10-10T12:40:10.693Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -127,74 +55,151 @@
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Hemostasia",
-        "Hemostasia primária",
-        "Púrpura trombocitopênica imunológica (PTI)",
-        "Tratamento da púrpura trombocitopênica imunológica (PTI)"
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados",
+        "Neurologia",
+        "Doenças Neuromusculares",
+        "Neuropatias Periféricas",
+        "Polineuropatias",
+        "Polineuropatias Carenciais",
+        "Deficiência de Vitamina B12 e Ácido Fólico"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Tratamento da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: Prednisona.",
+      "comment": "Gabarito confirmado: D. Assunto: Deficiência de Vitamina B12 e Ácido Fólico. Conduta/resposta: deficiência de vitamina B12.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/jovem-20-anos-idade8079df9f3f/",
-        "https://med.estrategia.com/public/questoes/mulher-com-20-anos11170cb5ea7/"
+        "https://med.estrategia.com/public/questoes/Mulher-48-anos-queixa75c0f675f3/"
       ]
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-9c05ea7fd63b497d",
-      "number": "1009a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-b2499441440c6185",
+      "number": "1013a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-32-anos404ff10b77/",
-      "sourceQuestionId": "4000137406",
-      "matchedAt": "2026-10-09T22:43:41.593Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/apresentadas-qual10c2410511/",
+      "sourceQuestionId": "4000106314",
+      "matchedAt": "2026-10-10T12:40:16.616Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias hemolíticas",
-        "Anemias Microangiopáticas",
-        "Púrpura Trombocitopênica Trombótica (PTT)",
-        "Quadro clínico da púrpura trombocitopênica trombótica (PTT)"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Quadro clínico da púrpura trombocitopênica trombótica (PTT). Conduta/resposta: púrpura trombocitopênica trombótica.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-32-anos404ff10b77/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-a539354acd97eb5f",
-      "number": "1010a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-causas-anemia56ac671e3/",
-      "sourceQuestionId": "4000140425",
-      "matchedAt": "2026-10-09T22:43:47.479Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
+      "localAnswer": "C",
+      "remoteAnswer": "C",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
         "Classificações das anemias",
+        "Classificação funcional das anemias"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Classificação funcional das anemias. Conduta/resposta: A ocupação medular por células anormais, as leucemias e as metástases.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/apresentadas-qual10c2410511/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-b4d8d86507af268d",
+      "number": "1014a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-21-anos-idade742d1cd58b/",
+      "sourceQuestionId": "4000102302",
+      "matchedAt": "2026-10-10T12:40:23.249Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico",
+        "Corpúsculos citoplasmáticos das hemácias",
+        "Corpos de Heinz",
+        "Anemias hemolíticas",
+        "Anemias hemolíticas por deficiências enzimáticas",
+        "Deficiência de G6PD",
+        "Quadro clínico da deficiência de G6PD"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Quadro clínico da deficiência de G6PD. Conduta/resposta: deficiência de glicose-6-fosfato desidrogenase.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-21-anos-idade742d1cd58b/",
+        "https://med.estrategia.com/public/questoes/paciente-sexo1411447af54/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-9a8bd5563eeb6bb9",
+      "number": "1015a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-ferropriva-sob3565ebb9d5/",
+      "sourceQuestionId": "4000084350",
+      "matchedAt": "2026-10-10T12:40:29.264Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Pediatria",
+        "Hematologia Pediátrica",
+        "Anemia ferropriva na infância",
+        "Classificação das anemias - Foco na ferropriva",
+        "Clínica Médica",
+        "Hematologia",
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
         "Classificação morfológica das anemias"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Classificação morfológica das anemias. Conduta/resposta: Anemia perniciosa, cirurgia bariátrica e síndrome do intestino curto.",
+      "comment": "Gabarito confirmado: C. Assunto: Classificação morfológica das anemias. Conduta/resposta: eritropoese inefetiva - microcítica",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Sa-causas-anemia56ac671e3/"
+        "https://med.estrategia.com/public/questoes/anemia-ferropriva-sob3565ebb9d5/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-ad036715f9b6bb20",
+      "number": "1016a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Voce-esta-investigando1063068580f/",
+      "sourceQuestionId": "4000081821",
+      "matchedAt": "2026-10-10T12:40:35.712Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
+        "Classificação funcional das anemias",
+        "Os reticulócitos"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Os reticulócitos. Conduta/resposta: Defeito na proliferação de eritrócitos na medula óssea;",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Voce-esta-investigando8677298cde/",
+        "https://med.estrategia.com/public/questoes/Voce-esta-investigando1063068580f/"
       ]
     }
   ]
