@@ -5003,33 +5003,33 @@
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-29c5f372e05bd7f0": {
       "number": "1070c",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-03T21:23:54.048Z",
-      "nextAttemptAt": "2026-10-10T21:23:54.048Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-10T21:49:43.544Z",
+      "nextAttemptAt": "2026-10-24T21:49:43.544Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/hemofilia-B-sa342a246aeb/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-ece5588e6ad6a594": {
       "number": "1071c",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-03T21:23:59.323Z",
-      "nextAttemptAt": "2026-10-10T21:23:59.323Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-10T21:49:49.626Z",
+      "nextAttemptAt": "2026-10-24T21:49:49.626Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/senhora-65-anos118d41fbcc6/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-d1322418e44804f4": {
       "number": "1072c",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-03T21:24:04.592Z",
-      "nextAttemptAt": "2026-10-10T21:24:04.592Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-10T21:49:55.452Z",
+      "nextAttemptAt": "2026-10-24T21:49:55.452Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Quais-sa-manifestacoes11f1c8b75d/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-da3da62fda3af316": {
       "number": "1073c",
@@ -5470,7 +5470,37 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/Voce-esta-investigando1063068580f/",
       "localAnswer": "A",
       "remoteAnswer": "A"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-5ddadbe618179c46": {
+      "number": "1017a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-10T21:50:01.321Z",
+      "nextAttemptAt": "2026-10-17T21:50:01.321Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-recem3094fffa5d/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-898bf2afd7f543c4": {
+      "number": "1018a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-10T21:50:06.938Z",
+      "nextAttemptAt": "2026-10-17T21:50:06.938Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/reticulocitose-e-bom17e5871d83/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-93439965c7c64def": {
+      "number": "1019a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-10T21:50:12.861Z",
+      "nextAttemptAt": "2026-10-17T21:50:12.861Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino6184822151/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
     }
   },
-  "updatedAt": "2026-10-10T12:40:35.712Z"
+  "updatedAt": "2026-10-10T21:50:12.861Z"
 }

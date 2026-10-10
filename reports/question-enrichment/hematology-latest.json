@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T12:40:02.913Z",
+  "generatedAt": "2026-10-10T21:49:42.788Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
@@ -7,82 +7,141 @@
   "changed": 6,
   "results": [
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-a7580ee1bc791f2e",
-      "number": "1011a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-29c5f372e05bd7f0",
+      "number": "1070c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-seguintes-achados2780fc96d5/",
-      "sourceQuestionId": "4000134649",
-      "matchedAt": "2026-10-10T12:40:04.506Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/hemofilia-B-sa342a246aeb/",
+      "sourceQuestionId": "4000038055",
+      "matchedAt": "2026-10-10T21:49:43.543Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Principais doenças",
+        "Hemofilia"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Hemofilia. Conduta/resposta: VIII e IX, hemartroses.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/hemofilia-B-sa342a246aeb/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-ece5588e6ad6a594",
+      "number": "1071c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/senhora-65-anos118d41fbcc6/",
+      "sourceQuestionId": "4000033616",
+      "matchedAt": "2026-10-10T21:49:49.625Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Tratamento da púrpura trombocitopênica imunológica (PTI)",
+        "Anemias hemolíticas",
+        "Anemias Microangiopáticas",
+        "Púrpura Trombocitopênica Trombótica (PTT)",
+        "Quadro clínico da púrpura trombocitopênica trombótica (PTT)"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Quadro clínico da púrpura trombocitopênica trombótica (PTT). Conduta/resposta: Deve-se iniciar tratamento com glicocorticoide.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/senhora-65-anos118d41fbcc6/",
+        "https://med.estrategia.com/public/questoes/mulher-65-anos-idade13596c3f11c/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-d1322418e44804f4",
+      "number": "1072c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Quais-sa-manifestacoes11f1c8b75d/",
+      "sourceQuestionId": "4000002512",
+      "matchedAt": "2026-10-10T21:49:55.452Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Principais doenças",
+        "Hemofilia"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Hemofilia. Conduta/resposta: Hemartroses.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Quais-sa-manifestacoes1136fe3244/",
+        "https://med.estrategia.com/public/questoes/Quais-sa-manifestacoes11f1c8b75d/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-5ddadbe618179c46",
+      "number": "1017a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-recem3094fffa5d/",
+      "sourceQuestionId": "4000072767",
+      "matchedAt": "2026-10-10T21:50:01.320Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
         "Esfregaço do sangue periférico",
-        "Corpúsculos citoplasmáticos das hemácias"
+        "Corpúsculos citoplasmáticos das hemácias",
+        "Corpos de Howell-Jolly",
+        "Corpos de Heinz"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Corpúsculos citoplasmáticos das hemácias. Conduta/resposta: Hemácias com inclusões basofílicas.",
+      "comment": "Gabarito confirmado: A. Assunto: Corpos de Heinz. Conduta/resposta: Infiltração esplênica difusa pelo tumor.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Qual-seguintes-achados2780fc96d5/"
+        "https://med.estrategia.com/public/questoes/paciente-recem3094fffa5d/"
       ]
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-a0a69ae5e3a9c812",
-      "number": "1012a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-898bf2afd7f543c4",
+      "number": "1018a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-48-anos-queixa75c0f675f3/",
-      "sourceQuestionId": "4000125755",
-      "matchedAt": "2026-10-10T12:40:10.693Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Quadro clínico da anemia megaloblástica",
-        "Introdução ao Estudo das Anemias",
-        "Esfregaço do sangue periférico",
-        "Alterações dos leucócitos",
-        "Neutrófilos hipersegmentados",
-        "Neurologia",
-        "Doenças Neuromusculares",
-        "Neuropatias Periféricas",
-        "Polineuropatias",
-        "Polineuropatias Carenciais",
-        "Deficiência de Vitamina B12 e Ácido Fólico"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Deficiência de Vitamina B12 e Ácido Fólico. Conduta/resposta: deficiência de vitamina B12.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-48-anos-queixa75c0f675f3/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-b2499441440c6185",
-      "number": "1013a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/apresentadas-qual10c2410511/",
-      "sourceQuestionId": "4000106314",
-      "matchedAt": "2026-10-10T12:40:16.616Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/reticulocitose-e-bom17e5871d83/",
+      "sourceQuestionId": "4000039709",
+      "matchedAt": "2026-10-10T21:50:06.937Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -98,20 +157,20 @@
         "Classificações das anemias",
         "Classificação funcional das anemias"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Classificação funcional das anemias. Conduta/resposta: A ocupação medular por células anormais, as leucemias e as metástases.",
+      "comment": "Gabarito confirmado: C. Assunto: Classificação funcional das anemias. Conduta/resposta: Esferocitose hereditária.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/apresentadas-qual10c2410511/"
+        "https://med.estrategia.com/public/questoes/reticulocitose-e-bom17e5871d83/"
       ]
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-b4d8d86507af268d",
-      "number": "1014a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-93439965c7c64def",
+      "number": "1019a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-21-anos-idade742d1cd58b/",
-      "sourceQuestionId": "4000102302",
-      "matchedAt": "2026-10-10T12:40:23.249Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino6184822151/",
+      "sourceQuestionId": "4000025920",
+      "matchedAt": "2026-10-10T21:50:12.860Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -123,83 +182,18 @@
       "tags": [
         "Clínica Médica",
         "Hematologia",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
         "Introdução ao Estudo das Anemias",
         "Esfregaço do sangue periférico",
-        "Corpúsculos citoplasmáticos das hemácias",
-        "Corpos de Heinz",
-        "Anemias hemolíticas",
-        "Anemias hemolíticas por deficiências enzimáticas",
-        "Deficiência de G6PD",
-        "Quadro clínico da deficiência de G6PD"
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados"
       ],
-      "comment": "Gabarito confirmado: A. Assunto: Quadro clínico da deficiência de G6PD. Conduta/resposta: deficiência de glicose-6-fosfato desidrogenase.",
+      "comment": "Gabarito confirmado: A. Assunto: Neutrófilos hipersegmentados. Conduta/resposta: dosagem de B12 e folato.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-21-anos-idade742d1cd58b/",
-        "https://med.estrategia.com/public/questoes/paciente-sexo1411447af54/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-9a8bd5563eeb6bb9",
-      "number": "1015a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-ferropriva-sob3565ebb9d5/",
-      "sourceQuestionId": "4000084350",
-      "matchedAt": "2026-10-10T12:40:29.264Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Pediatria",
-        "Hematologia Pediátrica",
-        "Anemia ferropriva na infância",
-        "Classificação das anemias - Foco na ferropriva",
-        "Clínica Médica",
-        "Hematologia",
-        "Introdução ao Estudo das Anemias",
-        "Classificações das anemias",
-        "Classificação morfológica das anemias"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Classificação morfológica das anemias. Conduta/resposta: eritropoese inefetiva - microcítica",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/anemia-ferropriva-sob3565ebb9d5/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-ad036715f9b6bb20",
-      "number": "1016a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Voce-esta-investigando1063068580f/",
-      "sourceQuestionId": "4000081821",
-      "matchedAt": "2026-10-10T12:40:35.712Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Introdução ao Estudo das Anemias",
-        "Classificações das anemias",
-        "Classificação funcional das anemias",
-        "Os reticulócitos"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Os reticulócitos. Conduta/resposta: Defeito na proliferação de eritrócitos na medula óssea;",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Voce-esta-investigando8677298cde/",
-        "https://med.estrategia.com/public/questoes/Voce-esta-investigando1063068580f/"
+        "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino6184822151/",
+        "https://med.estrategia.com/public/questoes/paciente-sexo-feminino870e177844/"
       ]
     }
   ]

@@ -861,10 +861,23 @@
         "#Morfologia",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Esfregaço do sangue periférico",
+        "Corpúsculos citoplasmáticos das hemácias",
+        "Corpos de Howell-Jolly",
+        "Corpos de Heinz",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885720",
-      "ankiGuid": "G$wY?wDEk~"
+      "ankiGuid": "G$wY?wDEk~",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-recem3094fffa5d/",
+        "sourceQuestionId": "4000072767",
+        "matchedAt": "2026-10-10T21:50:01.320Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-898bf2afd7f543c4",
@@ -910,10 +923,21 @@
         "#Reticulocitose",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Classificações das anemias",
+        "Classificação funcional das anemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885721",
-      "ankiGuid": "Iom#Wf!5:R"
+      "ankiGuid": "Iom#Wf!5:R",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/reticulocitose-e-bom17e5871d83/",
+        "sourceQuestionId": "4000039709",
+        "matchedAt": "2026-10-10T21:50:06.937Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-93439965c7c64def",
@@ -951,10 +975,25 @@
         "#VitaminaB12",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885722",
-      "ankiGuid": "M-t-U8i;>Q"
+      "ankiGuid": "M-t-U8i;>Q",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino6184822151/",
+        "sourceQuestionId": "4000025920",
+        "matchedAt": "2026-10-10T21:50:12.860Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-bb918d7c4aea39bb",

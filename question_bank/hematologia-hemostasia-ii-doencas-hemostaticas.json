@@ -3160,10 +3160,23 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Principais doenças",
+        "Hemofilia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069458",
-      "ankiGuid": "jdmSL)kwuH"
+      "ankiGuid": "jdmSL)kwuH",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/hemofilia-B-sa342a246aeb/",
+        "sourceQuestionId": "4000038055",
+        "matchedAt": "2026-10-10T21:49:43.543Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-ece5588e6ad6a594",
@@ -3193,10 +3206,27 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Tratamento da púrpura trombocitopênica imunológica (PTI)",
+        "Anemias hemolíticas",
+        "Anemias Microangiopáticas",
+        "Púrpura Trombocitopênica Trombótica (PTT)",
+        "Quadro clínico da púrpura trombocitopênica trombótica (PTT)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069459",
-      "ankiGuid": "vulFia[M:z"
+      "ankiGuid": "vulFia[M:z",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/senhora-65-anos118d41fbcc6/",
+        "sourceQuestionId": "4000033616",
+        "matchedAt": "2026-10-10T21:49:49.625Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-d1322418e44804f4",
@@ -3226,10 +3256,23 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Principais doenças",
+        "Hemofilia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069460",
-      "ankiGuid": "Om%8lSMrz3"
+      "ankiGuid": "Om%8lSMrz3",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Quais-sa-manifestacoes11f1c8b75d/",
+        "sourceQuestionId": "4000002512",
+        "matchedAt": "2026-10-10T21:49:55.452Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-da3da62fda3af316",
