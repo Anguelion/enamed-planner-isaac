@@ -1233,7 +1233,23 @@
       "tags": [],
       "suggestedComment": "",
       "reviewedAt": "2026-10-08T23:25:37.684Z"
+    },
+    "anki-hematologia-hemostasia-ii-doencas-hemostaticas-d8ed8c1eadfc2aac": {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-d8ed8c1eadfc2aac",
+      "number": "1078c",
+      "status": "low_confidence",
+      "localAnswer": null,
+      "remoteAnswer": null,
+      "sourceUrl": null,
+      "similarity": {
+        "stem": 1,
+        "options": 0.6,
+        "combined": 0.8799999999999999
+      },
+      "tags": [],
+      "suggestedComment": "",
+      "reviewedAt": "2026-10-11T13:00:08.701Z"
     }
   },
-  "updatedAt": "2026-10-08T23:25:37.684Z"
+  "updatedAt": "2026-10-11T13:00:08.701Z"
 }

@@ -3349,10 +3349,23 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069462",
-      "ankiGuid": "A)T7JO;OWt"
+      "ankiGuid": "A)T7JO;OWt",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/menina-3-anos-e707edfd19b/",
+        "sourceQuestionId": "4000096585",
+        "matchedAt": "2026-10-11T12:59:45.358Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-268e0e0b828fd672",
@@ -3382,10 +3395,23 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Tratamento da púrpura trombocitopênica imunológica (PTI)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069463",
-      "ankiGuid": "oHWDD_%)C1"
+      "ankiGuid": "oHWDD_%)C1",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-tratamento14d62be038/",
+        "sourceQuestionId": "4000095369",
+        "matchedAt": "2026-10-11T12:59:51.227Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-fedf37b9fa4a7a51",
@@ -3415,10 +3441,22 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Trombofilia",
+        "Principais trombofilias hereditárias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069464",
-      "ankiGuid": "A1]CTsn:iT"
+      "ankiGuid": "A1]CTsn:iT",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/termo-trombofilia-tem2894971426/",
+        "sourceQuestionId": "4000059455",
+        "matchedAt": "2026-10-11T12:59:57.055Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-297a218e2e735b73",
@@ -3449,10 +3487,21 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Trombofilia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069465",
-      "ankiGuid": "i{^DQs*DmF"
+      "ankiGuid": "i{^DQs*DmF",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/NA-e-causa-trombose11df435356/",
+        "sourceQuestionId": "4000047954",
+        "matchedAt": "2026-10-11T13:00:03.013Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-d8ed8c1eadfc2aac",

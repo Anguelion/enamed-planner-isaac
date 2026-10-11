@@ -5043,50 +5043,50 @@
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-027c3929abaa083b": {
       "number": "1074c",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-04T12:28:57.301Z",
-      "nextAttemptAt": "2026-10-11T12:28:57.301Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-11T12:59:45.358Z",
+      "nextAttemptAt": "2026-10-25T12:59:45.358Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/menina-3-anos-e707edfd19b/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-268e0e0b828fd672": {
       "number": "1075c",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-04T12:29:02.534Z",
-      "nextAttemptAt": "2026-10-11T12:29:02.534Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-11T12:59:51.227Z",
+      "nextAttemptAt": "2026-10-25T12:59:51.227Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-tratamento14d62be038/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-fedf37b9fa4a7a51": {
       "number": "1076c",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-04T12:29:07.812Z",
-      "nextAttemptAt": "2026-10-11T12:29:07.812Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-11T12:59:57.055Z",
+      "nextAttemptAt": "2026-10-25T12:59:57.055Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/termo-trombofilia-tem2894971426/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-297a218e2e735b73": {
       "number": "1077c",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-04T12:29:13.054Z",
-      "nextAttemptAt": "2026-10-11T12:29:13.054Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-11T13:00:03.013Z",
+      "nextAttemptAt": "2026-10-25T13:00:03.013Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/NA-e-causa-trombose11df435356/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-d8ed8c1eadfc2aac": {
       "number": "1078c",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-04T12:29:18.281Z",
-      "nextAttemptAt": "2026-10-11T12:29:18.281Z",
+      "status": "low_confidence",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-11T13:00:08.701Z",
+      "nextAttemptAt": "2026-12-10T13:00:08.701Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -5500,7 +5500,17 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino6184822151/",
       "localAnswer": "A",
       "remoteAnswer": "A"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-bb918d7c4aea39bb": {
+      "number": "1020a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-11T13:00:14.763Z",
+      "nextAttemptAt": "2026-10-18T13:00:14.763Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Considerando-dados45a02c19d9/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
     }
   },
-  "updatedAt": "2026-10-10T21:50:12.861Z"
+  "updatedAt": "2026-10-11T13:00:14.763Z"
 }

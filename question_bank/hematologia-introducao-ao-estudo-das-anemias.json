@@ -1028,10 +1028,21 @@
         "#VCM",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885723",
-      "ankiGuid": "l1QpMf9gWi"
+      "ankiGuid": "l1QpMf9gWi",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Considerando-dados45a02c19d9/",
+        "sourceQuestionId": "4000024585",
+        "matchedAt": "2026-10-11T13:00:14.762Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-d74cb8f87ba6197c",
