@@ -3565,10 +3565,29 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Reumatologia",
+        "Doenças autoimunes do tecido conjuntivo",
+        "Lúpus Eritematoso Sistêmico (LES)",
+        "Síndrome antifosfolípide (SAF)",
+        "Diagnóstico",
+        "Laboratório",
+        "Hemostasia",
+        "Trombofilia",
+        "Principais trombofilias adquiridas",
+        "Síndrome do anticorpo anti-fosfolipídeo (SAAF)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069467",
-      "ankiGuid": "EB<?vPH%}u"
+      "ankiGuid": "EB<?vPH%}u",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-feminina-171795b9745d5/",
+        "sourceQuestionId": "4000028573",
+        "matchedAt": "2026-10-11T22:04:08.895Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-5fe22b4c99445663",
@@ -3598,10 +3617,28 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Reumatologia",
+        "Doenças autoimunes do tecido conjuntivo",
+        "Síndrome antifosfolípide (SAF)",
+        "Manifestações clínicas",
+        "Laboratório",
+        "Hemostasia",
+        "Trombofilia",
+        "Principais trombofilias adquiridas",
+        "Síndrome do anticorpo anti-fosfolipídeo (SAAF)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069468",
-      "ankiGuid": "w{*lujjBMF"
+      "ankiGuid": "w{*lujjBMF",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-elementos-NA-faz10f720c9d8/",
+        "sourceQuestionId": "4000109702",
+        "matchedAt": "2026-10-11T22:04:15.471Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-e1e80cca7cbee54c",

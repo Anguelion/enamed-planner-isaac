@@ -1083,10 +1083,22 @@
         "#Talassemia",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Esfregaço do sangue periférico",
+        "Poiquilocitose",
+        "Hemácias em alvo",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885724",
-      "ankiGuid": "cL1x%P/!i;"
+      "ankiGuid": "cL1x%P/!i;",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Foram-avaliados285d7ef191/",
+        "sourceQuestionId": "4000117754",
+        "matchedAt": "2026-10-11T22:04:22.301Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-14f96f123b682ac3",
