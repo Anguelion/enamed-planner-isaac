@@ -1,133 +1,79 @@
 {
-  "generatedAt": "2026-10-11T22:04:07.698Z",
+  "generatedAt": "2026-10-12T15:37:38.136Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 3,
+  "changed": 0,
   "results": [
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-f03186fc1f1f8c1d",
-      "number": "1079c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-feminina-171795b9745d5/",
-      "sourceQuestionId": "4000028573",
-      "matchedAt": "2026-10-11T22:04:08.895Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Reumatologia",
-        "Doenças autoimunes do tecido conjuntivo",
-        "Lúpus Eritematoso Sistêmico (LES)",
-        "Síndrome antifosfolípide (SAF)",
-        "Diagnóstico",
-        "Laboratório",
-        "Hematologia",
-        "Hemostasia",
-        "Trombofilia",
-        "Principais trombofilias adquiridas",
-        "Síndrome do anticorpo anti-fosfolipídeo (SAAF)"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Síndrome do anticorpo anti-fosfolipídeo (SAAF). Conduta/resposta: A paciente em questão não pode ser considerada portadora de SAF (Síndrome do Anticorpo Antifosfolipídeo).",
+      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-e3c5924360e7138e",
+      "number": "1013g",
+      "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
+      "changed": false,
+      "status": "low_confidence",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-feminina-171795b9745d5/"
-      ]
+        "https://med.estrategia.com/public/questoes/Mulher-20-anos-com73220f10de/"
+      ],
+      "bestSimilarity": {
+        "stem": 1,
+        "options": 0.7090909090909091,
+        "combined": 0.9127272727272727
+      }
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-5fe22b4c99445663",
-      "number": "1080c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-elementos-NA-faz10f720c9d8/",
-      "sourceQuestionId": "4000109702",
-      "matchedAt": "2026-10-11T22:04:15.471Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Reumatologia",
-        "Doenças autoimunes do tecido conjuntivo",
-        "Síndrome antifosfolípide (SAF)",
-        "Manifestações clínicas",
-        "Laboratório",
-        "Hematologia",
-        "Hemostasia",
-        "Trombofilia",
-        "Principais trombofilias adquiridas",
-        "Síndrome do anticorpo anti-fosfolipídeo (SAAF)"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Síndrome do anticorpo anti-fosfolipídeo (SAAF). Conduta/resposta: Esteato-hepatite.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Qual-elementos-NA-faz10f720c9d8/",
-        "https://med.estrategia.com/public/questoes/alternativa-que-NA-E17bf69b9b7/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-d74cb8f87ba6197c",
-      "number": "1021a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-a62aec136f9a1cdc",
+      "number": "1025a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Foram-avaliados285d7ef191/",
-      "sourceQuestionId": "4000117754",
-      "matchedAt": "2026-10-11T22:04:22.301Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "E",
-      "remoteAnswer": "E",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Introdução ao Estudo das Anemias",
-        "Esfregaço do sangue periférico",
-        "Poiquilocitose",
-        "Hemácias em alvo"
-      ],
-      "comment": "Gabarito confirmado: E. Assunto: Hemácias em alvo. Conduta/resposta: Doença falciforme.",
+      "changed": false,
+      "status": "low_confidence",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Foram-avaliados285d7ef191/",
-        "https://med.estrategia.com/public/questoes/c73aed2b6bd27196f2b689e5/"
-      ]
+        "https://med.estrategia.com/public/questoes/Mulher-25-anos-com118a5cf6f3d/",
+        "https://med.estrategia.com/public/questoes/Paciente-feminina-255615517d61/",
+        "https://med.estrategia.com/public/questoes/Mulher-25-anos-procura4386a6cac0/"
+      ],
+      "bestSimilarity": {
+        "stem": 0.6259541984732825,
+        "options": 0,
+        "combined": 0.4381679389312977
+      }
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-14f96f123b682ac3",
-      "number": "1022a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-fea505edca4f9803",
+      "number": "1026a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": false,
+      "status": "low_confidence",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Mulher-25-anos-com118a5cf6f3d/",
+        "https://med.estrategia.com/public/questoes/Paciente-feminina-255615517d61/",
+        "https://med.estrategia.com/public/questoes/Mulher-25-anos-procura4386a6cac0/"
+      ],
+      "bestSimilarity": {
+        "stem": 0.5384615384615384,
+        "options": 0,
+        "combined": 0.37692307692307686
+      }
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-c65ce9d37c99abe6",
+      "number": "1027a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-436df2a227790385",
-      "number": "1023a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-25ee60d123782aaf",
+      "number": "1028a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-204649930e94f35f",
-      "number": "1024a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-8863d6a3ce49e344",
+      "number": "1029a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": false,
       "status": "not_found",

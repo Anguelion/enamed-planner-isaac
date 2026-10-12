@@ -94,9 +94,9 @@
     "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-e3c5924360e7138e": {
       "number": "1013g",
       "status": "low_confidence",
-      "attempts": 1,
-      "lastAttemptAt": "2026-08-13T07:57:40.127Z",
-      "nextAttemptAt": "2026-10-12T07:57:40.127Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-12T15:37:39.236Z",
+      "nextAttemptAt": "2026-12-11T15:37:39.236Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -5550,7 +5550,57 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-a62aec136f9a1cdc": {
+      "number": "1025a",
+      "status": "low_confidence",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-12T15:37:45.424Z",
+      "nextAttemptAt": "2026-12-11T15:37:45.424Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-fea505edca4f9803": {
+      "number": "1026a",
+      "status": "low_confidence",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-12T15:37:52.141Z",
+      "nextAttemptAt": "2026-12-11T15:37:52.141Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-c65ce9d37c99abe6": {
+      "number": "1027a",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-12T15:37:57.545Z",
+      "nextAttemptAt": "2026-10-19T15:37:57.545Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-25ee60d123782aaf": {
+      "number": "1028a",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-12T15:38:02.788Z",
+      "nextAttemptAt": "2026-10-19T15:38:02.788Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-8863d6a3ce49e344": {
+      "number": "1029a",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-12T15:38:08.038Z",
+      "nextAttemptAt": "2026-10-19T15:38:08.038Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-10-11T22:04:38.981Z"
+  "updatedAt": "2026-10-12T15:38:08.038Z"
 }

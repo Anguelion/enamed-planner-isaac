@@ -15,7 +15,7 @@
       },
       "tags": [],
       "suggestedComment": "",
-      "reviewedAt": "2026-08-13T07:57:40.127Z"
+      "reviewedAt": "2026-10-12T15:37:39.236Z"
     },
     "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-0256b530b0870629": {
       "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-0256b530b0870629",
@@ -1249,7 +1249,39 @@
       "tags": [],
       "suggestedComment": "",
       "reviewedAt": "2026-10-11T13:00:08.701Z"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-a62aec136f9a1cdc": {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-a62aec136f9a1cdc",
+      "number": "1025a",
+      "status": "low_confidence",
+      "localAnswer": null,
+      "remoteAnswer": null,
+      "sourceUrl": null,
+      "similarity": {
+        "stem": 0.6259541984732825,
+        "options": 0,
+        "combined": 0.4381679389312977
+      },
+      "tags": [],
+      "suggestedComment": "",
+      "reviewedAt": "2026-10-12T15:37:45.424Z"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-fea505edca4f9803": {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-fea505edca4f9803",
+      "number": "1026a",
+      "status": "low_confidence",
+      "localAnswer": null,
+      "remoteAnswer": null,
+      "sourceUrl": null,
+      "similarity": {
+        "stem": 0.5384615384615384,
+        "options": 0,
+        "combined": 0.37692307692307686
+      },
+      "tags": [],
+      "suggestedComment": "",
+      "reviewedAt": "2026-10-12T15:37:52.141Z"
     }
   },
-  "updatedAt": "2026-10-11T13:00:08.701Z"
+  "updatedAt": "2026-10-12T15:37:52.141Z"
 }
