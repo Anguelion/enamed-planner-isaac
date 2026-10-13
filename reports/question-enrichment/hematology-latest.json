@@ -1,65 +1,192 @@
 {
-  "generatedAt": "2026-10-13T14:19:37.175Z",
+  "generatedAt": "2026-10-13T22:51:19.847Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 0,
+  "changed": 6,
   "results": [
     {
-      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-5a3a4f6af7ae64c8",
-      "number": "1019g",
-      "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
-      "changed": false,
-      "status": "low_confidence",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/anemia-insuficiencia9ea549e85/"
-      ],
-      "bestSimilarity": {
-        "stem": 0.8421052631578947,
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-4d684ec7795b4f26",
+      "number": "1087c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Crianc-tres-anos-idade804de88468/",
+      "sourceQuestionId": "4000120162",
+      "matchedAt": "2026-10-13T22:51:20.732Z",
+      "similarity": {
+        "stem": 1,
         "options": 1,
-        "combined": 0.8894736842105262
-      }
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Púrpura trombocitopênica imunológica (PTI). Conduta/resposta: Púrpura trombocitopênica imune.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Crianc-tres-anos-idade804de88468/"
+      ]
     },
     {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-f027e7283c8a2a78",
-      "number": "1056b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-784bb4023104f823",
+      "number": "1088c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/MHS-24-anos-sexo2088855f45b/",
+      "sourceQuestionId": "4000119132",
+      "matchedAt": "2026-10-13T22:51:26.660Z",
+      "similarity": {
+        "stem": 0.9873417721518988,
+        "options": 1,
+        "combined": 0.9911392405063291
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Diagnóstico da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: Púrpura trombocitopênica idiopática.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/MHS-24-anos-sexo2088855f45b/"
+      ]
     },
     {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-a618108a8eae2c49",
-      "number": "1057b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-8ac742eff3bc306a",
-      "number": "1058b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-03aaa0aa7c6faf77",
-      "number": "1059b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-c91a059ba79a6442",
-      "number": "1030a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-c34658119c6b845d",
+      "number": "1031a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/as-anemias112f1996cf/",
+      "sourceQuestionId": "4000045280",
+      "matchedAt": "2026-10-13T22:51:32.544Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias microcíticas",
+        "Diagnóstico diferencial das anemias microcíticas"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Diagnóstico diferencial das anemias microcíticas. Conduta/resposta: os principais diagnósticos diferenciais são anemia ferropriva, talassemia e anemia de doença crônica.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/as-anemias112f1996cf/",
+        "https://med.estrategia.com/public/questoes/as-anemias1199828ddf/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-139f5397b808909f",
+      "number": "1032a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-42-anos493e25a7ad/",
+      "sourceQuestionId": "4000069849",
+      "matchedAt": "2026-10-13T22:51:38.469Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
+        "Classificação funcional das anemias"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Classificação funcional das anemias. Conduta/resposta: Anemia ferropriva.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-42-anos493e25a7ad/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-cae843302e72c215",
+      "number": "1033a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-causas-microcitose113dee329b/",
+      "sourceQuestionId": "4000062086",
+      "matchedAt": "2026-10-13T22:51:44.154Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias microcíticas",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Classificação morfológica das anemias. Conduta/resposta: anemia da inflamação, talassemia, anemia sideroblástica",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Sa-causas-microcitose113dee329b/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-76c91de51e75f77f",
+      "number": "1034a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-28-anos-idade636394a120/",
+      "sourceQuestionId": "4000062047",
+      "matchedAt": "2026-10-13T22:51:50.129Z",
+      "similarity": {
+        "stem": 0.9565217391304348,
+        "options": 1,
+        "combined": 0.9695652173913043
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Neutrófilos hipersegmentados. Conduta/resposta: vitamina B12",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Mulher-28-anos-idade636394a120/",
+        "https://med.estrategia.com/public/questoes/d57d63cde72e0612a247d734/"
+      ]
     }
   ]
 }

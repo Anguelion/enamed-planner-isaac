@@ -5173,23 +5173,23 @@
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-4d684ec7795b4f26": {
       "number": "1087c",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-06T22:41:35.159Z",
-      "nextAttemptAt": "2026-10-13T22:41:35.159Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-13T22:51:20.733Z",
+      "nextAttemptAt": "2026-10-27T22:51:20.733Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Crianc-tres-anos-idade804de88468/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-784bb4023104f823": {
       "number": "1088c",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-06T22:41:40.339Z",
-      "nextAttemptAt": "2026-10-13T22:41:40.339Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-13T22:51:26.660Z",
+      "nextAttemptAt": "2026-10-27T22:51:26.660Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/MHS-24-anos-sexo2088855f45b/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-3a0df37dadb2f4d3": {
       "number": "1089c",
@@ -5610,7 +5610,47 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-c34658119c6b845d": {
+      "number": "1031a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-13T22:51:32.545Z",
+      "nextAttemptAt": "2026-10-20T22:51:32.545Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/as-anemias112f1996cf/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-139f5397b808909f": {
+      "number": "1032a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-13T22:51:38.470Z",
+      "nextAttemptAt": "2026-10-20T22:51:38.470Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-42-anos493e25a7ad/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-cae843302e72c215": {
+      "number": "1033a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-13T22:51:44.156Z",
+      "nextAttemptAt": "2026-10-20T22:51:44.156Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-causas-microcitose113dee329b/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-76c91de51e75f77f": {
+      "number": "1034a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-13T22:51:50.131Z",
+      "nextAttemptAt": "2026-10-20T22:51:50.131Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-28-anos-idade636394a120/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     }
   },
-  "updatedAt": "2026-10-13T14:20:07.504Z"
+  "updatedAt": "2026-10-13T22:51:50.131Z"
 }

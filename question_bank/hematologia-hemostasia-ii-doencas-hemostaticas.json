@@ -3955,10 +3955,22 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069475",
-      "ankiGuid": "r<eIGln6>P"
+      "ankiGuid": "r<eIGln6>P",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Crianc-tres-anos-idade804de88468/",
+        "sourceQuestionId": "4000120162",
+        "matchedAt": "2026-10-13T22:51:20.732Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-784bb4023104f823",
@@ -3989,10 +4001,23 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069476",
-      "ankiGuid": "uvF?IT8f#J"
+      "ankiGuid": "uvF?IT8f#J",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/MHS-24-anos-sexo2088855f45b/",
+        "sourceQuestionId": "4000119132",
+        "matchedAt": "2026-10-13T22:51:26.660Z",
+        "confidence": 0.9911392405063291
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-3a0df37dadb2f4d3",

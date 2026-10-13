@@ -1508,10 +1508,21 @@
         "#Talassemia",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias microcíticas",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885734",
-      "ankiGuid": "ebs,6abdO["
+      "ankiGuid": "ebs,6abdO[",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/as-anemias112f1996cf/",
+        "sourceQuestionId": "4000045280",
+        "matchedAt": "2026-10-13T22:51:32.544Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-139f5397b808909f",
@@ -1548,10 +1559,21 @@
         "#Reticulócitos",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Classificações das anemias",
+        "Classificação funcional das anemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885735",
-      "ankiGuid": "l0xL_]9sk_"
+      "ankiGuid": "l0xL_]9sk_",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-42-anos493e25a7ad/",
+        "sourceQuestionId": "4000069849",
+        "matchedAt": "2026-10-13T22:51:38.469Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-cae843302e72c215",
@@ -1586,10 +1608,23 @@
         "#Talassemia",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias microcíticas",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885736",
-      "ankiGuid": "xT|ivT:iWs"
+      "ankiGuid": "xT|ivT:iWs",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-causas-microcitose113dee329b/",
+        "sourceQuestionId": "4000062086",
+        "matchedAt": "2026-10-13T22:51:44.154Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-76c91de51e75f77f",
@@ -1624,10 +1659,25 @@
         "#VitaminaB12",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885737",
-      "ankiGuid": "r3duG$C=Fs"
+      "ankiGuid": "r3duG$C=Fs",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-28-anos-idade636394a120/",
+        "sourceQuestionId": "4000062047",
+        "matchedAt": "2026-10-13T22:51:50.129Z",
+        "confidence": 0.9695652173913043
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-46e76ec6f24c4b93",
