@@ -154,9 +154,9 @@
     "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-5a3a4f6af7ae64c8": {
       "number": "1019g",
       "status": "low_confidence",
-      "attempts": 1,
-      "lastAttemptAt": "2026-08-13T19:29:14.938Z",
-      "nextAttemptAt": "2026-10-12T19:29:14.938Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-13T14:19:39.306Z",
+      "nextAttemptAt": "2026-12-12T14:19:39.306Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -4184,9 +4184,9 @@
     "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-f027e7283c8a2a78": {
       "number": "1056b",
       "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-09-29T13:00:50.316Z",
-      "nextAttemptAt": "2026-10-13T13:00:50.316Z",
+      "attempts": 3,
+      "lastAttemptAt": "2026-10-13T14:19:45.002Z",
+      "nextAttemptAt": "2026-11-03T14:19:45.002Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -4194,9 +4194,9 @@
     "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-a618108a8eae2c49": {
       "number": "1057b",
       "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-09-29T13:00:55.576Z",
-      "nextAttemptAt": "2026-10-13T13:00:55.576Z",
+      "attempts": 3,
+      "lastAttemptAt": "2026-10-13T14:19:50.665Z",
+      "nextAttemptAt": "2026-11-03T14:19:50.665Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -4204,9 +4204,9 @@
     "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-8ac742eff3bc306a": {
       "number": "1058b",
       "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-09-29T13:01:00.808Z",
-      "nextAttemptAt": "2026-10-13T13:01:00.808Z",
+      "attempts": 3,
+      "lastAttemptAt": "2026-10-13T14:19:56.331Z",
+      "nextAttemptAt": "2026-11-03T14:19:56.331Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -4214,9 +4214,9 @@
     "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-03aaa0aa7c6faf77": {
       "number": "1059b",
       "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-09-29T13:01:06.038Z",
-      "nextAttemptAt": "2026-10-13T13:01:06.038Z",
+      "attempts": 3,
+      "lastAttemptAt": "2026-10-13T14:20:01.869Z",
+      "nextAttemptAt": "2026-11-03T14:20:01.869Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -5600,7 +5600,17 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-c91a059ba79a6442": {
+      "number": "1030a",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-13T14:20:07.504Z",
+      "nextAttemptAt": "2026-10-20T14:20:07.504Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-10-12T15:38:08.038Z"
+  "updatedAt": "2026-10-13T14:20:07.504Z"
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-12T15:37:38.136Z",
+  "generatedAt": "2026-10-13T14:19:37.175Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
@@ -7,73 +7,55 @@
   "changed": 0,
   "results": [
     {
-      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-e3c5924360e7138e",
-      "number": "1013g",
+      "id": "anki-hematologia-anemia-associada-a-condicoes-nao-hematologicas-5a3a4f6af7ae64c8",
+      "number": "1019g",
       "file": "question_bank/hematologia-anemia-associada-a-condicoes-nao-hematologicas.json",
       "changed": false,
       "status": "low_confidence",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-20-anos-com73220f10de/"
+        "https://med.estrategia.com/public/questoes/anemia-insuficiencia9ea549e85/"
       ],
       "bestSimilarity": {
-        "stem": 1,
-        "options": 0.7090909090909091,
-        "combined": 0.9127272727272727
+        "stem": 0.8421052631578947,
+        "options": 1,
+        "combined": 0.8894736842105262
       }
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-a62aec136f9a1cdc",
-      "number": "1025a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": false,
-      "status": "low_confidence",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-25-anos-com118a5cf6f3d/",
-        "https://med.estrategia.com/public/questoes/Paciente-feminina-255615517d61/",
-        "https://med.estrategia.com/public/questoes/Mulher-25-anos-procura4386a6cac0/"
-      ],
-      "bestSimilarity": {
-        "stem": 0.6259541984732825,
-        "options": 0,
-        "combined": 0.4381679389312977
-      }
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-fea505edca4f9803",
-      "number": "1026a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": false,
-      "status": "low_confidence",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-25-anos-com118a5cf6f3d/",
-        "https://med.estrategia.com/public/questoes/Paciente-feminina-255615517d61/",
-        "https://med.estrategia.com/public/questoes/Mulher-25-anos-procura4386a6cac0/"
-      ],
-      "bestSimilarity": {
-        "stem": 0.5384615384615384,
-        "options": 0,
-        "combined": 0.37692307692307686
-      }
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-c65ce9d37c99abe6",
-      "number": "1027a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-f027e7283c8a2a78",
+      "number": "1056b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-25ee60d123782aaf",
-      "number": "1028a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-a618108a8eae2c49",
+      "number": "1057b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-8863d6a3ce49e344",
-      "number": "1029a",
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-8ac742eff3bc306a",
+      "number": "1058b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-03aaa0aa7c6faf77",
+      "number": "1059b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-c91a059ba79a6442",
+      "number": "1030a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": false,
       "status": "not_found",
