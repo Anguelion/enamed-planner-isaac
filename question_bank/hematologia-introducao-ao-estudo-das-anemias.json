@@ -1713,10 +1713,21 @@
         "#Hematologia",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885738",
-      "ankiGuid": "sQXml9#cp5"
+      "ankiGuid": "sQXml9#cp5",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-causas-anemia12b7de6747/",
+        "sourceQuestionId": "4000127446",
+        "matchedAt": "2026-10-14T12:01:14.431Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-38067176e4328fb7",
@@ -1752,10 +1763,22 @@
         "#Reticulocitose",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Classificações das anemias",
+        "Classificação funcional das anemias",
+        "Os reticulócitos",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885739",
-      "ankiGuid": "nMa)(heo:n"
+      "ankiGuid": "nMa)(heo:n",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/anemias-aquela-que16d0b34f22/",
+        "sourceQuestionId": "4000115926",
+        "matchedAt": "2026-10-14T12:01:20.570Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-4ad0a4722faa0d83",
@@ -1790,10 +1813,20 @@
         "#SaúdePública",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Definição de anemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885740",
-      "ankiGuid": "v(}_g>aAla"
+      "ankiGuid": "v(}_g>aAla",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-Segundo26a9828d96/",
+        "sourceQuestionId": "4000108540",
+        "matchedAt": "2026-10-14T12:01:27.470Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-9af7248d6663bfa1",

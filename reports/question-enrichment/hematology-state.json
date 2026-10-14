@@ -5650,7 +5650,67 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-28-anos-idade636394a120/",
       "localAnswer": "B",
       "remoteAnswer": "B"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-46e76ec6f24c4b93": {
+      "number": "1035a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-14T12:01:14.432Z",
+      "nextAttemptAt": "2026-10-21T12:01:14.432Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-causas-anemia12b7de6747/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-38067176e4328fb7": {
+      "number": "1036a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-14T12:01:20.571Z",
+      "nextAttemptAt": "2026-10-21T12:01:20.571Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/anemias-aquela-que16d0b34f22/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-4ad0a4722faa0d83": {
+      "number": "1037a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-14T12:01:27.471Z",
+      "nextAttemptAt": "2026-10-21T12:01:27.471Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-Segundo26a9828d96/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-9af7248d6663bfa1": {
+      "number": "1038a",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-14T12:01:32.922Z",
+      "nextAttemptAt": "2026-10-21T12:01:32.922Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-d6e4bdf8a2d2221c": {
+      "number": "1039a",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-14T12:01:38.333Z",
+      "nextAttemptAt": "2026-10-21T12:01:38.333Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-b571c5aa58af882b": {
+      "number": "1040a",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-14T12:01:43.823Z",
+      "nextAttemptAt": "2026-10-21T12:01:43.823Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-10-13T22:51:50.131Z"
+  "updatedAt": "2026-10-14T12:01:43.823Z"
 }
