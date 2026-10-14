@@ -1978,10 +1978,27 @@
         "#Hematologia",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Anemia perniciosa",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885744",
-      "ankiGuid": "heDE3)|!V&"
+      "ankiGuid": "heDE3)|!V&",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-F-R-L494abc9e27/",
+        "sourceQuestionId": "4000081346",
+        "matchedAt": "2026-10-14T21:46:26.327Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-e1eebdc10968b180",
@@ -2017,10 +2034,22 @@
         "#MorfologiaCelular",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Introdução às leucemias",
+        "Leucemias agudas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885745",
-      "ankiGuid": "BE[qmel7_p"
+      "ankiGuid": "BE[qmel7_p",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/alteracoes-descritas113ffd2027/",
+        "sourceQuestionId": "4000058727",
+        "matchedAt": "2026-10-14T21:46:32.616Z",
+        "confidence": 0.994
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-da1d4d34b1761c99",
@@ -2056,10 +2085,22 @@
         "#MorfologiaEritrocitária",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Esfregaço do sangue periférico",
+        "Anemia falciforme",
+        "Introdução à anemia falciforme",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885746",
-      "ankiGuid": "t,2iks|8KG"
+      "ankiGuid": "t,2iks|8KG",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-apresenta23ee450389/",
+        "sourceQuestionId": "4000007567",
+        "matchedAt": "2026-10-14T21:46:38.364Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-1ca0a6f5b160992b",
@@ -2179,10 +2220,25 @@
         "#Megaloblástica",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885749",
-      "ankiGuid": "camoiSpT$J"
+      "ankiGuid": "camoiSpT$J",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-65-anos869c23007e/",
+        "sourceQuestionId": "4000114536",
+        "matchedAt": "2026-10-14T21:46:56.274Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-08940cf2df3aae8f",

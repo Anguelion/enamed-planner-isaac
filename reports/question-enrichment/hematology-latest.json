@@ -1,49 +1,87 @@
 {
-  "generatedAt": "2026-10-14T12:01:13.320Z",
+  "generatedAt": "2026-10-14T21:46:25.319Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 3,
+  "changed": 4,
   "results": [
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-46e76ec6f24c4b93",
-      "number": "1035a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-aa6a9aa70dbd83a4",
+      "number": "1041a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-causas-anemia12b7de6747/",
-      "sourceQuestionId": "4000127446",
-      "matchedAt": "2026-10-14T12:01:14.431Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-F-R-L494abc9e27/",
+      "sourceQuestionId": "4000081346",
+      "matchedAt": "2026-10-14T21:46:26.327Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
+      "localAnswer": "C",
+      "remoteAnswer": "C",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Classificações das anemias",
-        "Classificação morfológica das anemias"
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Anemia perniciosa"
       ],
-      "comment": "Gabarito confirmado: A. Assunto: Classificação morfológica das anemias. Conduta/resposta: Anemia aplástica, anemia sideroblástica, anemia megaloblástica.",
+      "comment": "Gabarito confirmado: C. Assunto: Anemia perniciosa. Conduta/resposta: Gastrina baixa.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Sa-causas-anemia12b7de6747/"
+        "https://med.estrategia.com/public/questoes/Paciente-F-R-L494abc9e27/"
       ]
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-38067176e4328fb7",
-      "number": "1036a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-e1eebdc10968b180",
+      "number": "1042a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/anemias-aquela-que16d0b34f22/",
-      "sourceQuestionId": "4000115926",
-      "matchedAt": "2026-10-14T12:01:20.570Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/alteracoes-descritas113ffd2027/",
+      "sourceQuestionId": "4000058727",
+      "matchedAt": "2026-10-14T21:46:32.616Z",
+      "similarity": {
+        "stem": 1,
+        "options": 0.9800000000000001,
+        "combined": 0.994
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Leucemias",
+        "Introdução às leucemias",
+        "Leucemias agudas",
+        "Introdução ao Estudo das Anemias",
+        "Hemograma"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Hemograma. Conduta/resposta: Na presença de linfócitos atípicos, deve-se suspeitar de leucemia aguda.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/alteracoes-descritas113ffd2027/",
+        "https://med.estrategia.com/public/questoes/interpretaca-hemograma914d51b8c/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-da1d4d34b1761c99",
+      "number": "1043a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-apresenta23ee450389/",
+      "sourceQuestionId": "4000007567",
+      "matchedAt": "2026-10-14T21:46:38.364Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -56,67 +94,94 @@
         "Clínica Médica",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Classificações das anemias",
-        "Classificação funcional das anemias",
-        "Os reticulócitos"
+        "Esfregaço do sangue periférico",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Introdução à anemia falciforme"
       ],
-      "comment": "Gabarito confirmado: E. Assunto: Os reticulócitos. Conduta/resposta: deficiência de G6PD.",
+      "comment": "Gabarito confirmado: E. Assunto: Introdução à anemia falciforme. Conduta/resposta: Drepanocitose.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/anemias-aquela-que16d0b34f22/"
+        "https://med.estrategia.com/public/questoes/Paciente-apresenta23ee450389/"
       ]
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-4ad0a4722faa0d83",
-      "number": "1037a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-1ca0a6f5b160992b",
+      "number": "1044a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-Segundo26a9828d96/",
-      "sourceQuestionId": "4000108540",
-      "matchedAt": "2026-10-14T12:01:27.470Z",
+      "changed": false,
+      "status": "low_confidence",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Considere-seguintes297c135ccd/"
+      ],
+      "bestSimilarity": {
+        "stem": 0.9032258064516129,
+        "options": 0,
+        "combined": 0.632258064516129
+      }
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-4af2eebe86ce2ebd",
+      "number": "1045a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": false,
+      "status": "answer_mismatch",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-situacoes153e06f271/",
+      "sourceQuestionId": "4000116646",
+      "matchedAt": "2026-10-14T21:46:50.130Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
+      "localAnswer": "C",
+      "remoteAnswer": "D",
+      "answerMismatch": true,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias macrocíticas",
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Classificação morfológica das anemias. Conduta/resposta: Anemia sideroblástica.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Qual-situacoes153e06f271/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-4adb6c97aace1891",
+      "number": "1046a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-65-anos869c23007e/",
+      "sourceQuestionId": "4000114536",
+      "matchedAt": "2026-10-14T21:46:56.274Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
         "Introdução ao Estudo das Anemias",
-        "Definição de anemias"
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados"
       ],
-      "comment": "Gabarito confirmado: A. Assunto: Definição de anemias. Conduta/resposta: 11,5 g/dl (gramas por decilitro)",
+      "comment": "Gabarito confirmado: C. Assunto: Neutrófilos hipersegmentados. Conduta/resposta: Neutrófilos hiperlobulados.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/alternativa-Segundo26a9828d96/",
-        "https://med.estrategia.com/public/questoes/ilustra-indicacoes38f4fcb8e8/"
+        "https://med.estrategia.com/public/questoes/Mulher-65-anos869c23007e/",
+        "https://med.estrategia.com/public/questoes/Mulher-55-anos606d71e3b2/"
       ]
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-9af7248d6663bfa1",
-      "number": "1038a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-d6e4bdf8a2d2221c",
-      "number": "1039a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-b571c5aa58af882b",
-      "number": "1040a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
     }
   ]
 }

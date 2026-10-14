@@ -1281,7 +1281,46 @@
       "tags": [],
       "suggestedComment": "",
       "reviewedAt": "2026-10-12T15:37:52.141Z"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-1ca0a6f5b160992b": {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-1ca0a6f5b160992b",
+      "number": "1044a",
+      "status": "low_confidence",
+      "localAnswer": null,
+      "remoteAnswer": null,
+      "sourceUrl": null,
+      "similarity": {
+        "stem": 0.9032258064516129,
+        "options": 0,
+        "combined": 0.632258064516129
+      },
+      "tags": [],
+      "suggestedComment": "",
+      "reviewedAt": "2026-10-14T21:46:44.341Z"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-4af2eebe86ce2ebd": {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-4af2eebe86ce2ebd",
+      "number": "1045a",
+      "status": "answer_mismatch",
+      "localAnswer": "C",
+      "remoteAnswer": "D",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-situacoes153e06f271/",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias macrocíticas",
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias"
+      ],
+      "suggestedComment": "Gabarito confirmado: D. Assunto: Classificação morfológica das anemias. Conduta/resposta: Anemia sideroblástica.",
+      "reviewedAt": "2026-10-14T21:46:50.130Z"
     }
   },
-  "updatedAt": "2026-10-13T14:19:39.306Z"
+  "updatedAt": "2026-10-14T21:46:50.130Z"
 }
