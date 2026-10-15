@@ -4333,10 +4333,29 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Obstetrícia",
+        "Intercorrências obstétricas /obstetrícia patológica",
+        "Abortamento habitual (Abortamento de repetição) e insuficiência istmocervical",
+        "Clínica Médica",
+        "Reumatologia",
+        "Doenças autoimunes do tecido conjuntivo",
+        "Síndrome antifosfolípide (SAF)",
+        "Investigação diagnóstica e tratamento",
+        "Laboratório",
+        "Causas hematológicas",
+        "Trombofilias adquiridas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069483",
-      "ankiGuid": "Q#^equw(+W"
+      "ankiGuid": "Q#^equw(+W",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-25-anos-procura43fb93d150/",
+        "sourceQuestionId": "4000027447",
+        "matchedAt": "2026-10-15T21:29:37.040Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-3b110257827e8bec",
@@ -4367,10 +4386,22 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069484",
-      "ankiGuid": "fn#sGfxc&/"
+      "ankiGuid": "fn#sGfxc&/",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-Purpura10f06dc252/",
+        "sourceQuestionId": "4000122697",
+        "matchedAt": "2026-10-15T21:29:43.693Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-2156c603f3ee399d",
@@ -4401,10 +4432,23 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Introdução à púrpura trombocitopênica imunológica (PTI)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069485",
-      "ankiGuid": "C8V-YNo+Xa"
+      "ankiGuid": "C8V-YNo+Xa",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-mais9de55ccc5/",
+        "sourceQuestionId": "4000105616",
+        "matchedAt": "2026-10-15T21:29:50.412Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-db45309c5f52f857",

@@ -1,42 +1,124 @@
 {
-  "generatedAt": "2026-10-15T11:38:18.604Z",
+  "generatedAt": "2026-10-15T21:29:22.982Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 2,
+  "changed": 3,
   "results": [
     {
-      "id": "anki-hematologia-anemias-hemoliticas-dd8e9d70b5d20db7",
-      "number": "1031f",
+      "id": "anki-hematologia-anemias-hemoliticas-6f7afbfcdee60964",
+      "number": "1037f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
       "changed": false,
       "status": "low_confidence",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Adolescente-sexo10047e7c9d9/"
+        "https://med.estrategia.com/public/questoes/Menina-8-anos-idade113dd021903/"
       ],
       "bestSimilarity": {
-        "stem": 0.9257142857142857,
-        "options": 0.05,
-        "combined": 0.6629999999999999
+        "stem": 0.9081632653061225,
+        "options": 0.05555555555555555,
+        "combined": 0.6523809523809524
       }
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-a621f6ae564fd1c9",
-      "number": "1094c",
+      "id": "anki-hematologia-anemias-hemoliticas-200bedb389607867",
+      "number": "1038f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": false,
+      "status": "low_confidence",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Menina-8-anos-idade113dd021903/",
+        "https://med.estrategia.com/public/questoes/Menina-7-anos-idade134d9c03d9a/"
+      ],
+      "bestSimilarity": {
+        "stem": 0.9081632653061225,
+        "options": 0,
+        "combined": 0.6357142857142857
+      }
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-71e3c05e31b548bd",
+      "number": "1095c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Purpura9c565552f/",
-      "sourceQuestionId": "4000010204",
-      "matchedAt": "2026-10-15T11:38:25.967Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-25-anos-procura43fb93d150/",
+      "sourceQuestionId": "4000027447",
+      "matchedAt": "2026-10-15T21:29:37.040Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Obstetrícia",
+        "Intercorrências obstétricas /obstetrícia patológica",
+        "Abortamento habitual (Abortamento de repetição) e insuficiência istmocervical",
+        "Clínica Médica",
+        "Reumatologia",
+        "Doenças autoimunes do tecido conjuntivo",
+        "Síndrome antifosfolípide (SAF)",
+        "Investigação diagnóstica e tratamento",
+        "Laboratório",
+        "Causas hematológicas",
+        "Trombofilias adquiridas"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Trombofilias adquiridas. Conduta/resposta: Anticoagulante lúpico e anticardiolipina.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Mulher-25-anos-procura43fb93d150/",
+        "https://med.estrategia.com/public/questoes/Mulher-25-anos-procura4370e0d2e0/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-3b110257827e8bec",
+      "number": "1096c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-Purpura10f06dc252/",
+      "sourceQuestionId": "4000122697",
+      "matchedAt": "2026-10-15T21:29:43.693Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Púrpura trombocitopênica imunológica (PTI). Conduta/resposta: No adulto, pode ser secundária a infecções por Helicobacter pylori, vírus da hepatite C, citomegalovírus e HIV.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/alternativa-Purpura10f06dc252/",
+        "https://med.estrategia.com/public/questoes/Quando-paciente-com2636ba3b9e/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-2156c603f3ee399d",
+      "number": "1097c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-mais9de55ccc5/",
+      "sourceQuestionId": "4000105616",
+      "matchedAt": "2026-10-15T21:29:50.412Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
@@ -44,63 +126,16 @@
         "Hemostasia",
         "Hemostasia primária",
         "Púrpura trombocitopênica imunológica (PTI)",
-        "Introdução à púrpura trombocitopênica imunológica (PTI)",
-        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)"
+        "Introdução à púrpura trombocitopênica imunológica (PTI)"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Diagnóstico da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: pneumonia bacteriana.",
+      "comment": "Gabarito confirmado: D. Assunto: Introdução à púrpura trombocitopênica imunológica (PTI). Conduta/resposta: A TA é um diagnóstico de exclusão num paciente com plaquetopenia isolada. Considerar, como causa da plaquetopenia, novos medicamentos em uso, bem como infecção por HIV e/ou Hepatite C.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Purpura9c565552f/"
+        "https://med.estrategia.com/public/questoes/alternativa-mais9de55ccc5/"
       ]
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-08940cf2df3aae8f",
-      "number": "1047a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-com-palidez34c2b96c51/",
-      "sourceQuestionId": "4000086411",
-      "matchedAt": "2026-10-15T11:38:32.644Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Introdução ao Estudo das Anemias",
-        "Classificações das anemias",
-        "Classificação funcional das anemias",
-        "Os reticulócitos"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Os reticulócitos. Conduta/resposta: Hemolítica.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/paciente-com-palidez34c2b96c51/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-3710ebc870e85ec0",
-      "number": "1048a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-8e15215d6a12ffdb",
-      "number": "1049a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-8c412760abc3022a",
-      "number": "1050a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-c1d905a26a55296d",
+      "number": "1051a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": false,
       "status": "not_found",
