@@ -1,20 +1,54 @@
 {
-  "generatedAt": "2026-10-16T11:31:57.834Z",
+  "generatedAt": "2026-10-16T21:17:40.927Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 5,
+  "changed": 3,
   "results": [
     {
-      "id": "anki-hematologia-anemias-hemoliticas-5f8f75b88cadf212",
-      "number": "1043f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-9003d68b7b59ed4c",
+      "number": "1057a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/a-doenc-falciforme1087fad4af/",
-      "sourceQuestionId": "4000139893",
-      "matchedAt": "2026-10-16T11:31:59.086Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-30-anos41d8ed913e/",
+      "sourceQuestionId": "4000079112",
+      "matchedAt": "2026-10-16T21:17:42.818Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "E",
+      "remoteAnswer": "E",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias microcíticas",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Hemoglobinopatias",
+        "Talassemias",
+        "Introdução ao Estudo das Anemias",
+        "Hemograma",
+        "Índices hematimétricos",
+        "VCM – volume corpuscular médio"
+      ],
+      "comment": "Gabarito confirmado: E. Assunto: VCM – volume corpuscular médio. Conduta/resposta: É provavelmente o defeito genético mais comum do mundo.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Mulher-30-anos41d8ed913e/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-bc16dd02fd3ac4a1",
+      "number": "1058a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/residente-avalia396668b277/",
+      "sourceQuestionId": "4000076991",
+      "matchedAt": "2026-10-16T21:17:48.821Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -26,62 +60,26 @@
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Hemoglobinopatias",
-        "Anemia falciforme",
-        "Tratamento da anemia falciforme",
-        "Hidroxiureia"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Hidroxiureia. Conduta/resposta: Osteonecrose, doença cerebrovascular e mais de 2 crises vaso-oclusivas graves ao ano em pacientes em uso de hidroxiureia, com mais de 16 anos, são indicações de transplante alogênico.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/a-doenc-falciforme1087fad4af/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-d47777337abe299a",
-      "number": "1052a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-com-76-anos-foi489f1a796a/",
-      "sourceQuestionId": "4000013566",
-      "matchedAt": "2026-10-16T11:32:05.386Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Quadro clínico da anemia megaloblástica",
         "Introdução ao Estudo das Anemias",
-        "Esfregaço do sangue periférico",
-        "Alterações dos leucócitos",
-        "Neutrófilos hipersegmentados",
-        "Deficiência de vitamina B12",
-        "Distúrbios de absorção de vitamina B12",
-        "Anemia perniciosa"
+        "Classificações das anemias",
+        "Classificação funcional das anemias",
+        "Anemias hipoproliferativas"
       ],
-      "comment": "Gabarito confirmado: A. Assunto: Anemia perniciosa. Conduta/resposta: Anemia perniciosa.",
+      "comment": "Gabarito confirmado: C. Assunto: Anemias hipoproliferativas. Conduta/resposta: Deficiência de vitamina B12 e mielofibrose.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-com-76-anos-foi489f1a796a/",
-        "https://med.estrategia.com/public/questoes/mulher-38-anos-idade-e250492a813d/"
+        "https://med.estrategia.com/public/questoes/residente-avalia396668b277/",
+        "https://med.estrategia.com/public/questoes/Durante-ambulatorio11746e63d40/"
       ]
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-de8974a27e560d9f",
-      "number": "1053a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-1da966605423dabf",
+      "number": "1059a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/morfologia-hemacia229d5679d5/",
-      "sourceQuestionId": "4000009975",
-      "matchedAt": "2026-10-16T11:32:11.356Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/principias-exames12f1883d6b/",
+      "sourceQuestionId": "4000069537",
+      "matchedAt": "2026-10-16T21:17:55.593Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -94,83 +92,33 @@
         "Clínica Médica",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Classificações das anemias",
-        "Classificação morfológica das anemias"
+        "Classificações das anemias"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Classificação morfológica das anemias. Conduta/resposta: Anemia ferropriva e betatalassemia.",
+      "comment": "Gabarito confirmado: B. Assunto: Classificações das anemias. Conduta/resposta: Hemograma e reticulócitos.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/morfologia-hemacia229d5679d5/"
+        "https://med.estrategia.com/public/questoes/principais-exames11a3ac50c0/",
+        "https://med.estrategia.com/public/questoes/principias-exames12f1883d6b/"
       ]
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-60dd2f036f86ada5",
-      "number": "1054a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-eb91fba5c4a674a9",
+      "number": "1060a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Diante-paciente-com15d84762d6/",
-      "sourceQuestionId": "4000121662",
-      "matchedAt": "2026-10-16T11:32:17.556Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Introdução ao Estudo das Anemias",
-        "Classificações das anemias",
-        "Classificação morfológica das anemias"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Classificação morfológica das anemias. Conduta/resposta: Anemia de doença crônica.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Diante-paciente-com15d84762d6/"
-      ]
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-311b32e1cb603eef",
-      "number": "1055a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-dfe4b3ffcbf64e5e",
+      "number": "1061a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-35-anos-G3P2-C26393190c85/",
-      "sourceQuestionId": "4000098143",
-      "matchedAt": "2026-10-16T11:32:24.385Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Quadro clínico da anemia megaloblástica",
-        "Introdução ao Estudo das Anemias",
-        "Esfregaço do sangue periférico",
-        "Alterações dos leucócitos",
-        "Neutrófilos hipersegmentados",
-        "Deficiência de vitamina B12",
-        "Distúrbios de absorção de vitamina B12",
-        "Gastrectomias"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Gastrectomias. Conduta/resposta: Deficiência de cobalamina.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-35-anos-G3P2-C26393190c85/",
-        "https://med.estrategia.com/public/questoes/Mulher-42-anos-idade366d108529/"
-      ]
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-9b24ac68993263d9",
-      "number": "1056a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-f517d495bb55abb7",
+      "number": "1062a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": false,
       "status": "not_found",

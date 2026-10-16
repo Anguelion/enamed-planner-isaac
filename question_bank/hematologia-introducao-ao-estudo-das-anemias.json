@@ -2687,10 +2687,26 @@
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias microcíticas",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Hemoglobinopatias",
+        "Talassemias",
+        "Hemograma",
+        "Índices hematimétricos",
+        "VCM – volume corpuscular médio",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885760",
-      "ankiGuid": "E<l3jBYsY&"
+      "ankiGuid": "E<l3jBYsY&",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-30-anos41d8ed913e/",
+        "sourceQuestionId": "4000079112",
+        "matchedAt": "2026-10-16T21:17:42.818Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-bc16dd02fd3ac4a1",
@@ -2720,10 +2736,22 @@
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Classificações das anemias",
+        "Classificação funcional das anemias",
+        "Anemias hipoproliferativas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885761",
-      "ankiGuid": "v$Lbhc{`Gk"
+      "ankiGuid": "v$Lbhc{`Gk",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/residente-avalia396668b277/",
+        "sourceQuestionId": "4000076991",
+        "matchedAt": "2026-10-16T21:17:48.821Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-1da966605423dabf",
@@ -2753,10 +2781,20 @@
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Classificações das anemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885762",
-      "ankiGuid": "mGh~mQg<%/"
+      "ankiGuid": "mGh~mQg<%/",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/principias-exames12f1883d6b/",
+        "sourceQuestionId": "4000069537",
+        "matchedAt": "2026-10-16T21:17:55.593Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-eb91fba5c4a674a9",
