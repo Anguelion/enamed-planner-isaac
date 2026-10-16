@@ -1900,10 +1900,23 @@
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Tratamento da anemia falciforme",
+        "Hidroxiureia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350384",
-      "ankiGuid": "GqOlu$?wXB"
+      "ankiGuid": "GqOlu$?wXB",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/a-doenc-falciforme1087fad4af/",
+        "sourceQuestionId": "4000139893",
+        "matchedAt": "2026-10-16T11:31:59.086Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-04d6c66307d1ee1d",

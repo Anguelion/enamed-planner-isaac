@@ -603,13 +603,13 @@
     },
     "anki-hematologia-anemias-hemoliticas-5f8f75b88cadf212": {
       "number": "1043f",
-      "status": "low_confidence",
-      "attempts": 1,
-      "lastAttemptAt": "2026-08-17T07:19:47.429Z",
-      "nextAttemptAt": "2026-10-16T07:19:47.429Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-16T11:31:59.087Z",
+      "nextAttemptAt": "2026-10-30T11:31:59.087Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/a-doenc-falciforme1087fad4af/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-anemias-hemoliticas-04d6c66307d1ee1d": {
       "number": "1044f",
@@ -5820,7 +5820,57 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-d47777337abe299a": {
+      "number": "1052a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-16T11:32:05.387Z",
+      "nextAttemptAt": "2026-10-23T11:32:05.387Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-com-76-anos-foi489f1a796a/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-de8974a27e560d9f": {
+      "number": "1053a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-16T11:32:11.356Z",
+      "nextAttemptAt": "2026-10-23T11:32:11.356Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/morfologia-hemacia229d5679d5/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-60dd2f036f86ada5": {
+      "number": "1054a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-16T11:32:17.557Z",
+      "nextAttemptAt": "2026-10-23T11:32:17.557Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Diante-paciente-com15d84762d6/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-311b32e1cb603eef": {
+      "number": "1055a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-16T11:32:24.386Z",
+      "nextAttemptAt": "2026-10-23T11:32:24.386Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-35-anos-G3P2-C26393190c85/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-9b24ac68993263d9": {
+      "number": "1056a",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-16T11:32:29.958Z",
+      "nextAttemptAt": "2026-10-23T11:32:29.958Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-10-15T21:29:55.909Z"
+  "updatedAt": "2026-10-16T11:32:29.958Z"
 }

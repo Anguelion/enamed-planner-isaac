@@ -1,87 +1,116 @@
 {
-  "generatedAt": "2026-10-15T21:29:22.982Z",
+  "generatedAt": "2026-10-16T11:31:57.834Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 3,
+  "changed": 5,
   "results": [
     {
-      "id": "anki-hematologia-anemias-hemoliticas-6f7afbfcdee60964",
-      "number": "1037f",
+      "id": "anki-hematologia-anemias-hemoliticas-5f8f75b88cadf212",
+      "number": "1043f",
       "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": false,
-      "status": "low_confidence",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Menina-8-anos-idade113dd021903/"
-      ],
-      "bestSimilarity": {
-        "stem": 0.9081632653061225,
-        "options": 0.05555555555555555,
-        "combined": 0.6523809523809524
-      }
-    },
-    {
-      "id": "anki-hematologia-anemias-hemoliticas-200bedb389607867",
-      "number": "1038f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": false,
-      "status": "low_confidence",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Menina-8-anos-idade113dd021903/",
-        "https://med.estrategia.com/public/questoes/Menina-7-anos-idade134d9c03d9a/"
-      ],
-      "bestSimilarity": {
-        "stem": 0.9081632653061225,
-        "options": 0,
-        "combined": 0.6357142857142857
-      }
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-71e3c05e31b548bd",
-      "number": "1095c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-25-anos-procura43fb93d150/",
-      "sourceQuestionId": "4000027447",
-      "matchedAt": "2026-10-15T21:29:37.040Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/a-doenc-falciforme1087fad4af/",
+      "sourceQuestionId": "4000139893",
+      "matchedAt": "2026-10-16T11:31:59.086Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
+      "localAnswer": "C",
+      "remoteAnswer": "C",
       "answerMismatch": false,
       "tags": [
-        "Obstetrícia",
-        "Intercorrências obstétricas /obstetrícia patológica",
-        "Abortamento habitual (Abortamento de repetição) e insuficiência istmocervical",
         "Clínica Médica",
-        "Reumatologia",
-        "Doenças autoimunes do tecido conjuntivo",
-        "Síndrome antifosfolípide (SAF)",
-        "Investigação diagnóstica e tratamento",
-        "Laboratório",
-        "Causas hematológicas",
-        "Trombofilias adquiridas"
+        "Hematologia",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Tratamento da anemia falciforme",
+        "Hidroxiureia"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Trombofilias adquiridas. Conduta/resposta: Anticoagulante lúpico e anticardiolipina.",
+      "comment": "Gabarito confirmado: C. Assunto: Hidroxiureia. Conduta/resposta: Osteonecrose, doença cerebrovascular e mais de 2 crises vaso-oclusivas graves ao ano em pacientes em uso de hidroxiureia, com mais de 16 anos, são indicações de transplante alogênico.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-25-anos-procura43fb93d150/",
-        "https://med.estrategia.com/public/questoes/Mulher-25-anos-procura4370e0d2e0/"
+        "https://med.estrategia.com/public/questoes/a-doenc-falciforme1087fad4af/"
       ]
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-3b110257827e8bec",
-      "number": "1096c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-d47777337abe299a",
+      "number": "1052a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-Purpura10f06dc252/",
-      "sourceQuestionId": "4000122697",
-      "matchedAt": "2026-10-15T21:29:43.693Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-com-76-anos-foi489f1a796a/",
+      "sourceQuestionId": "4000013566",
+      "matchedAt": "2026-10-16T11:32:05.386Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Anemia perniciosa"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Anemia perniciosa. Conduta/resposta: Anemia perniciosa.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Mulher-com-76-anos-foi489f1a796a/",
+        "https://med.estrategia.com/public/questoes/mulher-38-anos-idade-e250492a813d/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-de8974a27e560d9f",
+      "number": "1053a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/morfologia-hemacia229d5679d5/",
+      "sourceQuestionId": "4000009975",
+      "matchedAt": "2026-10-16T11:32:11.356Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Classificação morfológica das anemias. Conduta/resposta: Anemia ferropriva e betatalassemia.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/morfologia-hemacia229d5679d5/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-60dd2f036f86ada5",
+      "number": "1054a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Diante-paciente-com15d84762d6/",
+      "sourceQuestionId": "4000121662",
+      "matchedAt": "2026-10-16T11:32:17.556Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -93,49 +122,55 @@
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Hemostasia",
-        "Hemostasia primária",
-        "Púrpura trombocitopênica imunológica (PTI)"
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Púrpura trombocitopênica imunológica (PTI). Conduta/resposta: No adulto, pode ser secundária a infecções por Helicobacter pylori, vírus da hepatite C, citomegalovírus e HIV.",
+      "comment": "Gabarito confirmado: D. Assunto: Classificação morfológica das anemias. Conduta/resposta: Anemia de doença crônica.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/alternativa-Purpura10f06dc252/",
-        "https://med.estrategia.com/public/questoes/Quando-paciente-com2636ba3b9e/"
+        "https://med.estrategia.com/public/questoes/Diante-paciente-com15d84762d6/"
       ]
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-2156c603f3ee399d",
-      "number": "1097c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-311b32e1cb603eef",
+      "number": "1055a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-mais9de55ccc5/",
-      "sourceQuestionId": "4000105616",
-      "matchedAt": "2026-10-15T21:29:50.412Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-35-anos-G3P2-C26393190c85/",
+      "sourceQuestionId": "4000098143",
+      "matchedAt": "2026-10-16T11:32:24.385Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
+      "localAnswer": "A",
+      "remoteAnswer": "A",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Hemostasia",
-        "Hemostasia primária",
-        "Púrpura trombocitopênica imunológica (PTI)",
-        "Introdução à púrpura trombocitopênica imunológica (PTI)"
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Gastrectomias"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Introdução à púrpura trombocitopênica imunológica (PTI). Conduta/resposta: A TA é um diagnóstico de exclusão num paciente com plaquetopenia isolada. Considerar, como causa da plaquetopenia, novos medicamentos em uso, bem como infecção por HIV e/ou Hepatite C.",
+      "comment": "Gabarito confirmado: A. Assunto: Gastrectomias. Conduta/resposta: Deficiência de cobalamina.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/alternativa-mais9de55ccc5/"
+        "https://med.estrategia.com/public/questoes/Mulher-35-anos-G3P2-C26393190c85/",
+        "https://med.estrategia.com/public/questoes/Mulher-42-anos-idade366d108529/"
       ]
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-c1d905a26a55296d",
-      "number": "1051a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-9b24ac68993263d9",
+      "number": "1056a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": false,
       "status": "not_found",

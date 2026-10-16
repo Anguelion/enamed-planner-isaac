@@ -2460,10 +2460,28 @@
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Anemia perniciosa",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885755",
-      "ankiGuid": "nYUIZNSmM&"
+      "ankiGuid": "nYUIZNSmM&",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-com-76-anos-foi489f1a796a/",
+        "sourceQuestionId": "4000013566",
+        "matchedAt": "2026-10-16T11:32:05.386Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-de8974a27e560d9f",
@@ -2494,10 +2512,21 @@
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885756",
-      "ankiGuid": "v49H)MJ7?A"
+      "ankiGuid": "v49H)MJ7?A",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/morfologia-hemacia229d5679d5/",
+        "sourceQuestionId": "4000009975",
+        "matchedAt": "2026-10-16T11:32:11.356Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-60dd2f036f86ada5",
@@ -2528,10 +2557,21 @@
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885757",
-      "ankiGuid": "Qa!.u&fLz$"
+      "ankiGuid": "Qa!.u&fLz$",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Diante-paciente-com15d84762d6/",
+        "sourceQuestionId": "4000121662",
+        "matchedAt": "2026-10-16T11:32:17.556Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-311b32e1cb603eef",
@@ -2561,10 +2601,28 @@
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Gastrectomias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885758",
-      "ankiGuid": "y7Rf[tU_o%"
+      "ankiGuid": "y7Rf[tU_o%",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-35-anos-G3P2-C26393190c85/",
+        "sourceQuestionId": "4000098143",
+        "matchedAt": "2026-10-16T11:32:24.385Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-9b24ac68993263d9",
