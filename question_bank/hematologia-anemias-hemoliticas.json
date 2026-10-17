@@ -2385,10 +2385,22 @@
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias hemolíticas por deficiências enzimáticas",
+        "Deficiência de G6PD",
+        "Quadro clínico da deficiência de G6PD",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350395",
-      "ankiGuid": "H$#RTJ4:lF"
+      "ankiGuid": "H$#RTJ4:lF",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Fernanda-4-anos-e102011b7fc6/",
+        "sourceQuestionId": "4000107988",
+        "matchedAt": "2026-10-17T10:52:05.490Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-38145892418d8ba5",
@@ -2418,10 +2430,26 @@
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico",
+        "Corpúsculos citoplasmáticos das hemácias",
+        "Corpos de Heinz",
+        "Anemias hemolíticas por deficiências enzimáticas",
+        "Deficiência de G6PD",
+        "Quadro clínico da deficiência de G6PD",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350396",
-      "ankiGuid": "oF>W};fIm7"
+      "ankiGuid": "oF>W};fIm7",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-21-anos-idade742d1cd58b/",
+        "sourceQuestionId": "4000102302",
+        "matchedAt": "2026-10-17T10:52:11.654Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-f1062024594042fb",

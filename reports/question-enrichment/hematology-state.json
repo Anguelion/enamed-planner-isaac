@@ -713,23 +713,23 @@
     },
     "anki-hematologia-anemias-hemoliticas-bef6ed647ce5d8db": {
       "number": "1054f",
-      "status": "low_confidence",
-      "attempts": 1,
-      "lastAttemptAt": "2026-08-18T07:08:46.338Z",
-      "nextAttemptAt": "2026-10-17T07:08:46.338Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-17T10:52:05.491Z",
+      "nextAttemptAt": "2026-10-31T10:52:05.491Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Fernanda-4-anos-e102011b7fc6/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     },
     "anki-hematologia-anemias-hemoliticas-38145892418d8ba5": {
       "number": "1055f",
-      "status": "low_confidence",
-      "attempts": 1,
-      "lastAttemptAt": "2026-08-18T07:08:52.595Z",
-      "nextAttemptAt": "2026-10-17T07:08:52.595Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-17T10:52:11.656Z",
+      "nextAttemptAt": "2026-10-31T10:52:11.656Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-21-anos-idade742d1cd58b/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
     },
     "anki-hematologia-anemias-hemoliticas-f1062024594042fb": {
       "number": "1056f",
@@ -4403,13 +4403,13 @@
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-6ccf329bc7eab851": {
       "number": "1010c",
-      "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-10-02T22:19:08.591Z",
-      "nextAttemptAt": "2026-10-16T22:19:08.591Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 3,
+      "lastAttemptAt": "2026-10-17T10:52:17.340Z",
+      "nextAttemptAt": "2026-11-07T10:52:17.340Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/tratamento-recomendado22d314119e/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-dad31f9a15ad880b": {
       "number": "1011c",
@@ -5930,7 +5930,37 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-00e30b05ffaf3806": {
+      "number": "1063a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-17T10:52:23.371Z",
+      "nextAttemptAt": "2026-10-24T10:52:23.371Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino533a683259/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-63ed8716749c1454": {
+      "number": "1064a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-17T10:52:29.946Z",
+      "nextAttemptAt": "2026-10-24T10:52:29.946Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Vitima-trauma37351fa428/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-3ca5db46520464ae": {
+      "number": "1065a",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-17T10:52:35.221Z",
+      "nextAttemptAt": "2026-10-24T10:52:35.221Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-10-16T21:18:11.276Z"
+  "updatedAt": "2026-10-17T10:52:35.221Z"
 }

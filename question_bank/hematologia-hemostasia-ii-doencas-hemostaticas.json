@@ -472,10 +472,23 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Tratamento da púrpura trombocitopênica imunológica (PTI)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069398",
-      "ankiGuid": "P(|FPoxKg?"
+      "ankiGuid": "P(|FPoxKg?",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/tratamento-recomendado22d314119e/",
+        "sourceQuestionId": "4000171015",
+        "matchedAt": "2026-10-17T10:52:17.340Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-dad31f9a15ad880b",

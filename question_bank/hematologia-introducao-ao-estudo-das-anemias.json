@@ -2925,10 +2925,20 @@
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemograma",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885766",
-      "ankiGuid": "oX+Rua<a;H"
+      "ankiGuid": "oX+Rua<a;H",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino533a683259/",
+        "sourceQuestionId": "4000037786",
+        "matchedAt": "2026-10-17T10:52:23.370Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-63ed8716749c1454",
@@ -2959,10 +2969,22 @@
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Esfregaço do sangue periférico",
+        "Corpúsculos citoplasmáticos das hemácias",
+        "Corpos de Howell-Jolly",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885767",
-      "ankiGuid": "bHQfQXPIIk"
+      "ankiGuid": "bHQfQXPIIk",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Vitima-trauma37351fa428/",
+        "sourceQuestionId": "4000034649",
+        "matchedAt": "2026-10-17T10:52:29.946Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-3ca5db46520464ae",

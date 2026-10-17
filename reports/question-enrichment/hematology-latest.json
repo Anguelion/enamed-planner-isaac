@@ -1,85 +1,85 @@
 {
-  "generatedAt": "2026-10-16T21:17:40.927Z",
+  "generatedAt": "2026-10-17T10:52:04.548Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 3,
+  "changed": 5,
   "results": [
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-9003d68b7b59ed4c",
-      "number": "1057a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "id": "anki-hematologia-anemias-hemoliticas-bef6ed647ce5d8db",
+      "number": "1054f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-30-anos41d8ed913e/",
-      "sourceQuestionId": "4000079112",
-      "matchedAt": "2026-10-16T21:17:42.818Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Fernanda-4-anos-e102011b7fc6/",
+      "sourceQuestionId": "4000107988",
+      "matchedAt": "2026-10-17T10:52:05.490Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "E",
-      "remoteAnswer": "E",
+      "localAnswer": "D",
+      "remoteAnswer": "D",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Anemias microcíticas",
-        "Diagnóstico diferencial das anemias microcíticas",
-        "Hemoglobinopatias",
-        "Talassemias",
-        "Introdução ao Estudo das Anemias",
-        "Hemograma",
-        "Índices hematimétricos",
-        "VCM – volume corpuscular médio"
+        "Anemias hemolíticas",
+        "Anemias hemolíticas por deficiências enzimáticas",
+        "Deficiência de G6PD",
+        "Quadro clínico da deficiência de G6PD"
       ],
-      "comment": "Gabarito confirmado: E. Assunto: VCM – volume corpuscular médio. Conduta/resposta: É provavelmente o defeito genético mais comum do mundo.",
+      "comment": "Gabarito confirmado: D. Assunto: Quadro clínico da deficiência de G6PD. Conduta/resposta: deficiência de G6PD.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-30-anos41d8ed913e/"
+        "https://med.estrategia.com/public/questoes/Fernanda-4-anos-e102011b7fc6/"
       ]
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-bc16dd02fd3ac4a1",
-      "number": "1058a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "id": "anki-hematologia-anemias-hemoliticas-38145892418d8ba5",
+      "number": "1055f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/residente-avalia396668b277/",
-      "sourceQuestionId": "4000076991",
-      "matchedAt": "2026-10-16T21:17:48.821Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-21-anos-idade742d1cd58b/",
+      "sourceQuestionId": "4000102302",
+      "matchedAt": "2026-10-17T10:52:11.654Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
+      "localAnswer": "A",
+      "remoteAnswer": "A",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Classificações das anemias",
-        "Classificação funcional das anemias",
-        "Anemias hipoproliferativas"
+        "Esfregaço do sangue periférico",
+        "Corpúsculos citoplasmáticos das hemácias",
+        "Corpos de Heinz",
+        "Anemias hemolíticas",
+        "Anemias hemolíticas por deficiências enzimáticas",
+        "Deficiência de G6PD",
+        "Quadro clínico da deficiência de G6PD"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Anemias hipoproliferativas. Conduta/resposta: Deficiência de vitamina B12 e mielofibrose.",
+      "comment": "Gabarito confirmado: A. Assunto: Quadro clínico da deficiência de G6PD. Conduta/resposta: deficiência de glicose-6-fosfato desidrogenase.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/residente-avalia396668b277/",
-        "https://med.estrategia.com/public/questoes/Durante-ambulatorio11746e63d40/"
+        "https://med.estrategia.com/public/questoes/Paciente-21-anos-idade742d1cd58b/",
+        "https://med.estrategia.com/public/questoes/Paciente-sexo6248d3bee7/"
       ]
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-1da966605423dabf",
-      "number": "1059a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-6ccf329bc7eab851",
+      "number": "1010c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/principias-exames12f1883d6b/",
-      "sourceQuestionId": "4000069537",
-      "matchedAt": "2026-10-16T21:17:55.593Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/tratamento-recomendado22d314119e/",
+      "sourceQuestionId": "4000171015",
+      "matchedAt": "2026-10-17T10:52:17.340Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -91,34 +91,78 @@
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Introdução ao Estudo das Anemias",
-        "Classificações das anemias"
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Tratamento da púrpura trombocitopênica imunológica (PTI)"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Classificações das anemias. Conduta/resposta: Hemograma e reticulócitos.",
+      "comment": "Gabarito confirmado: B. Assunto: Tratamento da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: observação clínica",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/principais-exames11a3ac50c0/",
-        "https://med.estrategia.com/public/questoes/principias-exames12f1883d6b/"
+        "https://med.estrategia.com/public/questoes/tratamento-recomendado22d314119e/"
       ]
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-eb91fba5c4a674a9",
-      "number": "1060a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-00e30b05ffaf3806",
+      "number": "1063a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino533a683259/",
+      "sourceQuestionId": "4000037786",
+      "matchedAt": "2026-10-17T10:52:23.370Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Introdução ao Estudo das Anemias",
+        "Hemograma"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Hemograma. Conduta/resposta: Anemia, leucopenia e plaquetopenia.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino533a683259/",
+        "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino95ee526f3a/"
+      ]
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-dfe4b3ffcbf64e5e",
-      "number": "1061a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-63ed8716749c1454",
+      "number": "1064a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Vitima-trauma37351fa428/",
+      "sourceQuestionId": "4000034649",
+      "matchedAt": "2026-10-17T10:52:29.946Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico",
+        "Corpúsculos citoplasmáticos das hemácias",
+        "Corpos de Howell-Jolly"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Corpos de Howell-Jolly. Conduta/resposta: Houve esplenectomia, e não há baço acessório.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Vitima-trauma37351fa428/"
+      ]
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-f517d495bb55abb7",
-      "number": "1062a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-3ca5db46520464ae",
+      "number": "1065a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": false,
       "status": "not_found",
