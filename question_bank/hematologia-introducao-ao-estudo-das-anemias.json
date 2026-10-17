@@ -3049,10 +3049,25 @@
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Esfregaço do sangue periférico",
+        "Poiquilocitose",
+        "Drepanócitos",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885769",
-      "ankiGuid": "NJ+jFAbN`B"
+      "ankiGuid": "NJ+jFAbN`B",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Jovem-19-anos-e451762cccb/",
+        "sourceQuestionId": "4000108554",
+        "matchedAt": "2026-10-17T20:41:03.776Z",
+        "confidence": 0.983720930232558
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-0c8cebd24c1662ee",

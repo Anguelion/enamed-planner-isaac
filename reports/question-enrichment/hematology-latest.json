@@ -1,168 +1,80 @@
 {
-  "generatedAt": "2026-10-17T10:52:04.548Z",
+  "generatedAt": "2026-10-17T20:41:02.153Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 5,
+  "changed": 1,
   "results": [
     {
-      "id": "anki-hematologia-anemias-hemoliticas-bef6ed647ce5d8db",
-      "number": "1054f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Fernanda-4-anos-e102011b7fc6/",
-      "sourceQuestionId": "4000107988",
-      "matchedAt": "2026-10-17T10:52:05.490Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias hemolíticas",
-        "Anemias hemolíticas por deficiências enzimáticas",
-        "Deficiência de G6PD",
-        "Quadro clínico da deficiência de G6PD"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Quadro clínico da deficiência de G6PD. Conduta/resposta: deficiência de G6PD.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Fernanda-4-anos-e102011b7fc6/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-anemias-hemoliticas-38145892418d8ba5",
-      "number": "1055f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-21-anos-idade742d1cd58b/",
-      "sourceQuestionId": "4000102302",
-      "matchedAt": "2026-10-17T10:52:11.654Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Introdução ao Estudo das Anemias",
-        "Esfregaço do sangue periférico",
-        "Corpúsculos citoplasmáticos das hemácias",
-        "Corpos de Heinz",
-        "Anemias hemolíticas",
-        "Anemias hemolíticas por deficiências enzimáticas",
-        "Deficiência de G6PD",
-        "Quadro clínico da deficiência de G6PD"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Quadro clínico da deficiência de G6PD. Conduta/resposta: deficiência de glicose-6-fosfato desidrogenase.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-21-anos-idade742d1cd58b/",
-        "https://med.estrategia.com/public/questoes/Paciente-sexo6248d3bee7/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-6ccf329bc7eab851",
-      "number": "1010c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/tratamento-recomendado22d314119e/",
-      "sourceQuestionId": "4000171015",
-      "matchedAt": "2026-10-17T10:52:17.340Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Hemostasia primária",
-        "Púrpura trombocitopênica imunológica (PTI)",
-        "Tratamento da púrpura trombocitopênica imunológica (PTI)"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Tratamento da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: observação clínica",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/tratamento-recomendado22d314119e/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-00e30b05ffaf3806",
-      "number": "1063a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-14af2f600fcde0fe",
+      "number": "1066a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino533a683259/",
-      "sourceQuestionId": "4000037786",
-      "matchedAt": "2026-10-17T10:52:23.370Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Jovem-19-anos-e451762cccb/",
+      "sourceQuestionId": "4000108554",
+      "matchedAt": "2026-10-17T20:41:03.776Z",
       "similarity": {
-        "stem": 1,
+        "stem": 0.9767441860465116,
         "options": 1,
-        "combined": 1
+        "combined": 0.983720930232558
       },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
+      "localAnswer": "C",
+      "remoteAnswer": "C",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Introdução ao Estudo das Anemias",
-        "Hemograma"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Hemograma. Conduta/resposta: Anemia, leucopenia e plaquetopenia.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino533a683259/",
-        "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino95ee526f3a/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-63ed8716749c1454",
-      "number": "1064a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Vitima-trauma37351fa428/",
-      "sourceQuestionId": "4000034649",
-      "matchedAt": "2026-10-17T10:52:29.946Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
         "Introdução ao Estudo das Anemias",
         "Esfregaço do sangue periférico",
-        "Corpúsculos citoplasmáticos das hemácias",
-        "Corpos de Howell-Jolly"
+        "Poiquilocitose",
+        "Drepanócitos"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Corpos de Howell-Jolly. Conduta/resposta: Houve esplenectomia, e não há baço acessório.",
+      "comment": "Gabarito confirmado: C. Assunto: Drepanócitos. Conduta/resposta: anemia falciforme.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Vitima-trauma37351fa428/"
+        "https://med.estrategia.com/public/questoes/Jovem-19-anos-e451762cccb/",
+        "https://med.estrategia.com/public/questoes/jovem-com-19-anos153000dab3d/"
       ]
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-3ca5db46520464ae",
-      "number": "1065a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-0c8cebd24c1662ee",
+      "number": "1067a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-c28c32c8efa7e651",
+      "number": "1068a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-2a09e3d2a7d3b070",
+      "number": "1069a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-8e6b2e18f0466905",
+      "number": "1070a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-eb74092fdff86dbe",
+      "number": "1071a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": false,
       "status": "not_found",

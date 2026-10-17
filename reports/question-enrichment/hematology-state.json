@@ -5960,7 +5960,67 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-14af2f600fcde0fe": {
+      "number": "1066a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-17T20:41:03.777Z",
+      "nextAttemptAt": "2026-10-24T20:41:03.777Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Jovem-19-anos-e451762cccb/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-0c8cebd24c1662ee": {
+      "number": "1067a",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-17T20:41:09.019Z",
+      "nextAttemptAt": "2026-10-24T20:41:09.019Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-c28c32c8efa7e651": {
+      "number": "1068a",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-17T20:41:14.293Z",
+      "nextAttemptAt": "2026-10-24T20:41:14.293Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-2a09e3d2a7d3b070": {
+      "number": "1069a",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-17T20:41:19.488Z",
+      "nextAttemptAt": "2026-10-24T20:41:19.488Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-8e6b2e18f0466905": {
+      "number": "1070a",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-17T20:41:24.712Z",
+      "nextAttemptAt": "2026-10-24T20:41:24.712Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-eb74092fdff86dbe": {
+      "number": "1071a",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-17T20:41:30.001Z",
+      "nextAttemptAt": "2026-10-24T20:41:30.001Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-10-17T10:52:35.221Z"
+  "updatedAt": "2026-10-17T20:41:30.001Z"
 }
