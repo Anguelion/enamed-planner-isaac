@@ -7,6 +7,7 @@
 
   const TIME_ZONE='America/Fortaleza';
   const ROUTE_TABS=new Set(['painel','biblioteca','radar-saude','cronograma','pendencias','aulas','questoes','analise','flashcards','materiais','simulados','prescricao','areas','historico','feynman','importar-questoes','ferramentas','caderno-erros','ecg','radiografia','semiologia','anatomia']);
+  ROUTE_TABS.add('anotacoes');
   const ROUTE_ALIASES={dashboard:'painel',hoje:'painel',blocos:'cronograma',revisoes:'flashcards',progresso:'analise',missao:'cronograma',videos:'aulas'};
 
   function safeDecode(value=''){

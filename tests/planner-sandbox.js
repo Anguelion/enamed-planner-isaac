@@ -110,6 +110,7 @@ function loadPlannerSandbox({ origin = 'http://localhost:8766', initialState, in
   const uxSource = fs.readFileSync(path.join(root, 'assets/planner-ux.js'), 'utf8');
   vm.runInContext(uxSource, context, { filename: 'planner-ux.js' });
   const gamificationSource = fs.readFileSync(path.join(root, 'assets/gamification.js'), 'utf8');
+  vm.runInContext(fs.readFileSync(path.join(root,'assets/study-workspace.js'),'utf8'),context,{filename:'study-workspace.js'});
   vm.runInContext(gamificationSource, context, { filename: 'gamification.js' });
   // O wrapper UMD de cada arquivo anexa em `root.ENAMED_X`, e `root` resolve para
   // o proprio objeto de contexto (globalThis dentro do vm), nao para `window`.

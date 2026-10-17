@@ -1,10 +1,10 @@
-const CACHE_NAME = 'soqueromed-shell-v355';
+const CACHE_NAME = 'soqueromed-shell-v356';
 const APP_SHELL = [
   './',
   './manifest.webmanifest',
   './assets/vendor/supabase.js',
-  './assets/auth-shell.css?v=20260930-8',
-  './assets/app-loader.js?v=20260930-8',
+  './assets/auth-shell.css?v=20261017-1',
+  './assets/app-loader.js?v=20261017-1',
   './assets/icons/icon-192.png',
   './assets/icons/icon-512.png',
   './assets/icons/icon-512-maskable.png',
@@ -31,6 +31,7 @@ self.addEventListener('fetch', event => {
 
   const url = new URL(request.url);
   if (url.origin !== self.location.origin) return;
+  if (url.pathname.startsWith('/__focus/')) return;
 
   if (request.mode === 'navigate') {
     event.respondWith(
@@ -48,6 +49,7 @@ self.addEventListener('fetch', event => {
   }
 
   const networkFirst = url.pathname.endsWith('/assets/personal-ui.js')
+    || url.pathname.endsWith('/assets/study-workspace.js')
     || url.pathname.endsWith('/assets/radar-saude.css')
     || url.pathname.endsWith('/assets/radar-saude.js')
     || url.pathname.includes('/question_bank/')

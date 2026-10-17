@@ -25,6 +25,7 @@ const required=[
   'assets/planner-ux.js',
   'assets/anatomia.js',
   'assets/planner.js',
+  'assets/study-workspace.js',
   'manifest.webmanifest',
   'service-worker.js',
   'question_bank/index.js'
@@ -35,7 +36,7 @@ for(const relative of required) {
   if(!fs.existsSync(path.join(root,relative))) failures.push(`arquivo ausente: ${relative}`);
   if(!['service-worker.js','assets/icons/phosphor-sprite.svg','assets/anatomia/search-index.json'].includes(relative) && !referenceSource.includes(relative)) failures.push(`referência ausente no HTML ou runtime: ${relative}`);
 }
-const scriptOrder=['question_bank/index.js','assets/app-icons.js','assets/gamification.js','assets/planner-ux.js','assets/planner.js'];
+const scriptOrder=['question_bank/index.js','assets/app-icons.js','assets/gamification.js','assets/planner-ux.js','assets/study-workspace.js','assets/planner.js'];
 for(let index=1;index<scriptOrder.length;index++) if(appLoader.indexOf(scriptOrder[index-1])>appLoader.indexOf(scriptOrder[index])) failures.push(`${scriptOrder[index-1]} deve carregar antes de ${scriptOrder[index]}`);
 const sw=fs.readFileSync(path.join(root,'service-worker.js'),'utf8');
 for(const relative of ['assets/auth-shell.css','assets/app-loader.js']) {

@@ -6,12 +6,69 @@ import argparse
 import os
 import re
 import shutil
+import json
+from urllib.parse import urlsplit
+from windows_focus import WindowsFocus
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 
 
 class PlannerRequestHandler(SimpleHTTPRequestHandler):
     protocol_version = "HTTP/1.1"
     _byte_range: tuple[int, int] | None = None
+
+    def focus_origin_allowed(self):
+        host = self.headers.get("Host", "")
+        origin = self.headers.get("Origin")
+        local_host = urlsplit("http://" + host).hostname in ("localhost", "127.0.0.1")
+        return self.client_address[0] in ("127.0.0.1", "::1") and local_host and (origin is None or origin == "http://" + host) and self.headers.get("Sec-Fetch-Site", "same-origin") in ("same-origin", "none")
+
+    def focus_json(self, data, status=200):
+        payload = json.dumps(data, ensure_ascii=False).encode("utf-8")
+        self.send_response(status)
+        self.send_header("Content-Type", "application/json; charset=utf-8")
+        self.send_header("Cache-Control", "no-store")
+        self.send_header("Content-Length", str(len(payload)))
+        self.end_headers()
+        self.wfile.write(payload)
+
+    def do_GET(self):
+        if self.path == "/__focus/capabilities":
+            if not self.focus_origin_allowed():
+                self.focus_json({"error": "Origem não autorizada."}, 403)
+                return
+            self.focus_json(self.server.windows_focus.capabilities())
+            return
+        if self.path.startswith("/__focus/"):
+            self.focus_json({"error": "Rota inexistente."}, 404)
+            return
+        super().do_GET()
+
+    def do_POST(self):
+        if not self.path.startswith("/__focus/"):
+            self.send_error(404)
+            return
+        focus = self.server.windows_focus
+        if not self.focus_origin_allowed() or self.headers.get("X-Focus-Token") != focus.token:
+            self.close_connection = True
+            self.focus_json({"error": "Origem não autorizada."}, 403)
+            return
+        try:
+            length = int(self.headers.get("Content-Length", "0"))
+            if not 0 < length <= 2048:
+                raise ValueError("Pedido inválido.")
+            data = json.loads(self.rfile.read(length))
+            if not isinstance(data, dict):
+                raise ValueError("Pedido inválido.")
+            if self.path == "/__focus/start":
+                result = focus.start(data.get("mode"))
+            elif self.path in ("/__focus/heartbeat", "/__focus/stop"):
+                result = focus.update(data.get("session"), stop=self.path.endswith("/stop"))
+            else:
+                self.focus_json({"error": "Rota inexistente."}, 404)
+                return
+            self.focus_json(result)
+        except (ValueError, OSError, RuntimeError) as error:
+            self.focus_json({"error": str(error)}, 400)
 
     def end_headers(self) -> None:
         self.send_header("Accept-Ranges", "bytes")
@@ -99,8 +156,12 @@ def main() -> None:
         *handler_args, directory=args.directory, **handler_kwargs
     )
     with ThreadingHTTPServer((args.bind, args.port), handler) as server:
+        server.windows_focus = WindowsFocus()
         print(f"SÓqueroMed disponível em http://localhost:{args.port}/index.html")
-        server.serve_forever()
+        try:
+            server.serve_forever()
+        finally:
+            server.windows_focus.close()
 
 
 if __name__ == "__main__":

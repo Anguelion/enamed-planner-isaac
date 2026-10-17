@@ -4,6 +4,7 @@ tmp/
 deferred_sync/
 tools/
 node_modules/
+__pycache__/
 .cloudflare-dist/
 video_library/media/
 *.mp4

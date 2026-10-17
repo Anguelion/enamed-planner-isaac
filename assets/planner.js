@@ -266,7 +266,7 @@ const views = [
   ['biblioteca','Biblioteca','materials'], ['prescricao','Prescrição','prescription'], ['anatomia','Anatomia','xray'], ['semiologia','Semiologia','medical'], ['ecg','ECG','heart'], ['radiografia','Radiografia','xray'],
   ['analise','Análise','analysis'], ['areas','Áreas','areas'], ['historico','Histórico','history'],
   ['importar-questoes','Adicionar questões','upload'],
-  ['ferramentas','Ferramentas','settings']
+  ['ferramentas','Ferramentas','settings'], ['anotacoes','Anotações','caderno'], ['pendencias','Pendências','mission']
 ];
 const VIEW_GROUPS = {
   painel:'Hoje', 'radar-saude':'Hoje',
@@ -435,6 +435,7 @@ function accountStateExists(key) {
   } catch(error) { return false; }
 }
 function activateAccountState(accountId) {
+  StudyWorkspace.flush();
   const nextId=String(accountId || '').trim();
   if(!nextId || (activeAccountId===nextId && activeStateStorageKey===ownedAccountStorageKey(STORAGE_KEY,nextId))) return false;
   const nextStateKey=scopedStorageKey(STORAGE_KEY,nextId);
@@ -1750,6 +1751,7 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
     if(cards.length) merged.videoFlashcards[id] = cards;
   });
   merged.studySessions = mergeRecordsById(remote.studySessions, local.studySessions, preferLocal);
+  merged.freeNotes = StudyWorkspace.mergeNotes(remote.freeNotes,local.freeNotes);
   merged.videoPlayer = mergeVideoPlayerState(remote.videoPlayer, local.videoPlayer, preferLocal);
   merged.gamification = mergeGamificationState(remote.gamification, local.gamification);
   const feynmanDeleted=mergeTimestampMap(remote.feynmanDeleted,local.feynmanDeleted);
@@ -3385,6 +3387,7 @@ function beepPomodoroTick() {
   } catch(error) {}
 }
 function finishPomodoroPhase(timer=pomodoro) {
+  StudyWorkspace.releaseFocus();
   timer.running = false;
   timer.alarm = true;
   timer.remaining = 0;
@@ -3397,7 +3400,9 @@ function finishPomodoroPhase(timer=pomodoro) {
   savePomodoro();
   updatePomodoroWidget();
 }
-function startPomodoro(mode=25) {
+async function startPomodoro(mode=25) {
+  if(pomodoro.mode) return;
+  if(!await StudyWorkspace.beginFocus()) return;
   if(pomodoroAlarmInterval) { clearInterval(pomodoroAlarmInterval); pomodoroAlarmInterval=null; }
   const workSeconds = mode === 50 ? 3000 : 1500;
   const breakSeconds = mode === 50 ? 600 : 300;
@@ -3407,6 +3412,13 @@ function startPomodoro(mode=25) {
   savePomodoro(); updatePomodoroWidget();
 }
 function continuePomodoro() {
+  if(pomodoro.phase==='break') {
+    const mode=pomodoro.mode;
+    resetPomodoro();
+    startPomodoro(mode);
+    return;
+  }
+  StudyWorkspace.releaseFocus();
   if(pomodoroAlarmInterval) { clearInterval(pomodoroAlarmInterval); pomodoroAlarmInterval=null; }
   pomodoro.alarm=false;
   pomodoro.phase='break';
@@ -3418,20 +3430,23 @@ function continuePomodoro() {
   savePomodoro(); updatePomodoroWidget();
 }
 function pausePomodoro() {
+  StudyWorkspace.releaseFocus();
   if(!pomodoro.running) return;
   pomodoro.remaining=Math.max(0,Math.ceil((pomodoro.endAt-Date.now())/1000));
   pomodoro.running=false; pomodoro.endAt=0;
   if(pomodoroInterval) { clearInterval(pomodoroInterval); pomodoroInterval=null; }
   savePomodoro(); updatePomodoroWidget();
 }
-function resumePomodoro() {
+async function resumePomodoro() {
   if(pomodoro.running || pomodoro.alarm || !pomodoro.mode) return;
+  if(pomodoro.phase==='work' && !await StudyWorkspace.beginFocus()) return;
   pomodoro.running=true; pomodoro.endAt=Date.now()+Math.max(1,pomodoro.remaining)*1000;
   if(pomodoroInterval) clearInterval(pomodoroInterval);
   pomodoroInterval=setInterval(updatePomodoro,1000);
   savePomodoro(); updatePomodoroWidget();
 }
 function resetPomodoro() {
+  StudyWorkspace.releaseFocus();
   // Encerrar durante o Foco também conta o ciclo. O alarme já contou ao terminar
   // sozinho, então só contamos quando a fase de foco ainda estava ativa/pausada.
   if(pomodoro.mode && pomodoro.phase==='work' && !pomodoro.alarm) bumpPomodoroCycles();
@@ -3519,11 +3534,20 @@ function updatePomodoroWidget() {
   panel.dataset.phase=pomodoro.mode ? pomodoro.phase : 'idle';
   const dial=(pct,label,sub)=>`<div class="pomo-dial" style="--pomo-progress:${pct}"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="pomo-dial-track" cx="60" cy="60" r="52"></circle><circle class="pomo-dial-fill" cx="60" cy="60" r="52"></circle></svg><div class="pomo-dial-center"><span class="pomo-dial-time">${label}</span><span class="pomo-dial-sub">${sub}</span></div></div>`;
   const cycles=getPomodoroCycles();
-  const cycleTally=`<div class="pomo-cycles" title="Ciclos de foco concluídos hoje">${'🍅'.repeat(Math.min(cycles,8))||'<span class="pomo-cycles-empty">Nenhum ciclo hoje ainda</span>'}<span class="pomo-cycles-count">${cycles>8?`${cycles} hoje`:cycles>0?`${cycles} ${cycles===1?'ciclo':'ciclos'} hoje`:''}</span></div>`;
-  if(!pomodoro.mode) panel.innerHTML=`<div class="pomo-head"><strong>Pomodoro</strong><span class="muted">Escolha o ritmo do ciclo de estudo</span></div><div class="pomodoro-options"><button class="pomo-choice" data-pomodoro-start="25"><strong>25<span>+5</span></strong><em>Clássico</em></button><button class="pomo-choice" data-pomodoro-start="50"><strong>50<span>+10</span></strong><em>Imersão</em></button></div>${cycleTally}`;
+  const renderSignature=JSON.stringify([pomodoro.mode,pomodoro.phase,pomodoro.running,pomodoro.alarm,pomodoro.tickEnabled,cycles,StudyWorkspace.focusStatus(),!pomodoro.mode?StudyWorkspace.focusOptions():'']);
+  if(panel.dataset.renderSignature===renderSignature) {
+    const time=panel.querySelector('.pomo-dial-time');
+    if(time)time.textContent=formatPomodoro(seconds);
+    panel.querySelector('.pomo-dial')?.style.setProperty('--pomo-progress',String(pomodoro.alarm?1:elapsedFraction));
+    return;
+  }
+  panel.dataset.renderSignature=renderSignature;
+  const cycleTally=`<div class="pomo-cycles" title="Ciclos de foco concluídos hoje">${'🍅'.repeat(Math.min(cycles,8))||'<span class="pomo-cycles-empty">Nenhum ciclo hoje ainda</span>'}<span class="pomo-cycles-count">${cycles>8?`${cycles} hoje`:cycles>0?`${cycles} ${cycles===1?'ciclo':'ciclos'} hoje`:''}</span></div>${StudyWorkspace.focusStatus()?`<small role="status">${StudyWorkspace.focusStatus()}</small>`:''}`;
+  if(!pomodoro.mode) panel.innerHTML=`<div class="pomo-head"><strong>Pomodoro</strong><span class="muted">Escolha o ritmo do ciclo de estudo</span></div>${StudyWorkspace.focusOptions()}<div class="pomodoro-options"><button class="pomo-choice" data-pomodoro-start="25"><strong>25<span>+5</span></strong><em>Clássico</em></button><button class="pomo-choice" data-pomodoro-start="50"><strong>50<span>+10</span></strong><em>Imersão</em></button></div>${cycleTally}`;
   else if(pomodoro.alarm) panel.innerHTML=`<div class="pomo-head"><strong>Tempo encerrado</strong><span class="muted">${phaseEmoji} ${phase} concluído · o som continua até você voltar</span></div>${dial(1,'00:00','feito')}${cycleTally}<div class="pomodoro-options"><button class="icon-btn primary" id="pomodoroContinue">${pomodoro.phase==='work'?'Iniciar pausa':'Retomar foco'}</button><button class="tiny-btn" id="pomodoroReset">Encerrar ciclo</button></div>`;
   else panel.innerHTML=`<div class="pomo-head"><strong>${phaseEmoji} ${phase}</strong><span class="pomo-status ${pomodoro.running?'is-running':''}">${pomodoro.running?'Em andamento':'Pausado'}</span></div>${dial(pomodoro.alarm?1:elapsedFraction,formatPomodoro(seconds),phase)}${cycleTally}<div class="pomodoro-options">${pomodoro.running?'<button class="icon-btn" id="pomodoroPause">⏸ Pausar</button>':'<button class="icon-btn primary" id="pomodoroResume">▶ Continuar</button>'}<button class="tiny-btn" id="pomodoroReset">Encerrar</button></div><label class="pomodoro-tick-toggle"><input type="checkbox" id="pomodoroTickToggle" ${pomodoro.tickEnabled?'checked':''}> Bipes nos últimos 10s</label>`;
   panel.querySelectorAll('[data-pomodoro-start]').forEach(button=>button.onclick=()=>startPomodoro(Number(button.dataset.pomodoroStart)));
+  StudyWorkspace.bindFocus(panel);
   panel.querySelector('#pomodoroContinue')?.addEventListener('click',continuePomodoro);
   panel.querySelector('#pomodoroPause')?.addEventListener('click',pausePomodoro);
   panel.querySelector('#pomodoroResume')?.addEventListener('click',resumePomodoro);
@@ -4589,6 +4613,8 @@ function pauseOpenVideo() {
   video.load();
 }
 function prepareViewTransition(nextTab,{confirmQuestion=true}={}) {
+  if(!StudyWorkspace.allowTab(nextTab)) return false;
+  StudyWorkspace.flush();
   if(ui.tab===nextTab) return true;
   if(confirmQuestion && ui.tab==='questoes' && nextTab!=='questoes' && !settleQuestionTimerBeforeLeave()) return false;
   if(autoStudyIsRunning()) stopAutoStudy();
@@ -15220,6 +15246,8 @@ async function ensureViewData(tab) {
   if(tab === 'prescricao') await loadPrescriptionCatalog();
 }
 async function render() {
+  const pinnedTab=StudyWorkspace.enforceTab();
+  if(pinnedTab) ui.tab=pinnedTab;
   sessionStorage.setItem(UI_TAB_KEY, ui.tab);
   // Troca a aba no mesmo clique, antes de qualquer leitura assíncrona. Na
   // primeira visita a Questões mostramos um estado curto de carregamento em vez
@@ -15235,6 +15263,7 @@ async function render() {
   renderTabs();
   const renderers = {
     painel: renderPainel,
+    anotacoes: () => StudyWorkspace.renderNotes(),
     'radar-saude': () => window.renderRadarSaude(),
     pendencias: renderPendencias,
     cronograma: renderCronograma,
@@ -15313,6 +15342,7 @@ document.addEventListener('keydown', event => {
     return;
   }
   if((event.ctrlKey || event.metaKey) && !event.shiftKey && event.key.toLowerCase() === 'f' && (ui.tab==='aulas' || ui.tab==='questoes')) {
+    if(event.target?.closest?.('input,textarea,select,[contenteditable]')) return;
     event.preventDefault();
     if(event.repeat) return;
     if(ui.tab==='aulas') document.getElementById('toggleVideoFocus')?.click();
@@ -15334,8 +15364,9 @@ document.addEventListener('keydown', event => {
   if(event.code === 'Space') { event.preventDefault(); event.stopPropagation(); video.paused ? video.play() : video.pause(); }
   else if(event.key === 'ArrowRight') { event.preventDefault(); event.stopPropagation(); document.getElementById('videoForward10')?.click(); }
   else if(event.key === 'ArrowLeft') { event.preventDefault(); event.stopPropagation(); document.getElementById('videoBack10')?.click(); }
-  else if(key === 'f' || event.key === '[') { event.preventDefault(); event.stopPropagation(); const next=rates.find(rate => rate > video.playbackRate + .01) || rates.at(-1); video.defaultPlaybackRate=next; video.playbackRate=next; rememberVideoPlaybackRate(next); persistCurrentVideoRate(video); }
-  else if(key === 'j' || event.key === '=') { event.preventDefault(); event.stopPropagation(); video.defaultPlaybackRate=1; video.playbackRate=1; rememberVideoPlaybackRate(1); persistCurrentVideoRate(video); }
+  else if(key === 'j' || event.key === '=') { event.preventDefault(); event.stopPropagation(); const next=rates.find(rate => rate > video.playbackRate + .01) || rates.at(-1); video.defaultPlaybackRate=next; video.playbackRate=next; rememberVideoPlaybackRate(next); persistCurrentVideoRate(video); }
+  else if(key === 'f' || event.key === '[') { event.preventDefault(); event.stopPropagation(); const next=[...rates].reverse().find(rate => rate < video.playbackRate - .01) || rates[0]; video.defaultPlaybackRate=next; video.playbackRate=next; rememberVideoPlaybackRate(next); persistCurrentVideoRate(video); }
+  else if(key === '0') { event.preventDefault(); video.defaultPlaybackRate=1; video.playbackRate=1; rememberVideoPlaybackRate(1); persistCurrentVideoRate(video); }
 }, true);
 document.getElementById('headerPomodoroBtn')?.addEventListener('click', () => { ui.pomodoroOpen=!ui.pomodoroOpen; navigateToTab('painel'); });
 document.getElementById('headerHistoryBack')?.addEventListener('click', () => { if(plannerHistoryIndex>0) history.back(); });
@@ -15450,8 +15481,8 @@ document.addEventListener('click', event => {
     if(question) addQuestionFlashcard(question);
     return;
   }
-  if(!event.target.closest?.('#globalPomodoro')) setPomodoroPanelOpen(false);
-  if(!event.target.closest?.('#globalDailyMission')) setDailyMissionPanelOpen(false);
+  if(!event.composedPath().some(node=>node.id==='globalPomodoro')) setPomodoroPanelOpen(false);
+  if(!event.composedPath().some(node=>node.id==='globalDailyMission')) setDailyMissionPanelOpen(false);
   const box = document.getElementById('materialGlobalSearchResults');
   const wrap = document.getElementById('materialGlobalSearchWrap');
   if(box && !box.hidden && wrap && !wrap.contains(event.target)) box.hidden = true;
@@ -15469,6 +15500,7 @@ document.addEventListener('keydown', event => {
 });
 document.addEventListener('keydown', handleFlashcardUndoKeyboard);
 document.addEventListener('keydown', handleQuestionKeyboard);
+StudyWorkspace.init({getState:()=>state,account:()=>activeStateStorageKey,getTab:()=>ui.tab,navigate:navigateToTab,tabs:views,markdown:StudyWorkspace.formatNote,save:()=>{const ok=writeLocalState();if(ok)scheduleCloudSave();return ok;},refreshPomodoro:updatePomodoroWidget,toast:showStudyToast,timer:()=>pomodoro,pause:pausePomodoro,resume:resumePomodoro,reset:resetPomodoro,start:startPomodoro});
 startMotivationCycle();
 loadMotivationMessages();
 window.CasoDoDia?.load().then(() => { if(ui.tab === 'painel') renderPainel(); });
