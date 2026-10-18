@@ -3170,10 +3170,25 @@
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Crises álgicas",
+        "Manejo das crises álgicas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350412",
-      "ankiGuid": "fJL4LZ^CbH"
+      "ankiGuid": "fJL4LZ^CbH",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Menino-sete-anos649a8307ff/",
+        "sourceQuestionId": "4000033605",
+        "matchedAt": "2026-10-18T20:51:32.868Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-42d696e0a302034b",
@@ -3203,10 +3218,23 @@
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Fisiopatologia da anemia falciforme",
+        "Traço falcêmico",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350413",
-      "ankiGuid": "IA,&!DL^Oc"
+      "ankiGuid": "IA,&!DL^Oc",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Gestante-21-anos1049a40bb30/",
+        "sourceQuestionId": "4000033175",
+        "matchedAt": "2026-10-18T20:51:39.657Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-c800665818a2ce22",

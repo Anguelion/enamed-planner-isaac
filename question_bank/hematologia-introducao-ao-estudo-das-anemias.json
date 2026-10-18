@@ -3470,10 +3470,28 @@
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Anemia perniciosa",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885781",
-      "ankiGuid": "EpTRX)tE,C"
+      "ankiGuid": "EpTRX)tE,C",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-48-anos-idade114f589519d/",
+        "sourceQuestionId": "4000119075",
+        "matchedAt": "2026-10-18T20:51:45.570Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-d946d53f1275c724",
@@ -3504,10 +3522,23 @@
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias microcíticas",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885782",
-      "ankiGuid": "v8sgi6fr7p"
+      "ankiGuid": "v8sgi6fr7p",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-causas-anemia5ee1ad1ae/",
+        "sourceQuestionId": "4000063289",
+        "matchedAt": "2026-10-18T20:51:51.516Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-4bbd8eebe2a9b374",
@@ -3539,10 +3570,29 @@
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Talassemias",
+        "Definição das síndromes talassêmicas",
+        "Esfregaço do sangue periférico",
+        "Poiquilocitose",
+        "Hemácias em alvo",
+        "Anemias microcíticas",
+        "Anemia ferropriva",
+        "Tratamento da anemia ferropriva",
+        "Refratariedade ao tratamento da anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885783",
-      "ankiGuid": "iO?Dw%S<&8"
+      "ankiGuid": "iO?Dw%S<&8",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/jovem-com-diagnostico40a62a2f9d/",
+        "sourceQuestionId": "4000034516",
+        "matchedAt": "2026-10-18T20:51:57.482Z",
+        "confidence": 0.9787878787878788
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-5bc9efecd86b3ff9",
@@ -3572,10 +3622,25 @@
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885784",
-      "ankiGuid": "bj?Toz=4p3"
+      "ankiGuid": "bj?Toz=4p3",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Gestante-30-anos47a577e772/",
+        "sourceQuestionId": "4000033508",
+        "matchedAt": "2026-10-18T20:52:03.716Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-7a9e17de0af80496",

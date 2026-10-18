@@ -1,58 +1,211 @@
 {
-  "generatedAt": "2026-10-18T11:16:52.002Z",
+  "generatedAt": "2026-10-18T20:51:31.545Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 0,
+  "changed": 6,
   "results": [
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-22bf0922492adf25",
-      "number": "1072a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "id": "anki-hematologia-anemias-hemoliticas-cff3f00a1c5084b2",
+      "number": "1071f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Menino-sete-anos649a8307ff/",
+      "sourceQuestionId": "4000033605",
+      "matchedAt": "2026-10-18T20:51:32.868Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Complicações agudas da anemia falciforme",
+        "Crises álgicas",
+        "Manejo das crises álgicas"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Manejo das crises álgicas. Conduta/resposta: hidratação oral frequente.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Menino-sete-anos649a8307ff/"
+      ]
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-af528ee344518a5f",
-      "number": "1073a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "id": "anki-hematologia-anemias-hemoliticas-42d696e0a302034b",
+      "number": "1072f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Gestante-21-anos1049a40bb30/",
+      "sourceQuestionId": "4000033175",
+      "matchedAt": "2026-10-18T20:51:39.657Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Fisiopatologia da anemia falciforme",
+        "Traço falcêmico"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Traço falcêmico. Conduta/resposta: Traço falciforme - manter acompanhamento apenas na atenção básica",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Gestante-21-anos1049a40bb30/",
+        "https://med.estrategia.com/public/questoes/Gestante-21-anos12153d9cf12/",
+        "https://med.estrategia.com/public/questoes/Gestante-primigesta-2110933bb70ad/"
+      ]
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-770b959f835ab146",
-      "number": "1074a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-91e57376498e0d16",
+      "number": "1078a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-48-anos-idade114f589519d/",
+      "sourceQuestionId": "4000119075",
+      "matchedAt": "2026-10-18T20:51:45.570Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Anemia perniciosa"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Anemia perniciosa. Conduta/resposta: anemia perniciosa.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Homem-48-anos-idade114f589519d/"
+      ]
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-3c635433f3d221f2",
-      "number": "1075a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-d946d53f1275c724",
+      "number": "1079a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-causas-anemia5ee1ad1ae/",
+      "sourceQuestionId": "4000063289",
+      "matchedAt": "2026-10-18T20:51:51.516Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias microcíticas",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Classificação morfológica das anemias. Conduta/resposta: talassemia, deficiência de ferro e mielodisplasia.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Sa-causas-anemia5ee1ad1ae/"
+      ]
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-7994d7c6a0f8e1cc",
-      "number": "1076a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-4bbd8eebe2a9b374",
+      "number": "1080a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/jovem-com-diagnostico40a62a2f9d/",
+      "sourceQuestionId": "4000034516",
+      "matchedAt": "2026-10-18T20:51:57.482Z",
+      "similarity": {
+        "stem": 0.9696969696969697,
+        "options": 1,
+        "combined": 0.9787878787878788
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemoglobinopatias",
+        "Talassemias",
+        "Definição das síndromes talassêmicas",
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico",
+        "Poiquilocitose",
+        "Hemácias em alvo",
+        "Anemias microcíticas",
+        "Anemia ferropriva",
+        "Tratamento da anemia ferropriva",
+        "Refratariedade ao tratamento da anemia ferropriva"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Refratariedade ao tratamento da anemia ferropriva. Conduta/resposta: Talassemia (\"anemia do Mediterrâneo\").",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/jovem-com-diagnostico40a62a2f9d/"
+      ]
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-45c45d66849d96f0",
-      "number": "1077a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-5bc9efecd86b3ff9",
+      "number": "1081a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Gestante-30-anos47a577e772/",
+      "sourceQuestionId": "4000033508",
+      "matchedAt": "2026-10-18T20:52:03.716Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Neutrófilos hipersegmentados. Conduta/resposta: Anemia perniciosa.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Gestante-30-anos47a577e772/"
+      ]
     }
   ]
 }
