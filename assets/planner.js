@@ -297,19 +297,6 @@ function localStateStampIso() {
   try { return new Date(Date.now() + serverClockOffsetMs).toISOString(); }
   catch(error) { return new Date().toISOString(); }
 }
-function dropOldestLocalBackups() {
-  // Os backups locais são a maior massa descartável no armazenamento:
-  // sacrificamos os mais antigos para que o estudo do dia caiba.
-  try {
-    if(!Array.isArray(localBackups) || !localBackups.length) return false;
-    localBackups = localBackups.slice(0, Math.max(0, localBackups.length - Math.max(1, Math.ceil(localBackups.length / 2))));
-    try { localStorage.setItem(activeLocalBackupsKey, JSON.stringify(localBackups)); }
-    catch(error) { try { localStorage.removeItem(activeLocalBackupsKey); } catch(nested) {} }
-    return true;
-  } catch(error) {
-    try { localStorage.removeItem(activeLocalBackupsKey); return true; } catch(nested) { return false; }
-  }
-}
 // `var` de propósito: writeLocalState roda no bootstrap antes desta linha ser
 // avaliada; com `let` a leitura cai na zona morta temporal e derruba o app
 // inteiro (foi exatamente isso que travou a tela em alguns aparelhos).
@@ -328,7 +315,7 @@ function progressFingerprint(s) {
 function guardAgainstSilentProgressLoss() {
   if(allowLargeProgressDrop) return;
   try {
-    const previous = JSON.parse(localStorage.getItem(activeStateStorageKey) || 'null');
+    const previous = PlannerStorage.parse(localStorage.getItem(activeStateStorageKey) || 'null');
     if(!previous) return;
     const before = progressFingerprint(previous);
     const after = progressFingerprint(state);
@@ -346,13 +333,16 @@ function guardAgainstSilentProgressLoss() {
 function writeLocalState({touch=true,stamp=localStateStampIso()}={}) {
   guardAgainstSilentProgressLoss();
   if(touch) touchSyncMetadata(state,stamp);
-  const payload = JSON.stringify(state);
-  for(let attempt = 0; attempt < 4; attempt += 1) {
+  const plainPayload = JSON.stringify(state);
+  let payload = PlannerStorage.encode(plainPayload);
+  for(let attempt = 0; attempt < 2; attempt += 1) {
     try {
       localStorage.setItem(activeStateStorageKey, payload);
-      localStorage.setItem(activeStateStampKey, stamp);
+      // O carimbo também está no próprio estado. Falhar só neste campo pequeno
+      // não significa perder uma gravação que já foi concluída.
+      try {localStorage.setItem(activeStateStampKey, stamp);}catch(error){console.warn('Carimbo local preservado no estado.',error.name);}
       // Se a tentativa anterior tinha ficado marcada como "Sem espaço", a
-      // recuperação (descartar backups antigos) já resolveu — o indicador não
+      // compactação já resolveu — o indicador não
       // deve continuar preso num erro que não existe mais. currentUser pode não
       // existir ainda durante o bootstrap, por isso tudo aqui é best-effort.
       if(localStorageWarningShown) {
@@ -364,7 +354,11 @@ function writeLocalState({touch=true,stamp=localStateStampIso()}={}) {
       localStorageWarningShown = false;
       return true;
     } catch(error) {
-      if(dropOldestLocalBackups()) continue;
+      if(attempt===0 && error.name==='QuotaExceededError') {
+        payload=PlannerStorage.encode(plainPayload,{force:true});
+        try {PlannerStorage.repack(localStorage,activeLocalBackupsKey);}catch(backupError){console.warn('Backups anteriores preservados.',backupError.name);}
+        continue;
+      }
       console.error('Falha ao salvar no armazenamento local:', error);
       warnLocalStorageFull();
       return false;
@@ -380,19 +374,21 @@ function warnLocalStorageFull() {
     setSyncStatus('Sem espaço', 'error', 'Armazenamento do navegador cheio: o estudo não está sendo salvo neste aparelho');
     if(localStorageWarningShown) return;
     localStorageWarningShown = true;
-    showStudyToast('Armazenamento do navegador cheio: apague backups locais em Ferramentas agora para não perder o estudo.');
-    if(currentUser && CLOUD_SYNC_ALLOWED) { cloudDirty = true; pushCloudState(); }
+    showStudyToast('Não foi possível salvar neste aparelho. Seus dados atuais continuam abertos: baixe uma cópia em Ferramentas > Baixar no PC.');
+    // Não iniciar outro push dentro de um push que falhou ao salvar: isso
+    // realimentava os conflitos e as mensagens de armazenamento.
+    if(currentUser && CLOUD_SYNC_ALLOWED) cloudDirty = true;
   } catch(error) {
     // Bootstrap: DOM/estado de nuvem ainda podem não existir. O console basta.
     console.error('Armazenamento local cheio.', error);
   }
 }
 function localStateStamp() {
-  return Date.parse(localStorage.getItem(activeStateStampKey) || '') || 0;
+  return Math.max(Date.parse(localStorage.getItem(activeStateStampKey) || '') || 0,Date.parse(state?.syncMeta?.lastSavedAt||'')||0);
 }
 function loadState() {
   try {
-    const saved = JSON.parse(localStorage.getItem(activeStateStorageKey));
+    const saved = PlannerStorage.parse(localStorage.getItem(activeStateStorageKey));
     if(saved && typeof saved === 'object') {
       const base = structuredClone(seed);
       return {
@@ -430,7 +426,7 @@ function touchSyncMetadata(target, touchedAt=localStateStampIso()) {
 }
 function accountStateExists(key) {
   try {
-    const parsed=JSON.parse(localStorage.getItem(key) || 'null');
+    const parsed=PlannerStorage.parse(localStorage.getItem(key) || 'null');
     return Boolean(parsed && typeof parsed==='object' && Array.isArray(parsed.schedule) && parsed.schedule.length);
   } catch(error) { return false; }
 }
@@ -438,6 +434,7 @@ function activateAccountState(accountId) {
   StudyWorkspace.flush();
   const nextId=String(accountId || '').trim();
   if(!nextId || (activeAccountId===nextId && activeStateStorageKey===ownedAccountStorageKey(STORAGE_KEY,nextId))) return false;
+  StudyWorkspace.resetAccountUI();
   const nextStateKey=scopedStorageKey(STORAGE_KEY,nextId);
   const legacyOwner=localStorage.getItem(LEGACY_STATE_OWNER_KEY) || '';
   const canClaimLegacy=!legacyOwner || legacyOwner===nextId;
@@ -1908,26 +1905,19 @@ function capBackupList(list) {
 }
 function loadLocalBackups() {
   try {
-    const backups = JSON.parse(localStorage.getItem(activeLocalBackupsKey) || '[]');
+    const backups = PlannerStorage.parse(localStorage.getItem(activeLocalBackupsKey) || '[]');
     return Array.isArray(backups) ? capBackupList(backups.filter(item => item?.id && item?.data)) : [];
   } catch(error) {
     return [];
   }
 }
 function saveLocalBackups() {
-  let backups = capBackupList(localBackups);
-  while(backups.length) {
-    try {
-      localStorage.setItem(activeLocalBackupsKey, JSON.stringify(backups));
-      localBackups = backups;
-      return;
-    } catch(error) {
-      // Sem espaco no localStorage para todos os backups locais: reduz pela
-      // metade e tenta de novo, em vez de falhar e nao salvar nenhum.
-      backups = backups.slice(0, Math.floor(backups.length / 2));
-    }
-  }
-  console.warn('Não foi possível salvar nenhum backup local: armazenamento cheio.');
+  const backups=capBackupList(localBackups);
+  try {
+    localStorage.setItem(activeLocalBackupsKey,PlannerStorage.encode(JSON.stringify(backups),{force:true}));
+    localBackups=backups;
+    return true;
+  }catch(error){console.warn('Não foi possível gravar o novo backup. As cópias anteriores foram preservadas.',error.name);return false;}
 }
 function createLocalBackup(label='', {silent=false, reason='manual'}={}) {
   const payload = fullPlannerBackup();
@@ -1942,7 +1932,8 @@ function createLocalBackup(label='', {silent=false, reason='manual'}={}) {
     },
     ...localBackups
   ]);
-  saveLocalBackups();
+  const saved=saveLocalBackups();
+  if(!saved){if(!silent)showStudyToast('O novo backup não coube. Baixe uma cópia em Ferramentas > Baixar no PC.');return null;}
   if(!silent) showStudyToast('Backup local salvo neste aparelho.');
   if(ui.tab === 'ferramentas') renderFerramentas();
   return localBackups[0];
@@ -2220,7 +2211,7 @@ function applyCrossTabPlannerState(externalState) {
 window.addEventListener('storage', event => {
   if(event.key !== activeStateStorageKey || !event.newValue) return;
   try {
-    const externalState = JSON.parse(event.newValue);
+    const externalState = PlannerStorage.parse(event.newValue);
     if(isEditingTextField()) { pendingCrossTabState = externalState; return; }
     applyCrossTabPlannerState(externalState);
   } catch(error) { console.warn('Falha ao sincronizar outra aba do planner:', error); }
@@ -2545,19 +2536,20 @@ async function forcePushThisDeviceToCloud() {
 }
 async function createCloudBackup(label='') {
   const localCopy = createLocalBackup(label, {silent:true, reason:'manual'});
-  if(!currentUser || !sbClient) { showStudyToast('Backup local salvo. Entre na sua conta para salvar também na nuvem.'); return; }
-  if(!CLOUD_SYNC_ALLOWED) { showStudyToast('Backup local salvo. Neste ambiente, a nuvem está desativada.'); return; }
+  const localMessage=localCopy?'Backup local salvo.':'Não foi possível gravar o backup local. Baixe uma cópia no PC.';
+  if(!currentUser || !sbClient) { showStudyToast(`${localMessage} Entre na sua conta para salvar também na nuvem.`); return; }
+  if(!CLOUD_SYNC_ALLOWED) { showStudyToast(`${localMessage} Neste ambiente, a nuvem está desativada.`); return; }
   const payload = fullPlannerBackup();
   setSyncStatus('Backup', 'busy');
   const { error } = await sbClient.from('planner_backups').insert({
     user_id: currentUser.id,
-    label: String(label || '').trim() || localCopy.label || `Backup de ${backupDateTime(payload.backupInfo.exportedAt)}`,
+    label: String(label || '').trim() || localCopy?.label || `Backup de ${backupDateTime(payload.backupInfo.exportedAt)}`,
     data: payload
   });
   if(error) {
     console.error('Falha ao criar backup:', error);
     cloudBackupsReady = false;
-    cloudBackupsError = error.code === '42P01' ? 'Backup local salvo. A tabela de backups ainda não foi criada no Supabase.' : 'Backup local salvo. Não foi possível criar o backup na nuvem.';
+    cloudBackupsError = error.code === '42P01' ? `${localMessage} A tabela de backups ainda não foi criada no Supabase.` : `${localMessage} Não foi possível criar o backup na nuvem.`;
     setSyncStatus('Erro', 'error', 'Erro no backup');
     if(ui.tab === 'ferramentas') renderFerramentas();
     return;
@@ -2974,6 +2966,7 @@ function applyCloudAuthSession(event, session) {
   const accountChanged = currentUser ? activateAccountState(currentUser.id) : false;
   updateAccountUI();
   if(!currentUser) {
+    StudyWorkspace.resetAccountUI();
     lastAuthSyncSessionKey='';
     authInitialSyncPending=false;
     if(cloudSyncPoll) { clearInterval(cloudSyncPoll); cloudSyncPoll=null; }

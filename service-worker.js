@@ -1,10 +1,10 @@
-const CACHE_NAME = 'soqueromed-shell-v356';
+const CACHE_NAME = 'soqueromed-shell-v357';
 const APP_SHELL = [
   './',
   './manifest.webmanifest',
   './assets/vendor/supabase.js',
-  './assets/auth-shell.css?v=20261017-1',
-  './assets/app-loader.js?v=20261017-1',
+  './assets/auth-shell.css?v=20261018-1',
+  './assets/app-loader.js?v=20261018-1',
   './assets/icons/icon-192.png',
   './assets/icons/icon-512.png',
   './assets/icons/icon-512-maskable.png',
@@ -49,6 +49,8 @@ self.addEventListener('fetch', event => {
   }
 
   const networkFirst = url.pathname.endsWith('/assets/personal-ui.js')
+    || url.pathname.endsWith('/assets/local-storage-codec.js')
+    || url.pathname.endsWith('/assets/vendor/fflate.js')
     || url.pathname.endsWith('/assets/study-workspace.js')
     || url.pathname.endsWith('/assets/radar-saude.css')
     || url.pathname.endsWith('/assets/radar-saude.js')

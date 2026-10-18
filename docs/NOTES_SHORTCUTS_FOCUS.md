@@ -1,10 +1,12 @@
 # Anotações, atalhos e fixação do Pomodoro
 
-Abra **📝 Anotações** na barra superior. Crie quantas anotações quiser com **Nova anotação**, dê um nome e escreva livremente. As pastas usam a data de criação; renomear ou editar não muda a pasta. Cada documento pode ficar aberto em uma aba. Fechar a aba mantém o documento salvo na pasta. A busca encontra título e conteúdo em todas as datas.
+Abra **📝 Anotações** na barra superior de qualquer tela. O painel lateral aparece sobre sua atividade, mantendo a aba, a posição e o vídeo atuais. Escreva e feche com **Esc** ou **×** para continuar imediatamente. **Alt+Shift+A** abre ou fecha o painel; **Alt+Shift+N** cria uma nota rápida. O seletor permite voltar a notas anteriores sem sair da atividade.
+
+Use **Abrir pastas e abas** no painel ou **Alt+Shift+M** para abrir o explorador completo. Crie quantas anotações quiser, dê um nome e escreva livremente. As pastas usam a data de criação; renomear ou editar não muda a pasta. Cada documento pode ficar aberto em uma aba. Fechar a aba mantém o documento salvo na pasta. A busca encontra título e conteúdo em todas as datas.
 
 O texto aceita listas `- item`, enumeração `1. item`, títulos `## Título`, negrito `**texto**` e itálico `*texto*`; os botões inserem essas marcações e a prévia mostra o resultado. Ctrl+B e Ctrl+I formatam a seleção. Exportar .md guarda uma cópia independente.
 
-As alterações entram no estado da conta imediatamente e são gravadas após 450 ms sem digitação, ao sair da página e na verificação periódica de 60 segundos. O indicador confirma a gravação local e avisa falhas. As anotações participam do backup completo, da sincronização existente e da mesclagem por ID/data da edição mais recente. A nuvem depende de login e conexão, como o restante do programa.
+As alterações entram no estado da conta imediatamente e são gravadas após 450 ms sem digitação, ao fechar o painel/sair da página e na verificação periódica de 60 segundos. O indicador confirma a gravação local e avisa falhas. Estados grandes e backups usam compressão GZIP local sem remover campos; cópias antigas em JSON continuam legíveis. Os arquivos exportados e a nuvem permanecem em JSON comum. A recuperação de quota compacta backups anteriores sem apagá-los. As anotações participam do backup completo, da sincronização existente e da mesclagem por ID/data da edição mais recente. A nuvem depende de login e conexão, como o restante do programa.
 
 ## Teclado
 
@@ -24,10 +26,11 @@ Cada aba tem um atalho direto **Alt+Shift+tecla**, listado na central:
 | E | ECG | G | Radiografia |
 | V | Análise | U | Áreas |
 | T | Histórico | Q | Adicionar questões |
-| Z | Ferramentas | A | Anotações |
+| Z | Ferramentas | M | Explorador de anotações |
 | C | Pendências | | |
 
-- Alt+Shift+N: nova anotação.
+- Alt+Shift+A: abrir/fechar anotações rápidas sem sair da atividade.
+- Alt+Shift+N: nova anotação rápida.
 - Alt+Shift+P: abrir/fechar Pomodoro.
 - Alt+Shift+I / O: iniciar 25 / 50 minutos, quando não existe ciclo ativo.
 - Alt+Shift+Espaço: pausar/continuar ciclo.

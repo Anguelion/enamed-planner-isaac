@@ -25,7 +25,7 @@ test('cada aba tem combinação exclusiva, incluindo Anotações e rotas recarre
   const ctx=loadPlannerSandbox();const fs=require('node:fs');const source=fs.readFileSync(require.resolve('../assets/planner.js'),'utf8');
   const definitions=source.slice(source.indexOf('const views = ['),source.indexOf('const VIEW_GROUPS'));
   const tabs=[...definitions.matchAll(/\['([^']+)'/g)].map(m=>m[1]);
-  assert.equal(tabs.length,workspace.tabKeys.length);assert.equal(new Set(workspace.tabKeys).size,tabs.length);assert.equal(workspace.tabKeys[tabs.indexOf('anotacoes')],'a');
+  assert.equal(tabs.length,workspace.tabKeys.length);assert.equal(new Set(workspace.tabKeys).size,tabs.length);assert.equal(workspace.tabKeys[tabs.indexOf('anotacoes')],'m');
   assert.equal(ctx.window.ENAMED_PLANNER_UX.parseRoute('#/anotacoes').tab,'anotacoes');
 });
 

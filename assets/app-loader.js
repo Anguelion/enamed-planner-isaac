@@ -4,7 +4,7 @@
   const SUPABASE_URL='https://wbxzptiacftymhvfkiyx.supabase.co';
   const SUPABASE_PUBLISHABLE_KEY='sb_publishable_XrBwqjkwlt4Mb4rdmE-xVw_7Vt3euvP';
   const SUPABASE_CLIENT_KEY='__SOQUEROMED_SUPABASE_CLIENT__';
-  const VERSION='20261017-1';
+  const VERSION='20261018-1';
   const isLocal=location.protocol==='file:' || ['localhost','127.0.0.1','::1'].includes(location.hostname);
   let bootPromise=null;
   let authClient=null;
@@ -84,6 +84,8 @@
         'assets/skill-highlighter.js',
         'assets/caso-do-dia.js',
         'assets/study-workspace.js',
+        'assets/vendor/fflate.js',
+        'assets/local-storage-codec.js',
         'assets/planner.js'
       ]) await loadScript(script);
       window.ENAMED_ICONS?.hydrateIcons(document);

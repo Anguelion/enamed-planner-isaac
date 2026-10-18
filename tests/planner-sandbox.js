@@ -88,6 +88,7 @@ function loadPlannerSandbox({ origin = 'http://localhost:8766', initialState, in
     requestAnimationFrame: cb => setTimeout(cb, 0),
     fetch: async () => ({ ok: false, status: 599, json: async () => ({}), text: async () => '' }),
     structuredClone: globalThis.structuredClone,
+    fflate: require('fflate'),btoa,atob,Uint8Array,
     Intl
   };
   sandbox.window.location = locationStub;
@@ -111,6 +112,7 @@ function loadPlannerSandbox({ origin = 'http://localhost:8766', initialState, in
   vm.runInContext(uxSource, context, { filename: 'planner-ux.js' });
   const gamificationSource = fs.readFileSync(path.join(root, 'assets/gamification.js'), 'utf8');
   vm.runInContext(fs.readFileSync(path.join(root,'assets/study-workspace.js'),'utf8'),context,{filename:'study-workspace.js'});
+  vm.runInContext(fs.readFileSync(path.join(root,'assets/local-storage-codec.js'),'utf8'),context,{filename:'local-storage-codec.js'});
   vm.runInContext(gamificationSource, context, { filename: 'gamification.js' });
   // O wrapper UMD de cada arquivo anexa em `root.ENAMED_X`, e `root` resolve para
   // o proprio objeto de contexto (globalThis dentro do vm), nao para `window`.

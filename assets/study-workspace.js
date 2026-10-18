@@ -26,15 +26,15 @@
     }
     return html+(list?`</${list}>`:'');
   }
-  const tabKeys=['1','2','3','4','5','6','7','8','9','r','b','d','h','s','e','g','v','u','t','q','z','a','c'];
-  let app,opened=[],active='',folder='',query='',saveTimer,dirty=false,ownerState=null,paletteReturn;
+  const tabKeys=['1','2','3','4','5','6','7','8','9','r','b','d','h','s','e','g','v','u','t','q','z','m','c'];
+  let app,opened=[],active='',folder='',query='',saveTimer,dirty=false,ownerState=null,paletteReturn,quickReturn,quickOpen=false;
   let focusMode='none',focusSession=null,focusToken='',focusReady=false,focusMessage='Verificando fixação no Windows…',heartbeat,busy=false,focusFullscreen=false,focusAttempt=0;
   const esc=text=>String(text??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
   function notes(){const s=app.getState();if(!Array.isArray(s.freeNotes)) s.freeNotes=[];return s.freeNotes;}
   function current(){return notes().find(note=>note.id===active&&!note.archived);}
   function dateKey(){return new Intl.DateTimeFormat('en-CA',{year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());}
   function dateLabel(day){return /^\d{4}-\d{2}-\d{2}$/.test(day)?day.split('-').reverse().join('/'):'Sem data';}
-  function status(text){const el=document.getElementById('noteSaveStatus');if(el) el.textContent=text;}
+  function status(text){for(const id of ['noteSaveStatus','quickNoteStatus']){const el=document.getElementById(id);if(el)el.textContent=text;}}
   function flush(){
     clearTimeout(saveTimer);
     if(!dirty)return true;
@@ -45,22 +45,64 @@
   }
   function changed(){dirty=true;status('Salvando…');clearTimeout(saveTimer);saveTimer=setTimeout(flush,450);}
   function updateNote(fields){const note=current();if(!note)return;Object.assign(note,fields,{updatedAt:new Date().toISOString()});changed();}
-  function openNote(id){flush();active=id;if(!opened.includes(id))opened.push(id);folder=current()?.date||folder;renderNotes();}
-  function newNote(){
-    if(!app.navigate('anotacoes'))return;
+  function openNote(id){flush();active=id;if(!opened.includes(id))opened.push(id);folder=current()?.date||folder;if(quickOpen)renderQuickNotes();else renderNotes();}
+  function createNote(){
     if(ownerState!==app.account()){opened=[];active='';folder='';ownerState=app.account();}
     flush();const now=new Date().toISOString();
     const note={id:crypto.randomUUID(),title:'Nova anotação',content:'',date:dateKey(),createdAt:now,updatedAt:now};
-    notes().push(note);dirty=true;flush();openNote(note.id);
+    notes().push(note);active=note.id;if(!opened.includes(active))opened.push(active);folder=note.date;dirty=true;flush();return note;
+  }
+  function newNote(){
+    if(!app.navigate('anotacoes'))return;
+    createNote();renderNotes();
     const title=document.getElementById('noteTitle');title?.focus();title?.select();
   }
-  function insert(kind){
-    const field=document.getElementById('noteContent');if(!field)return;
+  function insert(kind,id='noteContent'){
+    const field=document.getElementById(id);if(!field)return;
     const start=field.selectionStart,end=field.selectionEnd,text=field.value.slice(start,end);
     let replacement=kind==='bold'?`**${text||'texto'}**`:kind==='italic'?`*${text||'texto'}*`:kind==='heading'?`\n## ${text||'Título'}\n`:text.split('\n').map((line,i)=>`${kind==='number'?`${i+1}.`:'-'} ${line}`).join('\n');
     field.setRangeText(replacement,start,end,'select');field.dispatchEvent(new Event('input',{bubbles:true}));field.focus();
   }
   function exportNote(){const note=current();if(!note)return;const url=URL.createObjectURL(new Blob([`# ${note.title}\n\n${note.content}`],{type:'text/markdown;charset=utf-8'}));const link=document.createElement('a');link.href=url;link.download=`${note.date}-${note.title.replace(/[<>:"/\\|?*]/g,'_')}.md`;link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+  function closeQuickNotes({restoreFocus=true}={}){
+    flush();quickOpen=false;document.getElementById('quickNotesPanel')?.remove();
+    document.getElementById('headerNotesBtn')?.setAttribute('aria-expanded','false');
+    if(app.getTab()==='anotacoes')renderNotes();
+    if(restoreFocus&&quickReturn?.isConnected)quickReturn.focus({preventScroll:true});
+  }
+  function openQuickNotes({fresh=false}={}){
+    if(!quickOpen)quickReturn=document.activeElement;
+    quickOpen=true;
+    if(ownerState!==app.account()){opened=[];active='';folder='';ownerState=app.account();}
+    if(fresh)createNote();
+    if(!current()){
+      const recent=notes().filter(note=>!note.archived).sort((a,b)=>stamp(b)-stamp(a))[0];
+      if(recent)active=recent.id;else createNote();
+    }
+    renderQuickNotes();
+    const field=document.getElementById(fresh?'quickNoteTitle':'quickNoteContent');field?.focus({preventScroll:true});if(fresh)field?.select();
+  }
+  function renderQuickNotes(){
+    let panel=document.getElementById('quickNotesPanel');
+    if(!panel){panel=document.createElement('aside');panel.id='quickNotesPanel';panel.className='quick-notes-panel';panel.setAttribute('role','dialog');panel.setAttribute('aria-label','Anotações rápidas');panel.setAttribute('aria-modal','false');document.body.appendChild(panel);}
+    const note=current();if(!note)return;
+    const all=notes().filter(n=>!n.archived).sort((a,b)=>stamp(b)-stamp(a));
+    panel.innerHTML=`<div class="quick-notes-head"><div><span class="eyebrow">Sem sair da sua atividade</span><h2>Anotações rápidas</h2></div><button type="button" class="icon-btn" id="quickNotesClose" aria-label="Fechar anotações e voltar à atividade" title="Fechar (Esc)">×</button></div><div class="quick-notes-navigation"><label>Minhas anotações<select id="quickNoteSelect" class="select">${all.map(n=>`<option value="${esc(n.id)}" ${n.id===active?'selected':''}>${dateLabel(n.date)} · ${esc(n.title||'Sem título')}</option>`).join('')}</select></label><button class="icon-btn" id="quickNoteNew" title="Nova anotação (Alt + Shift + N)">＋ Nova</button></div><input id="quickNoteTitle" class="input" aria-label="Nome da anotação rápida" maxlength="160" value="${esc(note.title)}"><div class="note-tools"><button class="tiny-btn" data-quick-format="bold"><b>Negrito</b></button><button class="tiny-btn" data-quick-format="italic"><i>Itálico</i></button><button class="tiny-btn" data-quick-format="bullet">• Lista</button><button class="tiny-btn" data-quick-format="number">1. Enumeração</button></div><textarea id="quickNoteContent" class="textarea" aria-label="Texto da anotação rápida" spellcheck="true" placeholder="Anote aqui e feche para continuar sua atividade.">${esc(note.content)}</textarea><div class="quick-notes-footer"><small id="quickNoteStatus" role="status">${dirty?'Salvando…':'Salvo automaticamente neste aparelho'}</small><button class="tiny-btn" id="quickNotesExplorer">Abrir pastas e abas</button></div>`;
+    document.getElementById('headerNotesBtn')?.setAttribute('aria-expanded','true');
+    panel.querySelector('#quickNotesClose').onclick=()=>closeQuickNotes();
+    panel.querySelector('#quickNoteNew').onclick=()=>openQuickNotes({fresh:true});
+    panel.querySelector('#quickNoteSelect').onchange=e=>openNote(e.target.value);
+    panel.querySelector('#quickNoteTitle').oninput=e=>{updateNote({title:e.target.value});const selected=panel.querySelector('#quickNoteSelect').selectedOptions[0];if(selected)selected.textContent=`${dateLabel(note.date)} · ${e.target.value||'Sem título'}`;};
+    panel.querySelector('#quickNoteContent').oninput=e=>updateNote({content:e.target.value});
+    panel.querySelector('#quickNoteContent').onkeydown=e=>{if((e.ctrlKey||e.metaKey)&&['b','i','s'].includes(e.key.toLowerCase())){e.preventDefault();e.stopPropagation();e.key.toLowerCase()==='s'?flush():insert(e.key.toLowerCase()==='b'?'bold':'italic','quickNoteContent');}};
+    panel.querySelectorAll('[data-quick-format]').forEach(b=>b.onclick=()=>insert(b.dataset.quickFormat,'quickNoteContent'));
+    panel.querySelector('#quickNotesExplorer').onclick=()=>{closeQuickNotes({restoreFocus:false});app.navigate('anotacoes');};
+  }
+  function toggleQuickNotes(){quickOpen?closeQuickNotes():openQuickNotes();}
+  function resetAccountUI(){
+    if(app&&quickOpen)closeQuickNotes({restoreFocus:false});
+    opened=[];active='';folder='';query='';ownerState=null;
+  }
   function renderNotes(){
     const host=document.getElementById('anotacoes');if(!host)return;
     // A sincronização troca o objeto de estado; os IDs continuam válidos. Ao mudar
@@ -86,7 +128,7 @@
   function visible(el){return !el.disabled && !el.closest('[hidden],[inert]') && el.getClientRects().length>0;}
   function actions(){
     const result=app.tabs.map(([id,label],index)=>({label:`Abrir aba: ${label}`,shortcut:`Alt + Shift + ${tabKeys[index].toUpperCase()}`,run:()=>app.navigate(id)}));
-    result.push({label:'Nova anotação',shortcut:'Alt + Shift + N',run:newNote});
+    result.push({label:'Abrir anotações rápidas',shortcut:'Alt + Shift + A',run:toggleQuickNotes},{label:'Nova anotação rápida',shortcut:'Alt + Shift + N',run:()=>openQuickNotes({fresh:true})});
     document.querySelectorAll('button,a[href],input:not([type="hidden"]),select,textarea,summary,[role="button"]').forEach(el=>{
       if(!visible(el)||el.closest('#commandPalette,#authPanel'))return;
       const label=el.getAttribute('aria-label')||el.getAttribute('title')||el.labels?.[0]?.textContent||el.textContent||el.placeholder;
@@ -152,15 +194,17 @@
   function focusStatus(){return focusSession?(focusSession.mode==='screen'?'🔒 Esta tela está fixada':'🔒 Aplicativo fixado'):'';}
   function init(adapter){
     if(app)return;app=adapter;
-    document.getElementById('headerNotesBtn')?.addEventListener('click',()=>app.navigate('anotacoes'));
+    document.getElementById('headerNotesBtn')?.addEventListener('click',toggleQuickNotes);
     document.getElementById('headerShortcutsBtn')?.addEventListener('click',openCommands);
     document.addEventListener('keydown',e=>{
       if(e.isComposing||e.repeat)return;
+      if(e.key==='Escape'&&quickOpen&&!document.getElementById('commandPalette')){e.preventDefault();e.stopImmediatePropagation();closeQuickNotes();return;}
       if((e.ctrlKey||e.metaKey)&&!e.altKey&&!e.shiftKey&&e.key.toLowerCase()==='k'){e.preventDefault();e.stopImmediatePropagation();openCommands();return;}
       if(!e.altKey||!e.shiftKey||e.ctrlKey||e.metaKey)return;
       const key=/^Digit[1-9]$/.test(e.code)?e.code.slice(5):e.key.toLowerCase(),index=tabKeys.indexOf(key);
-      if(index>=0&&app.tabs[index]){e.preventDefault();e.stopImmediatePropagation();flush();app.navigate(app.tabs[index][0]);}
-      else if(key==='n'){e.preventDefault();newNote();}
+      if(key==='a'){e.preventDefault();e.stopImmediatePropagation();toggleQuickNotes();}
+      else if(index>=0&&app.tabs[index]){e.preventDefault();e.stopImmediatePropagation();flush();app.navigate(app.tabs[index][0]);}
+      else if(key==='n'){e.preventDefault();openQuickNotes({fresh:true});}
       else if(key==='p'){e.preventDefault();document.getElementById('pomodoroFruit')?.click();}
       else if(key===' '){e.preventDefault();app.timer().running?app.pause():app.resume();}
       else if(key==='x'){e.preventDefault();app.reset();}
@@ -172,5 +216,5 @@
     document.addEventListener('fullscreenchange',()=>{if(focusSession&&!document.fullscreenElement){app.pause();releaseFocus();}});
     setInterval(()=>{if(dirty)flush();},60000);checkFocus().catch(()=>{});
   }
-  return {mergeNotes,formatNote,init,renderNotes,newNote,flush,focusOptions,bindFocus,beginFocus,releaseFocus,allowTab,enforceTab,focusStatus,tabKeys};
+  return {mergeNotes,formatNote,init,renderNotes,newNote,openQuickNotes,closeQuickNotes,resetAccountUI,flush,focusOptions,bindFocus,beginFocus,releaseFocus,allowTab,enforceTab,focusStatus,tabKeys};
 });

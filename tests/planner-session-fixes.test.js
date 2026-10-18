@@ -410,19 +410,21 @@ test('recordLibraryFlashcardVersion: edicao continua do mesmo campo colapsa em u
   assert.equal(state.flashcardSystem.versions.length, 2, 'um campo diferente do card deve gerar seu proprio registro');
 });
 
-test('writeLocalState: quota estourada descarta backups antigos e recupera sozinho quando o espaco volta', () => {
+test('writeLocalState: quota compacta os backups anteriores sem descartar nenhuma cópia', () => {
   const ctx = loadPlannerSandbox();
   ctx.__setState({ schedule: [{ id: 's1' }] });
-  ctx.__setLocalBackups(Array.from({ length: 6 }, (_, i) => ({ id: `b${i}`, label: `Backup ${i}`, created_at: new Date().toISOString(), data: { schedule: [{ id: 's' }] } })));
+  const backups=Array.from({ length: 6 }, (_, i) => ({ id: `b${i}`, label: `Backup ${i}`, created_at: new Date().toISOString(), data: { schedule: [{ id: 's' }],history:'atividade '.repeat(1000) } }));
+  ctx.__setLocalBackups(backups);
+  ctx.localStorage.setItem('soqueromed-local-backups-v1',JSON.stringify(backups));
   const nativeSetItem = ctx.localStorage.setItem.bind(ctx.localStorage);
-  let falhas = 0;
   ctx.localStorage.setItem = (key, value) => {
-    if(key === 'enamed-planner-v3' && falhas < 2) { falhas += 1; const e = new Error('Quota exceeded'); e.name = 'QuotaExceededError'; throw e; }
+    if(key === 'enamed-planner-v3' && ctx.localStorage.getItem('soqueromed-local-backups-v1').length>2500) { const e = new Error('Quota exceeded'); e.name = 'QuotaExceededError'; throw e; }
     return nativeSetItem(key, value);
   };
   const ok = ctx.writeLocalState();
-  assert.equal(ok, true, 'apos descartar backups antigos, a gravacao deve suceder');
-  assert.ok(ctx.__getLocalBackups().length < 6, 'backups antigos devem ter sido descartados para liberar espaco');
+  assert.equal(ok, true, 'compactar deve liberar espaço suficiente');
+  assert.equal(ctx.__getLocalBackups().length,6,'nenhuma cópia foi sacrificada');
+  assert.equal(require('../assets/local-storage-codec').parse(ctx.localStorage.getItem('soqueromed-local-backups-v1')).length,6);
   assert.ok(ctx.localStorage.getItem('enamed-planner-v3'), 'o estado deve estar de fato gravado no fim');
 });
 
