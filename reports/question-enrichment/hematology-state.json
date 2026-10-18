@@ -6020,7 +6020,67 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-22bf0922492adf25": {
+      "number": "1072a",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-18T11:16:52.500Z",
+      "nextAttemptAt": "2026-10-25T11:16:52.500Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-af528ee344518a5f": {
+      "number": "1073a",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-18T11:16:57.709Z",
+      "nextAttemptAt": "2026-10-25T11:16:57.709Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-770b959f835ab146": {
+      "number": "1074a",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-18T11:17:03.002Z",
+      "nextAttemptAt": "2026-10-25T11:17:03.002Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-3c635433f3d221f2": {
+      "number": "1075a",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-18T11:17:08.227Z",
+      "nextAttemptAt": "2026-10-25T11:17:08.227Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-7994d7c6a0f8e1cc": {
+      "number": "1076a",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-18T11:17:13.525Z",
+      "nextAttemptAt": "2026-10-25T11:17:13.525Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-45c45d66849d96f0": {
+      "number": "1077a",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-18T11:17:18.791Z",
+      "nextAttemptAt": "2026-10-25T11:17:18.791Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-10-17T20:41:30.001Z"
+  "updatedAt": "2026-10-18T11:17:18.791Z"
 }

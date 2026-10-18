@@ -1,80 +1,54 @@
 {
-  "generatedAt": "2026-10-17T20:41:02.153Z",
+  "generatedAt": "2026-10-18T11:16:52.002Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 1,
+  "changed": 0,
   "results": [
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-14af2f600fcde0fe",
-      "number": "1066a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Jovem-19-anos-e451762cccb/",
-      "sourceQuestionId": "4000108554",
-      "matchedAt": "2026-10-17T20:41:03.776Z",
-      "similarity": {
-        "stem": 0.9767441860465116,
-        "options": 1,
-        "combined": 0.983720930232558
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemoglobinopatias",
-        "Anemia falciforme",
-        "Quadro clínico da anemia falciforme",
-        "Introdução ao Estudo das Anemias",
-        "Esfregaço do sangue periférico",
-        "Poiquilocitose",
-        "Drepanócitos"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Drepanócitos. Conduta/resposta: anemia falciforme.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Jovem-19-anos-e451762cccb/",
-        "https://med.estrategia.com/public/questoes/jovem-com-19-anos153000dab3d/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-0c8cebd24c1662ee",
-      "number": "1067a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-22bf0922492adf25",
+      "number": "1072a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-c28c32c8efa7e651",
-      "number": "1068a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-af528ee344518a5f",
+      "number": "1073a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-2a09e3d2a7d3b070",
-      "number": "1069a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-770b959f835ab146",
+      "number": "1074a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-8e6b2e18f0466905",
-      "number": "1070a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-3c635433f3d221f2",
+      "number": "1075a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-eb74092fdff86dbe",
-      "number": "1071a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-7994d7c6a0f8e1cc",
+      "number": "1076a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-45c45d66849d96f0",
+      "number": "1077a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": false,
       "status": "not_found",
