@@ -5523,33 +5523,33 @@
     },
     "anki-hematologia-introducao-ao-estudo-das-anemias-14f96f123b682ac3": {
       "number": "1022a",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-11T22:04:27.930Z",
-      "nextAttemptAt": "2026-10-18T22:04:27.930Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-19T13:29:19.324Z",
+      "nextAttemptAt": "2026-11-02T13:29:19.324Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/E-exemplo-anemia51e569afa/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-introducao-ao-estudo-das-anemias-436df2a227790385": {
       "number": "1023a",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-11T22:04:33.409Z",
-      "nextAttemptAt": "2026-10-18T22:04:33.409Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-19T13:29:25.523Z",
+      "nextAttemptAt": "2026-11-02T13:29:25.523Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/morfologia-eritrocitos215c05057f/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-introducao-ao-estudo-das-anemias-204649930e94f35f": {
       "number": "1024a",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-11T22:04:38.981Z",
-      "nextAttemptAt": "2026-10-18T22:04:38.981Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-19T13:29:31.403Z",
+      "nextAttemptAt": "2026-11-02T13:29:31.403Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Crianc-1-ano-6-meses-e8098de6424/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-introducao-ao-estudo-das-anemias-a62aec136f9a1cdc": {
       "number": "1025a",
@@ -6120,7 +6120,37 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/Gestante-30-anos47a577e772/",
       "localAnswer": "D",
       "remoteAnswer": "D"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-7a9e17de0af80496": {
+      "number": "1082a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-19T13:29:37.475Z",
+      "nextAttemptAt": "2026-10-26T13:29:37.475Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/achado-reticulocitose959ff3bb5/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-5bd6192fa98e8aaa": {
+      "number": "1083a",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-19T13:29:44.092Z",
+      "nextAttemptAt": "2026-10-26T13:29:44.092Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-ac94d441251b57c3": {
+      "number": "1084a",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-19T13:29:49.547Z",
+      "nextAttemptAt": "2026-10-26T13:29:49.547Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-10-18T20:52:03.717Z"
+  "updatedAt": "2026-10-19T13:29:49.547Z"
 }

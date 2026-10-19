@@ -1133,10 +1133,21 @@
         "#Sideroblástica",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885725",
-      "ankiGuid": "y16}C3p_+d"
+      "ankiGuid": "y16}C3p_+d",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/E-exemplo-anemia51e569afa/",
+        "sourceQuestionId": "4000108241",
+        "matchedAt": "2026-10-19T13:29:19.323Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-436df2a227790385",
@@ -1176,10 +1187,26 @@
         "#MorfologiaEritrocitária",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Esfregaço do sangue periférico",
+        "Corpúsculos citoplasmáticos das hemácias",
+        "Corpos de Heinz",
+        "Anemias hemolíticas",
+        "Anemias hemolíticas por deficiências enzimáticas",
+        "Deficiência de G6PD",
+        "Quadro clínico da deficiência de G6PD",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885726",
-      "ankiGuid": "r(#^v/W>%3"
+      "ankiGuid": "r(#^v/W>%3",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/morfologia-eritrocitos215c05057f/",
+        "sourceQuestionId": "4000101359",
+        "matchedAt": "2026-10-19T13:29:25.522Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-204649930e94f35f",
@@ -1220,10 +1247,23 @@
         "#Poiquilocitose",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Esfregaço do sangue periférico",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885727",
-      "ankiGuid": "FixQ-#0MmG"
+      "ankiGuid": "FixQ-#0MmG",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Crianc-1-ano-6-meses-e8098de6424/",
+        "sourceQuestionId": "4000101069",
+        "matchedAt": "2026-10-19T13:29:31.402Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-a62aec136f9a1cdc",
@@ -3671,10 +3711,21 @@
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Classificações das anemias",
+        "Classificação funcional das anemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885785",
-      "ankiGuid": "LC<q9y**Td"
+      "ankiGuid": "LC<q9y**Td",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/achado-reticulocitose959ff3bb5/",
+        "sourceQuestionId": "4000018262",
+        "matchedAt": "2026-10-19T13:29:37.475Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-5bd6192fa98e8aaa",
