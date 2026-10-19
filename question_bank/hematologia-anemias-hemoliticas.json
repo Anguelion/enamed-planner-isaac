@@ -3527,10 +3527,22 @@
       "tags": [
         "Hematologia",
         "Anemias Hemolíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742515350420",
-      "ankiGuid": "xGF@@M]8/!"
+      "ankiGuid": "xGF@@M]8/!",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-falciforme-e254d0aa94e/",
+        "sourceQuestionId": "4000003691",
+        "matchedAt": "2026-10-19T22:25:43.861Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-hemoliticas-d84abda5ea3284dc",

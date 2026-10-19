@@ -1378,10 +1378,22 @@
         "#Reticulócitos",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias macrocíticas",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885730",
-      "ankiGuid": "QX=&-F,Ql}"
+      "ankiGuid": "QX=&-F,Ql}",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-causas-anemias52f4c5df9/",
+        "sourceQuestionId": "4000067820",
+        "matchedAt": "2026-10-19T22:25:49.691Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-25ee60d123782aaf",
@@ -1419,10 +1431,23 @@
         "#Talassemia",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias microcíticas",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885731",
-      "ankiGuid": "o?2T60en?9"
+      "ankiGuid": "o?2T60en?9",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/ambulatorio-atenca19b414fa58/",
+        "sourceQuestionId": "4000055997",
+        "matchedAt": "2026-10-19T22:25:55.763Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-8863d6a3ce49e344",
@@ -1464,10 +1489,20 @@
         "#SHU",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Esfregaço do sangue periférico",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885732",
-      "ankiGuid": "ssSg=K+uKP"
+      "ankiGuid": "ssSg=K+uKP",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Correlacione24a7882b15/",
+        "sourceQuestionId": "4000052100",
+        "matchedAt": "2026-10-19T22:26:01.832Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-c91a059ba79a6442",
@@ -3824,10 +3859,21 @@
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885788",
-      "ankiGuid": "tR:>Ey*Y5d"
+      "ankiGuid": "tR:>Ey*Y5d",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/avaliaca-inicial3308de4d2c/",
+        "sourceQuestionId": "4000035687",
+        "matchedAt": "2026-10-19T22:26:07.610Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-81015dd0dc76f0e9",
@@ -3858,10 +3904,25 @@
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885789",
-      "ankiGuid": "POWbmZnhs0"
+      "ankiGuid": "POWbmZnhs0",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-portador22a11b5efc/",
+        "sourceQuestionId": "4000118612",
+        "matchedAt": "2026-10-19T22:26:13.602Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-a42331949ba6d1a6",

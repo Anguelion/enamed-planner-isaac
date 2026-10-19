@@ -1,27 +1,145 @@
 {
-  "generatedAt": "2026-10-19T13:29:18.059Z",
+  "generatedAt": "2026-10-19T22:25:42.463Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 4,
+  "changed": 6,
   "results": [
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-14f96f123b682ac3",
-      "number": "1022a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "id": "anki-hematologia-anemias-hemoliticas-f1d29a123d1f260f",
+      "number": "1079f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/E-exemplo-anemia51e569afa/",
-      "sourceQuestionId": "4000108241",
-      "matchedAt": "2026-10-19T13:29:19.323Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-falciforme-e254d0aa94e/",
+      "sourceQuestionId": "4000003691",
+      "matchedAt": "2026-10-19T22:25:43.861Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
+      "localAnswer": "E",
+      "remoteAnswer": "E",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemoglobinopatias",
+        "Anemia falciforme",
+        "Quadro clínico da anemia falciforme"
+      ],
+      "comment": "Gabarito confirmado: E. Assunto: Quadro clínico da anemia falciforme. Conduta/resposta: É comum esplenomegalia, em pacientes homozigotos adultos.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/anemia-falciforme-e254d0aa94e/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-c65ce9d37c99abe6",
+      "number": "1027a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-causas-anemias52f4c5df9/",
+      "sourceQuestionId": "4000067820",
+      "matchedAt": "2026-10-19T22:25:49.691Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias macrocíticas",
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Classificação morfológica das anemias. Conduta/resposta: Anemias hemolíticas congênitas e anemia megaloblástica.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Sa-causas-anemias52f4c5df9/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-25ee60d123782aaf",
+      "number": "1028a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/ambulatorio-atenca19b414fa58/",
+      "sourceQuestionId": "4000055997",
+      "matchedAt": "2026-10-19T22:25:55.763Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "E",
+      "remoteAnswer": "E",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias microcíticas",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias"
+      ],
+      "comment": "Gabarito confirmado: E. Assunto: Classificação morfológica das anemias. Conduta/resposta: Comprovando-se anemia ferropriva, a baixa ingesta de ferro, por exemplo, em dietas vegetarianas, é a principal etiologia",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/ambulatorio-atenca19b414fa58/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-8863d6a3ce49e344",
+      "number": "1029a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Correlacione24a7882b15/",
+      "sourceQuestionId": "4000052100",
+      "matchedAt": "2026-10-19T22:26:01.832Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "E",
+      "remoteAnswer": "E",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico"
+      ],
+      "comment": "Gabarito confirmado: E. Assunto: Esfregaço do sangue periférico. Conduta/resposta: Ib, IId, IIIa e IVc",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Correlacione24a7882b15/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-7f4d07598b8626a9",
+      "number": "1085a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/avaliaca-inicial3308de4d2c/",
+      "sourceQuestionId": "4000035687",
+      "matchedAt": "2026-10-19T22:26:07.610Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
@@ -30,122 +148,43 @@
         "Classificações das anemias",
         "Classificação morfológica das anemias"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Classificação morfológica das anemias. Conduta/resposta: Anemia sideroblástica.",
+      "comment": "Gabarito confirmado: A. Assunto: Classificação morfológica das anemias. Conduta/resposta: Se o VCM é normal, o paciente pode ter aplasia da medula óssea.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/E-exemplo-anemia51e569afa/"
+        "https://med.estrategia.com/public/questoes/avaliaca-inicial3308de4d2c/"
       ]
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-436df2a227790385",
-      "number": "1023a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-81015dd0dc76f0e9",
+      "number": "1086a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/morfologia-eritrocitos215c05057f/",
-      "sourceQuestionId": "4000101359",
-      "matchedAt": "2026-10-19T13:29:25.522Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-portador22a11b5efc/",
+      "sourceQuestionId": "4000118612",
+      "matchedAt": "2026-10-19T22:26:13.602Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
+      "localAnswer": "B",
+      "remoteAnswer": "B",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
         "Introdução ao Estudo das Anemias",
         "Esfregaço do sangue periférico",
-        "Corpúsculos citoplasmáticos das hemácias",
-        "Corpos de Heinz",
-        "Anemias hemolíticas",
-        "Anemias hemolíticas por deficiências enzimáticas",
-        "Deficiência de G6PD",
-        "Quadro clínico da deficiência de G6PD"
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Quadro clínico da deficiência de G6PD. Conduta/resposta: Precipitação de hemoglobina anormal.",
+      "comment": "Gabarito confirmado: B. Assunto: Neutrófilos hipersegmentados. Conduta/resposta: por deficiência de vitamina B12 e/ou de folato.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/morfologia-eritrocitos215c05057f/"
+        "https://med.estrategia.com/public/questoes/paciente-portador22a11b5efc/"
       ]
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-204649930e94f35f",
-      "number": "1024a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Crianc-1-ano-6-meses-e8098de6424/",
-      "sourceQuestionId": "4000101069",
-      "matchedAt": "2026-10-19T13:29:31.402Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemoglobinopatias",
-        "Anemia falciforme",
-        "Quadro clínico da anemia falciforme",
-        "Introdução ao Estudo das Anemias",
-        "Esfregaço do sangue periférico",
-        "Poiquilocitose",
-        "Drepanócitos"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Drepanócitos. Conduta/resposta: Presença de poiquilocitose, hipótese diagnóstica de Anemia Falciforme.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Crianc-1-ano-6-meses-e8098de6424/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-7a9e17de0af80496",
-      "number": "1082a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/achado-reticulocitose959ff3bb5/",
-      "sourceQuestionId": "4000018262",
-      "matchedAt": "2026-10-19T13:29:37.475Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Introdução ao Estudo das Anemias",
-        "Classificações das anemias",
-        "Classificação funcional das anemias"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Classificação funcional das anemias. Conduta/resposta: Na anemia aplásica.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/achado-reticulocitose959ff3bb5/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-5bd6192fa98e8aaa",
-      "number": "1083a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-ac94d441251b57c3",
-      "number": "1084a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
     }
   ]
 }
