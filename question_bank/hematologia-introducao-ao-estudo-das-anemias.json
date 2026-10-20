@@ -3953,10 +3953,25 @@
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
+        "Classificação funcional das anemias",
+        "Hemograma",
+        "Índices hematimétricos",
+        "RDW – red cell distribution width",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885790",
-      "ankiGuid": "AqJjo5nNLH"
+      "ankiGuid": "AqJjo5nNLH",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Associe-alteracoes1019b9f85fa/",
+        "sourceQuestionId": "4000092583",
+        "matchedAt": "2026-10-20T11:46:49.072Z",
+        "confidence": 0.9926315789473683
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-a836917a0567c222",
@@ -3987,10 +4002,24 @@
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
+        "Anemias microcíticas",
+        "Anemia ferropriva",
+        "Diagnóstico da anemia ferropriva",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885791",
-      "ankiGuid": "nmZE@_!8S*"
+      "ankiGuid": "nmZE@_!8S*",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-por-deficiencia976578475/",
+        "sourceQuestionId": "4000063996",
+        "matchedAt": "2026-10-20T11:46:55.218Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-ab14c30fbfc9ff1a",
@@ -4021,10 +4050,27 @@
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Classificações das anemias",
+        "Classificação funcional das anemias",
+        "Os reticulócitos",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Distúrbios de absorção de vitamina B12",
+        "Anemia perniciosa",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885792",
-      "ankiGuid": "oKTqK4VP%|"
+      "ankiGuid": "oKTqK4VP%|",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-provavel21556095ec/",
+        "sourceQuestionId": "4000091859",
+        "matchedAt": "2026-10-20T11:47:01.042Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-26764f8e5a121121",
@@ -4054,10 +4100,26 @@
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Esfregaço do sangue periférico",
+        "Anormalidades de tamanho das hemácias",
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Causas de anemia megaloblástica",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885793",
-      "ankiGuid": "Ky&hPo0h:<"
+      "ankiGuid": "Ky&hPo0h:<",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Para-paciente-cujo22bac24454/",
+        "sourceQuestionId": "4000057666",
+        "matchedAt": "2026-10-20T11:47:07.124Z",
+        "confidence": 1
+      }
     }
   ]
 }

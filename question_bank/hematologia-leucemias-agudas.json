@@ -32,10 +32,23 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Leucemia linfoide aguda (LLA)",
+        "Quadro clínico da leucemia linfoide aguda (LLA)",
+        "Tratamento da leucemia linfoide aguda (LLA)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106911",
-      "ankiGuid": "p&l@Adabb+"
+      "ankiGuid": "p&l@Adabb+",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/leucemias-linfoides941429a3de/",
+        "sourceQuestionId": "4000184486",
+        "matchedAt": "2026-10-20T11:47:13.049Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-7762b75ecdd5e7ca",
@@ -68,10 +81,33 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Nefrologia",
+        "Lesão renal aguda (LRA)",
+        "Causas especificas",
+        "Síndrome de Lise Tumoral (SLT)",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
+        "Leucemias",
+        "Leucemia linfoide aguda (LLA)",
+        "Quadro clínico da leucemia linfoide aguda (LLA)",
+        "Distúrbios do potássio",
+        "Hipercalemia",
+        "Causas de Hipercalemia",
+        "Liberação da carga de potássio do intracelular",
+        "Síndrome de Lise Tumoral",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106912",
-      "ankiGuid": "so5:#hz=W?"
+      "ankiGuid": "so5:#hz=W?",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-7-anos99548ae740/",
+        "sourceQuestionId": "4000184079",
+        "matchedAt": "2026-10-20T11:47:19.382Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-c9e8b62fbc1bfa28",

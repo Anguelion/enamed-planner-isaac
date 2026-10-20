@@ -6170,7 +6170,67 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-portador22a11b5efc/",
       "localAnswer": "B",
       "remoteAnswer": "B"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-a42331949ba6d1a6": {
+      "number": "1087a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-20T11:46:49.072Z",
+      "nextAttemptAt": "2026-10-27T11:46:49.072Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Associe-alteracoes1019b9f85fa/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-a836917a0567c222": {
+      "number": "1088a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-20T11:46:55.218Z",
+      "nextAttemptAt": "2026-10-27T11:46:55.218Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-por-deficiencia976578475/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-ab14c30fbfc9ff1a": {
+      "number": "1089a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-20T11:47:01.042Z",
+      "nextAttemptAt": "2026-10-27T11:47:01.042Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-provavel21556095ec/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-introducao-ao-estudo-das-anemias-26764f8e5a121121": {
+      "number": "1090a",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-20T11:47:07.125Z",
+      "nextAttemptAt": "2026-10-27T11:47:07.125Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Para-paciente-cujo22bac24454/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-leucemias-agudas-fa1e981e603885cf": {
+      "number": "1001h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-20T11:47:13.049Z",
+      "nextAttemptAt": "2026-10-27T11:47:13.049Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/leucemias-linfoides941429a3de/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-leucemias-agudas-7762b75ecdd5e7ca": {
+      "number": "1002h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-20T11:47:19.383Z",
+      "nextAttemptAt": "2026-10-27T11:47:19.383Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-7-anos99548ae740/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     }
   },
-  "updatedAt": "2026-10-19T22:26:13.602Z"
+  "updatedAt": "2026-10-20T11:47:19.383Z"
 }
