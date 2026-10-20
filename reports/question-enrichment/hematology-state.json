@@ -4684,9 +4684,9 @@
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-94d2981b7bbc52ee": {
       "number": "1038c",
       "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-10-06T13:24:29.436Z",
-      "nextAttemptAt": "2026-10-20T13:24:29.436Z",
+      "attempts": 3,
+      "lastAttemptAt": "2026-10-20T21:42:09.539Z",
+      "nextAttemptAt": "2026-11-10T21:42:09.539Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -4694,9 +4694,9 @@
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-d44b28c565909beb": {
       "number": "1039c",
       "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-10-06T13:24:34.988Z",
-      "nextAttemptAt": "2026-10-20T13:24:34.988Z",
+      "attempts": 3,
+      "lastAttemptAt": "2026-10-20T21:42:35.652Z",
+      "nextAttemptAt": "2026-11-10T21:42:35.652Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -4704,9 +4704,9 @@
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-fe8ebf9684c016b1": {
       "number": "1040c",
       "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-10-06T13:24:40.517Z",
-      "nextAttemptAt": "2026-10-20T13:24:40.517Z",
+      "attempts": 3,
+      "lastAttemptAt": "2026-10-20T21:43:01.717Z",
+      "nextAttemptAt": "2026-11-10T21:43:01.717Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -5604,9 +5604,9 @@
     "anki-hematologia-introducao-ao-estudo-das-anemias-c91a059ba79a6442": {
       "number": "1030a",
       "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-13T14:20:07.504Z",
-      "nextAttemptAt": "2026-10-20T14:20:07.504Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-20T21:43:27.875Z",
+      "nextAttemptAt": "2026-11-03T21:43:27.875Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -6230,7 +6230,27 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-7-anos99548ae740/",
       "localAnswer": "C",
       "remoteAnswer": "C"
+    },
+    "anki-hematologia-leucemias-agudas-c9e8b62fbc1bfa28": {
+      "number": "1003h",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-20T21:43:53.943Z",
+      "nextAttemptAt": "2026-10-27T21:43:53.943Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-agudas-2f17f7ec62619794": {
+      "number": "1004h",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-20T21:44:20.013Z",
+      "nextAttemptAt": "2026-10-27T21:44:20.013Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-10-20T11:47:19.383Z"
+  "updatedAt": "2026-10-20T21:44:20.013Z"
 }
