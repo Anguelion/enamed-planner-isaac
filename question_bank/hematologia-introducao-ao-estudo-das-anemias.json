@@ -1937,10 +1937,25 @@
         "#VCM",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
+        "Anemias hemolíticas",
+        "Anemias hemolíticas autoimunes (AHAI)",
+        "Diagnóstico das anemias hemolíticas autoimunes (AHAI)",
+        "Testes de Coombs",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885741",
-      "ankiGuid": "AjIYl@?dc*"
+      "ankiGuid": "AjIYl@?dc*",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-feminina-1989fd593f8f/",
+        "sourceQuestionId": "4000105067",
+        "matchedAt": "2026-10-21T21:47:36.414Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-d6e4bdf8a2d2221c",
@@ -1975,10 +1990,26 @@
         "#Pediatria",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Esfregaço do sangue periférico",
+        "Corpúsculos citoplasmáticos das hemácias",
+        "Corpos de Heinz",
+        "Anemias hemolíticas",
+        "Anemias hemolíticas por deficiências enzimáticas",
+        "Deficiência de G6PD",
+        "Quadro clínico da deficiência de G6PD",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885742",
-      "ankiGuid": "degv-Ski,["
+      "ankiGuid": "degv-Ski,[",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Lactente-seis-meses636b017297/",
+        "sourceQuestionId": "4000086801",
+        "matchedAt": "2026-10-21T21:47:42.259Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-b571c5aa58af882b",
@@ -2014,10 +2045,22 @@
         "#MorfologiaEritrocitária",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Esfregaço do sangue periférico",
+        "Corpúsculos citoplasmáticos das hemácias",
+        "Corpos de Heinz",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885743",
-      "ankiGuid": "qP=a,&<Ht;"
+      "ankiGuid": "qP=a,&<Ht;",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/morfologia-eritrocitos21a65e7a3a/",
+        "sourceQuestionId": "4000084875",
+        "matchedAt": "2026-10-21T21:47:48.104Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-aa6a9aa70dbd83a4",

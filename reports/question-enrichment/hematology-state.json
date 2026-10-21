@@ -5683,33 +5683,33 @@
     },
     "anki-hematologia-introducao-ao-estudo-das-anemias-9af7248d6663bfa1": {
       "number": "1038a",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-14T12:01:32.922Z",
-      "nextAttemptAt": "2026-10-21T12:01:32.922Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-21T21:47:36.415Z",
+      "nextAttemptAt": "2026-11-04T21:47:36.415Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-feminina-1989fd593f8f/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-introducao-ao-estudo-das-anemias-d6e4bdf8a2d2221c": {
       "number": "1039a",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-14T12:01:38.333Z",
-      "nextAttemptAt": "2026-10-21T12:01:38.333Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-21T21:47:42.260Z",
+      "nextAttemptAt": "2026-11-04T21:47:42.260Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Lactente-seis-meses636b017297/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-introducao-ao-estudo-das-anemias-b571c5aa58af882b": {
       "number": "1040a",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-14T12:01:43.823Z",
-      "nextAttemptAt": "2026-10-21T12:01:43.823Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-21T21:47:48.104Z",
+      "nextAttemptAt": "2026-11-04T21:47:48.104Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/morfologia-eritrocitos21a65e7a3a/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-introducao-ao-estudo-das-anemias-aa6a9aa70dbd83a4": {
       "number": "1041a",
@@ -6300,7 +6300,37 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/sindrome-lise-tumoral9069531774/",
       "localAnswer": "D",
       "remoteAnswer": "D"
+    },
+    "anki-hematologia-leucemias-agudas-ceab4647547bf801": {
+      "number": "1010h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-21T21:47:54.008Z",
+      "nextAttemptAt": "2026-10-28T21:47:54.008Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/sindrome-lise-tumoral2234be6d78/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-leucemias-agudas-8deacc307d19ca95": {
+      "number": "1011h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-21T21:48:00.128Z",
+      "nextAttemptAt": "2026-10-28T21:48:00.128Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-2-anos-319295b2c900/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-leucemias-agudas-9f7970cfb8ea8b8b": {
+      "number": "1012h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-21T21:48:06.089Z",
+      "nextAttemptAt": "2026-10-28T21:48:06.089Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/crianc-cinco-anos50118a8145/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
     }
   },
-  "updatedAt": "2026-10-21T11:59:32.107Z"
+  "updatedAt": "2026-10-21T21:48:06.089Z"
 }

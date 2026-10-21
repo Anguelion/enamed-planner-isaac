@@ -450,10 +450,30 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Nefrologia",
+        "Lesão renal aguda (LRA)",
+        "Causas especificas",
+        "Síndrome de Lise Tumoral (SLT)",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
+        "Distúrbios do potássio",
+        "Hipercalemia",
+        "Causas de Hipercalemia",
+        "Liberação da carga de potássio do intracelular",
+        "Síndrome de Lise Tumoral",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106920",
-      "ankiGuid": "BL@)!&jjmF"
+      "ankiGuid": "BL@)!&jjmF",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/sindrome-lise-tumoral2234be6d78/",
+        "sourceQuestionId": "4000169073",
+        "matchedAt": "2026-10-21T21:47:54.007Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-8deacc307d19ca95",
@@ -481,10 +501,20 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Fundamentos de oncohematologia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106921",
-      "ankiGuid": "C5jrbWT6@p"
+      "ankiGuid": "C5jrbWT6@p",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-2-anos-319295b2c900/",
+        "sourceQuestionId": "4000167814",
+        "matchedAt": "2026-10-21T21:48:00.128Z",
+        "confidence": 0.9735395189003435
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-9f7970cfb8ea8b8b",
@@ -514,10 +544,22 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Leucemia linfoide aguda (LLA)",
+        "Quadro clínico da leucemia linfoide aguda (LLA)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106922",
-      "ankiGuid": "c8<ox!fv0-"
+      "ankiGuid": "c8<ox!fv0-",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/crianc-cinco-anos50118a8145/",
+        "sourceQuestionId": "4000163687",
+        "matchedAt": "2026-10-21T21:48:06.089Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-73af63606a8b7c0c",
