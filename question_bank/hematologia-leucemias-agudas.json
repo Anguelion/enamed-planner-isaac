@@ -204,10 +204,22 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Leucemia linfoide aguda (LLA)",
+        "Quadro clínico da leucemia linfoide aguda (LLA)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106915",
-      "ankiGuid": "Cw?F1+QYJd"
+      "ankiGuid": "Cw?F1+QYJd",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Menina-5-anos-foi120271ca505/",
+        "sourceQuestionId": "4000182785",
+        "matchedAt": "2026-10-21T11:59:08.324Z",
+        "confidence": 0.9921348314606742
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-dc24d1829c3be7d5",
@@ -239,10 +251,30 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Nefrologia",
+        "Lesão renal aguda (LRA)",
+        "Causas especificas",
+        "Síndrome de Lise Tumoral (SLT)",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
+        "Distúrbios do potássio",
+        "Hipercalemia",
+        "Causas de Hipercalemia",
+        "Liberação da carga de potássio do intracelular",
+        "Síndrome de Lise Tumoral",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106916",
-      "ankiGuid": "g+D.%nuSK#"
+      "ankiGuid": "g+D.%nuSK#",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-39-anos763d04df76/",
+        "sourceQuestionId": "4000182163",
+        "matchedAt": "2026-10-21T11:59:13.993Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-4a449d8252fdbc87",
@@ -272,10 +304,23 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Leucemia linfoide aguda (LLA)",
+        "Quadro clínico da leucemia linfoide aguda (LLA)",
+        "Diagnóstico da leucemia linfoide aguda (LLA)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106917",
-      "ankiGuid": "fl]j&K-$Qs"
+      "ankiGuid": "fl]j&K-$Qs",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Menino-8-anos1380f2d5642/",
+        "sourceQuestionId": "4000182093",
+        "matchedAt": "2026-10-21T11:59:20.055Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-3172bd63b8087d5f",
@@ -306,10 +351,22 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
+        "Síndrome de lise tumoral (SLT)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106918",
-      "ankiGuid": "Gh0;<t+8vJ"
+      "ankiGuid": "Gh0;<t+8vJ",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/jovem-22-anos-idade10708cad590/",
+        "sourceQuestionId": "4000170555",
+        "matchedAt": "2026-10-21T11:59:25.901Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-a8bfd34d61dcd4be",
@@ -339,10 +396,30 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Nefrologia",
+        "Lesão renal aguda (LRA)",
+        "Causas especificas",
+        "Síndrome de Lise Tumoral (SLT)",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
+        "Distúrbios do potássio",
+        "Hipercalemia",
+        "Causas de Hipercalemia",
+        "Liberação da carga de potássio do intracelular",
+        "Síndrome de Lise Tumoral",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106919",
-      "ankiGuid": "L/%5DGnYMR"
+      "ankiGuid": "L/%5DGnYMR",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/sindrome-lise-tumoral9069531774/",
+        "sourceQuestionId": "4000169582",
+        "matchedAt": "2026-10-21T11:59:32.106Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-ceab4647547bf801",

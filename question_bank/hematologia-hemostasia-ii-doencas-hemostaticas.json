@@ -1880,10 +1880,24 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Principais doenças",
+        "Hemofilia",
+        "Diagnóstico",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069429",
-      "ankiGuid": "Kq}dim$PDm"
+      "ankiGuid": "Kq}dim$PDm",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Quais-sa-manifestacoes1136fe3244/",
+        "sourceQuestionId": "4000080696",
+        "matchedAt": "2026-10-21T11:59:02.205Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-f2c832dd7cebb355",

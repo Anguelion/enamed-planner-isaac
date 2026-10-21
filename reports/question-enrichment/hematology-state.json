@@ -4713,13 +4713,13 @@
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-6cc0438c3ec3a52b": {
       "number": "1041c",
-      "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-10-06T22:41:29.887Z",
-      "nextAttemptAt": "2026-10-20T22:41:29.887Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 3,
+      "lastAttemptAt": "2026-10-21T11:59:02.205Z",
+      "nextAttemptAt": "2026-11-11T11:59:02.205Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Quais-sa-manifestacoes1136fe3244/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-f2c832dd7cebb355": {
       "number": "1042c",
@@ -6250,7 +6250,57 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-agudas-31e1155188d7b96c": {
+      "number": "1005h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-21T11:59:08.324Z",
+      "nextAttemptAt": "2026-10-28T11:59:08.324Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Menina-5-anos-foi120271ca505/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-leucemias-agudas-dc24d1829c3be7d5": {
+      "number": "1006h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-21T11:59:13.994Z",
+      "nextAttemptAt": "2026-10-28T11:59:13.994Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-39-anos763d04df76/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-leucemias-agudas-4a449d8252fdbc87": {
+      "number": "1007h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-21T11:59:20.056Z",
+      "nextAttemptAt": "2026-10-28T11:59:20.056Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Menino-8-anos1380f2d5642/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-leucemias-agudas-3172bd63b8087d5f": {
+      "number": "1008h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-21T11:59:25.901Z",
+      "nextAttemptAt": "2026-10-28T11:59:25.901Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/jovem-22-anos-idade10708cad590/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-leucemias-agudas-a8bfd34d61dcd4be": {
+      "number": "1009h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-21T11:59:32.107Z",
+      "nextAttemptAt": "2026-10-28T11:59:32.107Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/sindrome-lise-tumoral9069531774/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     }
   },
-  "updatedAt": "2026-10-20T21:44:20.013Z"
+  "updatedAt": "2026-10-21T11:59:32.107Z"
 }
