@@ -2636,10 +2636,22 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069446",
-      "ankiGuid": "G(y,.g=%s:"
+      "ankiGuid": "G(y,.g=%s:",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Purpura108bb4e946/",
+        "sourceQuestionId": "4000036285",
+        "matchedAt": "2026-10-22T21:42:15.161Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-0d7f8e8605d3628c",

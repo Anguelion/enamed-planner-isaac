@@ -1,55 +1,76 @@
 {
-  "generatedAt": "2026-10-22T12:01:09.241Z",
+  "generatedAt": "2026-10-22T21:42:13.131Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 0,
+  "changed": 1,
   "results": [
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-4142ecd02629af54",
-      "number": "1052c",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-0e47178571a26ce2",
+      "number": "1058c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Purpura108bb4e946/",
+      "sourceQuestionId": "4000036285",
+      "matchedAt": "2026-10-22T21:42:15.161Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Púrpura trombocitopênica imunológica (PTI). Conduta/resposta: Macroplaquetas",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Purpura108bb4e946/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-0d7f8e8605d3628c",
+      "number": "1059c",
       "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-52bf9b7e5b38dba6",
-      "number": "1053c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-4225449856151bdb",
-      "number": "1054c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-a95fd4d386b39647",
-      "number": "1055c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-c1d8e797aa1c6697",
-      "number": "1056c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-3710ebc870e85ec0",
-      "number": "1048a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-8e15215d6a12ffdb",
+      "number": "1049a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-8c412760abc3022a",
+      "number": "1050a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-c1d905a26a55296d",
+      "number": "1051a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-leucemias-agudas-73af63606a8b7c0c",
+      "number": "1013h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
