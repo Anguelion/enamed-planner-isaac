@@ -4824,9 +4824,9 @@
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-4142ecd02629af54": {
       "number": "1052c",
       "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-10-07T23:09:37.123Z",
-      "nextAttemptAt": "2026-10-21T23:09:37.123Z",
+      "attempts": 3,
+      "lastAttemptAt": "2026-10-22T12:01:09.943Z",
+      "nextAttemptAt": "2026-11-12T12:01:09.943Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -4834,9 +4834,9 @@
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-52bf9b7e5b38dba6": {
       "number": "1053c",
       "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-10-07T23:09:42.361Z",
-      "nextAttemptAt": "2026-10-21T23:09:42.361Z",
+      "attempts": 3,
+      "lastAttemptAt": "2026-10-22T12:01:15.366Z",
+      "nextAttemptAt": "2026-11-12T12:01:15.366Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -4844,9 +4844,9 @@
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-4225449856151bdb": {
       "number": "1054c",
       "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-10-07T23:09:47.542Z",
-      "nextAttemptAt": "2026-10-21T23:09:47.542Z",
+      "attempts": 3,
+      "lastAttemptAt": "2026-10-22T12:01:20.802Z",
+      "nextAttemptAt": "2026-11-12T12:01:20.802Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -4854,9 +4854,9 @@
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-a95fd4d386b39647": {
       "number": "1055c",
       "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-10-07T23:09:52.747Z",
-      "nextAttemptAt": "2026-10-21T23:09:52.747Z",
+      "attempts": 3,
+      "lastAttemptAt": "2026-10-22T12:01:26.188Z",
+      "nextAttemptAt": "2026-11-12T12:01:26.188Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -4864,9 +4864,9 @@
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-c1d8e797aa1c6697": {
       "number": "1056c",
       "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-10-07T23:09:57.968Z",
-      "nextAttemptAt": "2026-10-21T23:09:57.968Z",
+      "attempts": 3,
+      "lastAttemptAt": "2026-10-22T12:01:31.594Z",
+      "nextAttemptAt": "2026-11-12T12:01:31.594Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -5784,9 +5784,9 @@
     "anki-hematologia-introducao-ao-estudo-das-anemias-3710ebc870e85ec0": {
       "number": "1048a",
       "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-15T11:38:38.178Z",
-      "nextAttemptAt": "2026-10-22T11:38:38.178Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-22T12:01:37.010Z",
+      "nextAttemptAt": "2026-11-05T12:01:37.010Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -6332,5 +6332,5 @@
       "remoteAnswer": "A"
     }
   },
-  "updatedAt": "2026-10-21T21:48:06.089Z"
+  "updatedAt": "2026-10-22T12:01:37.010Z"
 }

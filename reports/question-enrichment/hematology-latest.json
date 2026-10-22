@@ -1,207 +1,58 @@
 {
-  "generatedAt": "2026-10-21T21:47:35.482Z",
+  "generatedAt": "2026-10-22T12:01:09.241Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 6,
+  "changed": 0,
   "results": [
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-9af7248d6663bfa1",
-      "number": "1038a",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-4142ecd02629af54",
+      "number": "1052c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-52bf9b7e5b38dba6",
+      "number": "1053c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-4225449856151bdb",
+      "number": "1054c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-a95fd4d386b39647",
+      "number": "1055c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-c1d8e797aa1c6697",
+      "number": "1056c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-3710ebc870e85ec0",
+      "number": "1048a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-feminina-1989fd593f8f/",
-      "sourceQuestionId": "4000105067",
-      "matchedAt": "2026-10-21T21:47:36.414Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Introdução ao Estudo das Anemias",
-        "Classificações das anemias",
-        "Classificação morfológica das anemias",
-        "Anemias hemolíticas",
-        "Anemias hemolíticas autoimunes (AHAI)",
-        "Diagnóstico das anemias hemolíticas autoimunes (AHAI)",
-        "Testes de Coombs"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Testes de Coombs. Conduta/resposta: Anemia macrocítica.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-feminina-1989fd593f8f/",
-        "https://med.estrategia.com/public/questoes/Paciente-feminina-19872df9d84d/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-d6e4bdf8a2d2221c",
-      "number": "1039a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Lactente-seis-meses636b017297/",
-      "sourceQuestionId": "4000086801",
-      "matchedAt": "2026-10-21T21:47:42.259Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Introdução ao Estudo das Anemias",
-        "Esfregaço do sangue periférico",
-        "Corpúsculos citoplasmáticos das hemácias",
-        "Corpos de Heinz",
-        "Anemias hemolíticas",
-        "Anemias hemolíticas por deficiências enzimáticas",
-        "Deficiência de G6PD",
-        "Quadro clínico da deficiência de G6PD"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Quadro clínico da deficiência de G6PD. Conduta/resposta: Precipitação da hemoglobina pela perda da proteção contra agentes oxidantes.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Lactente-seis-meses636b017297/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-b571c5aa58af882b",
-      "number": "1040a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/morfologia-eritrocitos21a65e7a3a/",
-      "sourceQuestionId": "4000084875",
-      "matchedAt": "2026-10-21T21:47:48.104Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Introdução ao Estudo das Anemias",
-        "Esfregaço do sangue periférico",
-        "Corpúsculos citoplasmáticos das hemácias",
-        "Corpos de Heinz"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Corpos de Heinz. Conduta/resposta: Precipitação de hemoglobina anormal.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/morfologia-eritrocitos215c05057f/",
-        "https://med.estrategia.com/public/questoes/morfologia-eritrocitos21a65e7a3a/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-ceab4647547bf801",
-      "number": "1010h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/sindrome-lise-tumoral2234be6d78/",
-      "sourceQuestionId": "4000169073",
-      "matchedAt": "2026-10-21T21:47:54.007Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Nefrologia",
-        "Lesão renal aguda (LRA)",
-        "Causas especificas",
-        "Síndrome de Lise Tumoral (SLT)",
-        "Hematologia",
-        "Fundamentos de oncohematologia",
-        "Intercorrências em oncohematologia",
-        "Distúrbios do potássio",
-        "Hipercalemia",
-        "Causas de Hipercalemia",
-        "Liberação da carga de potássio do intracelular",
-        "Síndrome de Lise Tumoral"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Síndrome de Lise Tumoral. Conduta/resposta: hiperuricemia, hipercalemia, hiperfosfatemia.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/sindrome-lise-tumoral2234be6d78/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-8deacc307d19ca95",
-      "number": "1011h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-2-anos-319295b2c900/",
-      "sourceQuestionId": "4000167814",
-      "matchedAt": "2026-10-21T21:48:00.128Z",
-      "similarity": {
-        "stem": 0.9621993127147767,
-        "options": 1,
-        "combined": 0.9735395189003435
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Fundamentos de oncohematologia"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Fundamentos de oncohematologia. Conduta/resposta: Errado.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/paciente-2-anos-319295b2c900/",
-        "https://med.estrategia.com/public/questoes/paciente-2-anos-32249ae8c15c/",
-        "https://med.estrategia.com/public/questoes/paciente-2-anos-32289dbae0cd/",
-        "https://med.estrategia.com/public/questoes/paciente-2-anos-3220b061e09e/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-9f7970cfb8ea8b8b",
-      "number": "1012h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/crianc-cinco-anos50118a8145/",
-      "sourceQuestionId": "4000163687",
-      "matchedAt": "2026-10-21T21:48:06.089Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Leucemias",
-        "Leucemias agudas",
-        "Leucemia linfoide aguda (LLA)",
-        "Quadro clínico da leucemia linfoide aguda (LLA)"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Quadro clínico da leucemia linfoide aguda (LLA). Conduta/resposta: Leucemia linfoide aguda.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/crianc-cinco-anos50118a8145/",
-        "https://med.estrategia.com/public/questoes/crianc-5-anos-e86fb48957e/"
-      ]
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     }
   ]
 }
