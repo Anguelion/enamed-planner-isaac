@@ -830,10 +830,22 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Leucemia linfoide aguda (LLA)",
+        "Quadro clínico da leucemia linfoide aguda (LLA)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106928",
-      "ankiGuid": "nK:BJL;D@?"
+      "ankiGuid": "nK:BJL;D@?",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Pre-escolar-sexo5162d23151/",
+        "sourceQuestionId": "4000146214",
+        "matchedAt": "2026-10-23T21:29:16.584Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-9148cb189b8554df",
@@ -864,10 +876,30 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Nefrologia",
+        "Lesão renal aguda (LRA)",
+        "Causas especificas",
+        "Síndrome de Lise Tumoral (SLT)",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
+        "Distúrbios do potássio",
+        "Hipercalemia",
+        "Causas de Hipercalemia",
+        "Liberação da carga de potássio do intracelular",
+        "Síndrome de Lise Tumoral",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106929",
-      "ankiGuid": "m:n${T+&8"
+      "ankiGuid": "m:n${T+&8",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-masculino-223750b0ce14/",
+        "sourceQuestionId": "4000151780",
+        "matchedAt": "2026-10-23T21:29:22.609Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-3388bc6061e3da1f",
@@ -898,10 +930,19 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Pediatria",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106930",
-      "ankiGuid": "I!#2aid*`}"
+      "ankiGuid": "I!#2aid*`}",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Pre-escolar-quatro55973d31e8/",
+        "sourceQuestionId": "4000060687",
+        "matchedAt": "2026-10-23T21:29:28.935Z",
+        "confidence": 0.9551063829787234
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-b0c1b022d45b2253",

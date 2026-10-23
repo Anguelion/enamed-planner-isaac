@@ -5903,33 +5903,33 @@
     },
     "anki-hematologia-introducao-ao-estudo-das-anemias-eb91fba5c4a674a9": {
       "number": "1060a",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-16T21:18:00.867Z",
-      "nextAttemptAt": "2026-10-23T21:18:00.867Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-23T21:28:58.381Z",
+      "nextAttemptAt": "2026-11-06T21:28:58.381Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Microcitose10f5dd4060/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     },
     "anki-hematologia-introducao-ao-estudo-das-anemias-dfe4b3ffcbf64e5e": {
       "number": "1061a",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-16T21:18:06.072Z",
-      "nextAttemptAt": "2026-10-23T21:18:06.072Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-23T21:29:04.574Z",
+      "nextAttemptAt": "2026-11-06T21:29:04.574Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-causas-anemia-com7fcb53503/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
     },
     "anki-hematologia-introducao-ao-estudo-das-anemias-f517d495bb55abb7": {
       "number": "1062a",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-16T21:18:11.276Z",
-      "nextAttemptAt": "2026-10-23T21:18:11.276Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-23T21:29:10.368Z",
+      "nextAttemptAt": "2026-11-06T21:29:10.368Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-e-afecca-que27db01988a/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-introducao-ao-estudo-das-anemias-00e30b05ffaf3806": {
       "number": "1063a",
@@ -6380,7 +6380,37 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-fatores-risco-para137853e648/",
       "localAnswer": "A",
       "remoteAnswer": "A"
+    },
+    "anki-hematologia-leucemias-agudas-b7a051bcb34ce587": {
+      "number": "1018h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-23T21:29:16.584Z",
+      "nextAttemptAt": "2026-10-30T21:29:16.584Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Pre-escolar-sexo5162d23151/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-leucemias-agudas-9148cb189b8554df": {
+      "number": "1019h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-23T21:29:22.611Z",
+      "nextAttemptAt": "2026-10-30T21:29:22.611Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-masculino-223750b0ce14/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
+    },
+    "anki-hematologia-leucemias-agudas-3388bc6061e3da1f": {
+      "number": "1020h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-23T21:29:28.935Z",
+      "nextAttemptAt": "2026-10-30T21:29:28.935Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Pre-escolar-quatro55973d31e8/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
     }
   },
-  "updatedAt": "2026-10-23T11:47:06.323Z"
+  "updatedAt": "2026-10-23T21:29:28.935Z"
 }

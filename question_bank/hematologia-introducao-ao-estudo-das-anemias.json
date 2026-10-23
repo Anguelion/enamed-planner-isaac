@@ -2955,10 +2955,24 @@
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
+        "Hemograma",
+        "Índices hematimétricos",
+        "VCM – volume corpuscular médio",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885763",
-      "ankiGuid": "fV)sr6^5zw"
+      "ankiGuid": "fV)sr6^5zw",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Microcitose10f5dd4060/",
+        "sourceQuestionId": "4000062253",
+        "matchedAt": "2026-10-23T21:28:58.380Z",
+        "confidence": 0.9249999999999999
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-dfe4b3ffcbf64e5e",
@@ -2989,10 +3003,22 @@
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Classificações das anemias",
+        "Classificação funcional das anemias",
+        "Os reticulócitos",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885764",
-      "ankiGuid": "GggQH#z$W$"
+      "ankiGuid": "GggQH#z$W$",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-causas-anemia-com7fcb53503/",
+        "sourceQuestionId": "4000066650",
+        "matchedAt": "2026-10-23T21:29:04.574Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-f517d495bb55abb7",
@@ -3023,10 +3049,20 @@
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Definição de anemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885765",
-      "ankiGuid": "D}Htgyk41V"
+      "ankiGuid": "D}Htgyk41V",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-e-afecca-que27db01988a/",
+        "sourceQuestionId": "4000041174",
+        "matchedAt": "2026-10-23T21:29:10.368Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-00e30b05ffaf3806",

@@ -1,35 +1,52 @@
 {
-  "generatedAt": "2026-10-23T11:46:35.658Z",
+  "generatedAt": "2026-10-23T21:28:57.307Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 5,
+  "changed": 6,
   "results": [
     {
-      "id": "anki-hematologia-anemias-hemoliticas-0f715520ae052e72",
-      "number": "1045f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": false,
-      "status": "low_confidence",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Homem-22-anos-idade1004c4c4df6/"
-      ],
-      "bestSimilarity": {
-        "stem": 0.8606060606060606,
-        "options": 0,
-        "combined": 0.6024242424242424
-      }
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-9b24ac68993263d9",
-      "number": "1056a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-eb91fba5c4a674a9",
+      "number": "1060a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Menina-12-meses444ef814c2/",
-      "sourceQuestionId": "4000089005",
-      "matchedAt": "2026-10-23T11:46:42.749Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Microcitose10f5dd4060/",
+      "sourceQuestionId": "4000062253",
+      "matchedAt": "2026-10-23T21:28:58.380Z",
+      "similarity": {
+        "stem": 1,
+        "options": 0.75,
+        "combined": 0.9249999999999999
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
+        "Hemograma",
+        "Índices hematimétricos",
+        "VCM – volume corpuscular médio"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: VCM – volume corpuscular médio. Conduta/resposta: volume corpuscular médio;",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Microcitose10f5dd4060/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-dfe4b3ffcbf64e5e",
+      "number": "1061a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-causas-anemia-com7fcb53503/",
+      "sourceQuestionId": "4000066650",
+      "matchedAt": "2026-10-23T21:29:04.574Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -41,27 +58,54 @@
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Anemias hemolíticas",
-        "Introdução à hemólise",
         "Introdução ao Estudo das Anemias",
         "Classificações das anemias",
-        "Classificação funcional das anemias"
+        "Classificação funcional das anemias",
+        "Os reticulócitos"
       ],
-      "comment": "Gabarito confirmado: E. Assunto: Classificação funcional das anemias. Conduta/resposta: Anemia hemolítica.",
+      "comment": "Gabarito confirmado: E. Assunto: Os reticulócitos. Conduta/resposta: Esferocitose hereditária.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Menina-12-meses444ef814c2/",
-        "https://med.estrategia.com/public/questoes/Crianc-com-12-meses72b0dd824d/"
+        "https://med.estrategia.com/public/questoes/Sa-causas-anemia-com7fcb53503/",
+        "https://med.estrategia.com/public/questoes/Sa-causas-anemia71447fe45/"
       ]
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-1d0a03024e4d0fe4",
-      "number": "1014h",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-f517d495bb55abb7",
+      "number": "1062a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-e-afecca-que27db01988a/",
+      "sourceQuestionId": "4000041174",
+      "matchedAt": "2026-10-23T21:29:10.368Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Introdução ao Estudo das Anemias",
+        "Definição de anemias"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Definição de anemias. Conduta/resposta: Anemia microcítica tem como principais causas a deficiência de ferro e hemoglobinopatias.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/anemia-e-afecca-que27db01988a/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-leucemias-agudas-b7a051bcb34ce587",
+      "number": "1018h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-6-anos-idade154775c1f43/",
-      "sourceQuestionId": "4000151668",
-      "matchedAt": "2026-10-23T11:46:48.500Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Pre-escolar-sexo5162d23151/",
+      "sourceQuestionId": "4000146214",
+      "matchedAt": "2026-10-23T21:29:16.584Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -69,6 +113,37 @@
       },
       "localAnswer": "A",
       "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Leucemias",
+        "Leucemias agudas",
+        "Leucemia linfoide aguda (LLA)",
+        "Quadro clínico da leucemia linfoide aguda (LLA)"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Quadro clínico da leucemia linfoide aguda (LLA). Conduta/resposta: Leucemia aguda",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Pre-escolar-sexo5162d23151/",
+        "https://med.estrategia.com/public/questoes/Pre-escolar-sexo102b2e025ca/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-leucemias-agudas-9148cb189b8554df",
+      "number": "1019h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-masculino-223750b0ce14/",
+      "sourceQuestionId": "4000151780",
+      "matchedAt": "2026-10-23T21:29:22.609Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "E",
+      "remoteAnswer": "E",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
@@ -85,117 +160,36 @@
         "Liberação da carga de potássio do intracelular",
         "Síndrome de Lise Tumoral"
       ],
-      "comment": "Gabarito confirmado: A. Assunto: Síndrome de Lise Tumoral. Conduta/resposta: Hipercalemia, Hiperfosfatemia, Hipocalcemia e Hiperuricemia.",
+      "comment": "Gabarito confirmado: E. Assunto: Síndrome de Lise Tumoral. Conduta/resposta: Hemodiálise profilática previamente ao início da quimioterapia",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-6-anos-idade154775c1f43/"
+        "https://med.estrategia.com/public/questoes/Paciente-masculino-223750b0ce14/",
+        "https://med.estrategia.com/public/questoes/Paciente-masculino-223742f0127d/"
       ]
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-40c24e188c376398",
-      "number": "1015h",
+      "id": "anki-hematologia-leucemias-agudas-3388bc6061e3da1f",
+      "number": "1020h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-28-anos69ae4f5248/",
-      "sourceQuestionId": "4000151647",
-      "matchedAt": "2026-10-23T11:46:54.518Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Pre-escolar-quatro55973d31e8/",
+      "sourceQuestionId": "4000060687",
+      "matchedAt": "2026-10-23T21:29:28.935Z",
       "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
+        "stem": 0.9787234042553191,
+        "options": 0.9,
+        "combined": 0.9551063829787234
       },
       "localAnswer": "A",
       "remoteAnswer": "A",
       "answerMismatch": false,
       "tags": [
-        "Clínica Médica",
-        "Nefrologia",
-        "Lesão renal aguda (LRA)",
-        "Causas especificas",
-        "Síndrome de Lise Tumoral (SLT)",
-        "Hematologia",
-        "Fundamentos de oncohematologia",
-        "Intercorrências em oncohematologia",
-        "Distúrbios do potássio",
-        "Hipercalemia",
-        "Causas de Hipercalemia",
-        "Liberação da carga de potássio do intracelular",
-        "Síndrome de Lise Tumoral"
+        "Pediatria"
       ],
-      "comment": "Gabarito confirmado: A. Assunto: Síndrome de Lise Tumoral. Conduta/resposta: Exame de Urina, fósforo, creatinina, potássio, cálcio, ácido úrico e desidrogenase lática.",
+      "comment": "Gabarito confirmado: A. Assunto: Pediatria. Conduta/resposta: Hemograma.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-28-anos69ae4f5248/",
-        "https://med.estrategia.com/public/questoes/61fad5c91110fe71ab0a7387/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-c96c12444584f4ca",
-      "number": "1016h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-1-ano-idade57dfc39b52/",
-      "sourceQuestionId": "4000146250",
-      "matchedAt": "2026-10-23T11:47:00.286Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Pediatria",
-        "Hematologia Pediátrica",
-        "Clínica Médica",
-        "Hematologia",
-        "Fundamentos de oncohematologia",
-        "Intercorrências em oncohematologia",
-        "Síndrome de lise tumoral (SLT)"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Síndrome de lise tumoral (SLT). Conduta/resposta: Prescrever hidratação EV (3L/m2/dia e agente hipouricemiante.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-1-ano-idade57dfc39b52/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-48ae32870e0d9be2",
-      "number": "1017h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-fatores-risco-para137853e648/",
-      "sourceQuestionId": "4000146247",
-      "matchedAt": "2026-10-23T11:47:06.322Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Cirurgia",
-        "Clínica Médica",
-        "Nefrologia",
-        "Lesão renal aguda (LRA)",
-        "Causas especificas",
-        "Síndrome de Lise Tumoral (SLT)",
-        "Hematologia",
-        "Fundamentos de oncohematologia",
-        "Intercorrências em oncohematologia",
-        "Distúrbios do potássio",
-        "Hipercalemia",
-        "Causas de Hipercalemia",
-        "Liberação da carga de potássio do intracelular",
-        "Síndrome de Lise Tumoral"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Síndrome de Lise Tumoral. Conduta/resposta: anemia.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Sa-fatores-risco-para137853e648/",
-        "https://med.estrategia.com/public/questoes/Sa-fatores-risco-para135982a970/"
+        "https://med.estrategia.com/public/questoes/Pre-escolar-quatro55973d31e8/",
+        "https://med.estrategia.com/public/questoes/Pre-escolar-4-anos5653f25bc1/"
       ]
     }
   ]
