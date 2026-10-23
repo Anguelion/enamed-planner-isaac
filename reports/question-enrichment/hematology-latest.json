@@ -1,79 +1,202 @@
 {
-  "generatedAt": "2026-10-22T21:42:13.131Z",
+  "generatedAt": "2026-10-23T11:46:35.658Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 1,
+  "changed": 5,
   "results": [
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-0e47178571a26ce2",
-      "number": "1058c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "id": "anki-hematologia-anemias-hemoliticas-0f715520ae052e72",
+      "number": "1045f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": false,
+      "status": "low_confidence",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Homem-22-anos-idade1004c4c4df6/"
+      ],
+      "bestSimilarity": {
+        "stem": 0.8606060606060606,
+        "options": 0,
+        "combined": 0.6024242424242424
+      }
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-9b24ac68993263d9",
+      "number": "1056a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Purpura108bb4e946/",
-      "sourceQuestionId": "4000036285",
-      "matchedAt": "2026-10-22T21:42:15.161Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Menina-12-meses444ef814c2/",
+      "sourceQuestionId": "4000089005",
+      "matchedAt": "2026-10-23T11:46:42.749Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
+      "localAnswer": "E",
+      "remoteAnswer": "E",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Hemostasia",
-        "Hemostasia primária",
-        "Púrpura trombocitopênica imunológica (PTI)"
+        "Anemias hemolíticas",
+        "Introdução à hemólise",
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
+        "Classificação funcional das anemias"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Púrpura trombocitopênica imunológica (PTI). Conduta/resposta: Macroplaquetas",
+      "comment": "Gabarito confirmado: E. Assunto: Classificação funcional das anemias. Conduta/resposta: Anemia hemolítica.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Purpura108bb4e946/"
+        "https://med.estrategia.com/public/questoes/Menina-12-meses444ef814c2/",
+        "https://med.estrategia.com/public/questoes/Crianc-com-12-meses72b0dd824d/"
       ]
     },
     {
-      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-0d7f8e8605d3628c",
-      "number": "1059c",
-      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-8e15215d6a12ffdb",
-      "number": "1049a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-8c412760abc3022a",
-      "number": "1050a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-c1d905a26a55296d",
-      "number": "1051a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-73af63606a8b7c0c",
-      "number": "1013h",
+      "id": "anki-hematologia-leucemias-agudas-1d0a03024e4d0fe4",
+      "number": "1014h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-6-anos-idade154775c1f43/",
+      "sourceQuestionId": "4000151668",
+      "matchedAt": "2026-10-23T11:46:48.500Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Nefrologia",
+        "Lesão renal aguda (LRA)",
+        "Causas especificas",
+        "Síndrome de Lise Tumoral (SLT)",
+        "Hematologia",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
+        "Distúrbios do potássio",
+        "Hipercalemia",
+        "Causas de Hipercalemia",
+        "Liberação da carga de potássio do intracelular",
+        "Síndrome de Lise Tumoral"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Síndrome de Lise Tumoral. Conduta/resposta: Hipercalemia, Hiperfosfatemia, Hipocalcemia e Hiperuricemia.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-6-anos-idade154775c1f43/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-leucemias-agudas-40c24e188c376398",
+      "number": "1015h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-28-anos69ae4f5248/",
+      "sourceQuestionId": "4000151647",
+      "matchedAt": "2026-10-23T11:46:54.518Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Nefrologia",
+        "Lesão renal aguda (LRA)",
+        "Causas especificas",
+        "Síndrome de Lise Tumoral (SLT)",
+        "Hematologia",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
+        "Distúrbios do potássio",
+        "Hipercalemia",
+        "Causas de Hipercalemia",
+        "Liberação da carga de potássio do intracelular",
+        "Síndrome de Lise Tumoral"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Síndrome de Lise Tumoral. Conduta/resposta: Exame de Urina, fósforo, creatinina, potássio, cálcio, ácido úrico e desidrogenase lática.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-28-anos69ae4f5248/",
+        "https://med.estrategia.com/public/questoes/61fad5c91110fe71ab0a7387/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-leucemias-agudas-c96c12444584f4ca",
+      "number": "1016h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-1-ano-idade57dfc39b52/",
+      "sourceQuestionId": "4000146250",
+      "matchedAt": "2026-10-23T11:47:00.286Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Pediatria",
+        "Hematologia Pediátrica",
+        "Clínica Médica",
+        "Hematologia",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
+        "Síndrome de lise tumoral (SLT)"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Síndrome de lise tumoral (SLT). Conduta/resposta: Prescrever hidratação EV (3L/m2/dia e agente hipouricemiante.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-1-ano-idade57dfc39b52/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-leucemias-agudas-48ae32870e0d9be2",
+      "number": "1017h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-fatores-risco-para137853e648/",
+      "sourceQuestionId": "4000146247",
+      "matchedAt": "2026-10-23T11:47:06.322Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Cirurgia",
+        "Clínica Médica",
+        "Nefrologia",
+        "Lesão renal aguda (LRA)",
+        "Causas especificas",
+        "Síndrome de Lise Tumoral (SLT)",
+        "Hematologia",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
+        "Distúrbios do potássio",
+        "Hipercalemia",
+        "Causas de Hipercalemia",
+        "Liberação da carga de potássio do intracelular",
+        "Síndrome de Lise Tumoral"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Síndrome de Lise Tumoral. Conduta/resposta: anemia.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Sa-fatores-risco-para137853e648/",
+        "https://med.estrategia.com/public/questoes/Sa-fatores-risco-para135982a970/"
+      ]
     }
   ]
 }

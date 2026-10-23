@@ -2771,10 +2771,23 @@
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias hemolíticas",
+        "Introdução à hemólise",
+        "Classificações das anemias",
+        "Classificação funcional das anemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885759",
-      "ankiGuid": "y<C!dYnr]d"
+      "ankiGuid": "y<C!dYnr]d",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Menina-12-meses444ef814c2/",
+        "sourceQuestionId": "4000089005",
+        "matchedAt": "2026-10-23T11:46:42.749Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-9003d68b7b59ed4c",

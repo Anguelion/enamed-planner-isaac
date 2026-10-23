@@ -623,10 +623,30 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Nefrologia",
+        "Lesão renal aguda (LRA)",
+        "Causas especificas",
+        "Síndrome de Lise Tumoral (SLT)",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
+        "Distúrbios do potássio",
+        "Hipercalemia",
+        "Causas de Hipercalemia",
+        "Liberação da carga de potássio do intracelular",
+        "Síndrome de Lise Tumoral",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106924",
-      "ankiGuid": "c_wW,K.:lW"
+      "ankiGuid": "c_wW,K.:lW",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-6-anos-idade154775c1f43/",
+        "sourceQuestionId": "4000151668",
+        "matchedAt": "2026-10-23T11:46:48.500Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-40c24e188c376398",
@@ -656,10 +676,30 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Nefrologia",
+        "Lesão renal aguda (LRA)",
+        "Causas especificas",
+        "Síndrome de Lise Tumoral (SLT)",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
+        "Distúrbios do potássio",
+        "Hipercalemia",
+        "Causas de Hipercalemia",
+        "Liberação da carga de potássio do intracelular",
+        "Síndrome de Lise Tumoral",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106925",
-      "ankiGuid": "OW,/%R+L2-"
+      "ankiGuid": "OW,/%R+L2-",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-28-anos69ae4f5248/",
+        "sourceQuestionId": "4000151647",
+        "matchedAt": "2026-10-23T11:46:54.518Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-c96c12444584f4ca",
@@ -689,10 +729,24 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Pediatria",
+        "Hematologia Pediátrica",
+        "Clínica Médica",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
+        "Síndrome de lise tumoral (SLT)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106926",
-      "ankiGuid": "us^NW2J&9>"
+      "ankiGuid": "us^NW2J&9>",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-1-ano-idade57dfc39b52/",
+        "sourceQuestionId": "4000146250",
+        "matchedAt": "2026-10-23T11:47:00.286Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-48ae32870e0d9be2",
@@ -722,10 +776,31 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Cirurgia",
+        "Clínica Médica",
+        "Nefrologia",
+        "Lesão renal aguda (LRA)",
+        "Causas especificas",
+        "Síndrome de Lise Tumoral (SLT)",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
+        "Distúrbios do potássio",
+        "Hipercalemia",
+        "Causas de Hipercalemia",
+        "Liberação da carga de potássio do intracelular",
+        "Síndrome de Lise Tumoral",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106927",
-      "ankiGuid": "ha`[|->Z9f"
+      "ankiGuid": "ha`[|->Z9f",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-fatores-risco-para137853e648/",
+        "sourceQuestionId": "4000146247",
+        "matchedAt": "2026-10-23T11:47:06.322Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-b7a051bcb34ce587",

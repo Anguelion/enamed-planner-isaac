@@ -624,9 +624,9 @@
     "anki-hematologia-anemias-hemoliticas-0f715520ae052e72": {
       "number": "1045f",
       "status": "low_confidence",
-      "attempts": 2,
-      "lastAttemptAt": "2026-08-24T07:31:47.814Z",
-      "nextAttemptAt": "2026-10-23T07:31:47.814Z",
+      "attempts": 3,
+      "lastAttemptAt": "2026-10-23T11:46:36.673Z",
+      "nextAttemptAt": "2026-12-22T11:46:36.673Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -5863,13 +5863,13 @@
     },
     "anki-hematologia-introducao-ao-estudo-das-anemias-9b24ac68993263d9": {
       "number": "1056a",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-16T11:32:29.958Z",
-      "nextAttemptAt": "2026-10-23T11:32:29.958Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-23T11:46:42.750Z",
+      "nextAttemptAt": "2026-11-06T11:46:42.750Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Menina-12-meses444ef814c2/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
     },
     "anki-hematologia-introducao-ao-estudo-das-anemias-9003d68b7b59ed4c": {
       "number": "1057a",
@@ -6340,7 +6340,47 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-agudas-1d0a03024e4d0fe4": {
+      "number": "1014h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-23T11:46:48.501Z",
+      "nextAttemptAt": "2026-10-30T11:46:48.501Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-6-anos-idade154775c1f43/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-leucemias-agudas-40c24e188c376398": {
+      "number": "1015h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-23T11:46:54.520Z",
+      "nextAttemptAt": "2026-10-30T11:46:54.520Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-28-anos69ae4f5248/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-leucemias-agudas-c96c12444584f4ca": {
+      "number": "1016h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-23T11:47:00.287Z",
+      "nextAttemptAt": "2026-10-30T11:47:00.287Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-1-ano-idade57dfc39b52/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-leucemias-agudas-48ae32870e0d9be2": {
+      "number": "1017h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-23T11:47:06.323Z",
+      "nextAttemptAt": "2026-10-30T11:47:06.323Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-fatores-risco-para137853e648/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
     }
   },
-  "updatedAt": "2026-10-22T21:42:42.700Z"
+  "updatedAt": "2026-10-23T11:47:06.323Z"
 }
