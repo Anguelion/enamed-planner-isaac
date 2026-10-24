@@ -1343,13 +1343,13 @@
     },
     "anki-hematologia-anemias-macrociticas-91160709a3a0ac3f": {
       "number": "1018e",
-      "status": "low_confidence",
-      "attempts": 1,
-      "lastAttemptAt": "2026-08-25T19:06:06.938Z",
-      "nextAttemptAt": "2026-10-24T19:06:06.938Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-24T20:55:51.906Z",
+      "nextAttemptAt": "2026-11-07T20:55:51.906Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-28-anos-sexo510a56e9a2/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-anemias-macrociticas-e4837cc95399ac5c": {
       "number": "1019e",
@@ -5973,30 +5973,30 @@
     },
     "anki-hematologia-introducao-ao-estudo-das-anemias-0c8cebd24c1662ee": {
       "number": "1067a",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-17T20:41:09.019Z",
-      "nextAttemptAt": "2026-10-24T20:41:09.019Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-24T20:55:58.226Z",
+      "nextAttemptAt": "2026-11-07T20:55:58.226Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-aponta-forma1807ec840d/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     },
     "anki-hematologia-introducao-ao-estudo-das-anemias-c28c32c8efa7e651": {
       "number": "1068a",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-17T20:41:14.293Z",
-      "nextAttemptAt": "2026-10-24T20:41:14.293Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-24T20:56:04.915Z",
+      "nextAttemptAt": "2026-11-07T20:56:04.915Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Analise-foto-seguir231fab4206/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     },
     "anki-hematologia-introducao-ao-estudo-das-anemias-2a09e3d2a7d3b070": {
       "number": "1069a",
       "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-17T20:41:19.488Z",
-      "nextAttemptAt": "2026-10-24T20:41:19.488Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-24T20:56:10.300Z",
+      "nextAttemptAt": "2026-11-07T20:56:10.300Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -6004,9 +6004,9 @@
     "anki-hematologia-introducao-ao-estudo-das-anemias-8e6b2e18f0466905": {
       "number": "1070a",
       "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-17T20:41:24.712Z",
-      "nextAttemptAt": "2026-10-24T20:41:24.712Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-24T20:56:15.664Z",
+      "nextAttemptAt": "2026-11-07T20:56:15.664Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -6014,9 +6014,9 @@
     "anki-hematologia-introducao-ao-estudo-das-anemias-eb74092fdff86dbe": {
       "number": "1071a",
       "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-17T20:41:30.001Z",
-      "nextAttemptAt": "2026-10-24T20:41:30.001Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-24T20:56:21.013Z",
+      "nextAttemptAt": "2026-11-07T20:56:21.013Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -6452,5 +6452,5 @@
       "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-10-24T11:11:51.007Z"
+  "updatedAt": "2026-10-24T20:56:21.013Z"
 }

@@ -3264,10 +3264,23 @@
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemias microcíticas",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885770",
-      "ankiGuid": "y=-D=un]05"
+      "ankiGuid": "y=-D=un]05",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-aponta-forma1807ec840d/",
+        "sourceQuestionId": "4000106612",
+        "matchedAt": "2026-10-24T20:55:58.225Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-c28c32c8efa7e651",
@@ -3300,10 +3313,21 @@
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Esfregaço do sangue periférico",
+        "Rouleaux",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885771",
-      "ankiGuid": "lH}WE`FC#L"
+      "ankiGuid": "lH}WE`FC#L",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Analise-foto-seguir231fab4206/",
+        "sourceQuestionId": "4000093314",
+        "matchedAt": "2026-10-24T20:56:04.915Z",
+        "confidence": 0.9649999999999999
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-2a09e3d2a7d3b070",
