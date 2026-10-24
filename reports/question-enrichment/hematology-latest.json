@@ -1,196 +1,58 @@
 {
-  "generatedAt": "2026-10-23T21:28:57.307Z",
+  "generatedAt": "2026-10-24T11:11:23.362Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 6,
+  "changed": 0,
   "results": [
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-eb91fba5c4a674a9",
-      "number": "1060a",
+      "id": "anki-hematologia-anemias-microciticas-a1a9531ff5a0bd09",
+      "number": "1088d",
+      "file": "question_bank/hematologia-anemias-microciticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-3ca5db46520464ae",
+      "number": "1065a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Microcitose10f5dd4060/",
-      "sourceQuestionId": "4000062253",
-      "matchedAt": "2026-10-23T21:28:58.380Z",
-      "similarity": {
-        "stem": 1,
-        "options": 0.75,
-        "combined": 0.9249999999999999
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Introdução ao Estudo das Anemias",
-        "Classificações das anemias",
-        "Classificação morfológica das anemias",
-        "Hemograma",
-        "Índices hematimétricos",
-        "VCM – volume corpuscular médio"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: VCM – volume corpuscular médio. Conduta/resposta: volume corpuscular médio;",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Microcitose10f5dd4060/"
-      ]
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-dfe4b3ffcbf64e5e",
-      "number": "1061a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-causas-anemia-com7fcb53503/",
-      "sourceQuestionId": "4000066650",
-      "matchedAt": "2026-10-23T21:29:04.574Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "E",
-      "remoteAnswer": "E",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Introdução ao Estudo das Anemias",
-        "Classificações das anemias",
-        "Classificação funcional das anemias",
-        "Os reticulócitos"
-      ],
-      "comment": "Gabarito confirmado: E. Assunto: Os reticulócitos. Conduta/resposta: Esferocitose hereditária.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Sa-causas-anemia-com7fcb53503/",
-        "https://med.estrategia.com/public/questoes/Sa-causas-anemia71447fe45/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-f517d495bb55abb7",
-      "number": "1062a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/anemia-e-afecca-que27db01988a/",
-      "sourceQuestionId": "4000041174",
-      "matchedAt": "2026-10-23T21:29:10.368Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Introdução ao Estudo das Anemias",
-        "Definição de anemias"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Definição de anemias. Conduta/resposta: Anemia microcítica tem como principais causas a deficiência de ferro e hemoglobinopatias.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/anemia-e-afecca-que27db01988a/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-b7a051bcb34ce587",
-      "number": "1018h",
+      "id": "anki-hematologia-leucemias-agudas-b0c1b022d45b2253",
+      "number": "1021h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Pre-escolar-sexo5162d23151/",
-      "sourceQuestionId": "4000146214",
-      "matchedAt": "2026-10-23T21:29:16.584Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Leucemias",
-        "Leucemias agudas",
-        "Leucemia linfoide aguda (LLA)",
-        "Quadro clínico da leucemia linfoide aguda (LLA)"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Quadro clínico da leucemia linfoide aguda (LLA). Conduta/resposta: Leucemia aguda",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Pre-escolar-sexo5162d23151/",
-        "https://med.estrategia.com/public/questoes/Pre-escolar-sexo102b2e025ca/"
-      ]
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-9148cb189b8554df",
-      "number": "1019h",
+      "id": "anki-hematologia-leucemias-agudas-27de9c71314b435b",
+      "number": "1022h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-masculino-223750b0ce14/",
-      "sourceQuestionId": "4000151780",
-      "matchedAt": "2026-10-23T21:29:22.609Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "E",
-      "remoteAnswer": "E",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Nefrologia",
-        "Lesão renal aguda (LRA)",
-        "Causas especificas",
-        "Síndrome de Lise Tumoral (SLT)",
-        "Hematologia",
-        "Fundamentos de oncohematologia",
-        "Intercorrências em oncohematologia",
-        "Distúrbios do potássio",
-        "Hipercalemia",
-        "Causas de Hipercalemia",
-        "Liberação da carga de potássio do intracelular",
-        "Síndrome de Lise Tumoral"
-      ],
-      "comment": "Gabarito confirmado: E. Assunto: Síndrome de Lise Tumoral. Conduta/resposta: Hemodiálise profilática previamente ao início da quimioterapia",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-masculino-223750b0ce14/",
-        "https://med.estrategia.com/public/questoes/Paciente-masculino-223742f0127d/"
-      ]
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-3388bc6061e3da1f",
-      "number": "1020h",
+      "id": "anki-hematologia-leucemias-agudas-59944fec0adb84c9",
+      "number": "1023h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Pre-escolar-quatro55973d31e8/",
-      "sourceQuestionId": "4000060687",
-      "matchedAt": "2026-10-23T21:29:28.935Z",
-      "similarity": {
-        "stem": 0.9787234042553191,
-        "options": 0.9,
-        "combined": 0.9551063829787234
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Pediatria"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Pediatria. Conduta/resposta: Hemograma.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Pre-escolar-quatro55973d31e8/",
-        "https://med.estrategia.com/public/questoes/Pre-escolar-4-anos5653f25bc1/"
-      ]
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-leucemias-agudas-a348c71d75d89d1a",
+      "number": "1024h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     }
   ]
 }
