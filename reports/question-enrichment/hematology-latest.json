@@ -1,126 +1,63 @@
 {
-  "generatedAt": "2026-10-24T20:55:50.793Z",
+  "generatedAt": "2026-10-25T11:40:53.669Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 3,
+  "changed": 0,
   "results": [
     {
-      "id": "anki-hematologia-anemias-macrociticas-91160709a3a0ac3f",
-      "number": "1018e",
+      "id": "anki-hematologia-anemias-macrociticas-59832abb742e60a0",
+      "number": "1023e",
       "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-28-anos-sexo510a56e9a2/",
-      "sourceQuestionId": "4000107908",
-      "matchedAt": "2026-10-24T20:55:51.903Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Neurologia",
-        "Demências",
-        "Demências Reversíveis",
-        "Deficiência de Vitamina B12 e Ácido Fólico",
-        "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Quadro clínico da anemia megaloblástica",
-        "Deficiência de vitamina B12",
-        "Distúrbios de absorção de vitamina B12",
-        "Gastrectomias"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Gastrectomias. Conduta/resposta: Anemia megaloblástica por deficiência de Vitamina B12; no hemograma: neutrófilos hipersegmentados e macro-ovalócitos.",
+      "changed": false,
+      "status": "low_confidence",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-28-anos-sexo510a56e9a2/"
-      ]
+        "https://med.estrategia.com/public/questoes/Mulher-35-anos149ff9a1d81/",
+        "https://med.estrategia.com/public/questoes/Mulher-35-anos156fe2413f3/",
+        "https://med.estrategia.com/public/questoes/Mulher-35-anos-idade1560b97280f/"
+      ],
+      "bestSimilarity": {
+        "stem": 0.9477911646586346,
+        "options": 0.125,
+        "combined": 0.7009538152610442
+      }
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-0c8cebd24c1662ee",
-      "number": "1067a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-aponta-forma1807ec840d/",
-      "sourceQuestionId": "4000106612",
-      "matchedAt": "2026-10-24T20:55:58.225Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias microcíticas",
-        "Diagnóstico diferencial das anemias microcíticas",
-        "Introdução ao Estudo das Anemias",
-        "Classificações das anemias",
-        "Classificação morfológica das anemias"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Classificação morfológica das anemias. Conduta/resposta: Anemia sideroblástica.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Qual-aponta-forma1807ec840d/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-c28c32c8efa7e651",
-      "number": "1068a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Analise-foto-seguir231fab4206/",
-      "sourceQuestionId": "4000093314",
-      "matchedAt": "2026-10-24T20:56:04.915Z",
-      "similarity": {
-        "stem": 0.95,
-        "options": 1,
-        "combined": 0.9649999999999999
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Introdução ao Estudo das Anemias",
-        "Esfregaço do sangue periférico",
-        "Rouleaux"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Rouleaux. Conduta/resposta: Rouleaux - Hipergamaglobulinemia.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Analise-foto-seguir231fab4206/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-2a09e3d2a7d3b070",
-      "number": "1069a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-22bf0922492adf25",
+      "number": "1072a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-8e6b2e18f0466905",
-      "number": "1070a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-af528ee344518a5f",
+      "number": "1073a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-eb74092fdff86dbe",
-      "number": "1071a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-770b959f835ab146",
+      "number": "1074a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-3c635433f3d221f2",
+      "number": "1075a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-7994d7c6a0f8e1cc",
+      "number": "1076a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": false,
       "status": "not_found",
