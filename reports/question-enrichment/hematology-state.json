@@ -6073,13 +6073,13 @@
     },
     "anki-hematologia-introducao-ao-estudo-das-anemias-45c45d66849d96f0": {
       "number": "1077a",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-18T11:17:18.791Z",
-      "nextAttemptAt": "2026-10-25T11:17:18.791Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-25T20:56:26.961Z",
+      "nextAttemptAt": "2026-11-08T20:56:26.961Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/hematoscopia-e-parte4831786610/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     },
     "anki-hematologia-introducao-ao-estudo-das-anemias-91e57376498e0d16": {
       "number": "1078a",
@@ -6450,7 +6450,57 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-agudas-4b53565bbd74697a": {
+      "number": "1025h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-25T20:56:33.100Z",
+      "nextAttemptAt": "2026-11-01T20:56:33.100Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Gabriel-5-anos-idade82bcf7fa94/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-leucemias-agudas-ac0e58cea5a3b1d1": {
+      "number": "1026h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-25T20:56:38.830Z",
+      "nextAttemptAt": "2026-11-01T20:56:38.830Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-20-anos-vem864ce5332d/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-leucemias-agudas-172b4545fe6ead89": {
+      "number": "1027h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-25T20:56:44.940Z",
+      "nextAttemptAt": "2026-11-01T20:56:44.940Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Pre-escolar-tres-anos16824d43a3d/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-leucemias-agudas-7d0219696258ad6f": {
+      "number": "1028h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-25T20:56:51.687Z",
+      "nextAttemptAt": "2026-11-01T20:56:51.687Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Pais-relatam-que-ha11693d67bb3/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-leucemias-agudas-8211eaf769f962ee": {
+      "number": "1029h",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-25T20:56:57.042Z",
+      "nextAttemptAt": "2026-11-01T20:56:57.042Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-10-25T11:41:23.737Z"
+  "updatedAt": "2026-10-25T20:56:57.042Z"
 }

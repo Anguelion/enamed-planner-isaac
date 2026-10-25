@@ -3626,10 +3626,20 @@
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Esfregaço do sangue periférico",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885780",
-      "ankiGuid": "C],U#)KfsS"
+      "ankiGuid": "C],U#)KfsS",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/hematoscopia-e-parte4831786610/",
+        "sourceQuestionId": "4000040401",
+        "matchedAt": "2026-10-25T20:56:26.961Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-91e57376498e0d16",

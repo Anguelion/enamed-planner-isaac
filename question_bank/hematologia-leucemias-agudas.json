@@ -1107,10 +1107,23 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Pediatria",
+        "Hematologia Pediátrica",
+        "Clínica Médica",
+        "Leucemias",
+        "Classificação das leucemias agudas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106935",
-      "ankiGuid": "CT}Cj:^/p0"
+      "ankiGuid": "CT}Cj:^/p0",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Gabriel-5-anos-idade82bcf7fa94/",
+        "sourceQuestionId": "4000129521",
+        "matchedAt": "2026-10-25T20:56:33.100Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-ac0e58cea5a3b1d1",
@@ -1141,10 +1154,22 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Leucemia mieloide aguda (LMA)",
+        "Leucemia promielocítica aguda (LPA ou LMA-M3)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106936",
-      "ankiGuid": "s0>XuviMfB"
+      "ankiGuid": "s0>XuviMfB",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-20-anos-vem864ce5332d/",
+        "sourceQuestionId": "4000125756",
+        "matchedAt": "2026-10-25T20:56:38.829Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-172b4545fe6ead89",
@@ -1175,10 +1200,22 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Leucemia linfoide aguda (LLA)",
+        "Quadro clínico da leucemia linfoide aguda (LLA)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106937",
-      "ankiGuid": "t}~=JM7s|l"
+      "ankiGuid": "t}~=JM7s|l",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Pre-escolar-tres-anos16824d43a3d/",
+        "sourceQuestionId": "4000124818",
+        "matchedAt": "2026-10-25T20:56:44.939Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-7d0219696258ad6f",
@@ -1209,10 +1246,21 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Leucemia linfoide aguda (LLA)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106938",
-      "ankiGuid": "p#q2/cuC#&"
+      "ankiGuid": "p#q2/cuC#&",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Pais-relatam-que-ha11693d67bb3/",
+        "sourceQuestionId": "4000124385",
+        "matchedAt": "2026-10-25T20:56:51.686Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-8211eaf769f962ee",
