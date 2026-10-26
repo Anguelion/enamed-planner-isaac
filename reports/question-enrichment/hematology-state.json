@@ -3214,9 +3214,9 @@
     "anki-hematologia-gamopatias-monoclonais-a65e59a6c8f3f058": {
       "number": "1008j",
       "status": "not_found",
-      "attempts": 3,
-      "lastAttemptAt": "2026-10-04T21:35:01.415Z",
-      "nextAttemptAt": "2026-10-25T21:35:01.415Z",
+      "attempts": 4,
+      "lastAttemptAt": "2026-10-26T13:13:27.785Z",
+      "nextAttemptAt": "2026-11-23T13:13:27.785Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -3224,9 +3224,9 @@
     "anki-hematologia-gamopatias-monoclonais-3336f8e8c87c439d": {
       "number": "1010j",
       "status": "not_found",
-      "attempts": 3,
-      "lastAttemptAt": "2026-10-04T21:35:06.779Z",
-      "nextAttemptAt": "2026-10-25T21:35:06.779Z",
+      "attempts": 4,
+      "lastAttemptAt": "2026-10-26T13:13:33.001Z",
+      "nextAttemptAt": "2026-11-23T13:13:33.001Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -3244,9 +3244,9 @@
     "anki-hematologia-gamopatias-monoclonais-9cfc04572db0f9ce": {
       "number": "1012j",
       "status": "not_found",
-      "attempts": 3,
-      "lastAttemptAt": "2026-10-04T21:35:12.144Z",
-      "nextAttemptAt": "2026-10-25T21:35:12.144Z",
+      "attempts": 4,
+      "lastAttemptAt": "2026-10-26T13:13:38.325Z",
+      "nextAttemptAt": "2026-11-23T13:13:38.325Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -3254,9 +3254,9 @@
     "anki-hematologia-gamopatias-monoclonais-2c1081ef3fd98e37": {
       "number": "1013j",
       "status": "not_found",
-      "attempts": 3,
-      "lastAttemptAt": "2026-10-04T21:35:17.506Z",
-      "nextAttemptAt": "2026-10-25T21:35:17.506Z",
+      "attempts": 4,
+      "lastAttemptAt": "2026-10-26T13:13:43.563Z",
+      "nextAttemptAt": "2026-11-23T13:13:43.563Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -6500,7 +6500,27 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-agudas-6352cacabfe8dabb": {
+      "number": "1030h",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-26T13:13:48.780Z",
+      "nextAttemptAt": "2026-11-02T13:13:48.780Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-agudas-171fc64d8a1622ed": {
+      "number": "1031h",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-26T13:13:53.961Z",
+      "nextAttemptAt": "2026-11-02T13:13:53.961Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-10-25T20:56:57.042Z"
+  "updatedAt": "2026-10-26T13:13:53.961Z"
 }

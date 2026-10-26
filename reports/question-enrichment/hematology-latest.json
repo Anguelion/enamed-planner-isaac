@@ -1,166 +1,54 @@
 {
-  "generatedAt": "2026-10-25T20:56:25.811Z",
+  "generatedAt": "2026-10-26T13:13:26.505Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 5,
+  "changed": 0,
   "results": [
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-45c45d66849d96f0",
-      "number": "1077a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/hematoscopia-e-parte4831786610/",
-      "sourceQuestionId": "4000040401",
-      "matchedAt": "2026-10-25T20:56:26.961Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Introdução ao Estudo das Anemias",
-        "Esfregaço do sangue periférico"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Esfregaço do sangue periférico. Conduta/resposta: Neutrófilos hipersegmentados e infecção.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/hematoscopia-e-parte4831786610/"
-      ]
+      "id": "anki-hematologia-gamopatias-monoclonais-a65e59a6c8f3f058",
+      "number": "1008j",
+      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-4b53565bbd74697a",
-      "number": "1025h",
+      "id": "anki-hematologia-gamopatias-monoclonais-3336f8e8c87c439d",
+      "number": "1010j",
+      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-gamopatias-monoclonais-9cfc04572db0f9ce",
+      "number": "1012j",
+      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-gamopatias-monoclonais-2c1081ef3fd98e37",
+      "number": "1013j",
+      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-leucemias-agudas-6352cacabfe8dabb",
+      "number": "1030h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Gabriel-5-anos-idade82bcf7fa94/",
-      "sourceQuestionId": "4000129521",
-      "matchedAt": "2026-10-25T20:56:33.100Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Pediatria",
-        "Hematologia Pediátrica",
-        "Clínica Médica",
-        "Hematologia",
-        "Leucemias",
-        "Leucemias agudas",
-        "Classificação das leucemias agudas"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Classificação das leucemias agudas. Conduta/resposta: Leucemia aguda.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Gabriel-5-anos-idade82bcf7fa94/",
-        "https://med.estrategia.com/public/questoes/Crianc-5-anos-idade-ha114d16d1c35/"
-      ]
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-ac0e58cea5a3b1d1",
-      "number": "1026h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-20-anos-vem864ce5332d/",
-      "sourceQuestionId": "4000125756",
-      "matchedAt": "2026-10-25T20:56:38.829Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Leucemias",
-        "Leucemias agudas",
-        "Leucemia mieloide aguda (LMA)",
-        "Leucemia promielocítica aguda (LPA ou LMA-M3)"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Leucemia promielocítica aguda (LPA ou LMA-M3). Conduta/resposta: leucemia promielocítica aguda.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-20-anos-vem864ce5332d/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-172b4545fe6ead89",
-      "number": "1027h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Pre-escolar-tres-anos16824d43a3d/",
-      "sourceQuestionId": "4000124818",
-      "matchedAt": "2026-10-25T20:56:44.939Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Leucemias",
-        "Leucemias agudas",
-        "Leucemia linfoide aguda (LLA)",
-        "Quadro clínico da leucemia linfoide aguda (LLA)"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Quadro clínico da leucemia linfoide aguda (LLA). Conduta/resposta: leucemia linfocítica aguda.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Pre-escolar-tres-anos163241ed58c/",
-        "https://med.estrategia.com/public/questoes/Pre-escolar-tres-anos16824d43a3d/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-7d0219696258ad6f",
-      "number": "1028h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Pais-relatam-que-ha11693d67bb3/",
-      "sourceQuestionId": "4000124385",
-      "matchedAt": "2026-10-25T20:56:51.686Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Leucemias",
-        "Leucemias agudas",
-        "Leucemia linfoide aguda (LLA)"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Leucemia linfoide aguda (LLA). Conduta/resposta: Leucemia linfoide aguda.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Pais-relatam-que-ha11693d67bb3/",
-        "https://med.estrategia.com/public/questoes/5ecec1f7892b590312f918da/",
-        "https://med.estrategia.com/public/questoes/Pais-relatam-que-ha121a4a51d96/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-8211eaf769f962ee",
-      "number": "1029h",
+      "id": "anki-hematologia-leucemias-agudas-171fc64d8a1622ed",
+      "number": "1031h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
       "changed": false,
       "status": "not_found",
