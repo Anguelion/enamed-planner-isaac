@@ -6560,7 +6560,67 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-agudas-9b1feeae79194fc1": {
+      "number": "1036h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-27T12:21:16.364Z",
+      "nextAttemptAt": "2026-11-03T12:21:16.364Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/leucemias-tem-como29287129fc/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-leucemias-agudas-9853b7808d835bc1": {
+      "number": "1037h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-27T12:21:22.475Z",
+      "nextAttemptAt": "2026-11-03T12:21:22.475Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Crianc-sete-anos-idade1093207c3ba/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-leucemias-agudas-fb641de4a8b611f1": {
+      "number": "1038h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-27T12:21:28.250Z",
+      "nextAttemptAt": "2026-11-03T12:21:28.250Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-31-anos6229c4c4fb/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-leucemias-agudas-729c39dc63ab73e9": {
+      "number": "1039h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-27T12:21:34.675Z",
+      "nextAttemptAt": "2026-11-03T12:21:34.675Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-5-anos38f61ddd60/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
+    },
+    "anki-hematologia-leucemias-agudas-0fb1639569d8a49d": {
+      "number": "1040h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-27T12:21:40.542Z",
+      "nextAttemptAt": "2026-11-03T12:21:40.542Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-que-na155f89eb06/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-leucemias-agudas-255b00007242c3ad": {
+      "number": "1041h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-27T12:21:46.594Z",
+      "nextAttemptAt": "2026-11-03T12:21:46.594Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-com-28-anos65c233f9c8/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     }
   },
-  "updatedAt": "2026-10-26T22:44:27.736Z"
+  "updatedAt": "2026-10-27T12:21:46.594Z"
 }

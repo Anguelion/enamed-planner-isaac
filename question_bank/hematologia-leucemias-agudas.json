@@ -1525,10 +1525,22 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Leucemia linfoide aguda (LLA)",
+        "Classificação da leucemia linfoide aguda - LLA (morfológica, citogenética e biologia molecular)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106946",
-      "ankiGuid": "O:`=~?jxCQ"
+      "ankiGuid": "O:`=~?jxCQ",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/leucemias-tem-como29287129fc/",
+        "sourceQuestionId": "4000042477",
+        "matchedAt": "2026-10-27T12:21:16.363Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-9853b7808d835bc1",
@@ -1558,10 +1570,22 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Leucemia linfoide aguda (LLA)",
+        "Tratamento da leucemia linfoide aguda (LLA)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106947",
-      "ankiGuid": "hCrk%wpvdD"
+      "ankiGuid": "hCrk%wpvdD",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Crianc-sete-anos-idade1093207c3ba/",
+        "sourceQuestionId": "4000033664",
+        "matchedAt": "2026-10-27T12:21:22.475Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-fb641de4a8b611f1",
@@ -1591,10 +1615,20 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106948",
-      "ankiGuid": "QICb:7&Di>"
+      "ankiGuid": "QICb:7&Di>",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-31-anos6229c4c4fb/",
+        "sourceQuestionId": "4000023839",
+        "matchedAt": "2026-10-27T12:21:28.249Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-729c39dc63ab73e9",
@@ -1625,10 +1659,21 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Introdução às leucemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106949",
-      "ankiGuid": "BBo(hurB<j"
+      "ankiGuid": "BBo(hurB<j",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-5-anos38f61ddd60/",
+        "sourceQuestionId": "4000022653",
+        "matchedAt": "2026-10-27T12:21:34.675Z",
+        "confidence": 0.9794117647058822
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-0fb1639569d8a49d",
@@ -1659,10 +1704,23 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Leucemia linfoide aguda (LLA)",
+        "Classificação da leucemia linfoide aguda - LLA (morfológica, citogenética e biologia molecular)",
+        "Diagnóstico da leucemia linfoide aguda (LLA)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106950",
-      "ankiGuid": "xY}dnL(cPH"
+      "ankiGuid": "xY}dnL(cPH",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-que-na155f89eb06/",
+        "sourceQuestionId": "4000121414",
+        "matchedAt": "2026-10-27T12:21:40.541Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-255b00007242c3ad",
@@ -1692,10 +1750,21 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Leucemia mieloide aguda (LMA)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106951",
-      "ankiGuid": "yRZp7D!m+P"
+      "ankiGuid": "yRZp7D!m+P",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-com-28-anos65c233f9c8/",
+        "sourceQuestionId": "4000115518",
+        "matchedAt": "2026-10-27T12:21:46.594Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-382ba30f30f78e1c",
