@@ -1633,13 +1633,13 @@
     },
     "anki-hematologia-anemias-macrociticas-d66bc37146b2337b": {
       "number": "1047e",
-      "status": "low_confidence",
-      "attempts": 1,
-      "lastAttemptAt": "2026-08-28T18:47:58.431Z",
-      "nextAttemptAt": "2026-10-27T18:47:58.431Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-27T22:20:56.197Z",
+      "nextAttemptAt": "2026-11-10T22:20:56.197Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-38-anos89ad60c451/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
     },
     "anki-hematologia-anemias-macrociticas-7f821bd2d8555569": {
       "number": "1048e",
@@ -6233,23 +6233,23 @@
     },
     "anki-hematologia-leucemias-agudas-c9e8b62fbc1bfa28": {
       "number": "1003h",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-20T21:43:53.943Z",
-      "nextAttemptAt": "2026-10-27T21:43:53.943Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-27T22:21:02.506Z",
+      "nextAttemptAt": "2026-11-10T22:21:02.506Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/sindrome-lise-tumoral8661b1ffd6/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     },
     "anki-hematologia-leucemias-agudas-2f17f7ec62619794": {
       "number": "1004h",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-20T21:44:20.013Z",
-      "nextAttemptAt": "2026-10-27T21:44:20.013Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-27T22:21:08.403Z",
+      "nextAttemptAt": "2026-11-10T22:21:08.403Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Menino-4-anos-idade45fa18aaee/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-leucemias-agudas-31e1155188d7b96c": {
       "number": "1005h",
@@ -6620,7 +6620,37 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-com-28-anos65c233f9c8/",
       "localAnswer": "D",
       "remoteAnswer": "D"
+    },
+    "anki-hematologia-leucemias-agudas-382ba30f30f78e1c": {
+      "number": "1042h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-27T22:21:14.768Z",
+      "nextAttemptAt": "2026-11-03T22:21:14.768Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-65-com835c31c6c7/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-leucemias-agudas-efbdc48663a8442e": {
+      "number": "1043h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-27T22:21:21.827Z",
+      "nextAttemptAt": "2026-11-03T22:21:21.827Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Considere-assertivas8883dcbc53/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-leucemias-agudas-456a0683f7f87fef": {
+      "number": "1044h",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-27T22:21:27.265Z",
+      "nextAttemptAt": "2026-11-03T22:21:27.265Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-10-27T12:21:46.594Z"
+  "updatedAt": "2026-10-27T22:21:27.265Z"
 }

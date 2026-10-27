@@ -1,113 +1,24 @@
 {
-  "generatedAt": "2026-10-27T12:21:15.537Z",
+  "generatedAt": "2026-10-27T22:20:54.954Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 6,
+  "changed": 5,
   "results": [
     {
-      "id": "anki-hematologia-leucemias-agudas-9b1feeae79194fc1",
-      "number": "1036h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "id": "anki-hematologia-anemias-macrociticas-d66bc37146b2337b",
+      "number": "1047e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/leucemias-tem-como29287129fc/",
-      "sourceQuestionId": "4000042477",
-      "matchedAt": "2026-10-27T12:21:16.363Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-38-anos89ad60c451/",
+      "sourceQuestionId": "4000116074",
+      "matchedAt": "2026-10-27T22:20:56.195Z",
       "similarity": {
         "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Leucemias",
-        "Leucemias agudas",
-        "Leucemia linfoide aguda (LLA)",
-        "Classificação da leucemia linfoide aguda - LLA (morfológica, citogenética e biologia molecular)"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Classificação da leucemia linfoide aguda - LLA (morfológica, citogenética e biologia molecular). Conduta/resposta: Nas LLA a idade entre 01 a 09 anos é um fator de bom prognóstico.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/leucemias-tem-como29287129fc/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-9853b7808d835bc1",
-      "number": "1037h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Crianc-sete-anos-idade1093207c3ba/",
-      "sourceQuestionId": "4000033664",
-      "matchedAt": "2026-10-27T12:21:22.475Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Leucemias",
-        "Leucemias agudas",
-        "Leucemia linfoide aguda (LLA)",
-        "Tratamento da leucemia linfoide aguda (LLA)"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Tratamento da leucemia linfoide aguda (LLA). Conduta/resposta: Iniciar hiperidratação venosa",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Crianc-sete-anos-idade1093207c3ba/",
-        "https://med.estrategia.com/public/questoes/menino-com-7-anos-e1376ca783de/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-fb641de4a8b611f1",
-      "number": "1038h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-31-anos6229c4c4fb/",
-      "sourceQuestionId": "4000023839",
-      "matchedAt": "2026-10-27T12:21:28.249Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Leucemias",
-        "Leucemias agudas"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Leucemias agudas. Conduta/resposta: Ácido transretinoico.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-31-anos6229c4c4fb/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-729c39dc63ab73e9",
-      "number": "1039h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-5-anos38f61ddd60/",
-      "sourceQuestionId": "4000022653",
-      "matchedAt": "2026-10-27T12:21:34.675Z",
-      "similarity": {
-        "stem": 0.9705882352941176,
-        "options": 1,
-        "combined": 0.9794117647058822
+        "options": 0.9806451612903226,
+        "combined": 0.9941935483870967
       },
       "localAnswer": "E",
       "remoteAnswer": "E",
@@ -115,28 +26,69 @@
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Leucemias",
-        "Introdução às leucemias",
-        "Leucemias agudas"
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados",
+        "Anemias microcíticas",
+        "Anemia ferropriva",
+        "Quadro clínico da anemia ferropriva",
+        "Alterações mucosas: Glossite atrófica e queilite angular"
       ],
-      "comment": "Gabarito confirmado: E. Assunto: Leucemias agudas. Conduta/resposta: Leucemia aguda",
+      "comment": "Gabarito confirmado: E. Assunto: Alterações mucosas: Glossite atrófica e queilite angular. Conduta/resposta: Deve-se pensar em deficiência de vitamina B12, devido à cirurgia bariátrica realizada há8 anos.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-5-anos38f61ddd60/",
-        "https://med.estrategia.com/public/questoes/Crianc-5-anos-idade13671268307/",
-        "https://med.estrategia.com/public/questoes/Menina-5-anos-idade-e1012965928b/",
-        "https://med.estrategia.com/public/questoes/Menina-5-anos-idade-e99453ffe39/",
-        "https://med.estrategia.com/public/questoes/PFJ-cinco-anos-idade1041c3adb64/"
+        "https://med.estrategia.com/public/questoes/Paciente-38-anos89ad60c451/"
       ]
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-0fb1639569d8a49d",
-      "number": "1040h",
+      "id": "anki-hematologia-leucemias-agudas-c9e8b62fbc1bfa28",
+      "number": "1003h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-que-na155f89eb06/",
-      "sourceQuestionId": "4000121414",
-      "matchedAt": "2026-10-27T12:21:40.541Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/sindrome-lise-tumoral8661b1ffd6/",
+      "sourceQuestionId": "4000183291",
+      "matchedAt": "2026-10-27T22:21:02.505Z",
+      "similarity": {
+        "stem": 1,
+        "options": 0.9674418604651163,
+        "combined": 0.9902325581395348
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Nefrologia",
+        "Lesão renal aguda (LRA)",
+        "Causas especificas",
+        "Síndrome de Lise Tumoral (SLT)",
+        "Hematologia",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
+        "Distúrbios do potássio",
+        "Hipercalemia",
+        "Causas de Hipercalemia",
+        "Liberação da carga de potássio do intracelular",
+        "Síndrome de Lise Tumoral"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Síndrome de Lise Tumoral. Conduta/resposta: ácido úrico ≥ 8 mg/dL ou com aumento > 25% do valor de base; potássio ≥ 6 mEq/L ou com aumento > 25% do valor de base; fósforo ≥ 4,5 mg/dL ou com aumento > 25% do valor de base; e(ou) cálcio total ≤ 7 mg/dL ou com redução > 25% do valor de base.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/sindrome-lise-tumoral8661b1ffd6/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-leucemias-agudas-2f17f7ec62619794",
+      "number": "1004h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Menino-4-anos-idade45fa18aaee/",
+      "sourceQuestionId": "4000183137",
+      "matchedAt": "2026-10-27T22:21:08.403Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -148,31 +100,72 @@
       "tags": [
         "Clínica Médica",
         "Hematologia",
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
         "Leucemias",
         "Leucemias agudas",
         "Leucemia linfoide aguda (LLA)",
-        "Classificação da leucemia linfoide aguda - LLA (morfológica, citogenética e biologia molecular)",
-        "Diagnóstico da leucemia linfoide aguda (LLA)"
+        "Quadro clínico da leucemia linfoide aguda (LLA)"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Diagnóstico da leucemia linfoide aguda (LLA). Conduta/resposta: febre",
+      "comment": "Gabarito confirmado: C. Assunto: Quadro clínico da leucemia linfoide aguda (LLA). Conduta/resposta: Anemia normocítica, normocrômica com reticulócitos diminuídos.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/alternativa-que-na155f89eb06/",
-        "https://med.estrategia.com/public/questoes/alternativa-que-NA151c74847d/"
+        "https://med.estrategia.com/public/questoes/Menino-4-anos-idade45fa18aaee/"
       ]
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-255b00007242c3ad",
-      "number": "1041h",
+      "id": "anki-hematologia-leucemias-agudas-382ba30f30f78e1c",
+      "number": "1042h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-com-28-anos65c233f9c8/",
-      "sourceQuestionId": "4000115518",
-      "matchedAt": "2026-10-27T12:21:46.594Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-65-com835c31c6c7/",
+      "sourceQuestionId": "4000086655",
+      "matchedAt": "2026-10-27T22:21:14.767Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Nefrologia",
+        "Lesão renal aguda (LRA)",
+        "Causas especificas",
+        "Síndrome de Lise Tumoral (SLT)",
+        "Hematologia",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
+        "Pneumologia",
+        "Câncer de Pulmão",
+        "Neoplasia pulmonar",
+        "Quadro clínico",
+        "Tratamento",
+        "Tratamento do câncer de pequenas células",
+        "Síndrome de veia cava superior"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Síndrome de veia cava superior. Conduta/resposta: Prescrever hidratação, rasburicase e alcalinização da urina.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Mulher-65-com835c31c6c7/",
+        "https://med.estrategia.com/public/questoes/Paciente-com42ad620ab2/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-leucemias-agudas-efbdc48663a8442e",
+      "number": "1043h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Considere-assertivas8883dcbc53/",
+      "sourceQuestionId": "4000085716",
+      "matchedAt": "2026-10-27T22:21:21.826Z",
+      "similarity": {
+        "stem": 0.9864864864864865,
+        "options": 1,
+        "combined": 0.9905405405405405
       },
       "localAnswer": "D",
       "remoteAnswer": "D",
@@ -184,12 +177,19 @@
         "Leucemias agudas",
         "Leucemia mieloide aguda (LMA)"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Leucemia mieloide aguda (LMA). Conduta/resposta: Leucemia Mielóide aguda, Mielograma, transfusão de plaquetas e antibioticoterapia sistêmica (empírica).",
+      "comment": "Gabarito confirmado: D. Assunto: Leucemia mieloide aguda (LMA). Conduta/resposta: Apenas I e III",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-com-28-anos65c233f9c8/",
-        "https://med.estrategia.com/public/questoes/Mulher-28-anos-refere100266fcb7a/",
-        "https://med.estrategia.com/public/questoes/Mulher-28-anos104274db69e/"
+        "https://med.estrategia.com/public/questoes/Considere-assertivas8883dcbc53/",
+        "https://med.estrategia.com/public/questoes/leucemia-mieloide525ce73def/"
       ]
+    },
+    {
+      "id": "anki-hematologia-leucemias-agudas-456a0683f7f87fef",
+      "number": "1044h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     }
   ]
 }

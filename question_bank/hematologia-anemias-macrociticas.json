@@ -2206,10 +2206,29 @@
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Quadro clínico da anemia megaloblástica",
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados",
+        "Anemias microcíticas",
+        "Anemia ferropriva",
+        "Quadro clínico da anemia ferropriva",
+        "Alterações mucosas: Glossite atrófica e queilite angular",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967816",
-      "ankiGuid": "PIGDB)N%!M"
+      "ankiGuid": "PIGDB)N%!M",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-38-anos89ad60c451/",
+        "sourceQuestionId": "4000116074",
+        "matchedAt": "2026-10-27T22:20:56.195Z",
+        "confidence": 0.9941935483870967
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-7f821bd2d8555569",
