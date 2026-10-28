@@ -6680,7 +6680,67 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-agudas-de1455716128ad9f": {
+      "number": "1048h",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-28T22:40:00.327Z",
+      "nextAttemptAt": "2026-11-04T22:40:00.327Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-agudas-a8489f9ec9772c23": {
+      "number": "1049h",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-28T22:40:05.549Z",
+      "nextAttemptAt": "2026-11-04T22:40:05.549Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-agudas-65a2d0143b11ca80": {
+      "number": "1050h",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-28T22:40:10.737Z",
+      "nextAttemptAt": "2026-11-04T22:40:10.737Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-agudas-bcc12e841bf83a87": {
+      "number": "1051h",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-28T22:40:15.942Z",
+      "nextAttemptAt": "2026-11-04T22:40:15.942Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-agudas-70d03d2b3a03b677": {
+      "number": "1052h",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-28T22:40:21.141Z",
+      "nextAttemptAt": "2026-11-04T22:40:21.141Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-agudas-f743db3510516e53": {
+      "number": "1053h",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-28T22:40:26.370Z",
+      "nextAttemptAt": "2026-11-04T22:40:26.370Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-10-28T13:05:58.074Z"
+  "updatedAt": "2026-10-28T22:40:26.370Z"
 }

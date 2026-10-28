@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-28T13:05:28.720Z",
+  "generatedAt": "2026-10-28T22:39:59.991Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
@@ -7,48 +7,48 @@
   "changed": 0,
   "results": [
     {
-      "id": "anki-hematologia-gamopatias-monoclonais-8463e41e61278868",
-      "number": "1034j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-gamopatias-monoclonais-92d9ac3a2692932f",
-      "number": "1036j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-gamopatias-monoclonais-a35cb5a31f1bb515",
-      "number": "1037j",
-      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-a447bb1cbb8dde30",
-      "number": "1045h",
+      "id": "anki-hematologia-leucemias-agudas-de1455716128ad9f",
+      "number": "1048h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-fa868157395504f1",
-      "number": "1046h",
+      "id": "anki-hematologia-leucemias-agudas-a8489f9ec9772c23",
+      "number": "1049h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-675d652d90f0494d",
-      "number": "1047h",
+      "id": "anki-hematologia-leucemias-agudas-65a2d0143b11ca80",
+      "number": "1050h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-leucemias-agudas-bcc12e841bf83a87",
+      "number": "1051h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-leucemias-agudas-70d03d2b3a03b677",
+      "number": "1052h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-leucemias-agudas-f743db3510516e53",
+      "number": "1053h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
       "changed": false,
       "status": "not_found",
