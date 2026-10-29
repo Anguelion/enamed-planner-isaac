@@ -2263,10 +2263,22 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Leucemia linfoide aguda (LLA)",
+        "Quadro clínico da leucemia linfoide aguda (LLA)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106964",
-      "ankiGuid": "L/25VAFF6T"
+      "ankiGuid": "L/25VAFF6T",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Crianc-4-anos-com90f2ee59a7/",
+        "sourceQuestionId": "4000098066",
+        "matchedAt": "2026-10-29T13:12:40.082Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-21cefae9df22a8c4",
@@ -2296,10 +2308,25 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Nefrologia",
+        "Lesão renal aguda (LRA)",
+        "Causas especificas",
+        "Síndrome de Lise Tumoral (SLT)",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106965",
-      "ankiGuid": "u,M04rJzhC"
+      "ankiGuid": "u,M04rJzhC",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Esta-associado-risco977565ad6/",
+        "sourceQuestionId": "4000095848",
+        "matchedAt": "2026-10-29T13:12:46.601Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-6ba74c577bc31f70",
@@ -2329,10 +2356,25 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Nefrologia",
+        "Lesão renal aguda (LRA)",
+        "Causas especificas",
+        "Síndrome de Lise Tumoral (SLT)",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106966",
-      "ankiGuid": "hPdjO#1AaU"
+      "ankiGuid": "hPdjO#1AaU",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-18-anos-sexo45c967694c/",
+        "sourceQuestionId": "4000088896",
+        "matchedAt": "2026-10-29T13:12:52.617Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-5d0da6260901b46a",
@@ -2363,10 +2405,25 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Nefrologia",
+        "Lesão renal aguda (LRA)",
+        "Causas especificas",
+        "Síndrome de Lise Tumoral (SLT)",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106967",
-      "ankiGuid": "Qju!Y_6*>a"
+      "ankiGuid": "Qju!Y_6*>a",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/a-sindrome-lise99cd92d098/",
+        "sourceQuestionId": "4000066816",
+        "matchedAt": "2026-10-29T13:12:58.968Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-481603220f5e690a",
@@ -2397,10 +2454,20 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Nefrologia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106968",
-      "ankiGuid": "hVoJ=Mp51,"
+      "ankiGuid": "hVoJ=Mp51,",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Todas-seguir-sa1315ec8216/",
+        "sourceQuestionId": "4000056613",
+        "matchedAt": "2026-10-29T13:13:05.048Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-00da3ecb9a3fc48c",
@@ -2430,10 +2497,21 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Classificação das leucemias agudas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106969",
-      "ankiGuid": "LhBZ@rGe|."
+      "ankiGuid": "LhBZ@rGe|.",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo1154b84a4bf/",
+        "sourceQuestionId": "4000038750",
+        "matchedAt": "2026-10-29T13:13:11.885Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-c2805ae116e944aa",
