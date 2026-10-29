@@ -625,10 +625,22 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Leucemia linfoide aguda (LLA)",
+        "Quadro clínico da leucemia linfoide aguda (LLA)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106923",
-      "ankiGuid": "m+SZYd7DWf"
+      "ankiGuid": "m+SZYd7DWf",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-5-anos-com83386efd46/",
+        "sourceQuestionId": "4000163529",
+        "matchedAt": "2026-10-29T22:49:49.773Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-1d0a03024e4d0fe4",
@@ -2542,10 +2554,30 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Nefrologia",
+        "Lesão renal aguda (LRA)",
+        "Causas especificas",
+        "Síndrome de Lise Tumoral (SLT)",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
+        "Distúrbios do potássio",
+        "Hipercalemia",
+        "Causas de Hipercalemia",
+        "Liberação da carga de potássio do intracelular",
+        "Síndrome de Lise Tumoral",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106970",
-      "ankiGuid": "s1R7f(ce5z"
+      "ankiGuid": "s1R7f(ce5z",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-sexo-feminino581aeadeef/",
+        "sourceQuestionId": "4000024973",
+        "matchedAt": "2026-10-29T22:49:56.221Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-9f1ef3886b648655",
@@ -2576,10 +2608,23 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Leucemia mieloide aguda (LMA)",
+        "Classificação da leucemia mieloide aguda - LMA (morfológica, citogenética e biologia molecular)",
+        "Leucemia promielocítica aguda (LPA ou LMA-M3)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106971",
-      "ankiGuid": "iOQ}%czVz."
+      "ankiGuid": "iOQ}%czVz.",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/pacientes-com10d1e7ae48/",
+        "sourceQuestionId": "4000010547",
+        "matchedAt": "2026-10-29T22:50:02.979Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-1f42f786a5e55420",
