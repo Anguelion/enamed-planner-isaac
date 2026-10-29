@@ -16,7 +16,7 @@ function classList(initial = []) {
   };
 }
 
-test('login abre o aplicativo mesmo quando getSession fica pendente no Android', async () => {
+function createAuthHarness(authOverrides = {}) {
   const root = path.resolve(__dirname, '..');
   const source = fs.readFileSync(path.join(root, 'assets/app-loader.js'), 'utf8');
   const bodyClasses = classList(['offline-priority', 'auth-locked', 'app-loading']);
@@ -55,7 +55,8 @@ test('login abre o aplicativo mesmo quando getSession fica pendente no Android',
     auth: {
       onAuthStateChange(callback) { authStateCallback = callback; return { data: { subscription: { unsubscribe() {} } } }; },
       getSession() { return new Promise(() => {}); },
-      signInWithPassword: async () => ({ data: { session: { user: { id: 'usuario-1' } } }, error: null })
+      signInWithPassword: async () => ({ data: { session: { user: { id: 'usuario-1' } } }, error: null }),
+      ...authOverrides
     }
   };
   const window = {
@@ -70,7 +71,7 @@ test('login abre o aplicativo mesmo quando getSession fica pendente no Android',
     document,
     navigator: {},
     location: { protocol: 'https:', hostname: 'enamed-planner-isaac.pages.dev', reload() {} },
-    console,
+    console: { ...console, error() {} },
     setTimeout,
     clearTimeout,
     requestIdleCallback: window.requestIdleCallback
@@ -80,6 +81,12 @@ test('login abre o aplicativo mesmo quando getSession fica pendente no Android',
   assert.equal(createClientCalls, 1);
   assert.equal(window.__SOQUEROMED_SUPABASE_CLIENT__, authClient, 'o cliente deve ficar disponível para o planner reutilizar');
   assert.equal(typeof authStateCallback, 'function', 'o listener precisa existir antes de getSession terminar');
+
+  return { elements, listeners, appendedScripts, bodyClasses, panelClasses, authStateCallback };
+}
+
+test('login abre o aplicativo mesmo quando getSession fica pendente no Android', async () => {
+  const { appendedScripts, bodyClasses, panelClasses, authStateCallback } = createAuthHarness();
 
   authStateCallback('SIGNED_IN', { user: { id: 'usuario-1' }, access_token: 'token' });
   for(let attempt=0; attempt<50 && !appendedScripts.some(src => src?.includes('assets/planner.js')); attempt+=1) {
@@ -92,4 +99,58 @@ test('login abre o aplicativo mesmo quando getSession fica pendente no Android',
   assert.equal(bodyClasses.contains('auth-locked'), false);
   assert.equal(bodyClasses.contains('app-loading'), false);
   assert.equal(panelClasses.contains('hidden'), true);
+});
+
+const failureCases = [
+  { name: 'DNS ou rede indisponível', error: { name: 'AuthRetryableFetchError', status: 0, message: 'Failed to fetch' }, expected: /conectar ao serviço de acesso/ },
+  { name: 'erro de rede retornado pelo navegador', error: { name: 'TypeError', message: 'Failed to fetch' }, expected: /conectar ao serviço de acesso/ },
+  { name: 'serviço em manutenção', error: { status: 503, message: 'Service unavailable' }, expected: /temporariamente indisponível/ },
+  { name: 'cota do serviço', error: { status: 402, message: 'Payment required' }, expected: /temporariamente indisponível/ },
+  { name: 'limite de tentativas', error: { status: 429 }, expected: /Muitas tentativas/ },
+  { name: 'senha incorreta', error: { status: 400, code: 'invalid_credentials' }, expected: /Confira o e-mail e a senha/ },
+  { name: 'credenciais inválidas na API anterior', error: { status: 400, message: 'Invalid login credentials' }, expected: /Confira o e-mail e a senha/ },
+  { name: 'e-mail não confirmado', error: { status: 403, code: 'email_not_confirmed' }, expected: /Confirme seu e-mail/ },
+  { name: 'erro não identificado', error: { status: 400, message: 'Unexpected response' }, expected: /Não foi possível concluir o acesso/ }
+];
+
+for(const scenario of failureCases) {
+  test(`login informa corretamente: ${scenario.name}`, async () => {
+    const { elements, listeners, appendedScripts, bodyClasses } = createAuthHarness({
+      signInWithPassword: async () => ({ data: null, error: scenario.error })
+    });
+    await listeners.get('submit')({ preventDefault() {} });
+    assert.match(elements.authMessage.textContent, scenario.expected);
+    assert.equal(elements.signInBtn.disabled, false, 'deve permitir tentar novamente');
+    assert.equal(bodyClasses.contains('auth-locked'), true, 'falhas não liberam o app');
+    assert.equal(appendedScripts.length, 0);
+  });
+}
+
+test('falha de rede lançada libera o botão e permite um login posterior', async () => {
+  let attempts = 0;
+  const { elements, listeners, appendedScripts, bodyClasses } = createAuthHarness({
+    signInWithPassword: async () => {
+      attempts += 1;
+      if(attempts === 1) throw new TypeError('Failed to fetch');
+      return { data: { session: { user: { id: 'usuario-1' } } }, error: null };
+    }
+  });
+  const submit = listeners.get('submit');
+  await submit({ preventDefault() {} });
+  assert.match(elements.authMessage.textContent, /conectar ao serviço de acesso/);
+  assert.equal(elements.signInBtn.disabled, false);
+  await submit({ preventDefault() {} });
+  assert.ok(appendedScripts.some(src => src.startsWith('assets/planner.js?')));
+  assert.equal(bodyClasses.contains('auth-locked'), false);
+});
+
+test('erro ao recuperar sessão informa indisponibilidade e mantém login disponível', async () => {
+  const { elements, listeners, bodyClasses } = createAuthHarness({
+    getSession: async () => ({ data: null, error: { name: 'AuthRetryableFetchError', status: 0 } })
+  });
+  await new Promise(resolve => setImmediate(resolve));
+  assert.match(elements.authMessage.textContent, /conectar ao serviço de acesso/);
+  assert.equal(bodyClasses.contains('auth-locked'), true);
+  assert.equal(bodyClasses.contains('app-loading'), false);
+  assert.equal(typeof listeners.get('submit'), 'function');
 });

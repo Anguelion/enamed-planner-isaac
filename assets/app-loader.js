@@ -4,7 +4,7 @@
   const SUPABASE_URL='https://wbxzptiacftymhvfkiyx.supabase.co';
   const SUPABASE_PUBLISHABLE_KEY='sb_publishable_XrBwqjkwlt4Mb4rdmE-xVw_7Vt3euvP';
   const SUPABASE_CLIENT_KEY='__SOQUEROMED_SUPABASE_CLIENT__';
-  const VERSION='20261018-1';
+  const VERSION='20261029-1';
   const isLocal=location.protocol==='file:' || ['localhost','127.0.0.1','::1'].includes(location.hostname);
   let bootPromise=null;
   let authClient=null;
@@ -31,6 +31,25 @@
     const node=document.getElementById('authMessage');
     if(node) node.textContent=value;
   };
+
+  function loginErrorMessage(error){
+    if(error?.code==='invalid_credentials' || /invalid login credentials/i.test(error?.message || '')) {
+      return 'Não foi possível entrar. Confira o e-mail e a senha e tente novamente.';
+    }
+    if(error?.status===429 || ['over_request_rate_limit','over_email_send_rate_limit'].includes(error?.code)) {
+      return 'Muitas tentativas de acesso. Aguarde alguns minutos e tente novamente.';
+    }
+    if(error?.code==='email_not_confirmed') {
+      return 'Confirme seu e-mail pelo link recebido antes de entrar.';
+    }
+    if(error?.name==='AuthRetryableFetchError' || error?.name==='TypeError' || error?.status===0 || /failed to fetch|networkerror|network request failed|load failed/i.test(error?.message || '')) {
+      return 'Não foi possível conectar ao serviço de acesso. Confira sua conexão ou tente novamente mais tarde.';
+    }
+    if(error?.status>=500 || [402,403].includes(error?.status)) {
+      return 'O serviço de acesso está temporariamente indisponível. Tente novamente mais tarde.';
+    }
+    return 'Não foi possível concluir o acesso. Tente novamente em instantes.';
+  }
 
   function showAuthenticatedShell(){
     document.body.classList.remove('auth-locked');
@@ -113,14 +132,14 @@
     setMessage('Entrando…');
     try {
       const {data,error}=await authClient.auth.signInWithPassword({email,password});
-      if(error) { setMessage('Não foi possível entrar. Confira o e-mail e a senha e tente novamente.'); return; }
+      if(error) { setMessage(loginErrorMessage(error)); return; }
       if(!data?.session) { setMessage('A conta respondeu, mas a sessão não foi confirmada. Tente novamente.'); return; }
       setMessage('Conta conectada. Preparando seu plano…');
       showAuthenticatedShell();
-      await bootFullApp();
+      await bootFullApp().catch(()=>{});
     } catch(error) {
       console.error('Falha no acesso:',error);
-      setMessage('Não foi possível conectar agora. Confira sua internet e tente novamente.');
+      setMessage(loginErrorMessage(error));
     } finally {
       if(button) button.disabled=false;
     }
@@ -148,10 +167,11 @@
       form.addEventListener('submit',handleLogin);
     }
     try {
-      const {data}=await authClient.auth.getSession();
-      if(data.session) {
+      const {data,error}=await authClient.auth.getSession();
+      if(error) throw error;
+      if(data?.session) {
         showAuthenticatedShell();
-        await bootFullApp();
+        await bootFullApp().catch(()=>{});
       } else {
         document.body.classList.remove('app-loading');
         showLoginShell();
@@ -160,7 +180,7 @@
       console.error('Falha ao verificar a sessão:',error);
       document.body.classList.remove('app-loading','authenticated');
       showLoginShell();
-      setMessage('Não foi possível verificar sua sessão. Tente entrar novamente.');
+      setMessage(loginErrorMessage(error));
     }
   }
 
