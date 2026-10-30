@@ -2789,10 +2789,25 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Nefrologia",
+        "Lesão renal aguda (LRA)",
+        "Causas especificas",
+        "Síndrome de Lise Tumoral (SLT)",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106976",
-      "ankiGuid": "zYPZj)_}Vc"
+      "ankiGuid": "zYPZj)_}Vc",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Silvinha-6-anos420366142f/",
+        "sourceQuestionId": "4000126355",
+        "matchedAt": "2026-10-30T13:04:59.926Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-24a7c2c0e9369edb",

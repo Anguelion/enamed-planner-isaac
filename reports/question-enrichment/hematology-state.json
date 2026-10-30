@@ -6850,7 +6850,67 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-agudas-3c805636f3b841e3": {
+      "number": "1065h",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-30T13:04:52.554Z",
+      "nextAttemptAt": "2026-11-06T13:04:52.554Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-agudas-f77b7fc757b17595": {
+      "number": "1066h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-30T13:04:59.927Z",
+      "nextAttemptAt": "2026-11-06T13:04:59.927Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Silvinha-6-anos420366142f/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-leucemias-agudas-24a7c2c0e9369edb": {
+      "number": "1067h",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-30T13:05:05.406Z",
+      "nextAttemptAt": "2026-11-06T13:05:05.406Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-agudas-2baea57a903fb21f": {
+      "number": "1068h",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-30T13:05:10.854Z",
+      "nextAttemptAt": "2026-11-06T13:05:10.854Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-agudas-64e9bb43ba7b364e": {
+      "number": "1069h",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-30T13:05:16.309Z",
+      "nextAttemptAt": "2026-11-06T13:05:16.309Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-agudas-03145f014adb15c4": {
+      "number": "1070h",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-30T13:05:21.775Z",
+      "nextAttemptAt": "2026-11-06T13:05:21.775Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-10-29T22:50:19.555Z"
+  "updatedAt": "2026-10-30T13:05:21.775Z"
 }

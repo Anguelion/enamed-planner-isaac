@@ -1,57 +1,35 @@
 {
-  "generatedAt": "2026-10-29T22:49:48.219Z",
+  "generatedAt": "2026-10-30T13:04:52.007Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 3,
+  "changed": 1,
   "results": [
     {
-      "id": "anki-hematologia-leucemias-agudas-73af63606a8b7c0c",
-      "number": "1013h",
+      "id": "anki-hematologia-leucemias-agudas-3c805636f3b841e3",
+      "number": "1065h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-5-anos-com83386efd46/",
-      "sourceQuestionId": "4000163529",
-      "matchedAt": "2026-10-29T22:49:49.773Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Leucemias",
-        "Leucemias agudas",
-        "Leucemia linfoide aguda (LLA)",
-        "Quadro clínico da leucemia linfoide aguda (LLA)"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Quadro clínico da leucemia linfoide aguda (LLA). Conduta/resposta: leucemia linfocítica aguda.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-5-anos-com83386efd46/"
-      ]
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-c2805ae116e944aa",
-      "number": "1060h",
+      "id": "anki-hematologia-leucemias-agudas-f77b7fc757b17595",
+      "number": "1066h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-sexo-feminino581aeadeef/",
-      "sourceQuestionId": "4000024973",
-      "matchedAt": "2026-10-29T22:49:56.221Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Silvinha-6-anos420366142f/",
+      "sourceQuestionId": "4000126355",
+      "matchedAt": "2026-10-30T13:04:59.926Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
+      "localAnswer": "C",
+      "remoteAnswer": "C",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
@@ -61,69 +39,40 @@
         "Síndrome de Lise Tumoral (SLT)",
         "Hematologia",
         "Fundamentos de oncohematologia",
-        "Intercorrências em oncohematologia",
-        "Distúrbios do potássio",
-        "Hipercalemia",
-        "Causas de Hipercalemia",
-        "Liberação da carga de potássio do intracelular",
-        "Síndrome de Lise Tumoral"
+        "Intercorrências em oncohematologia"
       ],
-      "comment": "Gabarito confirmado: A. Assunto: Síndrome de Lise Tumoral. Conduta/resposta: Hiperpotassemia, hiperfosfatemia e hipocalcemia.",
+      "comment": "Gabarito confirmado: C. Assunto: Intercorrências em oncohematologia. Conduta/resposta: Ácido úrico aumentado; potássio aumentado; fosfato aumentado; cálcio diminuído.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/paciente-sexo-feminino581aeadeef/",
-        "https://med.estrategia.com/public/questoes/Escolar-com-5-anos9665df9889/"
+        "https://med.estrategia.com/public/questoes/Silvinha-6-anos420366142f/"
       ]
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-9f1ef3886b648655",
-      "number": "1061h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/pacientes-com10d1e7ae48/",
-      "sourceQuestionId": "4000010547",
-      "matchedAt": "2026-10-29T22:50:02.979Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Leucemias",
-        "Leucemias agudas",
-        "Leucemia mieloide aguda (LMA)",
-        "Classificação da leucemia mieloide aguda - LMA (morfológica, citogenética e biologia molecular)",
-        "Leucemia promielocítica aguda (LPA ou LMA-M3)"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Leucemia promielocítica aguda (LPA ou LMA-M3). Conduta/resposta: O uso de ácido transretinoico previne graves eventos hemorrágicos na fase de indução.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/pacientes-com10d1e7ae48/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-1f42f786a5e55420",
-      "number": "1062h",
+      "id": "anki-hematologia-leucemias-agudas-24a7c2c0e9369edb",
+      "number": "1067h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-49f05bb041b4cc20",
-      "number": "1063h",
+      "id": "anki-hematologia-leucemias-agudas-2baea57a903fb21f",
+      "number": "1068h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-23287dac5a9a8cb6",
-      "number": "1064h",
+      "id": "anki-hematologia-leucemias-agudas-64e9bb43ba7b364e",
+      "number": "1069h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-leucemias-agudas-03145f014adb15c4",
+      "number": "1070h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
       "changed": false,
       "status": "not_found",
