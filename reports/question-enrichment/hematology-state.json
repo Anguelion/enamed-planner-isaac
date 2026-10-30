@@ -1913,13 +1913,13 @@
     },
     "anki-hematologia-anemias-macrociticas-4454afbee322d842": {
       "number": "1075e",
-      "status": "low_confidence",
-      "attempts": 1,
-      "lastAttemptAt": "2026-08-31T14:00:52.067Z",
-      "nextAttemptAt": "2026-10-30T14:00:52.067Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-30T22:26:35.251Z",
+      "nextAttemptAt": "2026-11-13T22:26:35.251Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo96edaa1157/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     },
     "anki-hematologia-anemias-macrociticas-d3a12d48f82d5252": {
       "number": "1076e",
@@ -6910,7 +6910,57 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-agudas-96081b5340ec3edc": {
+      "number": "1071h",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-30T22:26:40.815Z",
+      "nextAttemptAt": "2026-11-06T22:26:40.815Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-agudas-7803f953bf190355": {
+      "number": "1072h",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-30T22:26:46.292Z",
+      "nextAttemptAt": "2026-11-06T22:26:46.292Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-agudas-cfa08850978a6aa8": {
+      "number": "1073h",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-30T22:26:51.743Z",
+      "nextAttemptAt": "2026-11-06T22:26:51.743Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-agudas-360235f242dbe847": {
+      "number": "1074h",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-30T22:26:57.177Z",
+      "nextAttemptAt": "2026-11-06T22:26:57.177Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-agudas-b5568df68e5ab1d9": {
+      "number": "1075h",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-30T22:27:02.649Z",
+      "nextAttemptAt": "2026-11-06T22:27:02.649Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-10-30T13:05:21.775Z"
+  "updatedAt": "2026-10-30T22:27:02.649Z"
 }

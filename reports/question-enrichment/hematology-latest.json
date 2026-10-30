@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-30T13:04:52.007Z",
+  "generatedAt": "2026-10-30T22:26:32.628Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
@@ -7,72 +7,76 @@
   "changed": 1,
   "results": [
     {
-      "id": "anki-hematologia-leucemias-agudas-3c805636f3b841e3",
-      "number": "1065h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-f77b7fc757b17595",
-      "number": "1066h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "id": "anki-hematologia-anemias-macrociticas-4454afbee322d842",
+      "number": "1075e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Silvinha-6-anos420366142f/",
-      "sourceQuestionId": "4000126355",
-      "matchedAt": "2026-10-30T13:04:59.926Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo96edaa1157/",
+      "sourceQuestionId": "4000095429",
+      "matchedAt": "2026-10-30T22:26:35.250Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
+      "localAnswer": "D",
+      "remoteAnswer": "D",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
-        "Nefrologia",
-        "Lesão renal aguda (LRA)",
-        "Causas especificas",
-        "Síndrome de Lise Tumoral (SLT)",
         "Hematologia",
-        "Fundamentos de oncohematologia",
-        "Intercorrências em oncohematologia"
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Quadro clínico da anemia megaloblástica",
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Intercorrências em oncohematologia. Conduta/resposta: Ácido úrico aumentado; potássio aumentado; fosfato aumentado; cálcio diminuído.",
+      "comment": "Gabarito confirmado: D. Assunto: Neutrófilos hipersegmentados. Conduta/resposta: Anemia por deficiência de vitamina B12 – Vitamina B12 por via parenteral.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Silvinha-6-anos420366142f/"
+        "https://med.estrategia.com/public/questoes/Paciente-sexo96edaa1157/",
+        "https://med.estrategia.com/public/questoes/Paciente-sexo69d9451677/",
+        "https://med.estrategia.com/public/questoes/Paciente-sexo570c238155/"
       ]
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-24a7c2c0e9369edb",
-      "number": "1067h",
+      "id": "anki-hematologia-leucemias-agudas-96081b5340ec3edc",
+      "number": "1071h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-2baea57a903fb21f",
-      "number": "1068h",
+      "id": "anki-hematologia-leucemias-agudas-7803f953bf190355",
+      "number": "1072h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-64e9bb43ba7b364e",
-      "number": "1069h",
+      "id": "anki-hematologia-leucemias-agudas-cfa08850978a6aa8",
+      "number": "1073h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-03145f014adb15c4",
-      "number": "1070h",
+      "id": "anki-hematologia-leucemias-agudas-360235f242dbe847",
+      "number": "1074h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-leucemias-agudas-b5568df68e5ab1d9",
+      "number": "1075h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
       "changed": false,
       "status": "not_found",

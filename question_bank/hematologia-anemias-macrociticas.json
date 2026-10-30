@@ -3527,10 +3527,26 @@
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Quadro clínico da anemia megaloblástica",
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico",
+        "Alterações dos leucócitos",
+        "Neutrófilos hipersegmentados",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967844",
-      "ankiGuid": "B4yjFu[R87"
+      "ankiGuid": "B4yjFu[R87",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo96edaa1157/",
+        "sourceQuestionId": "4000095429",
+        "matchedAt": "2026-10-30T22:26:35.250Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-d3a12d48f82d5252",
