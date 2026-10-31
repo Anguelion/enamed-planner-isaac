@@ -4084,10 +4084,21 @@
       "tags": [
         "Hematologia",
         "Anemias Macrocíticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Anemia megaloblástica",
+        "Deficiência de ácido fólico",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742510967856",
-      "ankiGuid": "h.arE2Y1$D"
+      "ankiGuid": "h.arE2Y1$D",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/anemias36dfe5efc7/",
+        "sourceQuestionId": "4000027279",
+        "matchedAt": "2026-10-31T12:43:03.026Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-anemias-macrociticas-1f12a707069e6e4b",
