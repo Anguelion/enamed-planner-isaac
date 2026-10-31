@@ -2053,20 +2053,20 @@
     },
     "anki-hematologia-anemias-macrociticas-e7381822d42ca8a7": {
       "number": "1089e",
-      "status": "low_confidence",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-01T21:06:27.227Z",
-      "nextAttemptAt": "2026-10-31T21:06:27.227Z",
+      "status": "not_found",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-31T21:41:18.692Z",
+      "nextAttemptAt": "2026-11-14T21:41:18.692Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
     },
     "anki-hematologia-anemias-macrociticas-fdce150efc352ad2": {
       "number": "1090e",
-      "status": "low_confidence",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-01T21:06:33.421Z",
-      "nextAttemptAt": "2026-10-31T21:06:33.421Z",
+      "status": "not_found",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-31T21:41:24.164Z",
+      "nextAttemptAt": "2026-11-14T21:41:24.164Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -2093,10 +2093,10 @@
     },
     "anki-hematologia-anemias-macrociticas-ec69e44435a2b56c": {
       "number": "1093e",
-      "status": "low_confidence",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-01T21:06:50.292Z",
-      "nextAttemptAt": "2026-10-31T21:06:50.292Z",
+      "status": "not_found",
+      "attempts": 2,
+      "lastAttemptAt": "2026-10-31T21:41:29.585Z",
+      "nextAttemptAt": "2026-11-14T21:41:29.585Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -6970,7 +6970,37 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/pacientes-com-sindrome13d4a39a97/",
       "localAnswer": "D",
       "remoteAnswer": "D"
+    },
+    "anki-hematologia-leucemias-agudas-2840756cb7938b38": {
+      "number": "1077h",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-31T21:41:35.051Z",
+      "nextAttemptAt": "2026-11-07T21:41:35.051Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-agudas-4fc6972528f4a0e1": {
+      "number": "1078h",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-31T21:41:40.503Z",
+      "nextAttemptAt": "2026-11-07T21:41:40.503Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-agudas-e2fea18170832bea": {
+      "number": "1079h",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-10-31T21:41:45.890Z",
+      "nextAttemptAt": "2026-11-07T21:41:45.890Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-10-31T12:43:32.601Z"
+  "updatedAt": "2026-10-31T21:41:45.890Z"
 }

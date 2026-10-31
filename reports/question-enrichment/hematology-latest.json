@@ -1,205 +1,58 @@
 {
-  "generatedAt": "2026-10-31T12:43:02.066Z",
+  "generatedAt": "2026-10-31T21:41:16.942Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 6,
+  "changed": 0,
   "results": [
     {
-      "id": "anki-hematologia-anemias-macrociticas-99626c87b9974618",
-      "number": "1087e",
+      "id": "anki-hematologia-anemias-macrociticas-e7381822d42ca8a7",
+      "number": "1089e",
       "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/anemias36dfe5efc7/",
-      "sourceQuestionId": "4000027279",
-      "matchedAt": "2026-10-31T12:43:03.026Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Deficiência de ácido fólico"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Deficiência de ácido fólico. Conduta/resposta: Uso de metotrexate.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/anemias36dfe5efc7/"
-      ]
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-b0c1b022d45b2253",
-      "number": "1021h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/GSM-15-anos-apos3857f6b6cb/",
-      "sourceQuestionId": "4000143325",
-      "matchedAt": "2026-10-31T12:43:09.111Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Nefrologia",
-        "Lesão renal aguda (LRA)",
-        "Causas especificas",
-        "Síndrome de Lise Tumoral (SLT)",
-        "Hematologia",
-        "Fundamentos de oncohematologia",
-        "Intercorrências em oncohematologia",
-        "Distúrbios do potássio",
-        "Hipercalemia",
-        "Causas de Hipercalemia",
-        "Liberação da carga de potássio do intracelular",
-        "Síndrome de Lise Tumoral"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Síndrome de Lise Tumoral. Conduta/resposta: síndrome de lise tumoral; hipocalcemia, hiperuricemia, hiperfosfatemia e hipercalemia.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/GSM-15-anos-apos3857f6b6cb/",
-        "https://med.estrategia.com/public/questoes/67b99a98e17ff793d52bdeba/"
-      ]
+      "id": "anki-hematologia-anemias-macrociticas-fdce150efc352ad2",
+      "number": "1090e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-27de9c71314b435b",
-      "number": "1022h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/sindrome-lise-tumoral314f6b296e/",
-      "sourceQuestionId": "4000140429",
-      "matchedAt": "2026-10-31T12:43:14.817Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Nefrologia",
-        "Lesão renal aguda (LRA)",
-        "Causas especificas",
-        "Síndrome de Lise Tumoral (SLT)",
-        "Hematologia",
-        "Fundamentos de oncohematologia",
-        "Intercorrências em oncohematologia"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Intercorrências em oncohematologia. Conduta/resposta: Hiperuricemia, hipercalemia, hiperfosfatemia e hipocalcemia − Hidratação venosa e alopurinol.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/sindrome-lise-tumoral314f6b296e/"
-      ]
+      "id": "anki-hematologia-anemias-macrociticas-ec69e44435a2b56c",
+      "number": "1093e",
+      "file": "question_bank/hematologia-anemias-macrociticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-59944fec0adb84c9",
-      "number": "1023h",
+      "id": "anki-hematologia-leucemias-agudas-2840756cb7938b38",
+      "number": "1077h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Sindrome-lise-tumoral30167ae38c/",
-      "sourceQuestionId": "4000134622",
-      "matchedAt": "2026-10-31T12:43:20.655Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Nefrologia",
-        "Lesão renal aguda (LRA)",
-        "Causas especificas",
-        "Síndrome de Lise Tumoral (SLT)",
-        "Hematologia",
-        "Fundamentos de oncohematologia",
-        "Intercorrências em oncohematologia"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Intercorrências em oncohematologia. Conduta/resposta: Potássio, ácido úrico, cálcio.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Sindrome-lise-tumoral30167ae38c/"
-      ]
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-a348c71d75d89d1a",
-      "number": "1024h",
+      "id": "anki-hematologia-leucemias-agudas-4fc6972528f4a0e1",
+      "number": "1078h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-25-anos1257bca4dfd/",
-      "sourceQuestionId": "4000133182",
-      "matchedAt": "2026-10-31T12:43:26.756Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Nefrologia",
-        "Lesão renal aguda (LRA)",
-        "Causas especificas",
-        "Síndrome de Lise Tumoral (SLT)",
-        "Hematologia",
-        "Fundamentos de oncohematologia",
-        "Intercorrências em oncohematologia"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Intercorrências em oncohematologia. Conduta/resposta: Monitoramento contínuo, hidratação venosa, correção dos distúrbios hidroeletrolíticos, uso de rasburicase.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Homem-25-anos1257bca4dfd/"
-      ]
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-4a8a0714ec3a20e2",
-      "number": "1076h",
+      "id": "anki-hematologia-leucemias-agudas-e2fea18170832bea",
+      "number": "1079h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/pacientes-com-sindrome13d4a39a97/",
-      "sourceQuestionId": "4000121883",
-      "matchedAt": "2026-10-31T12:43:32.600Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Nefrologia",
-        "Lesão renal aguda (LRA)",
-        "Causas especificas",
-        "Síndrome de Lise Tumoral (SLT)",
-        "Hematologia",
-        "Fundamentos de oncohematologia",
-        "Intercorrências em oncohematologia"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Intercorrências em oncohematologia. Conduta/resposta: (VER IMAGEM).",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/pacientes-com-sindrome13d4a39a97/"
-      ]
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     }
   ]
 }
