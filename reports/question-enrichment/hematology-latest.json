@@ -1,144 +1,27 @@
 {
-  "generatedAt": "2026-11-01T13:33:23.206Z",
+  "generatedAt": "2026-11-01T22:07:47.502Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 6,
+  "changed": 5,
   "results": [
     {
-      "id": "anki-hematologia-leucemias-agudas-73ceaf03ce3642da",
-      "number": "1080h",
+      "id": "anki-hematologia-leucemias-agudas-8211eaf769f962ee",
+      "number": "1029h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/a-leucemia-linfoide1295fb217c/",
-      "sourceQuestionId": "4000051517",
-      "matchedAt": "2026-11-01T13:33:24.280Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-25-anos-ser286f36e094/",
+      "sourceQuestionId": "4000106161",
+      "matchedAt": "2026-11-01T22:07:48.631Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Leucemias",
-        "Leucemias agudas",
-        "Leucemia linfoide aguda (LLA)"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Leucemia linfoide aguda (LLA). Conduta/resposta: 3 a 5% dos pacientes têm a translocação t(9:22)(q34;q11).",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/a-leucemia-linfoide1295fb217c/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-582e3e5b3f71ce36",
-      "number": "1081h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/as-leucemias-infancia414be9e95e/",
-      "sourceQuestionId": "4000047310",
-      "matchedAt": "2026-11-01T13:33:30.724Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Fundamentos de oncohematologia",
-        "Intercorrências em oncohematologia",
-        "Síndrome de lise tumoral (SLT)"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Síndrome de lise tumoral (SLT). Conduta/resposta: Errado.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/as-leucemias-infancia414be9e95e/",
-        "https://med.estrategia.com/public/questoes/leucemias-linfoides941429a3de/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-f533954677c2b874",
-      "number": "1082h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-65-anos5994b72c55/",
-      "sourceQuestionId": "4000046048",
-      "matchedAt": "2026-11-01T13:33:36.697Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Fundamentos de oncohematologia",
-        "Intercorrências em oncohematologia",
-        "Síndrome de lise tumoral (SLT)"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Síndrome de lise tumoral (SLT). Conduta/resposta: Hipercalemia, hiperfosfatemia, hipocalcemia.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-65-anos5994b72c55/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-73e1d42b10d1edb0",
-      "number": "1083h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/ma-leva-filho-3-anos6672ee02da/",
-      "sourceQuestionId": "4000008699",
-      "matchedAt": "2026-11-01T13:33:43.051Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Leucemias",
-        "Introdução às leucemias"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Introdução às leucemias. Conduta/resposta: Leucemia.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/ma-leva-filho-3-anos6672ee02da/",
-        "https://med.estrategia.com/public/questoes/ma-traz-seu-filho-tres70b1138155/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-e36073345c60743a",
-      "number": "1084h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-quanto-aos14f359fbca/",
-      "sourceQuestionId": "4000099519",
-      "matchedAt": "2026-11-01T13:33:48.865Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
+      "localAnswer": "C",
+      "remoteAnswer": "C",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
@@ -150,39 +33,146 @@
         "Fundamentos de oncohematologia",
         "Intercorrências em oncohematologia"
       ],
-      "comment": "Gabarito confirmado: A. Assunto: Intercorrências em oncohematologia. Conduta/resposta: Hipercalemia, hiperuricemia, hipocalcemia e acidose metabólica.",
+      "comment": "Gabarito confirmado: C. Assunto: Intercorrências em oncohematologia. Conduta/resposta: Hipercalemia, hiperfosfatemia e hipocalcemia.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/alternativa-quanto-aos14f359fbca/"
+        "https://med.estrategia.com/public/questoes/Homem-25-anos-ser286f36e094/"
       ]
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-7215d7d054a6ae76",
-      "number": "1085h",
+      "id": "anki-hematologia-leucemias-agudas-5986ab8df4e0edd3",
+      "number": "1086h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Dentre-produtos1562bb4c7d/",
-      "sourceQuestionId": "4000060270",
-      "matchedAt": "2026-11-01T13:33:55.201Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-35-anos-procura4595126b35/",
+      "sourceQuestionId": "4000050979",
+      "matchedAt": "2026-11-01T22:07:55.152Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
+      "localAnswer": "A",
+      "remoteAnswer": "A",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
         "Leucemias",
         "Leucemias agudas",
-        "Leucemia mieloide aguda (LMA)"
+        "Leucemia mieloide aguda (LMA)",
+        "Diagnóstico da leucemia mieloide aguda (LMA)",
+        "Leucemia promielocítica aguda (LPA ou LMA-M3)",
+        "Anemias hemolíticas",
+        "Anemias Microangiopáticas",
+        "Coagulação Intravascular Disseminada (CIVD)",
+        "Epidemiologia da coagulação intravascular disseminada (CIVD)",
+        "Quadro clínico da coagulação intravascular disseminada (CIVD)"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Leucemia mieloide aguda (LMA). Conduta/resposta: Benzeno;",
+      "comment": "Gabarito confirmado: A. Assunto: Quadro clínico da coagulação intravascular disseminada (CIVD). Conduta/resposta: Coagulação intravascular disseminada.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Dentre-produtos1562bb4c7d/",
-        "https://med.estrategia.com/public/questoes/Dentre-produtos1837532391/"
+        "https://med.estrategia.com/public/questoes/Homem-35-anos-procura4595126b35/",
+        "https://med.estrategia.com/public/questoes/Homem-35-anos59dd72a991/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-leucemias-agudas-8ec32c55ba70aab4",
+      "number": "1087h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/sindrome-lise-tumoral1688029c73/",
+      "sourceQuestionId": "4000085707",
+      "matchedAt": "2026-11-01T22:08:01.065Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Nefrologia",
+        "Lesão renal aguda (LRA)",
+        "Causas especificas",
+        "Síndrome de Lise Tumoral (SLT)",
+        "Hematologia",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Intercorrências em oncohematologia. Conduta/resposta: Insuficiência Renal.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/sindrome-lise-tumoral1688029c73/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-leucemias-agudas-e7e530009a43ddba",
+      "number": "1088h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-leucemias-agudas-b8eff04afac1c1a5",
+      "number": "1089h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-e-agente-quimico225f49ab49/",
+      "sourceQuestionId": "4000059945",
+      "matchedAt": "2026-11-01T22:08:13.139Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "E",
+      "remoteAnswer": "E",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Leucemias",
+        "Leucemias agudas",
+        "Leucemia mieloide aguda (LMA)",
+        "Classificação da leucemia mieloide aguda - LMA (morfológica, citogenética e biologia molecular)"
+      ],
+      "comment": "Gabarito confirmado: E. Assunto: Classificação da leucemia mieloide aguda - LMA (morfológica, citogenética e biologia molecular). Conduta/resposta: Benzeno.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Qual-e-agente-quimico225f49ab49/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-leucemias-agudas-3f460bc450626345",
+      "number": "1090h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-12-anos-sexo3501834d2d/",
+      "sourceQuestionId": "4000035297",
+      "matchedAt": "2026-11-01T22:08:19.346Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Leucemias",
+        "Leucemias agudas",
+        "Leucemia linfoide aguda (LLA)",
+        "Classificação da leucemia linfoide aguda - LLA (morfológica, citogenética e biologia molecular)"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Classificação da leucemia linfoide aguda - LLA (morfológica, citogenética e biologia molecular). Conduta/resposta: Idade de 12 anos.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-12-anos-sexo3501834d2d/"
       ]
     }
   ]

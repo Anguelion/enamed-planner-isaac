@@ -1403,10 +1403,25 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Nefrologia",
+        "Lesão renal aguda (LRA)",
+        "Causas especificas",
+        "Síndrome de Lise Tumoral (SLT)",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106939",
-      "ankiGuid": "gi2%^R8YX?"
+      "ankiGuid": "gi2%^R8YX?",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-25-anos-ser286f36e094/",
+        "sourceQuestionId": "4000106161",
+        "matchedAt": "2026-11-01T22:07:48.631Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-6352cacabfe8dabb",
@@ -3628,10 +3643,28 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Leucemia mieloide aguda (LMA)",
+        "Diagnóstico da leucemia mieloide aguda (LMA)",
+        "Leucemia promielocítica aguda (LPA ou LMA-M3)",
+        "Anemias hemolíticas",
+        "Anemias Microangiopáticas",
+        "Coagulação Intravascular Disseminada (CIVD)",
+        "Epidemiologia da coagulação intravascular disseminada (CIVD)",
+        "Quadro clínico da coagulação intravascular disseminada (CIVD)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106996",
-      "ankiGuid": "kLFW9d|1QP"
+      "ankiGuid": "kLFW9d|1QP",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-35-anos-procura4595126b35/",
+        "sourceQuestionId": "4000050979",
+        "matchedAt": "2026-11-01T22:07:55.152Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-8ec32c55ba70aab4",
@@ -3662,10 +3695,25 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Nefrologia",
+        "Lesão renal aguda (LRA)",
+        "Causas especificas",
+        "Síndrome de Lise Tumoral (SLT)",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106997",
-      "ankiGuid": "y_O[zhtT?P"
+      "ankiGuid": "y_O[zhtT?P",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/sindrome-lise-tumoral1688029c73/",
+        "sourceQuestionId": "4000085707",
+        "matchedAt": "2026-11-01T22:08:01.065Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-e7e530009a43ddba",
@@ -3729,10 +3777,22 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Leucemia mieloide aguda (LMA)",
+        "Classificação da leucemia mieloide aguda - LMA (morfológica, citogenética e biologia molecular)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106999",
-      "ankiGuid": "v-**[Fln|:"
+      "ankiGuid": "v-**[Fln|:",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-e-agente-quimico225f49ab49/",
+        "sourceQuestionId": "4000059945",
+        "matchedAt": "2026-11-01T22:08:13.139Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-3f460bc450626345",
@@ -3762,10 +3822,22 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Leucemia linfoide aguda (LLA)",
+        "Classificação da leucemia linfoide aguda - LLA (morfológica, citogenética e biologia molecular)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516107000",
-      "ankiGuid": "c`9o<3/=;`"
+      "ankiGuid": "c`9o<3/=;`",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-12-anos-sexo3501834d2d/",
+        "sourceQuestionId": "4000035297",
+        "matchedAt": "2026-11-01T22:08:19.346Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-715ce1565824ac98",
