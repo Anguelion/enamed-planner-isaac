@@ -1,58 +1,189 @@
 {
-  "generatedAt": "2026-10-31T21:41:16.942Z",
+  "generatedAt": "2026-11-01T13:33:23.206Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 0,
+  "changed": 6,
   "results": [
     {
-      "id": "anki-hematologia-anemias-macrociticas-e7381822d42ca8a7",
-      "number": "1089e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-fdce150efc352ad2",
-      "number": "1090e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-ec69e44435a2b56c",
-      "number": "1093e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-2840756cb7938b38",
-      "number": "1077h",
+      "id": "anki-hematologia-leucemias-agudas-73ceaf03ce3642da",
+      "number": "1080h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/a-leucemia-linfoide1295fb217c/",
+      "sourceQuestionId": "4000051517",
+      "matchedAt": "2026-11-01T13:33:24.280Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Leucemias",
+        "Leucemias agudas",
+        "Leucemia linfoide aguda (LLA)"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Leucemia linfoide aguda (LLA). Conduta/resposta: 3 a 5% dos pacientes têm a translocação t(9:22)(q34;q11).",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/a-leucemia-linfoide1295fb217c/"
+      ]
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-4fc6972528f4a0e1",
-      "number": "1078h",
+      "id": "anki-hematologia-leucemias-agudas-582e3e5b3f71ce36",
+      "number": "1081h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/as-leucemias-infancia414be9e95e/",
+      "sourceQuestionId": "4000047310",
+      "matchedAt": "2026-11-01T13:33:30.724Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
+        "Síndrome de lise tumoral (SLT)"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Síndrome de lise tumoral (SLT). Conduta/resposta: Errado.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/as-leucemias-infancia414be9e95e/",
+        "https://med.estrategia.com/public/questoes/leucemias-linfoides941429a3de/"
+      ]
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-e2fea18170832bea",
-      "number": "1079h",
+      "id": "anki-hematologia-leucemias-agudas-f533954677c2b874",
+      "number": "1082h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-65-anos5994b72c55/",
+      "sourceQuestionId": "4000046048",
+      "matchedAt": "2026-11-01T13:33:36.697Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
+        "Síndrome de lise tumoral (SLT)"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Síndrome de lise tumoral (SLT). Conduta/resposta: Hipercalemia, hiperfosfatemia, hipocalcemia.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-65-anos5994b72c55/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-leucemias-agudas-73e1d42b10d1edb0",
+      "number": "1083h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/ma-leva-filho-3-anos6672ee02da/",
+      "sourceQuestionId": "4000008699",
+      "matchedAt": "2026-11-01T13:33:43.051Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Leucemias",
+        "Introdução às leucemias"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Introdução às leucemias. Conduta/resposta: Leucemia.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/ma-leva-filho-3-anos6672ee02da/",
+        "https://med.estrategia.com/public/questoes/ma-traz-seu-filho-tres70b1138155/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-leucemias-agudas-e36073345c60743a",
+      "number": "1084h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-quanto-aos14f359fbca/",
+      "sourceQuestionId": "4000099519",
+      "matchedAt": "2026-11-01T13:33:48.865Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Nefrologia",
+        "Lesão renal aguda (LRA)",
+        "Causas especificas",
+        "Síndrome de Lise Tumoral (SLT)",
+        "Hematologia",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Intercorrências em oncohematologia. Conduta/resposta: Hipercalemia, hiperuricemia, hipocalcemia e acidose metabólica.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/alternativa-quanto-aos14f359fbca/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-leucemias-agudas-7215d7d054a6ae76",
+      "number": "1085h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Dentre-produtos1562bb4c7d/",
+      "sourceQuestionId": "4000060270",
+      "matchedAt": "2026-11-01T13:33:55.201Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Leucemias",
+        "Leucemias agudas",
+        "Leucemia mieloide aguda (LMA)"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Leucemia mieloide aguda (LMA). Conduta/resposta: Benzeno;",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Dentre-produtos1562bb4c7d/",
+        "https://med.estrategia.com/public/questoes/Dentre-produtos1837532391/"
+      ]
     }
   ]
 }

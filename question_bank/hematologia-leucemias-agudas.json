@@ -3358,10 +3358,21 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Leucemia linfoide aguda (LLA)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106990",
-      "ankiGuid": "CcG?5(U#H|"
+      "ankiGuid": "CcG?5(U#H|",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/a-leucemia-linfoide1295fb217c/",
+        "sourceQuestionId": "4000051517",
+        "matchedAt": "2026-11-01T13:33:24.280Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-582e3e5b3f71ce36",
@@ -3389,10 +3400,22 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
+        "Síndrome de lise tumoral (SLT)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106991",
-      "ankiGuid": "r_H)]ih/X9"
+      "ankiGuid": "r_H)]ih/X9",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/as-leucemias-infancia414be9e95e/",
+        "sourceQuestionId": "4000047310",
+        "matchedAt": "2026-11-01T13:33:30.724Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-f533954677c2b874",
@@ -3422,10 +3445,22 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
+        "Síndrome de lise tumoral (SLT)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106992",
-      "ankiGuid": "ud4L0AGV~o"
+      "ankiGuid": "ud4L0AGV~o",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-65-anos5994b72c55/",
+        "sourceQuestionId": "4000046048",
+        "matchedAt": "2026-11-01T13:33:36.697Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-73e1d42b10d1edb0",
@@ -3455,10 +3490,21 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Introdução às leucemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106993",
-      "ankiGuid": ":O-MO,+=x"
+      "ankiGuid": ":O-MO,+=x",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/ma-leva-filho-3-anos6672ee02da/",
+        "sourceQuestionId": "4000008699",
+        "matchedAt": "2026-11-01T13:33:43.051Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-e36073345c60743a",
@@ -3488,10 +3534,25 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Nefrologia",
+        "Lesão renal aguda (LRA)",
+        "Causas especificas",
+        "Síndrome de Lise Tumoral (SLT)",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106994",
-      "ankiGuid": "u.$mw%[s%:"
+      "ankiGuid": "u.$mw%[s%:",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-quanto-aos14f359fbca/",
+        "sourceQuestionId": "4000099519",
+        "matchedAt": "2026-11-01T13:33:48.865Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-7215d7d054a6ae76",
@@ -3522,10 +3583,21 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Leucemia mieloide aguda (LMA)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106995",
-      "ankiGuid": "hqxeGID-dR"
+      "ankiGuid": "hqxeGID-dR",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Dentre-produtos1562bb4c7d/",
+        "sourceQuestionId": "4000060270",
+        "matchedAt": "2026-11-01T13:33:55.201Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-5986ab8df4e0edd3",
