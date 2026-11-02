@@ -6503,23 +6503,23 @@
     },
     "anki-hematologia-leucemias-agudas-6352cacabfe8dabb": {
       "number": "1030h",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-26T13:13:48.780Z",
-      "nextAttemptAt": "2026-11-02T13:13:48.780Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-11-02T16:08:49.819Z",
+      "nextAttemptAt": "2026-11-16T16:08:49.819Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Analise-alteracoes-que996832a06b/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     },
     "anki-hematologia-leucemias-agudas-171fc64d8a1622ed": {
       "number": "1031h",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-26T13:13:53.961Z",
-      "nextAttemptAt": "2026-11-02T13:13:53.961Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-11-02T16:08:55.838Z",
+      "nextAttemptAt": "2026-11-16T16:08:55.838Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-23-anos-com411ee5a746/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
     },
     "anki-hematologia-leucemias-agudas-e375f73dca5af9e3": {
       "number": "1032h",
@@ -7110,7 +7110,47 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-12-anos-sexo3501834d2d/",
       "localAnswer": "A",
       "remoteAnswer": "A"
+    },
+    "anki-hematologia-leucemias-agudas-715ce1565824ac98": {
+      "number": "1091h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-02T16:09:01.641Z",
+      "nextAttemptAt": "2026-11-09T16:09:01.641Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/lise-tumoral-e-correto768ace56c/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-leucemias-agudas-5954d5dec74490f8": {
+      "number": "1092h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-02T16:09:07.835Z",
+      "nextAttemptAt": "2026-11-09T16:09:07.835Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-anormalidades1035f09936/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-leucemias-agudas-fbdd313dd3c895d6": {
+      "number": "1093h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-02T16:09:14.062Z",
+      "nextAttemptAt": "2026-11-09T16:09:14.062Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-56-anos-com521feb3509/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-leucemias-agudas-bdacbebe350c9c72": {
+      "number": "1094h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-02T16:09:20.314Z",
+      "nextAttemptAt": "2026-11-09T16:09:20.314Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-85-anos-apos103e4c442be/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     }
   },
-  "updatedAt": "2026-11-01T22:08:19.347Z"
+  "updatedAt": "2026-11-02T16:09:20.314Z"
 }
