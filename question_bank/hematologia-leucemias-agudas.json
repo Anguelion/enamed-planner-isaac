@@ -1548,10 +1548,25 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Nefrologia",
+        "Lesão renal aguda (LRA)",
+        "Causas especificas",
+        "Síndrome de Lise Tumoral (SLT)",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106942",
-      "ankiGuid": "PKhfG7HMvp"
+      "ankiGuid": "PKhfG7HMvp",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Sindrome-Lise-Tumoral155886de9f5/",
+        "sourceQuestionId": "4000082107",
+        "matchedAt": "2026-11-03T14:26:00.459Z",
+        "confidence": 0.9822335025380711
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-70c57efd77ba587f",
@@ -1582,10 +1597,21 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Leucemia mieloide aguda (LMA)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106943",
-      "ankiGuid": "C&w]j?=Qx]"
+      "ankiGuid": "C&w]j?=Qx]",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/leucemia-mieloide923392eb0/",
+        "sourceQuestionId": "4000075822",
+        "matchedAt": "2026-11-03T14:26:06.568Z",
+        "confidence": 0.99625
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-0914be835ef630e1",

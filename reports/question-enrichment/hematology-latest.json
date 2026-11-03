@@ -1,24 +1,89 @@
 {
-  "generatedAt": "2026-11-02T16:08:48.686Z",
+  "generatedAt": "2026-11-03T14:25:35.936Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 6,
+  "changed": 5,
   "results": [
     {
-      "id": "anki-hematologia-leucemias-agudas-6352cacabfe8dabb",
-      "number": "1030h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-f027e7283c8a2a78",
+      "number": "1056b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Analise-alteracoes-que996832a06b/",
-      "sourceQuestionId": "4000084340",
-      "matchedAt": "2026-11-02T16:08:49.819Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/as-drogas168488dd33/",
+      "sourceQuestionId": "4000043348",
+      "matchedAt": "2026-11-03T14:25:36.942Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Anticoagulantes orais diretos"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Anticoagulantes orais diretos. Conduta/resposta: Rivaroxabana.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/as-drogas168488dd33/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-a618108a8eae2c49",
+      "number": "1057b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-e-antidoto6306a4fa0/",
+      "sourceQuestionId": "4000094920",
+      "matchedAt": "2026-11-03T14:25:42.930Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Outros",
+        "Psiquiatria",
+        "Intoxicações Exógenas",
+        "Intoxicação por Anticoagulantes",
+        "Sumário dos Tóxicos e Antídotos",
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Heparinas"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Heparinas. Conduta/resposta: sulfato de protamina",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Qual-e-antidoto6306a4fa0/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-8ac742eff3bc306a",
+      "number": "1058b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/trombocitopenia10294071d1/",
+      "sourceQuestionId": "4000064172",
+      "matchedAt": "2026-11-03T14:25:48.678Z",
+      "similarity": {
+        "stem": 1,
+        "options": 0.9800000000000001,
+        "combined": 0.994
       },
       "localAnswer": "D",
       "remoteAnswer": "D",
@@ -26,168 +91,36 @@
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Leucemias",
-        "Leucemias agudas",
-        "Leucemia linfoide aguda (LLA)",
-        "Quadro clínico da leucemia linfoide aguda (LLA)",
-        "Diagnóstico da leucemia linfoide aguda (LLA)"
+        "Hemostasia",
+        "Hemostasia primária",
+        "Trombocitopenia induzida pela heparina (HIT)"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Diagnóstico da leucemia linfoide aguda (LLA). Conduta/resposta: I, II e III.",
+      "comment": "Gabarito confirmado: D. Assunto: Trombocitopenia induzida pela heparina (HIT). Conduta/resposta: é um processo mediado por anticorpos dirigidos contra neoantígenos de complexos heparina-PF4.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Analise-alteracoes-que996832a06b/"
+        "https://med.estrategia.com/public/questoes/trombocitopenia10294071d1/"
       ]
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-171fc64d8a1622ed",
-      "number": "1031h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-23-anos-com411ee5a746/",
-      "sourceQuestionId": "4000083537",
-      "matchedAt": "2026-11-02T16:08:55.838Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Nefrologia",
-        "Lesão renal aguda (LRA)",
-        "Causas especificas",
-        "Síndrome de Lise Tumoral (SLT)",
-        "Hematologia",
-        "Linfomas",
-        "Linfomas não Hodgkin (LNH)",
-        "Linfomas não Hodgkin (LNH) muito agressivos (protótipo Burkitt)",
-        "Fundamentos de oncohematologia",
-        "Intercorrências em oncohematologia"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Intercorrências em oncohematologia. Conduta/resposta: hidratação e alopurinol",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-23-anos-com411ee5a746/"
-      ]
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-03aaa0aa7c6faf77",
+      "number": "1059b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-715ce1565824ac98",
-      "number": "1091h",
+      "id": "anki-hematologia-leucemias-agudas-e375f73dca5af9e3",
+      "number": "1032h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/lise-tumoral-e-correto768ace56c/",
-      "sourceQuestionId": "4000030549",
-      "matchedAt": "2026-11-02T16:09:01.640Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Sindrome-Lise-Tumoral155886de9f5/",
+      "sourceQuestionId": "4000082107",
+      "matchedAt": "2026-11-03T14:26:00.459Z",
       "similarity": {
-        "stem": 1,
+        "stem": 0.9746192893401016,
         "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Nefrologia",
-        "Lesão renal aguda (LRA)",
-        "Causas especificas",
-        "Síndrome de Lise Tumoral (SLT)",
-        "Hematologia",
-        "Fundamentos de oncohematologia",
-        "Intercorrências em oncohematologia",
-        "Distúrbios do potássio",
-        "Hipercalemia",
-        "Causas de Hipercalemia",
-        "Liberação da carga de potássio do intracelular",
-        "Síndrome de Lise Tumoral"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Síndrome de Lise Tumoral. Conduta/resposta: Laboratorialmente é caracterizada pelas seguintes anormalidades, hipercalemia, hiperuricemia, hipercalcemia e hiperfosfatemia",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/lise-tumoral-e-correto768ace56c/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-5954d5dec74490f8",
-      "number": "1092h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-anormalidades1035f09936/",
-      "sourceQuestionId": "4000121865",
-      "matchedAt": "2026-11-02T16:09:07.834Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Nefrologia",
-        "Lesão renal aguda (LRA)",
-        "Causas especificas",
-        "Síndrome de Lise Tumoral (SLT)",
-        "Hematologia",
-        "Fundamentos de oncohematologia",
-        "Intercorrências em oncohematologia"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Intercorrências em oncohematologia. Conduta/resposta: Hipercalcemia.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Sa-anormalidades1035f09936/",
-        "https://med.estrategia.com/public/questoes/malignidades1650d75ece/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-fbdd313dd3c895d6",
-      "number": "1093h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-56-anos-com521feb3509/",
-      "sourceQuestionId": "4000095100",
-      "matchedAt": "2026-11-02T16:09:14.061Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Endocrinologia",
-        "Metabolismo Ósseo e Mineral",
-        "Distúrbios do cálcio",
-        "Hipercalcemia",
-        "Hematologia",
-        "Fundamentos de oncohematologia",
-        "Intercorrências em oncohematologia",
-        "Hipercalcemia maligna"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Hipercalcemia maligna. Conduta/resposta: Hipercalcemia.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Homem-56-anos-com521feb3509/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-bdacbebe350c9c72",
-      "number": "1094h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-85-anos-apos103e4c442be/",
-      "sourceQuestionId": "4000095014",
-      "matchedAt": "2026-11-02T16:09:20.314Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
+        "combined": 0.9822335025380711
       },
       "localAnswer": "B",
       "remoteAnswer": "B",
@@ -202,10 +135,38 @@
         "Fundamentos de oncohematologia",
         "Intercorrências em oncohematologia"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Intercorrências em oncohematologia. Conduta/resposta: Apenas II.",
+      "comment": "Gabarito confirmado: B. Assunto: Intercorrências em oncohematologia. Conduta/resposta: II e III.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Homem-85-anos-apos103e4c442be/",
-        "https://med.estrategia.com/public/questoes/Paciente-idoso-72-anos13505a68428/"
+        "https://med.estrategia.com/public/questoes/Sindrome-Lise-Tumoral155886de9f5/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-leucemias-agudas-70c57efd77ba587f",
+      "number": "1033h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/leucemia-mieloide923392eb0/",
+      "sourceQuestionId": "4000075822",
+      "matchedAt": "2026-11-03T14:26:06.568Z",
+      "similarity": {
+        "stem": 1,
+        "options": 0.9875,
+        "combined": 0.99625
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Leucemias",
+        "Leucemias agudas",
+        "Leucemia mieloide aguda (LMA)"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Leucemia mieloide aguda (LMA). Conduta/resposta: A contagem de leucócitos pode estar baixa, normal ou acentuadamente elevada.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/leucemia-mieloide923392eb0/"
       ]
     }
   ]

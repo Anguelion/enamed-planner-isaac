@@ -4183,40 +4183,40 @@
     },
     "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-f027e7283c8a2a78": {
       "number": "1056b",
-      "status": "not_found",
-      "attempts": 3,
-      "lastAttemptAt": "2026-10-13T14:19:45.002Z",
-      "nextAttemptAt": "2026-11-03T14:19:45.002Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 4,
+      "lastAttemptAt": "2026-11-03T14:25:36.943Z",
+      "nextAttemptAt": "2026-12-01T14:25:36.943Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/as-drogas168488dd33/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     },
     "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-a618108a8eae2c49": {
       "number": "1057b",
-      "status": "not_found",
-      "attempts": 3,
-      "lastAttemptAt": "2026-10-13T14:19:50.665Z",
-      "nextAttemptAt": "2026-11-03T14:19:50.665Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 4,
+      "lastAttemptAt": "2026-11-03T14:25:42.931Z",
+      "nextAttemptAt": "2026-12-01T14:25:42.931Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-e-antidoto6306a4fa0/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-8ac742eff3bc306a": {
       "number": "1058b",
-      "status": "not_found",
-      "attempts": 3,
-      "lastAttemptAt": "2026-10-13T14:19:56.331Z",
-      "nextAttemptAt": "2026-11-03T14:19:56.331Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 4,
+      "lastAttemptAt": "2026-11-03T14:25:48.678Z",
+      "nextAttemptAt": "2026-12-01T14:25:48.678Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/trombocitopenia10294071d1/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     },
     "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-03aaa0aa7c6faf77": {
       "number": "1059b",
       "status": "not_found",
-      "attempts": 3,
-      "lastAttemptAt": "2026-10-13T14:20:01.869Z",
-      "nextAttemptAt": "2026-11-03T14:20:01.869Z",
+      "attempts": 4,
+      "lastAttemptAt": "2026-11-03T14:25:54.668Z",
+      "nextAttemptAt": "2026-12-01T14:25:54.668Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -6523,23 +6523,23 @@
     },
     "anki-hematologia-leucemias-agudas-e375f73dca5af9e3": {
       "number": "1032h",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-26T22:44:11.244Z",
-      "nextAttemptAt": "2026-11-02T22:44:11.244Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-11-03T14:26:00.459Z",
+      "nextAttemptAt": "2026-11-17T14:26:00.459Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Sindrome-Lise-Tumoral155886de9f5/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     },
     "anki-hematologia-leucemias-agudas-70c57efd77ba587f": {
       "number": "1033h",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-26T22:44:16.751Z",
-      "nextAttemptAt": "2026-11-02T22:44:16.751Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-11-03T14:26:06.568Z",
+      "nextAttemptAt": "2026-11-17T14:26:06.568Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/leucemia-mieloide923392eb0/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     },
     "anki-hematologia-leucemias-agudas-0914be835ef630e1": {
       "number": "1034h",
@@ -7152,5 +7152,5 @@
       "remoteAnswer": "B"
     }
   },
-  "updatedAt": "2026-11-02T16:09:20.314Z"
+  "updatedAt": "2026-11-03T14:26:06.568Z"
 }

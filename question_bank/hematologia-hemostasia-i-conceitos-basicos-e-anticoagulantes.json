@@ -1660,10 +1660,23 @@
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Anticoagulantes orais diretos",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742439652016",
-      "ankiGuid": "k_^gMMwMDJ"
+      "ankiGuid": "k_^gMMwMDJ",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/as-drogas168488dd33/",
+        "sourceQuestionId": "4000043348",
+        "matchedAt": "2026-11-03T14:25:36.942Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-a618108a8eae2c49",
@@ -1694,10 +1707,28 @@
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
-        "Anki"
+        "Anki",
+        "Outros",
+        "Psiquiatria",
+        "Intoxicações Exógenas",
+        "Intoxicação por Anticoagulantes",
+        "Sumário dos Tóxicos e Antídotos",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia Secundária",
+        "Fármacos e agentes relacionados a hemostasia secundária",
+        "Heparinas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742439652017",
-      "ankiGuid": "NcuQchF?6a"
+      "ankiGuid": "NcuQchF?6a",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-e-antidoto6306a4fa0/",
+        "sourceQuestionId": "4000094920",
+        "matchedAt": "2026-11-03T14:25:42.930Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-8ac742eff3bc306a",
@@ -1728,10 +1759,22 @@
       "tags": [
         "Hematologia",
         "Hemostasia I - Conceitos Básicos e Anticoagulantes",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Trombocitopenia induzida pela heparina (HIT)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742439652018",
-      "ankiGuid": "tH;e2~f#:+"
+      "ankiGuid": "tH;e2~f#:+",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/trombocitopenia10294071d1/",
+        "sourceQuestionId": "4000064172",
+        "matchedAt": "2026-11-03T14:25:48.678Z",
+        "confidence": 0.994
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-03aaa0aa7c6faf77",
