@@ -1,173 +1,85 @@
 {
-  "generatedAt": "2026-11-03T14:25:35.936Z",
+  "generatedAt": "2026-11-03T23:28:46.971Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 5,
+  "changed": 1,
   "results": [
     {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-f027e7283c8a2a78",
-      "number": "1056b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-c91a059ba79a6442",
+      "number": "1030a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/as-drogas168488dd33/",
-      "sourceQuestionId": "4000043348",
-      "matchedAt": "2026-11-03T14:25:36.942Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Izabel-50-anos-com1202b0b153e/",
+      "sourceQuestionId": "4000048075",
+      "matchedAt": "2026-11-03T23:28:49.120Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
+      "localAnswer": "A",
+      "remoteAnswer": "A",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
+        "Neurologia",
+        "Demências",
+        "Demências Reversíveis",
+        "Deficiência de Vitamina B12 e Ácido Fólico",
         "Hematologia",
-        "Hemostasia",
-        "Hemostasia Secundária",
-        "Fármacos e agentes relacionados a hemostasia secundária",
-        "Anticoagulantes orais diretos"
+        "Anemias macrocíticas",
+        "Anemia megaloblástica",
+        "Deficiência de vitamina B12",
+        "Quadro clínico da anemia megaloblástica"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Anticoagulantes orais diretos. Conduta/resposta: Rivaroxabana.",
+      "comment": "Gabarito confirmado: A. Assunto: Quadro clínico da anemia megaloblástica. Conduta/resposta: neutrófilos multisegmentados.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/as-drogas168488dd33/"
+        "https://med.estrategia.com/public/questoes/Izabel-50-anos-com11509b508ab/",
+        "https://med.estrategia.com/public/questoes/Izabel-50-anos-com1202b0b153e/"
       ]
     },
     {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-a618108a8eae2c49",
-      "number": "1057b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-e-antidoto6306a4fa0/",
-      "sourceQuestionId": "4000094920",
-      "matchedAt": "2026-11-03T14:25:42.930Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Outros",
-        "Psiquiatria",
-        "Intoxicações Exógenas",
-        "Intoxicação por Anticoagulantes",
-        "Sumário dos Tóxicos e Antídotos",
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Hemostasia Secundária",
-        "Fármacos e agentes relacionados a hemostasia secundária",
-        "Heparinas"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Heparinas. Conduta/resposta: sulfato de protamina",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Qual-e-antidoto6306a4fa0/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-8ac742eff3bc306a",
-      "number": "1058b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/trombocitopenia10294071d1/",
-      "sourceQuestionId": "4000064172",
-      "matchedAt": "2026-11-03T14:25:48.678Z",
-      "similarity": {
-        "stem": 1,
-        "options": 0.9800000000000001,
-        "combined": 0.994
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Hemostasia",
-        "Hemostasia primária",
-        "Trombocitopenia induzida pela heparina (HIT)"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Trombocitopenia induzida pela heparina (HIT). Conduta/resposta: é um processo mediado por anticorpos dirigidos contra neoantígenos de complexos heparina-PF4.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/trombocitopenia10294071d1/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-03aaa0aa7c6faf77",
-      "number": "1059b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "id": "anki-hematologia-leucemias-agudas-0914be835ef630e1",
+      "number": "1034h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-e375f73dca5af9e3",
-      "number": "1032h",
+      "id": "anki-hematologia-leucemias-agudas-d2f3b9d99f64c3ae",
+      "number": "1035h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Sindrome-Lise-Tumoral155886de9f5/",
-      "sourceQuestionId": "4000082107",
-      "matchedAt": "2026-11-03T14:26:00.459Z",
-      "similarity": {
-        "stem": 0.9746192893401016,
-        "options": 1,
-        "combined": 0.9822335025380711
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Nefrologia",
-        "Lesão renal aguda (LRA)",
-        "Causas especificas",
-        "Síndrome de Lise Tumoral (SLT)",
-        "Hematologia",
-        "Fundamentos de oncohematologia",
-        "Intercorrências em oncohematologia"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Intercorrências em oncohematologia. Conduta/resposta: II e III.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Sindrome-Lise-Tumoral155886de9f5/"
-      ]
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-70c57efd77ba587f",
-      "number": "1033h",
+      "id": "anki-hematologia-leucemias-agudas-456a0683f7f87fef",
+      "number": "1044h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/leucemia-mieloide923392eb0/",
-      "sourceQuestionId": "4000075822",
-      "matchedAt": "2026-11-03T14:26:06.568Z",
-      "similarity": {
-        "stem": 1,
-        "options": 0.9875,
-        "combined": 0.99625
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Leucemias",
-        "Leucemias agudas",
-        "Leucemia mieloide aguda (LMA)"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Leucemia mieloide aguda (LMA). Conduta/resposta: A contagem de leucócitos pode estar baixa, normal ou acentuadamente elevada.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/leucemia-mieloide923392eb0/"
-      ]
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-leucemias-agudas-29ce23924518acfd",
+      "number": "1095h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-leucemias-agudas-c58975b3ed3d18fb",
+      "number": "1096h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     }
   ]
 }

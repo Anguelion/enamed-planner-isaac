@@ -5603,13 +5603,13 @@
     },
     "anki-hematologia-introducao-ao-estudo-das-anemias-c91a059ba79a6442": {
       "number": "1030a",
-      "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-10-20T21:43:27.875Z",
-      "nextAttemptAt": "2026-11-03T21:43:27.875Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 3,
+      "lastAttemptAt": "2026-11-03T23:28:49.122Z",
+      "nextAttemptAt": "2026-11-24T23:28:49.122Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Izabel-50-anos-com1202b0b153e/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
     },
     "anki-hematologia-introducao-ao-estudo-das-anemias-c34658119c6b845d": {
       "number": "1031a",
@@ -6544,9 +6544,9 @@
     "anki-hematologia-leucemias-agudas-0914be835ef630e1": {
       "number": "1034h",
       "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-26T22:44:22.237Z",
-      "nextAttemptAt": "2026-11-02T22:44:22.237Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-11-03T23:28:54.558Z",
+      "nextAttemptAt": "2026-11-17T23:28:54.558Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -6554,9 +6554,9 @@
     "anki-hematologia-leucemias-agudas-d2f3b9d99f64c3ae": {
       "number": "1035h",
       "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-26T22:44:27.736Z",
-      "nextAttemptAt": "2026-11-02T22:44:27.736Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-11-03T23:28:59.981Z",
+      "nextAttemptAt": "2026-11-17T23:28:59.981Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -6644,9 +6644,9 @@
     "anki-hematologia-leucemias-agudas-456a0683f7f87fef": {
       "number": "1044h",
       "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-27T22:21:27.265Z",
-      "nextAttemptAt": "2026-11-03T22:21:27.265Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-11-03T23:29:05.349Z",
+      "nextAttemptAt": "2026-11-17T23:29:05.349Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -7150,7 +7150,27 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-85-anos-apos103e4c442be/",
       "localAnswer": "B",
       "remoteAnswer": "B"
+    },
+    "anki-hematologia-leucemias-agudas-29ce23924518acfd": {
+      "number": "1095h",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-03T23:29:10.707Z",
+      "nextAttemptAt": "2026-11-10T23:29:10.707Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-agudas-c58975b3ed3d18fb": {
+      "number": "1096h",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-03T23:29:16.052Z",
+      "nextAttemptAt": "2026-11-10T23:29:16.052Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-11-03T14:26:06.568Z"
+  "updatedAt": "2026-11-03T23:29:16.052Z"
 }
