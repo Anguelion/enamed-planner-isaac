@@ -1,85 +1,197 @@
 {
-  "generatedAt": "2026-11-03T23:28:46.971Z",
+  "generatedAt": "2026-11-04T14:40:17.581Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 1,
+  "changed": 6,
   "results": [
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-c91a059ba79a6442",
-      "number": "1030a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "id": "anki-hematologia-leucemias-agudas-a447bb1cbb8dde30",
+      "number": "1045h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Izabel-50-anos-com1202b0b153e/",
-      "sourceQuestionId": "4000048075",
-      "matchedAt": "2026-11-03T23:28:49.120Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-alteracoes8164e7f95/",
+      "sourceQuestionId": "4000063749",
+      "matchedAt": "2026-11-04T14:40:18.615Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
+      "localAnswer": "C",
+      "remoteAnswer": "C",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
-        "Neurologia",
-        "Demências",
-        "Demências Reversíveis",
-        "Deficiência de Vitamina B12 e Ácido Fólico",
         "Hematologia",
-        "Anemias macrocíticas",
-        "Anemia megaloblástica",
-        "Deficiência de vitamina B12",
-        "Quadro clínico da anemia megaloblástica"
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
+        "Síndrome de lise tumoral (SLT)"
       ],
-      "comment": "Gabarito confirmado: A. Assunto: Quadro clínico da anemia megaloblástica. Conduta/resposta: neutrófilos multisegmentados.",
+      "comment": "Gabarito confirmado: C. Assunto: Síndrome de lise tumoral (SLT). Conduta/resposta: Hiperuricemia e hipercalemia.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Izabel-50-anos-com11509b508ab/",
-        "https://med.estrategia.com/public/questoes/Izabel-50-anos-com1202b0b153e/"
+        "https://med.estrategia.com/public/questoes/Sa-alteracoes8164e7f95/"
       ]
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-0914be835ef630e1",
-      "number": "1034h",
+      "id": "anki-hematologia-leucemias-agudas-fa868157395504f1",
+      "number": "1046h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Jovem-26-anos5386b925ba/",
+      "sourceQuestionId": "4000053771",
+      "matchedAt": "2026-11-04T14:40:25.237Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Infectologia",
+        "Síndromes febris",
+        "Neutropenia febril",
+        "Hematologia",
+        "Leucemias",
+        "Leucemias agudas",
+        "Introdução às leucemias agudas",
+        "Leucemia mieloide aguda (LMA)",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Intercorrências em oncohematologia. Conduta/resposta: Leucemia mieloide aguda, mielograma, transfusão de plaquetas e antibioticoterapia empírica.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Jovem-26-anos5386b925ba/",
+        "https://med.estrategia.com/public/questoes/Pre-escolar-apresenta50fcd9ac63/"
+      ]
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-d2f3b9d99f64c3ae",
-      "number": "1035h",
+      "id": "anki-hematologia-leucemias-agudas-675d652d90f0494d",
+      "number": "1047h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/leucemias-sa33df25570a/",
+      "sourceQuestionId": "4000049898",
+      "matchedAt": "2026-11-04T14:40:31.931Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Leucemias",
+        "Leucemias agudas",
+        "Leucemia linfoide aguda (LLA)"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Leucemia linfoide aguda (LLA). Conduta/resposta: Estão entre os fatores prognósticos favoráveis da leucemia linfóide aguda: idade entre 1 a 9 anos e leucometria abaixo de 50000/mm³.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/leucemias-sa33df25570a/",
+        "https://med.estrategia.com/public/questoes/leucemias-sa29343be301/"
+      ]
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-456a0683f7f87fef",
-      "number": "1044h",
+      "id": "anki-hematologia-leucemias-agudas-77a8dccc8b3ca265",
+      "number": "1097h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/emergencias31969842be/",
+      "sourceQuestionId": "4000056448",
+      "matchedAt": "2026-11-04T14:40:38.437Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Nefrologia",
+        "Lesão renal aguda (LRA)",
+        "Causas especificas",
+        "Síndrome de Lise Tumoral (SLT)",
+        "Hematologia",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Intercorrências em oncohematologia. Conduta/resposta: Hipercalemia, hiperfosfatemia, hipocalcemia e hiperuricemia.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/emergencias31969842be/"
+      ]
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-29ce23924518acfd",
-      "number": "1095h",
+      "id": "anki-hematologia-leucemias-agudas-aa8b3dbc52bc374e",
+      "number": "1098h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-que17ce147845/",
+      "sourceQuestionId": "4000067593",
+      "matchedAt": "2026-11-04T14:40:44.308Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Leucemias",
+        "Leucemias agudas",
+        "Leucemia linfoide aguda (LLA)",
+        "Classificação da leucemia linfoide aguda - LLA (morfológica, citogenética e biologia molecular)"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Classificação da leucemia linfoide aguda - LLA (morfológica, citogenética e biologia molecular). Conduta/resposta: Hipodiploidia, cromossomo Filadélfia, t(4;11).",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/alternativa-que17ce147845/"
+      ]
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-c58975b3ed3d18fb",
-      "number": "1096h",
+      "id": "anki-hematologia-leucemias-agudas-8a059e8a6f11f979",
+      "number": "1099h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/leucemias-infancia9d6ea911c/",
+      "sourceQuestionId": "4000054658",
+      "matchedAt": "2026-11-04T14:40:50.607Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Leucemias",
+        "Leucemias agudas",
+        "Leucemia linfoide aguda (LLA)"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Leucemia linfoide aguda (LLA). Conduta/resposta: Adenomegalia, sangramentos, artrite e dores ósseas são os sintomas mais frequentes da Leucemia Linfocítica Aguda.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/leucemias-infancia9d6ea911c/",
+        "https://med.estrategia.com/public/questoes/alternativa-quanto-as1024005c35/"
+      ]
     }
   ]
 }

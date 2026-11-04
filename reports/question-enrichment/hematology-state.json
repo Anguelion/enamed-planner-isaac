@@ -6653,33 +6653,33 @@
     },
     "anki-hematologia-leucemias-agudas-a447bb1cbb8dde30": {
       "number": "1045h",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-28T13:05:46.976Z",
-      "nextAttemptAt": "2026-11-04T13:05:46.976Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-11-04T14:40:18.616Z",
+      "nextAttemptAt": "2026-11-18T14:40:18.616Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Sa-alteracoes8164e7f95/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-leucemias-agudas-fa868157395504f1": {
       "number": "1046h",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-28T13:05:52.600Z",
-      "nextAttemptAt": "2026-11-04T13:05:52.600Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-11-04T14:40:25.238Z",
+      "nextAttemptAt": "2026-11-18T14:40:25.238Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Jovem-26-anos5386b925ba/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-leucemias-agudas-675d652d90f0494d": {
       "number": "1047h",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-28T13:05:58.074Z",
-      "nextAttemptAt": "2026-11-04T13:05:58.074Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-11-04T14:40:31.932Z",
+      "nextAttemptAt": "2026-11-18T14:40:31.932Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/leucemias-sa33df25570a/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     },
     "anki-hematologia-leucemias-agudas-de1455716128ad9f": {
       "number": "1048h",
@@ -7170,7 +7170,37 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-agudas-77a8dccc8b3ca265": {
+      "number": "1097h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-04T14:40:38.437Z",
+      "nextAttemptAt": "2026-11-11T14:40:38.437Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/emergencias31969842be/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-leucemias-agudas-aa8b3dbc52bc374e": {
+      "number": "1098h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-04T14:40:44.308Z",
+      "nextAttemptAt": "2026-11-11T14:40:44.308Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-que17ce147845/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-leucemias-agudas-8a059e8a6f11f979": {
+      "number": "1099h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-04T14:40:50.607Z",
+      "nextAttemptAt": "2026-11-11T14:40:50.607Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/leucemias-infancia9d6ea911c/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     }
   },
-  "updatedAt": "2026-11-03T23:29:16.052Z"
+  "updatedAt": "2026-11-04T14:40:50.607Z"
 }
