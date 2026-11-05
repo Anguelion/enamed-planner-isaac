@@ -2948,10 +2948,35 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Nefrologia",
+        "Lesão renal aguda (LRA)",
+        "Causas especificas",
+        "Síndrome de Lise Tumoral (SLT)",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
+        "Linfomas",
+        "Linfomas não Hodgkin (LNH)",
+        "Linfomas não Hodgkin (LNH) muito agressivos (protótipo Burkitt)",
+        "Quadro clínico dos Linfomas não Hodgkin (LNH) muito agressivos",
+        "Classificação dos Linfomas não Hodgkin (LNH) muito agressivos",
+        "Distúrbios do potássio",
+        "Hipercalemia",
+        "Causas de Hipercalemia",
+        "Liberação da carga de potássio do intracelular",
+        "Síndrome de Lise Tumoral",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106973",
-      "ankiGuid": "G=J;OHWFZ="
+      "ankiGuid": "G=J;OHWFZ=",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Crianc-9-anos43977c2506/",
+        "sourceQuestionId": "4000000473",
+        "matchedAt": "2026-11-05T23:41:53.194Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-23287dac5a9a8cb6",
@@ -2981,10 +3006,20 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106974",
-      "ankiGuid": "qefmmLD~ba"
+      "ankiGuid": "qefmmLD~ba",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-21a-procura154a17a9e43/",
+        "sourceQuestionId": "4000130262",
+        "matchedAt": "2026-11-05T23:41:59.201Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-3c805636f3b841e3",

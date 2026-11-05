@@ -5793,33 +5793,33 @@
     },
     "anki-hematologia-introducao-ao-estudo-das-anemias-8e15215d6a12ffdb": {
       "number": "1049a",
-      "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-10-22T21:42:26.229Z",
-      "nextAttemptAt": "2026-11-05T21:42:26.229Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 3,
+      "lastAttemptAt": "2026-11-05T23:41:29.397Z",
+      "nextAttemptAt": "2026-11-26T23:41:29.397Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paulo-35-anos2514ef4068/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-introducao-ao-estudo-das-anemias-8c412760abc3022a": {
       "number": "1050a",
-      "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-10-22T21:42:31.702Z",
-      "nextAttemptAt": "2026-11-05T21:42:31.702Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 3,
+      "lastAttemptAt": "2026-11-05T23:41:35.800Z",
+      "nextAttemptAt": "2026-11-26T23:41:35.800Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/anemias-marque6f61ecc8d/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
     },
     "anki-hematologia-introducao-ao-estudo-das-anemias-c1d905a26a55296d": {
       "number": "1051a",
-      "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-10-22T21:42:37.225Z",
-      "nextAttemptAt": "2026-11-05T21:42:37.225Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 3,
+      "lastAttemptAt": "2026-11-05T23:41:41.601Z",
+      "nextAttemptAt": "2026-11-26T23:41:41.601Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Esfregac-periferico26614cd9c5/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-introducao-ao-estudo-das-anemias-d47777337abe299a": {
       "number": "1052a",
@@ -6824,32 +6824,32 @@
     "anki-hematologia-leucemias-agudas-1f42f786a5e55420": {
       "number": "1062h",
       "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-29T22:50:08.576Z",
-      "nextAttemptAt": "2026-11-05T22:50:08.576Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-11-05T23:41:47.417Z",
+      "nextAttemptAt": "2026-11-19T23:41:47.417Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
     },
     "anki-hematologia-leucemias-agudas-49f05bb041b4cc20": {
       "number": "1063h",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-29T22:50:14.039Z",
-      "nextAttemptAt": "2026-11-05T22:50:14.039Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-11-05T23:41:53.196Z",
+      "nextAttemptAt": "2026-11-19T23:41:53.196Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Crianc-9-anos43977c2506/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-leucemias-agudas-23287dac5a9a8cb6": {
       "number": "1064h",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-29T22:50:19.555Z",
-      "nextAttemptAt": "2026-11-05T22:50:19.555Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-11-05T23:41:59.201Z",
+      "nextAttemptAt": "2026-11-19T23:41:59.201Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-21a-procura154a17a9e43/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     },
     "anki-hematologia-leucemias-agudas-3c805636f3b841e3": {
       "number": "1065h",
@@ -7242,5 +7242,5 @@
       "remoteAnswer": "D"
     }
   },
-  "updatedAt": "2026-11-05T14:45:18.880Z"
+  "updatedAt": "2026-11-05T23:41:59.201Z"
 }

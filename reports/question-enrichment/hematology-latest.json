@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T14:44:46.988Z",
+  "generatedAt": "2026-11-05T23:41:28.100Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
@@ -7,148 +7,155 @@
   "changed": 5,
   "results": [
     {
-      "id": "anki-hematologia-anemias-hemoliticas-ba79f9d133177b44",
-      "number": "1032f",
-      "file": "question_bank/hematologia-anemias-hemoliticas.json",
-      "changed": false,
-      "status": "low_confidence",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Adolescente-sexo10047e7c9d9/"
-      ],
-      "bestSimilarity": {
-        "stem": 0.9142857142857143,
-        "options": 0.09166666666666667,
-        "combined": 0.6674999999999999
-      }
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-3710ebc870e85ec0",
-      "number": "1048a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-8e15215d6a12ffdb",
+      "number": "1049a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/causas-anemias-podem3927100525/",
-      "sourceQuestionId": "4000070945",
-      "matchedAt": "2026-11-05T14:44:54.550Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paulo-35-anos2514ef4068/",
+      "sourceQuestionId": "4000060073",
+      "matchedAt": "2026-11-05T23:41:29.396Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Anemias microcíticas",
+        "Diagnóstico diferencial das anemias microcíticas",
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Classificação morfológica das anemias. Conduta/resposta: Dosagem da ferritina.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paulo-35-anos2514ef4068/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-8c412760abc3022a",
+      "number": "1050a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/anemias-marque6f61ecc8d/",
+      "sourceQuestionId": "4000041363",
+      "matchedAt": "2026-11-05T23:41:35.799Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
         "Classificações das anemias",
-        "Classificação funcional das anemias",
-        "Anemias hipoproliferativas"
+        "Classificação funcional das anemias"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Anemias hipoproliferativas. Conduta/resposta: Anemia carencial.",
+      "comment": "Gabarito confirmado: A. Assunto: Classificação funcional das anemias. Conduta/resposta: AHAI é considerada hipoproliferativa.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/causas-anemias-podem3927100525/"
+        "https://med.estrategia.com/public/questoes/anemias-marque6f61ecc8d/",
+        "https://med.estrategia.com/public/questoes/anemia-megaloblastica85e2e5ad3/"
       ]
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-2a66485c16e67a9e",
-      "number": "10100h",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-c1d905a26a55296d",
+      "number": "1051a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Esfregac-periferico26614cd9c5/",
+      "sourceQuestionId": "4000017803",
+      "matchedAt": "2026-11-05T23:41:41.600Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico",
+        "Corpúsculos citoplasmáticos das hemácias",
+        "Corpos de Howell-Jolly"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Corpos de Howell-Jolly. Conduta/resposta: Antecedente de esplenectomia.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Esfregac-periferico26614cd9c5/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-leucemias-agudas-1f42f786a5e55420",
+      "number": "1062h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-leucemias-agudas-49f05bb041b4cc20",
+      "number": "1063h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/as-leucemias-e-CORRETO82a82e334/",
-      "sourceQuestionId": "4000052728",
-      "matchedAt": "2026-11-05T14:45:00.490Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Crianc-9-anos43977c2506/",
+      "sourceQuestionId": "4000000473",
+      "matchedAt": "2026-11-05T23:41:53.194Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "E",
-      "remoteAnswer": "E",
+      "localAnswer": "C",
+      "remoteAnswer": "C",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
+        "Nefrologia",
+        "Lesão renal aguda (LRA)",
+        "Causas especificas",
+        "Síndrome de Lise Tumoral (SLT)",
         "Hematologia",
-        "Leucemias",
-        "Leucemias agudas",
-        "Introdução às leucemias agudas"
-      ],
-      "comment": "Gabarito confirmado: E. Assunto: Introdução às leucemias agudas. Conduta/resposta: A neutropenia febril é uma complicação frequente do tratamento quimioterápico das leucemias, sendo necessária intervenção rápida com início de antibioticoterapia endovenosa.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/as-leucemias-e-CORRETO82a82e334/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-cac341c73fd91f11",
-      "number": "1001i",
-      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-genero68633d7567/",
-      "sourceQuestionId": "4000184685",
-      "matchedAt": "2026-11-05T14:45:06.772Z",
-      "similarity": {
-        "stem": 1,
-        "options": 0.9605263157894737,
-        "combined": 0.9881578947368421
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
         "Linfomas",
-        "Introdução aos linfomas",
-        "Diagnóstico dos linfomas (clínico, laboratorial – citogenética e biologia molecular)"
+        "Linfomas não Hodgkin (LNH)",
+        "Linfomas não Hodgkin (LNH) muito agressivos (protótipo Burkitt)",
+        "Quadro clínico dos Linfomas não Hodgkin (LNH) muito agressivos",
+        "Classificação dos Linfomas não Hodgkin (LNH) muito agressivos",
+        "Distúrbios do potássio",
+        "Hipercalemia",
+        "Causas de Hipercalemia",
+        "Liberação da carga de potássio do intracelular",
+        "Síndrome de Lise Tumoral"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Diagnóstico dos linfomas (clínico, laboratorial – citogenética e biologia molecular). Conduta/resposta: Encaminhar para biópsia excisional do linfonodo supra clavicular a esquerda",
+      "comment": "Gabarito confirmado: C. Assunto: Síndrome de Lise Tumoral. Conduta/resposta: Hipopotassemia.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-genero68633d7567/",
-        "https://med.estrategia.com/public/questoes/Paciente-sexo488722b510/"
+        "https://med.estrategia.com/public/questoes/Crianc-9-anos43977c2506/"
       ]
     },
     {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-d228606a53793252",
-      "number": "1002i",
-      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
+      "id": "anki-hematologia-leucemias-agudas-23287dac5a9a8cb6",
+      "number": "1064h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-que13354fd5f1/",
-      "sourceQuestionId": "4000184516",
-      "matchedAt": "2026-11-05T14:45:12.735Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Leucemias",
-        "Leucemias crônicas",
-        "Leucemia linfoide crônica (LLC)",
-        "Quadro clínico da leucemia linfoide crônica (LLC)"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Quadro clínico da leucemia linfoide crônica (LLC). Conduta/resposta: hipogamaglobulinemia e plaquetopenia",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/alternativa-que13354fd5f1/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-2e29059631900337",
-      "number": "1003i",
-      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-82-anos-idade353936179f/",
-      "sourceQuestionId": "4000183193",
-      "matchedAt": "2026-11-05T14:45:18.880Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-21a-procura154a17a9e43/",
+      "sourceQuestionId": "4000130262",
+      "matchedAt": "2026-11-05T23:41:59.201Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -161,15 +168,11 @@
         "Clínica Médica",
         "Hematologia",
         "Leucemias",
-        "Leucemias crônicas",
-        "Leucemia linfoide crônica (LLC)",
-        "Quadro clínico da leucemia linfoide crônica (LLC)",
-        "Diagnóstico da leucemia linfoide crônica (LLC)"
+        "Leucemias agudas"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Diagnóstico da leucemia linfoide crônica (LLC). Conduta/resposta: Leucemia linfocítica crônica; imunofenotipagem de sangue periférico.",
+      "comment": "Gabarito confirmado: D. Assunto: Leucemias agudas. Conduta/resposta: Leucemia aguda.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Homem-82-anos-idade353936179f/",
-        "https://med.estrategia.com/public/questoes/Paciente-82-anos-idade50aa9d29d2/"
+        "https://med.estrategia.com/public/questoes/Mulher-21a-procura154a17a9e43/"
       ]
     }
   ]
