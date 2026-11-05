@@ -1,20 +1,35 @@
 {
-  "generatedAt": "2026-11-04T23:47:54.057Z",
+  "generatedAt": "2026-11-05T14:44:46.988Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 6,
+  "changed": 5,
   "results": [
     {
-      "id": "anki-hematologia-leucemias-agudas-de1455716128ad9f",
-      "number": "1048h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "id": "anki-hematologia-anemias-hemoliticas-ba79f9d133177b44",
+      "number": "1032f",
+      "file": "question_bank/hematologia-anemias-hemoliticas.json",
+      "changed": false,
+      "status": "low_confidence",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Adolescente-sexo10047e7c9d9/"
+      ],
+      "bestSimilarity": {
+        "stem": 0.9142857142857143,
+        "options": 0.09166666666666667,
+        "combined": 0.6674999999999999
+      }
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-3710ebc870e85ec0",
+      "number": "1048a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-32-anos35577c7cc3/",
-      "sourceQuestionId": "4000046150",
-      "matchedAt": "2026-11-04T23:47:55.386Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/causas-anemias-podem3927100525/",
+      "sourceQuestionId": "4000070945",
+      "matchedAt": "2026-11-05T14:44:54.550Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -26,56 +41,84 @@
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Fundamentos de oncohematologia",
-        "Intercorrências em oncohematologia",
-        "Síndrome de lise tumoral (SLT)"
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
+        "Classificação funcional das anemias",
+        "Anemias hipoproliferativas"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Síndrome de lise tumoral (SLT). Conduta/resposta: Hiperuricemia",
+      "comment": "Gabarito confirmado: B. Assunto: Anemias hipoproliferativas. Conduta/resposta: Anemia carencial.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-32-anos35577c7cc3/"
+        "https://med.estrategia.com/public/questoes/causas-anemias-podem3927100525/"
       ]
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-a8489f9ec9772c23",
-      "number": "1049h",
+      "id": "anki-hematologia-leucemias-agudas-2a66485c16e67a9e",
+      "number": "10100h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-que-NA151c74847d/",
-      "sourceQuestionId": "4000016122",
-      "matchedAt": "2026-11-04T23:48:02.156Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/as-leucemias-e-CORRETO82a82e334/",
+      "sourceQuestionId": "4000052728",
+      "matchedAt": "2026-11-05T14:45:00.490Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
+      "localAnswer": "E",
+      "remoteAnswer": "E",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
         "Leucemias",
         "Leucemias agudas",
-        "Leucemia linfoide aguda (LLA)",
-        "Classificação da leucemia linfoide aguda - LLA (morfológica, citogenética e biologia molecular)",
-        "Diagnóstico da leucemia linfoide aguda (LLA)"
+        "Introdução às leucemias agudas"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Diagnóstico da leucemia linfoide aguda (LLA). Conduta/resposta: Febre;",
+      "comment": "Gabarito confirmado: E. Assunto: Introdução às leucemias agudas. Conduta/resposta: A neutropenia febril é uma complicação frequente do tratamento quimioterápico das leucemias, sendo necessária intervenção rápida com início de antibioticoterapia endovenosa.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/alternativa-que-NA151c74847d/",
-        "https://med.estrategia.com/public/questoes/alternativa-que-na155f89eb06/"
+        "https://med.estrategia.com/public/questoes/as-leucemias-e-CORRETO82a82e334/"
       ]
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-65a2d0143b11ca80",
-      "number": "1050h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-cac341c73fd91f11",
+      "number": "1001i",
+      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-50-anos-procurou1215516802b/",
-      "sourceQuestionId": "4000128290",
-      "matchedAt": "2026-11-04T23:48:08.217Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-genero68633d7567/",
+      "sourceQuestionId": "4000184685",
+      "matchedAt": "2026-11-05T14:45:06.772Z",
+      "similarity": {
+        "stem": 1,
+        "options": 0.9605263157894737,
+        "combined": 0.9881578947368421
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Linfomas",
+        "Introdução aos linfomas",
+        "Diagnóstico dos linfomas (clínico, laboratorial – citogenética e biologia molecular)"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Diagnóstico dos linfomas (clínico, laboratorial – citogenética e biologia molecular). Conduta/resposta: Encaminhar para biópsia excisional do linfonodo supra clavicular a esquerda",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-genero68633d7567/",
+        "https://med.estrategia.com/public/questoes/Paciente-sexo488722b510/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-d228606a53793252",
+      "number": "1002i",
+      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-que13354fd5f1/",
+      "sourceQuestionId": "4000184516",
+      "matchedAt": "2026-11-05T14:45:12.735Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -88,55 +131,24 @@
         "Clínica Médica",
         "Hematologia",
         "Leucemias",
-        "Leucemias agudas",
-        "Leucemia mieloide aguda (LMA)"
+        "Leucemias crônicas",
+        "Leucemia linfoide crônica (LLC)",
+        "Quadro clínico da leucemia linfoide crônica (LLC)"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Leucemia mieloide aguda (LMA). Conduta/resposta: Leucemia mieloide aguda.",
+      "comment": "Gabarito confirmado: B. Assunto: Quadro clínico da leucemia linfoide crônica (LLC). Conduta/resposta: hipogamaglobulinemia e plaquetopenia",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Homem-50-anos-procurou1215516802b/"
+        "https://med.estrategia.com/public/questoes/alternativa-que13354fd5f1/"
       ]
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-bcc12e841bf83a87",
-      "number": "1051h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-2e29059631900337",
+      "number": "1003i",
+      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-alteraca10360d661d/",
-      "sourceQuestionId": "4000110586",
-      "matchedAt": "2026-11-04T23:48:14.581Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Nefrologia",
-        "Lesão renal aguda (LRA)",
-        "Causas especificas",
-        "Síndrome de Lise Tumoral (SLT)",
-        "Hematologia",
-        "Fundamentos de oncohematologia",
-        "Intercorrências em oncohematologia"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Intercorrências em oncohematologia. Conduta/resposta: hiperfosfatemia",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Qual-alteraca10360d661d/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-70d03d2b3a03b677",
-      "number": "1052h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Menina-18-meses119052f26ac/",
-      "sourceQuestionId": "4000106226",
-      "matchedAt": "2026-11-04T23:48:20.661Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-82-anos-idade353936179f/",
+      "sourceQuestionId": "4000183193",
+      "matchedAt": "2026-11-05T14:45:18.880Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -149,50 +161,15 @@
         "Clínica Médica",
         "Hematologia",
         "Leucemias",
-        "Leucemias agudas",
-        "Leucemia linfoide aguda (LLA)",
-        "Diagnóstico da leucemia linfoide aguda (LLA)"
+        "Leucemias crônicas",
+        "Leucemia linfoide crônica (LLC)",
+        "Quadro clínico da leucemia linfoide crônica (LLC)",
+        "Diagnóstico da leucemia linfoide crônica (LLC)"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Diagnóstico da leucemia linfoide aguda (LLA). Conduta/resposta: Leucemia linfoide aguda de linhagem B",
+      "comment": "Gabarito confirmado: D. Assunto: Diagnóstico da leucemia linfoide crônica (LLC). Conduta/resposta: Leucemia linfocítica crônica; imunofenotipagem de sangue periférico.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Menina-18-meses119052f26ac/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-f743db3510516e53",
-      "number": "1053h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Sindrome-Lise-Tumoral14f5b12e6c/",
-      "sourceQuestionId": "4000100025",
-      "matchedAt": "2026-11-04T23:48:26.972Z",
-      "similarity": {
-        "stem": 1,
-        "options": 0.95,
-        "combined": 0.9849999999999999
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Nefrologia",
-        "Lesão renal aguda (LRA)",
-        "Causas especificas",
-        "Síndrome de Lise Tumoral (SLT)",
-        "Hematologia",
-        "Fundamentos de oncohematologia",
-        "Intercorrências em oncohematologia",
-        "Distúrbios do potássio",
-        "Hipercalemia",
-        "Causas de Hipercalemia",
-        "Liberação da carga de potássio do intracelular",
-        "Síndrome de Lise Tumoral"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Síndrome de Lise Tumoral. Conduta/resposta: Hiperuricemia, hipercalemia, hiperfosfatemia / Hiperhidratação sem K, alcalinização,agente hipouricemiante",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Sindrome-Lise-Tumoral14f5b12e6c/"
+        "https://med.estrategia.com/public/questoes/Homem-82-anos-idade353936179f/",
+        "https://med.estrategia.com/public/questoes/Paciente-82-anos-idade50aa9d29d2/"
       ]
     }
   ]

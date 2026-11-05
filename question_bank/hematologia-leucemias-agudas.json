@@ -4456,10 +4456,21 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Introdução às leucemias agudas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516107010",
-      "ankiGuid": "qX(k#%n)`M"
+      "ankiGuid": "qX(k#%n)`M",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/as-leucemias-e-CORRETO82a82e334/",
+        "sourceQuestionId": "4000052728",
+        "matchedAt": "2026-11-05T14:45:00.490Z",
+        "confidence": 1
+      }
     }
   ]
 }

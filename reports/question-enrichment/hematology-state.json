@@ -494,9 +494,9 @@
     "anki-hematologia-anemias-hemoliticas-ba79f9d133177b44": {
       "number": "1032f",
       "status": "low_confidence",
-      "attempts": 3,
-      "lastAttemptAt": "2026-09-06T11:03:29.759Z",
-      "nextAttemptAt": "2026-11-05T11:03:29.759Z",
+      "attempts": 4,
+      "lastAttemptAt": "2026-11-05T14:44:48.325Z",
+      "nextAttemptAt": "2027-01-04T14:44:48.325Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -5783,13 +5783,13 @@
     },
     "anki-hematologia-introducao-ao-estudo-das-anemias-3710ebc870e85ec0": {
       "number": "1048a",
-      "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-10-22T12:01:37.010Z",
-      "nextAttemptAt": "2026-11-05T12:01:37.010Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 3,
+      "lastAttemptAt": "2026-11-05T14:44:54.551Z",
+      "nextAttemptAt": "2026-11-26T14:44:54.551Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/causas-anemias-podem3927100525/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     },
     "anki-hematologia-introducao-ao-estudo-das-anemias-8e15215d6a12ffdb": {
       "number": "1049a",
@@ -7200,7 +7200,47 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/leucemias-infancia9d6ea911c/",
       "localAnswer": "C",
       "remoteAnswer": "C"
+    },
+    "anki-hematologia-leucemias-agudas-2a66485c16e67a9e": {
+      "number": "10100h",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-05T14:45:00.490Z",
+      "nextAttemptAt": "2026-11-12T14:45:00.490Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/as-leucemias-e-CORRETO82a82e334/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-cac341c73fd91f11": {
+      "number": "1001i",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-05T14:45:06.772Z",
+      "nextAttemptAt": "2026-11-12T14:45:06.772Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-genero68633d7567/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-d228606a53793252": {
+      "number": "1002i",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-05T14:45:12.735Z",
+      "nextAttemptAt": "2026-11-12T14:45:12.735Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-que13354fd5f1/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-2e29059631900337": {
+      "number": "1003i",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-05T14:45:18.880Z",
+      "nextAttemptAt": "2026-11-12T14:45:18.880Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-82-anos-idade353936179f/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     }
   },
-  "updatedAt": "2026-11-04T23:48:26.973Z"
+  "updatedAt": "2026-11-05T14:45:18.880Z"
 }

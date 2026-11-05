@@ -2459,10 +2459,22 @@
         "#Residência",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Classificações das anemias",
+        "Classificação funcional das anemias",
+        "Anemias hipoproliferativas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885751",
-      "ankiGuid": "O)2uFc&@I$"
+      "ankiGuid": "O)2uFc&@I$",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/causas-anemias-podem3927100525/",
+        "sourceQuestionId": "4000070945",
+        "matchedAt": "2026-11-05T14:44:54.550Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-8e15215d6a12ffdb",
