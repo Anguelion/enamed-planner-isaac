@@ -3333,10 +3333,23 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Leucemia mieloide aguda (LMA)",
+        "Classificação da leucemia mieloide aguda - LMA (morfológica, citogenética e biologia molecular)",
+        "Leucemia promielocítica aguda (LPA ou LMA-M3)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106981",
-      "ankiGuid": "E-FM;aAve9"
+      "ankiGuid": "E-FM;aAve9",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Leucemia9147a13aef/",
+        "sourceQuestionId": "4000061159",
+        "matchedAt": "2026-11-06T23:14:35.697Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-7803f953bf190355",
@@ -3369,10 +3382,24 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Fundamentos de oncohematologia",
+        "Classificação das neoplasias hematológicas",
+        "Biomarcadores",
+        "Biologia molecular",
+        "Definições terapêuticas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106982",
-      "ankiGuid": "Emirn0wUzT"
+      "ankiGuid": "Emirn0wUzT",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/a-imunofenotipagem11e353bca5/",
+        "sourceQuestionId": "4000056179",
+        "matchedAt": "2026-11-06T23:14:41.988Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-cfa08850978a6aa8",
@@ -3402,10 +3429,22 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Leucemia mieloide aguda (LMA)",
+        "Leucemia promielocítica aguda (LPA ou LMA-M3)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106983",
-      "ankiGuid": "NgeA:^kFo!"
+      "ankiGuid": "NgeA:^kFo!",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-e-intercorrencia1244cd0463/",
+        "sourceQuestionId": "4000019823",
+        "matchedAt": "2026-11-06T23:14:47.866Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-360235f242dbe847",
@@ -3435,10 +3474,21 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Introdução às leucemias agudas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106984",
-      "ankiGuid": "EULSIbmYpH"
+      "ankiGuid": "EULSIbmYpH",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-60-anos-sexo56b4e0df15/",
+        "sourceQuestionId": "4000019810",
+        "matchedAt": "2026-11-06T23:14:54.053Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-b5568df68e5ab1d9",
@@ -3469,10 +3519,25 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Nefrologia",
+        "Lesão renal aguda (LRA)",
+        "Causas especificas",
+        "Síndrome de Lise Tumoral (SLT)",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106985",
-      "ankiGuid": "K9bCv{;crq"
+      "ankiGuid": "K9bCv{;crq",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/malignidades1650d75ece/",
+        "sourceQuestionId": "4000126375",
+        "matchedAt": "2026-11-06T23:14:59.874Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-4a8a0714ec3a20e2",

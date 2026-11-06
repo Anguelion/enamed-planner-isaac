@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T14:23:02.810Z",
+  "generatedAt": "2026-11-06T23:14:34.563Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
@@ -7,14 +7,76 @@
   "changed": 6,
   "results": [
     {
-      "id": "anki-hematologia-leucemias-agudas-3c805636f3b841e3",
-      "number": "1065h",
+      "id": "anki-hematologia-leucemias-agudas-96081b5340ec3edc",
+      "number": "1071h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-34-anos-relata77af5b8026/",
-      "sourceQuestionId": "4000127736",
-      "matchedAt": "2026-11-06T14:23:03.805Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Leucemia9147a13aef/",
+      "sourceQuestionId": "4000061159",
+      "matchedAt": "2026-11-06T23:14:35.697Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Leucemias",
+        "Leucemias agudas",
+        "Leucemia mieloide aguda (LMA)",
+        "Classificação da leucemia mieloide aguda - LMA (morfológica, citogenética e biologia molecular)",
+        "Leucemia promielocítica aguda (LPA ou LMA-M3)"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Leucemia promielocítica aguda (LPA ou LMA-M3). Conduta/resposta: Síndrome retinoide.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Leucemia9147a13aef/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-leucemias-agudas-7803f953bf190355",
+      "number": "1072h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/a-imunofenotipagem11e353bca5/",
+      "sourceQuestionId": "4000056179",
+      "matchedAt": "2026-11-06T23:14:41.988Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "E",
+      "remoteAnswer": "E",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Fundamentos de oncohematologia",
+        "Classificação das neoplasias hematológicas",
+        "Biomarcadores",
+        "Biologia molecular",
+        "Definições terapêuticas"
+      ],
+      "comment": "Gabarito confirmado: E. Assunto: Definições terapêuticas. Conduta/resposta: C, E, D, B, A.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/a-imunofenotipagem11e353bca5/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-leucemias-agudas-cfa08850978a6aa8",
+      "number": "1073h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-e-intercorrencia1244cd0463/",
+      "sourceQuestionId": "4000019823",
+      "matchedAt": "2026-11-06T23:14:47.866Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -29,29 +91,58 @@
         "Leucemias",
         "Leucemias agudas",
         "Leucemia mieloide aguda (LMA)",
-        "Classificação da leucemia mieloide aguda - LMA (morfológica, citogenética e biologia molecular)"
+        "Leucemia promielocítica aguda (LPA ou LMA-M3)"
       ],
-      "comment": "Gabarito confirmado: A. Assunto: Classificação da leucemia mieloide aguda - LMA (morfológica, citogenética e biologia molecular). Conduta/resposta: Ácido transretinoico.",
+      "comment": "Gabarito confirmado: A. Assunto: Leucemia promielocítica aguda (LPA ou LMA-M3). Conduta/resposta: Coagulação intravascular disseminada.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Mulher-34-anos-relata77af5b8026/"
+        "https://med.estrategia.com/public/questoes/Qual-e-intercorrencia1244cd0463/"
       ]
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-24a7c2c0e9369edb",
-      "number": "1067h",
+      "id": "anki-hematologia-leucemias-agudas-360235f242dbe847",
+      "number": "1074h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/triade-classica112d508c15/",
-      "sourceQuestionId": "4000100163",
-      "matchedAt": "2026-11-06T14:23:09.901Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-60-anos-sexo56b4e0df15/",
+      "sourceQuestionId": "4000019810",
+      "matchedAt": "2026-11-06T23:14:54.053Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Leucemias",
+        "Leucemias agudas",
+        "Introdução às leucemias agudas"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Introdução às leucemias agudas. Conduta/resposta: Observação.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-60-anos-sexo56b4e0df15/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-leucemias-agudas-b5568df68e5ab1d9",
+      "number": "1075h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/malignidades1650d75ece/",
+      "sourceQuestionId": "4000126375",
+      "matchedAt": "2026-11-06T23:14:59.874Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
@@ -63,114 +154,20 @@
         "Fundamentos de oncohematologia",
         "Intercorrências em oncohematologia"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Intercorrências em oncohematologia. Conduta/resposta: Hiperpotassemia, hiperfosfatemia e hiperuricemia.",
+      "comment": "Gabarito confirmado: B. Assunto: Intercorrências em oncohematologia. Conduta/resposta: Carcinoma de mama.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/triade-classica112d508c15/",
-        "https://med.estrategia.com/public/questoes/Sindrome-Lise-Tumoral14f5b12e6c/"
+        "https://med.estrategia.com/public/questoes/malignidades1650d75ece/"
       ]
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-2baea57a903fb21f",
-      "number": "1068h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Menina-6a-e-trazida83d21faecb/",
-      "sourceQuestionId": "4000098651",
-      "matchedAt": "2026-11-06T14:23:15.651Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Pediatria",
-        "Hematologia Pediátrica",
-        "Clínica Médica",
-        "Hematologia",
-        "Leucemias",
-        "Leucemias agudas",
-        "Classificação das leucemias agudas"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Classificação das leucemias agudas. Conduta/resposta: Leucemia.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Menina-6a-e-trazida83d21faecb/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-64e9bb43ba7b364e",
-      "number": "1069h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/abordagem-inicial19723d67ac/",
-      "sourceQuestionId": "4000086565",
-      "matchedAt": "2026-11-06T14:23:21.674Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Nefrologia",
-        "Lesão renal aguda (LRA)",
-        "Causas especificas",
-        "Síndrome de Lise Tumoral (SLT)",
-        "Hematologia",
-        "Fundamentos de oncohematologia",
-        "Intercorrências em oncohematologia"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Intercorrências em oncohematologia. Conduta/resposta: Apenas I, II e III.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/abordagem-inicial19723d67ac/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-03145f014adb15c4",
-      "number": "1070h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Crianc-6-anos-com8199f69edc/",
-      "sourceQuestionId": "4000081089",
-      "matchedAt": "2026-11-06T14:23:27.518Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Leucemias",
-        "Leucemias agudas",
-        "Leucemia linfoide aguda (LLA)",
-        "Quadro clínico da leucemia linfoide aguda (LLA)"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Quadro clínico da leucemia linfoide aguda (LLA). Conduta/resposta: Leucemia linfoblástica aguda.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Crianc-6-anos-com8199f69edc/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-62bd1deb2fe073aa",
-      "number": "1004i",
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-be7ecee8860de8af",
+      "number": "1005i",
       "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Adolescente-14-anos52a928d911/",
-      "sourceQuestionId": "4000182984",
-      "matchedAt": "2026-11-06T14:23:33.669Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-5-anos284f8825be/",
+      "sourceQuestionId": "4000181626",
+      "matchedAt": "2026-11-06T23:15:06.426Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -185,10 +182,10 @@
         "Linfomas",
         "Diagnóstico dos linfomas (clínico, laboratorial – citogenética e biologia molecular)"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Diagnóstico dos linfomas (clínico, laboratorial – citogenética e biologia molecular). Conduta/resposta: biópsia excisional do linfonodo e estudo histopatológico.",
+      "comment": "Gabarito confirmado: C. Assunto: Diagnóstico dos linfomas (clínico, laboratorial – citogenética e biologia molecular). Conduta/resposta: Sim, independentemente das características do linfonodo.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Adolescente-14-anos52a928d911/",
-        "https://med.estrategia.com/public/questoes/1c8a27b9f6b5c8d235813f40/"
+        "https://med.estrategia.com/public/questoes/paciente-5-anos284f8825be/",
+        "https://med.estrategia.com/public/questoes/Paciente-cinco-anos511244ab9f/"
       ]
     }
   ]

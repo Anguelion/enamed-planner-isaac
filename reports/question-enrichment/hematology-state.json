@@ -6913,53 +6913,53 @@
     },
     "anki-hematologia-leucemias-agudas-96081b5340ec3edc": {
       "number": "1071h",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-30T22:26:40.815Z",
-      "nextAttemptAt": "2026-11-06T22:26:40.815Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-11-06T23:14:35.698Z",
+      "nextAttemptAt": "2026-11-20T23:14:35.698Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Leucemia9147a13aef/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     },
     "anki-hematologia-leucemias-agudas-7803f953bf190355": {
       "number": "1072h",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-30T22:26:46.292Z",
-      "nextAttemptAt": "2026-11-06T22:26:46.292Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-11-06T23:14:41.989Z",
+      "nextAttemptAt": "2026-11-20T23:14:41.989Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/a-imunofenotipagem11e353bca5/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
     },
     "anki-hematologia-leucemias-agudas-cfa08850978a6aa8": {
       "number": "1073h",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-30T22:26:51.743Z",
-      "nextAttemptAt": "2026-11-06T22:26:51.743Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-11-06T23:14:47.867Z",
+      "nextAttemptAt": "2026-11-20T23:14:47.867Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-e-intercorrencia1244cd0463/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
     },
     "anki-hematologia-leucemias-agudas-360235f242dbe847": {
       "number": "1074h",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-30T22:26:57.177Z",
-      "nextAttemptAt": "2026-11-06T22:26:57.177Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-11-06T23:14:54.053Z",
+      "nextAttemptAt": "2026-11-20T23:14:54.053Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-60-anos-sexo56b4e0df15/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     },
     "anki-hematologia-leucemias-agudas-b5568df68e5ab1d9": {
       "number": "1075h",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-30T22:27:02.649Z",
-      "nextAttemptAt": "2026-11-06T22:27:02.649Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-11-06T23:14:59.874Z",
+      "nextAttemptAt": "2026-11-20T23:14:59.874Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/malignidades1650d75ece/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     },
     "anki-hematologia-leucemias-agudas-4a8a0714ec3a20e2": {
       "number": "1076h",
@@ -7250,7 +7250,17 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/Adolescente-14-anos52a928d911/",
       "localAnswer": "C",
       "remoteAnswer": "C"
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-be7ecee8860de8af": {
+      "number": "1005i",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-06T23:15:06.426Z",
+      "nextAttemptAt": "2026-11-13T23:15:06.426Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-5-anos284f8825be/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     }
   },
-  "updatedAt": "2026-11-06T14:23:33.670Z"
+  "updatedAt": "2026-11-06T23:15:06.426Z"
 }
