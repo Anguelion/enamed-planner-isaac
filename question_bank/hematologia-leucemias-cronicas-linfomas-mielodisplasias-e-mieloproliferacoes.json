@@ -170,10 +170,21 @@
       "tags": [
         "Hematologia",
         "Leucemias Crônicas Linfomas Mielodisplasias e Mieloproliferações",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Linfomas",
+        "Diagnóstico dos linfomas (clínico, laboratorial – citogenética e biologia molecular)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516352486",
-      "ankiGuid": "yoXh(y4F`;"
+      "ankiGuid": "yoXh(y4F`;",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Adolescente-14-anos52a928d911/",
+        "sourceQuestionId": "4000182984",
+        "matchedAt": "2026-11-06T14:23:33.669Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-be7ecee8860de8af",

@@ -6853,13 +6853,13 @@
     },
     "anki-hematologia-leucemias-agudas-3c805636f3b841e3": {
       "number": "1065h",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-30T13:04:52.554Z",
-      "nextAttemptAt": "2026-11-06T13:04:52.554Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-11-06T14:23:03.805Z",
+      "nextAttemptAt": "2026-11-20T14:23:03.805Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-34-anos-relata77af5b8026/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
     },
     "anki-hematologia-leucemias-agudas-f77b7fc757b17595": {
       "number": "1066h",
@@ -6873,43 +6873,43 @@
     },
     "anki-hematologia-leucemias-agudas-24a7c2c0e9369edb": {
       "number": "1067h",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-30T13:05:05.406Z",
-      "nextAttemptAt": "2026-11-06T13:05:05.406Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-11-06T14:23:09.901Z",
+      "nextAttemptAt": "2026-11-20T14:23:09.901Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/triade-classica112d508c15/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     },
     "anki-hematologia-leucemias-agudas-2baea57a903fb21f": {
       "number": "1068h",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-30T13:05:10.854Z",
-      "nextAttemptAt": "2026-11-06T13:05:10.854Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-11-06T14:23:15.652Z",
+      "nextAttemptAt": "2026-11-20T14:23:15.652Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Menina-6a-e-trazida83d21faecb/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-leucemias-agudas-64e9bb43ba7b364e": {
       "number": "1069h",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-30T13:05:16.309Z",
-      "nextAttemptAt": "2026-11-06T13:05:16.309Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-11-06T14:23:21.674Z",
+      "nextAttemptAt": "2026-11-20T14:23:21.674Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/abordagem-inicial19723d67ac/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     },
     "anki-hematologia-leucemias-agudas-03145f014adb15c4": {
       "number": "1070h",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-10-30T13:05:21.775Z",
-      "nextAttemptAt": "2026-11-06T13:05:21.775Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-11-06T14:23:27.519Z",
+      "nextAttemptAt": "2026-11-20T14:23:27.519Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Crianc-6-anos-com8199f69edc/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     },
     "anki-hematologia-leucemias-agudas-96081b5340ec3edc": {
       "number": "1071h",
@@ -7240,7 +7240,17 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-82-anos-idade353936179f/",
       "localAnswer": "D",
       "remoteAnswer": "D"
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-62bd1deb2fe073aa": {
+      "number": "1004i",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-06T14:23:33.670Z",
+      "nextAttemptAt": "2026-11-13T14:23:33.670Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Adolescente-14-anos52a928d911/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     }
   },
-  "updatedAt": "2026-11-05T23:41:59.201Z"
+  "updatedAt": "2026-11-06T14:23:33.670Z"
 }
