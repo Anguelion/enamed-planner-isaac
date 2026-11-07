@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T23:14:34.563Z",
+  "generatedAt": "2026-11-07T13:13:19.277Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
@@ -7,76 +7,74 @@
   "changed": 6,
   "results": [
     {
-      "id": "anki-hematologia-leucemias-agudas-96081b5340ec3edc",
-      "number": "1071h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-3ca5db46520464ae",
+      "number": "1065a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Leucemia9147a13aef/",
-      "sourceQuestionId": "4000061159",
-      "matchedAt": "2026-11-06T23:14:35.697Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo2664caed33/",
+      "sourceQuestionId": "4000002631",
+      "matchedAt": "2026-11-07T13:13:20.165Z",
       "similarity": {
         "stem": 1,
         "options": 1,
         "combined": 1
       },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico",
+        "Corpúsculos citoplasmáticos das hemácias",
+        "Corpos de Howell-Jolly"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Corpos de Howell-Jolly. Conduta/resposta: Hipoesplenismo.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-sexo2664caed33/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-b6839ee14632799c",
+      "number": "1006i",
+      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Assinalar-alternativa611ba0c262/",
+      "sourceQuestionId": "4000169496",
+      "matchedAt": "2026-11-07T13:13:26.007Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
         "Leucemias",
-        "Leucemias agudas",
-        "Leucemia mieloide aguda (LMA)",
-        "Classificação da leucemia mieloide aguda - LMA (morfológica, citogenética e biologia molecular)",
-        "Leucemia promielocítica aguda (LPA ou LMA-M3)"
+        "Leucemias crônicas",
+        "Leucemia mieloide crônica (LMC)",
+        "Quadro clínico da leucemia mieloide crônica (LMC)"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Leucemia promielocítica aguda (LPA ou LMA-M3). Conduta/resposta: Síndrome retinoide.",
+      "comment": "Gabarito confirmado: C. Assunto: Quadro clínico da leucemia mieloide crônica (LMC). Conduta/resposta: 50.000 l mieloides l Down",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Leucemia9147a13aef/"
+        "https://med.estrategia.com/public/questoes/Assinalar-alternativa611ba0c262/"
       ]
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-7803f953bf190355",
-      "number": "1072h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-b51579598932cd5b",
+      "number": "1007i",
+      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/a-imunofenotipagem11e353bca5/",
-      "sourceQuestionId": "4000056179",
-      "matchedAt": "2026-11-06T23:14:41.988Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "E",
-      "remoteAnswer": "E",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Fundamentos de oncohematologia",
-        "Classificação das neoplasias hematológicas",
-        "Biomarcadores",
-        "Biologia molecular",
-        "Definições terapêuticas"
-      ],
-      "comment": "Gabarito confirmado: E. Assunto: Definições terapêuticas. Conduta/resposta: C, E, D, B, A.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/a-imunofenotipagem11e353bca5/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-cfa08850978a6aa8",
-      "number": "1073h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Qual-e-intercorrencia1244cd0463/",
-      "sourceQuestionId": "4000019823",
-      "matchedAt": "2026-11-06T23:14:47.866Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Distinguir-linfonodo21560bf088/",
+      "sourceQuestionId": "4000167145",
+      "matchedAt": "2026-11-07T13:13:31.699Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -88,86 +86,54 @@
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Leucemias",
-        "Leucemias agudas",
-        "Leucemia mieloide aguda (LMA)",
-        "Leucemia promielocítica aguda (LPA ou LMA-M3)"
+        "Linfomas",
+        "Outros",
+        "Otorrinolaringologia",
+        "Linfadenites Cervicais"
       ],
-      "comment": "Gabarito confirmado: A. Assunto: Leucemia promielocítica aguda (LPA ou LMA-M3). Conduta/resposta: Coagulação intravascular disseminada.",
+      "comment": "Gabarito confirmado: A. Assunto: Linfadenites Cervicais. Conduta/resposta: Ausência de linfonodos palpáveis em recém-nascidos.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Qual-e-intercorrencia1244cd0463/"
+        "https://med.estrategia.com/public/questoes/Distinguir-linfonodo21560bf088/"
       ]
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-360235f242dbe847",
-      "number": "1074h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-60-anos-sexo56b4e0df15/",
-      "sourceQuestionId": "4000019810",
-      "matchedAt": "2026-11-06T23:14:54.053Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Leucemias",
-        "Leucemias agudas",
-        "Introdução às leucemias agudas"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Introdução às leucemias agudas. Conduta/resposta: Observação.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-60-anos-sexo56b4e0df15/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-b5568df68e5ab1d9",
-      "number": "1075h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/malignidades1650d75ece/",
-      "sourceQuestionId": "4000126375",
-      "matchedAt": "2026-11-06T23:14:59.874Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Nefrologia",
-        "Lesão renal aguda (LRA)",
-        "Causas especificas",
-        "Síndrome de Lise Tumoral (SLT)",
-        "Hematologia",
-        "Fundamentos de oncohematologia",
-        "Intercorrências em oncohematologia"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Intercorrências em oncohematologia. Conduta/resposta: Carcinoma de mama.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/malignidades1650d75ece/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-be7ecee8860de8af",
-      "number": "1005i",
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-4e970c878ecf1f82",
+      "number": "1008i",
       "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-5-anos284f8825be/",
-      "sourceQuestionId": "4000181626",
-      "matchedAt": "2026-11-06T23:15:06.426Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/exames-laboratoriais22cf33f9bc/",
+      "sourceQuestionId": "4000147041",
+      "matchedAt": "2026-11-07T13:13:37.691Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Linfomas",
+        "Linfomas não Hodgkin (LNH)",
+        "Classificação dos Linfomas não Hodgkin (LNH)"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Classificação dos Linfomas não Hodgkin (LNH). Conduta/resposta: A desidrogenase lática está tão mais elevada quanto a quantidade de células tumorais e a intensidade de apoptose e, quanto mais elevada, pior o prognóstico.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/exames-laboratoriais22cf33f9bc/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-6ed500b4d5c5328f",
+      "number": "1009i",
+      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Jovem-17-anos-idade52da1219c7/",
+      "sourceQuestionId": "4000145973",
+      "matchedAt": "2026-11-07T13:13:43.366Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -182,10 +148,41 @@
         "Linfomas",
         "Diagnóstico dos linfomas (clínico, laboratorial – citogenética e biologia molecular)"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Diagnóstico dos linfomas (clínico, laboratorial – citogenética e biologia molecular). Conduta/resposta: Sim, independentemente das características do linfonodo.",
+      "comment": "Gabarito confirmado: C. Assunto: Diagnóstico dos linfomas (clínico, laboratorial – citogenética e biologia molecular). Conduta/resposta: Linfoma; biópsia do linfonodo cervical.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/paciente-5-anos284f8825be/",
-        "https://med.estrategia.com/public/questoes/Paciente-cinco-anos511244ab9f/"
+        "https://med.estrategia.com/public/questoes/Jovem-17-anos-idade52da1219c7/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-5307bf91961cdf63",
+      "number": "1010i",
+      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-linfoma9cdd092d1/",
+      "sourceQuestionId": "4000144440",
+      "matchedAt": "2026-11-07T13:13:49.374Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Linfomas",
+        "Linfoma de Hodgkin (LH)",
+        "Introdução ao Linfoma de Hodgkin (LH)",
+        "Quadro Clínico do Linfoma de Hodgkin (LH)",
+        "Classificação do Linfoma de Hodgkin (LH)"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Classificação do Linfoma de Hodgkin (LH). Conduta/resposta: A apresentação infradiafragmática exclusiva implica em pior prognóstico.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/alternativa-linfoma9cdd092d1/",
+        "https://med.estrategia.com/public/questoes/Com-linfoma-Hodgkin10a26e4c2f/"
       ]
     }
   ]

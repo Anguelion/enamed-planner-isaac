@@ -5953,13 +5953,13 @@
     },
     "anki-hematologia-introducao-ao-estudo-das-anemias-3ca5db46520464ae": {
       "number": "1065a",
-      "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-10-24T11:11:30.238Z",
-      "nextAttemptAt": "2026-11-07T11:11:30.238Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 3,
+      "lastAttemptAt": "2026-11-07T13:13:20.165Z",
+      "nextAttemptAt": "2026-11-28T13:13:20.165Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo2664caed33/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-introducao-ao-estudo-das-anemias-14af2f600fcde0fe": {
       "number": "1066a",
@@ -7260,7 +7260,57 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-5-anos284f8825be/",
       "localAnswer": "C",
       "remoteAnswer": "C"
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-b6839ee14632799c": {
+      "number": "1006i",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-07T13:13:26.008Z",
+      "nextAttemptAt": "2026-11-14T13:13:26.008Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Assinalar-alternativa611ba0c262/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-b51579598932cd5b": {
+      "number": "1007i",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-07T13:13:31.699Z",
+      "nextAttemptAt": "2026-11-14T13:13:31.699Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Distinguir-linfonodo21560bf088/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-4e970c878ecf1f82": {
+      "number": "1008i",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-07T13:13:37.691Z",
+      "nextAttemptAt": "2026-11-14T13:13:37.691Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/exames-laboratoriais22cf33f9bc/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-6ed500b4d5c5328f": {
+      "number": "1009i",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-07T13:13:43.367Z",
+      "nextAttemptAt": "2026-11-14T13:13:43.367Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Jovem-17-anos-idade52da1219c7/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-5307bf91961cdf63": {
+      "number": "1010i",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-07T13:13:49.375Z",
+      "nextAttemptAt": "2026-11-14T13:13:49.375Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-linfoma9cdd092d1/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     }
   },
-  "updatedAt": "2026-11-06T23:15:06.426Z"
+  "updatedAt": "2026-11-07T13:13:49.375Z"
 }
