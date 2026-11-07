@@ -3435,10 +3435,27 @@
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Esfregaço do sangue periférico",
+        "Corpúsculos citoplasmáticos das hemácias",
+        "Corpos de Heinz",
+        "Anemias hemolíticas",
+        "Anemias hemolíticas por deficiências enzimáticas",
+        "Deficiência de G6PD",
+        "Quadro clínico da deficiência de G6PD",
+        "Fatores desencadeantes",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885772",
-      "ankiGuid": "<c9!+wX/b"
+      "ankiGuid": "<c9!+wX/b",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo31450417f4/",
+        "sourceQuestionId": "4000089998",
+        "matchedAt": "2026-11-07T21:56:47.233Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-8e6b2e18f0466905",

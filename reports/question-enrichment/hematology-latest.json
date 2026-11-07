@@ -1,167 +1,20 @@
 {
-  "generatedAt": "2026-11-07T13:13:19.277Z",
+  "generatedAt": "2026-11-07T21:56:45.435Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 6,
+  "changed": 1,
   "results": [
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-3ca5db46520464ae",
-      "number": "1065a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-2a09e3d2a7d3b070",
+      "number": "1069a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo2664caed33/",
-      "sourceQuestionId": "4000002631",
-      "matchedAt": "2026-11-07T13:13:20.165Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Introdução ao Estudo das Anemias",
-        "Esfregaço do sangue periférico",
-        "Corpúsculos citoplasmáticos das hemácias",
-        "Corpos de Howell-Jolly"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Corpos de Howell-Jolly. Conduta/resposta: Hipoesplenismo.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-sexo2664caed33/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-b6839ee14632799c",
-      "number": "1006i",
-      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Assinalar-alternativa611ba0c262/",
-      "sourceQuestionId": "4000169496",
-      "matchedAt": "2026-11-07T13:13:26.007Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Leucemias",
-        "Leucemias crônicas",
-        "Leucemia mieloide crônica (LMC)",
-        "Quadro clínico da leucemia mieloide crônica (LMC)"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Quadro clínico da leucemia mieloide crônica (LMC). Conduta/resposta: 50.000 l mieloides l Down",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Assinalar-alternativa611ba0c262/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-b51579598932cd5b",
-      "number": "1007i",
-      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Distinguir-linfonodo21560bf088/",
-      "sourceQuestionId": "4000167145",
-      "matchedAt": "2026-11-07T13:13:31.699Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Linfomas",
-        "Outros",
-        "Otorrinolaringologia",
-        "Linfadenites Cervicais"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Linfadenites Cervicais. Conduta/resposta: Ausência de linfonodos palpáveis em recém-nascidos.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Distinguir-linfonodo21560bf088/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-4e970c878ecf1f82",
-      "number": "1008i",
-      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/exames-laboratoriais22cf33f9bc/",
-      "sourceQuestionId": "4000147041",
-      "matchedAt": "2026-11-07T13:13:37.691Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Linfomas",
-        "Linfomas não Hodgkin (LNH)",
-        "Classificação dos Linfomas não Hodgkin (LNH)"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Classificação dos Linfomas não Hodgkin (LNH). Conduta/resposta: A desidrogenase lática está tão mais elevada quanto a quantidade de células tumorais e a intensidade de apoptose e, quanto mais elevada, pior o prognóstico.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/exames-laboratoriais22cf33f9bc/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-6ed500b4d5c5328f",
-      "number": "1009i",
-      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Jovem-17-anos-idade52da1219c7/",
-      "sourceQuestionId": "4000145973",
-      "matchedAt": "2026-11-07T13:13:43.366Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Linfomas",
-        "Diagnóstico dos linfomas (clínico, laboratorial – citogenética e biologia molecular)"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Diagnóstico dos linfomas (clínico, laboratorial – citogenética e biologia molecular). Conduta/resposta: Linfoma; biópsia do linfonodo cervical.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Jovem-17-anos-idade52da1219c7/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-5307bf91961cdf63",
-      "number": "1010i",
-      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-linfoma9cdd092d1/",
-      "sourceQuestionId": "4000144440",
-      "matchedAt": "2026-11-07T13:13:49.374Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo31450417f4/",
+      "sourceQuestionId": "4000089998",
+      "matchedAt": "2026-11-07T21:56:47.233Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -173,17 +26,60 @@
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Linfomas",
-        "Linfoma de Hodgkin (LH)",
-        "Introdução ao Linfoma de Hodgkin (LH)",
-        "Quadro Clínico do Linfoma de Hodgkin (LH)",
-        "Classificação do Linfoma de Hodgkin (LH)"
+        "Introdução ao Estudo das Anemias",
+        "Esfregaço do sangue periférico",
+        "Corpúsculos citoplasmáticos das hemácias",
+        "Corpos de Heinz",
+        "Anemias hemolíticas",
+        "Anemias hemolíticas por deficiências enzimáticas",
+        "Deficiência de G6PD",
+        "Quadro clínico da deficiência de G6PD",
+        "Fatores desencadeantes"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Classificação do Linfoma de Hodgkin (LH). Conduta/resposta: A apresentação infradiafragmática exclusiva implica em pior prognóstico.",
+      "comment": "Gabarito confirmado: B. Assunto: Fatores desencadeantes. Conduta/resposta: Deficiência de glicose-6-fosfato desidrogenase.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/alternativa-linfoma9cdd092d1/",
-        "https://med.estrategia.com/public/questoes/Com-linfoma-Hodgkin10a26e4c2f/"
+        "https://med.estrategia.com/public/questoes/Paciente-sexo31450417f4/"
       ]
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-8e6b2e18f0466905",
+      "number": "1070a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-eb74092fdff86dbe",
+      "number": "1071a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-leucemias-agudas-2840756cb7938b38",
+      "number": "1077h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-leucemias-agudas-4fc6972528f4a0e1",
+      "number": "1078h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-leucemias-agudas-e2fea18170832bea",
+      "number": "1079h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     }
   ]
 }
