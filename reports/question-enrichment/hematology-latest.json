@@ -1,20 +1,121 @@
 {
-  "generatedAt": "2026-11-07T21:56:45.435Z",
+  "generatedAt": "2026-11-08T22:13:19.285Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 1,
+  "changed": 6,
   "results": [
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-2a09e3d2a7d3b070",
-      "number": "1069a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-22bf0922492adf25",
+      "number": "1072a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo31450417f4/",
-      "sourceQuestionId": "4000089998",
-      "matchedAt": "2026-11-07T21:56:47.233Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Considere-tres479a72a214/",
+      "sourceQuestionId": "4000123693",
+      "matchedAt": "2026-11-08T22:13:20.320Z",
+      "similarity": {
+        "stem": 0.975609756097561,
+        "options": 1,
+        "combined": 0.9829268292682927
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
+        "Anemias e condições não hematológicas",
+        "Anemias das endocrinopatias",
+        "Anemia do hipotireoidismo",
+        "Anemias microcíticas",
+        "Anemia da doença crônica",
+        "Diagnóstico da anemia de doença crônica",
+        "Hemoglobinopatias",
+        "Talassemias",
+        "Beta-talassemias",
+        "Fisiopatologia e apresentação da beta-talassemia"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Fisiopatologia e apresentação da beta-talassemia. Conduta/resposta: III, II e I.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Considere-tres479a72a214/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-af528ee344518a5f",
+      "number": "1073a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino398710ebda/",
+      "sourceQuestionId": "4000101794",
+      "matchedAt": "2026-11-08T22:13:26.415Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
+        "Anemias microcíticas",
+        "Anemia da doença crônica",
+        "Quadro clínico da anemia de doença crônica"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Quadro clínico da anemia de doença crônica. Conduta/resposta: 80 a 100 fl.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino398710ebda/",
+        "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino77721b0f00/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-770b959f835ab146",
+      "number": "1074a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/classificaca-anemias181e8f2828/",
+      "sourceQuestionId": "4000099178",
+      "matchedAt": "2026-11-08T22:13:32.164Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
+        "Classificação funcional das anemias"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Classificação funcional das anemias. Conduta/resposta: Anemia hemolítica autoimune.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/classificaca-anemias181e8f2828/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-3c635433f3d221f2",
+      "number": "1075a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Quais-reunem-conjunto265ef2f8e3/",
+      "sourceQuestionId": "4000096843",
+      "matchedAt": "2026-11-08T22:13:38.037Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -27,59 +128,75 @@
         "Clínica Médica",
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Esfregaço do sangue periférico",
-        "Corpúsculos citoplasmáticos das hemácias",
-        "Corpos de Heinz",
-        "Anemias hemolíticas",
-        "Anemias hemolíticas por deficiências enzimáticas",
-        "Deficiência de G6PD",
-        "Quadro clínico da deficiência de G6PD",
-        "Fatores desencadeantes"
+        "Classificações das anemias",
+        "Classificação morfológica das anemias"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Fatores desencadeantes. Conduta/resposta: Deficiência de glicose-6-fosfato desidrogenase.",
+      "comment": "Gabarito confirmado: B. Assunto: Classificação morfológica das anemias. Conduta/resposta: doença celíaca, anemia aplástica, deficiência de ácido fólico.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-sexo31450417f4/"
+        "https://med.estrategia.com/public/questoes/Quais-reunem-conjunto265ef2f8e3/"
       ]
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-8e6b2e18f0466905",
-      "number": "1070a",
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-7994d7c6a0f8e1cc",
+      "number": "1076a",
       "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Microcitose10f5dd4060/",
+      "sourceQuestionId": "4000062253",
+      "matchedAt": "2026-11-08T22:13:43.872Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Introdução ao Estudo das Anemias",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
+        "Hemograma",
+        "Índices hematimétricos",
+        "VCM – volume corpuscular médio"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: VCM – volume corpuscular médio. Conduta/resposta: volume corpuscular médio;",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Microcitose10f5dd4060/"
+      ]
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-eb74092fdff86dbe",
-      "number": "1071a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-2840756cb7938b38",
-      "number": "1077h",
+      "id": "anki-hematologia-leucemias-agudas-e7e530009a43ddba",
+      "number": "1088h",
       "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-4fc6972528f4a0e1",
-      "number": "1078h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-e2fea18170832bea",
-      "number": "1079h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Doenc-Enxerto95d53e7f6/",
+      "sourceQuestionId": "4000074838",
+      "matchedAt": "2026-11-08T22:13:49.748Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Fundamentos de oncohematologia",
+        "Definições terapêuticas",
+        "Transplante de medula óssea (transplante de células tronco hematopoiéticas)",
+        "Transplante alogênico de medula óssea"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Transplante alogênico de medula óssea. Conduta/resposta: Transplante alogênico de medula óssea.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Doenc-Enxerto95d53e7f6/"
+      ]
     }
   ]
 }

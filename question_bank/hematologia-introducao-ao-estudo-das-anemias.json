@@ -3553,10 +3553,31 @@
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
+        "Anemias e condições não hematológicas",
+        "Anemias das endocrinopatias",
+        "Anemia do hipotireoidismo",
+        "Anemias microcíticas",
+        "Anemia da doença crônica",
+        "Diagnóstico da anemia de doença crônica",
+        "Hemoglobinopatias",
+        "Talassemias",
+        "Beta-talassemias",
+        "Fisiopatologia e apresentação da beta-talassemia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885775",
-      "ankiGuid": "q`w48YnZ(y"
+      "ankiGuid": "q`w48YnZ(y",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Considere-tres479a72a214/",
+        "sourceQuestionId": "4000123693",
+        "matchedAt": "2026-11-08T22:13:20.320Z",
+        "confidence": 0.9829268292682927
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-af528ee344518a5f",
@@ -3586,10 +3607,24 @@
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
+        "Anemias microcíticas",
+        "Anemia da doença crônica",
+        "Quadro clínico da anemia de doença crônica",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885776",
-      "ankiGuid": "N(_mKq|uE;"
+      "ankiGuid": "N(_mKq|uE;",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino398710ebda/",
+        "sourceQuestionId": "4000101794",
+        "matchedAt": "2026-11-08T22:13:26.415Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-770b959f835ab146",
@@ -3620,10 +3655,21 @@
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Classificações das anemias",
+        "Classificação funcional das anemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885777",
-      "ankiGuid": "JR~0e=Wt25"
+      "ankiGuid": "JR~0e=Wt25",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/classificaca-anemias181e8f2828/",
+        "sourceQuestionId": "4000099178",
+        "matchedAt": "2026-11-08T22:13:32.164Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-3c635433f3d221f2",
@@ -3653,10 +3699,21 @@
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885778",
-      "ankiGuid": "Nr*@N;=<st"
+      "ankiGuid": "Nr*@N;=<st",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Quais-reunem-conjunto265ef2f8e3/",
+        "sourceQuestionId": "4000096843",
+        "matchedAt": "2026-11-08T22:13:38.037Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-7994d7c6a0f8e1cc",
@@ -3687,10 +3744,24 @@
       "tags": [
         "Hematologia",
         "Introdução ao Estudo das Anemias",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Classificações das anemias",
+        "Classificação morfológica das anemias",
+        "Hemograma",
+        "Índices hematimétricos",
+        "VCM – volume corpuscular médio",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742992885779",
-      "ankiGuid": "N*Su*r+>o&"
+      "ankiGuid": "N*Su*r+>o&",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Microcitose10f5dd4060/",
+        "sourceQuestionId": "4000062253",
+        "matchedAt": "2026-11-08T22:13:43.872Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-introducao-ao-estudo-das-anemias-45c45d66849d96f0",

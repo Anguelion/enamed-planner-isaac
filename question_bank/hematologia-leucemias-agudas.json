@@ -4090,10 +4090,23 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Fundamentos de oncohematologia",
+        "Definições terapêuticas",
+        "Transplante de medula óssea (transplante de células tronco hematopoiéticas)",
+        "Transplante alogênico de medula óssea",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516106998",
-      "ankiGuid": "EyUE/K@WQ<"
+      "ankiGuid": "EyUE/K@WQ<",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Doenc-Enxerto95d53e7f6/",
+        "sourceQuestionId": "4000074838",
+        "matchedAt": "2026-11-08T22:13:49.748Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-b8eff04afac1c1a5",

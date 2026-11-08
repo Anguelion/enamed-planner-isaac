@@ -6023,53 +6023,53 @@
     },
     "anki-hematologia-introducao-ao-estudo-das-anemias-22bf0922492adf25": {
       "number": "1072a",
-      "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-10-25T11:41:01.803Z",
-      "nextAttemptAt": "2026-11-08T11:41:01.803Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 3,
+      "lastAttemptAt": "2026-11-08T22:13:20.322Z",
+      "nextAttemptAt": "2026-11-29T22:13:20.322Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Considere-tres479a72a214/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     },
     "anki-hematologia-introducao-ao-estudo-das-anemias-af528ee344518a5f": {
       "number": "1073a",
-      "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-10-25T11:41:07.251Z",
-      "nextAttemptAt": "2026-11-08T11:41:07.251Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 3,
+      "lastAttemptAt": "2026-11-08T22:13:26.415Z",
+      "nextAttemptAt": "2026-11-29T22:13:26.415Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino398710ebda/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-introducao-ao-estudo-das-anemias-770b959f835ab146": {
       "number": "1074a",
-      "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-10-25T11:41:12.739Z",
-      "nextAttemptAt": "2026-11-08T11:41:12.739Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 3,
+      "lastAttemptAt": "2026-11-08T22:13:32.164Z",
+      "nextAttemptAt": "2026-11-29T22:13:32.164Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/classificaca-anemias181e8f2828/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     },
     "anki-hematologia-introducao-ao-estudo-das-anemias-3c635433f3d221f2": {
       "number": "1075a",
-      "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-10-25T11:41:18.241Z",
-      "nextAttemptAt": "2026-11-08T11:41:18.241Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 3,
+      "lastAttemptAt": "2026-11-08T22:13:38.037Z",
+      "nextAttemptAt": "2026-11-29T22:13:38.037Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Quais-reunem-conjunto265ef2f8e3/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     },
     "anki-hematologia-introducao-ao-estudo-das-anemias-7994d7c6a0f8e1cc": {
       "number": "1076a",
-      "status": "not_found",
-      "attempts": 2,
-      "lastAttemptAt": "2026-10-25T11:41:23.737Z",
-      "nextAttemptAt": "2026-11-08T11:41:23.737Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 3,
+      "lastAttemptAt": "2026-11-08T22:13:43.872Z",
+      "nextAttemptAt": "2026-11-29T22:13:43.872Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Microcitose10f5dd4060/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     },
     "anki-hematologia-introducao-ao-estudo-das-anemias-45c45d66849d96f0": {
       "number": "1077a",
@@ -7083,13 +7083,13 @@
     },
     "anki-hematologia-leucemias-agudas-e7e530009a43ddba": {
       "number": "1088h",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-11-01T22:08:07.324Z",
-      "nextAttemptAt": "2026-11-08T22:08:07.324Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-11-08T22:13:49.748Z",
+      "nextAttemptAt": "2026-11-22T22:13:49.748Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Doenc-Enxerto95d53e7f6/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     },
     "anki-hematologia-leucemias-agudas-b8eff04afac1c1a5": {
       "number": "1089h",
@@ -7312,5 +7312,5 @@
       "remoteAnswer": "B"
     }
   },
-  "updatedAt": "2026-11-07T21:57:13.824Z"
+  "updatedAt": "2026-11-08T22:13:49.748Z"
 }
