@@ -7310,7 +7310,67 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/alternativa-linfoma9cdd092d1/",
       "localAnswer": "B",
       "remoteAnswer": "B"
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-9b4ae4e8047562e1": {
+      "number": "1011i",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-09T16:31:51.984Z",
+      "nextAttemptAt": "2026-11-16T16:31:51.984Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-58-anos-com80428c8b43/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-668b9b32762925d3": {
+      "number": "1012i",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-09T16:31:58.289Z",
+      "nextAttemptAt": "2026-11-16T16:31:58.289Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Adolescente-15-anos33a6f76ccb/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-7a3f8f59758b9ad5": {
+      "number": "1013i",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-09T16:32:04.027Z",
+      "nextAttemptAt": "2026-11-16T16:32:04.027Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Leia-caso-clinico1289d07d087/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-afa2097da99b2e82": {
+      "number": "1014i",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-09T16:32:09.922Z",
+      "nextAttemptAt": "2026-11-16T16:32:09.922Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Correlacione464b1b559e/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-09f7ca247c542c25": {
+      "number": "1015i",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-09T16:32:15.812Z",
+      "nextAttemptAt": "2026-11-16T16:32:15.812Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/leucemia-mieloide2444a6f7d8/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-bf90926f9a2e0ff0": {
+      "number": "1016i",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-09T16:32:22.005Z",
+      "nextAttemptAt": "2026-11-16T16:32:22.005Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-masculino-32134cb91de4c/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     }
   },
-  "updatedAt": "2026-11-08T22:13:49.748Z"
+  "updatedAt": "2026-11-09T16:32:22.005Z"
 }

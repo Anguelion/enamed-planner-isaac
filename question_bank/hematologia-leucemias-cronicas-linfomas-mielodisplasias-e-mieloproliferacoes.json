@@ -489,10 +489,23 @@
       "tags": [
         "Hematologia",
         "Leucemias Crônicas Linfomas Mielodisplasias e Mieloproliferações",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Leucemias crônicas",
+        "Leucemia mieloide crônica (LMC)",
+        "Diagnóstico da leucemia mieloide crônica (LMC)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516352493",
-      "ankiGuid": "c~9sjxqv9("
+      "ankiGuid": "c~9sjxqv9(",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-58-anos-com80428c8b43/",
+        "sourceQuestionId": "4000143757",
+        "matchedAt": "2026-11-09T16:31:51.983Z",
+        "confidence": 0.9906666666666666
+      }
     },
     {
       "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-668b9b32762925d3",
@@ -523,10 +536,22 @@
       "tags": [
         "Hematologia",
         "Leucemias Crônicas Linfomas Mielodisplasias e Mieloproliferações",
-        "Anki"
+        "Anki",
+        "Pediatria",
+        "Clínica Médica",
+        "Linfomas",
+        "Linfoma de Hodgkin (LH)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516352494",
-      "ankiGuid": "D1{w.5MvKl"
+      "ankiGuid": "D1{w.5MvKl",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Adolescente-15-anos33a6f76ccb/",
+        "sourceQuestionId": "4000142758",
+        "matchedAt": "2026-11-09T16:31:58.289Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-7a3f8f59758b9ad5",
@@ -556,10 +581,23 @@
       "tags": [
         "Hematologia",
         "Leucemias Crônicas Linfomas Mielodisplasias e Mieloproliferações",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mielodisplasias e mieloproliferações: outras alterações da medula óssea",
+        "Doenças mieloproliferativas crônicas",
+        "Policitemia vera (PV)",
+        "Diagnóstico da policitemia vera (PV)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516352495",
-      "ankiGuid": "mF-j=+SIlM"
+      "ankiGuid": "mF-j=+SIlM",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Leia-caso-clinico1289d07d087/",
+        "sourceQuestionId": "4000129608",
+        "matchedAt": "2026-11-09T16:32:04.027Z",
+        "confidence": 0.986
+      }
     },
     {
       "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-afa2097da99b2e82",
@@ -590,10 +628,20 @@
       "tags": [
         "Hematologia",
         "Leucemias Crônicas Linfomas Mielodisplasias e Mieloproliferações",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Linfomas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516352496",
-      "ankiGuid": "KPjy*uJx;?"
+      "ankiGuid": "KPjy*uJx;?",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Correlacione464b1b559e/",
+        "sourceQuestionId": "4000120917",
+        "matchedAt": "2026-11-09T16:32:09.922Z",
+        "confidence": 0.9649999999999999
+      }
     },
     {
       "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-09f7ca247c542c25",
@@ -623,10 +671,22 @@
       "tags": [
         "Hematologia",
         "Leucemias Crônicas Linfomas Mielodisplasias e Mieloproliferações",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Leucemias crônicas",
+        "Leucemia mieloide crônica (LMC)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516352497",
-      "ankiGuid": "c#w&ncf%/V"
+      "ankiGuid": "c#w&ncf%/V",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/leucemia-mieloide2444a6f7d8/",
+        "sourceQuestionId": "4000115065",
+        "matchedAt": "2026-11-09T16:32:15.812Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-bf90926f9a2e0ff0",
@@ -656,10 +716,22 @@
       "tags": [
         "Hematologia",
         "Leucemias Crônicas Linfomas Mielodisplasias e Mieloproliferações",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Linfomas",
+        "Linfomas não Hodgkin (LNH)",
+        "Introdução aos Linfomas não Hodgkin (LNH)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516352498",
-      "ankiGuid": "lRVwdEi,Qi"
+      "ankiGuid": "lRVwdEi,Qi",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-masculino-32134cb91de4c/",
+        "sourceQuestionId": "4000108623",
+        "matchedAt": "2026-11-09T16:32:22.005Z",
+        "confidence": 0.9936936936936935
+      }
     },
     {
       "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-1d2d113f2e9756cd",

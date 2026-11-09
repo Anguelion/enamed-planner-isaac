@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T22:13:19.285Z",
+  "generatedAt": "2026-11-09T16:31:50.455Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
@@ -7,57 +7,18 @@
   "changed": 6,
   "results": [
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-22bf0922492adf25",
-      "number": "1072a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-9b4ae4e8047562e1",
+      "number": "1011i",
+      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Considere-tres479a72a214/",
-      "sourceQuestionId": "4000123693",
-      "matchedAt": "2026-11-08T22:13:20.320Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-58-anos-com80428c8b43/",
+      "sourceQuestionId": "4000143757",
+      "matchedAt": "2026-11-09T16:31:51.983Z",
       "similarity": {
-        "stem": 0.975609756097561,
+        "stem": 0.9866666666666667,
         "options": 1,
-        "combined": 0.9829268292682927
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Introdução ao Estudo das Anemias",
-        "Classificações das anemias",
-        "Classificação morfológica das anemias",
-        "Anemias e condições não hematológicas",
-        "Anemias das endocrinopatias",
-        "Anemia do hipotireoidismo",
-        "Anemias microcíticas",
-        "Anemia da doença crônica",
-        "Diagnóstico da anemia de doença crônica",
-        "Hemoglobinopatias",
-        "Talassemias",
-        "Beta-talassemias",
-        "Fisiopatologia e apresentação da beta-talassemia"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Fisiopatologia e apresentação da beta-talassemia. Conduta/resposta: III, II e I.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Considere-tres479a72a214/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-af528ee344518a5f",
-      "number": "1073a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino398710ebda/",
-      "sourceQuestionId": "4000101794",
-      "matchedAt": "2026-11-08T22:13:26.415Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
+        "combined": 0.9906666666666666
       },
       "localAnswer": "C",
       "remoteAnswer": "C",
@@ -65,28 +26,26 @@
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Introdução ao Estudo das Anemias",
-        "Classificações das anemias",
-        "Classificação morfológica das anemias",
-        "Anemias microcíticas",
-        "Anemia da doença crônica",
-        "Quadro clínico da anemia de doença crônica"
+        "Leucemias",
+        "Leucemias crônicas",
+        "Leucemia mieloide crônica (LMC)",
+        "Diagnóstico da leucemia mieloide crônica (LMC)"
       ],
-      "comment": "Gabarito confirmado: C. Assunto: Quadro clínico da anemia de doença crônica. Conduta/resposta: 80 a 100 fl.",
+      "comment": "Gabarito confirmado: C. Assunto: Diagnóstico da leucemia mieloide crônica (LMC). Conduta/resposta: reação leucemoide associada a plaquetose reacional; antibioticoterapia.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino398710ebda/",
-        "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino77721b0f00/"
+        "https://med.estrategia.com/public/questoes/Homem-58-anos-com86f5c482d8/",
+        "https://med.estrategia.com/public/questoes/Homem-58-anos-com80428c8b43/"
       ]
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-770b959f835ab146",
-      "number": "1074a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-668b9b32762925d3",
+      "number": "1012i",
+      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/classificaca-anemias181e8f2828/",
-      "sourceQuestionId": "4000099178",
-      "matchedAt": "2026-11-08T22:13:32.164Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Adolescente-15-anos33a6f76ccb/",
+      "sourceQuestionId": "4000142758",
+      "matchedAt": "2026-11-09T16:31:58.289Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -96,26 +55,84 @@
       "remoteAnswer": "D",
       "answerMismatch": false,
       "tags": [
+        "Pediatria",
         "Clínica Médica",
         "Hematologia",
-        "Introdução ao Estudo das Anemias",
-        "Classificações das anemias",
-        "Classificação funcional das anemias"
+        "Linfomas",
+        "Linfoma de Hodgkin (LH)"
       ],
-      "comment": "Gabarito confirmado: D. Assunto: Classificação funcional das anemias. Conduta/resposta: Anemia hemolítica autoimune.",
+      "comment": "Gabarito confirmado: D. Assunto: Linfoma de Hodgkin (LH). Conduta/resposta: Linfoma de Hodgkin.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/classificaca-anemias181e8f2828/"
+        "https://med.estrategia.com/public/questoes/Adolescente-15-anos33a6f76ccb/",
+        "https://med.estrategia.com/public/questoes/Adolescente-16-anos3000485735/"
       ]
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-3c635433f3d221f2",
-      "number": "1075a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-7a3f8f59758b9ad5",
+      "number": "1013i",
+      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Quais-reunem-conjunto265ef2f8e3/",
-      "sourceQuestionId": "4000096843",
-      "matchedAt": "2026-11-08T22:13:38.037Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Leia-caso-clinico1289d07d087/",
+      "sourceQuestionId": "4000129608",
+      "matchedAt": "2026-11-09T16:32:04.027Z",
+      "similarity": {
+        "stem": 0.98,
+        "options": 1,
+        "combined": 0.986
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Mielodisplasias e mieloproliferações: outras alterações da medula óssea",
+        "Doenças mieloproliferativas crônicas",
+        "Policitemia vera (PV)",
+        "Diagnóstico da policitemia vera (PV)"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Diagnóstico da policitemia vera (PV). Conduta/resposta: Pesquisa da mutação JAK2V617F.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Leia-caso-clinico1289d07d087/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-afa2097da99b2e82",
+      "number": "1014i",
+      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Correlacione464b1b559e/",
+      "sourceQuestionId": "4000120917",
+      "matchedAt": "2026-11-09T16:32:09.922Z",
+      "similarity": {
+        "stem": 0.95,
+        "options": 1,
+        "combined": 0.9649999999999999
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Linfomas"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Linfomas. Conduta/resposta: I-c, II-d, III-a, IV-b, V-e.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Correlacione464b1b559e/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-09f7ca247c542c25",
+      "number": "1015i",
+      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/leucemia-mieloide2444a6f7d8/",
+      "sourceQuestionId": "4000115065",
+      "matchedAt": "2026-11-09T16:32:15.812Z",
       "similarity": {
         "stem": 1,
         "options": 1,
@@ -127,75 +144,43 @@
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Introdução ao Estudo das Anemias",
-        "Classificações das anemias",
-        "Classificação morfológica das anemias"
+        "Leucemias",
+        "Leucemias crônicas",
+        "Leucemia mieloide crônica (LMC)"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: Classificação morfológica das anemias. Conduta/resposta: doença celíaca, anemia aplástica, deficiência de ácido fólico.",
+      "comment": "Gabarito confirmado: B. Assunto: Leucemia mieloide crônica (LMC). Conduta/resposta: E casuísticas brasileiras indicam que a mediana de idade na apresentação da doença é, no mínimo, dez anos mais elevada que a encontrada na literatura internacional, com mediana de idade ao diagnóstico entre 40 e 46 anos.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Quais-reunem-conjunto265ef2f8e3/"
+        "https://med.estrategia.com/public/questoes/leucemia-mieloide2444a6f7d8/"
       ]
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-7994d7c6a0f8e1cc",
-      "number": "1076a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-bf90926f9a2e0ff0",
+      "number": "1016i",
+      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
       "changed": true,
       "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Microcitose10f5dd4060/",
-      "sourceQuestionId": "4000062253",
-      "matchedAt": "2026-11-08T22:13:43.872Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-masculino-32134cb91de4c/",
+      "sourceQuestionId": "4000108623",
+      "matchedAt": "2026-11-09T16:32:22.005Z",
       "similarity": {
-        "stem": 1,
+        "stem": 0.990990990990991,
         "options": 1,
-        "combined": 1
+        "combined": 0.9936936936936935
       },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
+      "localAnswer": "C",
+      "remoteAnswer": "C",
       "answerMismatch": false,
       "tags": [
         "Clínica Médica",
         "Hematologia",
-        "Introdução ao Estudo das Anemias",
-        "Classificações das anemias",
-        "Classificação morfológica das anemias",
-        "Hemograma",
-        "Índices hematimétricos",
-        "VCM – volume corpuscular médio"
+        "Linfomas",
+        "Linfomas não Hodgkin (LNH)",
+        "Introdução aos Linfomas não Hodgkin (LNH)"
       ],
-      "comment": "Gabarito confirmado: B. Assunto: VCM – volume corpuscular médio. Conduta/resposta: volume corpuscular médio;",
+      "comment": "Gabarito confirmado: C. Assunto: Introdução aos Linfomas não Hodgkin (LNH). Conduta/resposta: Linfoma não Hodgkin.",
       "candidates": [
-        "https://med.estrategia.com/public/questoes/Microcitose10f5dd4060/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-e7e530009a43ddba",
-      "number": "1088h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Doenc-Enxerto95d53e7f6/",
-      "sourceQuestionId": "4000074838",
-      "matchedAt": "2026-11-08T22:13:49.748Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Fundamentos de oncohematologia",
-        "Definições terapêuticas",
-        "Transplante de medula óssea (transplante de células tronco hematopoiéticas)",
-        "Transplante alogênico de medula óssea"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Transplante alogênico de medula óssea. Conduta/resposta: Transplante alogênico de medula óssea.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Doenc-Enxerto95d53e7f6/"
+        "https://med.estrategia.com/public/questoes/Paciente-masculino-32134cb91de4c/",
+        "https://med.estrategia.com/public/questoes/Paciente-32-anos-idade8669c9d3d7/"
       ]
     }
   ]
