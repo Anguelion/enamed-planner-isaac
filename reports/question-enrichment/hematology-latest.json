@@ -1,187 +1,58 @@
 {
-  "generatedAt": "2026-11-09T16:31:50.455Z",
+  "generatedAt": "2026-11-10T14:59:15.284Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 6,
+  "changed": 0,
   "results": [
     {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-9b4ae4e8047562e1",
-      "number": "1011i",
-      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Homem-58-anos-com80428c8b43/",
-      "sourceQuestionId": "4000143757",
-      "matchedAt": "2026-11-09T16:31:51.983Z",
-      "similarity": {
-        "stem": 0.9866666666666667,
-        "options": 1,
-        "combined": 0.9906666666666666
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Leucemias",
-        "Leucemias crônicas",
-        "Leucemia mieloide crônica (LMC)",
-        "Diagnóstico da leucemia mieloide crônica (LMC)"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Diagnóstico da leucemia mieloide crônica (LMC). Conduta/resposta: reação leucemoide associada a plaquetose reacional; antibioticoterapia.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Homem-58-anos-com86f5c482d8/",
-        "https://med.estrategia.com/public/questoes/Homem-58-anos-com80428c8b43/"
-      ]
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-5bd6192fa98e8aaa",
+      "number": "1083a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-668b9b32762925d3",
-      "number": "1012i",
-      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Adolescente-15-anos33a6f76ccb/",
-      "sourceQuestionId": "4000142758",
-      "matchedAt": "2026-11-09T16:31:58.289Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "D",
-      "remoteAnswer": "D",
-      "answerMismatch": false,
-      "tags": [
-        "Pediatria",
-        "Clínica Médica",
-        "Hematologia",
-        "Linfomas",
-        "Linfoma de Hodgkin (LH)"
-      ],
-      "comment": "Gabarito confirmado: D. Assunto: Linfoma de Hodgkin (LH). Conduta/resposta: Linfoma de Hodgkin.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Adolescente-15-anos33a6f76ccb/",
-        "https://med.estrategia.com/public/questoes/Adolescente-16-anos3000485735/"
-      ]
+      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-ac94d441251b57c3",
+      "number": "1084a",
+      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-7a3f8f59758b9ad5",
-      "number": "1013i",
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-1d2d113f2e9756cd",
+      "number": "1017i",
       "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Leia-caso-clinico1289d07d087/",
-      "sourceQuestionId": "4000129608",
-      "matchedAt": "2026-11-09T16:32:04.027Z",
-      "similarity": {
-        "stem": 0.98,
-        "options": 1,
-        "combined": 0.986
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Mielodisplasias e mieloproliferações: outras alterações da medula óssea",
-        "Doenças mieloproliferativas crônicas",
-        "Policitemia vera (PV)",
-        "Diagnóstico da policitemia vera (PV)"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Diagnóstico da policitemia vera (PV). Conduta/resposta: Pesquisa da mutação JAK2V617F.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Leia-caso-clinico1289d07d087/"
-      ]
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-afa2097da99b2e82",
-      "number": "1014i",
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-a7138c63b045999c",
+      "number": "1018i",
       "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Correlacione464b1b559e/",
-      "sourceQuestionId": "4000120917",
-      "matchedAt": "2026-11-09T16:32:09.922Z",
-      "similarity": {
-        "stem": 0.95,
-        "options": 1,
-        "combined": 0.9649999999999999
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Linfomas"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Linfomas. Conduta/resposta: I-c, II-d, III-a, IV-b, V-e.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Correlacione464b1b559e/"
-      ]
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-09f7ca247c542c25",
-      "number": "1015i",
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-89deef6292feabbd",
+      "number": "1019i",
       "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/leucemia-mieloide2444a6f7d8/",
-      "sourceQuestionId": "4000115065",
-      "matchedAt": "2026-11-09T16:32:15.812Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Leucemias",
-        "Leucemias crônicas",
-        "Leucemia mieloide crônica (LMC)"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Leucemia mieloide crônica (LMC). Conduta/resposta: E casuísticas brasileiras indicam que a mediana de idade na apresentação da doença é, no mínimo, dez anos mais elevada que a encontrada na literatura internacional, com mediana de idade ao diagnóstico entre 40 e 46 anos.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/leucemia-mieloide2444a6f7d8/"
-      ]
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-bf90926f9a2e0ff0",
-      "number": "1016i",
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-c8316991166ef2bf",
+      "number": "1020i",
       "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-masculino-32134cb91de4c/",
-      "sourceQuestionId": "4000108623",
-      "matchedAt": "2026-11-09T16:32:22.005Z",
-      "similarity": {
-        "stem": 0.990990990990991,
-        "options": 1,
-        "combined": 0.9936936936936935
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Linfomas",
-        "Linfomas não Hodgkin (LNH)",
-        "Introdução aos Linfomas não Hodgkin (LNH)"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Introdução aos Linfomas não Hodgkin (LNH). Conduta/resposta: Linfoma não Hodgkin.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-masculino-32134cb91de4c/",
-        "https://med.estrategia.com/public/questoes/Paciente-32-anos-idade8669c9d3d7/"
-      ]
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     }
   ]
 }
