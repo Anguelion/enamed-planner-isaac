@@ -4683,33 +4683,33 @@
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-94d2981b7bbc52ee": {
       "number": "1038c",
-      "status": "not_found",
-      "attempts": 3,
-      "lastAttemptAt": "2026-10-20T21:42:09.539Z",
-      "nextAttemptAt": "2026-11-10T21:42:09.539Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 4,
+      "lastAttemptAt": "2026-11-10T23:27:57.710Z",
+      "nextAttemptAt": "2026-12-08T23:27:57.710Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-19-anos-com96b75adeb8/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-d44b28c565909beb": {
       "number": "1039c",
-      "status": "not_found",
-      "attempts": 3,
-      "lastAttemptAt": "2026-10-20T21:42:35.652Z",
-      "nextAttemptAt": "2026-11-10T21:42:35.652Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 4,
+      "lastAttemptAt": "2026-11-10T23:28:04.087Z",
+      "nextAttemptAt": "2026-12-08T23:28:04.087Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Menino-seis-anos854392bf23/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-fe8ebf9684c016b1": {
       "number": "1040c",
-      "status": "not_found",
-      "attempts": 3,
-      "lastAttemptAt": "2026-10-20T21:43:01.717Z",
-      "nextAttemptAt": "2026-11-10T21:43:01.717Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 4,
+      "lastAttemptAt": "2026-11-10T23:28:09.797Z",
+      "nextAttemptAt": "2026-12-08T23:28:09.797Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-com-purpura147e55a524/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     },
     "anki-hematologia-hemostasia-ii-doencas-hemostaticas-6cc0438c3ec3a52b": {
       "number": "1041c",
@@ -7410,7 +7410,37 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-09a6d29a1ba8b8e9": {
+      "number": "1021i",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-10T23:28:15.703Z",
+      "nextAttemptAt": "2026-11-17T23:28:15.703Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-60-anos-na287101b38a/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-20b3582a3a6a6802": {
+      "number": "1022i",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-10T23:28:21.464Z",
+      "nextAttemptAt": "2026-11-17T23:28:21.464Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/mulher-encontra183dc9d51b/",
+      "localAnswer": "D",
+      "remoteAnswer": "D"
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-1ad4839f177f4824": {
+      "number": "1023i",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-10T23:28:27.286Z",
+      "nextAttemptAt": "2026-11-17T23:28:27.286Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/linfomas-na-Hodgkin1079faeac9/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
     }
   },
-  "updatedAt": "2026-11-10T14:59:44.018Z"
+  "updatedAt": "2026-11-10T23:28:27.286Z"
 }

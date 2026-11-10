@@ -1781,10 +1781,23 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Tratamento da púrpura trombocitopênica imunológica (PTI)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069426",
-      "ankiGuid": "Pd+MI2Y2^z"
+      "ankiGuid": "Pd+MI2Y2^z",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-19-anos-com96b75adeb8/",
+        "sourceQuestionId": "4000108630",
+        "matchedAt": "2026-11-10T23:27:57.710Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-d44b28c565909beb",
@@ -1814,10 +1827,23 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069427",
-      "ankiGuid": "gC@)FEg%;6"
+      "ankiGuid": "gC@)FEg%;6",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Menino-seis-anos854392bf23/",
+        "sourceQuestionId": "4000083805",
+        "matchedAt": "2026-11-10T23:28:04.087Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-fe8ebf9684c016b1",
@@ -1847,10 +1873,23 @@
       "tags": [
         "Hematologia",
         "Hemostasia II - Doenças Hemostáticas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Introdução à púrpura trombocitopênica imunológica (PTI)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742440069428",
-      "ankiGuid": "vOs36]s>Nt"
+      "ankiGuid": "vOs36]s>Nt",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-com-purpura147e55a524/",
+        "sourceQuestionId": "4000080720",
+        "matchedAt": "2026-11-10T23:28:09.797Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-6cc0438c3ec3a52b",

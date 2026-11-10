@@ -1,58 +1,191 @@
 {
-  "generatedAt": "2026-11-10T14:59:15.284Z",
+  "generatedAt": "2026-11-10T23:27:56.762Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 0,
+  "changed": 6,
   "results": [
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-5bd6192fa98e8aaa",
-      "number": "1083a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-94d2981b7bbc52ee",
+      "number": "1038c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Mulher-19-anos-com96b75adeb8/",
+      "sourceQuestionId": "4000108630",
+      "matchedAt": "2026-11-10T23:27:57.710Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Tratamento da púrpura trombocitopênica imunológica (PTI)"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Tratamento da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: Prednisona.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Mulher-19-anos-com96b75adeb8/"
+      ]
     },
     {
-      "id": "anki-hematologia-introducao-ao-estudo-das-anemias-ac94d441251b57c3",
-      "number": "1084a",
-      "file": "question_bank/hematologia-introducao-ao-estudo-das-anemias.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-d44b28c565909beb",
+      "number": "1039c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Menino-seis-anos854392bf23/",
+      "sourceQuestionId": "4000083805",
+      "matchedAt": "2026-11-10T23:28:04.087Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Diagnóstico da púrpura trombocitopênica imunológica (PTI)"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Diagnóstico da púrpura trombocitopênica imunológica (PTI). Conduta/resposta: Púrpura trombocitopênica imunológica.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/Menino-seis-anos854392bf23/",
+        "https://med.estrategia.com/public/questoes/Menino-seis-anos-chega153fc760863/"
+      ]
     },
     {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-1d2d113f2e9756cd",
-      "number": "1017i",
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-fe8ebf9684c016b1",
+      "number": "1040c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-com-purpura147e55a524/",
+      "sourceQuestionId": "4000080720",
+      "matchedAt": "2026-11-10T23:28:09.797Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Hemostasia",
+        "Hemostasia primária",
+        "Púrpura trombocitopênica imunológica (PTI)",
+        "Introdução à púrpura trombocitopênica imunológica (PTI)"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Introdução à púrpura trombocitopênica imunológica (PTI). Conduta/resposta: Aumento da destruição das plaquetas.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/paciente-com-purpura147e55a524/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-09a6d29a1ba8b8e9",
+      "number": "1021i",
       "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-60-anos-na287101b38a/",
+      "sourceQuestionId": "4000077361",
+      "matchedAt": "2026-11-10T23:28:15.702Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Mielodisplasias e mieloproliferações: outras alterações da medula óssea",
+        "Doenças mieloproliferativas crônicas",
+        "Policitemia vera (PV)",
+        "Diagnóstico da policitemia vera (PV)"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Diagnóstico da policitemia vera (PV). Conduta/resposta: policitemia vera.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/paciente-60-anos-na287101b38a/"
+      ]
     },
     {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-a7138c63b045999c",
-      "number": "1018i",
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-20b3582a3a6a6802",
+      "number": "1022i",
       "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/mulher-encontra183dc9d51b/",
+      "sourceQuestionId": "4000077240",
+      "matchedAt": "2026-11-10T23:28:21.464Z",
+      "similarity": {
+        "stem": 1,
+        "options": 0.8866666666666667,
+        "combined": 0.966
+      },
+      "localAnswer": "D",
+      "remoteAnswer": "D",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Linfomas",
+        "Linfomas não Hodgkin (LNH)",
+        "Introdução aos Linfomas não Hodgkin (LNH)"
+      ],
+      "comment": "Gabarito confirmado: D. Assunto: Introdução aos Linfomas não Hodgkin (LNH). Conduta/resposta: HHV8, HCV, HTLV1.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/mulher-encontra183dc9d51b/"
+      ]
     },
     {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-89deef6292feabbd",
-      "number": "1019i",
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-1ad4839f177f4824",
+      "number": "1023i",
       "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-c8316991166ef2bf",
-      "number": "1020i",
-      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/linfomas-na-Hodgkin1079faeac9/",
+      "sourceQuestionId": "4000054650",
+      "matchedAt": "2026-11-10T23:28:27.286Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "C",
+      "remoteAnswer": "C",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Linfomas",
+        "Linfomas não Hodgkin (LNH)",
+        "Introdução aos Linfomas não Hodgkin (LNH)",
+        "Classificação dos Linfomas não Hodgkin (LNH)",
+        "Linfomas não Hodgkin (LNH) indolentes (protótipo Folicular)"
+      ],
+      "comment": "Gabarito confirmado: C. Assunto: Linfomas não Hodgkin (LNH) indolentes (protótipo Folicular). Conduta/resposta: Possuem alto potencial de cura",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/linfomas-na-Hodgkin1079faeac9/"
+      ]
     }
   ]
 }

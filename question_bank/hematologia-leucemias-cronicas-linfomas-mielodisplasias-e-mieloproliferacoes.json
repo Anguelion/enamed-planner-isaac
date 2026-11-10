@@ -895,10 +895,23 @@
       "tags": [
         "Hematologia",
         "Leucemias Crônicas Linfomas Mielodisplasias e Mieloproliferações",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mielodisplasias e mieloproliferações: outras alterações da medula óssea",
+        "Doenças mieloproliferativas crônicas",
+        "Policitemia vera (PV)",
+        "Diagnóstico da policitemia vera (PV)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516352503",
-      "ankiGuid": "AlvY2{zeZz"
+      "ankiGuid": "AlvY2{zeZz",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/paciente-60-anos-na287101b38a/",
+        "sourceQuestionId": "4000077361",
+        "matchedAt": "2026-11-10T23:28:15.702Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-20b3582a3a6a6802",
@@ -929,10 +942,22 @@
       "tags": [
         "Hematologia",
         "Leucemias Crônicas Linfomas Mielodisplasias e Mieloproliferações",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Linfomas",
+        "Linfomas não Hodgkin (LNH)",
+        "Introdução aos Linfomas não Hodgkin (LNH)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516352504",
-      "ankiGuid": "DUl-QD[4X0"
+      "ankiGuid": "DUl-QD[4X0",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/mulher-encontra183dc9d51b/",
+        "sourceQuestionId": "4000077240",
+        "matchedAt": "2026-11-10T23:28:21.464Z",
+        "confidence": 0.966
+      }
     },
     {
       "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-1ad4839f177f4824",
@@ -963,10 +988,24 @@
       "tags": [
         "Hematologia",
         "Leucemias Crônicas Linfomas Mielodisplasias e Mieloproliferações",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Linfomas",
+        "Linfomas não Hodgkin (LNH)",
+        "Introdução aos Linfomas não Hodgkin (LNH)",
+        "Classificação dos Linfomas não Hodgkin (LNH)",
+        "Linfomas não Hodgkin (LNH) indolentes (protótipo Folicular)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516352505",
-      "ankiGuid": "ik9XL,jJs("
+      "ankiGuid": "ik9XL,jJs(",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/linfomas-na-Hodgkin1079faeac9/",
+        "sourceQuestionId": "4000054650",
+        "matchedAt": "2026-11-10T23:28:27.286Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-0fbf9b6c75802289",
