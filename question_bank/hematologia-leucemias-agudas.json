@@ -4429,10 +4429,22 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Leucemia linfoide aguda (LLA)",
+        "Classificação da leucemia linfoide aguda - LLA (morfológica, citogenética e biologia molecular)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516107005",
-      "ankiGuid": "N!e..h>WMd"
+      "ankiGuid": "N!e..h>WMd",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/pre-escolar-3-anos228d6ea8f7e/",
+        "sourceQuestionId": "4000129269",
+        "matchedAt": "2026-11-11T14:30:32.194Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-c58975b3ed3d18fb",
@@ -4462,10 +4474,25 @@
       "tags": [
         "Hematologia",
         "Leucemias Agudas",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Nefrologia",
+        "Lesão renal aguda (LRA)",
+        "Causas especificas",
+        "Síndrome de Lise Tumoral (SLT)",
+        "Fundamentos de oncohematologia",
+        "Intercorrências em oncohematologia",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516107006",
-      "ankiGuid": "i<9(*hT[LY"
+      "ankiGuid": "i<9(*hT[LY",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Com-a-sindrome-lise11f8d03a2e/",
+        "sourceQuestionId": "4000098860",
+        "matchedAt": "2026-11-11T14:30:38.178Z",
+        "confidence": 0.9884637188208616
+      }
     },
     {
       "id": "anki-hematologia-leucemias-agudas-77a8dccc8b3ca265",

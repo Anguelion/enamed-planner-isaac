@@ -7153,23 +7153,23 @@
     },
     "anki-hematologia-leucemias-agudas-29ce23924518acfd": {
       "number": "1095h",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-11-03T23:29:10.707Z",
-      "nextAttemptAt": "2026-11-10T23:29:10.707Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-11-11T14:30:32.195Z",
+      "nextAttemptAt": "2026-11-25T14:30:32.195Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/pre-escolar-3-anos228d6ea8f7e/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
     },
     "anki-hematologia-leucemias-agudas-c58975b3ed3d18fb": {
       "number": "1096h",
-      "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-11-03T23:29:16.052Z",
-      "nextAttemptAt": "2026-11-10T23:29:16.052Z",
-      "sourceUrl": null,
-      "localAnswer": null,
-      "remoteAnswer": null
+      "status": "matched",
+      "attempts": 2,
+      "lastAttemptAt": "2026-11-11T14:30:38.178Z",
+      "nextAttemptAt": "2026-11-25T14:30:38.178Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Com-a-sindrome-lise11f8d03a2e/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
     },
     "anki-hematologia-leucemias-agudas-77a8dccc8b3ca265": {
       "number": "1097h",
@@ -7440,7 +7440,47 @@
       "sourceUrl": "https://med.estrategia.com/public/questoes/linfomas-na-Hodgkin1079faeac9/",
       "localAnswer": "C",
       "remoteAnswer": "C"
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-0fbf9b6c75802289": {
+      "number": "1024i",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-11T14:30:44.361Z",
+      "nextAttemptAt": "2026-11-18T14:30:44.361Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-62-anos-idade99ba82e44e/",
+      "localAnswer": "E",
+      "remoteAnswer": "E"
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-69f3ef2c858a7121": {
+      "number": "1025i",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-11T14:30:50.191Z",
+      "nextAttemptAt": "2026-11-18T14:30:50.191Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/linfomas-Doenc-Hodgkin29472673cf/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-84eab420c96b0643": {
+      "number": "1026i",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-11T14:30:56.303Z",
+      "nextAttemptAt": "2026-11-18T14:30:56.303Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-62-anos-sexo113be779d20/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-468728e2ca676042": {
+      "number": "1027i",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-11T14:31:02.361Z",
+      "nextAttemptAt": "2026-11-18T14:31:02.361Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/acometimento-primario14aa7a2f78/",
+      "localAnswer": "A",
+      "remoteAnswer": "A"
     }
   },
-  "updatedAt": "2026-11-10T23:28:27.286Z"
+  "updatedAt": "2026-11-11T14:31:02.361Z"
 }

@@ -1036,10 +1036,26 @@
       "tags": [
         "Hematologia",
         "Leucemias Crônicas Linfomas Mielodisplasias e Mieloproliferações",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Leucemias crônicas",
+        "Leucemia linfoide crônica (LLC)",
+        "Classificação da leucemia linfoide crônica – LLC (morfológica, citogenética e biologia molecular)",
+        "Quadro clínico da leucemia linfoide crônica (LLC)",
+        "Diagnóstico da leucemia linfoide crônica (LLC)",
+        "Tratamento da leucemia linfoide crônica (LLC)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516352506",
-      "ankiGuid": "vZn|IsahnX"
+      "ankiGuid": "vZn|IsahnX",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-62-anos-idade99ba82e44e/",
+        "sourceQuestionId": "4000053910",
+        "matchedAt": "2026-11-11T14:30:44.361Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-69f3ef2c858a7121",
@@ -1069,10 +1085,20 @@
       "tags": [
         "Hematologia",
         "Leucemias Crônicas Linfomas Mielodisplasias e Mieloproliferações",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Linfomas",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516352507",
-      "ankiGuid": "H50g6MJ+!_"
+      "ankiGuid": "H50g6MJ+!_",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/linfomas-Doenc-Hodgkin29472673cf/",
+        "sourceQuestionId": "4000042773",
+        "matchedAt": "2026-11-11T14:30:50.191Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-84eab420c96b0643",
@@ -1102,10 +1128,24 @@
       "tags": [
         "Hematologia",
         "Leucemias Crônicas Linfomas Mielodisplasias e Mieloproliferações",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Leucemias",
+        "Leucemias crônicas",
+        "Leucemia mieloide crônica (LMC)",
+        "Quadro clínico da leucemia mieloide crônica (LMC)",
+        "Diagnóstico da leucemia mieloide crônica (LMC)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516352508",
-      "ankiGuid": "HgLibY0(_J"
+      "ankiGuid": "HgLibY0(_J",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-62-anos-sexo113be779d20/",
+        "sourceQuestionId": "4000031740",
+        "matchedAt": "2026-11-11T14:30:56.302Z",
+        "confidence": 0.9931372549019608
+      }
     },
     {
       "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-468728e2ca676042",
@@ -1135,10 +1175,23 @@
       "tags": [
         "Hematologia",
         "Leucemias Crônicas Linfomas Mielodisplasias e Mieloproliferações",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Linfomas",
+        "Linfomas não Hodgkin (LNH)",
+        "Linfomas não Hodgkin (LNH) agressivos (protótipo difuso de grandes células B)",
+        "Quadro Clínico dos Linfomas não Hodgkin (LNH) agressivos",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516352509",
-      "ankiGuid": "qpoxo*7A)v"
+      "ankiGuid": "qpoxo*7A)v",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/acometimento-primario14aa7a2f78/",
+        "sourceQuestionId": "4000026802",
+        "matchedAt": "2026-11-11T14:31:02.360Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-56dd60034a65e1d0",
