@@ -1,196 +1,58 @@
 {
-  "generatedAt": "2026-11-11T14:30:30.564Z",
+  "generatedAt": "2026-11-12T15:23:02.776Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 6,
+  "changed": 0,
   "results": [
     {
-      "id": "anki-hematologia-leucemias-agudas-29ce23924518acfd",
-      "number": "1095h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/pre-escolar-3-anos228d6ea8f7e/",
-      "sourceQuestionId": "4000129269",
-      "matchedAt": "2026-11-11T14:30:32.194Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "E",
-      "remoteAnswer": "E",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Leucemias",
-        "Leucemias agudas",
-        "Leucemia linfoide aguda (LLA)",
-        "Classificação da leucemia linfoide aguda - LLA (morfológica, citogenética e biologia molecular)"
-      ],
-      "comment": "Gabarito confirmado: E. Assunto: Classificação da leucemia linfoide aguda - LLA (morfológica, citogenética e biologia molecular). Conduta/resposta: Idade do paciente > 1 ano.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/pre-escolar-3-anos228d6ea8f7e/",
-        "https://med.estrategia.com/public/questoes/Pre-escolar-3-anos-foi169940d65d8/"
-      ]
+      "id": "anki-hematologia-gamopatias-monoclonais-8caf6a0f5e0d0c79",
+      "number": "1011j",
+      "file": "question_bank/hematologia-gamopatias-monoclonais.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-agudas-c58975b3ed3d18fb",
-      "number": "1096h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Com-a-sindrome-lise11f8d03a2e/",
-      "sourceQuestionId": "4000098860",
-      "matchedAt": "2026-11-11T14:30:38.178Z",
-      "similarity": {
-        "stem": 1,
-        "options": 0.9615457294028723,
-        "combined": 0.9884637188208616
-      },
-      "localAnswer": "B",
-      "remoteAnswer": "B",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Nefrologia",
-        "Lesão renal aguda (LRA)",
-        "Causas especificas",
-        "Síndrome de Lise Tumoral (SLT)",
-        "Hematologia",
-        "Fundamentos de oncohematologia",
-        "Intercorrências em oncohematologia"
-      ],
-      "comment": "Gabarito confirmado: B. Assunto: Intercorrências em oncohematologia. Conduta/resposta: A lise tumoral está associada ao início da quimioterapia, radioterapia ou corticoterapiade tumores de alto grau como o linfoma difuso de grandes células B e a neoplasia de pequenas células de pulmão.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Com-a-sindrome-lise11f8d03a2e/"
-      ]
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-4142ecd02629af54",
+      "number": "1052c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-0fbf9b6c75802289",
-      "number": "1024i",
-      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-62-anos-idade99ba82e44e/",
-      "sourceQuestionId": "4000053910",
-      "matchedAt": "2026-11-11T14:30:44.361Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "E",
-      "remoteAnswer": "E",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Leucemias",
-        "Leucemias crônicas",
-        "Leucemia linfoide crônica (LLC)",
-        "Classificação da leucemia linfoide crônica – LLC (morfológica, citogenética e biologia molecular)",
-        "Quadro clínico da leucemia linfoide crônica (LLC)",
-        "Diagnóstico da leucemia linfoide crônica (LLC)",
-        "Tratamento da leucemia linfoide crônica (LLC)"
-      ],
-      "comment": "Gabarito confirmado: E. Assunto: Tratamento da leucemia linfoide crônica (LLC). Conduta/resposta: III e IV.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-62-anos-idade99ba82e44e/",
-        "https://med.estrategia.com/public/questoes/Paciente-sexo-feminino123aa9f12c4/"
-      ]
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-52bf9b7e5b38dba6",
+      "number": "1053c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-69f3ef2c858a7121",
-      "number": "1025i",
-      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/linfomas-Doenc-Hodgkin29472673cf/",
-      "sourceQuestionId": "4000042773",
-      "matchedAt": "2026-11-11T14:30:50.191Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "C",
-      "remoteAnswer": "C",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Linfomas"
-      ],
-      "comment": "Gabarito confirmado: C. Assunto: Linfomas. Conduta/resposta: Os Linfomas não Hodgkin (LNH) agressivos compreendem um grupo biológica e clinicamente homogêneo de hemopatias malignas.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/linfomas-Doenc-Hodgkin29472673cf/"
-      ]
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-4225449856151bdb",
+      "number": "1054c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-84eab420c96b0643",
-      "number": "1026i",
-      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-62-anos-sexo113be779d20/",
-      "sourceQuestionId": "4000031740",
-      "matchedAt": "2026-11-11T14:30:56.302Z",
-      "similarity": {
-        "stem": 0.9901960784313726,
-        "options": 1,
-        "combined": 0.9931372549019608
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Leucemias",
-        "Leucemias crônicas",
-        "Leucemia mieloide crônica (LMC)",
-        "Quadro clínico da leucemia mieloide crônica (LMC)",
-        "Diagnóstico da leucemia mieloide crônica (LMC)"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Diagnóstico da leucemia mieloide crônica (LMC). Conduta/resposta: Leucemia mielóide crônica.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/Paciente-62-anos-sexo113be779d20/",
-        "https://med.estrategia.com/public/questoes/Paciente-sexo12520a68c3f/"
-      ]
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-a95fd4d386b39647",
+      "number": "1055c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-468728e2ca676042",
-      "number": "1027i",
-      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/acometimento-primario14aa7a2f78/",
-      "sourceQuestionId": "4000026802",
-      "matchedAt": "2026-11-11T14:31:02.360Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Linfomas",
-        "Linfomas não Hodgkin (LNH)",
-        "Linfomas não Hodgkin (LNH) agressivos (protótipo difuso de grandes células B)",
-        "Quadro Clínico dos Linfomas não Hodgkin (LNH) agressivos"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Quadro Clínico dos Linfomas não Hodgkin (LNH) agressivos. Conduta/resposta: células B.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/acometimento-primario14aa7a2f78/"
-      ]
+      "id": "anki-hematologia-hemostasia-ii-doencas-hemostaticas-c1d8e797aa1c6697",
+      "number": "1056c",
+      "file": "question_bank/hematologia-hemostasia-ii-doencas-hemostaticas.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
     }
   ]
 }
