@@ -7580,7 +7580,67 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-2bb0704ea12b5126": {
+      "number": "1038i",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-13T23:38:34.603Z",
+      "nextAttemptAt": "2026-11-20T23:38:34.603Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-ade6977fa1715fa7": {
+      "number": "1039i",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-13T23:38:40.127Z",
+      "nextAttemptAt": "2026-11-20T23:38:40.127Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-0bbe95fc6165add8": {
+      "number": "1040i",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-13T23:38:46.399Z",
+      "nextAttemptAt": "2026-11-20T23:38:46.399Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-4dce8d253981369a": {
+      "number": "1041i",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-13T23:38:51.869Z",
+      "nextAttemptAt": "2026-11-20T23:38:51.869Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-522e6b5d535266d7": {
+      "number": "1042i",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-13T23:38:57.327Z",
+      "nextAttemptAt": "2026-11-20T23:38:57.327Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-55c73ebbbc3da060": {
+      "number": "1043i",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-13T23:39:02.889Z",
+      "nextAttemptAt": "2026-11-20T23:39:02.889Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-11-13T14:41:26.656Z"
+  "updatedAt": "2026-11-13T23:39:02.889Z"
 }
