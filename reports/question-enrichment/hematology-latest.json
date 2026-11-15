@@ -1,54 +1,75 @@
 {
-  "generatedAt": "2026-11-14T22:30:57.735Z",
+  "generatedAt": "2026-11-15T14:01:58.815Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 0,
+  "changed": 1,
   "results": [
     {
-      "id": "anki-hematologia-anemias-macrociticas-e7381822d42ca8a7",
-      "number": "1089e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-939077ae13b554ca",
+      "number": "1053i",
+      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/que-diz-linfoma121cd327cb/",
+      "sourceQuestionId": "4000033296",
+      "matchedAt": "2026-11-15T14:02:00.971Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "B",
+      "remoteAnswer": "B",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Linfomas",
+        "Linfoma de Hodgkin (LH)"
+      ],
+      "comment": "Gabarito confirmado: B. Assunto: Linfoma de Hodgkin (LH). Conduta/resposta: Do ponto de vista histopatológico, o linfoma de Hodgkin clássico, tipo celularidade mista, caracteriza-se por aspecto celular heterogêneo e, particularmente, pela ausência de eosinófilos.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/que-diz-linfoma121cd327cb/",
+        "https://med.estrategia.com/public/questoes/alternativa-linfoma9cdd092d1/"
+      ]
     },
     {
-      "id": "anki-hematologia-anemias-macrociticas-fdce150efc352ad2",
-      "number": "1090e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-anemias-macrociticas-ec69e44435a2b56c",
-      "number": "1093e",
-      "file": "question_bank/hematologia-anemias-macrociticas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-b1cd88d32464e818",
-      "number": "1050i",
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-8a5606b1e1e96a62",
+      "number": "1054i",
       "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-ead823e81673a4de",
-      "number": "1051i",
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-c4177d50dee6635f",
+      "number": "1055i",
       "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-b8903e5e10c34ede",
-      "number": "1052i",
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-e86cb863db235a04",
+      "number": "1056i",
+      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-f17e8d3925300e65",
+      "number": "1057i",
+      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-93cccfd224ad315d",
+      "number": "1058i",
       "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
       "changed": false,
       "status": "not_found",

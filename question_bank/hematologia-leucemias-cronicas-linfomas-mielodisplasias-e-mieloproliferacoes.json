@@ -2049,10 +2049,21 @@
       "tags": [
         "Hematologia",
         "Leucemias Crônicas Linfomas Mielodisplasias e Mieloproliferações",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Linfomas",
+        "Linfoma de Hodgkin (LH)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516352535",
-      "ankiGuid": "DY?Lk)K$9O"
+      "ankiGuid": "DY?Lk)K$9O",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/que-diz-linfoma121cd327cb/",
+        "sourceQuestionId": "4000033296",
+        "matchedAt": "2026-11-15T14:02:00.971Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-8a5606b1e1e96a62",
