@@ -1,0 +1,716 @@
+{
+  "id": "enamed-2026-inep-caderno-01",
+  "name": "ENAMED 2026 oficial · Caderno 01",
+  "type": "official_inep",
+  "examYear": 2026,
+  "booklet": "01",
+  "applicationDate": "2026-09-13",
+  "questionCount": 100,
+  "scoredQuestionCount": 100,
+  "durationMinutes": 300,
+  "source": "https://download.inep.gov.br/enamed/provas_e_gabaritos/2026_caderno_1.pdf",
+  "answerKeySource": "https://download.inep.gov.br/enamed/provas_e_gabaritos/2026_gabarito_caderno_1_preliminar.pdf",
+  "answerKeyStatus": "preliminary",
+  "questions": [
+    {
+      "id": "enamed-2026-inep-caderno-01-q001",
+      "number": 1,
+      "sourcePage": 3,
+      "answer": "B",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q002",
+      "number": 2,
+      "sourcePage": 3,
+      "answer": "C",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q003",
+      "number": 3,
+      "sourcePage": 3,
+      "answer": "C",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q004",
+      "number": 4,
+      "sourcePage": 3,
+      "answer": "D",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q005",
+      "number": 5,
+      "sourcePage": 3,
+      "answer": "D",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q006",
+      "number": 6,
+      "sourcePage": 4,
+      "answer": "D",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q007",
+      "number": 7,
+      "sourcePage": 4,
+      "answer": "C",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q008",
+      "number": 8,
+      "sourcePage": 4,
+      "answer": "C",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q009",
+      "number": 9,
+      "sourcePage": 4,
+      "answer": "A",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q010",
+      "number": 10,
+      "sourcePage": 4,
+      "answer": "C",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q011",
+      "number": 11,
+      "sourcePage": 5,
+      "answer": "A",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q012",
+      "number": 12,
+      "sourcePage": 5,
+      "answer": "A",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q013",
+      "number": 13,
+      "sourcePage": 5,
+      "answer": "B",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q014",
+      "number": 14,
+      "sourcePage": 5,
+      "answer": "C",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q015",
+      "number": 15,
+      "sourcePage": 5,
+      "answer": "C",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q016",
+      "number": 16,
+      "sourcePage": 6,
+      "answer": "D",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q017",
+      "number": 17,
+      "sourcePage": 6,
+      "answer": "A",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q018",
+      "number": 18,
+      "sourcePage": 6,
+      "answer": "A",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q019",
+      "number": 19,
+      "sourcePage": 6,
+      "answer": "C",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q020",
+      "number": 20,
+      "sourcePage": 6,
+      "answer": "A",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q021",
+      "number": 21,
+      "sourcePage": 7,
+      "answer": "D",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q022",
+      "number": 22,
+      "sourcePage": 7,
+      "answer": "C",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q023",
+      "number": 23,
+      "sourcePage": 7,
+      "answer": "A",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q024",
+      "number": 24,
+      "sourcePage": 7,
+      "answer": "B",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q025",
+      "number": 25,
+      "sourcePage": 8,
+      "answer": "A",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q026",
+      "number": 26,
+      "sourcePage": 8,
+      "answer": "B",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q027",
+      "number": 27,
+      "sourcePage": 8,
+      "answer": "C",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q028",
+      "number": 28,
+      "sourcePage": 9,
+      "answer": "B",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q029",
+      "number": 29,
+      "sourcePage": 9,
+      "answer": "C",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q030",
+      "number": 30,
+      "sourcePage": 10,
+      "answer": "A",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q031",
+      "number": 31,
+      "sourcePage": 10,
+      "answer": "B",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q032",
+      "number": 32,
+      "sourcePage": 10,
+      "answer": "D",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q033",
+      "number": 33,
+      "sourcePage": 10,
+      "answer": "B",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q034",
+      "number": 34,
+      "sourcePage": 11,
+      "answer": "B",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q035",
+      "number": 35,
+      "sourcePage": 11,
+      "answer": "A",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q036",
+      "number": 36,
+      "sourcePage": 11,
+      "answer": "D",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q037",
+      "number": 37,
+      "sourcePage": 12,
+      "answer": "A",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q038",
+      "number": 38,
+      "sourcePage": 13,
+      "answer": "A",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q039",
+      "number": 39,
+      "sourcePage": 13,
+      "answer": "B",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q040",
+      "number": 40,
+      "sourcePage": 13,
+      "answer": "A",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q041",
+      "number": 41,
+      "sourcePage": 13,
+      "answer": "A",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q042",
+      "number": 42,
+      "sourcePage": 13,
+      "answer": "B",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q043",
+      "number": 43,
+      "sourcePage": 13,
+      "answer": "D",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q044",
+      "number": 44,
+      "sourcePage": 14,
+      "answer": "C",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q045",
+      "number": 45,
+      "sourcePage": 14,
+      "answer": "D",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q046",
+      "number": 46,
+      "sourcePage": 14,
+      "answer": "B",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q047",
+      "number": 47,
+      "sourcePage": 14,
+      "answer": "C",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q048",
+      "number": 48,
+      "sourcePage": 14,
+      "answer": "A",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q049",
+      "number": 49,
+      "sourcePage": 14,
+      "answer": "C",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q050",
+      "number": 50,
+      "sourcePage": 15,
+      "answer": "B",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q051",
+      "number": 51,
+      "sourcePage": 15,
+      "answer": "A",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q052",
+      "number": 52,
+      "sourcePage": 15,
+      "answer": "B",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q053",
+      "number": 53,
+      "sourcePage": 16,
+      "answer": "A",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q054",
+      "number": 54,
+      "sourcePage": 16,
+      "answer": "D",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q055",
+      "number": 55,
+      "sourcePage": 16,
+      "answer": "C",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q056",
+      "number": 56,
+      "sourcePage": 16,
+      "answer": "A",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q057",
+      "number": 57,
+      "sourcePage": 17,
+      "answer": "B",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q058",
+      "number": 58,
+      "sourcePage": 17,
+      "answer": "B",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q059",
+      "number": 59,
+      "sourcePage": 17,
+      "answer": "B",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q060",
+      "number": 60,
+      "sourcePage": 17,
+      "answer": "D",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q061",
+      "number": 61,
+      "sourcePage": 17,
+      "answer": "B",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q062",
+      "number": 62,
+      "sourcePage": 18,
+      "answer": "B",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q063",
+      "number": 63,
+      "sourcePage": 18,
+      "answer": "B",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q064",
+      "number": 64,
+      "sourcePage": 18,
+      "answer": "A",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q065",
+      "number": 65,
+      "sourcePage": 18,
+      "answer": "B",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q066",
+      "number": 66,
+      "sourcePage": 18,
+      "answer": "C",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q067",
+      "number": 67,
+      "sourcePage": 19,
+      "answer": "C",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q068",
+      "number": 68,
+      "sourcePage": 19,
+      "answer": "A",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q069",
+      "number": 69,
+      "sourcePage": 19,
+      "answer": "B",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q070",
+      "number": 70,
+      "sourcePage": 20,
+      "answer": "C",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q071",
+      "number": 71,
+      "sourcePage": 20,
+      "answer": "C",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q072",
+      "number": 72,
+      "sourcePage": 20,
+      "answer": "B",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q073",
+      "number": 73,
+      "sourcePage": 20,
+      "answer": "B",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q074",
+      "number": 74,
+      "sourcePage": 20,
+      "answer": "A",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q075",
+      "number": 75,
+      "sourcePage": 21,
+      "answer": "D",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q076",
+      "number": 76,
+      "sourcePage": 21,
+      "answer": "B",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q077",
+      "number": 77,
+      "sourcePage": 21,
+      "answer": "D",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q078",
+      "number": 78,
+      "sourcePage": 21,
+      "answer": "A",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q079",
+      "number": 79,
+      "sourcePage": 21,
+      "answer": "A",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q080",
+      "number": 80,
+      "sourcePage": 22,
+      "answer": "C",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q081",
+      "number": 81,
+      "sourcePage": 22,
+      "answer": "D",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q082",
+      "number": 82,
+      "sourcePage": 23,
+      "answer": "C",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q083",
+      "number": 83,
+      "sourcePage": 23,
+      "answer": "C",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q084",
+      "number": 84,
+      "sourcePage": 23,
+      "answer": "D",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q085",
+      "number": 85,
+      "sourcePage": 23,
+      "answer": "C",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q086",
+      "number": 86,
+      "sourcePage": 23,
+      "answer": "D",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q087",
+      "number": 87,
+      "sourcePage": 24,
+      "answer": "A",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q088",
+      "number": 88,
+      "sourcePage": 24,
+      "answer": "B",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q089",
+      "number": 89,
+      "sourcePage": 24,
+      "answer": "C",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q090",
+      "number": 90,
+      "sourcePage": 25,
+      "answer": "C",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q091",
+      "number": 91,
+      "sourcePage": 25,
+      "answer": "D",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q092",
+      "number": 92,
+      "sourcePage": 25,
+      "answer": "C",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q093",
+      "number": 93,
+      "sourcePage": 25,
+      "answer": "A",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q094",
+      "number": 94,
+      "sourcePage": 25,
+      "answer": "D",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q095",
+      "number": 95,
+      "sourcePage": 26,
+      "answer": "C",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q096",
+      "number": 96,
+      "sourcePage": 26,
+      "answer": "A",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q097",
+      "number": 97,
+      "sourcePage": 26,
+      "answer": "B",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q098",
+      "number": 98,
+      "sourcePage": 26,
+      "answer": "A",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q099",
+      "number": 99,
+      "sourcePage": 26,
+      "answer": "D",
+      "annulled": false
+    },
+    {
+      "id": "enamed-2026-inep-caderno-01-q100",
+      "number": 100,
+      "sourcePage": 26,
+      "answer": "D",
+      "annulled": false
+    }
+  ]
+}

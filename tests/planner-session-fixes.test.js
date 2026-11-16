@@ -166,10 +166,10 @@ test('o plano do bloco 12 distribui as partes medidas na ordem oficial e reserva
   byDate.forEach((entries,date) => {
     const weekday = new Date(`${date}T12:00:00`).getDay();
     assert.ok(weekday>=1 && weekday<=5);
-    assert.ok(entries.reduce((sum,entry)=>sum+entry.minutes,0)<=100,`${date} excedeu a carga de conteúdo`);
+    assert.ok(entries.reduce((sum,entry)=>sum+entry.minutes,0)<=90,`${date} excedeu a carga de conteúdo`);
     assert.ok(new Set(entries.map(entry=>entry.lessonId)).size<=2);
   });
-  assert.match(ctx.renderStudyPlanDay('2026-11-16'),/91 min de conteúdo · 14 min de questões e flashcards da aula · 15 min de revisão dos blocos anteriores/);
+  assert.match(ctx.renderStudyPlanDay('2026-11-16'),/56 min de conteúdo · 49 min de questões e flashcards da aula · 15 min de revisão dos blocos anteriores/);
   const split = lessons.find(item=>item.studySlots.some(slot=>slot.start>0));
   const second = split.studySlots.find(slot=>slot.start>0);
   assert.ok(ctx.scheduledLessonsOn(second.date).includes(split),'a continuação aparece na data em que deve ser vista');
@@ -194,7 +194,7 @@ test('a revisão cobre os temas dos blocos 1 a 11 na ordem e cabe no orçamento 
   for(const {date,minutes} of reviews) {
     assert.ok(!state.reschedule.studyBreakDates.includes(date) && ![0,6].includes(new Date(`${date}T12:00:00`).getDay()));
     const content = ctx.plannedStudyEntries(date).filter(({slot})=>!slot.practice).reduce((total,{slot})=>total+slot.minutes,0);
-    assert.ok(minutes>=10 && minutes<=15 && 120-content-minutes>=10);
+    assert.ok(minutes>=10 && minutes<=15 && 120-content-minutes>=20);
   }
   assert.deepEqual(plain(state.schedule),schedule);
   assert.match(ctx.renderPreviousBlockReviewCalendar(),/0\/84 concluídas/);

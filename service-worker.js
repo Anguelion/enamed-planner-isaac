@@ -1,4 +1,4 @@
-const CACHE_NAME = 'soqueromed-shell-v360';
+const CACHE_NAME = 'soqueromed-shell-v361';
 const APP_SHELL = [
   './',
   './manifest.webmanifest',
@@ -55,6 +55,7 @@ self.addEventListener('fetch', event => {
     || url.pathname.endsWith('/assets/radar-saude.css')
     || url.pathname.endsWith('/assets/radar-saude.js')
     || url.pathname.includes('/question_bank/')
+    || url.pathname.includes('/imported_simulados/')
     || url.pathname.endsWith('/assets/app-loader.js')
     || url.pathname.endsWith('/assets/auth-shell.css')
     || url.pathname.endsWith('/assets/planner.js')
