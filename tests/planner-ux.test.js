@@ -306,7 +306,7 @@ test('Questões abre só a coleção necessária e limita a trilha aos 30 blocos
   assert.doesNotMatch(planner,/Carregar banco completo/);
   assert.match(planner,/sob demanda/);
   assert.match(planner,/Carregando as primeiras questões/);
-  assert.match(planner,/await loadLocalQuestionBank\(\{initialOnly:true,preferredBlock:String\(item\.block\)\}\)/);
+  assert.match(planner,/await loadLocalQuestionBank\(\{initialOnly:true,preferredBlock:questionBlock\}\)/);
   assert.equal(officialBlocks.length,30);
   assert.deepEqual(officialBlocks.map(entry=>Number(entry.block)),Array.from({length:30},(_,index)=>index+1));
   assert.match(planner,/function officialQuestionBlockEntries\(\)/);

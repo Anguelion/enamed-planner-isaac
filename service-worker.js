@@ -1,4 +1,4 @@
-const CACHE_NAME = 'soqueromed-shell-v359';
+const CACHE_NAME = 'soqueromed-shell-v360';
 const APP_SHELL = [
   './',
   './manifest.webmanifest',

@@ -123,6 +123,8 @@ const STUDY_PLAN_START_BLOCK = 12;
 const STUDY_PLAN_START_DATE = '2026-11-16';
 const STUDY_PLAN_DAILY_MINUTES = 120;
 const STUDY_PLAN_CONTENT_MINUTES = 100;
+const STUDY_PLAN_BREAK_DATES = ['2026-11-20','2026-12-25','2027-01-01','2027-04-21'];
+const PREVIOUS_REVIEW_QUESTION_BLOCK = {'9:9':8};
 const STUDY_PLAN_READINGS = {
   '27:2':'peconhentos-raiva-e-tetano',
   '28:3':'esp-saude-mental-do-adolescente-2827fa46'
@@ -677,7 +679,6 @@ function ensureDurationStudyPlan() {
   if(state.schedulePlanVersion === STUDY_PLAN_VERSION && state.reschedule?.version===STUDY_PLAN_VERSION
     && plannedCount===state.reschedule.plannedLessons && ordered.length===state.reschedule.eligibleLessons) return false;
 
-  const studyBreakDates = ['2026-11-20','2026-12-25','2027-01-01','2027-04-21'];
   const partsByLesson = new Map();
   const lessons = ordered.filter(item => {
     // Após sincronização os registros já estudados continuam vinculados ao
@@ -689,7 +690,7 @@ function ensureDurationStudyPlan() {
     partsByLesson.set(item.id,contentDone ? [{practice:true}] : pending);
     return true;
   });
-  const {slotsByLesson,finishDate} = buildStudyPlan(lessons,item => partsByLesson.get(item.id),STUDY_PLAN_START_DATE,studyBreakDates);
+  const {slotsByLesson,finishDate} = buildStudyPlan(lessons,item => partsByLesson.get(item.id),STUDY_PLAN_START_DATE,STUDY_PLAN_BREAK_DATES);
   ordered.forEach(item => {
     const slots = slotsByLesson.get(item.id);
     if(!slots) { delete item.studySlots; return; }
@@ -709,7 +710,7 @@ function ensureDurationStudyPlan() {
     plannedLessons:lessons.length,
     eligibleLessons:ordered.length,
     weekdaysOnly:true,
-    studyBreakDates,
+    studyBreakDates:[...STUDY_PLAN_BREAK_DATES],
     method:'Aulas na ordem oficial com até 100 minutos de conteúdo por dia útil. O tempo restante é dedicado a questões e flashcards.'
   };
   state.schedulePlanVersion = STUDY_PLAN_VERSION;
@@ -1802,6 +1803,9 @@ function mergePlannerActivityState(remoteState, localState, preferLocal=false) {
     if(cards.length) merged.videoFlashcards[id] = cards;
   });
   merged.studySessions = mergeRecordsById(remote.studySessions, local.studySessions, preferLocal);
+  if(remote.previousBlockReviews || local.previousBlockReviews) {
+    merged.previousBlockReviews = mergeRecordMapByKey(remote.previousBlockReviews,local.previousBlockReviews,preferLocal);
+  }
   merged.freeNotes = StudyWorkspace.mergeNotes(remote.freeNotes,local.freeNotes);
   merged.videoPlayer = mergeVideoPlayerState(remote.videoPlayer, local.videoPlayer, preferLocal);
   merged.gamification = mergeGamificationState(remote.gamification, local.gamification);
@@ -2444,6 +2448,7 @@ function personalPlannerBackup(selectedIds) {
   // O cronograma sempre entra: sem ele o arquivo não passa na validação de
   // "Restaurar do PC" (que exige schedule não-vazio) e fica sem contexto nenhum.
   const backup = { schedule: structuredClone(state.schedule || []) };
+  if(state.previousBlockReviews) backup.previousBlockReviews = structuredClone(state.previousBlockReviews);
   if(ids.has('hours')) {
     backup.dayLogs = structuredClone(state.dayLogs || []);
     backup.studySessions = structuredClone(state.studySessions || []);
@@ -4340,6 +4345,64 @@ function scheduledLessonsOn(date) {
 function plannedStudyEntries(date) {
   return scheduledLessonsOn(date).flatMap(item => (item.studySlots||[]).filter(slot => slot.date===date).map(slot => ({item,slot})));
 }
+function previousBlockReviewSchedule() {
+  const topics = state.schedule.filter(item=>n(item.block)>0 && n(item.block)<STUDY_PLAN_START_BLOCK)
+    .sort((a,b)=>n(a.block)-n(b.block) || n(a.lessonOrder)-n(b.lessonOrder) || n(a.row)-n(b.row));
+  const contentByDate = new Map();
+  for(const item of state.schedule) {
+    for(const slot of item.studySlots || []) {
+      if(!slot.practice) contentByDate.set(slot.date,(contentByDate.get(slot.date)||0)+n(slot.minutes));
+    }
+  }
+  let date = STUDY_PLAN_START_DATE;
+  return topics.map(item=>{
+    while(STUDY_PLAN_BREAK_DATES.includes(date)) date=nextWeekday(addDays(date,1));
+    const key = `${item.block}:${item.lessonOrder || item.row}`;
+    const minutes = Math.min(15,Math.max(10,STUDY_PLAN_DAILY_MINUTES-(contentByDate.get(date)||0)-10));
+    const entry = {item,key,date,minutes,done:state.previousBlockReviews?.[key]?.done===true};
+    date=nextWeekday(addDays(date,1));
+    return entry;
+  });
+}
+function setPreviousBlockReview(key,done) {
+  if(!previousBlockReviewSchedule().some(review=>review.key===key)) return false;
+  state.previousBlockReviews ||= {};
+  state.previousBlockReviews[key] = {done,updatedAt:nowIso()};
+  return true;
+}
+function reviewPlanActions({item,key,done}) {
+  const id = escapeAttr(item.id);
+  return `<div class="study-plan-actions"><button type="button" class="tiny-btn" data-open-review-questions="${id}">Questões</button><button type="button" class="tiny-btn" data-open-schedule-flashcards="${id}">Flashcards</button><button type="button" class="tiny-btn" data-plan-material="${id}">Material</button><button type="button" class="tiny-btn" data-mark-previous-review="${escapeAttr(key)}" aria-pressed="${done}" aria-label="${done?'Reabrir':'Concluir'} revisão de ${escapeAttr(item.topic)}">${done?'Reabrir':'Concluir'}</button></div>`;
+}
+function renderPreviousBlockReviewCalendar() {
+  const reviews = previousBlockReviewSchedule();
+  if(!reviews.length) return '';
+  const today = studyDateKey();
+  const done = reviews.filter(review=>review.done).length;
+  const overdue = reviews.filter(review=>!review.done&&review.date<today).length;
+  const byBlock = new Map();
+  for(const review of reviews) {
+    const block = review.item.block;
+    if(!byBlock.has(block)) byBlock.set(block,[]);
+    byBlock.get(block).push(review);
+  }
+  const rows = [...byBlock].map(([block,entries])=>`<section><h4>Bloco ${block}</h4><ul>${entries.map(review=>{
+    const status = review.done?'Concluída':review.date<today?'Pendente':review.date===today?'Hoje':'Agendada';
+    return `<li><div><strong>${escapeHtml(review.item.topic)}</strong><small>${fmtDate(review.date)} · ${review.minutes} min · ${status}</small></div>${reviewPlanActions(review)}</li>`;
+  }).join('')}</ul></section>`);
+  return `<details class="card review-plan-calendar"${ui.reviewPlanOpen?' open':''}><summary><strong>Cronograma de revisão dos blocos 1 a 11</strong><span>${done}/${reviews.length} concluídas${overdue?` · ${overdue} em atraso`:''}</span></summary><p class="muted">Um tema por dia de estudo, até ${fmtDate(reviews.at(-1).date)}. Tente lembrar os pontos do tema e confira com questões, flashcards ou material.</p><div class="review-plan-list" tabindex="0" role="region" aria-label="Datas e temas da revisão">${rows.join('')}</div></details>`;
+}
+function bindPreviousBlockReviewCalendar(root) {
+  const calendar = root?.querySelector('.review-plan-calendar');
+  if(!calendar) return;
+  calendar.addEventListener('toggle',()=>{ui.reviewPlanOpen=calendar.open;});
+  const restore = ui.reviewPlanRestore;
+  if(!restore || restore.tab!==ui.tab) return;
+  ui.reviewPlanRestore=null;
+  calendar.querySelector('.review-plan-list').scrollTop=restore.scrollTop;
+  const scope = restore.inCalendar ? calendar : root.querySelector('.previous-review-day');
+  scope?.querySelector(`[data-mark-previous-review="${CSS.escape(restore.key)}"]`)?.focus({preventScroll:true});
+}
 function pendingPlannedVideoBefore(date) {
   if(videoCatalogLoadState!=='ready') return '';
   for(const item of state.schedule) {
@@ -4363,9 +4426,11 @@ function plannedVideoOptions(item,slot) {
 function renderStudyPlanDay(date,items=scheduledLessonsOn(date)) {
   if(state.reschedule?.version!==STUDY_PLAN_VERSION) return '';
   const entries = plannedStudyEntries(date).filter(({item}) => items.includes(item));
+  const previousReview = previousBlockReviewSchedule().find(review=>review.date===date);
+  const reviewRow = previousReview ? `<li class="previous-review-day"><div><strong>${escapeHtml(previousReview.item.topic)}</strong><small>Revisão do bloco ${previousReview.item.block} · ${previousReview.minutes} min${previousReview.done?' · concluída':''}</small></div>${reviewPlanActions(previousReview)}</li>` : '';
   const pendingDate = date===studyDateKey() ? pendingPlannedVideoBefore(date) : '';
   const resume = pendingDate ? `<button type="button" class="tiny-btn" data-open-planned-date="${pendingDate}">Retomar dia ${fmtDate(pendingDate)}</button>` : '';
-  if(!entries.length) return resume ? `<section class="card study-plan-day"><h3>Retomar o plano</h3>${resume}</section>` : '';
+  if(!entries.length && !previousReview) return resume ? `<section class="card study-plan-day"><h3>Retomar o plano</h3>${resume}</section>` : '';
   let content = 0;
   const rows = entries.map(({item,slot}) => {
     const {done,source,part} = slot.videoId ? plannedVideoOptions(item,slot) : {done:!slot.practice && studyPlanReadingCompleted(item)};
@@ -4384,8 +4449,10 @@ function renderStudyPlanDay(date,items=scheduledLessonsOn(date)) {
     return `<li><div><strong>${escapeHtml(item.topic)}</strong><small>${escapeHtml(detail)} · ${minutes} min${done?(slot.videoId?' · visto':' · lido'):''}</small></div><div class="study-plan-actions">${action}<button type="button" class="tiny-btn" data-open-schedule-questions="${escapeAttr(item.id)}">Questões</button><button type="button" class="tiny-btn" data-open-schedule-flashcards="${escapeAttr(item.id)}">Flashcards</button></div></li>`;
   });
   const target = state.reschedule.dailyMinutes;
-  const revision = Math.max(0,target-content);
-  return `<section class="card study-plan-day"><div class="section-title"><div><h3>Estudo de ${fmtDate(date)}</h3><span class="muted">${content?`${content} min de conteúdo · `:''}${revision} min de questões e flashcards</span></div><strong>${formatStudyHours(target/60)}</strong></div><ul>${rows.join('')}</ul>${resume}</section>`;
+  const previousMinutes = previousReview?.minutes || 0;
+  const practice = Math.max(0,target-content-previousMinutes);
+  const breakdown = [content&&`${content} min de conteúdo`,entries.length&&`${practice} min de questões e flashcards${previousMinutes?' da aula':''}`,previousMinutes&&`${previousMinutes} min de revisão dos blocos anteriores`].filter(Boolean).join(' · ');
+  return `<section class="card study-plan-day"><div class="section-title"><div><h3>Estudo de ${fmtDate(date)}</h3><span class="muted">${breakdown}</span></div><strong>${formatStudyHours((entries.length?target:previousMinutes)/60)}</strong></div><ul>${rows.join('')}${reviewRow}</ul>${resume}</section>`;
 }
 function currentScheduleBlock() {
   const asOf = studyDateKey();
@@ -5402,6 +5469,9 @@ async function startCadernoReviewSession() {
     if(ui.tab!=='caderno-erros') navigateToTab('caderno-erros');
     return;
   }
+  openCadernoReviewEntries(ids);
+}
+function openCadernoReviewEntries(ids) {
   ui.cadernoSessionIds=ids;
   ui.cadernoSessionIndex=0;
   resetCadernoReviewStep();
@@ -5935,6 +6005,7 @@ function renderPainel() {
     <div class="dashboard-desktop-grid">
       ${renderContinueStudying()}
       ${renderStudyPlanDay(ui.refDate)}
+      ${renderPreviousBlockReviewCalendar()}
       ${renderDashboardPendingBoard(studyDateKey())}
       ${renderCasoDoDia()}
       ${personalPreferences.compactDashboard?'':renderCasosParaEstudar()}
@@ -5956,6 +6027,7 @@ function renderPainel() {
   bindPlannerDateInput('countdownDate', state.dashboardSettings.countdownDate, date => { state.dashboardSettings.countdownDate=date; persist(); });
   bindPersonalDailyTasks(ui.refDate);
   bindCasoDoDia();
+  bindPreviousBlockReviewCalendar(document.getElementById('painel'));
   bindDashboardPendingBoard();
   bindCasosParaEstudar();
   bindGamificationDashboard();
@@ -6069,7 +6141,8 @@ function renderCronogramaContent(resultsOnly=false) {
   const missionLabel = selectedBlock==='Todos' ? 'Visão geral' : `Bloco ${selectedBlock}`;
   const plan = state.reschedule || {};
   const planSummary = plan.version===STUDY_PLAN_VERSION ? `<div class="mission-plan-summary" aria-label="Resumo do cronograma reorganizado"><div><span>Retomada no bloco ${plan.fromBlock}</span><strong>${fmtDate(plan.restartDate)}</strong></div><div><span>Meta por dia útil</span><strong>${formatStudyHours(plan.dailyMinutes/60)}</strong><small>Conteúdo, questões e flashcards</small></div><div><span>Aulas no plano</span><strong>${plan.plannedLessons}</strong></div><div class="mission-plan-finish"><span>Conclusão prevista</span><strong>${fmtDate(plan.plannedFinishDate)||'Concluído'}</strong></div></div>` : '';
-  document.getElementById('cronograma').innerHTML = `<section class="card mission-card"><div class="mission-header"><div class="mission-heading"><span class="mission-heading-icon">${iconSvg('mission')}</span><div><span class="eyebrow">Plano de estudo</span><h2>Organize seu caminho até o ENAMED</h2><p>${changed ? `Última atividade: <strong>${escapeHtml(changed.topic)}</strong> · ${fmtDate(changed.date)}` : 'Escolha um bloco e avance aula por aula.'}</p></div></div><div class="mission-progress" aria-label="${selectedProgress}% concluído em ${escapeAttr(missionLabel)}"><div><span>${escapeHtml(missionLabel)}</span><strong>${selectedDone}<small>/${selectedItems.length}</small></strong><small>aulas concluídas</small></div><div class="mission-progress-ring" style="--mission-progress:${selectedProgress * 3.6}deg"><span>${selectedProgress}%</span></div></div></div>${planSummary}<div class="mission-blocks"><div class="mission-blocks-head"><div><h3>Blocos do cronograma</h3><span>Selecione para ver apenas as aulas daquele bloco</span></div><div class="mission-legend" aria-label="Legenda dos blocos"><span class="done">Concluído</span><span class="pending">Pendente</span><span class="current">Atual</span></div></div>${renderBlockStrip()}</div>${renderScheduleDayPicker()}${toolbar}</section><div class="card schedule-list-card">${resultsMarkup}</div>`;
+  document.getElementById('cronograma').innerHTML = `<section class="card mission-card"><div class="mission-header"><div class="mission-heading"><span class="mission-heading-icon">${iconSvg('mission')}</span><div><span class="eyebrow">Plano de estudo</span><h2>Organize seu caminho até o ENAMED</h2><p>${changed ? `Última atividade: <strong>${escapeHtml(changed.topic)}</strong> · ${fmtDate(changed.date)}` : 'Escolha um bloco e avance aula por aula.'}</p></div></div><div class="mission-progress" aria-label="${selectedProgress}% concluído em ${escapeAttr(missionLabel)}"><div><span>${escapeHtml(missionLabel)}</span><strong>${selectedDone}<small>/${selectedItems.length}</small></strong><small>aulas concluídas</small></div><div class="mission-progress-ring" style="--mission-progress:${selectedProgress * 3.6}deg"><span>${selectedProgress}%</span></div></div></div>${planSummary}<div class="mission-blocks"><div class="mission-blocks-head"><div><h3>Blocos do cronograma</h3><span>Selecione para ver apenas as aulas daquele bloco</span></div><div class="mission-legend" aria-label="Legenda dos blocos"><span class="done">Concluído</span><span class="pending">Pendente</span><span class="current">Atual</span></div></div>${renderBlockStrip()}</div>${renderScheduleDayPicker()}${toolbar}</section>${renderPreviousBlockReviewCalendar()}<div class="card schedule-list-card">${resultsMarkup}</div>`;
+  bindPreviousBlockReviewCalendar(document.getElementById('cronograma'));
   enhanceScheduleStudyIcons();
   const blockStrip=document.querySelector('#cronograma .block-strip');
   if(blockStrip) {
@@ -6298,6 +6371,21 @@ function bindScheduleInputs() {
     updateScheduleRow(item);
   });
   document.addEventListener('click',event=>{
+    const reviewToggle = event.target.closest?.('[data-mark-previous-review]');
+    if(reviewToggle) {
+      const key = reviewToggle.dataset.markPreviousReview;
+      const done = reviewToggle.getAttribute('aria-pressed') !== 'true';
+      const calendar = document.getElementById(ui.tab)?.querySelector('.review-plan-calendar');
+      const inCalendar = Boolean(reviewToggle.closest('.review-plan-calendar'));
+      if(setPreviousBlockReview(key,done)) {
+        ui.reviewPlanOpen=Boolean(calendar?.open);
+        ui.reviewPlanRestore={tab:ui.tab,key,inCalendar,scrollTop:calendar?.querySelector('.review-plan-list')?.scrollTop || 0};
+        persist();
+      }
+      return;
+    }
+    const reviewQuestions = event.target.closest?.('[data-open-review-questions]');
+    if(reviewQuestions) { openQuestionsForSchedule(reviewQuestions.dataset.openReviewQuestions,{review:true}); return; }
     const planned=event.target.closest?.('[data-open-planned-date]');
     if(planned) {
       ui.scheduleWeekAnchor=ui.scheduleDay=planned.dataset.openPlannedDate;
@@ -12998,41 +13086,54 @@ function questionSessionPlan(item, linked) {
   const sessionSize=openingExtras ? unanswered.length : Math.min(targetRemaining,unanswered.length);
   return {target,completed,unanswered,bankCompleted,openingExtras,sessionSize,focusTarget:bankCompleted+sessionSize};
 }
-async function openQuestionsForSchedule(scheduleId) {
+async function openQuestionsForSchedule(scheduleId,{review=false}={}) {
   const item = state.schedule.find(row => row.id === scheduleId);
   if(!item) return;
+  const questionBlock = String((review && PREVIOUS_REVIEW_QUESTION_BLOCK[`${item.block}:${item.lessonOrder}`]) || item.block || 'Todos');
   // A Missão pode abrir antes de qualquer coleção ter sido carregada. Busca
   // primeiro apenas o bloco desta aula, em vez de concluir prematuramente que
   // ela não possui questões ou esperar o banco completo.
-  if(!questionBank.some(question => String(question.collectionBlock) === String(item.block))) {
-    ui.qBlock = String(item.block);
-    await loadLocalQuestionBank({initialOnly:true,preferredBlock:String(item.block)});
+  if(!questionBank.some(question => String(question.collectionBlock) === questionBlock)) {
+    ui.qBlock = questionBlock;
+    await loadLocalQuestionBank({initialOnly:true,preferredBlock:questionBlock});
   }
-  const linkedByTopic = questionBank.filter(question => questionMatchesSchedule(question, item));
+  const linkedByTopic = questionBank.filter(question => questionMatchesSchedule(question,item)
+    || (questionBlock!==String(item.block) && String(question.collectionBlock)===questionBlock && canonicalTopic(question.topic)===canonicalTopic(item.topic)));
   const direct = questionBank.filter(question => question.scheduleId === item.id && String(question.collectionBlock) === String(item.block));
   // A ligação por bloco + tema é mais confiável do que um scheduleId legado
   // criado antes da normalização dos nomes das aulas.
   const linked = linkedByTopic.length ? linkedByTopic : direct;
+  if(review) {
+    const eligible = linked.filter(questionReadyForStudy);
+    const eligibleIds = new Set(eligible.map(question=>question.id));
+    const wrong = cadernoErrosEntries().filter(entry=>eligibleIds.has(entry.id) && ((entry.progress.answeredAt && !entry.progress.correct) || entry.progress.sourceRunId))
+      .sort((a,b)=>String(a.progress.nextReview || '').localeCompare(String(b.progress.nextReview || '')));
+    if(wrong.length) { openCadernoReviewEntries(wrong.slice(0,4).map(entry=>entry.id)); return; }
+    if(!eligible.length) { showStudyToast('Este tema tem revisão por flashcards ou material.'); return; }
+    const reviewQuestions = [...eligible.filter(question=>!questionResult(question)),...eligible.filter(question=>questionResult(question))].slice(0,4);
+    ui.qFocusQuestionIds=reviewQuestions.map(question=>question.id);
+  }
   const plan=questionSessionPlan(item,linked);
   const {target,unanswered,openingExtras}=plan;
-  if(target === 0 || !linked.length) {
+  if(!review && (target === 0 || !linked.length)) {
     showStudyToast(`Ainda não há questões vinculadas a ${item.topic}.`);
     return;
   }
-  if(!unanswered.length) {
+  if(!review && !unanswered.length) {
     showStudyToast(`Você concluiu todas as ${linked.length} questões disponíveis em ${item.topic}.`);
     return;
   }
   ui.qFocusScheduleId = linked.length ? item.id : '';
-  ui.qFocusQuestionIds = linked.map(question => question.id);
-  ui.qBlock = item.block ? String(item.block) : 'Todos';
+  if(!review) ui.qFocusQuestionIds = linked.map(question => question.id);
+  ui.qBrowseMode = 'block';
+  ui.qBlock = questionBlock;
   ui.qSource = 'Todas';
   ui.qTopic = 'Todos';
-  ui.qStatus = 'Não respondidas';
+  ui.qStatus = review?'Todas':'Não respondidas';
   ui.qSearch = '';
   // qFocusTarget é absoluto porque filteredQuestions subtrai o total já
   // respondido. Depois da meta, ampliamos o alvo até o fim do banco da aula.
-  ui.qFocusTarget = plan.focusTarget;
+  ui.qFocusTarget = review?0:plan.focusTarget;
   ui.qIndex = 0;
   ui.qQuestionId = '';
   ui.justAnsweredId = '';
@@ -13040,7 +13141,7 @@ async function openQuestionsForSchedule(scheduleId) {
   state.questionSettings.lastOpenedAt = new Date().toISOString();
   saveStateOnly({invalidate:false});
   resetKeyboardConfirmation();
-  if(openingExtras) showStudyToast(`Meta de ${target} concluída. Abrindo as ${unanswered.length} questões restantes de ${item.topic}.`);
+  if(!review && openingExtras) showStudyToast(`Meta de ${target} concluída. Abrindo as ${unanswered.length} questões restantes de ${item.topic}.`);
   navigateToTab('questoes');
 }
 function openFlashcardsForSchedule(scheduleId) {
@@ -13405,7 +13506,7 @@ function renderQuestionBank() {
       <div class="question-issue-actions"><button class="question-issue-summary ${flagged?'has-items':''} ${showingFlagged?'active':''}" id="showQuestionIssues" aria-pressed="${showingFlagged}" ${flagged?'':'disabled'}><span>⚑</span><strong>${flagged}</strong><span>${showingFlagged ? 'gabaritos suspeitos exibidos' : flagged===1?'gabarito suspeito':'gabaritos suspeitos'}</span></button>${flagged?'<button class="icon-btn question-issue-clear" id="clearQuestionIssues" title="Limpar todas as marcações" aria-label="Limpar todas as marcações de gabarito suspeito">×</button>':''}</div>
       ${progress('Aproveitamento', summary.correct/Math.max(summary.answered,1), `${summary.correct} de ${summary.answered}`)}
       <div class="confidence-box"><strong>Confiança média: ${confidence.avgConfidence || '-'}%</strong><div class="muted">Sabendo: ${confidence.knownCorrect} · Chute: ${confidence.luckyCorrect}</div><div class="muted">Erros: ${confidence.attention} atenção · ${confidence.memory} dúvida/já vi · ${confidence.knowledge} base</div></div>
-      ${focusItem ? (() => { const target=lessonQuestionTarget(focusItem); const completed=questionStatsForSchedule(focusItem.id).done; const lessonCompleted=completedQuestions(focusItem); const remaining=Math.max(0,n(ui.qFocusTarget)-completed); const extras=lessonCompleted>=target&&remaining>0; return `<div class="focus-box"><strong>${extras?'Questões extras':'Foco da pendência'}</strong><div>${escapeHtml(focusItem.topic)}</div><div class="muted">Bloco ${focusItem.block} · ${escapeHtml(focusItem.area)}</div><div class="question-focus-progress"><strong>${remaining ? `${extras?'Restam':'Faltam'} ${remaining} questões` : extras?'Banco concluído':'Meta concluída'}</strong><span>${extras?`Meta de ${target} concluída`:`${Math.min(lessonCompleted,target)} de ${target}`}</span></div><button class="tiny-btn" id="clearQuestionFocus">Ver todas</button></div>`; })() : ''}
+      ${focusItem ? (() => { const target=lessonQuestionTarget(focusItem); const completed=questionStatsForSchedule(focusItem.id).done; const lessonCompleted=completedQuestions(focusItem); const remaining=Math.max(0,n(ui.qFocusTarget)-completed); const extras=lessonCompleted>=target&&remaining>0; return `<div class="focus-box"><strong>${!ui.qFocusTarget?'Revisão do tema':extras?'Questões extras':'Foco da pendência'}</strong><div>${escapeHtml(focusItem.topic)}</div><div class="muted">Bloco ${focusItem.block} · ${escapeHtml(focusItem.area)}</div>${ui.qFocusTarget?`<div class="question-focus-progress"><strong>${remaining ? `${extras?'Restam':'Faltam'} ${remaining} questões` : extras?'Banco concluído':'Meta concluída'}</strong><span>${extras?`Meta de ${target} concluída`:`${Math.min(lessonCompleted,target)} de ${target}`}</span></div>`:''}<button class="tiny-btn" id="clearQuestionFocus">Ver todas</button></div>`; })() : ''}
       <details class="question-filter-panel" open><summary>Blocos <span>${escapeHtml(ui.qBlock === 'Todos' ? `${officialEntries.length} disponíveis` : questionCollectionLabel(ui.qBlock))}</span></summary>
       ${renderQuestionBlockOverview()}</details>
       <details class="question-filter-panel" open><summary>Filtros <span>${escapeHtml(ui.qStatus)}</span></summary>

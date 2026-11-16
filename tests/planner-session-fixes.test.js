@@ -169,12 +169,70 @@ test('o plano do bloco 12 distribui as partes medidas na ordem oficial e reserva
     assert.ok(entries.reduce((sum,entry)=>sum+entry.minutes,0)<=100,`${date} excedeu a carga de conteúdo`);
     assert.ok(new Set(entries.map(entry=>entry.lessonId)).size<=2);
   });
-  assert.match(ctx.renderStudyPlanDay('2026-11-16'),/91 min de conteúdo · 29 min de questões e flashcards/);
+  assert.match(ctx.renderStudyPlanDay('2026-11-16'),/91 min de conteúdo · 14 min de questões e flashcards da aula · 15 min de revisão dos blocos anteriores/);
   const split = lessons.find(item=>item.studySlots.some(slot=>slot.start>0));
   const second = split.studySlots.find(slot=>slot.start>0);
   assert.ok(ctx.scheduledLessonsOn(second.date).includes(split),'a continuação aparece na data em que deve ser vista');
   assert.match(ctx.renderStudyPlanDay(second.date),/\d+:\d+–\d+:\d+/);
   assert.equal(ctx.ensureDurationStudyPlan(),false,'reabrir mantém as datas');
+});
+
+test('a revisão cobre os temas dos blocos 1 a 11 na ordem e cabe no orçamento diário', () => {
+  const ctx = loadPlannerSandbox();
+  const official = require('../official_schedule.json').items;
+  ctx.__setOfficialSchedule(official);
+  ctx.__setVideoCatalog(require('../video_library/catalog.json').lessons);
+  ctx.normalizeSyncedPlannerState();
+  const state = ctx.__getState();
+  const schedule = plain(state.schedule);
+  const reviews = ctx.previousBlockReviewSchedule();
+  assert.deepEqual(plain(reviews.map(({item})=>[item.block,item.lessonOrder,item.topic])),official.filter(item=>item.block<12).map(item=>[item.block,item.order,item.topic]));
+  assert.equal(reviews.length,84);
+  assert.equal(reviews[0].date,'2026-11-16');
+  assert.equal(reviews.at(-1).date,'2027-03-16');
+  assert.equal(new Set(reviews.map(review=>review.date)).size,84);
+  for(const {date,minutes} of reviews) {
+    assert.ok(!state.reschedule.studyBreakDates.includes(date) && ![0,6].includes(new Date(`${date}T12:00:00`).getDay()));
+    const content = ctx.plannedStudyEntries(date).filter(({slot})=>!slot.practice).reduce((total,{slot})=>total+slot.minutes,0);
+    assert.ok(minutes>=10 && minutes<=15 && 120-content-minutes>=10);
+  }
+  assert.deepEqual(plain(state.schedule),schedule);
+  assert.match(ctx.renderPreviousBlockReviewCalendar(),/0\/84 concluídas/);
+  assert.equal(ctx.setPreviousBlockReview('1:1',true),true);
+  assert.match(ctx.renderPreviousBlockReviewCalendar(),/1\/84 concluídas/);
+  const completed = structuredClone(state);
+  completed.previousBlockReviews['1:1'].updatedAt='2026-11-16T12:00:00Z';
+  state.previousBlockReviews['1:1']={done:false,updatedAt:'2026-11-17T12:00:00Z'};
+  assert.equal(ctx.mergePlannerActivityState(state,completed,true).previousBlockReviews['1:1'].done,false);
+});
+
+test('questões da revisão retomam erros no caderno sem apagar a tentativa original', async () => {
+  const ctx = loadPlannerSandbox();
+  ctx.__setOfficialSchedule(require('../official_schedule.json').items);
+  ctx.applyOfficialSchedule();
+  const state = ctx.__getState();
+  const item = state.schedule.find(row=>row.block===1 && row.lessonOrder===1);
+  const question = {id:'test-review',collectionBlock:'1',topic:item.topic,answer:'A',options:{A:'Certa',B:'Errada'}};
+  ctx.__setQuestionBank([question]);
+  state.questionProgress[question.id]={answeredAt:'2026-11-15T15:00:00Z',correct:false,selected:'B'};
+  let opened;
+  ctx.openCadernoReviewEntries=ids=>{opened=plain(ids);};
+  await ctx.openQuestionsForSchedule(item.id,{review:true});
+  assert.deepEqual(opened,[question.id]);
+  assert.equal(state.questionProgress[question.id].selected,'B');
+});
+
+test('Lesões Elementares usa o banco do bloco 8 na revisão do bloco 9', async () => {
+  const ctx = loadPlannerSandbox();
+  ctx.__setOfficialSchedule(require('../official_schedule.json').items);
+  ctx.applyOfficialSchedule();
+  const item = ctx.__getState().schedule.find(row=>row.block===9 && row.lessonOrder===9);
+  const question = {id:'lesoes-review',collectionBlock:'8',topic:'Lesões Elementares - Dermatologia Pediátrica',answer:'A',options:{A:'Um',B:'Dois'}};
+  ctx.__setQuestionBank([question]);
+  ctx.navigateToTab=()=>{};
+  await ctx.openQuestionsForSchedule(item.id,{review:true});
+  assert.equal(ctx.__getUi().qBlock,'8');
+  assert.deepEqual(plain(ctx.filteredQuestions().map(row=>row.id)),[question.id]);
 });
 
 test('a migração preserva o registro e a data da aula concluída e carrega o plano em outro dispositivo', () => {
