@@ -33,15 +33,17 @@
   }
 
   const START_DATE_ISO = '2026-07-29';
+  const DAY_MS = 86400000;
 
   function daysSinceEpoch(date) {
-    return Math.floor(date.getTime() / 86400000);
+    return Math.floor(date.getTime() / DAY_MS);
   }
 
   function todayCase(refDateISO) {
     if (!CASES.length) return null;
-    const d = refDateISO ? new Date(refDateISO + 'T00:00:00') : new Date();
-    const start = new Date(START_DATE_ISO + 'T00:00:00');
+    const now = new Date();
+    const d = refDateISO ? new Date(refDateISO) : new Date(Date.UTC(now.getFullYear(),now.getMonth(),now.getDate()));
+    const start = new Date(START_DATE_ISO);
     const offset = daysSinceEpoch(d) - daysSinceEpoch(start);
     const idx = ((offset % CASES.length) + CASES.length) % CASES.length;
     return CASES[idx];
@@ -78,10 +80,15 @@
   function dateForCaseNumber(number) {
     const index = CASES.findIndex(item => Number(item.number) === Number(number));
     if(index < 0) return '';
-    const date = new Date(START_DATE_ISO + 'T00:00:00');
-    date.setDate(date.getDate() + index);
-    return date.toISOString().slice(0,10);
+    return dateForCaseIndex(index);
+  }
+  function dateForCaseIndex(index) {
+    return new Date(Date.parse(START_DATE_ISO) + index*DAY_MS).toISOString().slice(0,10);
+  }
+  function availableCasesThrough(date) {
+    const count = Math.max(0,Math.floor((Date.parse(date)-Date.parse(START_DATE_ISO))/DAY_MS)+1);
+    return CASES.slice(0,count).map((item,index)=>({number:item.number,date:dateForCaseIndex(index)}));
   }
 
-  window.CasoDoDia = { load, todayCase, isCorrectGuess, allDiagnoses, caseByNumber, dateForCaseNumber, normalize, TOTAL_HINTS };
+  window.CasoDoDia = { load, todayCase, isCorrectGuess, allDiagnoses, caseByNumber, dateForCaseNumber, availableCasesThrough, normalize, TOTAL_HINTS };
 })();

@@ -367,7 +367,7 @@ test('fluxo de estudo prioriza conteúdo confiável e revisão ativa',()=>{
   const planner=fs.readFileSync(path.join(root,'assets/planner.js'),'utf8');
   const css=fs.readFileSync(path.join(root,'assets/planner.css'),'utf8');
   assert.match(planner,/function dailyStudyTargets\(date\)/);
-  assert.match(planner,/DAILY_STUDY_MINUTE_OPTIONS = \[10, 25, 45, 90\]/);
+  assert.match(planner,/DAILY_STUDY_MINUTE_OPTIONS = \[10, 25, 45, 90, 120\]/);
   assert.match(planner,/if\(quality\.pending && ui\.qStatus !== 'Gabarito pendente'\) return false/);
   assert.match(planner,/questionBank\.filter\(questionReadyForSimulation\)/);
   assert.match(planner,/async function generateSimuladoRun\(\)[\s\S]*?await loadFullQuestionBank\(\)/);

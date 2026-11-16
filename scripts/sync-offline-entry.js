@@ -9,7 +9,7 @@ const source=path.join(root,'index.html');
 const target=path.resolve(process.argv[2] || path.join(root,'..','ENAMED','enamed_planner.html'));
 const offlineRoot=path.dirname(target);
 const publicRoots=new Set(['assets','data','imported_simulados','materials_library','question_bank','video_library']);
-const publicFiles=new Set(['manifest.webmanifest','service-worker.js']);
+const publicFiles=new Set(['manifest.webmanifest','official_schedule.json','service-worker.js']);
 const manifestName='.enamed-offline-sync-manifest.json';
 
 function gitExecutable(){

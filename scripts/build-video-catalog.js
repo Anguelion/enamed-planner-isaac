@@ -117,6 +117,7 @@ function buildVideos(files, lessonPath, blockId, areaName, lessonTitle) {
       extension,
       size
     };
+    if (prior?.size === size && prior.durationSeconds > 0) video.durationSeconds = prior.durationSeconds;
     if (prior?.onlinePath) video.onlinePath = prior.onlinePath;
     return video;
   });

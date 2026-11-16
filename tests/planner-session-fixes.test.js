@@ -144,27 +144,58 @@ test('catálogo ativo ignora Anki, MedCurso, MED e coleções especiais', () => 
   });
 });
 
-test('Missão recomeça em 28/09 com a carga semanal pedida e calcula a conclusão real', () => {
+test('o plano do bloco 12 distribui as partes medidas na ordem oficial e reserva tempo para revisão', () => {
   const ctx = loadPlannerSandbox();
+  const official = require('../official_schedule.json').items;
+  ctx.__setOfficialSchedule(official);
+  ctx.__setVideoCatalog(require('../video_library/catalog.json').lessons);
+  ctx.normalizeSyncedPlannerState();
   const state = ctx.__getState();
-  const lessons = state.schedule
-    .filter(item => Number(item.block) >= 12)
-    .sort((a,b) => Number(a.block)-Number(b.block) || Number(a.lessonOrder)-Number(b.lessonOrder) || Number(a.row)-Number(b.row));
-  const byDate = lessons.reduce((map,item) => map.set(item.date,(map.get(item.date)||0)+1),new Map());
-  const capacity = {1:1,2:1,3:2,4:1,5:1};
-
+  const lessons = state.schedule.filter(item => item.studySlots?.length);
   assert.equal(lessons.length,129);
-  assert.equal(lessons[0].date,'2026-09-28');
-  assert.equal(lessons.at(-1).date,'2027-03-02');
-  assert.equal(lessons.filter(item => item.date <= '2026-12-31').length,79);
-  assert.equal(state.reschedule.lessonsAfterYearEnd,50);
-  assert.equal(state.reschedule.weeklyTarget,6);
-  assert.deepEqual(plain(state.reschedule.dailyCapacity),{Segunda:1,Terça:1,Quarta:2,Quinta:1,Sexta:1});
+  assert.deepEqual(plain(lessons.map(item=>[item.block,item.lessonOrder,item.topic])),official.filter(item=>item.block>=12).map(item=>[item.block,item.order,item.topic]));
+  const slots = plain(lessons.flatMap(item => item.studySlots.map(slot=>({...slot,lessonId:item.id}))));
+  assert.deepEqual(slots.map(slot=>slot.date),slots.map(slot=>slot.date).sort());
+  assert.equal(state.reschedule.fromBlock,12);
+  assert.equal(state.reschedule.dailyMinutes,120);
+  assert.equal(state.dashboardSettings.studyMinutes,120);
+  assert.equal(slots[0].date,'2026-11-16');
+  assert.equal(slots.at(-1).date,state.reschedule.plannedFinishDate);
+  const byDate = Map.groupBy(slots,slot=>slot.date);
   state.reschedule.studyBreakDates.forEach(date => assert.equal(byDate.has(date),false,`${date} deve ficar livre`));
-  byDate.forEach((count,date) => {
+  byDate.forEach((entries,date) => {
     const weekday = new Date(`${date}T12:00:00`).getDay();
-    assert.equal(count <= (capacity[weekday]||0),true,`${date} excedeu a carga diária`);
+    assert.ok(weekday>=1 && weekday<=5);
+    assert.ok(entries.reduce((sum,entry)=>sum+entry.minutes,0)<=100,`${date} excedeu a carga de conteúdo`);
+    assert.ok(new Set(entries.map(entry=>entry.lessonId)).size<=2);
   });
+  assert.match(ctx.renderStudyPlanDay('2026-11-16'),/91 min de conteúdo · 29 min de questões e flashcards/);
+  const split = lessons.find(item=>item.studySlots.some(slot=>slot.start>0));
+  const second = split.studySlots.find(slot=>slot.start>0);
+  assert.ok(ctx.scheduledLessonsOn(second.date).includes(split),'a continuação aparece na data em que deve ser vista');
+  assert.match(ctx.renderStudyPlanDay(second.date),/\d+:\d+–\d+:\d+/);
+  assert.equal(ctx.ensureDurationStudyPlan(),false,'reabrir mantém as datas');
+});
+
+test('a migração preserva o registro e a data da aula concluída e carrega o plano em outro dispositivo', () => {
+  const ctx = loadPlannerSandbox();
+  const official = require('../official_schedule.json').items;
+  ctx.__setOfficialSchedule(official);
+  ctx.__setVideoCatalog(require('../video_library/catalog.json').lessons);
+  ctx.applyOfficialSchedule();
+  const state = ctx.__getState();
+  const first = state.schedule.find(item=>item.block===12 && item.lessonOrder===1);
+  Object.assign(first,{manualQ:10,manualFC:10,hours:2,notes:'Anotação de estudo',starred:true});
+  ctx.studyPlanParts(first).forEach(part=>{state.videoPlayer.watched[part.video.id]=true;});
+  const old = structuredClone(state);
+  assert.equal(ctx.ensureDurationStudyPlan(),true);
+  const oldFirst = old.schedule.find(item=>item.id===first.id);
+  assert.deepEqual(plain(first),plain(oldFirst));
+  const next = state.schedule.find(item=>item.block===12 && item.lessonOrder===2);
+  assert.equal(next.date,'2026-11-16');
+  const merged = ctx.mergePlannerActivityState(state,old,true);
+  assert.deepEqual(plain(merged.schedule.find(item=>item.id===next.id).studySlots),plain(next.studySlots));
+  assert.equal(merged.reschedule.plannedFinishDate,state.reschedule.plannedFinishDate);
 });
 
 test('limpeza de materiais preserva todas as linhas de tabelas Markdown', () => {
