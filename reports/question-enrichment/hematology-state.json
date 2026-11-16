@@ -7840,7 +7840,67 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-1679032bc78f2e67": {
+      "number": "1064i",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-16T15:58:14.373Z",
+      "nextAttemptAt": "2026-11-23T15:58:14.373Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-cinco-anos32a14dcd33/",
+      "localAnswer": "B",
+      "remoteAnswer": "B"
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-aa12bd029a21c179": {
+      "number": "1065i",
+      "status": "matched",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-16T15:58:21.056Z",
+      "nextAttemptAt": "2026-11-23T15:58:21.056Z",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/Determinado-paciente92a29a7c75/",
+      "localAnswer": "C",
+      "remoteAnswer": "C"
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-66c65cd60435a542": {
+      "number": "1066i",
+      "status": "low_confidence",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-16T15:58:28.034Z",
+      "nextAttemptAt": "2027-01-15T15:58:28.034Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-6cb7371691f7349c": {
+      "number": "1067i",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-16T15:58:33.564Z",
+      "nextAttemptAt": "2026-11-23T15:58:33.564Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-3c4a2428980e8d0d": {
+      "number": "1068i",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-16T15:58:39.065Z",
+      "nextAttemptAt": "2026-11-23T15:58:39.065Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-35bddd86a6035658": {
+      "number": "1069i",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-16T15:58:44.523Z",
+      "nextAttemptAt": "2026-11-23T15:58:44.523Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-11-15T22:55:44.575Z"
+  "updatedAt": "2026-11-16T15:58:44.523Z"
 }

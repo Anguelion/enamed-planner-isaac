@@ -1320,7 +1320,23 @@
       ],
       "suggestedComment": "Gabarito confirmado: D. Assunto: Classificação morfológica das anemias. Conduta/resposta: Anemia sideroblástica.",
       "reviewedAt": "2026-10-14T21:46:50.130Z"
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-66c65cd60435a542": {
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-66c65cd60435a542",
+      "number": "1066i",
+      "status": "low_confidence",
+      "localAnswer": null,
+      "remoteAnswer": null,
+      "sourceUrl": null,
+      "similarity": {
+        "stem": 0.37267080745341613,
+        "options": 1,
+        "combined": 0.5608695652173913
+      },
+      "tags": [],
+      "suggestedComment": "",
+      "reviewedAt": "2026-11-16T15:58:28.034Z"
     }
   },
-  "updatedAt": "2026-11-05T14:44:48.325Z"
+  "updatedAt": "2026-11-16T15:58:28.034Z"
 }

@@ -2428,10 +2428,21 @@
       "tags": [
         "Hematologia",
         "Leucemias Crônicas Linfomas Mielodisplasias e Mieloproliferações",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Linfomas",
+        "Diagnóstico dos linfomas (clínico, laboratorial – citogenética e biologia molecular)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516352546",
-      "ankiGuid": "oV0j=HB2y&"
+      "ankiGuid": "oV0j=HB2y&",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Paciente-cinco-anos32a14dcd33/",
+        "sourceQuestionId": "4000032769",
+        "matchedAt": "2026-11-16T15:58:14.373Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-aa12bd029a21c179",
@@ -2462,10 +2473,24 @@
       "tags": [
         "Hematologia",
         "Leucemias Crônicas Linfomas Mielodisplasias e Mieloproliferações",
-        "Anki"
+        "Anki",
+        "Clínica Médica",
+        "Mielodisplasias e mieloproliferações: outras alterações da medula óssea",
+        "Doenças mieloproliferativas crônicas",
+        "Policitemia vera (PV)",
+        "Diagnóstico da policitemia vera (PV)",
+        "Tratamento da policitemia vera (PV)",
+        "Estratégia MED"
       ],
       "ankiNoteId": "1742516352547",
-      "ankiGuid": "Ic|CRw1>_|"
+      "ankiGuid": "Ic|CRw1>_|",
+      "enrichment": {
+        "source": "Estratégia MED",
+        "sourceUrl": "https://med.estrategia.com/public/questoes/Determinado-paciente92a29a7c75/",
+        "sourceQuestionId": "4000021115",
+        "matchedAt": "2026-11-16T15:58:21.056Z",
+        "confidence": 1
+      }
     },
     {
       "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-66c65cd60435a542",
