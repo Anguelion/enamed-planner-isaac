@@ -80,7 +80,9 @@ function main(){
   fs.copyFileSync(source,target);
   fs.copyFileSync(source,path.join(offlineRoot,'index.html'));
 
-  const tracked=childProcess.execFileSync(gitExecutable(),['-c',`safe.directory=${root.replaceAll('\\','/')}`,'ls-files','-z'],{cwd:root,encoding:'utf8'})
+  const tracked=childProcess.execFileSync(gitExecutable(),[
+    '-c',`safe.directory=${root.replaceAll('\\','/')}`,'ls-files','-z','--',...publicFiles,...publicRoots
+  ],{cwd:root,encoding:'utf8',maxBuffer:32*1024*1024})
     .split('\0')
     .filter(Boolean)
     .filter(relative=>publicFiles.has(relative)||publicRoots.has(relative.split('/')[0]));
