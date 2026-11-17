@@ -3763,10 +3763,10 @@
     },
     "anki-hematologia-gamopatias-monoclonais-4b9d34c0be628d63": {
       "number": "1064j",
-      "status": "low_confidence",
-      "attempts": 1,
-      "lastAttemptAt": "2026-09-17T21:27:35.693Z",
-      "nextAttemptAt": "2026-11-16T21:27:35.693Z",
+      "status": "not_found",
+      "attempts": 2,
+      "lastAttemptAt": "2026-11-17T16:09:24.259Z",
+      "nextAttemptAt": "2026-12-01T16:09:24.259Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -7374,9 +7374,9 @@
     "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-1d2d113f2e9756cd": {
       "number": "1017i",
       "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-11-10T14:59:27.905Z",
-      "nextAttemptAt": "2026-11-17T14:59:27.905Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-11-17T16:09:29.735Z",
+      "nextAttemptAt": "2026-12-01T16:09:29.735Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -7384,9 +7384,9 @@
     "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-a7138c63b045999c": {
       "number": "1018i",
       "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-11-10T14:59:33.280Z",
-      "nextAttemptAt": "2026-11-17T14:59:33.280Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-11-17T16:09:35.241Z",
+      "nextAttemptAt": "2026-12-01T16:09:35.241Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -7394,9 +7394,9 @@
     "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-89deef6292feabbd": {
       "number": "1019i",
       "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-11-10T14:59:38.649Z",
-      "nextAttemptAt": "2026-11-17T14:59:38.649Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-11-17T16:09:40.707Z",
+      "nextAttemptAt": "2026-12-01T16:09:40.707Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -7404,9 +7404,9 @@
     "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-c8316991166ef2bf": {
       "number": "1020i",
       "status": "not_found",
-      "attempts": 1,
-      "lastAttemptAt": "2026-11-10T14:59:44.018Z",
-      "nextAttemptAt": "2026-11-17T14:59:44.018Z",
+      "attempts": 2,
+      "lastAttemptAt": "2026-11-17T16:09:46.235Z",
+      "nextAttemptAt": "2026-12-01T16:09:46.235Z",
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
@@ -7900,7 +7900,17 @@
       "sourceUrl": null,
       "localAnswer": null,
       "remoteAnswer": null
+    },
+    "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-baa9b2f18c7475bc": {
+      "number": "1070i",
+      "status": "not_found",
+      "attempts": 1,
+      "lastAttemptAt": "2026-11-17T16:09:51.692Z",
+      "nextAttemptAt": "2026-11-24T16:09:51.692Z",
+      "sourceUrl": null,
+      "localAnswer": null,
+      "remoteAnswer": null
     }
   },
-  "updatedAt": "2026-11-16T15:58:44.523Z"
+  "updatedAt": "2026-11-17T16:09:51.692Z"
 }
