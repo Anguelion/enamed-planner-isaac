@@ -1,54 +1,75 @@
 {
-  "generatedAt": "2026-11-21T14:44:56.003Z",
+  "generatedAt": "2026-11-21T23:26:18.721Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 0,
+  "changed": 1,
   "results": [
     {
-      "id": "anki-hematologia-anemias-microciticas-a1a9531ff5a0bd09",
-      "number": "1088d",
-      "file": "question_bank/hematologia-anemias-microciticas.json",
+      "id": "anki-hematologia-leucemias-agudas-2840756cb7938b38",
+      "number": "1077h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-3da3e8e87ee50fb8",
-      "number": "1054b",
-      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "id": "anki-hematologia-leucemias-agudas-4fc6972528f4a0e1",
+      "number": "1078h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "changed": true,
+      "status": "matched",
+      "sourceUrl": "https://med.estrategia.com/public/questoes/leucemias-e-correto62b16ef53/",
+      "sourceQuestionId": "4000079927",
+      "matchedAt": "2026-11-21T23:26:25.398Z",
+      "similarity": {
+        "stem": 1,
+        "options": 1,
+        "combined": 1
+      },
+      "localAnswer": "A",
+      "remoteAnswer": "A",
+      "answerMismatch": false,
+      "tags": [
+        "Clínica Médica",
+        "Hematologia",
+        "Leucemias",
+        "Introdução às leucemias"
+      ],
+      "comment": "Gabarito confirmado: A. Assunto: Introdução às leucemias. Conduta/resposta: A neutropenia febril é uma complicação frequente do tratamento quimioterápico das leucemias, sendo necessária intervenção rápida com início de antibioticoterapia endovenosa.",
+      "candidates": [
+        "https://med.estrategia.com/public/questoes/leucemias-e-correto62b16ef53/",
+        "https://med.estrategia.com/public/questoes/leucemias-faixa-etaria107c9a61f7/"
+      ]
+    },
+    {
+      "id": "anki-hematologia-leucemias-agudas-e2fea18170832bea",
+      "number": "1079h",
+      "file": "question_bank/hematologia-leucemias-agudas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-db2c1b27574e6b27",
-      "number": "1033i",
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-0d3258b708746504",
+      "number": "1037i",
       "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-fc79e610ec582ec4",
-      "number": "1034i",
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-2bb0704ea12b5126",
+      "number": "1038i",
       "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-26be2859bfdcd8bc",
-      "number": "1035i",
-      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-586240dcd5a774b0",
-      "number": "1036i",
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-ade6977fa1715fa7",
+      "number": "1039i",
       "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
       "changed": false,
       "status": "not_found",
