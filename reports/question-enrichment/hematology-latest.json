@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T15:33:40.369Z",
+  "generatedAt": "2026-11-21T14:44:56.003Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
@@ -7,48 +7,48 @@
   "changed": 0,
   "results": [
     {
-      "id": "anki-hematologia-leucemias-agudas-1f42f786a5e55420",
-      "number": "1062h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
+      "id": "anki-hematologia-anemias-microciticas-a1a9531ff5a0bd09",
+      "number": "1088d",
+      "file": "question_bank/hematologia-anemias-microciticas.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-56dd60034a65e1d0",
-      "number": "1028i",
+      "id": "anki-hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes-3da3e8e87ee50fb8",
+      "number": "1054b",
+      "file": "question_bank/hematologia-hemostasia-i-conceitos-basicos-e-anticoagulantes.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-db2c1b27574e6b27",
+      "number": "1033i",
       "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-4eead0577f918db6",
-      "number": "1029i",
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-fc79e610ec582ec4",
+      "number": "1034i",
       "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-442eff0d7a609848",
-      "number": "1030i",
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-26be2859bfdcd8bc",
+      "number": "1035i",
       "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-357ac81f8c40fb48",
-      "number": "1031i",
-      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-d0ef26fd46d073ec",
-      "number": "1032i",
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-586240dcd5a774b0",
+      "number": "1036i",
       "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
       "changed": false,
       "status": "not_found",
