@@ -1,75 +1,54 @@
 {
-  "generatedAt": "2026-11-21T23:26:18.721Z",
+  "generatedAt": "2026-11-22T14:40:54.565Z",
   "area": "Hematologia",
   "mode": "write",
   "allowAnswerChanges": false,
   "inspected": 6,
-  "changed": 1,
+  "changed": 0,
   "results": [
     {
-      "id": "anki-hematologia-leucemias-agudas-2840756cb7938b38",
-      "number": "1077h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-4fc6972528f4a0e1",
-      "number": "1078h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": true,
-      "status": "matched",
-      "sourceUrl": "https://med.estrategia.com/public/questoes/leucemias-e-correto62b16ef53/",
-      "sourceQuestionId": "4000079927",
-      "matchedAt": "2026-11-21T23:26:25.398Z",
-      "similarity": {
-        "stem": 1,
-        "options": 1,
-        "combined": 1
-      },
-      "localAnswer": "A",
-      "remoteAnswer": "A",
-      "answerMismatch": false,
-      "tags": [
-        "Clínica Médica",
-        "Hematologia",
-        "Leucemias",
-        "Introdução às leucemias"
-      ],
-      "comment": "Gabarito confirmado: A. Assunto: Introdução às leucemias. Conduta/resposta: A neutropenia febril é uma complicação frequente do tratamento quimioterápico das leucemias, sendo necessária intervenção rápida com início de antibioticoterapia endovenosa.",
-      "candidates": [
-        "https://med.estrategia.com/public/questoes/leucemias-e-correto62b16ef53/",
-        "https://med.estrategia.com/public/questoes/leucemias-faixa-etaria107c9a61f7/"
-      ]
-    },
-    {
-      "id": "anki-hematologia-leucemias-agudas-e2fea18170832bea",
-      "number": "1079h",
-      "file": "question_bank/hematologia-leucemias-agudas.json",
-      "changed": false,
-      "status": "not_found",
-      "candidates": []
-    },
-    {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-0d3258b708746504",
-      "number": "1037i",
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-0bbe95fc6165add8",
+      "number": "1040i",
       "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-2bb0704ea12b5126",
-      "number": "1038i",
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-4dce8d253981369a",
+      "number": "1041i",
       "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
       "changed": false,
       "status": "not_found",
       "candidates": []
     },
     {
-      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-ade6977fa1715fa7",
-      "number": "1039i",
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-522e6b5d535266d7",
+      "number": "1042i",
+      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-55c73ebbbc3da060",
+      "number": "1043i",
+      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-c7bc979533194dc6",
+      "number": "1044i",
+      "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
+      "changed": false,
+      "status": "not_found",
+      "candidates": []
+    },
+    {
+      "id": "anki-hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes-adc16e8df151c6fd",
+      "number": "1045i",
       "file": "question_bank/hematologia-leucemias-cronicas-linfomas-mielodisplasias-e-mieloproliferacoes.json",
       "changed": false,
       "status": "not_found",
